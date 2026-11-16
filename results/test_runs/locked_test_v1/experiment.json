@@ -1,0 +1,22 @@
+{
+  "created_at": "2026-11-16T10:08:49.798186+00:00",
+  "identity": {
+    "stage": "frozen_test_comparison",
+    "selection_lock_seal": "7c691f1f685824191dc9440795e8dad0c55a51ccee9798907e4538ff908c8598",
+    "query_ids": [
+      "D7T01",
+      "D7T02",
+      "D7T03",
+      "D7T04",
+      "D7T05",
+      "D7TN01",
+      "D7TN02"
+    ],
+    "configuration_ids": [
+      "dense_base",
+      "bm25_base"
+    ],
+    "socket_timeout_seconds": 180.0
+  },
+  "identity_sha256": "79c35da72e4b9a600cb23b5b2ad7134d67335ae02ea896728b235c4910366121"
+}

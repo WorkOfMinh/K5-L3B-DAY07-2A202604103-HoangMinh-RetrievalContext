@@ -1,0 +1,2106 @@
+[
+  {
+    "config_id": "bm25_base",
+    "query_id": "D7T01",
+    "trace_sha256": "0e09054e10dbe8b5e7944d8f96e08f4a2258c78d9787ed3f8de29c9bb2950092",
+    "question": "When list(d) is applied to a dictionary, which keys are returned and in what order?",
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 45,
+          "evidence": "Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead)."
+        }
+      ],
+      "expected_answer": "It returns all dictionary keys in insertion order. Use sorted(d) instead if sorted order is wanted.",
+      "absence_reason": null,
+      "note": "Attached after the model run. Never passed to controller or search."
+    },
+    "status": "answered",
+    "answer": "Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order [be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b].",
+    "citations": [
+      "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b"
+    ],
+    "actual_final_context": {
+      "text": "[be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nwithin the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.\n\n[40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d | source=data/raw/tutorial.pdf | PDF page=61 | chapter=7]\nThis could also be done by passing the table dictionary as keyword arguments with the ** notation.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678\n\n          This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing\n          all local variables:\n          >>> table = {k: str(v) for k, v in vars().items()}\n          >>> message = \" \".join([f'{k}: ' + '{' + k +'};' for k in table.keys()])\n                                                              (continues on next page)\n\n[c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047 | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nAnother useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+      "chunk_ids": [
+        "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+        "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+        "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047"
+      ],
+      "characters": 2789,
+      "budget_chars": 3500,
+      "max_chunks": 3,
+      "selected_chunks": [
+        {
+          "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.",
+          "start_char": 2831,
+          "end_char": 3567,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 15.826774080740233,
+          "rank": 1
+        },
+        {
+          "id": "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 61,
+          "text": "This could also be done by passing the table dictionary as keyword arguments with the ** notation.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678\n\n          This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing\n          all local variables:\n          >>> table = {k: str(v) for k, v in vars().items()}\n          >>> message = \" \".join([f'{k}: ' + '{' + k +'};' for k in table.keys()])\n                                                              (continues on next page)",
+          "start_char": 2192,
+          "end_char": 2889,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p061",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 55,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2889
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 12.146099549537464,
+          "rank": 2
+        },
+        {
+          "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+          "start_char": 1840,
+          "end_char": 2820,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 11.228459697408576,
+          "rank": 3
+        }
+      ],
+      "excluded": [
+        {
+          "id": "ba103d0bf4dc07e2649837f0ed56eaef4db9e438dcf6a5976120e426c877b193",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "0f64985915230f3a438c801c34351e667932248aa288f15dad7f3e1d441132eb",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "02bdf890917f574f6d3fa554a20f52ee47162658fb17b1a2571060df95ed616d",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "c74caaede5c383d39a86a9397cca3512c337207def63ea07107d030b9a2611ed",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca",
+          "reason": "max_chunks"
+        }
+      ],
+      "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+    },
+    "review": {
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "abstention_correct": null,
+      "context_evidence_supported": true,
+      "reviewer": "AI-assisted source review",
+      "review_type": "AI-assisted",
+      "reason": "PDF 45 explicitly states that list(d) returns all keys in insertion order. Both answers cover the asked keys/order; mentioning sorted(d) is optional and was not required by this question.",
+      "human_confirmation": null,
+      "human_reviewer": null,
+      "context_grade": 2,
+      "context_grade_reason": "Ngữ cảnh cuối thực sự gửi model chứa đủ bằng chứng, điều kiện và nguồn để trả lời; khớp đoạn gold đầy đủ, mức 2/2."
+    }
+  },
+  {
+    "config_id": "dense_base",
+    "query_id": "D7T01",
+    "trace_sha256": "2b71d61969c77e399b5a569edb1b1386b9e1364da2038771e3368a3f0e68b9bf",
+    "question": "When list(d) is applied to a dictionary, which keys are returned and in what order?",
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 45,
+          "evidence": "Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead)."
+        }
+      ],
+      "expected_answer": "It returns all dictionary keys in insertion order. Use sorted(d) instead if sorted order is wanted.",
+      "absence_reason": null,
+      "note": "Attached after the model run. Never passed to controller or search."
+    },
+    "status": "answered",
+    "answer": "When list(d) is performed on a dictionary, it returns a list of all the keys used in the dictionary in insertion order [be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b].",
+    "citations": [
+      "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b"
+    ],
+    "actual_final_context": {
+      "text": "[be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nwithin the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.\n\n[7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c | source=data/raw/tutorial.pdf | PDF page=41 | chapter=5]\n>>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.\n\n[44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca | source=data/raw/tutorial.pdf | PDF page=46 | chapter=5]\nHere is a small example using a dictionary:\n          >>> tel = {'jack': 4098, 'sape': 4139}\n          >>> tel['guido'] = 4127\n          >>> tel\n          {'jack': 4098, 'sape': 4139, 'guido': 4127}\n          >>> tel['jack']\n          4098\n          >>> del tel['sape']\n          >>> tel['irv'] = 4127\n          >>> tel\n          {'jack': 4098, 'guido': 4127, 'irv': 4127}\n          >>> list(tel)\n          ['jack', 'guido', 'irv']\n          >>> sorted(tel)\n          ['guido', 'irv', 'jack']\n          >>> 'guido' in tel\n          True\n          >>> 'jack' not in tel\n          False\n          The dict() constructor builds dictionaries directly from sequences of key-value pairs:\n          >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n          {'sape': 4139, 'guido': 4127, 'jack': 4098}\n\n          In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:",
+      "chunk_ids": [
+        "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+        "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+        "44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca"
+      ],
+      "characters": 2888,
+      "budget_chars": 3500,
+      "max_chunks": 3,
+      "selected_chunks": [
+        {
+          "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.",
+          "start_char": 2831,
+          "end_char": 3567,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8703406193750947
+        },
+        {
+          "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+          "start_char": 571,
+          "end_char": 1421,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8587282384199969
+        },
+        {
+          "id": "44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 46,
+          "text": "Here is a small example using a dictionary:\n          >>> tel = {'jack': 4098, 'sape': 4139}\n          >>> tel['guido'] = 4127\n          >>> tel\n          {'jack': 4098, 'sape': 4139, 'guido': 4127}\n          >>> tel['jack']\n          4098\n          >>> del tel['sape']\n          >>> tel['irv'] = 4127\n          >>> tel\n          {'jack': 4098, 'guido': 4127, 'irv': 4127}\n          >>> list(tel)\n          ['jack', 'guido', 'irv']\n          >>> sorted(tel)\n          ['guido', 'irv', 'jack']\n          >>> 'guido' in tel\n          True\n          >>> 'jack' not in tel\n          False\n          The dict() constructor builds dictionaries directly from sequences of key-value pairs:\n          >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n          {'sape': 4139, 'guido': 4127, 'jack': 4098}\n\n          In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:",
+          "start_char": 0,
+          "end_char": 926,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p046",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 40,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 1924
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8573878492481813
+        }
+      ],
+      "excluded": [
+        {
+          "id": "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "ba103d0bf4dc07e2649837f0ed56eaef4db9e438dcf6a5976120e426c877b193",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+          "reason": "max_chunks"
+        }
+      ],
+      "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+    },
+    "review": {
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "abstention_correct": null,
+      "context_evidence_supported": true,
+      "reviewer": "AI-assisted source review",
+      "review_type": "AI-assisted",
+      "reason": "PDF 45 explicitly states that list(d) returns all keys in insertion order. Both answers cover the asked keys/order; mentioning sorted(d) is optional and was not required by this question.",
+      "human_confirmation": null,
+      "human_reviewer": null,
+      "context_grade": 2,
+      "context_grade_reason": "Ngữ cảnh cuối thực sự gửi model chứa đủ bằng chứng, điều kiện và nguồn để trả lời; khớp đoạn gold đầy đủ, mức 2/2."
+    }
+  },
+  {
+    "config_id": "bm25_base",
+    "query_id": "D7T02",
+    "trace_sha256": "900b4d4a9a2017ab1f4cf4ffd166299e1258eb6e9060b1c9087fd1455d62a387",
+    "question": "Within chapter 6, Modules, if a package defines __all__ in __init__.py, what does that list control when from package import * is used?",
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 55,
+          "evidence": "if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered."
+        }
+      ],
+      "expected_answer": "It specifies the module names that should be imported by from package import *.",
+      "absence_reason": null,
+      "note": "Attached after the model run. Never passed to controller or search."
+    },
+    "status": "answered",
+    "answer": "When a package defines a list named __all__ in its __init__.py file, that list is taken to be the list of module names that should be imported when ``from package import *`` is encountered [8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39].",
+    "citations": [
+      "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39"
+    ],
+    "actual_final_context": {
+      "text": "[8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39 | source=data/raw/tutorial.pdf | PDF page=55 | chapter=6]\nThe only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:\n\n[5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29 | source=data/raw/tutorial.pdf | PDF page=56 | chapter=6]\nIn this example, the echo and surround modules are imported in the current namespace because they are defined in\n          the sound.effects package when the from...import statement is executed. (This also works when __all__\n          is defined.)\n          Although certain modules are designed to export only names that follow certain patterns when you use import *,\n          it is still considered bad practice in production code.\n\n          Remember, there is nothing wrong with using from package import specific_submodule! In fact, this is\n          the recommended notation unless the importing module needs to use submodules with the same name from different\n          packages.\n          6.4.2 Intra-package References\n\n[ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4 | source=data/raw/tutorial.pdf | PDF page=56 | chapter=6]\nIf __all__ is not defined, the statement from sound.effects import * does not import all submodules from\n          the package sound.effects into the current namespace; it only ensures that the package sound.effects has\n          been imported (possibly running any initialization code in __init__.py) and then imports whatever names are\n          defined in the package. This includes any names defined (and submodules explicitly loaded) by __init__.py. It\n          also includes any submodules of the package that were explicitly loaded by previous import statements. Consider\n          this code:\n          import sound.effects.echo\n          import sound.effects.surround\n          from sound.effects import *",
+      "chunk_ids": [
+        "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+        "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29",
+        "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4"
+      ],
+      "characters": 2481,
+      "budget_chars": 3500,
+      "max_chunks": 3,
+      "selected_chunks": [
+        {
+          "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "The only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+          "start_char": 2881,
+          "end_char": 3544,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 25.74968702492922,
+          "rank": 1
+        },
+        {
+          "id": "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "In this example, the echo and surround modules are imported in the current namespace because they are defined in\n          the sound.effects package when the from...import statement is executed. (This also works when __all__\n          is defined.)\n          Although certain modules are designed to export only names that follow certain patterns when you use import *,\n          it is still considered bad practice in production code.\n\n          Remember, there is nothing wrong with using from package import specific_submodule! In fact, this is\n          the recommended notation unless the importing module needs to use submodules with the same name from different\n          packages.\n          6.4.2 Intra-package References",
+          "start_char": 1682,
+          "end_char": 2410,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 19.786004341417456,
+          "rank": 2
+        },
+        {
+          "id": "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "If __all__ is not defined, the statement from sound.effects import * does not import all submodules from\n          the package sound.effects into the current namespace; it only ensures that the package sound.effects has\n          been imported (possibly running any initialization code in __init__.py) and then imports whatever names are\n          defined in the package. This includes any names defined (and submodules explicitly loaded) by __init__.py. It\n          also includes any submodules of the package that were explicitly loaded by previous import statements. Consider\n          this code:\n          import sound.effects.echo\n          import sound.effects.surround\n          from sound.effects import *",
+          "start_char": 956,
+          "end_char": 1670,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 18.721212018006213,
+          "rank": 3
+        }
+      ],
+      "excluded": [
+        {
+          "id": "836d0d49a75724acb4dda75e2605ba192f9bdc2ec713de7af1272a276ca2e9eb",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "f74035edc4dbfbaf3dbb3cdfe7dfba3c72f5f254f1ef51cc3f33b09325bd6532",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "ee9be82da595de430c1312e64c2408b3d253a5c37115dafb5a4d46fd67700077",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+          "reason": "duplicate_id"
+        },
+        {
+          "id": "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+          "reason": "duplicate_id"
+        },
+        {
+          "id": "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+          "reason": "duplicate_id"
+        },
+        {
+          "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+          "reason": "duplicate_id"
+        },
+        {
+          "id": "f74035edc4dbfbaf3dbb3cdfe7dfba3c72f5f254f1ef51cc3f33b09325bd6532",
+          "reason": "duplicate_id"
+        },
+        {
+          "id": "836d0d49a75724acb4dda75e2605ba192f9bdc2ec713de7af1272a276ca2e9eb",
+          "reason": "duplicate_id"
+        },
+        {
+          "id": "2cde34d9e99b851052d27cc3d97337ccaa7cd0c79fe4f803e57bb2bc53520c74",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29",
+          "reason": "duplicate_id"
+        },
+        {
+          "id": "ee9be82da595de430c1312e64c2408b3d253a5c37115dafb5a4d46fd67700077",
+          "reason": "duplicate_id"
+        },
+        {
+          "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+          "reason": "duplicate_id"
+        }
+      ],
+      "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+    },
+    "review": {
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "abstention_correct": null,
+      "context_evidence_supported": true,
+      "reviewer": "AI-assisted source review",
+      "review_type": "AI-assisted",
+      "reason": "PDF 55 explicitly defines __all__ as the module names imported by from package import *. The chapter-6 scope is preserved.",
+      "human_confirmation": null,
+      "human_reviewer": null,
+      "context_grade": 2,
+      "context_grade_reason": "Ngữ cảnh cuối thực sự gửi model chứa đủ bằng chứng, điều kiện và nguồn để trả lời; khớp đoạn gold đầy đủ, mức 2/2."
+    }
+  },
+  {
+    "config_id": "dense_base",
+    "query_id": "D7T02",
+    "trace_sha256": "0552571024da62e2c65159a6bea84377445a43bedaa577043deae7f310d4fd72",
+    "question": "Within chapter 6, Modules, if a package defines __all__ in __init__.py, what does that list control when from package import * is used?",
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 55,
+          "evidence": "if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered."
+        }
+      ],
+      "expected_answer": "It specifies the module names that should be imported by from package import *.",
+      "absence_reason": null,
+      "note": "Attached after the model run. Never passed to controller or search."
+    },
+    "status": "answered",
+    "answer": "If a package's __init__.py file defines a list named __all__, that list is taken to be the list of module names that should be imported when `from package import *` is encountered [8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39].",
+    "citations": [
+      "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39"
+    ],
+    "actual_final_context": {
+      "text": "[8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39 | source=data/raw/tutorial.pdf | PDF page=55 | chapter=6]\nThe only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:\n\n[ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4 | source=data/raw/tutorial.pdf | PDF page=56 | chapter=6]\nIf __all__ is not defined, the statement from sound.effects import * does not import all submodules from\n          the package sound.effects into the current namespace; it only ensures that the package sound.effects has\n          been imported (possibly running any initialization code in __init__.py) and then imports whatever names are\n          defined in the package. This includes any names defined (and submodules explicitly loaded) by __init__.py. It\n          also includes any submodules of the package that were explicitly loaded by previous import statements. Consider\n          this code:\n          import sound.effects.echo\n          import sound.effects.surround\n          from sound.effects import *\n\n[cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c | source=data/raw/tutorial.pdf | PDF page=55 | chapter=6]\n(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+      "chunk_ids": [
+        "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+        "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+        "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c"
+      ],
+      "characters": 2705,
+      "budget_chars": 3500,
+      "max_chunks": 3,
+      "selected_chunks": [
+        {
+          "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "The only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+          "start_char": 2881,
+          "end_char": 3544,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8978208303451538
+        },
+        {
+          "id": "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "If __all__ is not defined, the statement from sound.effects import * does not import all submodules from\n          the package sound.effects into the current namespace; it only ensures that the package sound.effects has\n          been imported (possibly running any initialization code in __init__.py) and then imports whatever names are\n          defined in the package. This includes any names defined (and submodules explicitly loaded) by __init__.py. It\n          also includes any submodules of the package that were explicitly loaded by previous import statements. Consider\n          this code:\n          import sound.effects.echo\n          import sound.effects.surround\n          from sound.effects import *",
+          "start_char": 956,
+          "end_char": 1670,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8881174325942993
+        },
+        {
+          "id": "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+          "start_char": 0,
+          "end_char": 952,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.881740927696228
+        }
+      ],
+      "excluded": [
+        {
+          "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "ee9be82da595de430c1312e64c2408b3d253a5c37115dafb5a4d46fd67700077",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "490b78aed0a916d50871e94ed285d57fe62572b6d6d7a0c7d4e87186a098c422",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+          "reason": "max_chunks"
+        }
+      ],
+      "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+    },
+    "review": {
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "abstention_correct": null,
+      "context_evidence_supported": true,
+      "reviewer": "AI-assisted source review",
+      "review_type": "AI-assisted",
+      "reason": "PDF 55 explicitly defines __all__ as the module names imported by from package import *. The chapter-6 scope is preserved.",
+      "human_confirmation": null,
+      "human_reviewer": null,
+      "context_grade": 2,
+      "context_grade_reason": "Ngữ cảnh cuối thực sự gửi model chứa đủ bằng chứng, điều kiện và nguồn để trả lời; khớp đoạn gold đầy đủ, mức 2/2."
+    }
+  },
+  {
+    "config_id": "bm25_base",
+    "query_id": "D7T03",
+    "trace_sha256": "d67502da7840e97be4a5e93252ebba560d00dfd2b99a39f5fe909494c163bca2",
+    "question": "What does adding b to an open() mode change about the data being read or written, and can encoding be specified in that mode?",
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 63,
+          "evidence": "Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode."
+        }
+      ],
+      "expected_answer": "It opens the file in binary mode, using bytes objects; encoding cannot be specified for binary mode.",
+      "absence_reason": null,
+      "note": "Attached after the model run. Never passed to controller or search."
+    },
+    "status": "answered",
+    "answer": "Adding 'b' to the open() mode opens the file in binary mode, which causes data to be read and written as bytes objects [a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f]. You cannot specify an encoding when opening a file in binary mode [a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f].",
+    "citations": [
+      "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f"
+    ],
+    "actual_final_context": {
+      "text": "[a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\ndifferent encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than\n\n[e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40 | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nf.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)\n\n[8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588 | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\nThe first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+      "chunk_ids": [
+        "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+        "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+        "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588"
+      ],
+      "characters": 3242,
+      "budget_chars": 3500,
+      "max_chunks": 3,
+      "selected_chunks": [
+        {
+          "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+          "start_char": 1886,
+          "end_char": 2830,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 12.97595949682852,
+          "rank": 1
+        },
+        {
+          "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+          "start_char": 0,
+          "end_char": 995,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 10.389835616448279,
+          "rank": 2
+        },
+        {
+          "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "The first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+          "start_char": 948,
+          "end_char": 1875,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 10.178744424218479,
+          "rank": 3
+        }
+      ],
+      "excluded": [
+        {
+          "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "9dbf99ecdbe763b9b8ffb9432a94708e9a8c2866ee68b5873d58db853e04abf4",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "fe3ff63bd042841f84f06ece94f9bad417e19894eec2ae9cc11f7c0319fd1bbb",
+          "reason": "max_chunks"
+        }
+      ],
+      "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+    },
+    "review": {
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "abstention_correct": null,
+      "context_evidence_supported": true,
+      "reviewer": "AI-assisted source review",
+      "review_type": "AI-assisted",
+      "reason": "PDF 63 states that b selects binary mode, uses bytes objects, and does not allow encoding. Each answer includes both requested properties.",
+      "human_confirmation": null,
+      "human_reviewer": null,
+      "context_grade": 2,
+      "context_grade_reason": "Ngữ cảnh cuối thực sự gửi model chứa đủ bằng chứng, điều kiện và nguồn để trả lời; khớp đoạn gold đầy đủ, mức 2/2."
+    }
+  },
+  {
+    "config_id": "dense_base",
+    "query_id": "D7T03",
+    "trace_sha256": "1b533e38053dee08ae96bc82b8ef46b08e83d56586b2d3d071a0162d56b6c370",
+    "question": "What does adding b to an open() mode change about the data being read or written, and can encoding be specified in that mode?",
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 63,
+          "evidence": "Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode."
+        }
+      ],
+      "expected_answer": "It opens the file in binary mode, using bytes objects; encoding cannot be specified for binary mode.",
+      "absence_reason": null,
+      "note": "Attached after the model run. Never passed to controller or search."
+    },
+    "status": "answered",
+    "answer": "Adding `b` to the `open()` mode opens the file in binary mode, which means data is read and written as `bytes` objects rather than strings [a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f]. You cannot specify an encoding when opening a file in binary mode [a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f].",
+    "citations": [
+      "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f"
+    ],
+    "actual_final_context": {
+      "text": "[a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\ndifferent encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than\n\n[73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nb'd'\n          In text files (those opened without a b in the mode string), only seeks relative to the beginning of the file are allowed\n          (the exception being seeking to the very file end with seek(0, 2)) and the only valid offset values are those returned\n          from the f.tell(), or zero. Any other offset value produces undefined behaviour.\n\n          File objects have some additional methods, such as isatty() and truncate() which are less frequently used;\n          consult the Library Reference for a complete guide to file objects.\n\n[e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40 | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nf.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+      "chunk_ids": [
+        "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+        "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+        "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40"
+      ],
+      "characters": 2867,
+      "budget_chars": 3500,
+      "max_chunks": 3,
+      "selected_chunks": [
+        {
+          "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+          "start_char": 1886,
+          "end_char": 2830,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8935504619151095
+        },
+        {
+          "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "b'd'\n          In text files (those opened without a b in the mode string), only seeks relative to the beginning of the file are allowed\n          (the exception being seeking to the very file end with seek(0, 2)) and the only valid offset values are those returned\n          from the f.tell(), or zero. Any other offset value produces undefined behaviour.\n\n          File objects have some additional methods, such as isatty() and truncate() which are less frequently used;\n          consult the Library Reference for a complete guide to file objects.",
+          "start_char": 1006,
+          "end_char": 1558,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8622008048176301
+        },
+        {
+          "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+          "start_char": 0,
+          "end_char": 995,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8561535053070182
+        }
+      ],
+      "excluded": [
+        {
+          "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "b74e3b9fdd5b877b9814e88f665f66e565a6b453220e461b7bf9b63514bf3788",
+          "reason": "max_chunks"
+        }
+      ],
+      "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+    },
+    "review": {
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "abstention_correct": null,
+      "context_evidence_supported": true,
+      "reviewer": "AI-assisted source review",
+      "review_type": "AI-assisted",
+      "reason": "PDF 63 states that b selects binary mode, uses bytes objects, and does not allow encoding. Each answer includes both requested properties.",
+      "human_confirmation": null,
+      "human_reviewer": null,
+      "context_grade": 2,
+      "context_grade_reason": "Ngữ cảnh cuối thực sự gửi model chứa đủ bằng chứng, điều kiện và nguồn để trả lời; khớp đoạn gold đầy đủ, mức 2/2."
+    }
+  },
+  {
+    "config_id": "bm25_base",
+    "query_id": "D7T04",
+    "trace_sha256": "d6aafa69bffab2ae8c73a7ae69ffd64f534ef235163525acbf9e0cd3c66831cb",
+    "question": "Which class should a user-defined exception typically derive from, directly or indirectly?",
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 72,
+          "evidence": "Exceptions should typically be derived from the Exception class, either directly or indirectly."
+        }
+      ],
+      "expected_answer": "It should typically derive from Exception, directly or indirectly.",
+      "absence_reason": null,
+      "note": "Attached after the model run. Never passed to controller or search."
+    },
+    "status": "answered",
+    "answer": "A user-defined exception should typically be derived from the `Exception` class, either directly or indirectly [fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d].",
+    "citations": [
+      "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d"
+    ],
+    "actual_final_context": {
+      "text": "[fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d | source=data/raw/tutorial.pdf | PDF page=72 | chapter=8]\n(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.\n\n[ee9be82da595de430c1312e64c2408b3d253a5c37115dafb5a4d46fd67700077 | source=data/raw/tutorial.pdf | PDF page=55 | chapter=6]\nNote that when using from package import item, the item can be either a submodule (or subpackage) of the\n          package, or some other name defined in the package, like a function, class or variable. The import statement first\n          tests whether the item is defined in the package; if not, it assumes it is a module and attempts to load it. If it fails to\n          find it, an ImportError exception is raised.\n          Contrarily, when using syntax like import item.subitem.subsubitem, each item except for the last must be a\n          package; the last item can be a module or a package but can’t be a class or function or variable defined in the previous\n          item.\n\n[5c083674f40427a54b0a0a0a98d7cfb0b61944d0afbee69b1e43ee6e243b5065 | source=data/raw/tutorial.pdf | PDF page=68 | chapter=8]\nexceptions, but need not be true for user-defined exceptions (although it is a useful convention). Standard exception\n          names are built-in identifiers (not reserved keywords).\n          The rest of the line provides detail based on the type of exception and what caused it.\n          The preceding part of the error message shows the context where the exception occurred, in the form of a stack\n          traceback. In general it contains a stack traceback listing source lines; however, it will not display lines read from\n          standard input.\n\n          bltin-exceptions lists the built-in exceptions and their meanings.\n\n          8.3 Handling Exceptions",
+      "chunk_ids": [
+        "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d",
+        "ee9be82da595de430c1312e64c2408b3d253a5c37115dafb5a4d46fd67700077",
+        "5c083674f40427a54b0a0a0a98d7cfb0b61944d0afbee69b1e43ee6e243b5065"
+      ],
+      "characters": 2688,
+      "budget_chars": 3500,
+      "max_chunks": 3,
+      "selected_chunks": [
+        {
+          "id": "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 72,
+          "text": "(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.",
+          "start_char": 0,
+          "end_char": 960,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p072",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 66,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3009
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 13.522260492372864,
+          "rank": 1
+        },
+        {
+          "id": "ee9be82da595de430c1312e64c2408b3d253a5c37115dafb5a4d46fd67700077",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "Note that when using from package import item, the item can be either a submodule (or subpackage) of the\n          package, or some other name defined in the package, like a function, class or variable. The import statement first\n          tests whether the item is defined in the package; if not, it assumes it is a module and attempts to load it. If it fails to\n          find it, an ImportError exception is raised.\n          Contrarily, when using syntax like import item.subitem.subsubitem, each item except for the last must be a\n          package; the last item can be a module or a package but can’t be a class or function or variable defined in the previous\n          item.",
+          "start_char": 1738,
+          "end_char": 2420,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.978546285887093,
+          "rank": 2
+        },
+        {
+          "id": "5c083674f40427a54b0a0a0a98d7cfb0b61944d0afbee69b1e43ee6e243b5065",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 68,
+          "text": "exceptions, but need not be true for user-defined exceptions (although it is a useful convention). Standard exception\n          names are built-in identifiers (not reserved keywords).\n          The rest of the line provides detail based on the type of exception and what caused it.\n          The preceding part of the error message shows the context where the exception occurred, in the form of a stack\n          traceback. In general it contains a stack traceback listing source lines; however, it will not display lines read from\n          standard input.\n\n          bltin-exceptions lists the built-in exceptions and their meanings.\n\n          8.3 Handling Exceptions",
+          "start_char": 0,
+          "end_char": 670,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p068",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 62,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3200
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.400166455083177,
+          "rank": 3
+        }
+      ],
+      "excluded": [
+        {
+          "id": "8f1b7068d800e24e4c6501e26217079bcf41c14c415ba0a42b0b8d1705a6ff7e",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "ccda155dc41402ce180723ab1310d861745e890c0dfbe84fff44dd38ab6c1b78",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "0f64985915230f3a438c801c34351e667932248aa288f15dad7f3e1d441132eb",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "aa7fd097ab2f485e7f284efb44feabdd16a6e79f4243104810f15ef178b9e6ec",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "adbc59779431d1c60f677dd67fa5255a5a676e436696a42dcc1979c7265fa352",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "e5f5a1443b261b45cdd446f6b5fefba992cb37d9630ce43a2d99c269970333de",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+          "reason": "max_chunks"
+        }
+      ],
+      "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+    },
+    "review": {
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "abstention_correct": null,
+      "context_evidence_supported": true,
+      "reviewer": "AI-assisted source review",
+      "review_type": "AI-assisted",
+      "reason": "PDF 72 explicitly says exceptions should typically derive from Exception, directly or indirectly.",
+      "human_confirmation": null,
+      "human_reviewer": null,
+      "context_grade": 2,
+      "context_grade_reason": "Ngữ cảnh cuối thực sự gửi model chứa đủ bằng chứng, điều kiện và nguồn để trả lời; khớp đoạn gold đầy đủ, mức 2/2."
+    }
+  },
+  {
+    "config_id": "dense_base",
+    "query_id": "D7T04",
+    "trace_sha256": "b5cd95f27521b414e1b0fbfb0fd75478d459394892e277f584ce51e4bb8daa94",
+    "question": "Which class should a user-defined exception typically derive from, directly or indirectly?",
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 72,
+          "evidence": "Exceptions should typically be derived from the Exception class, either directly or indirectly."
+        }
+      ],
+      "expected_answer": "It should typically derive from Exception, directly or indirectly.",
+      "absence_reason": null,
+      "note": "Attached after the model run. Never passed to controller or search."
+    },
+    "status": "answered",
+    "answer": "A user-defined exception should typically be derived from the `Exception` class, either directly or indirectly [fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d].",
+    "citations": [
+      "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d"
+    ],
+    "actual_final_context": {
+      "text": "[fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d | source=data/raw/tutorial.pdf | PDF page=72 | chapter=8]\n(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.\n\n[adbc59779431d1c60f677dd67fa5255a5a676e436696a42dcc1979c7265fa352 | source=data/raw/tutorial.pdf | PDF page=69 | chapter=8]\nThe except clause may specify a variable after the exception name. The variable is bound to the exception instance\n          which typically has an args attribute that stores the arguments. For convenience, builtin exception types define\n          __str__() to print all the arguments without explicitly accessing .args.\n          >>> try:\n          ...   raise Exception('spam', 'eggs')\n          ... except Exception as inst:\n          ...   print(type(inst)) # the exception type\n          ...   print(inst.args) # arguments stored in .args\n          ...   print(inst)    # __str__ allows args to be printed directly,\n          ...                  # but may be overridden in exception subclasses\n          ...   x, y = inst.args # unpack args\n          ...   print('x =', x)\n          ...   print('y =', y)\n          ...\n          <class 'Exception'>\n          ('spam', 'eggs')\n          ('spam', 'eggs')\n          x = spam\n          y = eggs\n\n[8f1b7068d800e24e4c6501e26217079bcf41c14c415ba0a42b0b8d1705a6ff7e | source=data/raw/tutorial.pdf | PDF page=69 | chapter=8]\nThe exception’s __str__() output is printed as the last part (‘detail’) of the message for unhandled exceptions.\n          BaseException is the common base class of all exceptions. One of its subclasses, Exception, is the base class of\n          all the non-fatal exceptions. Exceptions which are not subclasses of Exception are not typically handled, because\n          they are used to indicate that the program should terminate. They include SystemExit which is raised by sys.\n          exit() and KeyboardInterrupt which is raised when a user wishes to interrupt the program.\n          Exception can be used as a wildcard that catches (almost) everything. However, it is good practice to be as specific\n          as possible with the types of exceptions that we intend to handle, and to allow any unexpected exceptions to propagate\n          on.",
+      "chunk_ids": [
+        "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d",
+        "adbc59779431d1c60f677dd67fa5255a5a676e436696a42dcc1979c7265fa352",
+        "8f1b7068d800e24e4c6501e26217079bcf41c14c415ba0a42b0b8d1705a6ff7e"
+      ],
+      "characters": 3130,
+      "budget_chars": 3500,
+      "max_chunks": 3,
+      "selected_chunks": [
+        {
+          "id": "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 72,
+          "text": "(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.",
+          "start_char": 0,
+          "end_char": 960,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p072",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 66,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3009
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8740376234054565
+        },
+        {
+          "id": "adbc59779431d1c60f677dd67fa5255a5a676e436696a42dcc1979c7265fa352",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 69,
+          "text": "The except clause may specify a variable after the exception name. The variable is bound to the exception instance\n          which typically has an args attribute that stores the arguments. For convenience, builtin exception types define\n          __str__() to print all the arguments without explicitly accessing .args.\n          >>> try:\n          ...   raise Exception('spam', 'eggs')\n          ... except Exception as inst:\n          ...   print(type(inst)) # the exception type\n          ...   print(inst.args) # arguments stored in .args\n          ...   print(inst)    # __str__ allows args to be printed directly,\n          ...                  # but may be overridden in exception subclasses\n          ...   x, y = inst.args # unpack args\n          ...   print('x =', x)\n          ...   print('y =', y)\n          ...\n          <class 'Exception'>\n          ('spam', 'eggs')\n          ('spam', 'eggs')\n          x = spam\n          y = eggs",
+          "start_char": 594,
+          "end_char": 1540,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p069",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 63,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2895
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8674602666544659
+        },
+        {
+          "id": "8f1b7068d800e24e4c6501e26217079bcf41c14c415ba0a42b0b8d1705a6ff7e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 69,
+          "text": "The exception’s __str__() output is printed as the last part (‘detail’) of the message for unhandled exceptions.\n          BaseException is the common base class of all exceptions. One of its subclasses, Exception, is the base class of\n          all the non-fatal exceptions. Exceptions which are not subclasses of Exception are not typically handled, because\n          they are used to indicate that the program should terminate. They include SystemExit which is raised by sys.\n          exit() and KeyboardInterrupt which is raised when a user wishes to interrupt the program.\n          Exception can be used as a wildcard that catches (almost) everything. However, it is good practice to be as specific\n          as possible with the types of exceptions that we intend to handle, and to allow any unexpected exceptions to propagate\n          on.",
+          "start_char": 1551,
+          "end_char": 2399,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p069",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 63,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2895
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8651924809698788
+        }
+      ],
+      "excluded": [
+        {
+          "id": "fe3ff63bd042841f84f06ece94f9bad417e19894eec2ae9cc11f7c0319fd1bbb",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "e5f5a1443b261b45cdd446f6b5fefba992cb37d9630ce43a2d99c269970333de",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "11e83170131837b8681f907052b637cee769a07e538d4b32d9ee3991b641821b",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "7753667acc9e895b77a2d40fc559250f95b4135d08a23741b06bda9af8ac1aa4",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "0f64985915230f3a438c801c34351e667932248aa288f15dad7f3e1d441132eb",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "8f98e9178f13b19f4024cfbefb4c64dc612cd1387314efb24e173f91d3e77d93",
+          "reason": "max_chunks"
+        }
+      ],
+      "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+    },
+    "review": {
+      "answer_grade": 2,
+      "citation_support": [
+        true
+      ],
+      "abstention_correct": null,
+      "context_evidence_supported": true,
+      "reviewer": "AI-assisted source review",
+      "review_type": "AI-assisted",
+      "reason": "PDF 72 explicitly says exceptions should typically derive from Exception, directly or indirectly.",
+      "human_confirmation": null,
+      "human_reviewer": null,
+      "context_grade": 2,
+      "context_grade_reason": "Ngữ cảnh cuối thực sự gửi model chứa đủ bằng chứng, điều kiện và nguồn để trả lời; khớp đoạn gold đầy đủ, mức 2/2."
+    }
+  },
+  {
+    "config_id": "bm25_base",
+    "query_id": "D7T05",
+    "trace_sha256": "766199a6aeda2494f4f88b901e0ec3864b895bebd1f3744c08c315de7fc3a3df",
+    "question": "How can I disable automatic exception chaining when raising a replacement exception?",
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 71,
+          "evidence": "It also allows disabling automatic exception chaining using the from None idiom:"
+        }
+      ],
+      "expected_answer": "Use raise ... from None, for example raise RuntimeError from None.",
+      "absence_reason": null,
+      "note": "Attached after the model run. Never passed to controller or search."
+    },
+    "status": "answered",
+    "answer": "You can disable automatic exception chaining by using the `from None` idiom when raising the replacement exception (for example, `raise RuntimeError from None`) [4bd84618bd2ed46d84068138e8e283a68e08a15287d94386d8c96847725fa5cf] [fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d].",
+    "citations": [
+      "4bd84618bd2ed46d84068138e8e283a68e08a15287d94386d8c96847725fa5cf",
+      "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d"
+    ],
+    "actual_final_context": {
+      "text": "[4bd84618bd2ed46d84068138e8e283a68e08a15287d94386d8c96847725fa5cf | source=data/raw/tutorial.pdf | PDF page=71 | chapter=8]\nIt also allows disabling automatic exception chaining using the from None idiom:\n\n          >>> try:\n          ...   open('database.sqlite')\n                                                              (continues on next page)\n\n[1268ee21f89dd3bf7b46147d3efd454c447e8f9b8782c57e8af8e1b92b41de76 | source=data/raw/tutorial.pdf | PDF page=71 | chapter=8]\n(continued from previous page)\n          ...\n          An exception flew by!\n          Traceback (most recent call last):\n           File \"<stdin>\", line 2, in <module>\n          NameError: HiThere\n\n          8.5 Exception Chaining\n\n          If an unhandled exception occurs inside an except section, it will have the exception being handled attached to it\n          and included in the error message:\n\n          >>> try:\n          ...   open(\"database.sqlite\")\n          ... except OSError:\n          ...   raise RuntimeError(\"unable to handle error\")\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 2, in <module>\n          FileNotFoundError: [Errno 2] No such file or directory: 'database.sqlite'\n          During handling of the above exception, another exception occurred:\n\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError: unable to handle error\n\n[fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d | source=data/raw/tutorial.pdf | PDF page=72 | chapter=8]\n(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.",
+      "chunk_ids": [
+        "4bd84618bd2ed46d84068138e8e283a68e08a15287d94386d8c96847725fa5cf",
+        "1268ee21f89dd3bf7b46147d3efd454c447e8f9b8782c57e8af8e1b92b41de76",
+        "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d"
+      ],
+      "characters": 2524,
+      "budget_chars": 3500,
+      "max_chunks": 3,
+      "selected_chunks": [
+        {
+          "id": "4bd84618bd2ed46d84068138e8e283a68e08a15287d94386d8c96847725fa5cf",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 71,
+          "text": "It also allows disabling automatic exception chaining using the from None idiom:\n\n          >>> try:\n          ...   open('database.sqlite')\n                                                              (continues on next page)",
+          "start_char": 1904,
+          "end_char": 2131,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p071",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 65,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2131
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 14.689229592308234,
+          "rank": 1
+        },
+        {
+          "id": "1268ee21f89dd3bf7b46147d3efd454c447e8f9b8782c57e8af8e1b92b41de76",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 71,
+          "text": "(continued from previous page)\n          ...\n          An exception flew by!\n          Traceback (most recent call last):\n           File \"<stdin>\", line 2, in <module>\n          NameError: HiThere\n\n          8.5 Exception Chaining\n\n          If an unhandled exception occurs inside an except section, it will have the exception being handled attached to it\n          and included in the error message:\n\n          >>> try:\n          ...   open(\"database.sqlite\")\n          ... except OSError:\n          ...   raise RuntimeError(\"unable to handle error\")\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 2, in <module>\n          FileNotFoundError: [Errno 2] No such file or directory: 'database.sqlite'\n          During handling of the above exception, another exception occurred:\n\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError: unable to handle error",
+          "start_char": 0,
+          "end_char": 961,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p071",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 65,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2131
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.908387789642157,
+          "rank": 2
+        },
+        {
+          "id": "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 72,
+          "text": "(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.",
+          "start_char": 0,
+          "end_char": 960,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p072",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 66,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3009
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.859478463237179,
+          "rank": 3
+        }
+      ],
+      "excluded": [
+        {
+          "id": "b57172a1022978dd6ea8619d55a6e38b49f62170ff996a16f93807b80b7b62b2",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "bef290e8b36e999d90d966e7b6b6a7349d924430ad1e11fb6c09f4da4a345ea5",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "aa7fd097ab2f485e7f284efb44feabdd16a6e79f4243104810f15ef178b9e6ec",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "2b1aaf2ced65e7baeee81b8682a79b6e6b062e2c579aa79ef7a765059c506f2a",
+          "reason": "max_chunks"
+        }
+      ],
+      "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+    },
+    "review": {
+      "answer_grade": 2,
+      "citation_support": [
+        true,
+        true
+      ],
+      "abstention_correct": null,
+      "context_evidence_supported": true,
+      "reviewer": "AI-assisted source review",
+      "review_type": "AI-assisted",
+      "reason": "PDF 71 states the from None idiom; PDF 72 supplies the continued except OSError / raise RuntimeError from None example. Both cited chunks are in final context and jointly support the explanation/example.",
+      "human_confirmation": null,
+      "human_reviewer": null,
+      "context_grade": 2,
+      "context_grade_reason": "Ngữ cảnh cuối thực sự gửi model chứa đủ bằng chứng, điều kiện và nguồn để trả lời; khớp đoạn gold đầy đủ, mức 2/2."
+    }
+  },
+  {
+    "config_id": "dense_base",
+    "query_id": "D7T05",
+    "trace_sha256": "a33a569da90875163c25d950a38a5ec580b22a8c693b1a63aeec5cfe4bdbee5f",
+    "question": "How can I disable automatic exception chaining when raising a replacement exception?",
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 71,
+          "evidence": "It also allows disabling automatic exception chaining using the from None idiom:"
+        }
+      ],
+      "expected_answer": "Use raise ... from None, for example raise RuntimeError from None.",
+      "absence_reason": null,
+      "note": "Attached after the model run. Never passed to controller or search."
+    },
+    "status": "answered",
+    "answer": "You can disable automatic exception chaining using the `from None` idiom [4bd84618bd2ed46d84068138e8e283a68e08a15287d94386d8c96847725fa5cf], for example:\n\n```python\ntry:\n    open('database.sqlite')\nexcept OSError:\n    raise RuntimeError from None\n``` [fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d]",
+    "citations": [
+      "4bd84618bd2ed46d84068138e8e283a68e08a15287d94386d8c96847725fa5cf",
+      "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d"
+    ],
+    "actual_final_context": {
+      "text": "[2b1aaf2ced65e7baeee81b8682a79b6e6b062e2c579aa79ef7a765059c506f2a | source=data/raw/tutorial.pdf | PDF page=71 | chapter=8]\nTo indicate that an exception is a direct consequence of another, the raise statement allows an optional from clause:\n          # exc must be exception instance or None.\n          raise RuntimeError from exc\n\n          This can be useful when you are transforming exceptions. For example:\n\n          >>> def func():\n          ...   raise ConnectionError\n          ...\n          >>> try:\n          ...   func()\n          ... except ConnectionError as exc:\n          ...   raise RuntimeError('Failed to open database') from exc\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 2, in <module>\n           File \"<stdin>\", line 2, in func\n          ConnectionError\n          The above exception was the direct cause of the following exception:\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError: Failed to open database\n\n[4bd84618bd2ed46d84068138e8e283a68e08a15287d94386d8c96847725fa5cf | source=data/raw/tutorial.pdf | PDF page=71 | chapter=8]\nIt also allows disabling automatic exception chaining using the from None idiom:\n\n          >>> try:\n          ...   open('database.sqlite')\n                                                              (continues on next page)\n\n[fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d | source=data/raw/tutorial.pdf | PDF page=72 | chapter=8]\n(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.",
+      "chunk_ids": [
+        "2b1aaf2ced65e7baeee81b8682a79b6e6b062e2c579aa79ef7a765059c506f2a",
+        "4bd84618bd2ed46d84068138e8e283a68e08a15287d94386d8c96847725fa5cf",
+        "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d"
+      ],
+      "characters": 2482,
+      "budget_chars": 3500,
+      "max_chunks": 3,
+      "selected_chunks": [
+        {
+          "id": "2b1aaf2ced65e7baeee81b8682a79b6e6b062e2c579aa79ef7a765059c506f2a",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 71,
+          "text": "To indicate that an exception is a direct consequence of another, the raise statement allows an optional from clause:\n          # exc must be exception instance or None.\n          raise RuntimeError from exc\n\n          This can be useful when you are transforming exceptions. For example:\n\n          >>> def func():\n          ...   raise ConnectionError\n          ...\n          >>> try:\n          ...   func()\n          ... except ConnectionError as exc:\n          ...   raise RuntimeError('Failed to open database') from exc\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 2, in <module>\n           File \"<stdin>\", line 2, in func\n          ConnectionError\n          The above exception was the direct cause of the following exception:\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError: Failed to open database",
+          "start_char": 973,
+          "end_char": 1892,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p071",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 65,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2131
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8619460032050605
+        },
+        {
+          "id": "4bd84618bd2ed46d84068138e8e283a68e08a15287d94386d8c96847725fa5cf",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 71,
+          "text": "It also allows disabling automatic exception chaining using the from None idiom:\n\n          >>> try:\n          ...   open('database.sqlite')\n                                                              (continues on next page)",
+          "start_char": 1904,
+          "end_char": 2131,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p071",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 65,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2131
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8602543556538623
+        },
+        {
+          "id": "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 72,
+          "text": "(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.",
+          "start_char": 0,
+          "end_char": 960,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p072",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 66,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3009
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8579445565972011
+        }
+      ],
+      "excluded": [
+        {
+          "id": "1268ee21f89dd3bf7b46147d3efd454c447e8f9b8782c57e8af8e1b92b41de76",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "8f98e9178f13b19f4024cfbefb4c64dc612cd1387314efb24e173f91d3e77d93",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "4c0931e7d98c8e916eab8b8d2c1e26fd793dcec419483175a01950c709425cc1",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "b57172a1022978dd6ea8619d55a6e38b49f62170ff996a16f93807b80b7b62b2",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "fe3ff63bd042841f84f06ece94f9bad417e19894eec2ae9cc11f7c0319fd1bbb",
+          "reason": "max_chunks"
+        }
+      ],
+      "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+    },
+    "review": {
+      "answer_grade": 2,
+      "citation_support": [
+        true,
+        true
+      ],
+      "abstention_correct": null,
+      "context_evidence_supported": true,
+      "reviewer": "AI-assisted source review",
+      "review_type": "AI-assisted",
+      "reason": "PDF 71 states the from None idiom; PDF 72 supplies the continued except OSError / raise RuntimeError from None example. Both cited chunks are in final context and jointly support the explanation/example.",
+      "human_confirmation": null,
+      "human_reviewer": null,
+      "context_grade": 2,
+      "context_grade_reason": "Ngữ cảnh cuối thực sự gửi model chứa đủ bằng chứng, điều kiện và nguồn để trả lời; khớp đoạn gold đầy đủ, mức 2/2."
+    }
+  },
+  {
+    "config_id": "bm25_base",
+    "query_id": "D7TN01",
+    "trace_sha256": "654e6d743389a26173673f5762c4b09b914228def6c2608a0e4644b13bf60470",
+    "question": "According to the supplied pages, what is the largest JSON file, in gigabytes, that json.load can successfully read on my laptop?",
+    "evaluation_only": {
+      "answerable": false,
+      "gold": [],
+      "expected_answer": null,
+      "absence_reason": "The corpus describes JSON loading and includes a general warning about reading a file larger than memory, but provides no laptop-specific memory, JSON representation overhead or fixed gigabyte bound for json.load. An exact maximum cannot be derived.",
+      "note": "Attached after the model run. Never passed to controller or search."
+    },
+    "status": "abstain",
+    "answer": "The provided documentation does not contain information about file size limits in gigabytes for json.load on a laptop.",
+    "citations": [],
+    "actual_final_context": {
+      "text": "[bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba | source=data/raw/tutorial.pdf | PDF page=66 | chapter=7]\nx = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.\n\n[78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nthe string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:\n\n[5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727 | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\n7.2.2 Saving structured data with json\n          Strings can easily be written to and read from a file. Numbers take a bit more effort, since the read() method only\n          returns strings, which will have to be passed to a function like int(), which takes a string like '123' and returns its\n          numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and\n          serializing by hand becomes complicated.\n          Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows\n          you to use the popular data interchange format called JSON (JavaScript Object Notation). The standard module called\n          json can take Python data hierarchies, and convert them to string representations; this process is called serializing.\n          Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing,",
+      "chunk_ids": [
+        "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+        "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+        "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727"
+      ],
+      "characters": 3209,
+      "budget_chars": 3500,
+      "max_chunks": 3,
+      "selected_chunks": [
+        {
+          "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 66,
+          "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+          "start_char": 0,
+          "end_char": 920,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p066",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 60,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 920
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 9.978330010735188,
+          "rank": 1
+        },
+        {
+          "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+          "start_char": 2561,
+          "end_char": 3494,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.150945027033642,
+          "rank": 2
+        },
+        {
+          "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "7.2.2 Saving structured data with json\n          Strings can easily be written to and read from a file. Numbers take a bit more effort, since the read() method only\n          returns strings, which will have to be passed to a function like int(), which takes a string like '123' and returns its\n          numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and\n          serializing by hand becomes complicated.\n          Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows\n          you to use the popular data interchange format called JSON (JavaScript Object Notation). The standard module called\n          json can take Python data hierarchies, and convert them to string representations; this process is called serializing.\n          Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing,",
+          "start_char": 1570,
+          "end_char": 2550,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 5.2723100748274225,
+          "rank": 3
+        }
+      ],
+      "excluded": [
+        {
+          "id": "ee9be82da595de430c1312e64c2408b3d253a5c37115dafb5a4d46fd67700077",
+          "reason": "max_chunks"
+        }
+      ],
+      "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+    },
+    "review": {
+      "answer_grade": null,
+      "citation_support": [],
+      "abstention_correct": true,
+      "context_evidence_supported": null,
+      "reviewer": "AI-assisted source review",
+      "review_type": "AI-assisted",
+      "reason": "Correct corpus-scoped abstention: no fixed gigabyte limit is given for json.load on an unspecified laptop. The text lacks the needed memory/hardware/representation conditions; neither response invents a limit.",
+      "human_confirmation": null,
+      "human_reviewer": null,
+      "context_grade": null,
+      "context_grade_reason": "Không áp dụng cho câu thiếu bằng chứng; không đưa vào mẫu số chấm context."
+    }
+  },
+  {
+    "config_id": "dense_base",
+    "query_id": "D7TN01",
+    "trace_sha256": "21c825f2ed78eb23f43c1c6fcd9e93b2cd59778d20f67eb8736eb3c5346dc924",
+    "question": "According to the supplied pages, what is the largest JSON file, in gigabytes, that json.load can successfully read on my laptop?",
+    "evaluation_only": {
+      "answerable": false,
+      "gold": [],
+      "expected_answer": null,
+      "absence_reason": "The corpus describes JSON loading and includes a general warning about reading a file larger than memory, but provides no laptop-specific memory, JSON representation overhead or fixed gigabyte bound for json.load. An exact maximum cannot be derived.",
+      "note": "Attached after the model run. Never passed to controller or search."
+    },
+    "status": "abstain",
+    "answer": "The supplied corpus does not mention the largest JSON file size in gigabytes that json.load can successfully read.",
+    "citations": [],
+    "actual_final_context": {
+      "text": "[bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba | source=data/raw/tutorial.pdf | PDF page=66 | chapter=7]\nx = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.\n\n[5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727 | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\n7.2.2 Saving structured data with json\n          Strings can easily be written to and read from a file. Numbers take a bit more effort, since the read() method only\n          returns strings, which will have to be passed to a function like int(), which takes a string like '123' and returns its\n          numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and\n          serializing by hand becomes complicated.\n          Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows\n          you to use the popular data interchange format called JSON (JavaScript Object Notation). The standard module called\n          json can take Python data hierarchies, and convert them to string representations; this process is called serializing.\n          Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing,\n\n[fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b | source=data/raw/tutorial.pdf | PDF page=54 | chapter=6]\n(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+      "chunk_ids": [
+        "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+        "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+        "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b"
+      ],
+      "characters": 3254,
+      "budget_chars": 3500,
+      "max_chunks": 3,
+      "selected_chunks": [
+        {
+          "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 66,
+          "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+          "start_char": 0,
+          "end_char": 920,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p066",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 60,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 920
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8764984681309198
+        },
+        {
+          "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "7.2.2 Saving structured data with json\n          Strings can easily be written to and read from a file. Numbers take a bit more effort, since the read() method only\n          returns strings, which will have to be passed to a function like int(), which takes a string like '123' and returns its\n          numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and\n          serializing by hand becomes complicated.\n          Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows\n          you to use the popular data interchange format called JSON (JavaScript Object Notation). The standard module called\n          json can take Python data hierarchies, and convert them to string representations; this process is called serializing.\n          Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing,",
+          "start_char": 1570,
+          "end_char": 2550,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8434062600135803
+        },
+        {
+          "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+          "start_char": 0,
+          "end_char": 978,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8403573036193848
+        }
+      ],
+      "excluded": [
+        {
+          "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "b74e3b9fdd5b877b9814e88f665f66e565a6b453220e461b7bf9b63514bf3788",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "81f84218b7a4754e42f601920d466b1aa012b2fc3c81d1ecf1bd19edc0cf5aaa",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+          "reason": "duplicate_id"
+        },
+        {
+          "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+          "reason": "duplicate_id"
+        },
+        {
+          "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+          "reason": "duplicate_id"
+        },
+        {
+          "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+          "reason": "duplicate_id"
+        },
+        {
+          "id": "81f84218b7a4754e42f601920d466b1aa012b2fc3c81d1ecf1bd19edc0cf5aaa",
+          "reason": "duplicate_id"
+        },
+        {
+          "id": "1268ee21f89dd3bf7b46147d3efd454c447e8f9b8782c57e8af8e1b92b41de76",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+          "reason": "duplicate_id"
+        },
+        {
+          "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+          "reason": "duplicate_id"
+        }
+      ],
+      "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+    },
+    "review": {
+      "answer_grade": null,
+      "citation_support": [],
+      "abstention_correct": true,
+      "context_evidence_supported": null,
+      "reviewer": "AI-assisted source review",
+      "review_type": "AI-assisted",
+      "reason": "Correct corpus-scoped abstention: no fixed gigabyte limit is given for json.load on an unspecified laptop. The text lacks the needed memory/hardware/representation conditions; neither response invents a limit.",
+      "human_confirmation": null,
+      "human_reviewer": null,
+      "context_grade": null,
+      "context_grade_reason": "Không áp dụng cho câu thiếu bằng chứng; không đưa vào mẫu số chấm context."
+    }
+  },
+  {
+    "config_id": "bm25_base",
+    "query_id": "D7TN02",
+    "trace_sha256": "a7d71596af7b5645e4fb0c796a56c7c343a0cbeb4da79407050400b9012df51e",
+    "question": "Which AES cipher mode and key length do the supplied pages specify for encrypting a pickle file?",
+    "evaluation_only": {
+      "answerable": false,
+      "gold": [],
+      "expected_answer": null,
+      "absence_reason": "The pickle note describes serialization and warns about untrusted data. It does not specify AES encryption, cipher modes or encryption-key lengths. Do not infer an encryption scheme or claim one is provided. A grounded security warning may accompany an explicit insufficient-evidence response.",
+      "note": "Attached after the model run. Never passed to controller or search."
+    },
+    "status": "abstain",
+    "answer": "The supplied corpus does not contain any information about AES cipher modes or key lengths for encrypting pickle files.",
+    "citations": [],
+    "actual_final_context": {
+      "text": "[bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba | source=data/raw/tutorial.pdf | PDF page=66 | chapter=7]\nx = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.\n\n[a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\ndifferent encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than\n\n[ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804 | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\nThe rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+      "chunk_ids": [
+        "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+        "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+        "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804"
+      ],
+      "characters": 2945,
+      "budget_chars": 3500,
+      "max_chunks": 3,
+      "selected_chunks": [
+        {
+          "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 66,
+          "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+          "start_char": 0,
+          "end_char": 920,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p066",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 60,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 920
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.59263547155158,
+          "rank": 1
+        },
+        {
+          "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+          "start_char": 1886,
+          "end_char": 2830,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.523796531621665,
+          "rank": 2
+        },
+        {
+          "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+          "start_char": 393,
+          "end_char": 1098,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.231749473621457,
+          "rank": 3
+        }
+      ],
+      "excluded": [
+        {
+          "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+          "reason": "max_chunks"
+        }
+      ],
+      "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+    },
+    "review": {
+      "answer_grade": null,
+      "citation_support": [],
+      "abstention_correct": true,
+      "context_evidence_supported": null,
+      "reviewer": "AI-assisted source review",
+      "review_type": "AI-assisted",
+      "reason": "Correct corpus-scoped abstention: the selected pages contain no AES mode or encryption-key-length specification for pickle. The pickle note concerns serialization and untrusted-data risk, not an encryption scheme. No unsupported algorithm or key length is supplied.",
+      "human_confirmation": null,
+      "human_reviewer": null,
+      "context_grade": null,
+      "context_grade_reason": "Không áp dụng cho câu thiếu bằng chứng; không đưa vào mẫu số chấm context."
+    }
+  },
+  {
+    "config_id": "dense_base",
+    "query_id": "D7TN02",
+    "trace_sha256": "86e5b2f701f53c0f54ad7220c592d17271ad0aa6c936f76f636738ddbcc06487",
+    "question": "Which AES cipher mode and key length do the supplied pages specify for encrypting a pickle file?",
+    "evaluation_only": {
+      "answerable": false,
+      "gold": [],
+      "expected_answer": null,
+      "absence_reason": "The pickle note describes serialization and warns about untrusted data. It does not specify AES encryption, cipher modes or encryption-key lengths. Do not infer an encryption scheme or claim one is provided. A grounded security warning may accompany an explicit insufficient-evidence response.",
+      "note": "Attached after the model run. Never passed to controller or search."
+    },
+    "status": "abstain",
+    "answer": "The supplied Python Tutorial corpus does not contain any information about AES cipher modes, key lengths, or encrypting pickle files.",
+    "citations": [],
+    "actual_final_context": {
+      "text": "[8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94 | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\nCHAPTER\n\n                                                                     SIX\n\n                                                              MODULES\n\n[fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b | source=data/raw/tutorial.pdf | PDF page=54 | chapter=6]\n(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',\n\n[10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4 | source=data/raw/tutorial.pdf | PDF page=76 | chapter=8]\n|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+      "chunk_ids": [
+        "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+        "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+        "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4"
+      ],
+      "characters": 1959,
+      "budget_chars": 3500,
+      "max_chunks": 3,
+      "selected_chunks": [
+        {
+          "id": "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "CHAPTER\n\n                                                                     SIX\n\n                                                              MODULES",
+          "start_char": 0,
+          "end_char": 152,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8047614693641663
+        },
+        {
+          "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+          "start_char": 0,
+          "end_char": 978,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.7899926900863647
+        },
+        {
+          "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 76,
+          "text": "|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+          "start_char": 987,
+          "end_char": 1440,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p076",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 70,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 1440
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.7864734188946042
+        }
+      ],
+      "excluded": [
+        {
+          "id": "962b79a46dbddfde89b41ddbab92690a6a32d9b53185efdb57a00ae8d73db394",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "11e83170131837b8681f907052b637cee769a07e538d4b32d9ee3991b641821b",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "8f98e9178f13b19f4024cfbefb4c64dc612cd1387314efb24e173f91d3e77d93",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "08bf833392768874ec41874e72caa626ff55b6cc99cde578311ca4cd9ce9d3e7",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+          "reason": "duplicate_id"
+        },
+        {
+          "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+          "reason": "duplicate_id"
+        },
+        {
+          "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+          "reason": "duplicate_id"
+        },
+        {
+          "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+          "reason": "duplicate_id"
+        },
+        {
+          "id": "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809",
+          "reason": "max_chunks"
+        }
+      ],
+      "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+    },
+    "review": {
+      "answer_grade": null,
+      "citation_support": [],
+      "abstention_correct": true,
+      "context_evidence_supported": null,
+      "reviewer": "AI-assisted source review",
+      "review_type": "AI-assisted",
+      "reason": "Correct corpus-scoped abstention: the selected pages contain no AES mode or encryption-key-length specification for pickle. The pickle note concerns serialization and untrusted-data risk, not an encryption scheme. No unsupported algorithm or key length is supplied.",
+      "human_confirmation": null,
+      "human_reviewer": null,
+      "context_grade": null,
+      "context_grade_reason": "Không áp dụng cho câu thiếu bằng chứng; không đưa vào mẫu số chấm context."
+    }
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "scope": "AI-assisted dev review finalization, before test",
+  "query_id": "D09",
+  "config_id": "hybrid_base",
+  "old_proposed_grade": 2,
+  "revised_grade": 1,
+  "criterion": "Complete answer must state the requested assigned value; a conditional-only explanation receives partial completeness credit.",
+  "model_or_retrieval_rerun": false,
+  "human_confirmation": null,
+  "original_proposal": "dev_agent_review_initial.json",
+  "no_test_results_used": true
+}

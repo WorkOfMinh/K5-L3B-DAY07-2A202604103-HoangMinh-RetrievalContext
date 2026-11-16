@@ -1,0 +1,2077 @@
+{
+  "status": "abstain",
+  "answer": "The supplied Python Tutorial corpus does not contain any information about AES cipher modes, key lengths, or encrypting pickle files.",
+  "citations": [],
+  "reason": "The supplied Python Tutorial corpus does not contain any information about AES cipher modes, key lengths, or encrypting pickle files.",
+  "guard": "model_abstention",
+  "raw_model_answer": "",
+  "display_normalization": "empty abstention answer displayed using original model reason",
+  "query_id": "D7TN02",
+  "config_id": "dense_base",
+  "public_query": {
+    "id": "D7TN02",
+    "question": "Which AES cipher mode and key length do the supplied pages specify for encrypting a pickle file?",
+    "filter": null
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "AES cipher mode key length pickle file",
+      "filter": null,
+      "method": "dense",
+      "ranking": [
+        {
+          "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 66,
+          "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+          "start_char": 0,
+          "end_char": 920,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p066",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 60,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 920
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8490627497993276
+        },
+        {
+          "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+          "start_char": 0,
+          "end_char": 978,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8315455913543701
+        },
+        {
+          "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 76,
+          "text": "|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+          "start_char": 987,
+          "end_char": 1440,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p076",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 70,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 1440
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8238564939670032
+        },
+        {
+          "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+          "start_char": 0,
+          "end_char": 995,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8232615695439849
+        },
+        {
+          "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+          "start_char": 990,
+          "end_char": 1611,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.8223287674988844
+        },
+        {
+          "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 53,
+          "text": "'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError',\n           'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError',\n                                                              (continues on next page)",
+          "start_char": 3160,
+          "end_char": 3397,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p053",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 47,
+            "chapter_title": "Modules",
+            "normalized_characters": 3397
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.8222154590826738
+        },
+        {
+          "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+          "start_char": 1886,
+          "end_char": 2830,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.8220728039741516
+        },
+        {
+          "id": "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "CHAPTER\n\n                                                                     SIX\n\n                                                              MODULES",
+          "start_char": 0,
+          "end_char": 152,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.821665346622467
+        },
+        {
+          "id": "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "• You can use the -O or -OO switches on the Python command to reduce the size of a compiled module. The -O\n             switch removes assert statements, the -OO switch removes both assert statements and __doc__ strings. Since\n             some programs may rely on having these available, you should only use this option if you know what you’re\n             doing. “Optimized” modules have an opt- tag and are usually smaller. Future releases may change the effects\n             of optimization.\n            • A program doesn’t run any faster when it is read from a .pyc file than when it is read from a .py file; the only\n             thing that’s faster about .pyc files is the speed with which they are loaded.\n            • The module compileall can create .pyc files for all modules in a directory.\n\n            • There is more detail on this process, including a flow chart of the decisions, in PEP 3147.\n\n          6.2 Standard Modules",
+          "start_char": 1825,
+          "end_char": 2768,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8213639748909473
+        },
+        {
+          "id": "4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": ">>> fibo.fib(1000)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987\n          >>> fibo.fib2(100)\n          [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]\n                                                              (continues on next page)",
+          "start_char": 2455,
+          "end_char": 2700,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8188765048980713
+        }
+      ],
+      "component_rankings": {
+        "dense": [
+          {
+            "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 66,
+            "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+            "start_char": 0,
+            "end_char": 920,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p066",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 60,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 920
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8490627497993276
+          },
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+            "start_char": 0,
+            "end_char": 978,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8315455913543701
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 76,
+            "text": "|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+            "start_char": 987,
+            "end_char": 1440,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p076",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 70,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 1440
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8238564939670032
+          },
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+            "start_char": 0,
+            "end_char": 995,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 4,
+            "score": 0.8232615695439849
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+            "start_char": 990,
+            "end_char": 1611,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.8223287674988844
+          },
+          {
+            "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 53,
+            "text": "'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError',\n           'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError',\n                                                              (continues on next page)",
+            "start_char": 3160,
+            "end_char": 3397,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p053",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 47,
+              "chapter_title": "Modules",
+              "normalized_characters": 3397
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 6,
+            "score": 0.8222154590826738
+          },
+          {
+            "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+            "start_char": 1886,
+            "end_char": 2830,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 7,
+            "score": 0.8220728039741516
+          },
+          {
+            "id": "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": "CHAPTER\n\n                                                                     SIX\n\n                                                              MODULES",
+            "start_char": 0,
+            "end_char": 152,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 8,
+            "score": 0.821665346622467
+          },
+          {
+            "id": "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 52,
+            "text": "• You can use the -O or -OO switches on the Python command to reduce the size of a compiled module. The -O\n             switch removes assert statements, the -OO switch removes both assert statements and __doc__ strings. Since\n             some programs may rely on having these available, you should only use this option if you know what you’re\n             doing. “Optimized” modules have an opt- tag and are usually smaller. Future releases may change the effects\n             of optimization.\n            • A program doesn’t run any faster when it is read from a .pyc file than when it is read from a .py file; the only\n             thing that’s faster about .pyc files is the speed with which they are loaded.\n            • The module compileall can create .pyc files for all modules in a directory.\n\n            • There is more detail on this process, including a flow chart of the decisions, in PEP 3147.\n\n          6.2 Standard Modules",
+            "start_char": 1825,
+            "end_char": 2768,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p052",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 46,
+              "chapter_title": "Modules",
+              "normalized_characters": 4192
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 9,
+            "score": 0.8213639748909473
+          },
+          {
+            "id": "4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": ">>> fibo.fib(1000)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987\n          >>> fibo.fib2(100)\n          [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]\n                                                              (continues on next page)",
+            "start_char": 2455,
+            "end_char": 2700,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 10,
+            "score": 0.8188765048980713
+          }
+        ]
+      },
+      "context": {
+        "text": "[bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba | source=data/raw/tutorial.pdf | PDF page=66 | chapter=7]\nx = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.\n\n[fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b | source=data/raw/tutorial.pdf | PDF page=54 | chapter=6]\n(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',\n\n[10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4 | source=data/raw/tutorial.pdf | PDF page=76 | chapter=8]\n|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+        "chunk_ids": [
+          "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+          "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+          "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4"
+        ],
+        "characters": 2727,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 66,
+            "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+            "start_char": 0,
+            "end_char": 920,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p066",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 60,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 920
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8490627497993276
+          },
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+            "start_char": 0,
+            "end_char": 978,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8315455913543701
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 76,
+            "text": "|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+            "start_char": 987,
+            "end_char": 1440,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p076",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 70,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 1440
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8238564939670032
+          }
+        ],
+        "excluded": [
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.043902599998546066
+    },
+    {
+      "event": "search",
+      "query": "AES",
+      "filter": null,
+      "method": "dense",
+      "ranking": [
+        {
+          "id": "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "CHAPTER\n\n                                                                     SIX\n\n                                                              MODULES",
+          "start_char": 0,
+          "end_char": 152,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8047614693641663
+        },
+        {
+          "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+          "start_char": 0,
+          "end_char": 978,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.7899926900863647
+        },
+        {
+          "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 76,
+          "text": "|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+          "start_char": 987,
+          "end_char": 1440,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p076",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 70,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 1440
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.7864734188946042
+        },
+        {
+          "id": "962b79a46dbddfde89b41ddbab92690a6a32d9b53185efdb57a00ae8d73db394",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 61,
+          "text": ">>> bugs = 'roaches'\n          >>> count = 13\n          >>> area = 'living room'\n          >>> print(f'Debugging {bugs=} {count=} {area=}')\n          Debugging bugs='roaches' count=13 area='living room'\n\n          See self-documenting expressions for more information on the = specifier. For a reference on these format specifi-\n          cations, see the reference guide for the formatspec.\n\n          7.1.2 The String format() Method\n          Basic usage of the str.format() method looks like this:\n\n          >>> print('We are the {} who say \"{}!\"'.format('knights', 'Ni'))\n          We are the knights who say \"Ni!\"",
+          "start_char": 0,
+          "end_char": 620,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p061",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 55,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2889
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.7863335013389587
+        },
+        {
+          "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 53,
+          "text": "'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError',\n           'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError',\n                                                              (continues on next page)",
+          "start_char": 3160,
+          "end_char": 3397,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p053",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 47,
+            "chapter_title": "Modules",
+            "normalized_characters": 3397
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.7860245959729494
+        },
+        {
+          "id": "11e83170131837b8681f907052b637cee769a07e538d4b32d9ee3991b641821b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 75,
+          "text": "(continued from previous page)\n          ...   print(\"There were SystemErrors\")\n          ...\n          There were OSErrors\n          There were SystemErrors\n           + Exception Group Traceback (most recent call last):\n           |  File \"<stdin>\", line 2, in <module>\n           |  File \"<stdin>\", line 2, in f\n           | ExceptionGroup: group1\n           +-+---------------- 1 ----------------\n             | ExceptionGroup: group2\n             +-+---------------- 1 ----------------\n              | RecursionError: 4\n              +------------------------------------\n          >>>\n          Note that the exceptions nested in an exception group must be instances, not types. This is because in practice the\n          exceptions would typically be ones that have already been raised and caught by the program, along the following\n          pattern:\n          >>> excs = []\n          ... for test in tests:\n          ...   try:\n          ...      test.run()",
+          "start_char": 0,
+          "end_char": 965,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p075",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 69,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.783061683177948
+        },
+        {
+          "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "filters/            Subpackage for filters\n                    __init__.py\n                                                              (continues on next page)",
+          "start_char": 3585,
+          "end_char": 3746,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.7826371192932129
+        },
+        {
+          "id": "8f98e9178f13b19f4024cfbefb4c64dc612cd1387314efb24e173f91d3e77d93",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 75,
+          "text": "...   except Exception as e:\n          ...      excs.append(e)\n          ...\n          >>> if excs:\n          ...  raise ExceptionGroup(\"Test Failures\", excs)\n          ...\n\n          8.10 Enriching Exceptions with Notes",
+          "start_char": 976,
+          "end_char": 1196,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p075",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 69,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.7823006510734558
+        },
+        {
+          "id": "08bf833392768874ec41874e72caa626ff55b6cc99cde578311ca4cd9ce9d3e7",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 43,
+          "text": ">>> a = [-1, 1, 66.25, 333, 333, 1234.5]\n          >>> del a[0]\n          >>> a\n          [1, 66.25, 333, 333, 1234.5]\n          >>> del a[2:4]\n          >>> a\n          [1, 66.25, 1234.5]\n          >>> del a[:]\n          >>> a\n          []\n          del can also be used to delete entire variables:\n\n          >>> del a\n          Referencing the name a hereafter is an error (at least until another value is assigned to it). We’ll find other uses for\n          del later.",
+          "start_char": 1571,
+          "end_char": 2043,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p043",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 37,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2043
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.7804238927111703
+        },
+        {
+          "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 76,
+          "text": "(continued from previous page)\n          ...\n          >>> excs = []\n          >>> for i in range(3):\n          ...   try:\n          ...      f()\n          ...   except Exception as e:\n          ...      e.add_note(f'Happened in Iteration {i+1}')\n          ...      excs.append(e)\n          ...\n          >>> raise ExceptionGroup('We have some problems', excs)\n           + Exception Group Traceback (most recent call last):\n           |  File \"<stdin>\", line 1, in <module>\n           | ExceptionGroup: We have some problems (3 sub-exceptions)\n           +-+---------------- 1 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 1\n             +---------------- 2 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>",
+          "start_char": 0,
+          "end_char": 973,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p076",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 70,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 1440
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.7793221009181691
+        }
+      ],
+      "component_rankings": {
+        "dense": [
+          {
+            "id": "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": "CHAPTER\n\n                                                                     SIX\n\n                                                              MODULES",
+            "start_char": 0,
+            "end_char": 152,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8047614693641663
+          },
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+            "start_char": 0,
+            "end_char": 978,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.7899926900863647
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 76,
+            "text": "|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+            "start_char": 987,
+            "end_char": 1440,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p076",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 70,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 1440
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.7864734188946042
+          },
+          {
+            "id": "962b79a46dbddfde89b41ddbab92690a6a32d9b53185efdb57a00ae8d73db394",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 61,
+            "text": ">>> bugs = 'roaches'\n          >>> count = 13\n          >>> area = 'living room'\n          >>> print(f'Debugging {bugs=} {count=} {area=}')\n          Debugging bugs='roaches' count=13 area='living room'\n\n          See self-documenting expressions for more information on the = specifier. For a reference on these format specifi-\n          cations, see the reference guide for the formatspec.\n\n          7.1.2 The String format() Method\n          Basic usage of the str.format() method looks like this:\n\n          >>> print('We are the {} who say \"{}!\"'.format('knights', 'Ni'))\n          We are the knights who say \"Ni!\"",
+            "start_char": 0,
+            "end_char": 620,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p061",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 55,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2889
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 4,
+            "score": 0.7863335013389587
+          },
+          {
+            "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 53,
+            "text": "'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError',\n           'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError',\n                                                              (continues on next page)",
+            "start_char": 3160,
+            "end_char": 3397,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p053",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 47,
+              "chapter_title": "Modules",
+              "normalized_characters": 3397
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.7860245959729494
+          },
+          {
+            "id": "11e83170131837b8681f907052b637cee769a07e538d4b32d9ee3991b641821b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 75,
+            "text": "(continued from previous page)\n          ...   print(\"There were SystemErrors\")\n          ...\n          There were OSErrors\n          There were SystemErrors\n           + Exception Group Traceback (most recent call last):\n           |  File \"<stdin>\", line 2, in <module>\n           |  File \"<stdin>\", line 2, in f\n           | ExceptionGroup: group1\n           +-+---------------- 1 ----------------\n             | ExceptionGroup: group2\n             +-+---------------- 1 ----------------\n              | RecursionError: 4\n              +------------------------------------\n          >>>\n          Note that the exceptions nested in an exception group must be instances, not types. This is because in practice the\n          exceptions would typically be ones that have already been raised and caught by the program, along the following\n          pattern:\n          >>> excs = []\n          ... for test in tests:\n          ...   try:\n          ...      test.run()",
+            "start_char": 0,
+            "end_char": 965,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p075",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 69,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 6,
+            "score": 0.783061683177948
+          },
+          {
+            "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "filters/            Subpackage for filters\n                    __init__.py\n                                                              (continues on next page)",
+            "start_char": 3585,
+            "end_char": 3746,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 7,
+            "score": 0.7826371192932129
+          },
+          {
+            "id": "8f98e9178f13b19f4024cfbefb4c64dc612cd1387314efb24e173f91d3e77d93",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 75,
+            "text": "...   except Exception as e:\n          ...      excs.append(e)\n          ...\n          >>> if excs:\n          ...  raise ExceptionGroup(\"Test Failures\", excs)\n          ...\n\n          8.10 Enriching Exceptions with Notes",
+            "start_char": 976,
+            "end_char": 1196,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p075",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 69,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 8,
+            "score": 0.7823006510734558
+          },
+          {
+            "id": "08bf833392768874ec41874e72caa626ff55b6cc99cde578311ca4cd9ce9d3e7",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 43,
+            "text": ">>> a = [-1, 1, 66.25, 333, 333, 1234.5]\n          >>> del a[0]\n          >>> a\n          [1, 66.25, 333, 333, 1234.5]\n          >>> del a[2:4]\n          >>> a\n          [1, 66.25, 1234.5]\n          >>> del a[:]\n          >>> a\n          []\n          del can also be used to delete entire variables:\n\n          >>> del a\n          Referencing the name a hereafter is an error (at least until another value is assigned to it). We’ll find other uses for\n          del later.",
+            "start_char": 1571,
+            "end_char": 2043,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p043",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 37,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2043
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 9,
+            "score": 0.7804238927111703
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 76,
+            "text": "(continued from previous page)\n          ...\n          >>> excs = []\n          >>> for i in range(3):\n          ...   try:\n          ...      f()\n          ...   except Exception as e:\n          ...      e.add_note(f'Happened in Iteration {i+1}')\n          ...      excs.append(e)\n          ...\n          >>> raise ExceptionGroup('We have some problems', excs)\n           + Exception Group Traceback (most recent call last):\n           |  File \"<stdin>\", line 1, in <module>\n           | ExceptionGroup: We have some problems (3 sub-exceptions)\n           +-+---------------- 1 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 1\n             +---------------- 2 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>",
+            "start_char": 0,
+            "end_char": 973,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p076",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 70,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 1440
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 10,
+            "score": 0.7793221009181691
+          }
+        ]
+      },
+      "context": {
+        "text": "[8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94 | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\nCHAPTER\n\n                                                                     SIX\n\n                                                              MODULES\n\n[fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b | source=data/raw/tutorial.pdf | PDF page=54 | chapter=6]\n(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',\n\n[10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4 | source=data/raw/tutorial.pdf | PDF page=76 | chapter=8]\n|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+        "chunk_ids": [
+          "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+          "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+          "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4"
+        ],
+        "characters": 1959,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": "CHAPTER\n\n                                                                     SIX\n\n                                                              MODULES",
+            "start_char": 0,
+            "end_char": 152,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8047614693641663
+          },
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+            "start_char": 0,
+            "end_char": 978,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.7899926900863647
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 76,
+            "text": "|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+            "start_char": 987,
+            "end_char": 1440,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p076",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 70,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 1440
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.7864734188946042
+          }
+        ],
+        "excluded": [
+          {
+            "id": "962b79a46dbddfde89b41ddbab92690a6a32d9b53185efdb57a00ae8d73db394",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "11e83170131837b8681f907052b637cee769a07e538d4b32d9ee3991b641821b",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "8f98e9178f13b19f4024cfbefb4c64dc612cd1387314efb24e173f91d3e77d93",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "08bf833392768874ec41874e72caa626ff55b6cc99cde578311ca4cd9ce9d3e7",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.051589599999715574
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "9e729e124f5a7f9cf483fdbd3aaf3e9d08bbd840c60c568d3952e6d2972548ea",
+      "request_sha256": "6b094c16361b8305bc915df439aecbc9355aab896a1666e173666bbce0e33a85",
+      "response_id": "Btj6auPeHIO-vr0Pn-jG8Qo",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 612,
+        "candidatesTokenCount": 20,
+        "totalTokenCount": 632,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 612
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.5779999999977008,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "11313ab5c1131f6b054f0f5d3ff7b1aab6fb5874e0b3b00d7aae2a6f71bd2c81",
+      "request_sha256": "107cae31719be830954053d69d343dcc70c9506001cf446833769f20c0386c46",
+      "response_id": "GNj6arGGFMe30-kP8v68sAg",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1635,
+        "candidatesTokenCount": 14,
+        "totalTokenCount": 1649,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1635
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 4.546999999998661,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba | source=data/raw/tutorial.pdf | PDF page=66 | chapter=7]\nx = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.\n\n[fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b | source=data/raw/tutorial.pdf | PDF page=54 | chapter=6]\n(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',\n\n[10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4 | source=data/raw/tutorial.pdf | PDF page=76 | chapter=8]\n|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+        "chunk_ids": [
+          "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+          "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+          "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4"
+        ],
+        "characters": 2727,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 66,
+            "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+            "start_char": 0,
+            "end_char": 920,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p066",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 60,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 920
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8490627497993276
+          },
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+            "start_char": 0,
+            "end_char": 978,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8315455913543701
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 76,
+            "text": "|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+            "start_char": 987,
+            "end_char": 1440,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p076",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 70,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 1440
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8238564939670032
+          }
+        ],
+        "excluded": [
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "1e100d065d307a13af2280e0babf66f5f8dd0eab31023684882b56cbb512024a",
+      "request_sha256": "93efc4940318a338a4592aa36691f2605d075fc79145ad633ecb5b9bdceda2e9",
+      "response_id": "JNj6auO0EIOc0-kP1Ibf6Ac",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1543,
+        "candidatesTokenCount": 50,
+        "totalTokenCount": 1593,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1543
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.4219999999986612,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94 | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\nCHAPTER\n\n                                                                     SIX\n\n                                                              MODULES\n\n[fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b | source=data/raw/tutorial.pdf | PDF page=54 | chapter=6]\n(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',\n\n[10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4 | source=data/raw/tutorial.pdf | PDF page=76 | chapter=8]\n|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+        "chunk_ids": [
+          "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+          "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+          "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4"
+        ],
+        "characters": 1959,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": "CHAPTER\n\n                                                                     SIX\n\n                                                              MODULES",
+            "start_char": 0,
+            "end_char": 152,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8047614693641663
+          },
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+            "start_char": 0,
+            "end_char": 978,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.7899926900863647
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 76,
+            "text": "|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+            "start_char": 987,
+            "end_char": 1440,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p076",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 70,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 1440
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.7864734188946042
+          }
+        ],
+        "excluded": [
+          {
+            "id": "962b79a46dbddfde89b41ddbab92690a6a32d9b53185efdb57a00ae8d73db394",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "11e83170131837b8681f907052b637cee769a07e538d4b32d9ee3991b641821b",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "8f98e9178f13b19f4024cfbefb4c64dc612cd1387314efb24e173f91d3e77d93",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "08bf833392768874ec41874e72caa626ff55b6cc99cde578311ca4cd9ce9d3e7",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94 | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\nCHAPTER\n\n                                                                     SIX\n\n                                                              MODULES\n\n[fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b | source=data/raw/tutorial.pdf | PDF page=54 | chapter=6]\n(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',\n\n[10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4 | source=data/raw/tutorial.pdf | PDF page=76 | chapter=8]\n|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+    "chunk_ids": [
+      "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+      "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+      "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4"
+    ],
+    "characters": 1959,
+    "budget_chars": 3500,
+    "max_chunks": 3,
+    "selected_chunks": [
+      {
+        "id": "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 49,
+        "text": "CHAPTER\n\n                                                                     SIX\n\n                                                              MODULES",
+        "start_char": 0,
+        "end_char": 152,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p049",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 43,
+          "chapter_title": "Modules",
+          "normalized_characters": 2700
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.8047614693641663
+      },
+      {
+        "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 54,
+        "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+        "start_char": 0,
+        "end_char": 978,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p054",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 48,
+          "chapter_title": "Modules",
+          "normalized_characters": 3746
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.7899926900863647
+      },
+      {
+        "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 76,
+        "text": "|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+        "start_char": 987,
+        "end_char": 1440,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p076",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 70,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 1440
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.7864734188946042
+      }
+    ],
+    "excluded": [
+      {
+        "id": "962b79a46dbddfde89b41ddbab92690a6a32d9b53185efdb57a00ae8d73db394",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "11e83170131837b8681f907052b637cee769a07e538d4b32d9ee3991b641821b",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "8f98e9178f13b19f4024cfbefb4c64dc612cd1387314efb24e173f91d3e77d93",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "08bf833392768874ec41874e72caa626ff55b6cc99cde578311ca4cd9ce9d3e7",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+        "reason": "duplicate_id"
+      },
+      {
+        "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+        "reason": "duplicate_id"
+      },
+      {
+        "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+        "reason": "duplicate_id"
+      },
+      {
+        "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+        "reason": "duplicate_id"
+      },
+      {
+        "id": "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809",
+        "reason": "max_chunks"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [],
+  "search_calls": 2,
+  "generated_search_queries": [
+    "AES cipher mode key length pickle file",
+    "AES"
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 44.51153930000146,
+    "pacing_seconds_this_invocation": 36.84400000000096,
+    "wall_seconds_excluding_pacing": 7.667539300000499,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": false,
+    "gold": [],
+    "expected_answer": null,
+    "absence_reason": "The pickle note describes serialization and warns about untrusted data. It does not specify AES encryption, cipher modes or encryption-key lengths. Do not infer an encryption scheme or claim one is provided. A grounded security warning may accompany an explicit insufficient-evidence response.",
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "dense",
+    "query": "Which AES cipher mode and key length do the supplied pages specify for encrypting a pickle file?",
+    "filter": null,
+    "ranking": [
+      {
+        "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 66,
+        "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+        "start_char": 0,
+        "end_char": 920,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p066",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 60,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 920
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.8362609841668034
+      },
+      {
+        "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 63,
+        "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+        "start_char": 1886,
+        "end_char": 2830,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p063",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 57,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3493
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.814903974533081
+      },
+      {
+        "id": "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 49,
+        "text": "CHAPTER\n\n                                                                     SIX\n\n                                                              MODULES",
+        "start_char": 0,
+        "end_char": 152,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p049",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 43,
+          "chapter_title": "Modules",
+          "normalized_characters": 2700
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.8081551790237427
+      },
+      {
+        "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 54,
+        "text": "'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+        "start_char": 990,
+        "end_char": 1611,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p054",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 48,
+          "chapter_title": "Modules",
+          "normalized_characters": 3746
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 4,
+        "score": 0.799687290228934
+      },
+      {
+        "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 54,
+        "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+        "start_char": 0,
+        "end_char": 978,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p054",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 48,
+          "chapter_title": "Modules",
+          "normalized_characters": 3746
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 5,
+        "score": 0.7979327440261841
+      },
+      {
+        "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 63,
+        "text": "The first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+        "start_char": 948,
+        "end_char": 1875,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p063",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 57,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3493
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 6,
+        "score": 0.7952372553803186
+      },
+      {
+        "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 53,
+        "text": "'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError',\n           'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError',\n                                                              (continues on next page)",
+        "start_char": 3160,
+        "end_char": 3397,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p053",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 47,
+          "chapter_title": "Modules",
+          "normalized_characters": 3397
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 7,
+        "score": 0.7947260386078369
+      },
+      {
+        "id": "34dda23bcab8706fb6bb7fbd57e02ce72c509544fbfc7db2f6ebd87e344646dc",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 54,
+        "text": "Packages are a way of structuring Python’s module namespace by using “dotted module names”. For example, the\n          module name A.B designates a submodule named B in a package named A. Just like the use of modules saves the\n          authors of different modules from having to worry about each other’s global variable names, the use of dotted module\n          names saves the authors of multi-module packages like NumPy or Pillow from having to worry about each other’s\n          module names.\n          Suppose you want to design a collection of modules (a “package”) for the uniform handling of sound files and sound\n          data. There are many different sound file formats (usually recognized by their extension, for example: .wav, .\n          aiff, .au), so you may need to create and maintain a growing collection of modules for the conversion between\n          the various file formats. There are also many different operations you might want to perform on sound data (such as",
+        "start_char": 1623,
+        "end_char": 2612,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p054",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 48,
+          "chapter_title": "Modules",
+          "normalized_characters": 3746
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 8,
+        "score": 0.7923767566680908
+      },
+      {
+        "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+        "start_char": 0,
+        "end_char": 995,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 9,
+        "score": 0.7875892646557545
+      },
+      {
+        "id": "ba103d0bf4dc07e2649837f0ed56eaef4db9e438dcf6a5976120e426c877b193",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 61,
+        "text": ">>> print('The story of {0}, {1}, and {other}.'.format('Bill', 'Manfred',\n          ...                                      other='Georg'))\n          The story of Bill, Manfred, and Georg.\n          If you have a really long format string that you don’t want to split up, it would be nice if you could reference the\n          variables to be formatted by name instead of by position. This can be done by simply passing the dict and using\n          square brackets '[]' to access the keys.\n\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; '\n          ...    'Dcab: {0[Dcab]:d}'.format(table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678",
+        "start_char": 1453,
+        "end_char": 2180,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p061",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 55,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2889
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 10,
+        "score": 0.7839764356613159
+      }
+    ],
+    "components": {
+      "dense": [
+        {
+          "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 66,
+          "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+          "start_char": 0,
+          "end_char": 920,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p066",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 60,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 920
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8362609841668034
+        },
+        {
+          "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+          "start_char": 1886,
+          "end_char": 2830,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.814903974533081
+        },
+        {
+          "id": "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "CHAPTER\n\n                                                                     SIX\n\n                                                              MODULES",
+          "start_char": 0,
+          "end_char": 152,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8081551790237427
+        },
+        {
+          "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+          "start_char": 990,
+          "end_char": 1611,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.799687290228934
+        },
+        {
+          "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+          "start_char": 0,
+          "end_char": 978,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.7979327440261841
+        },
+        {
+          "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "The first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+          "start_char": 948,
+          "end_char": 1875,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.7952372553803186
+        },
+        {
+          "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 53,
+          "text": "'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError',\n           'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError',\n                                                              (continues on next page)",
+          "start_char": 3160,
+          "end_char": 3397,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p053",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 47,
+            "chapter_title": "Modules",
+            "normalized_characters": 3397
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.7947260386078369
+        },
+        {
+          "id": "34dda23bcab8706fb6bb7fbd57e02ce72c509544fbfc7db2f6ebd87e344646dc",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "Packages are a way of structuring Python’s module namespace by using “dotted module names”. For example, the\n          module name A.B designates a submodule named B in a package named A. Just like the use of modules saves the\n          authors of different modules from having to worry about each other’s global variable names, the use of dotted module\n          names saves the authors of multi-module packages like NumPy or Pillow from having to worry about each other’s\n          module names.\n          Suppose you want to design a collection of modules (a “package”) for the uniform handling of sound files and sound\n          data. There are many different sound file formats (usually recognized by their extension, for example: .wav, .\n          aiff, .au), so you may need to create and maintain a growing collection of modules for the conversion between\n          the various file formats. There are also many different operations you might want to perform on sound data (such as",
+          "start_char": 1623,
+          "end_char": 2612,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.7923767566680908
+        },
+        {
+          "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+          "start_char": 0,
+          "end_char": 995,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.7875892646557545
+        },
+        {
+          "id": "ba103d0bf4dc07e2649837f0ed56eaef4db9e438dcf6a5976120e426c877b193",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 61,
+          "text": ">>> print('The story of {0}, {1}, and {other}.'.format('Bill', 'Manfred',\n          ...                                      other='Georg'))\n          The story of Bill, Manfred, and Georg.\n          If you have a really long format string that you don’t want to split up, it would be nice if you could reference the\n          variables to be formatted by name instead of by position. This can be done by simply passing the dict and using\n          square brackets '[]' to access the keys.\n\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; '\n          ...    'Dcab: {0[Dcab]:d}'.format(table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678",
+          "start_char": 1453,
+          "end_char": 2180,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p061",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 55,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2889
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.7839764356613159
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": null,
+    "original_query_evidence_hit_at_3": null,
+    "actual_final_context_exact_evidence": null,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "split": "test",
+  "selection_lock_seal": "7c691f1f685824191dc9440795e8dad0c55a51ccee9798907e4538ff908c8598",
+  "trace_sha256": "86e5b2f701f53c0f54ad7220c592d17271ad0aa6c936f76f636738ddbcc06487"
+}

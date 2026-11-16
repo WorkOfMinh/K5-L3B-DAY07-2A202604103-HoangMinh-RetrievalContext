@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "split": "test",
+  "traces_content_sha256": "1c64cc5688fa9543f84e529d6f369d69e87755a255201632dfb857ae48894ce3",
+  "selection_lock_seal": "7c691f1f685824191dc9440795e8dad0c55a51ccee9798907e4538ff908c8598",
+  "observed_bundle_sha256": "c5d3578a92ae918346d248c35dd8cd9b9e1ad777ad18c58ea18e4312ed9d3da8",
+  "completed_question_configuration_cases": 14,
+  "successful_model_responses": 36,
+  "selected_configuration": "bm25_base",
+  "baseline": "dense_base",
+  "review_authorship": "AI-assisted; not human-confirmed",
+  "human_confirmation_pending": 14,
+  "configuration_reselected": false,
+  "source_scope": {
+    "selected_pages": 37,
+    "AES_occurrences": 0,
+    "pages_sha256": "40740cec8e31bb72f876f3bc24550ef5b96554783e3c7b070882754710cc5933"
+  },
+  "no_runtime_or_configuration_change_after_test": true,
+  "no_new_api_or_retrieval_calls_for_audit": true
+}

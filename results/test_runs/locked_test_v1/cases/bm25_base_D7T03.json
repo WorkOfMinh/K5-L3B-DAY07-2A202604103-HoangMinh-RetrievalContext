@@ -1,0 +1,1294 @@
+{
+  "status": "answered",
+  "answer": "Adding 'b' to the open() mode opens the file in binary mode, which causes data to be read and written as bytes objects [a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f]. You cannot specify an encoding when opening a file in binary mode [a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f].",
+  "citations": [
+    "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f"
+  ],
+  "reason": "The text explicitly states that adding 'b' opens the file in binary mode where data is read and written as bytes objects, and that encoding cannot be specified in binary mode.",
+  "guard": "citation_ids_valid; semantic_support_requires_review",
+  "query_id": "D7T03",
+  "config_id": "bm25_base",
+  "public_query": {
+    "id": "D7T03",
+    "question": "What does adding b to an open() mode change about the data being read or written, and can encoding be specified in that mode?",
+    "filter": null
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "open mode b bytes encoding",
+      "filter": null,
+      "method": "bm25",
+      "ranking": [
+        {
+          "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+          "start_char": 1886,
+          "end_char": 2830,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 12.97595949682852,
+          "rank": 1
+        },
+        {
+          "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+          "start_char": 0,
+          "end_char": 995,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 10.389835616448279,
+          "rank": 2
+        },
+        {
+          "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "The first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+          "start_char": 948,
+          "end_char": 1875,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 10.178744424218479,
+          "rank": 3
+        },
+        {
+          "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "(continued from previous page)\n          >>> '3.14159265359'.zfill(5)\n          '3.14159265359'\n\n          7.1.4 Old string formatting\n\n          The % operator (modulo) can also be used for string formatting. Given format % values (where format is a\n          string), % conversion specifications in format are replaced with zero or more elements of values. This operation is\n          commonly known as string interpolation. For example:\n          >>> import math\n          >>> print('The value of pi is approximately %5.3f.' % math.pi)\n          The value of pi is approximately 3.142.\n\n          More information can be found in the old-string-formatting section.\n\n          7.2 Reading and Writing Files\n\n          open() returns a file object, and is most commonly used with two positional arguments and one keyword argument:\n          open(filename, mode, encoding=None)\n\n          >>> f = open('workfile', 'w', encoding=\"utf-8\")",
+          "start_char": 0,
+          "end_char": 936,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 10.105137536275155,
+          "rank": 4
+        },
+        {
+          "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+          "start_char": 393,
+          "end_char": 1098,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.485730298445763,
+          "rank": 5
+        },
+        {
+          "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": ">>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18",
+          "start_char": 1976,
+          "end_char": 2698,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.6544941195639655,
+          "rank": 6
+        },
+        {
+          "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "b'd'\n          In text files (those opened without a b in the mode string), only seeks relative to the beginning of the file are allowed\n          (the exception being seeking to the very file end with seek(0, 2)) and the only valid offset values are those returned\n          from the f.tell(), or zero. Any other offset value produces undefined behaviour.\n\n          File objects have some additional methods, such as isatty() and truncate() which are less frequently used;\n          consult the Library Reference for a complete guide to file objects.",
+          "start_char": 1006,
+          "end_char": 1558,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.241954933632211,
+          "rank": 7
+        },
+        {
+          "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "writing equivalent try-finally blocks:\n\n          >>> with open('workfile', encoding=\"utf-8\") as f:\n          ...   read_data = f.read()\n          >>> # We can check that the file has been automatically closed.\n          >>> f.closed\n          True\n\n          If you’re not using the with keyword, then you should call f.close() to close the file and immediately free up any\n          system resources used by it.\n\n            Warning\n\n           Calling f.write() without using the with keyword or calling f.close() might result in the arguments of\n           f.write() not being completely written to the disk, even if the program exits successfully.",
+          "start_char": 2841,
+          "end_char": 3493,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 5.796572219080807,
+          "rank": 8
+        },
+        {
+          "id": "9dbf99ecdbe763b9b8ffb9432a94708e9a8c2866ee68b5873d58db853e04abf4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": ">>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}\n          >>> print(basket)            # show that duplicates have been removed\n          {'orange', 'banana', 'pear', 'apple'}\n          >>> 'orange' in basket       # fast membership testing\n          True\n          >>> 'crabgrass' in basket\n          False\n          >>> # Demonstrate set operations on unique letters from two words\n          >>>\n          >>> a = set('abracadabra')\n          >>> b = set('alacazam')\n          >>> a                        # unique letters in a\n          {'a', 'r', 'b', 'c', 'd'}\n          >>> a - b                    # letters in a but not in b\n          {'r', 'd', 'b'}\n          >>> a | b                    # letters in a or b or both\n          {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}\n          >>> a & b                    # letters in both a and b\n          {'a', 'c'}\n          >>> a ^ b                    # letters in a or b but not both",
+          "start_char": 619,
+          "end_char": 1575,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 4.843189232360984,
+          "rank": 9
+        },
+        {
+          "id": "fe3ff63bd042841f84f06ece94f9bad417e19894eec2ae9cc11f7c0319fd1bbb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 69,
+          "text": "(continued from previous page)\n             try:\n                raise cls()\n             except D:\n                print(\"D\")\n             except C:\n                print(\"C\")\n             except B:\n                print(\"B\")\n          Note that if the except clauses were reversed (with except B first), it would have printed B, B, B — the first matching\n          except clause is triggered.\n          When an exception occurs, it may have associated values, also known as the exception’s arguments. The presence\n          and types of the arguments depend on the exception type.",
+          "start_char": 0,
+          "end_char": 582,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p069",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 63,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2895
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 4.601543223286826,
+          "rank": 10
+        }
+      ],
+      "component_rankings": {
+        "bm25": [
+          {
+            "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+            "start_char": 1886,
+            "end_char": 2830,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 12.97595949682852,
+            "rank": 1
+          },
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+            "start_char": 0,
+            "end_char": 995,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 10.389835616448279,
+            "rank": 2
+          },
+          {
+            "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "The first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+            "start_char": 948,
+            "end_char": 1875,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 10.178744424218479,
+            "rank": 3
+          },
+          {
+            "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "(continued from previous page)\n          >>> '3.14159265359'.zfill(5)\n          '3.14159265359'\n\n          7.1.4 Old string formatting\n\n          The % operator (modulo) can also be used for string formatting. Given format % values (where format is a\n          string), % conversion specifications in format are replaced with zero or more elements of values. This operation is\n          commonly known as string interpolation. For example:\n          >>> import math\n          >>> print('The value of pi is approximately %5.3f.' % math.pi)\n          The value of pi is approximately 3.142.\n\n          More information can be found in the old-string-formatting section.\n\n          7.2 Reading and Writing Files\n\n          open() returns a file object, and is most commonly used with two positional arguments and one keyword argument:\n          open(filename, mode, encoding=None)\n\n          >>> f = open('workfile', 'w', encoding=\"utf-8\")",
+            "start_char": 0,
+            "end_char": 936,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 10.105137536275155,
+            "rank": 4
+          },
+          {
+            "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+            "start_char": 393,
+            "end_char": 1098,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 8.485730298445763,
+            "rank": 5
+          },
+          {
+            "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": ">>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18",
+            "start_char": 1976,
+            "end_char": 2698,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.6544941195639655,
+            "rank": 6
+          },
+          {
+            "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "b'd'\n          In text files (those opened without a b in the mode string), only seeks relative to the beginning of the file are allowed\n          (the exception being seeking to the very file end with seek(0, 2)) and the only valid offset values are those returned\n          from the f.tell(), or zero. Any other offset value produces undefined behaviour.\n\n          File objects have some additional methods, such as isatty() and truncate() which are less frequently used;\n          consult the Library Reference for a complete guide to file objects.",
+            "start_char": 1006,
+            "end_char": 1558,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.241954933632211,
+            "rank": 7
+          },
+          {
+            "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "writing equivalent try-finally blocks:\n\n          >>> with open('workfile', encoding=\"utf-8\") as f:\n          ...   read_data = f.read()\n          >>> # We can check that the file has been automatically closed.\n          >>> f.closed\n          True\n\n          If you’re not using the with keyword, then you should call f.close() to close the file and immediately free up any\n          system resources used by it.\n\n            Warning\n\n           Calling f.write() without using the with keyword or calling f.close() might result in the arguments of\n           f.write() not being completely written to the disk, even if the program exits successfully.",
+            "start_char": 2841,
+            "end_char": 3493,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 5.796572219080807,
+            "rank": 8
+          },
+          {
+            "id": "9dbf99ecdbe763b9b8ffb9432a94708e9a8c2866ee68b5873d58db853e04abf4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": ">>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}\n          >>> print(basket)            # show that duplicates have been removed\n          {'orange', 'banana', 'pear', 'apple'}\n          >>> 'orange' in basket       # fast membership testing\n          True\n          >>> 'crabgrass' in basket\n          False\n          >>> # Demonstrate set operations on unique letters from two words\n          >>>\n          >>> a = set('abracadabra')\n          >>> b = set('alacazam')\n          >>> a                        # unique letters in a\n          {'a', 'r', 'b', 'c', 'd'}\n          >>> a - b                    # letters in a but not in b\n          {'r', 'd', 'b'}\n          >>> a | b                    # letters in a or b or both\n          {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}\n          >>> a & b                    # letters in both a and b\n          {'a', 'c'}\n          >>> a ^ b                    # letters in a or b but not both",
+            "start_char": 619,
+            "end_char": 1575,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.843189232360984,
+            "rank": 9
+          },
+          {
+            "id": "fe3ff63bd042841f84f06ece94f9bad417e19894eec2ae9cc11f7c0319fd1bbb",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 69,
+            "text": "(continued from previous page)\n             try:\n                raise cls()\n             except D:\n                print(\"D\")\n             except C:\n                print(\"C\")\n             except B:\n                print(\"B\")\n          Note that if the except clauses were reversed (with except B first), it would have printed B, B, B — the first matching\n          except clause is triggered.\n          When an exception occurs, it may have associated values, also known as the exception’s arguments. The presence\n          and types of the arguments depend on the exception type.",
+            "start_char": 0,
+            "end_char": 582,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p069",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 63,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2895
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.601543223286826,
+            "rank": 10
+          }
+        ]
+      },
+      "context": {
+        "text": "[a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\ndifferent encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than\n\n[e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40 | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nf.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)\n\n[8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588 | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\nThe first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+        "chunk_ids": [
+          "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+          "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588"
+        ],
+        "characters": 3242,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+            "start_char": 1886,
+            "end_char": 2830,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 12.97595949682852,
+            "rank": 1
+          },
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+            "start_char": 0,
+            "end_char": 995,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 10.389835616448279,
+            "rank": 2
+          },
+          {
+            "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "The first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+            "start_char": 948,
+            "end_char": 1875,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 10.178744424218479,
+            "rank": 3
+          }
+        ],
+        "excluded": [
+          {
+            "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "9dbf99ecdbe763b9b8ffb9432a94708e9a8c2866ee68b5873d58db853e04abf4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fe3ff63bd042841f84f06ece94f9bad417e19894eec2ae9cc11f7c0319fd1bbb",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.0004239999980200082
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "da6fbbeeb2f4a595e2408a687577094adbe9c2f3434374b6c2872a870818935a",
+      "request_sha256": "71065dc44520c969c282232f54252afdabd3cb513c7960ebb701c59310a38234",
+      "response_id": "-Nb6aou6HNPkrfcPuoLg8QY",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 620,
+        "candidatesTokenCount": 18,
+        "totalTokenCount": 638,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 620
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.6560000000026776,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "8c3c642b9f0fd735dedef5aa41677258a5ecbcab449b1f7601ef9bc422dedd5f",
+      "request_sha256": "8f4eb999d2dd55c7bba1fa8551746238b4e923e2deaedf82b38ca2598b6b8cff",
+      "response_id": "B9f6avLaEoicrfcP-P2AYQ",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1781,
+        "candidatesTokenCount": 271,
+        "totalTokenCount": 2052,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1781
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.9070000000028813,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\ndifferent encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than\n\n[e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40 | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nf.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)\n\n[8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588 | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\nThe first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+        "chunk_ids": [
+          "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+          "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588"
+        ],
+        "characters": 3242,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+            "start_char": 1886,
+            "end_char": 2830,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 12.97595949682852,
+            "rank": 1
+          },
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+            "start_char": 0,
+            "end_char": 995,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 10.389835616448279,
+            "rank": 2
+          },
+          {
+            "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "The first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+            "start_char": 948,
+            "end_char": 1875,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 10.178744424218479,
+            "rank": 3
+          }
+        ],
+        "excluded": [
+          {
+            "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "9dbf99ecdbe763b9b8ffb9432a94708e9a8c2866ee68b5873d58db853e04abf4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fe3ff63bd042841f84f06ece94f9bad417e19894eec2ae9cc11f7c0319fd1bbb",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\ndifferent encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than\n\n[e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40 | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nf.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)\n\n[8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588 | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\nThe first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+    "chunk_ids": [
+      "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+      "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+      "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588"
+    ],
+    "characters": 3242,
+    "budget_chars": 3500,
+    "max_chunks": 3,
+    "selected_chunks": [
+      {
+        "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 63,
+        "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+        "start_char": 1886,
+        "end_char": 2830,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p063",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 57,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3493
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 12.97595949682852,
+        "rank": 1
+      },
+      {
+        "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+        "start_char": 0,
+        "end_char": 995,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 10.389835616448279,
+        "rank": 2
+      },
+      {
+        "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 63,
+        "text": "The first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+        "start_char": 948,
+        "end_char": 1875,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p063",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 57,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3493
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 10.178744424218479,
+        "rank": 3
+      }
+    ],
+    "excluded": [
+      {
+        "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "9dbf99ecdbe763b9b8ffb9432a94708e9a8c2866ee68b5873d58db853e04abf4",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "fe3ff63bd042841f84f06ece94f9bad417e19894eec2ae9cc11f7c0319fd1bbb",
+        "reason": "max_chunks"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [],
+  "search_calls": 1,
+  "generated_search_queries": [
+    "open mode b bytes encoding"
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 27.089172700001654,
+    "pacing_seconds_this_invocation": 23.51499999999578,
+    "wall_seconds_excluding_pacing": 3.5741727000058745,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": true,
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 63,
+        "evidence": "Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode."
+      }
+    ],
+    "expected_answer": "It opens the file in binary mode, using bytes objects; encoding cannot be specified for binary mode.",
+    "absence_reason": null,
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "bm25",
+    "query": "What does adding b to an open() mode change about the data being read or written, and can encoding be specified in that mode?",
+    "filter": null,
+    "ranking": [
+      {
+        "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 63,
+        "text": "The first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+        "start_char": 948,
+        "end_char": 1875,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p063",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 57,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3493
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 25.1995584151177,
+        "rank": 1
+      },
+      {
+        "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 63,
+        "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+        "start_char": 1886,
+        "end_char": 2830,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p063",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 57,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3493
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 23.166748036704046,
+        "rank": 2
+      },
+      {
+        "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+        "start_char": 0,
+        "end_char": 995,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 20.450345682184366,
+        "rank": 3
+      },
+      {
+        "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 63,
+        "text": "writing equivalent try-finally blocks:\n\n          >>> with open('workfile', encoding=\"utf-8\") as f:\n          ...   read_data = f.read()\n          >>> # We can check that the file has been automatically closed.\n          >>> f.closed\n          True\n\n          If you’re not using the with keyword, then you should call f.close() to close the file and immediately free up any\n          system resources used by it.\n\n            Warning\n\n           Calling f.write() without using the with keyword or calling f.close() might result in the arguments of\n           f.write() not being completely written to the disk, even if the program exits successfully.",
+        "start_char": 2841,
+        "end_char": 3493,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p063",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 57,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3493
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 18.396739932677242,
+        "rank": 4
+      },
+      {
+        "id": "22f1a502351d76ac47485877e7b6735e877a24e828969d63c230eb0a9c5bd879",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 70,
+        "text": "(continued from previous page)\n             print(\"Could not convert data to an integer.\")\n          except Exception as err:\n             print(f\"Unexpected {err=}, {type(err)=}\")\n             raise\n          The try ... except statement has an optional else clause, which, when present, must follow all except clauses. It is\n          useful for code that must be executed if the try clause does not raise an exception. For example:\n\n          for arg in sys.argv[1:]:\n             try:\n                f = open(arg, 'r')\n             except OSError:\n                print('cannot open', arg)\n             else:\n                print(arg, 'has', len(f.readlines()), 'lines')\n                f.close()\n          The use of the else clause is better than adding additional code to the try clause because it avoids accidentally\n          catching an exception that wasn’t raised by the code being protected by the try ... except statement.",
+        "start_char": 0,
+        "end_char": 938,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p070",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 64,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 2610
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 17.265371805128165,
+        "rank": 5
+      },
+      {
+        "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 64,
+        "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+        "start_char": 393,
+        "end_char": 1098,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p064",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 58,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2698
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 16.30139957644211,
+        "rank": 6
+      },
+      {
+        "id": "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 52,
+        "text": "• You can use the -O or -OO switches on the Python command to reduce the size of a compiled module. The -O\n             switch removes assert statements, the -OO switch removes both assert statements and __doc__ strings. Since\n             some programs may rely on having these available, you should only use this option if you know what you’re\n             doing. “Optimized” modules have an opt- tag and are usually smaller. Future releases may change the effects\n             of optimization.\n            • A program doesn’t run any faster when it is read from a .pyc file than when it is read from a .py file; the only\n             thing that’s faster about .pyc files is the speed with which they are loaded.\n            • The module compileall can create .pyc files for all modules in a directory.\n\n            • There is more detail on this process, including a flow chart of the decisions, in PEP 3147.\n\n          6.2 Standard Modules",
+        "start_char": 1825,
+        "end_char": 2768,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p052",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 46,
+          "chapter_title": "Modules",
+          "normalized_characters": 4192
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 15.35053248431091,
+        "rank": 7
+      },
+      {
+        "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 63,
+        "text": "(continued from previous page)\n          >>> '3.14159265359'.zfill(5)\n          '3.14159265359'\n\n          7.1.4 Old string formatting\n\n          The % operator (modulo) can also be used for string formatting. Given format % values (where format is a\n          string), % conversion specifications in format are replaced with zero or more elements of values. This operation is\n          commonly known as string interpolation. For example:\n          >>> import math\n          >>> print('The value of pi is approximately %5.3f.' % math.pi)\n          The value of pi is approximately 3.142.\n\n          More information can be found in the old-string-formatting section.\n\n          7.2 Reading and Writing Files\n\n          open() returns a file object, and is most commonly used with two positional arguments and one keyword argument:\n          open(filename, mode, encoding=None)\n\n          >>> f = open('workfile', 'w', encoding=\"utf-8\")",
+        "start_char": 0,
+        "end_char": 936,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p063",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 57,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3493
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 14.397419595927994,
+        "rank": 8
+      },
+      {
+        "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 66,
+        "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+        "start_char": 0,
+        "end_char": 920,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p066",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 60,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 920
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 13.115025547549976,
+        "rank": 9
+      },
+      {
+        "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "7.2.2 Saving structured data with json\n          Strings can easily be written to and read from a file. Numbers take a bit more effort, since the read() method only\n          returns strings, which will have to be passed to a function like int(), which takes a string like '123' and returns its\n          numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and\n          serializing by hand becomes complicated.\n          Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows\n          you to use the popular data interchange format called JSON (JavaScript Object Notation). The standard module called\n          json can take Python data hierarchies, and convert them to string representations; this process is called serializing.\n          Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing,",
+        "start_char": 1570,
+        "end_char": 2550,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 12.904953611594777,
+        "rank": 10
+      }
+    ],
+    "components": {
+      "bm25": [
+        {
+          "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "The first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+          "start_char": 948,
+          "end_char": 1875,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 25.1995584151177,
+          "rank": 1
+        },
+        {
+          "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+          "start_char": 1886,
+          "end_char": 2830,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 23.166748036704046,
+          "rank": 2
+        },
+        {
+          "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+          "start_char": 0,
+          "end_char": 995,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 20.450345682184366,
+          "rank": 3
+        },
+        {
+          "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "writing equivalent try-finally blocks:\n\n          >>> with open('workfile', encoding=\"utf-8\") as f:\n          ...   read_data = f.read()\n          >>> # We can check that the file has been automatically closed.\n          >>> f.closed\n          True\n\n          If you’re not using the with keyword, then you should call f.close() to close the file and immediately free up any\n          system resources used by it.\n\n            Warning\n\n           Calling f.write() without using the with keyword or calling f.close() might result in the arguments of\n           f.write() not being completely written to the disk, even if the program exits successfully.",
+          "start_char": 2841,
+          "end_char": 3493,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 18.396739932677242,
+          "rank": 4
+        },
+        {
+          "id": "22f1a502351d76ac47485877e7b6735e877a24e828969d63c230eb0a9c5bd879",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 70,
+          "text": "(continued from previous page)\n             print(\"Could not convert data to an integer.\")\n          except Exception as err:\n             print(f\"Unexpected {err=}, {type(err)=}\")\n             raise\n          The try ... except statement has an optional else clause, which, when present, must follow all except clauses. It is\n          useful for code that must be executed if the try clause does not raise an exception. For example:\n\n          for arg in sys.argv[1:]:\n             try:\n                f = open(arg, 'r')\n             except OSError:\n                print('cannot open', arg)\n             else:\n                print(arg, 'has', len(f.readlines()), 'lines')\n                f.close()\n          The use of the else clause is better than adding additional code to the try clause because it avoids accidentally\n          catching an exception that wasn’t raised by the code being protected by the try ... except statement.",
+          "start_char": 0,
+          "end_char": 938,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p070",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 64,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2610
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 17.265371805128165,
+          "rank": 5
+        },
+        {
+          "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+          "start_char": 393,
+          "end_char": 1098,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 16.30139957644211,
+          "rank": 6
+        },
+        {
+          "id": "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "• You can use the -O or -OO switches on the Python command to reduce the size of a compiled module. The -O\n             switch removes assert statements, the -OO switch removes both assert statements and __doc__ strings. Since\n             some programs may rely on having these available, you should only use this option if you know what you’re\n             doing. “Optimized” modules have an opt- tag and are usually smaller. Future releases may change the effects\n             of optimization.\n            • A program doesn’t run any faster when it is read from a .pyc file than when it is read from a .py file; the only\n             thing that’s faster about .pyc files is the speed with which they are loaded.\n            • The module compileall can create .pyc files for all modules in a directory.\n\n            • There is more detail on this process, including a flow chart of the decisions, in PEP 3147.\n\n          6.2 Standard Modules",
+          "start_char": 1825,
+          "end_char": 2768,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 15.35053248431091,
+          "rank": 7
+        },
+        {
+          "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "(continued from previous page)\n          >>> '3.14159265359'.zfill(5)\n          '3.14159265359'\n\n          7.1.4 Old string formatting\n\n          The % operator (modulo) can also be used for string formatting. Given format % values (where format is a\n          string), % conversion specifications in format are replaced with zero or more elements of values. This operation is\n          commonly known as string interpolation. For example:\n          >>> import math\n          >>> print('The value of pi is approximately %5.3f.' % math.pi)\n          The value of pi is approximately 3.142.\n\n          More information can be found in the old-string-formatting section.\n\n          7.2 Reading and Writing Files\n\n          open() returns a file object, and is most commonly used with two positional arguments and one keyword argument:\n          open(filename, mode, encoding=None)\n\n          >>> f = open('workfile', 'w', encoding=\"utf-8\")",
+          "start_char": 0,
+          "end_char": 936,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 14.397419595927994,
+          "rank": 8
+        },
+        {
+          "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 66,
+          "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+          "start_char": 0,
+          "end_char": 920,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p066",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 60,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 920
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 13.115025547549976,
+          "rank": 9
+        },
+        {
+          "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "7.2.2 Saving structured data with json\n          Strings can easily be written to and read from a file. Numbers take a bit more effort, since the read() method only\n          returns strings, which will have to be passed to a function like int(), which takes a string like '123' and returns its\n          numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and\n          serializing by hand becomes complicated.\n          Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows\n          you to use the popular data interchange format called JSON (JavaScript Object Notation). The standard module called\n          json can take Python data hierarchies, and convert them to string representations; this process is called serializing.\n          Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing,",
+          "start_char": 1570,
+          "end_char": 2550,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 12.904953611594777,
+          "rank": 10
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": false,
+    "original_query_evidence_hit_at_3": true,
+    "actual_final_context_exact_evidence": true,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "split": "test",
+  "selection_lock_seal": "7c691f1f685824191dc9440795e8dad0c55a51ccee9798907e4538ff908c8598",
+  "trace_sha256": "d67502da7840e97be4a5e93252ebba560d00dfd2b99a39f5fe909494c163bca2"
+}

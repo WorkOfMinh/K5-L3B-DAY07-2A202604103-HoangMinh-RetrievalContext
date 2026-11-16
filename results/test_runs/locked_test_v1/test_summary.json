@@ -1,0 +1,96 @@
+{
+  "created_at": "2026-11-16T10:17:55.209358+00:00",
+  "split": "test",
+  "status": "complete_pending_semantic_audit",
+  "configurations": {
+    "dense_base": {
+      "completed_cases": 7,
+      "expected_cases": 7,
+      "completed_answerable": 5,
+      "completed_insufficient": 2,
+      "provisional_exact_metrics": {
+        "original_query_hit_at_1": {
+          "numerator": 4,
+          "denominator": 5,
+          "rate": 0.8
+        },
+        "original_query_evidence_hit_at_3": {
+          "numerator": 5,
+          "denominator": 5,
+          "rate": 1.0
+        },
+        "actual_final_context_exact_evidence": {
+          "numerator": 5,
+          "denominator": 5,
+          "rate": 1.0
+        }
+      },
+      "answer_statuses": {
+        "answered": 5,
+        "abstain": 2
+      },
+      "search_calls": 9,
+      "model_decisions": 17,
+      "citation_repairs": 1,
+      "median_uncached_wall_seconds": 32.25922999999966,
+      "median_uncached_seconds_excluding_pacing": 4.376387099993735,
+      "uncached_timing_cases": 7,
+      "grounded_answer_grade": null,
+      "citation_support": null,
+      "correct_abstentions": null
+    },
+    "bm25_base": {
+      "completed_cases": 7,
+      "expected_cases": 7,
+      "completed_answerable": 5,
+      "completed_insufficient": 2,
+      "provisional_exact_metrics": {
+        "original_query_hit_at_1": {
+          "numerator": 4,
+          "denominator": 5,
+          "rate": 0.8
+        },
+        "original_query_evidence_hit_at_3": {
+          "numerator": 5,
+          "denominator": 5,
+          "rate": 1.0
+        },
+        "actual_final_context_exact_evidence": {
+          "numerator": 5,
+          "denominator": 5,
+          "rate": 1.0
+        }
+      },
+      "answer_statuses": {
+        "answered": 5,
+        "abstain": 2
+      },
+      "search_calls": 10,
+      "model_decisions": 19,
+      "citation_repairs": 2,
+      "median_uncached_wall_seconds": 44.273144499999034,
+      "median_uncached_seconds_excluding_pacing": 4.692162000003009,
+      "uncached_timing_cases": 7,
+      "grounded_answer_grade": null,
+      "citation_support": null,
+      "correct_abstentions": null
+    }
+  },
+  "successful_api_responses": 36,
+  "api_attempts": 36,
+  "api_failures": 0,
+  "successful_response_usage": {
+    "promptTokenCount": 46524,
+    "candidatesTokenCount": 3781,
+    "totalTokenCount": 50305
+  },
+  "missing_usage_responses": 0,
+  "cost": {
+    "estimated_free_tier_paid_api_cost_usd": 0,
+    "actual_billed_cost_usd": null,
+    "note": "Free-tier estimate; account billing not verified. Failed/interrupted response usage may be unknown."
+  },
+  "configuration_reselected": false,
+  "semantic_audit": "pending; output status does not establish correctness",
+  "selection_lock_seal": "7c691f1f685824191dc9440795e8dad0c55a51ccee9798907e4538ff908c8598"
+}

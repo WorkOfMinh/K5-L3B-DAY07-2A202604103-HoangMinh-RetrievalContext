@@ -1,0 +1,438 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-16T10:02:57.807607+00:00",
+  "stage": "selected_on_dev_before_test",
+  "selected_id": "bm25_base",
+  "baseline_id": "dense_base",
+  "selection_path": [
+    {
+      "criterion": "mean_grounded_answer_grade",
+      "scores": {
+        "bm25_base": 2.0,
+        "dense_base": 1.8666666666666667,
+        "hybrid_base": 1.9333333333333333,
+        "hybrid_context5": 1.7333333333333334
+      },
+      "remaining": [
+        "bm25_base"
+      ]
+    }
+  ],
+  "selection_policy": {
+    "schema_version": 1,
+    "created_at": "2026-11-16T04:38:35.298917+00:00",
+    "retrieval_methods_planned": [
+      "dense_pgvector",
+      "lexical_bm25",
+      "hybrid_rrf"
+    ],
+    "common_input": "Same 142 chunks, corpus/model snapshot, original question text and explicit chapter scope. Gold/answerability labels never enter model/tool inputs.",
+    "dev_selection_order": [
+      "max_mean_grounded_answer_grade_on_15_answerable_dev",
+      "max_correct_abstentions_on_2_insufficient_dev",
+      "max_supported_citation_coverage_on_15_answerable_dev",
+      "max_context_evidence_rate_on_15_answerable_dev",
+      "max_original_query_evidence_hit_at_3_on_15_answerable_dev",
+      "min_total_paid_api_cost_usd_on_17_dev_cases",
+      "min_median_end_to_end_latency_ms_on_17_dev_cases",
+      "lexicographic_configuration_id"
+    ],
+    "evaluation_notes": [
+      "Compare at least 3 retrieval methods and at least 2 measured improvement configurations.",
+      "Report original-query Hit@1 and Evidence Hit@3 at the same cutoff, independent of candidate-pool size.",
+      "Answerable cases only enter retrieval/context/grounded-answer denominators; insufficient cases enter abstention metrics.",
+      "Citation validity requires context membership AND actual support, not just a valid ID.",
+      "Runtime errors are reported separately; do not replace failures with abstentions or fake scores.",
+      "Cost missing from a run is unknown, not zero; local inference can report zero paid API cost with appropriate resource disclosure.",
+      "Select on dev, seal configuration before test, then compare baseline and selected configuration on the same 7 test cases.",
+      "Do not tune or select using test results; authoring/source-verification is distinct from inspecting test retrieval/model results."
+    ],
+    "authorship": "AI-assisted benchmark construction and source/absence review. Student understanding/review remains necessary.",
+    "carryover_limitations": "Corpus/chunks were already studied in Day 6, including related concepts. New test question strings are distinct from the Day 6 benchmark, but this is not independent data or an untouched corpus."
+  },
+  "dev_metrics": {
+    "dense_base": {
+      "mean_grounded_answer_grade": 1.8666666666666667,
+      "grounded_grade_counts": {
+        "0": 1,
+        "1": 0,
+        "2": 14
+      },
+      "fully_correct_answerable_cases": {
+        "numerator": 14,
+        "denominator": 15,
+        "rate": 0.9333333333333333
+      },
+      "citation_semantic_support": {
+        "numerator": 14,
+        "denominator": 14,
+        "rate": 1.0
+      },
+      "supported_citation_coverage_on_answerable": {
+        "numerator": 14,
+        "denominator": 15,
+        "rate": 0.9333333333333333
+      },
+      "reviewed_actual_final_context_evidence": {
+        "numerator": 14,
+        "denominator": 15,
+        "rate": 0.9333333333333333
+      },
+      "correct_abstentions": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "false_abstentions": {
+        "numerator": 1,
+        "denominator": 15,
+        "rate": 0.06666666666666667
+      },
+      "tool_use": {
+        "numerator": 17,
+        "denominator": 17,
+        "rate": 1.0
+      },
+      "search_calls": 22,
+      "model_decisions": 44,
+      "citation_repairs": 5,
+      "original_query_metrics": {
+        "original_query_hit_at_1": {
+          "numerator": 10,
+          "denominator": 15,
+          "rate": 0.6666666666666666
+        },
+        "original_query_evidence_hit_at_3": {
+          "numerator": 13,
+          "denominator": 15,
+          "rate": 0.8666666666666667
+        },
+        "actual_final_context_exact_evidence": {
+          "numerator": 12,
+          "denominator": 15,
+          "rate": 0.8
+        }
+      },
+      "median_uncached_end_to_end_excluding_pacing_ms": 3740.1529000017035,
+      "uncached_latency_cases": 17
+    },
+    "bm25_base": {
+      "mean_grounded_answer_grade": 2.0,
+      "grounded_grade_counts": {
+        "0": 0,
+        "1": 0,
+        "2": 15
+      },
+      "fully_correct_answerable_cases": {
+        "numerator": 15,
+        "denominator": 15,
+        "rate": 1.0
+      },
+      "citation_semantic_support": {
+        "numerator": 15,
+        "denominator": 15,
+        "rate": 1.0
+      },
+      "supported_citation_coverage_on_answerable": {
+        "numerator": 15,
+        "denominator": 15,
+        "rate": 1.0
+      },
+      "reviewed_actual_final_context_evidence": {
+        "numerator": 15,
+        "denominator": 15,
+        "rate": 1.0
+      },
+      "correct_abstentions": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "false_abstentions": {
+        "numerator": 0,
+        "denominator": 15,
+        "rate": 0.0
+      },
+      "tool_use": {
+        "numerator": 17,
+        "denominator": 17,
+        "rate": 1.0
+      },
+      "search_calls": 21,
+      "model_decisions": 41,
+      "citation_repairs": 3,
+      "original_query_metrics": {
+        "original_query_hit_at_1": {
+          "numerator": 10,
+          "denominator": 15,
+          "rate": 0.6666666666666666
+        },
+        "original_query_evidence_hit_at_3": {
+          "numerator": 13,
+          "denominator": 15,
+          "rate": 0.8666666666666667
+        },
+        "actual_final_context_exact_evidence": {
+          "numerator": 14,
+          "denominator": 15,
+          "rate": 0.9333333333333333
+        }
+      },
+      "median_uncached_end_to_end_excluding_pacing_ms": 3048.397400001704,
+      "uncached_latency_cases": 17
+    },
+    "hybrid_base": {
+      "mean_grounded_answer_grade": 1.9333333333333333,
+      "grounded_grade_counts": {
+        "0": 0,
+        "1": 1,
+        "2": 14
+      },
+      "fully_correct_answerable_cases": {
+        "numerator": 14,
+        "denominator": 15,
+        "rate": 0.9333333333333333
+      },
+      "citation_semantic_support": {
+        "numerator": 15,
+        "denominator": 15,
+        "rate": 1.0
+      },
+      "supported_citation_coverage_on_answerable": {
+        "numerator": 15,
+        "denominator": 15,
+        "rate": 1.0
+      },
+      "reviewed_actual_final_context_evidence": {
+        "numerator": 15,
+        "denominator": 15,
+        "rate": 1.0
+      },
+      "correct_abstentions": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "false_abstentions": {
+        "numerator": 0,
+        "denominator": 15,
+        "rate": 0.0
+      },
+      "tool_use": {
+        "numerator": 17,
+        "denominator": 17,
+        "rate": 1.0
+      },
+      "search_calls": 21,
+      "model_decisions": 44,
+      "citation_repairs": 6,
+      "original_query_metrics": {
+        "original_query_hit_at_1": {
+          "numerator": 11,
+          "denominator": 15,
+          "rate": 0.7333333333333333
+        },
+        "original_query_evidence_hit_at_3": {
+          "numerator": 13,
+          "denominator": 15,
+          "rate": 0.8666666666666667
+        },
+        "actual_final_context_exact_evidence": {
+          "numerator": 13,
+          "denominator": 15,
+          "rate": 0.8666666666666667
+        }
+      },
+      "median_uncached_end_to_end_excluding_pacing_ms": 4114.327200000844,
+      "uncached_latency_cases": 17
+    },
+    "hybrid_context5": {
+      "mean_grounded_answer_grade": 1.7333333333333334,
+      "grounded_grade_counts": {
+        "0": 2,
+        "1": 0,
+        "2": 13
+      },
+      "fully_correct_answerable_cases": {
+        "numerator": 13,
+        "denominator": 15,
+        "rate": 0.8666666666666667
+      },
+      "citation_semantic_support": {
+        "numerator": 13,
+        "denominator": 13,
+        "rate": 1.0
+      },
+      "supported_citation_coverage_on_answerable": {
+        "numerator": 13,
+        "denominator": 15,
+        "rate": 0.8666666666666667
+      },
+      "reviewed_actual_final_context_evidence": {
+        "numerator": 15,
+        "denominator": 15,
+        "rate": 1.0
+      },
+      "correct_abstentions": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "false_abstentions": {
+        "numerator": 2,
+        "denominator": 15,
+        "rate": 0.13333333333333333
+      },
+      "tool_use": {
+        "numerator": 17,
+        "denominator": 17,
+        "rate": 1.0
+      },
+      "search_calls": 22,
+      "model_decisions": 46,
+      "citation_repairs": 7,
+      "original_query_metrics": {
+        "original_query_hit_at_1": {
+          "numerator": 11,
+          "denominator": 15,
+          "rate": 0.7333333333333333
+        },
+        "original_query_evidence_hit_at_3": {
+          "numerator": 13,
+          "denominator": 15,
+          "rate": 0.8666666666666667
+        },
+        "actual_final_context_exact_evidence": {
+          "numerator": 13,
+          "denominator": 15,
+          "rate": 0.8666666666666667
+        }
+      },
+      "median_uncached_end_to_end_excluding_pacing_ms": 4650.3697500029375,
+      "uncached_latency_cases": 16
+    }
+  },
+  "dev_reviews_sha256": "ee7da1c26d266f54840b0f076531d5df4ad60508b67b113c0d2d4768a8c58111",
+  "dev_traces_sha256": "70cfa506e5cda17e42d2ddeabd581041db1ad0f566634199ed5bacfb4c9b37cd",
+  "dev_experiment_identity_sha256": "d4f1a998079396ec9278241412db66919a11db4f0d3f9c5354730a5bbb04adef",
+  "review_authorship": "AI-assisted source review; no human confirmation inferred",
+  "human_confirmations_pending": 68,
+  "dev_review_revision": {
+    "scope": "AI-assisted dev review finalization, before test",
+    "query_id": "D09",
+    "config_id": "hybrid_base",
+    "old_proposed_grade": 2,
+    "revised_grade": 1,
+    "criterion": "Complete answer must state the requested assigned value; a conditional-only explanation receives partial completeness credit.",
+    "model_or_retrieval_rerun": false,
+    "human_confirmation": null,
+    "original_proposal": "dev_agent_review_initial.json",
+    "no_test_results_used": true
+  },
+  "cost_note": "Actual billed cost unknown. Unique primary-quality winner; cost and latency tie-breakers were not needed.",
+  "pipeline_sha256": "c850036d20f6629a1f05301c0fbe4a5f419f2d3634f0df0bb02d6ac0f87be382",
+  "evaluation_framework_sha256": "7dd91cf600fd6b38efac36222d10fe5258e3329ad2ee485432228477a0c5b7b3",
+  "agent_config": {
+    "schema_version": 1,
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+    "generation": {
+      "candidateCount": 1,
+      "maxOutputTokens": 4096,
+      "thinkingConfig": {
+        "thinkingLevel": "low"
+      }
+    },
+    "candidate_pool": 10,
+    "pricing": {
+      "basis": "User must verify project is Free tier in AI Studio. Code cannot inspect billing tier.",
+      "declared_tier": "free",
+      "estimated_paid_api_cost_usd": 0,
+      "source": "https://ai.google.dev/gemini-api/docs/pricing"
+    },
+    "configurations": [
+      {
+        "id": "dense_base",
+        "method": "dense",
+        "max_searches": 2,
+        "context_chunks": 3,
+        "budget_chars": 3500,
+        "hypothesis": "Baseline semantic retrieval with bounded model-directed query rewriting."
+      },
+      {
+        "id": "bm25_base",
+        "method": "bm25",
+        "max_searches": 2,
+        "context_chunks": 3,
+        "budget_chars": 3500,
+        "hypothesis": "Improvement 1: lexical identifier matching may help exact APIs; paraphrases may suffer."
+      },
+      {
+        "id": "hybrid_base",
+        "method": "hybrid_rrf",
+        "max_searches": 2,
+        "context_chunks": 3,
+        "budget_chars": 3500,
+        "hypothesis": "Improvement 2: reciprocal rank fusion may balance lexical and semantic evidence."
+      },
+      {
+        "id": "hybrid_context5",
+        "method": "hybrid_rrf",
+        "max_searches": 2,
+        "context_chunks": 5,
+        "budget_chars": 5500,
+        "hypothesis": "Additional dev experiment: evidence at hybrid ranks 4/5 was excluded for D14/D09. More whole chunks may recover it but add distractors and tokens."
+      }
+    ]
+  },
+  "retrieval_config": {
+    "schema_version": 1,
+    "candidate_pool": 10,
+    "comparison_top_k": 3,
+    "bm25": {
+      "k1": 1.2,
+      "b": 0.75
+    },
+    "rrf": {
+      "rank_constant": 60
+    },
+    "context": {
+      "top_k": 3,
+      "budget_chars": 3500,
+      "deduplication": "chunk_id",
+      "truncation": "none"
+    },
+    "timing_repeats": 3,
+    "methods": [
+      "dense",
+      "bm25",
+      "hybrid_rrf"
+    ],
+    "hypotheses": {
+      "dense": "Baseline: semantic similarity may recover paraphrases but confuse related Python APIs.",
+      "bm25": "Improvement experiment 1: lexical matching may help exact API names and identifiers; paraphrases may suffer.",
+      "hybrid_rrf": "Improvement experiment 2: fusing dense and lexical ranks may balance both signals; added latency and worse rankings are possible."
+    }
+  },
+  "requested_model": "gemini-3.5-flash-lite",
+  "resolved_model_version": "gemini-3.5-flash-lite",
+  "benchmark_seal": "4931ec72eb92568b8a5b8fbbc8734a7ff0c5f0c6b4714607fa3e4df5cd6cb14c",
+  "benchmark_content_hashes": {
+    "dev.json": "1dc72722d246719b66683fddc27e8a91c3cc17dba119f3b6d5a98b9e499b10e0",
+    "test.json": "fd1b4347ef82cd0c7d698c6c6fd56f38caae60a731d12f8beab718364734ca04",
+    "dev_queries.json": "26bf4f6a6a9c1073d9f8628d715a265d4eacc8614365f2e06beb7b73f1210087",
+    "test_queries.json": "48a74e3352519a77e1ff14a82a29a2f484197f3202c2e5a0ff618f0dc9f7a5ca",
+    "absence_review.json": "e944ad3aed760af6e0f6774fd362aeb3c30a955e895934cf924173429293d8cc",
+    "evaluation_policy.json": "c216ac888556b1caf76f75b12e8d198488ed617e88c32594154732b9f400022e"
+  },
+  "source_content": {
+    "pdf_sha256": "7ed5678593803de4560b4094e4aa2e4b873bd79d65f7270acedb9e203c5a3669",
+    "pages_sha256": "40740cec8e31bb72f876f3bc24550ef5b96554783e3c7b070882754710cc5933",
+    "chunks_sha256": "5011bde177c206d43a7ee0903ade80fce1ce977cb60e782b975ad1279828882b"
+  },
+  "embedding_signature": "9d9c274c457bffadec184fe73b398c9725bb57c9fee932d131badc3997635301",
+  "database_digest": "00646bc2983f2f455285bab520f75c33bd971309ba7d58254a879fa547c74db2",
+  "test_results_used_for_selection": false,
+  "seal_sha256": "7c691f1f685824191dc9440795e8dad0c55a51ccee9798907e4538ff908c8598"
+}

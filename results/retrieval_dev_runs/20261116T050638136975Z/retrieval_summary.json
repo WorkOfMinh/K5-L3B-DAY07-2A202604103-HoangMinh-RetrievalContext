@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "run_id": "20261116T050638136975Z",
+  "completed_at": "2026-11-16T05:06:40.034916+00:00",
+  "status": "dev_retrieval_complete_real_agent_not_run",
+  "split": "dev",
+  "dev_cases": 17,
+  "methods": {
+    "dense": {
+      "hit_at_1": {
+        "numerator": 10,
+        "denominator": 15,
+        "rate": 0.6666666666666666
+      },
+      "evidence_hit_at_3": {
+        "numerator": 13,
+        "denominator": 15,
+        "rate": 0.8666666666666667
+      },
+      "packed_context_evidence_proxy": {
+        "numerator": 13,
+        "denominator": 15,
+        "rate": 0.8666666666666667
+      },
+      "dev_cases": 17,
+      "answerable_cases": 15,
+      "insufficient_cases": 2,
+      "median_cached_query_retrieval_ms": 2.9446000007737894,
+      "timed_lookups": 51,
+      "mean_packed_context_characters": 2543.235294117647,
+      "empty_packed_contexts": 0,
+      "supplied_scope_compliance": {
+        "numerator": 3,
+        "denominator": 3,
+        "rate": 1.0
+      },
+      "exact_evidence_misses": [
+        "D09",
+        "D10"
+      ],
+      "agent_answer_grade": null,
+      "citation_support": null,
+      "abstention_success": null,
+      "note": "Agent metrics are not measured in this step. Packed context has not yet been sent to an answer-generating model."
+    },
+    "bm25": {
+      "hit_at_1": {
+        "numerator": 10,
+        "denominator": 15,
+        "rate": 0.6666666666666666
+      },
+      "evidence_hit_at_3": {
+        "numerator": 13,
+        "denominator": 15,
+        "rate": 0.8666666666666667
+      },
+      "packed_context_evidence_proxy": {
+        "numerator": 13,
+        "denominator": 15,
+        "rate": 0.8666666666666667
+      },
+      "dev_cases": 17,
+      "answerable_cases": 15,
+      "insufficient_cases": 2,
+      "median_cached_query_retrieval_ms": 0.8011999998416286,
+      "timed_lookups": 51,
+      "mean_packed_context_characters": 2787.705882352941,
+      "empty_packed_contexts": 0,
+      "supplied_scope_compliance": {
+        "numerator": 3,
+        "denominator": 3,
+        "rate": 1.0
+      },
+      "exact_evidence_misses": [
+        "D07",
+        "D14"
+      ],
+      "agent_answer_grade": null,
+      "citation_support": null,
+      "abstention_success": null,
+      "note": "Agent metrics are not measured in this step. Packed context has not yet been sent to an answer-generating model."
+    },
+    "hybrid_rrf": {
+      "hit_at_1": {
+        "numerator": 11,
+        "denominator": 15,
+        "rate": 0.7333333333333333
+      },
+      "evidence_hit_at_3": {
+        "numerator": 13,
+        "denominator": 15,
+        "rate": 0.8666666666666667
+      },
+      "packed_context_evidence_proxy": {
+        "numerator": 13,
+        "denominator": 15,
+        "rate": 0.8666666666666667
+      },
+      "dev_cases": 17,
+      "answerable_cases": 15,
+      "insufficient_cases": 2,
+      "median_cached_query_retrieval_ms": 3.9192000003822614,
+      "timed_lookups": 51,
+      "mean_packed_context_characters": 2788.235294117647,
+      "empty_packed_contexts": 0,
+      "supplied_scope_compliance": {
+        "numerator": 3,
+        "denominator": 3,
+        "rate": 1.0
+      },
+      "exact_evidence_misses": [
+        "D09",
+        "D14"
+      ],
+      "agent_answer_grade": null,
+      "citation_support": null,
+      "abstention_success": null,
+      "note": "Agent metrics are not measured in this step. Packed context has not yet been sent to an answer-generating model."
+    }
+  },
+  "config": {
+    "schema_version": 1,
+    "candidate_pool": 10,
+    "comparison_top_k": 3,
+    "bm25": {
+      "k1": 1.2,
+      "b": 0.75
+    },
+    "rrf": {
+      "rank_constant": 60
+    },
+    "context": {
+      "top_k": 3,
+      "budget_chars": 3500,
+      "deduplication": "chunk_id",
+      "truncation": "none"
+    },
+    "timing_repeats": 3,
+    "methods": [
+      "dense",
+      "bm25",
+      "hybrid_rrf"
+    ],
+    "hypotheses": {
+      "dense": "Baseline: semantic similarity may recover paraphrases but confuse related Python APIs.",
+      "bm25": "Improvement experiment 1: lexical matching may help exact API names and identifiers; paraphrases may suffer.",
+      "hybrid_rrf": "Improvement experiment 2: fusing dense and lexical ranks may balance both signals; added latency and worse rankings are possible."
+    }
+  },
+  "config_sha256": "cd1a66dc07ad2353c57ce5798b613ba18f8cc42b1a0bdcb5e830bc3686868db1",
+  "model": {
+    "model_name": "intfloat/multilingual-e5-small",
+    "revision": "fd1525a9fd15316a2d503bf26ab031a61d056e98",
+    "dimensions": 384,
+    "settings": {
+      "name": "intfloat/multilingual-e5-small",
+      "revision": "fd1525a9fd15316a2d503bf26ab031a61d056e98",
+      "dimensions": 384,
+      "device": "cpu",
+      "batch_size": 16,
+      "query_prefix": "query: ",
+      "document_prefix": "passage: ",
+      "normalize_embeddings": true
+    },
+    "versions": {
+      "sentence-transformers": "5.7.0",
+      "transformers": "4.57.6",
+      "torch": "2.15.0+cpu",
+      "numpy": "2.4.6",
+      "huggingface-hub": "0.36.2"
+    },
+    "signature": "9d9c274c457bffadec184fe73b398c9725bb57c9fee932d131badc3997635301",
+    "max_tokens": 512,
+    "input_normalization": "Unicode NFKC and whitespace collapse; source text unchanged",
+    "verified_runtime_signature": "9d9c274c457bffadec184fe73b398c9725bb57c9fee932d131badc3997635301",
+    "query_cache_hits": 0,
+    "new_query_vectors": 17,
+    "query_token_counts": {
+      "42a63a679a946d405d5d435a75badaa5fa534bcb10fe2bb6efba4778d7ab0c09": 19,
+      "3137cc7b3e39ccde7064e0db17d3f3bb9188de0925f351fbc5216ba23d3bda7a": 24,
+      "6183da2725944e164c072a2e5f0a3299bcb8bca2f147c78019784d4bbcf83981": 38,
+      "8282862938a909cb56f3bfcd42367846d1d7f5f3ad68c47ec72da5d4f06eee85": 29,
+      "1e8b938e47b9967608bdb1783afec9945db29ecbf55f8866b5d97f5367a196e9": 23,
+      "52c638f892e8f68db1b214c101c21e107455d448ac09a2fa25c2871013b0d5a9": 21,
+      "96a5167a6594bf15f1df839200d81ac6caac507c065f97fa712015a01668a3b3": 22,
+      "476dd2eaddeda32683ecb5b8577a5d87aaae077cc81247cd169d856ae87e0993": 32,
+      "e370a8b818c7c4e50ef8db876838345a609ae146de20e45ae55fe311929a38ec": 25,
+      "255044e9b7f254437b38127a18ea68f7863fbf1773cfe10558c8ff3a2cb06ccb": 33,
+      "f9c0922b95edf02a75905d0f20fa57edc7d9e0195d1a1e68ee7865b1c4250d74": 21,
+      "99121457eec984d184238f4ca3fbf1b48d9cbf5e5a47c4ec4b8a93b5f24dfc4b": 22,
+      "642fb03d2679aedcdeadfbd8db14e04b9076fd70bf320eda9538c4da138b99f0": 39,
+      "9aabfeaeaaabc4e1ff14830d6eade3ccc2fb0e5c300186557712d29005814fa6": 22,
+      "22c233e2af12bc335dcb3f0b8e3ff9e43565d89dd12a1da01f4e5a9afbbb96d7": 25,
+      "86cdfca214f60bc368e7fd00d88f202a80163590b68442f4601191b6ab1116e6": 33,
+      "8253caa60b2c6e13a82acb01920161eabcd71a1ad92e77c42c6e98dc75ffbeaf": 30
+    },
+    "max_query_tokens": 512,
+    "paid_api_cost_usd": 0
+  },
+  "corpus": {
+    "chunks": 142,
+    "pages": 37,
+    "source_content": {
+      "pdf_sha256": "7ed5678593803de4560b4094e4aa2e4b873bd79d65f7270acedb9e203c5a3669",
+      "pages_sha256": "40740cec8e31bb72f876f3bc24550ef5b96554783e3c7b070882754710cc5933",
+      "chunks_sha256": "5011bde177c206d43a7ee0903ade80fce1ce977cb60e782b975ad1279828882b"
+    },
+    "database_strategy": "C",
+    "verified_database_digest": "00646bc2983f2f455285bab520f75c33bd971309ba7d58254a879fa547c74db2"
+  },
+  "benchmark_seal_sha256": "4931ec72eb92568b8a5b8fbbc8734a7ff0c5f0c6b4714607fa3e4df5cd6cb14c",
+  "source_code_sha256": "a2c864993ff3a2075ed7c8f04d080aca95d9e5595a6267432d841cb07c44c747",
+  "real_pgvector_query_calls": 102,
+  "lexical_search_calls": 102,
+  "model_load_seconds": 73.0955128000005,
+  "lexical_index_build_seconds": 0.010776099999930011,
+  "total_run_seconds": 75.25693469999896,
+  "answer_generating_model_calls": 0,
+  "paid_api_cost_usd": 0,
+  "test_retrieval_performed": false,
+  "configuration_selected": false,
+  "limitations": [
+    "Exact-evidence matching requires source review for equivalent valid passages.",
+    "Packed-context proxy is not final Context Evidence Rate for context actually sent to a model.",
+    "No answer/citation/abstention correctness has been measured.",
+    "Latency is warm-query component timing, not an independent full-agent end-to-end comparison.",
+    "All experiments must later be measured with a real answer-generating agent before final selection."
+  ]
+}

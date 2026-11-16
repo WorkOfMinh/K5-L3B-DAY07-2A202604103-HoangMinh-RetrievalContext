@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "authorship": "AI-assisted source audit; not human-confirmed",
+  "traces_content_sha256": "70cfa506e5cda17e42d2ddeabd581041db1ad0f566634199ed5bacfb4c9b37cd",
+  "experiment_identity_sha256": "d4f1a998079396ec9278241412db66919a11db4f0d3f9c5354730a5bbb04adef",
+  "observed_bundle_sha256": "6135acd188fdc0f34adea3f3534f6b39db268b28bca9fdc88023fa21486625e7",
+  "source_content": {
+    "pdf_sha256": "7ed5678593803de4560b4094e4aa2e4b873bd79d65f7270acedb9e203c5a3669",
+    "pages_sha256": "40740cec8e31bb72f876f3bc24550ef5b96554783e3c7b070882754710cc5933",
+    "chunks_sha256": "5011bde177c206d43a7ee0903ade80fce1ce977cb60e782b975ad1279828882b"
+  },
+  "benchmark_seal": "4931ec72eb92568b8a5b8fbbc8734a7ff0c5f0c6b4714607fa3e4df5cd6cb14c",
+  "selection_policy_sha256": "c216ac888556b1caf76f75b12e8d198488ed617e88c32594154732b9f400022e",
+  "review_rows": 68,
+  "answerable_review_rows": 60,
+  "insufficient_review_rows": 8,
+  "configuration_selected": false,
+  "test_run": false,
+  "corpus_scope_absence_check": {
+    "selected_pages": 37,
+    "csv_or_csv_reader_occurrences": 0,
+    "note": "Source text was inspected with the frozen source scope; no exact hardware/input timing is supplied."
+  },
+  "inference_review_required": [
+    "D09 dense_base",
+    "D09 hybrid_base",
+    "D09 hybrid_context5"
+  ],
+  "cost_status": "User requested free API; estimated free-tier cost is zero, but actual billed cost/account tier is not proven by response serviceTier=standard.",
+  "migration_note": "35 old-code completed cases preserved byte-for-byte. Later cases use only the archived empty-abstention display compatibility fix."
+}

@@ -1,0 +1,48 @@
+{
+  "model_name": "intfloat/multilingual-e5-small",
+  "revision": "fd1525a9fd15316a2d503bf26ab031a61d056e98",
+  "dimensions": 384,
+  "settings": {
+    "name": "intfloat/multilingual-e5-small",
+    "revision": "fd1525a9fd15316a2d503bf26ab031a61d056e98",
+    "dimensions": 384,
+    "device": "cpu",
+    "batch_size": 16,
+    "query_prefix": "query: ",
+    "document_prefix": "passage: ",
+    "normalize_embeddings": true
+  },
+  "versions": {
+    "sentence-transformers": "5.7.0",
+    "transformers": "4.57.6",
+    "torch": "2.15.0+cpu",
+    "numpy": "2.4.6",
+    "huggingface-hub": "0.36.2"
+  },
+  "signature": "9d9c274c457bffadec184fe73b398c9725bb57c9fee932d131badc3997635301",
+  "max_tokens": 512,
+  "input_normalization": "Unicode NFKC and whitespace collapse; source text unchanged",
+  "verified_runtime_signature": "9d9c274c457bffadec184fe73b398c9725bb57c9fee932d131badc3997635301",
+  "query_cache_hits": 0,
+  "new_query_vectors": 16,
+  "query_token_counts": {
+    "c2a554e01aa616501799a321af247b43cd253b71209c07256ef2c27b1c81c0eb": 28,
+    "f4dd7d7fce06167ff476b31c978042eaa2baca351913c8fdfdd44fce645dadab": 15,
+    "9b43da9be676869001b687ce0b9b2c7ca461dae2501b78d4656191dcdccb42f6": 42,
+    "79c33e3178039c066ece8a630dcb69516866f0168109e09b18f39dffdaf7ff0b": 17,
+    "29ac8c34312c611c78fa5f9b20ab17dbfe99ff43c1879e00cf1a2576ce023261": 36,
+    "6c71be5263496be9c927071e28fda349888c2defb778b05ba9f48c48a8b41b01": 13,
+    "a9db03ee90b860b00b1528195978b4e99d201d6944fe308dfbe577e6a2534c80": 25,
+    "c0789371efe66dbbfdd159a632968884a0618357cba661a1322f672d55161c69": 15,
+    "52e5ea0134fe10c729094dab34b0d6495f9327f7a07f1c45d43d301cdfef8064": 22,
+    "8c8cd1ec9a807d624286d61f2df0824a13cbb08c713d267e17ade9e0e25f6aea": 17,
+    "2b3b4000c60c62172aafd5d854e2a05e7354c462ee8796fa4da6ddc2d98ea216": 38,
+    "ab97d1cedc63fb9c150c2d2b485d70443dcfb62ad493a72d53ae89a1b3b108c4": 17,
+    "7098ffb77df0a1145ddad7233da12c45192a3ef6fc920fbe573194232657e831": 9,
+    "b65f2c67bf439815808ad09e21b1b7f66e678593573f9577ce231487bf561d67": 30,
+    "140b802258a509a87f3309ca827f6436165288169cdea35b3337552dc9235e82": 15,
+    "de241296ba75839e0a0e3c3dca36c999e5c2c92b61a4a0fd0c62a6d69caaeef1": 7
+  },
+  "max_query_tokens": 512,
+  "paid_api_cost_usd": 0
+}

@@ -1,0 +1,1435 @@
+{
+  "status": "answered",
+  "answer": "Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order [be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b].",
+  "citations": [
+    "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b"
+  ],
+  "reason": "The Python tutorial explicitly states that performing list(d) on a dictionary returns all keys in insertion order.",
+  "guard": "citation_ids_valid; semantic_support_requires_review",
+  "query_id": "D7T01",
+  "config_id": "bm25_base",
+  "public_query": {
+    "id": "D7T01",
+    "question": "When list(d) is applied to a dictionary, which keys are returned and in what order?",
+    "filter": null
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "list(d) dictionary keys order",
+      "filter": null,
+      "method": "bm25",
+      "ranking": [
+        {
+          "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.",
+          "start_char": 2831,
+          "end_char": 3567,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 15.826774080740233,
+          "rank": 1
+        },
+        {
+          "id": "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 61,
+          "text": "This could also be done by passing the table dictionary as keyword arguments with the ** notation.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678\n\n          This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing\n          all local variables:\n          >>> table = {k: str(v) for k, v in vars().items()}\n          >>> message = \" \".join([f'{k}: ' + '{' + k +'};' for k in table.keys()])\n                                                              (continues on next page)",
+          "start_char": 2192,
+          "end_char": 2889,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p061",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 55,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2889
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 12.146099549537464,
+          "rank": 2
+        },
+        {
+          "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+          "start_char": 1840,
+          "end_char": 2820,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 11.228459697408576,
+          "rank": 3
+        },
+        {
+          "id": "ba103d0bf4dc07e2649837f0ed56eaef4db9e438dcf6a5976120e426c877b193",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 61,
+          "text": ">>> print('The story of {0}, {1}, and {other}.'.format('Bill', 'Manfred',\n          ...                                      other='Georg'))\n          The story of Bill, Manfred, and Georg.\n          If you have a really long format string that you don’t want to split up, it would be nice if you could reference the\n          variables to be formatted by name instead of by position. This can be done by simply passing the dict and using\n          square brackets '[]' to access the keys.\n\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; '\n          ...    'Dcab: {0[Dcab]:d}'.format(table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678",
+          "start_char": 1453,
+          "end_char": 2180,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p061",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 55,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2889
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.4044390561228,
+          "rank": 4
+        },
+        {
+          "id": "0f64985915230f3a438c801c34351e667932248aa288f15dad7f3e1d441132eb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 68,
+          "text": "handlers of the same try statement. An except clause may name multiple exceptions as a parenthesized tuple, for\n          example:\n\n          ... except (RuntimeError, TypeError, NameError):\n          ...   pass\n\n          A class in an except clause matches exceptions which are instances of the class itself or one of its derived classes\n          (but not the other way around — an except clause listing a derived class does not match instances of its base classes).\n          For example, the following code will print B, C, D in that order:\n          class B(Exception):\n             pass\n\n          class C(B):\n             pass\n\n          class D(C):\n             pass\n          for cls in [B, C, D]:\n                                                              (continues on next page)",
+          "start_char": 2406,
+          "end_char": 3200,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p068",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 62,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3200
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.079249563531397,
+          "rank": 5
+        },
+        {
+          "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+          "start_char": 1586,
+          "end_char": 1828,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.617020677035042,
+          "rank": 6
+        },
+        {
+          "id": "02bdf890917f574f6d3fa554a20f52ee47162658fb17b1a2571060df95ed616d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 47,
+          "text": "To loop over a sequence in sorted order, use the sorted() function which returns a new sorted list while leaving\n          the source unaltered.\n          >>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']\n          >>> for i in sorted(basket):\n          ...   print(i)\n          ...\n          apple\n          apple\n          banana\n          orange\n          orange\n          pear\n          Using set() on a sequence eliminates duplicate elements. The use of sorted() in combination with set() over\n          a sequence is an idiomatic way to loop over unique elements of the sequence in sorted order.",
+          "start_char": 815,
+          "end_char": 1436,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p047",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 41,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2184
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 5.8887516876943256,
+          "rank": 7
+        },
+        {
+          "id": "c74caaede5c383d39a86a9397cca3512c337207def63ea07107d030b9a2611ed",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 75,
+          "text": "When an exception is created in order to be raised, it is usually initialized with information that describes the error\n          that has occurred. There are cases where it is useful to add information after the exception was caught. For this\n          purpose, exceptions have a method add_note(note) that accepts a string and adds it to the exception’s notes list.\n          The standard traceback rendering includes all notes, in the order they were added, after the exception.\n          >>> try:\n          ...   raise TypeError('bad type')\n          ... except Exception as e:\n          ...   e.add_note('Add some information')\n          ...   e.add_note('Add some more information')\n          ...   raise\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 2, in <module>\n          TypeError: bad type\n          Add some information\n          Add some more information\n          >>>",
+          "start_char": 1208,
+          "end_char": 2135,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p075",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 69,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 5.144338913676341,
+          "rank": 8
+        },
+        {
+          "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+          "start_char": 571,
+          "end_char": 1421,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 4.894498944640285,
+          "rank": 9
+        },
+        {
+          "id": "44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 46,
+          "text": "Here is a small example using a dictionary:\n          >>> tel = {'jack': 4098, 'sape': 4139}\n          >>> tel['guido'] = 4127\n          >>> tel\n          {'jack': 4098, 'sape': 4139, 'guido': 4127}\n          >>> tel['jack']\n          4098\n          >>> del tel['sape']\n          >>> tel['irv'] = 4127\n          >>> tel\n          {'jack': 4098, 'guido': 4127, 'irv': 4127}\n          >>> list(tel)\n          ['jack', 'guido', 'irv']\n          >>> sorted(tel)\n          ['guido', 'irv', 'jack']\n          >>> 'guido' in tel\n          True\n          >>> 'jack' not in tel\n          False\n          The dict() constructor builds dictionaries directly from sequences of key-value pairs:\n          >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n          {'sape': 4139, 'guido': 4127, 'jack': 4098}\n\n          In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:",
+          "start_char": 0,
+          "end_char": 926,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p046",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 40,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 1924
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 4.496473810608418,
+          "rank": 10
+        }
+      ],
+      "component_rankings": {
+        "bm25": [
+          {
+            "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.",
+            "start_char": 2831,
+            "end_char": 3567,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 15.826774080740233,
+            "rank": 1
+          },
+          {
+            "id": "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 61,
+            "text": "This could also be done by passing the table dictionary as keyword arguments with the ** notation.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678\n\n          This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing\n          all local variables:\n          >>> table = {k: str(v) for k, v in vars().items()}\n          >>> message = \" \".join([f'{k}: ' + '{' + k +'};' for k in table.keys()])\n                                                              (continues on next page)",
+            "start_char": 2192,
+            "end_char": 2889,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p061",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 55,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2889
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 12.146099549537464,
+            "rank": 2
+          },
+          {
+            "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+            "start_char": 1840,
+            "end_char": 2820,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 11.228459697408576,
+            "rank": 3
+          },
+          {
+            "id": "ba103d0bf4dc07e2649837f0ed56eaef4db9e438dcf6a5976120e426c877b193",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 61,
+            "text": ">>> print('The story of {0}, {1}, and {other}.'.format('Bill', 'Manfred',\n          ...                                      other='Georg'))\n          The story of Bill, Manfred, and Georg.\n          If you have a really long format string that you don’t want to split up, it would be nice if you could reference the\n          variables to be formatted by name instead of by position. This can be done by simply passing the dict and using\n          square brackets '[]' to access the keys.\n\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; '\n          ...    'Dcab: {0[Dcab]:d}'.format(table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678",
+            "start_char": 1453,
+            "end_char": 2180,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p061",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 55,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2889
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 7.4044390561228,
+            "rank": 4
+          },
+          {
+            "id": "0f64985915230f3a438c801c34351e667932248aa288f15dad7f3e1d441132eb",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 68,
+            "text": "handlers of the same try statement. An except clause may name multiple exceptions as a parenthesized tuple, for\n          example:\n\n          ... except (RuntimeError, TypeError, NameError):\n          ...   pass\n\n          A class in an except clause matches exceptions which are instances of the class itself or one of its derived classes\n          (but not the other way around — an except clause listing a derived class does not match instances of its base classes).\n          For example, the following code will print B, C, D in that order:\n          class B(Exception):\n             pass\n\n          class C(B):\n             pass\n\n          class D(C):\n             pass\n          for cls in [B, C, D]:\n                                                              (continues on next page)",
+            "start_char": 2406,
+            "end_char": 3200,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p068",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 62,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 3200
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 7.079249563531397,
+            "rank": 5
+          },
+          {
+            "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+            "start_char": 1586,
+            "end_char": 1828,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.617020677035042,
+            "rank": 6
+          },
+          {
+            "id": "02bdf890917f574f6d3fa554a20f52ee47162658fb17b1a2571060df95ed616d",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 47,
+            "text": "To loop over a sequence in sorted order, use the sorted() function which returns a new sorted list while leaving\n          the source unaltered.\n          >>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']\n          >>> for i in sorted(basket):\n          ...   print(i)\n          ...\n          apple\n          apple\n          banana\n          orange\n          orange\n          pear\n          Using set() on a sequence eliminates duplicate elements. The use of sorted() in combination with set() over\n          a sequence is an idiomatic way to loop over unique elements of the sequence in sorted order.",
+            "start_char": 815,
+            "end_char": 1436,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p047",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 41,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2184
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 5.8887516876943256,
+            "rank": 7
+          },
+          {
+            "id": "c74caaede5c383d39a86a9397cca3512c337207def63ea07107d030b9a2611ed",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 75,
+            "text": "When an exception is created in order to be raised, it is usually initialized with information that describes the error\n          that has occurred. There are cases where it is useful to add information after the exception was caught. For this\n          purpose, exceptions have a method add_note(note) that accepts a string and adds it to the exception’s notes list.\n          The standard traceback rendering includes all notes, in the order they were added, after the exception.\n          >>> try:\n          ...   raise TypeError('bad type')\n          ... except Exception as e:\n          ...   e.add_note('Add some information')\n          ...   e.add_note('Add some more information')\n          ...   raise\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 2, in <module>\n          TypeError: bad type\n          Add some information\n          Add some more information\n          >>>",
+            "start_char": 1208,
+            "end_char": 2135,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p075",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 69,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 5.144338913676341,
+            "rank": 8
+          },
+          {
+            "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+            "start_char": 571,
+            "end_char": 1421,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.894498944640285,
+            "rank": 9
+          },
+          {
+            "id": "44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 46,
+            "text": "Here is a small example using a dictionary:\n          >>> tel = {'jack': 4098, 'sape': 4139}\n          >>> tel['guido'] = 4127\n          >>> tel\n          {'jack': 4098, 'sape': 4139, 'guido': 4127}\n          >>> tel['jack']\n          4098\n          >>> del tel['sape']\n          >>> tel['irv'] = 4127\n          >>> tel\n          {'jack': 4098, 'guido': 4127, 'irv': 4127}\n          >>> list(tel)\n          ['jack', 'guido', 'irv']\n          >>> sorted(tel)\n          ['guido', 'irv', 'jack']\n          >>> 'guido' in tel\n          True\n          >>> 'jack' not in tel\n          False\n          The dict() constructor builds dictionaries directly from sequences of key-value pairs:\n          >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n          {'sape': 4139, 'guido': 4127, 'jack': 4098}\n\n          In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:",
+            "start_char": 0,
+            "end_char": 926,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p046",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 40,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 1924
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.496473810608418,
+            "rank": 10
+          }
+        ]
+      },
+      "context": {
+        "text": "[be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nwithin the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.\n\n[40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d | source=data/raw/tutorial.pdf | PDF page=61 | chapter=7]\nThis could also be done by passing the table dictionary as keyword arguments with the ** notation.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678\n\n          This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing\n          all local variables:\n          >>> table = {k: str(v) for k, v in vars().items()}\n          >>> message = \" \".join([f'{k}: ' + '{' + k +'};' for k in table.keys()])\n                                                              (continues on next page)\n\n[c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047 | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nAnother useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+        "chunk_ids": [
+          "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+          "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+          "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047"
+        ],
+        "characters": 2789,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.",
+            "start_char": 2831,
+            "end_char": 3567,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 15.826774080740233,
+            "rank": 1
+          },
+          {
+            "id": "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 61,
+            "text": "This could also be done by passing the table dictionary as keyword arguments with the ** notation.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678\n\n          This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing\n          all local variables:\n          >>> table = {k: str(v) for k, v in vars().items()}\n          >>> message = \" \".join([f'{k}: ' + '{' + k +'};' for k in table.keys()])\n                                                              (continues on next page)",
+            "start_char": 2192,
+            "end_char": 2889,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p061",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 55,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2889
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 12.146099549537464,
+            "rank": 2
+          },
+          {
+            "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+            "start_char": 1840,
+            "end_char": 2820,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 11.228459697408576,
+            "rank": 3
+          }
+        ],
+        "excluded": [
+          {
+            "id": "ba103d0bf4dc07e2649837f0ed56eaef4db9e438dcf6a5976120e426c877b193",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "0f64985915230f3a438c801c34351e667932248aa288f15dad7f3e1d441132eb",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "02bdf890917f574f6d3fa554a20f52ee47162658fb17b1a2571060df95ed616d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c74caaede5c383d39a86a9397cca3512c337207def63ea07107d030b9a2611ed",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.0005596000009973068
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "fa575b6dbfcab9a4883f39a0ceada60d4d536d0022664ee99dfc98a1981c5fc2",
+      "request_sha256": "607a5ea06034b0d00385faf8e4c8505163e362b359c4ae68933326c47e578427",
+      "response_id": "Ytb6arqYBO6A0-kP6KivmA0",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 613,
+        "candidatesTokenCount": 20,
+        "totalTokenCount": 633,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 613
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.110000000000582,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "e4358061506435129767fbaf040c31d421014e8c6d590811cded198c9c844de8",
+      "request_sha256": "1a458be2deed0e8ed0efaf2e4899d1bcca27cd311c16f11826cfadad2dbf4573",
+      "response_id": "cdb6aojODPnl2roPnOq3GA",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1689,
+        "candidatesTokenCount": 137,
+        "totalTokenCount": 1826,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1689
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.610000000000582,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nwithin the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.\n\n[40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d | source=data/raw/tutorial.pdf | PDF page=61 | chapter=7]\nThis could also be done by passing the table dictionary as keyword arguments with the ** notation.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678\n\n          This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing\n          all local variables:\n          >>> table = {k: str(v) for k, v in vars().items()}\n          >>> message = \" \".join([f'{k}: ' + '{' + k +'};' for k in table.keys()])\n                                                              (continues on next page)\n\n[c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047 | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nAnother useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+        "chunk_ids": [
+          "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+          "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+          "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047"
+        ],
+        "characters": 2789,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.",
+            "start_char": 2831,
+            "end_char": 3567,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 15.826774080740233,
+            "rank": 1
+          },
+          {
+            "id": "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 61,
+            "text": "This could also be done by passing the table dictionary as keyword arguments with the ** notation.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678\n\n          This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing\n          all local variables:\n          >>> table = {k: str(v) for k, v in vars().items()}\n          >>> message = \" \".join([f'{k}: ' + '{' + k +'};' for k in table.keys()])\n                                                              (continues on next page)",
+            "start_char": 2192,
+            "end_char": 2889,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p061",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 55,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2889
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 12.146099549537464,
+            "rank": 2
+          },
+          {
+            "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+            "start_char": 1840,
+            "end_char": 2820,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 11.228459697408576,
+            "rank": 3
+          }
+        ],
+        "excluded": [
+          {
+            "id": "ba103d0bf4dc07e2649837f0ed56eaef4db9e438dcf6a5976120e426c877b193",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "0f64985915230f3a438c801c34351e667932248aa288f15dad7f3e1d441132eb",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "02bdf890917f574f6d3fa554a20f52ee47162658fb17b1a2571060df95ed616d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c74caaede5c383d39a86a9397cca3512c337207def63ea07107d030b9a2611ed",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "62d4945b893d2cf4336270ffc6c5c4f51fa07bd1c91835620bd881ca617c534d",
+      "request_sha256": "41bd5922d189550c83b627c555069fbc8d3a968bfeabca10b910210a970cafb5",
+      "response_id": "gNb6arDlDKe_1e8P5Im24QQ",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 2080,
+        "candidatesTokenCount": 186,
+        "totalTokenCount": 2266,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2080
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.9690000000009604,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nwithin the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.\n\n[40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d | source=data/raw/tutorial.pdf | PDF page=61 | chapter=7]\nThis could also be done by passing the table dictionary as keyword arguments with the ** notation.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678\n\n          This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing\n          all local variables:\n          >>> table = {k: str(v) for k, v in vars().items()}\n          >>> message = \" \".join([f'{k}: ' + '{' + k +'};' for k in table.keys()])\n                                                              (continues on next page)\n\n[c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047 | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nAnother useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+        "chunk_ids": [
+          "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+          "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+          "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047"
+        ],
+        "characters": 2789,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.",
+            "start_char": 2831,
+            "end_char": 3567,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 15.826774080740233,
+            "rank": 1
+          },
+          {
+            "id": "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 61,
+            "text": "This could also be done by passing the table dictionary as keyword arguments with the ** notation.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678\n\n          This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing\n          all local variables:\n          >>> table = {k: str(v) for k, v in vars().items()}\n          >>> message = \" \".join([f'{k}: ' + '{' + k +'};' for k in table.keys()])\n                                                              (continues on next page)",
+            "start_char": 2192,
+            "end_char": 2889,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p061",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 55,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2889
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 12.146099549537464,
+            "rank": 2
+          },
+          {
+            "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+            "start_char": 1840,
+            "end_char": 2820,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 11.228459697408576,
+            "rank": 3
+          }
+        ],
+        "excluded": [
+          {
+            "id": "ba103d0bf4dc07e2649837f0ed56eaef4db9e438dcf6a5976120e426c877b193",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "0f64985915230f3a438c801c34351e667932248aa288f15dad7f3e1d441132eb",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "02bdf890917f574f6d3fa554a20f52ee47162658fb17b1a2571060df95ed616d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c74caaede5c383d39a86a9397cca3512c337207def63ea07107d030b9a2611ed",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nwithin the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.\n\n[40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d | source=data/raw/tutorial.pdf | PDF page=61 | chapter=7]\nThis could also be done by passing the table dictionary as keyword arguments with the ** notation.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678\n\n          This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing\n          all local variables:\n          >>> table = {k: str(v) for k, v in vars().items()}\n          >>> message = \" \".join([f'{k}: ' + '{' + k +'};' for k in table.keys()])\n                                                              (continues on next page)\n\n[c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047 | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nAnother useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+    "chunk_ids": [
+      "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+      "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+      "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047"
+    ],
+    "characters": 2789,
+    "budget_chars": 3500,
+    "max_chunks": 3,
+    "selected_chunks": [
+      {
+        "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 45,
+        "text": "within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.",
+        "start_char": 2831,
+        "end_char": 3567,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p045",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 39,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3567
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 15.826774080740233,
+        "rank": 1
+      },
+      {
+        "id": "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 61,
+        "text": "This could also be done by passing the table dictionary as keyword arguments with the ** notation.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678\n\n          This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing\n          all local variables:\n          >>> table = {k: str(v) for k, v in vars().items()}\n          >>> message = \" \".join([f'{k}: ' + '{' + k +'};' for k in table.keys()])\n                                                              (continues on next page)",
+        "start_char": 2192,
+        "end_char": 2889,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p061",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 55,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2889
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 12.146099549537464,
+        "rank": 2
+      },
+      {
+        "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 45,
+        "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+        "start_char": 1840,
+        "end_char": 2820,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p045",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 39,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3567
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 11.228459697408576,
+        "rank": 3
+      }
+    ],
+    "excluded": [
+      {
+        "id": "ba103d0bf4dc07e2649837f0ed56eaef4db9e438dcf6a5976120e426c877b193",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "0f64985915230f3a438c801c34351e667932248aa288f15dad7f3e1d441132eb",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "02bdf890917f574f6d3fa554a20f52ee47162658fb17b1a2571060df95ed616d",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "c74caaede5c383d39a86a9397cca3512c337207def63ea07107d030b9a2611ed",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca",
+        "reason": "max_chunks"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [
+    {
+      "event": "citation_format_repair",
+      "rejected_proposal": {
+        "citations": [
+          "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b"
+        ],
+        "answer": "Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order.",
+        "abstain": false,
+        "reason": "The Python tutorial explicitly states that performing list(d) on a dictionary returns a list of all keys used in the dictionary, in insertion order."
+      },
+      "reason": "Citation IDs must be drawn from current context and appear inline in answer; separate array alone is insufficient."
+    }
+  ],
+  "search_calls": 1,
+  "generated_search_queries": [
+    "list(d) dictionary keys order"
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 45.019162000000506,
+    "pacing_seconds_this_invocation": 40.3269999999975,
+    "wall_seconds_excluding_pacing": 4.692162000003009,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": true,
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 45,
+        "evidence": "Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead)."
+      }
+    ],
+    "expected_answer": "It returns all dictionary keys in insertion order. Use sorted(d) instead if sorted order is wanted.",
+    "absence_reason": null,
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "bm25",
+    "query": "When list(d) is applied to a dictionary, which keys are returned and in what order?",
+    "filter": null,
+    "ranking": [
+      {
+        "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 45,
+        "text": "within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.",
+        "start_char": 2831,
+        "end_char": 3567,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p045",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 39,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3567
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 19.659702196034257,
+        "rank": 1
+      },
+      {
+        "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 45,
+        "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+        "start_char": 1840,
+        "end_char": 2820,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p045",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 39,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3567
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 16.30121095661782,
+        "rank": 2
+      },
+      {
+        "id": "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 61,
+        "text": "This could also be done by passing the table dictionary as keyword arguments with the ** notation.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678\n\n          This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing\n          all local variables:\n          >>> table = {k: str(v) for k, v in vars().items()}\n          >>> message = \" \".join([f'{k}: ' + '{' + k +'};' for k in table.keys()])\n                                                              (continues on next page)",
+        "start_char": 2192,
+        "end_char": 2889,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p061",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 55,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2889
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 14.772012402263059,
+        "rank": 3
+      },
+      {
+        "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 41,
+        "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+        "start_char": 571,
+        "end_char": 1421,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p041",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 35,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2843
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 11.931596333260922,
+        "rank": 4
+      },
+      {
+        "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "b'd'\n          In text files (those opened without a b in the mode string), only seeks relative to the beginning of the file are allowed\n          (the exception being seeking to the very file end with seek(0, 2)) and the only valid offset values are those returned\n          from the f.tell(), or zero. Any other offset value produces undefined behaviour.\n\n          File objects have some additional methods, such as isatty() and truncate() which are less frequently used;\n          consult the Library Reference for a complete guide to file objects.",
+        "start_char": 1006,
+        "end_char": 1558,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 11.230440328146983,
+        "rank": 5
+      },
+      {
+        "id": "836d0d49a75724acb4dda75e2605ba192f9bdc2ec713de7af1272a276ca2e9eb",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 55,
+        "text": "6.4.1 Importing * From a Package\n          Now what happens when the user writes from sound.effects import *? Ideally, one would hope that this\n          somehow goes out to the filesystem, finds which submodules are present in the package, and imports them all. This\n          could take a long time and importing sub-modules might have unwanted side-effects that should only happen when\n          the sub-module is explicitly imported.",
+        "start_char": 2432,
+        "end_char": 2869,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p055",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 49,
+          "chapter_title": "Modules",
+          "normalized_characters": 3544
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 10.679498034347745,
+        "rank": 6
+      },
+      {
+        "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 64,
+        "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+        "start_char": 393,
+        "end_char": 1098,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p064",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 58,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2698
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 10.328374123069135,
+        "rank": 7
+      },
+      {
+        "id": "0f64985915230f3a438c801c34351e667932248aa288f15dad7f3e1d441132eb",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 68,
+        "text": "handlers of the same try statement. An except clause may name multiple exceptions as a parenthesized tuple, for\n          example:\n\n          ... except (RuntimeError, TypeError, NameError):\n          ...   pass\n\n          A class in an except clause matches exceptions which are instances of the class itself or one of its derived classes\n          (but not the other way around — an except clause listing a derived class does not match instances of its base classes).\n          For example, the following code will print B, C, D in that order:\n          class B(Exception):\n             pass\n\n          class C(B):\n             pass\n\n          class D(C):\n             pass\n          for cls in [B, C, D]:\n                                                              (continues on next page)",
+        "start_char": 2406,
+        "end_char": 3200,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p068",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 62,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 3200
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 10.06772709141526,
+        "rank": 8
+      },
+      {
+        "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 39,
+        "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+        "start_char": 1679,
+        "end_char": 2410,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p039",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 33,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 9.792735272870647,
+        "rank": 9
+      },
+      {
+        "id": "c74caaede5c383d39a86a9397cca3512c337207def63ea07107d030b9a2611ed",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 75,
+        "text": "When an exception is created in order to be raised, it is usually initialized with information that describes the error\n          that has occurred. There are cases where it is useful to add information after the exception was caught. For this\n          purpose, exceptions have a method add_note(note) that accepts a string and adds it to the exception’s notes list.\n          The standard traceback rendering includes all notes, in the order they were added, after the exception.\n          >>> try:\n          ...   raise TypeError('bad type')\n          ... except Exception as e:\n          ...   e.add_note('Add some information')\n          ...   e.add_note('Add some more information')\n          ...   raise\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 2, in <module>\n          TypeError: bad type\n          Add some information\n          Add some more information\n          >>>",
+        "start_char": 1208,
+        "end_char": 2135,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p075",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 69,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 2544
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 9.76696152837977,
+        "rank": 10
+      }
+    ],
+    "components": {
+      "bm25": [
+        {
+          "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.",
+          "start_char": 2831,
+          "end_char": 3567,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 19.659702196034257,
+          "rank": 1
+        },
+        {
+          "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+          "start_char": 1840,
+          "end_char": 2820,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 16.30121095661782,
+          "rank": 2
+        },
+        {
+          "id": "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 61,
+          "text": "This could also be done by passing the table dictionary as keyword arguments with the ** notation.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678\n\n          This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing\n          all local variables:\n          >>> table = {k: str(v) for k, v in vars().items()}\n          >>> message = \" \".join([f'{k}: ' + '{' + k +'};' for k in table.keys()])\n                                                              (continues on next page)",
+          "start_char": 2192,
+          "end_char": 2889,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p061",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 55,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2889
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 14.772012402263059,
+          "rank": 3
+        },
+        {
+          "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+          "start_char": 571,
+          "end_char": 1421,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 11.931596333260922,
+          "rank": 4
+        },
+        {
+          "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "b'd'\n          In text files (those opened without a b in the mode string), only seeks relative to the beginning of the file are allowed\n          (the exception being seeking to the very file end with seek(0, 2)) and the only valid offset values are those returned\n          from the f.tell(), or zero. Any other offset value produces undefined behaviour.\n\n          File objects have some additional methods, such as isatty() and truncate() which are less frequently used;\n          consult the Library Reference for a complete guide to file objects.",
+          "start_char": 1006,
+          "end_char": 1558,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 11.230440328146983,
+          "rank": 5
+        },
+        {
+          "id": "836d0d49a75724acb4dda75e2605ba192f9bdc2ec713de7af1272a276ca2e9eb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "6.4.1 Importing * From a Package\n          Now what happens when the user writes from sound.effects import *? Ideally, one would hope that this\n          somehow goes out to the filesystem, finds which submodules are present in the package, and imports them all. This\n          could take a long time and importing sub-modules might have unwanted side-effects that should only happen when\n          the sub-module is explicitly imported.",
+          "start_char": 2432,
+          "end_char": 2869,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 10.679498034347745,
+          "rank": 6
+        },
+        {
+          "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+          "start_char": 393,
+          "end_char": 1098,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 10.328374123069135,
+          "rank": 7
+        },
+        {
+          "id": "0f64985915230f3a438c801c34351e667932248aa288f15dad7f3e1d441132eb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 68,
+          "text": "handlers of the same try statement. An except clause may name multiple exceptions as a parenthesized tuple, for\n          example:\n\n          ... except (RuntimeError, TypeError, NameError):\n          ...   pass\n\n          A class in an except clause matches exceptions which are instances of the class itself or one of its derived classes\n          (but not the other way around — an except clause listing a derived class does not match instances of its base classes).\n          For example, the following code will print B, C, D in that order:\n          class B(Exception):\n             pass\n\n          class C(B):\n             pass\n\n          class D(C):\n             pass\n          for cls in [B, C, D]:\n                                                              (continues on next page)",
+          "start_char": 2406,
+          "end_char": 3200,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p068",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 62,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3200
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 10.06772709141526,
+          "rank": 8
+        },
+        {
+          "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+          "start_char": 1679,
+          "end_char": 2410,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 9.792735272870647,
+          "rank": 9
+        },
+        {
+          "id": "c74caaede5c383d39a86a9397cca3512c337207def63ea07107d030b9a2611ed",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 75,
+          "text": "When an exception is created in order to be raised, it is usually initialized with information that describes the error\n          that has occurred. There are cases where it is useful to add information after the exception was caught. For this\n          purpose, exceptions have a method add_note(note) that accepts a string and adds it to the exception’s notes list.\n          The standard traceback rendering includes all notes, in the order they were added, after the exception.\n          >>> try:\n          ...   raise TypeError('bad type')\n          ... except Exception as e:\n          ...   e.add_note('Add some information')\n          ...   e.add_note('Add some more information')\n          ...   raise\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 2, in <module>\n          TypeError: bad type\n          Add some information\n          Add some more information\n          >>>",
+          "start_char": 1208,
+          "end_char": 2135,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p075",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 69,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 9.76696152837977,
+          "rank": 10
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": true,
+    "original_query_evidence_hit_at_3": true,
+    "actual_final_context_exact_evidence": true,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "split": "test",
+  "selection_lock_seal": "7c691f1f685824191dc9440795e8dad0c55a51ccee9798907e4538ff908c8598",
+  "trace_sha256": "0e09054e10dbe8b5e7944d8f96e08f4a2258c78d9787ed3f8de29c9bb2950092"
+}

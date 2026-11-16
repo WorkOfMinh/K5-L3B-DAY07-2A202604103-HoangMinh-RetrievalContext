@@ -1,0 +1,1217 @@
+[
+  {
+    "query_id": "D01",
+    "method": "dense",
+    "context": "[2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nCHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)\n\n[34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac | source=data/raw/tutorial.pdf | PDF page=40 | chapter=5]\nThe list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.\n\n[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+    "context_ids": [
+      "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+      "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+      "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 39,
+          "evidence": "list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x]."
+        }
+      ],
+      "expected_answer": "Use list.append(x).",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D01",
+    "method": "bm25",
+    "context": "[2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nCHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)\n\n[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there\n\n[34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac | source=data/raw/tutorial.pdf | PDF page=40 | chapter=5]\nThe list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.",
+    "context_ids": [
+      "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+      "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+      "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 39,
+          "evidence": "list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x]."
+        }
+      ],
+      "expected_answer": "Use list.append(x).",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D01",
+    "method": "hybrid_rrf",
+    "context": "[2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nCHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)\n\n[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there\n\n[34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac | source=data/raw/tutorial.pdf | PDF page=40 | chapter=5]\nThe list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.",
+    "context_ids": [
+      "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+      "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+      "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 39,
+          "evidence": "list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x]."
+        }
+      ],
+      "expected_answer": "Use list.append(x).",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D02",
+    "method": "dense",
+    "context": "[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there\n\n[5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nis no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.\n\n[13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e | source=data/raw/tutorial.pdf | PDF page=43 | chapter=5]\nIn the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+    "context_ids": [
+      "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+      "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+      "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 39,
+          "evidence": "list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item."
+        }
+      ],
+      "expected_answer": "It raises ValueError.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D02",
+    "method": "bm25",
+    "context": "[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there\n\n[375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547 | source=data/raw/tutorial.pdf | PDF page=70 | chapter=8]\nException handlers do not handle only exceptions that occur immediately in the try clause, but also those that occur\n          inside functions that are called (even indirectly) in the try clause. For example:\n          >>> def this_fails():\n          ...   x = 1/0\n          ...\n          >>> try:\n          ...   this_fails()\n          ... except ZeroDivisionError as err:\n          ...   print('Handling run-time error:', err)\n          ...\n          Handling run-time error: division by zero\n\n          8.4 Raising Exceptions\n\n          The raise statement allows the programmer to force a specified exception to occur. For example:\n\n          >>> raise NameError('HiThere')\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: HiThere\n\n[13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e | source=data/raw/tutorial.pdf | PDF page=43 | chapter=5]\nIn the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+    "context_ids": [
+      "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+      "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+      "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 39,
+          "evidence": "list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item."
+        }
+      ],
+      "expected_answer": "It raises ValueError.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D02",
+    "method": "hybrid_rrf",
+    "context": "[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there\n\n[13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e | source=data/raw/tutorial.pdf | PDF page=43 | chapter=5]\nIn the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:\n\n[c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800 | source=data/raw/tutorial.pdf | PDF page=41 | chapter=5]\nwhich is more concise and readable.\n          A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for\n          or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if\n          clauses which follow it. For example, this listcomp combines the elements of two lists if they are not equal:\n          >>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]\n          [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]\n\n          and it’s equivalent to:\n\n          >>> combs = []\n          >>> for x in [1,2,3]:\n          ...   for y in [3,1,4]:\n          ...      if x != y:\n          ...         combs.append((x, y))\n                                                              (continues on next page)",
+    "context_ids": [
+      "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+      "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+      "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 39,
+          "evidence": "list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item."
+        }
+      ],
+      "expected_answer": "It raises ValueError.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D03",
+    "method": "dense",
+    "context": "[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there\n\n[34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac | source=data/raw/tutorial.pdf | PDF page=40 | chapter=5]\nThe list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.\n\n[13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e | source=data/raw/tutorial.pdf | PDF page=43 | chapter=5]\nIn the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+    "context_ids": [
+      "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+      "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+      "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 39,
+          "evidence": "If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range."
+        }
+      ],
+      "expected_answer": "It removes and returns the last item; on an empty list it raises IndexError.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D03",
+    "method": "bm25",
+    "context": "[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there\n\n[2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nCHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)\n\n[13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e | source=data/raw/tutorial.pdf | PDF page=43 | chapter=5]\nIn the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+    "context_ids": [
+      "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+      "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+      "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 39,
+          "evidence": "If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range."
+        }
+      ],
+      "expected_answer": "It removes and returns the last item; on an empty list it raises IndexError.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D03",
+    "method": "hybrid_rrf",
+    "context": "[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there\n\n[34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac | source=data/raw/tutorial.pdf | PDF page=40 | chapter=5]\nThe list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.\n\n[13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e | source=data/raw/tutorial.pdf | PDF page=43 | chapter=5]\nIn the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+    "context_ids": [
+      "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+      "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+      "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 39,
+          "evidence": "If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range."
+        }
+      ],
+      "expected_answer": "It removes and returns the last item; on an empty list it raises IndexError.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D04",
+    "method": "dense",
+    "context": "[4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6 | source=data/raw/tutorial.pdf | PDF page=41 | chapter=5]\n5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:\n\n[7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c | source=data/raw/tutorial.pdf | PDF page=41 | chapter=5]\n>>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.\n\n[fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e | source=data/raw/tutorial.pdf | PDF page=54 | chapter=6]\n'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+    "context_ids": [
+      "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+      "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+      "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 41,
+          "evidence": "To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends."
+        }
+      ],
+      "expected_answer": "Use collections.deque.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D04",
+    "method": "bm25",
+    "context": "[4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6 | source=data/raw/tutorial.pdf | PDF page=41 | chapter=5]\n5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:\n\n[5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:\n\n[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+    "context_ids": [
+      "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+      "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+      "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 41,
+          "evidence": "To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends."
+        }
+      ],
+      "expected_answer": "Use collections.deque.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D04",
+    "method": "hybrid_rrf",
+    "context": "[4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6 | source=data/raw/tutorial.pdf | PDF page=41 | chapter=5]\n5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:\n\n[7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c | source=data/raw/tutorial.pdf | PDF page=41 | chapter=5]\n>>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.\n\n[5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+    "context_ids": [
+      "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+      "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+      "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 41,
+          "evidence": "To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends."
+        }
+      ],
+      "expected_answer": "Use collections.deque.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D05",
+    "method": "dense",
+    "context": "[73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nb'd'\n          In text files (those opened without a b in the mode string), only seeks relative to the beginning of the file are allowed\n          (the exception being seeking to the very file end with seek(0, 2)) and the only valid offset values are those returned\n          from the f.tell(), or zero. Any other offset value produces undefined behaviour.\n\n          File objects have some additional methods, such as isatty() and truncate() which are less frequently used;\n          consult the Library Reference for a complete guide to file objects.\n\n[600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\n5.4 Sets\n\n          Python also includes a data type for sets. A set is an unordered collection with no duplicate elements. Basic uses\n          include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like\n          union, intersection, difference, and symmetric difference.\n          Curly braces or the set() function can be used to create sets. Note: to create an empty set you have to use set(),\n          not {}; the latter creates an empty dictionary, a data structure that we discuss in the next section.\n          Here is a brief demonstration:\n\n[69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069 | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\n{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+    "context_ids": [
+      "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+      "600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b",
+      "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 45,
+          "evidence": "Note: to create an empty set you have to use set(),\n          not {}; the latter creates an empty dictionary, a data structure that we discuss in the next section."
+        }
+      ],
+      "expected_answer": "Use set(); {} creates an empty dictionary.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D05",
+    "method": "bm25",
+    "context": "[13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e | source=data/raw/tutorial.pdf | PDF page=43 | chapter=5]\nIn the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:\n\n[600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\n5.4 Sets\n\n          Python also includes a data type for sets. A set is an unordered collection with no duplicate elements. Basic uses\n          include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like\n          union, intersection, difference, and symmetric difference.\n          Curly braces or the set() function can be used to create sets. Note: to create an empty set you have to use set(),\n          not {}; the latter creates an empty dictionary, a data structure that we discuss in the next section.\n          Here is a brief demonstration:\n\n[02bdf890917f574f6d3fa554a20f52ee47162658fb17b1a2571060df95ed616d | source=data/raw/tutorial.pdf | PDF page=47 | chapter=5]\nTo loop over a sequence in sorted order, use the sorted() function which returns a new sorted list while leaving\n          the source unaltered.\n          >>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']\n          >>> for i in sorted(basket):\n          ...   print(i)\n          ...\n          apple\n          apple\n          banana\n          orange\n          orange\n          pear\n          Using set() on a sequence eliminates duplicate elements. The use of sorted() in combination with set() over\n          a sequence is an idiomatic way to loop over unique elements of the sequence in sorted order.",
+    "context_ids": [
+      "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+      "600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b",
+      "02bdf890917f574f6d3fa554a20f52ee47162658fb17b1a2571060df95ed616d"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 45,
+          "evidence": "Note: to create an empty set you have to use set(),\n          not {}; the latter creates an empty dictionary, a data structure that we discuss in the next section."
+        }
+      ],
+      "expected_answer": "Use set(); {} creates an empty dictionary.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D05",
+    "method": "hybrid_rrf",
+    "context": "[600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\n5.4 Sets\n\n          Python also includes a data type for sets. A set is an unordered collection with no duplicate elements. Basic uses\n          include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like\n          union, intersection, difference, and symmetric difference.\n          Curly braces or the set() function can be used to create sets. Note: to create an empty set you have to use set(),\n          not {}; the latter creates an empty dictionary, a data structure that we discuss in the next section.\n          Here is a brief demonstration:\n\n[29d4bf2d01c08d6e6899d5dd4ec80c8d68724809147dc00f7136dad690070dd0 | source=data/raw/tutorial.pdf | PDF page=59 | chapter=7]\nNotice how the yes_votes are padded with spaces and a negative sign only for negative numbers. The\n             example also prints percentage multiplied by 100, with 2 decimal places and followed by a percent sign (see\n             formatspec for details).\n            • Finally, you can do all the string handling yourself by using string slicing and concatenation operations to create\n             any layout you can imagine. The string type has some methods that perform useful operations for padding\n             strings to a given column width.\n          When you don’t need fancy output but just want a quick display of some variables for debugging purposes, you can\n          convert any value to a string with the repr() or str() functions.\n          The str() function is meant to return representations of values which are fairly human-readable, while repr()\n\n[13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e | source=data/raw/tutorial.pdf | PDF page=43 | chapter=5]\nIn the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+    "context_ids": [
+      "600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b",
+      "29d4bf2d01c08d6e6899d5dd4ec80c8d68724809147dc00f7136dad690070dd0",
+      "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 45,
+          "evidence": "Note: to create an empty set you have to use set(),\n          not {}; the latter creates an empty dictionary, a data structure that we discuss in the next section."
+        }
+      ],
+      "expected_answer": "Use set(); {} creates an empty dictionary.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D06",
+    "method": "dense",
+    "context": "[0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\nis part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed\n\n[24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3 | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\n>>> t = 12345, 54321, 'hello!'\n          >>> t[0]\n          12345\n          >>> t\n          (12345, 54321, 'hello!')\n          >>> # Tuples may be nested:\n          >>> u = t, (1, 2, 3, 4, 5)\n          >>> u\n          ((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))\n          >>> # Tuples are immutable:\n          >>> t[0] = 88888\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: 'tuple' object does not support item assignment\n          >>> # but they can contain mutable objects:\n          >>> v = ([1, 2, 3], [3, 2, 1])\n          >>> v\n          ([1, 2, 3], [3, 2, 1])\n          As you see, on output tuples are always enclosed in parentheses, so that nested tuples are interpreted correctly; they\n          may be input with or without surrounding parentheses, although often parentheses are necessary anyway (if the tuple\n\n[c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047 | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nAnother useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+    "context_ids": [
+      "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+      "24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3",
+      "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 44,
+          "evidence": "It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists."
+        }
+      ],
+      "expected_answer": "Individual tuple items cannot be assigned to, but tuples may contain mutable objects such as lists.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D06",
+    "method": "bm25",
+    "context": "[0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\nis part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed\n\n[c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047 | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nAnother useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs\n\n[316877eb003d66b00bf99f10c0750bb80fafd513be14f4ca08e29fb8963c463c | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\nby following a value with a comma (it is not sufficient to enclose a single value in parentheses). Ugly, but effective.\n          For example:\n          >>> empty = ()\n          >>> singleton = 'hello', # <-- note trailing comma\n          >>> len(empty)\n          0\n          >>> len(singleton)\n          1\n          >>> singleton\n          ('hello',)\n          The statement t = 12345, 54321, 'hello!' is an example of tuple packing: the values 12345, 54321 and\n          'hello!' are packed together in a tuple. The reverse operation is also possible:\n\n          >>> x, y, z = t\n          This is called, appropriately enough, sequence unpacking and works for any sequence on the right-hand side. Sequence\n          unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the\n          sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.",
+    "context_ids": [
+      "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+      "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+      "316877eb003d66b00bf99f10c0750bb80fafd513be14f4ca08e29fb8963c463c"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 44,
+          "evidence": "It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists."
+        }
+      ],
+      "expected_answer": "Individual tuple items cannot be assigned to, but tuples may contain mutable objects such as lists.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D06",
+    "method": "hybrid_rrf",
+    "context": "[0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\nis part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed\n\n[c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047 | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nAnother useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs\n\n[24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3 | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\n>>> t = 12345, 54321, 'hello!'\n          >>> t[0]\n          12345\n          >>> t\n          (12345, 54321, 'hello!')\n          >>> # Tuples may be nested:\n          >>> u = t, (1, 2, 3, 4, 5)\n          >>> u\n          ((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))\n          >>> # Tuples are immutable:\n          >>> t[0] = 88888\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: 'tuple' object does not support item assignment\n          >>> # but they can contain mutable objects:\n          >>> v = ([1, 2, 3], [3, 2, 1])\n          >>> v\n          ([1, 2, 3], [3, 2, 1])\n          As you see, on output tuples are always enclosed in parentheses, so that nested tuples are interpreted correctly; they\n          may be input with or without surrounding parentheses, although often parentheses are necessary anyway (if the tuple",
+    "context_ids": [
+      "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+      "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+      "24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 44,
+          "evidence": "It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists."
+        }
+      ],
+      "expected_answer": "Individual tuple items cannot be assigned to, but tuples may contain mutable objects such as lists.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D07",
+    "method": "dense",
+    "context": "[9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\ninto the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module\n\n[34dda23bcab8706fb6bb7fbd57e02ce72c509544fbfc7db2f6ebd87e344646dc | source=data/raw/tutorial.pdf | PDF page=54 | chapter=6]\nPackages are a way of structuring Python’s module namespace by using “dotted module names”. For example, the\n          module name A.B designates a submodule named B in a package named A. Just like the use of modules saves the\n          authors of different modules from having to worry about each other’s global variable names, the use of dotted module\n          names saves the authors of multi-module packages like NumPy or Pillow from having to worry about each other’s\n          module names.\n          Suppose you want to design a collection of modules (a “package”) for the uniform handling of sound files and sound\n          data. There are many different sound file formats (usually recognized by their extension, for example: .wav, .\n          aiff, .au), so you may need to create and maintain a growing collection of modules for the conversion between\n          the various file formats. There are also many different operations you might want to perform on sound data (such as\n\n[4dccd81917a368d08d9c1ababf5b9426ce2016e8857c64848bcc5ea2d6f28ade | source=data/raw/tutorial.pdf | PDF page=52 | chapter=6]\nPython comes with a library of standard modules, described in a separate document, the Python Library Reference\n          (“Library Reference” hereafter). Some modules are built into the interpreter; these provide access to operations\n          that are not part of the core of the language but are nevertheless built in, either for efficiency or to provide access\n          to operating system primitives such as system calls. The set of such modules is a configuration option which also\n          depends on the underlying platform. For example, the winreg module is only provided on Windows systems. One\n          particular module deserves some attention: sys, which is built into every Python interpreter. The variables sys.ps1\n          and sys.ps2 define the strings used as primary and secondary prompts:\n          >>> import sys\n          >>> sys.ps1\n          '>>> '\n          >>> sys.ps2\n          '... '\n          >>> sys.ps1 = 'C> '\n          C> print('Yuck!')\n          Yuck!",
+    "context_ids": [
+      "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+      "34dda23bcab8706fb6bb7fbd57e02ce72c509544fbfc7db2f6ebd87e344646dc",
+      "4dccd81917a368d08d9c1ababf5b9426ce2016e8857c64848bcc5ea2d6f28ade"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 49,
+          "evidence": "A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended."
+        }
+      ],
+      "expected_answer": "A module is a file of Python definitions and statements; its filename is the module name plus .py.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D07",
+    "method": "bm25",
+    "context": "[bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6 | source=data/raw/tutorial.pdf | PDF page=50 | chapter=6]\nA module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning\n\n[f5372b8b9e7a0c463b7bd68120e15d846abd1e1add8d1969b3478c9e987c3af5 | source=data/raw/tutorial.pdf | PDF page=67 | chapter=8]\nEven if a statement or expression is syntactically correct, it may cause an error when an attempt is made to execute\n          it. Errors detected during execution are called exceptions and are not unconditionally fatal: you will soon learn how\n          to handle them in Python programs. Most exceptions are not handled by programs, however, and result in error\n          messages as shown here:\n          >>> 10 * (1/0)\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          ZeroDivisionError: division by zero\n          >>> 4 + spam*3\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: name 'spam' is not defined\n          >>> '2' + 2\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: can only concatenate str (not \"int\") to str\n\n[88174a070bc2d66f585662088135af3cc0d94967b02783806125895a2a7f33c7 | source=data/raw/tutorial.pdf | PDF page=47 | chapter=5]\nTo loop over two or more sequences at the same time, the entries can be paired with the zip() function.\n          >>> questions = ['name', 'quest', 'favorite color']\n          >>> answers = ['lancelot', 'the holy grail', 'blue']\n          >>> for q, a in zip(questions, answers):\n          ...   print('What is your {0}? It is {1}.'.format(q, a))\n          ...\n          What is your name? It is lancelot.\n          What is your quest? It is the holy grail.\n          What is your favorite color? It is blue.\n\n          To loop over a sequence in reverse, first specify the sequence in a forward direction and then call the reversed()\n          function.\n          >>> for i in reversed(range(1, 10, 2)):\n          ...   print(i)\n          ...\n          9\n          7\n          5\n          3\n          1",
+    "context_ids": [
+      "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+      "f5372b8b9e7a0c463b7bd68120e15d846abd1e1add8d1969b3478c9e987c3af5",
+      "88174a070bc2d66f585662088135af3cc0d94967b02783806125895a2a7f33c7"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 49,
+          "evidence": "A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended."
+        }
+      ],
+      "expected_answer": "A module is a file of Python definitions and statements; its filename is the module name plus .py.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D07",
+    "method": "hybrid_rrf",
+    "context": "[9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\ninto the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module\n\n[bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6 | source=data/raw/tutorial.pdf | PDF page=50 | chapter=6]\nA module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning\n\n[ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7 | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\nIf you quit from the Python interpreter and enter it again, the definitions you have made (functions and variables)\n          are lost. Therefore, if you want to write a somewhat longer program, you are better off using a text editor to prepare\n          the input for the interpreter and running it with that file as input instead. This is known as creating a script. As your\n          program gets longer, you may want to split it into several files for easier maintenance. You may also want to use a\n          handy function that you’ve written in several programs without copying its definition into each program.\n          To support this, Python has a way to put definitions in a file and use them in a script or in an interactive instance\n          of the interpreter. Such a file is called a module; definitions from a module can be imported into other modules or",
+    "context_ids": [
+      "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+      "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+      "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 49,
+          "evidence": "A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended."
+        }
+      ],
+      "expected_answer": "A module is a file of Python definitions and statements; its filename is the module name plus .py.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D08",
+    "method": "dense",
+    "context": "[e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041 | source=data/raw/tutorial.pdf | PDF page=51 | chapter=6]\n>>> from fibo import fib as fibonacci\n          >>> fibonacci(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n            Note\n\n           For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change\n           your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename).\n\n          6.1.1 Executing modules as scripts\n\n          When you run a Python module with\n          python fibo.py <arguments>\n\n          the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\". That\n          means that by adding this code at the end of your module:\n\n[bef290e8b36e999d90d966e7b6b6a7349d924430ad1e11fb6c09f4da4a345ea5 | source=data/raw/tutorial.pdf | PDF page=52 | chapter=6]\nAfter initialization, Python programs can modify sys.path. The directory containing the script being run is placed\n          at the beginning of the search path, ahead of the standard library path. This means that scripts in that directory will\n          be loaded instead of modules of the same name in the library directory. This is an error unless the replacement is\n          intended. See section Standard Modules for more information.\n\n[8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39 | source=data/raw/tutorial.pdf | PDF page=55 | chapter=6]\nThe only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+    "context_ids": [
+      "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041",
+      "bef290e8b36e999d90d966e7b6b6a7349d924430ad1e11fb6c09f4da4a345ea5",
+      "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 51,
+          "evidence": "if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename)."
+        }
+      ],
+      "expected_answer": "Use importlib.reload(modulename), after importing importlib.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D08",
+    "method": "bm25",
+    "context": "[ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7 | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\nIf you quit from the Python interpreter and enter it again, the definitions you have made (functions and variables)\n          are lost. Therefore, if you want to write a somewhat longer program, you are better off using a text editor to prepare\n          the input for the interpreter and running it with that file as input instead. This is known as creating a script. As your\n          program gets longer, you may want to split it into several files for easier maintenance. You may also want to use a\n          handy function that you’ve written in several programs without copying its definition into each program.\n          To support this, Python has a way to put definitions in a file and use them in a script or in an interactive instance\n          of the interpreter. Such a file is called a module; definitions from a module can be imported into other modules or\n\n[e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041 | source=data/raw/tutorial.pdf | PDF page=51 | chapter=6]\n>>> from fibo import fib as fibonacci\n          >>> fibonacci(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n            Note\n\n           For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change\n           your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename).\n\n          6.1.1 Executing modules as scripts\n\n          When you run a Python module with\n          python fibo.py <arguments>\n\n          the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\". That\n          means that by adding this code at the end of your module:\n\n[866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0 | source=data/raw/tutorial.pdf | PDF page=50 | chapter=6]\n>>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+    "context_ids": [
+      "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7",
+      "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041",
+      "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 51,
+          "evidence": "if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename)."
+        }
+      ],
+      "expected_answer": "Use importlib.reload(modulename), after importing importlib.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D08",
+    "method": "hybrid_rrf",
+    "context": "[e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041 | source=data/raw/tutorial.pdf | PDF page=51 | chapter=6]\n>>> from fibo import fib as fibonacci\n          >>> fibonacci(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n            Note\n\n           For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change\n           your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename).\n\n          6.1.1 Executing modules as scripts\n\n          When you run a Python module with\n          python fibo.py <arguments>\n\n          the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\". That\n          means that by adding this code at the end of your module:\n\n[866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0 | source=data/raw/tutorial.pdf | PDF page=50 | chapter=6]\n>>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.\n\n[ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7 | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\nIf you quit from the Python interpreter and enter it again, the definitions you have made (functions and variables)\n          are lost. Therefore, if you want to write a somewhat longer program, you are better off using a text editor to prepare\n          the input for the interpreter and running it with that file as input instead. This is known as creating a script. As your\n          program gets longer, you may want to split it into several files for easier maintenance. You may also want to use a\n          handy function that you’ve written in several programs without copying its definition into each program.\n          To support this, Python has a way to put definitions in a file and use them in a script or in an interactive instance\n          of the interpreter. Such a file is called a module; definitions from a module can be imported into other modules or",
+    "context_ids": [
+      "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041",
+      "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+      "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 51,
+          "evidence": "if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename)."
+        }
+      ],
+      "expected_answer": "Use importlib.reload(modulename), after importing importlib.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D09",
+    "method": "dense",
+    "context": "[2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa | source=data/raw/tutorial.pdf | PDF page=51 | chapter=6]\nif __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path\n\n[9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\ninto the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module\n\n[f74035edc4dbfbaf3dbb3cdfe7dfba3c72f5f254f1ef51cc3f33b09325bd6532 | source=data/raw/tutorial.pdf | PDF page=50 | chapter=6]\nof a module (or script, for that matter). The imported module names, if placed at the top level of a module (outside\n          any functions or classes), are added to the module’s global namespace.\n\n          There is a variant of the import statement that imports names from a module directly into the importing module’s\n          namespace. For example:\n          >>> from fibo import fib, fib2\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n          This does not introduce the module name from which the imports are taken in the local namespace (so in the example,\n          fibo is not defined).\n          There is even a variant to import all names that a module defines:",
+    "context_ids": [
+      "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+      "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+      "f74035edc4dbfbaf3dbb3cdfe7dfba3c72f5f254f1ef51cc3f33b09325bd6532"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 51,
+          "evidence": "the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\"."
+        }
+      ],
+      "expected_answer": "The value is \"__main__\".",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D09",
+    "method": "bm25",
+    "context": "[2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa | source=data/raw/tutorial.pdf | PDF page=51 | chapter=6]\nif __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path\n\n[9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\ninto the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module\n\n[e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041 | source=data/raw/tutorial.pdf | PDF page=51 | chapter=6]\n>>> from fibo import fib as fibonacci\n          >>> fibonacci(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n            Note\n\n           For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change\n           your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename).\n\n          6.1.1 Executing modules as scripts\n\n          When you run a Python module with\n          python fibo.py <arguments>\n\n          the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\". That\n          means that by adding this code at the end of your module:",
+    "context_ids": [
+      "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+      "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+      "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 51,
+          "evidence": "the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\"."
+        }
+      ],
+      "expected_answer": "The value is \"__main__\".",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D09",
+    "method": "hybrid_rrf",
+    "context": "[2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa | source=data/raw/tutorial.pdf | PDF page=51 | chapter=6]\nif __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path\n\n[9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\ninto the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module\n\n[bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6 | source=data/raw/tutorial.pdf | PDF page=50 | chapter=6]\nA module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning",
+    "context_ids": [
+      "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+      "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+      "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 51,
+          "evidence": "the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\"."
+        }
+      ],
+      "expected_answer": "The value is \"__main__\".",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D10",
+    "method": "dense",
+    "context": "[8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39 | source=data/raw/tutorial.pdf | PDF page=55 | chapter=6]\nThe only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:\n\n[ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4 | source=data/raw/tutorial.pdf | PDF page=56 | chapter=6]\nIf __all__ is not defined, the statement from sound.effects import * does not import all submodules from\n          the package sound.effects into the current namespace; it only ensures that the package sound.effects has\n          been imported (possibly running any initialization code in __init__.py) and then imports whatever names are\n          defined in the package. This includes any names defined (and submodules explicitly loaded) by __init__.py. It\n          also includes any submodules of the package that were explicitly loaded by previous import statements. Consider\n          this code:\n          import sound.effects.echo\n          import sound.effects.surround\n          from sound.effects import *\n\n[715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56 | source=data/raw/tutorial.pdf | PDF page=57 | chapter=6]\n6.4.3 Packages in Multiple Directories\n          Packages support one more special attribute, __path__. This is initialized to be a sequence of strings containing the\n          name of the directory holding the package’s __init__.py before the code in that file is executed. This variable can\n          be modified; doing so affects future searches for modules and subpackages contained in the package.\n          While this feature is not often needed, it can be used to extend the set of modules found in a package.",
+    "context_ids": [
+      "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+      "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+      "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 55,
+          "evidence": "The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature)."
+        }
+      ],
+      "expected_answer": "It is required for ordinary packages; namespace packages are the exception.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D10",
+    "method": "bm25",
+    "context": "[cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c | source=data/raw/tutorial.pdf | PDF page=55 | chapter=6]\n(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo\n\n[2cde34d9e99b851052d27cc3d97337ccaa7cd0c79fe4f803e57bb2bc53520c74 | source=data/raw/tutorial.pdf | PDF page=54 | chapter=6]\nmixing, adding echo, applying an equalizer function, creating an artificial stereo effect), so in addition you will be\n          writing a never-ending stream of modules to perform these operations. Here’s a possible structure for your package\n          (expressed in terms of a hierarchical filesystem):\n          sound/                  Top-level package\n              __init__.py         Initialize the sound package\n              formats/            Subpackage for file format conversions\n                    __init__.py\n                    wavread.py\n                    wavwrite.py\n                    aiffread.py\n                    aiffwrite.py\n                    auread.py\n                    auwrite.py\n                    ...\n              effects/            Subpackage for sound effects\n                    __init__.py\n                    echo.py\n                    surround.py\n                    reverse.py\n                    ...\n\n[715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56 | source=data/raw/tutorial.pdf | PDF page=57 | chapter=6]\n6.4.3 Packages in Multiple Directories\n          Packages support one more special attribute, __path__. This is initialized to be a sequence of strings containing the\n          name of the directory holding the package’s __init__.py before the code in that file is executed. This variable can\n          be modified; doing so affects future searches for modules and subpackages contained in the package.\n          While this feature is not often needed, it can be used to extend the set of modules found in a package.",
+    "context_ids": [
+      "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+      "2cde34d9e99b851052d27cc3d97337ccaa7cd0c79fe4f803e57bb2bc53520c74",
+      "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 55,
+          "evidence": "The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature)."
+        }
+      ],
+      "expected_answer": "It is required for ordinary packages; namespace packages are the exception.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D10",
+    "method": "hybrid_rrf",
+    "context": "[8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39 | source=data/raw/tutorial.pdf | PDF page=55 | chapter=6]\nThe only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:\n\n[715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56 | source=data/raw/tutorial.pdf | PDF page=57 | chapter=6]\n6.4.3 Packages in Multiple Directories\n          Packages support one more special attribute, __path__. This is initialized to be a sequence of strings containing the\n          name of the directory holding the package’s __init__.py before the code in that file is executed. This variable can\n          be modified; doing so affects future searches for modules and subpackages contained in the package.\n          While this feature is not often needed, it can be used to extend the set of modules found in a package.\n\n[cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c | source=data/raw/tutorial.pdf | PDF page=55 | chapter=6]\n(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+    "context_ids": [
+      "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+      "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+      "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 55,
+          "evidence": "The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature)."
+        }
+      ],
+      "expected_answer": "It is required for ordinary packages; namespace packages are the exception.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D11",
+    "method": "dense",
+    "context": "[8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588 | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\nThe first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a\n\n[a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\ndifferent encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than\n\n[73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nb'd'\n          In text files (those opened without a b in the mode string), only seeks relative to the beginning of the file are allowed\n          (the exception being seeking to the very file end with seek(0, 2)) and the only valid offset values are those returned\n          from the f.tell(), or zero. Any other offset value produces undefined behaviour.\n\n          File objects have some additional methods, such as isatty() and truncate() which are less frequently used;\n          consult the Library Reference for a complete guide to file objects.",
+    "context_ids": [
+      "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+      "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+      "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 63,
+          "evidence": "'w'\n          for only writing (an existing file with the same name will be erased)"
+        }
+      ],
+      "expected_answer": "Its existing contents are erased.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D11",
+    "method": "bm25",
+    "context": "[8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588 | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\nThe first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a\n\n[e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40 | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nf.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)\n\n[836d0d49a75724acb4dda75e2605ba192f9bdc2ec713de7af1272a276ca2e9eb | source=data/raw/tutorial.pdf | PDF page=55 | chapter=6]\n6.4.1 Importing * From a Package\n          Now what happens when the user writes from sound.effects import *? Ideally, one would hope that this\n          somehow goes out to the filesystem, finds which submodules are present in the package, and imports them all. This\n          could take a long time and importing sub-modules might have unwanted side-effects that should only happen when\n          the sub-module is explicitly imported.",
+    "context_ids": [
+      "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+      "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+      "836d0d49a75724acb4dda75e2605ba192f9bdc2ec713de7af1272a276ca2e9eb"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 63,
+          "evidence": "'w'\n          for only writing (an existing file with the same name will be erased)"
+        }
+      ],
+      "expected_answer": "Its existing contents are erased.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D11",
+    "method": "hybrid_rrf",
+    "context": "[8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588 | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\nThe first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a\n\n[a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\ndifferent encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than\n\n[e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40 | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nf.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+    "context_ids": [
+      "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+      "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+      "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 63,
+          "evidence": "'w'\n          for only writing (an existing file with the same name will be erased)"
+        }
+      ],
+      "expected_answer": "Its existing contents are erased.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D12",
+    "method": "dense",
+    "context": "[ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30 | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18\n\n[ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804 | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\nThe rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').\n\n[5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+    "context_ids": [
+      "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+      "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+      "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 64,
+          "evidence": "f.write(string) writes the contents of string to the file, returning the number of characters written."
+        }
+      ],
+      "expected_answer": "It returns the number of characters written.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D12",
+    "method": "bm25",
+    "context": "[ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30 | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18\n\n[ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804 | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\nThe rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').\n\n[78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nthe string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+    "context_ids": [
+      "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+      "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+      "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 64,
+          "evidence": "f.write(string) writes the contents of string to the file, returning the number of characters written."
+        }
+      ],
+      "expected_answer": "It returns the number of characters written.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D12",
+    "method": "hybrid_rrf",
+    "context": "[ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30 | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18\n\n[ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804 | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\nThe rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').\n\n[5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+    "context_ids": [
+      "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+      "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+      "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 64,
+          "evidence": "f.write(string) writes the contents of string to the file, returning the number of characters written."
+        }
+      ],
+      "expected_answer": "It returns the number of characters written.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D13",
+    "method": "dense",
+    "context": "[5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:\n\n[e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40 | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nf.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)\n\n[8adc9afcc5c33abb780532495f54f593166e454d278b3ff28693e4e060119492 | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\nAfter a file object is closed, either by a with statement or by calling f.close(), attempts to use the file object will\n          automatically fail.\n          >>> f.close()\n          >>> f.read()\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          ValueError: I/O operation on closed file.\n\n          7.2.1 Methods of File Objects",
+    "context_ids": [
+      "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+      "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+      "8adc9afcc5c33abb780532495f54f593166e454d278b3ff28693e4e060119492"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 64,
+          "evidence": "if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline."
+        }
+      ],
+      "expected_answer": "An empty string means end-of-file; a blank line is represented by a newline-only string.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D13",
+    "method": "bm25",
+    "context": "[5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:\n\n[8e9f4541773d32269db567f3e49c1e3f05ed592b29c6dd6a632014db27625c28 | source=data/raw/tutorial.pdf | PDF page=59 | chapter=7]\nCHAPTER\n\n                                                                  SEVEN\n\n                                                    INPUT  AND  OUTPUT\n\n          There are several ways to present the output of a program; data can be printed in a human-readable form, or written\n          to a file for future use. This chapter will discuss some of the possibilities.\n\n          7.1 Fancier Output Formatting\n\n[e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40 | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nf.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+    "context_ids": [
+      "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+      "8e9f4541773d32269db567f3e49c1e3f05ed592b29c6dd6a632014db27625c28",
+      "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 64,
+          "evidence": "if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline."
+        }
+      ],
+      "expected_answer": "An empty string means end-of-file; a blank line is represented by a newline-only string.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D13",
+    "method": "hybrid_rrf",
+    "context": "[5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:\n\n[e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40 | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nf.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)\n\n[8adc9afcc5c33abb780532495f54f593166e454d278b3ff28693e4e060119492 | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\nAfter a file object is closed, either by a with statement or by calling f.close(), attempts to use the file object will\n          automatically fail.\n          >>> f.close()\n          >>> f.read()\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          ValueError: I/O operation on closed file.\n\n          7.2.1 Methods of File Objects",
+    "context_ids": [
+      "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+      "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+      "8adc9afcc5c33abb780532495f54f593166e454d278b3ff28693e4e060119492"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 64,
+          "evidence": "if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline."
+        }
+      ],
+      "expected_answer": "An empty string means end-of-file; a blank line is represented by a newline-only string.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D14",
+    "method": "dense",
+    "context": "[7a731aa67a4a809da04759f59a8e7037dbb4867211e531b7cd64825b4590da92 | source=data/raw/tutorial.pdf | PDF page=73 | chapter=8]\nThe problem with this code is that it leaves the file open for an indeterminate amount of time after this part of the\n          code has finished executing. This is not an issue in simple scripts, but can be a problem for larger applications. The\n          with statement allows objects like files to be used in a way that ensures they are always cleaned up promptly and\n          correctly.\n          with open(\"myfile.txt\") as f:\n             for line in f:\n                print(line, end=\"\")\n\n          After the statement is executed, the file f is always closed, even if a problem was encountered while processing the\n\n[f5372b8b9e7a0c463b7bd68120e15d846abd1e1add8d1969b3478c9e987c3af5 | source=data/raw/tutorial.pdf | PDF page=67 | chapter=8]\nEven if a statement or expression is syntactically correct, it may cause an error when an attempt is made to execute\n          it. Errors detected during execution are called exceptions and are not unconditionally fatal: you will soon learn how\n          to handle them in Python programs. Most exceptions are not handled by programs, however, and result in error\n          messages as shown here:\n          >>> 10 * (1/0)\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          ZeroDivisionError: division by zero\n          >>> 4 + spam*3\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: name 'spam' is not defined\n          >>> '2' + 2\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: can only concatenate str (not \"int\") to str\n\n[a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\ndifferent encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+    "context_ids": [
+      "7a731aa67a4a809da04759f59a8e7037dbb4867211e531b7cd64825b4590da92",
+      "f5372b8b9e7a0c463b7bd68120e15d846abd1e1add8d1969b3478c9e987c3af5",
+      "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 63,
+          "evidence": "It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point."
+        }
+      ],
+      "expected_answer": "The file is properly closed after the suite finishes, even if an exception occurs.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D14",
+    "method": "bm25",
+    "context": "[4c0931e7d98c8e916eab8b8d2c1e26fd793dcec419483175a01950c709425cc1 | source=data/raw/tutorial.pdf | PDF page=72 | chapter=8]\n>>> try:\n          ...   raise KeyboardInterrupt\n          ... finally:\n          ...   print('Goodbye, world!')\n          ...\n          Goodbye, world!\n          Traceback (most recent call last):\n           File \"<stdin>\", line 2, in <module>\n          KeyboardInterrupt\n          If a finally clause is present, the finally clause will execute as the last task before the try statement completes.\n          The finally clause runs whether or not the try statement produces an exception. The following points discuss\n          more complex cases when an exception occurs:\n            • If an exception occurs during execution of the try clause, the exception may be handled by an except clause.\n             If the exception is not handled by an except clause, the exception is re-raised after the finally clause has\n             been executed.\n            • An exception could occur during execution of an except or else clause. Again, the exception is re-raised\n\n[c483b73cb4bd1454c5d63a61a2d9cbd9030c1505158588e40d1f1542b0c09df9 | source=data/raw/tutorial.pdf | PDF page=68 | chapter=8]\n• If no exception occurs, the except clause is skipped and execution of the try statement is finished.\n            • If an exception occurs during execution of the try clause, the rest of the clause is skipped. Then, if its type\n             matches the exception named after the except keyword, the except clause is executed, and then execution\n             continues after the try/except block.\n            • If an exception occurs which does not match the exception named in the except clause, it is passed on to outer\n             try statements; if no handler is found, it is an unhandled exception and execution stops with an error message.\n          A try statement may have more than one except clause, to specify handlers for different exceptions. At most one\n          handler will be executed. Handlers only handle exceptions that occur in the corresponding try clause, not in other\n\n[7a731aa67a4a809da04759f59a8e7037dbb4867211e531b7cd64825b4590da92 | source=data/raw/tutorial.pdf | PDF page=73 | chapter=8]\nThe problem with this code is that it leaves the file open for an indeterminate amount of time after this part of the\n          code has finished executing. This is not an issue in simple scripts, but can be a problem for larger applications. The\n          with statement allows objects like files to be used in a way that ensures they are always cleaned up promptly and\n          correctly.\n          with open(\"myfile.txt\") as f:\n             for line in f:\n                print(line, end=\"\")\n\n          After the statement is executed, the file f is always closed, even if a problem was encountered while processing the",
+    "context_ids": [
+      "4c0931e7d98c8e916eab8b8d2c1e26fd793dcec419483175a01950c709425cc1",
+      "c483b73cb4bd1454c5d63a61a2d9cbd9030c1505158588e40d1f1542b0c09df9",
+      "7a731aa67a4a809da04759f59a8e7037dbb4867211e531b7cd64825b4590da92"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 63,
+          "evidence": "It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point."
+        }
+      ],
+      "expected_answer": "The file is properly closed after the suite finishes, even if an exception occurs.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D14",
+    "method": "hybrid_rrf",
+    "context": "[7a731aa67a4a809da04759f59a8e7037dbb4867211e531b7cd64825b4590da92 | source=data/raw/tutorial.pdf | PDF page=73 | chapter=8]\nThe problem with this code is that it leaves the file open for an indeterminate amount of time after this part of the\n          code has finished executing. This is not an issue in simple scripts, but can be a problem for larger applications. The\n          with statement allows objects like files to be used in a way that ensures they are always cleaned up promptly and\n          correctly.\n          with open(\"myfile.txt\") as f:\n             for line in f:\n                print(line, end=\"\")\n\n          After the statement is executed, the file f is always closed, even if a problem was encountered while processing the\n\n[c483b73cb4bd1454c5d63a61a2d9cbd9030c1505158588e40d1f1542b0c09df9 | source=data/raw/tutorial.pdf | PDF page=68 | chapter=8]\n• If no exception occurs, the except clause is skipped and execution of the try statement is finished.\n            • If an exception occurs during execution of the try clause, the rest of the clause is skipped. Then, if its type\n             matches the exception named after the except keyword, the except clause is executed, and then execution\n             continues after the try/except block.\n            • If an exception occurs which does not match the exception named in the except clause, it is passed on to outer\n             try statements; if no handler is found, it is an unhandled exception and execution stops with an error message.\n          A try statement may have more than one except clause, to specify handlers for different exceptions. At most one\n          handler will be executed. Handlers only handle exceptions that occur in the corresponding try clause, not in other\n\n[f5372b8b9e7a0c463b7bd68120e15d846abd1e1add8d1969b3478c9e987c3af5 | source=data/raw/tutorial.pdf | PDF page=67 | chapter=8]\nEven if a statement or expression is syntactically correct, it may cause an error when an attempt is made to execute\n          it. Errors detected during execution are called exceptions and are not unconditionally fatal: you will soon learn how\n          to handle them in Python programs. Most exceptions are not handled by programs, however, and result in error\n          messages as shown here:\n          >>> 10 * (1/0)\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          ZeroDivisionError: division by zero\n          >>> 4 + spam*3\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: name 'spam' is not defined\n          >>> '2' + 2\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: can only concatenate str (not \"int\") to str",
+    "context_ids": [
+      "7a731aa67a4a809da04759f59a8e7037dbb4867211e531b7cd64825b4590da92",
+      "c483b73cb4bd1454c5d63a61a2d9cbd9030c1505158588e40d1f1542b0c09df9",
+      "f5372b8b9e7a0c463b7bd68120e15d846abd1e1add8d1969b3478c9e987c3af5"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 63,
+          "evidence": "It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point."
+        }
+      ],
+      "expected_answer": "The file is properly closed after the suite finishes, even if an exception occurs.",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D15",
+    "method": "dense",
+    "context": "[a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\ndifferent encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than\n\n[78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nthe string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:\n\n[bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba | source=data/raw/tutorial.pdf | PDF page=66 | chapter=7]\nx = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+    "context_ids": [
+      "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+      "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+      "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 66,
+          "evidence": "JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing."
+        }
+      ],
+      "expected_answer": "Use UTF-8, specifying encoding=\"utf-8\".",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D15",
+    "method": "bm25",
+    "context": "[bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba | source=data/raw/tutorial.pdf | PDF page=66 | chapter=7]\nx = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.\n\n[a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\ndifferent encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than\n\n[78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nthe string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+    "context_ids": [
+      "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+      "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+      "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 66,
+          "evidence": "JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing."
+        }
+      ],
+      "expected_answer": "Use UTF-8, specifying encoding=\"utf-8\".",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  },
+  {
+    "query_id": "D15",
+    "method": "hybrid_rrf",
+    "context": "[a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\ndifferent encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than\n\n[bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba | source=data/raw/tutorial.pdf | PDF page=66 | chapter=7]\nx = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.\n\n[78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nthe string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+    "context_ids": [
+      "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+      "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+      "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc"
+    ],
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 66,
+          "evidence": "JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing."
+        }
+      ],
+      "expected_answer": "Use UTF-8, specifying encoding=\"utf-8\".",
+      "absence_reason": null,
+      "note": "These labels are attached AFTER retrieval for scoring; never sent to the retriever/encoder."
+    },
+    "context_grade_0_1_2": null,
+    "reviewer": "",
+    "reason": "",
+    "status": "pending source review; planned context not yet sent to an agent model"
+  }
+]

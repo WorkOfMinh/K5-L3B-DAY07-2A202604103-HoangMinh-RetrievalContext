@@ -1,0 +1,1294 @@
+{
+  "status": "answered",
+  "answer": "A user-defined exception should typically be derived from the `Exception` class, either directly or indirectly [fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d].",
+  "citations": [
+    "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d"
+  ],
+  "reason": "The source text explicitly states that exceptions should typically be derived from the Exception class, either directly or indirectly.",
+  "guard": "citation_ids_valid; semantic_support_requires_review",
+  "query_id": "D7T04",
+  "config_id": "dense_base",
+  "public_query": {
+    "id": "D7T04",
+    "question": "Which class should a user-defined exception typically derive from, directly or indirectly?",
+    "filter": null
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "user-defined exception derive from class",
+      "filter": null,
+      "method": "dense",
+      "ranking": [
+        {
+          "id": "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 72,
+          "text": "(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.",
+          "start_char": 0,
+          "end_char": 960,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p072",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 66,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3009
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8740376234054565
+        },
+        {
+          "id": "adbc59779431d1c60f677dd67fa5255a5a676e436696a42dcc1979c7265fa352",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 69,
+          "text": "The except clause may specify a variable after the exception name. The variable is bound to the exception instance\n          which typically has an args attribute that stores the arguments. For convenience, builtin exception types define\n          __str__() to print all the arguments without explicitly accessing .args.\n          >>> try:\n          ...   raise Exception('spam', 'eggs')\n          ... except Exception as inst:\n          ...   print(type(inst)) # the exception type\n          ...   print(inst.args) # arguments stored in .args\n          ...   print(inst)    # __str__ allows args to be printed directly,\n          ...                  # but may be overridden in exception subclasses\n          ...   x, y = inst.args # unpack args\n          ...   print('x =', x)\n          ...   print('y =', y)\n          ...\n          <class 'Exception'>\n          ('spam', 'eggs')\n          ('spam', 'eggs')\n          x = spam\n          y = eggs",
+          "start_char": 594,
+          "end_char": 1540,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p069",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 63,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2895
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8674602666544659
+        },
+        {
+          "id": "8f1b7068d800e24e4c6501e26217079bcf41c14c415ba0a42b0b8d1705a6ff7e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 69,
+          "text": "The exception’s __str__() output is printed as the last part (‘detail’) of the message for unhandled exceptions.\n          BaseException is the common base class of all exceptions. One of its subclasses, Exception, is the base class of\n          all the non-fatal exceptions. Exceptions which are not subclasses of Exception are not typically handled, because\n          they are used to indicate that the program should terminate. They include SystemExit which is raised by sys.\n          exit() and KeyboardInterrupt which is raised when a user wishes to interrupt the program.\n          Exception can be used as a wildcard that catches (almost) everything. However, it is good practice to be as specific\n          as possible with the types of exceptions that we intend to handle, and to allow any unexpected exceptions to propagate\n          on.",
+          "start_char": 1551,
+          "end_char": 2399,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p069",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 63,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2895
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8651924809698788
+        },
+        {
+          "id": "fe3ff63bd042841f84f06ece94f9bad417e19894eec2ae9cc11f7c0319fd1bbb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 69,
+          "text": "(continued from previous page)\n             try:\n                raise cls()\n             except D:\n                print(\"D\")\n             except C:\n                print(\"C\")\n             except B:\n                print(\"B\")\n          Note that if the except clauses were reversed (with except B first), it would have printed B, B, B — the first matching\n          except clause is triggered.\n          When an exception occurs, it may have associated values, also known as the exception’s arguments. The presence\n          and types of the arguments depend on the exception type.",
+          "start_char": 0,
+          "end_char": 582,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p069",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 63,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2895
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8615046400280193
+        },
+        {
+          "id": "e5f5a1443b261b45cdd446f6b5fefba992cb37d9630ce43a2d99c269970333de",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 74,
+          "text": ">>> def f():\n          ...   excs = [OSError('error 1'), SystemError('error 2')]\n          ...   raise ExceptionGroup('there were problems', excs)\n          ...\n          >>> f()\n           + Exception Group Traceback (most recent call last):\n           |  File \"<stdin>\", line 1, in <module>\n           |  File \"<stdin>\", line 3, in f\n           | ExceptionGroup: there were problems\n           +-+---------------- 1 ----------------\n             | OSError: error 1\n             +---------------- 2 ----------------\n             | SystemError: error 2\n             +------------------------------------\n          >>> try:\n          ...   f()\n          ... except Exception as e:\n          ...   print(f'caught {type(e)}: e')\n          ...\n          caught <class 'ExceptionGroup'>: e\n          >>>\n          By using except* instead of except, we can selectively handle only the exceptions in the group that match a certain",
+          "start_char": 750,
+          "end_char": 1674,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p074",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 68,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2650
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.8607252240180969
+        },
+        {
+          "id": "11e83170131837b8681f907052b637cee769a07e538d4b32d9ee3991b641821b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 75,
+          "text": "(continued from previous page)\n          ...   print(\"There were SystemErrors\")\n          ...\n          There were OSErrors\n          There were SystemErrors\n           + Exception Group Traceback (most recent call last):\n           |  File \"<stdin>\", line 2, in <module>\n           |  File \"<stdin>\", line 2, in f\n           | ExceptionGroup: group1\n           +-+---------------- 1 ----------------\n             | ExceptionGroup: group2\n             +-+---------------- 1 ----------------\n              | RecursionError: 4\n              +------------------------------------\n          >>>\n          Note that the exceptions nested in an exception group must be instances, not types. This is because in practice the\n          exceptions would typically be ones that have already been raised and caught by the program, along the following\n          pattern:\n          >>> excs = []\n          ... for test in tests:\n          ...   try:\n          ...      test.run()",
+          "start_char": 0,
+          "end_char": 965,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p075",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 69,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.8574174642562866
+        },
+        {
+          "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 76,
+          "text": "(continued from previous page)\n          ...\n          >>> excs = []\n          >>> for i in range(3):\n          ...   try:\n          ...      f()\n          ...   except Exception as e:\n          ...      e.add_note(f'Happened in Iteration {i+1}')\n          ...      excs.append(e)\n          ...\n          >>> raise ExceptionGroup('We have some problems', excs)\n           + Exception Group Traceback (most recent call last):\n           |  File \"<stdin>\", line 1, in <module>\n           | ExceptionGroup: We have some problems (3 sub-exceptions)\n           +-+---------------- 1 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 1\n             +---------------- 2 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>",
+          "start_char": 0,
+          "end_char": 973,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p076",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 70,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 1440
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.8556124654047227
+        },
+        {
+          "id": "7753667acc9e895b77a2d40fc559250f95b4135d08a23741b06bda9af8ac1aa4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 75,
+          "text": "For example, when collecting exceptions into an exception group, we may want to add context information for the\n          individual errors. In the following each exception in the group has a note indicating when this error has occurred.\n\n          >>> def f():\n          ...   raise OSError('operation failed')\n                                                              (continues on next page)",
+          "start_char": 2146,
+          "end_char": 2544,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p075",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 69,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8490518584564886
+        },
+        {
+          "id": "0f64985915230f3a438c801c34351e667932248aa288f15dad7f3e1d441132eb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 68,
+          "text": "handlers of the same try statement. An except clause may name multiple exceptions as a parenthesized tuple, for\n          example:\n\n          ... except (RuntimeError, TypeError, NameError):\n          ...   pass\n\n          A class in an except clause matches exceptions which are instances of the class itself or one of its derived classes\n          (but not the other way around — an except clause listing a derived class does not match instances of its base classes).\n          For example, the following code will print B, C, D in that order:\n          class B(Exception):\n             pass\n\n          class C(B):\n             pass\n\n          class D(C):\n             pass\n          for cls in [B, C, D]:\n                                                              (continues on next page)",
+          "start_char": 2406,
+          "end_char": 3200,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p068",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 62,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3200
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8487069859715402
+        },
+        {
+          "id": "8f98e9178f13b19f4024cfbefb4c64dc612cd1387314efb24e173f91d3e77d93",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 75,
+          "text": "...   except Exception as e:\n          ...      excs.append(e)\n          ...\n          >>> if excs:\n          ...  raise ExceptionGroup(\"Test Failures\", excs)\n          ...\n\n          8.10 Enriching Exceptions with Notes",
+          "start_char": 976,
+          "end_char": 1196,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p075",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 69,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8484086394309998
+        }
+      ],
+      "component_rankings": {
+        "dense": [
+          {
+            "id": "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 72,
+            "text": "(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.",
+            "start_char": 0,
+            "end_char": 960,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p072",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 66,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 3009
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8740376234054565
+          },
+          {
+            "id": "adbc59779431d1c60f677dd67fa5255a5a676e436696a42dcc1979c7265fa352",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 69,
+            "text": "The except clause may specify a variable after the exception name. The variable is bound to the exception instance\n          which typically has an args attribute that stores the arguments. For convenience, builtin exception types define\n          __str__() to print all the arguments without explicitly accessing .args.\n          >>> try:\n          ...   raise Exception('spam', 'eggs')\n          ... except Exception as inst:\n          ...   print(type(inst)) # the exception type\n          ...   print(inst.args) # arguments stored in .args\n          ...   print(inst)    # __str__ allows args to be printed directly,\n          ...                  # but may be overridden in exception subclasses\n          ...   x, y = inst.args # unpack args\n          ...   print('x =', x)\n          ...   print('y =', y)\n          ...\n          <class 'Exception'>\n          ('spam', 'eggs')\n          ('spam', 'eggs')\n          x = spam\n          y = eggs",
+            "start_char": 594,
+            "end_char": 1540,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p069",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 63,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2895
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8674602666544659
+          },
+          {
+            "id": "8f1b7068d800e24e4c6501e26217079bcf41c14c415ba0a42b0b8d1705a6ff7e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 69,
+            "text": "The exception’s __str__() output is printed as the last part (‘detail’) of the message for unhandled exceptions.\n          BaseException is the common base class of all exceptions. One of its subclasses, Exception, is the base class of\n          all the non-fatal exceptions. Exceptions which are not subclasses of Exception are not typically handled, because\n          they are used to indicate that the program should terminate. They include SystemExit which is raised by sys.\n          exit() and KeyboardInterrupt which is raised when a user wishes to interrupt the program.\n          Exception can be used as a wildcard that catches (almost) everything. However, it is good practice to be as specific\n          as possible with the types of exceptions that we intend to handle, and to allow any unexpected exceptions to propagate\n          on.",
+            "start_char": 1551,
+            "end_char": 2399,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p069",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 63,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2895
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8651924809698788
+          },
+          {
+            "id": "fe3ff63bd042841f84f06ece94f9bad417e19894eec2ae9cc11f7c0319fd1bbb",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 69,
+            "text": "(continued from previous page)\n             try:\n                raise cls()\n             except D:\n                print(\"D\")\n             except C:\n                print(\"C\")\n             except B:\n                print(\"B\")\n          Note that if the except clauses were reversed (with except B first), it would have printed B, B, B — the first matching\n          except clause is triggered.\n          When an exception occurs, it may have associated values, also known as the exception’s arguments. The presence\n          and types of the arguments depend on the exception type.",
+            "start_char": 0,
+            "end_char": 582,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p069",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 63,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2895
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 4,
+            "score": 0.8615046400280193
+          },
+          {
+            "id": "e5f5a1443b261b45cdd446f6b5fefba992cb37d9630ce43a2d99c269970333de",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 74,
+            "text": ">>> def f():\n          ...   excs = [OSError('error 1'), SystemError('error 2')]\n          ...   raise ExceptionGroup('there were problems', excs)\n          ...\n          >>> f()\n           + Exception Group Traceback (most recent call last):\n           |  File \"<stdin>\", line 1, in <module>\n           |  File \"<stdin>\", line 3, in f\n           | ExceptionGroup: there were problems\n           +-+---------------- 1 ----------------\n             | OSError: error 1\n             +---------------- 2 ----------------\n             | SystemError: error 2\n             +------------------------------------\n          >>> try:\n          ...   f()\n          ... except Exception as e:\n          ...   print(f'caught {type(e)}: e')\n          ...\n          caught <class 'ExceptionGroup'>: e\n          >>>\n          By using except* instead of except, we can selectively handle only the exceptions in the group that match a certain",
+            "start_char": 750,
+            "end_char": 1674,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p074",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 68,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2650
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.8607252240180969
+          },
+          {
+            "id": "11e83170131837b8681f907052b637cee769a07e538d4b32d9ee3991b641821b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 75,
+            "text": "(continued from previous page)\n          ...   print(\"There were SystemErrors\")\n          ...\n          There were OSErrors\n          There were SystemErrors\n           + Exception Group Traceback (most recent call last):\n           |  File \"<stdin>\", line 2, in <module>\n           |  File \"<stdin>\", line 2, in f\n           | ExceptionGroup: group1\n           +-+---------------- 1 ----------------\n             | ExceptionGroup: group2\n             +-+---------------- 1 ----------------\n              | RecursionError: 4\n              +------------------------------------\n          >>>\n          Note that the exceptions nested in an exception group must be instances, not types. This is because in practice the\n          exceptions would typically be ones that have already been raised and caught by the program, along the following\n          pattern:\n          >>> excs = []\n          ... for test in tests:\n          ...   try:\n          ...      test.run()",
+            "start_char": 0,
+            "end_char": 965,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p075",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 69,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 6,
+            "score": 0.8574174642562866
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 76,
+            "text": "(continued from previous page)\n          ...\n          >>> excs = []\n          >>> for i in range(3):\n          ...   try:\n          ...      f()\n          ...   except Exception as e:\n          ...      e.add_note(f'Happened in Iteration {i+1}')\n          ...      excs.append(e)\n          ...\n          >>> raise ExceptionGroup('We have some problems', excs)\n           + Exception Group Traceback (most recent call last):\n           |  File \"<stdin>\", line 1, in <module>\n           | ExceptionGroup: We have some problems (3 sub-exceptions)\n           +-+---------------- 1 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 1\n             +---------------- 2 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>",
+            "start_char": 0,
+            "end_char": 973,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p076",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 70,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 1440
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 7,
+            "score": 0.8556124654047227
+          },
+          {
+            "id": "7753667acc9e895b77a2d40fc559250f95b4135d08a23741b06bda9af8ac1aa4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 75,
+            "text": "For example, when collecting exceptions into an exception group, we may want to add context information for the\n          individual errors. In the following each exception in the group has a note indicating when this error has occurred.\n\n          >>> def f():\n          ...   raise OSError('operation failed')\n                                                              (continues on next page)",
+            "start_char": 2146,
+            "end_char": 2544,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p075",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 69,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 8,
+            "score": 0.8490518584564886
+          },
+          {
+            "id": "0f64985915230f3a438c801c34351e667932248aa288f15dad7f3e1d441132eb",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 68,
+            "text": "handlers of the same try statement. An except clause may name multiple exceptions as a parenthesized tuple, for\n          example:\n\n          ... except (RuntimeError, TypeError, NameError):\n          ...   pass\n\n          A class in an except clause matches exceptions which are instances of the class itself or one of its derived classes\n          (but not the other way around — an except clause listing a derived class does not match instances of its base classes).\n          For example, the following code will print B, C, D in that order:\n          class B(Exception):\n             pass\n\n          class C(B):\n             pass\n\n          class D(C):\n             pass\n          for cls in [B, C, D]:\n                                                              (continues on next page)",
+            "start_char": 2406,
+            "end_char": 3200,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p068",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 62,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 3200
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 9,
+            "score": 0.8487069859715402
+          },
+          {
+            "id": "8f98e9178f13b19f4024cfbefb4c64dc612cd1387314efb24e173f91d3e77d93",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 75,
+            "text": "...   except Exception as e:\n          ...      excs.append(e)\n          ...\n          >>> if excs:\n          ...  raise ExceptionGroup(\"Test Failures\", excs)\n          ...\n\n          8.10 Enriching Exceptions with Notes",
+            "start_char": 976,
+            "end_char": 1196,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p075",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 69,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 10,
+            "score": 0.8484086394309998
+          }
+        ]
+      },
+      "context": {
+        "text": "[fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d | source=data/raw/tutorial.pdf | PDF page=72 | chapter=8]\n(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.\n\n[adbc59779431d1c60f677dd67fa5255a5a676e436696a42dcc1979c7265fa352 | source=data/raw/tutorial.pdf | PDF page=69 | chapter=8]\nThe except clause may specify a variable after the exception name. The variable is bound to the exception instance\n          which typically has an args attribute that stores the arguments. For convenience, builtin exception types define\n          __str__() to print all the arguments without explicitly accessing .args.\n          >>> try:\n          ...   raise Exception('spam', 'eggs')\n          ... except Exception as inst:\n          ...   print(type(inst)) # the exception type\n          ...   print(inst.args) # arguments stored in .args\n          ...   print(inst)    # __str__ allows args to be printed directly,\n          ...                  # but may be overridden in exception subclasses\n          ...   x, y = inst.args # unpack args\n          ...   print('x =', x)\n          ...   print('y =', y)\n          ...\n          <class 'Exception'>\n          ('spam', 'eggs')\n          ('spam', 'eggs')\n          x = spam\n          y = eggs\n\n[8f1b7068d800e24e4c6501e26217079bcf41c14c415ba0a42b0b8d1705a6ff7e | source=data/raw/tutorial.pdf | PDF page=69 | chapter=8]\nThe exception’s __str__() output is printed as the last part (‘detail’) of the message for unhandled exceptions.\n          BaseException is the common base class of all exceptions. One of its subclasses, Exception, is the base class of\n          all the non-fatal exceptions. Exceptions which are not subclasses of Exception are not typically handled, because\n          they are used to indicate that the program should terminate. They include SystemExit which is raised by sys.\n          exit() and KeyboardInterrupt which is raised when a user wishes to interrupt the program.\n          Exception can be used as a wildcard that catches (almost) everything. However, it is good practice to be as specific\n          as possible with the types of exceptions that we intend to handle, and to allow any unexpected exceptions to propagate\n          on.",
+        "chunk_ids": [
+          "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d",
+          "adbc59779431d1c60f677dd67fa5255a5a676e436696a42dcc1979c7265fa352",
+          "8f1b7068d800e24e4c6501e26217079bcf41c14c415ba0a42b0b8d1705a6ff7e"
+        ],
+        "characters": 3130,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 72,
+            "text": "(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.",
+            "start_char": 0,
+            "end_char": 960,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p072",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 66,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 3009
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8740376234054565
+          },
+          {
+            "id": "adbc59779431d1c60f677dd67fa5255a5a676e436696a42dcc1979c7265fa352",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 69,
+            "text": "The except clause may specify a variable after the exception name. The variable is bound to the exception instance\n          which typically has an args attribute that stores the arguments. For convenience, builtin exception types define\n          __str__() to print all the arguments without explicitly accessing .args.\n          >>> try:\n          ...   raise Exception('spam', 'eggs')\n          ... except Exception as inst:\n          ...   print(type(inst)) # the exception type\n          ...   print(inst.args) # arguments stored in .args\n          ...   print(inst)    # __str__ allows args to be printed directly,\n          ...                  # but may be overridden in exception subclasses\n          ...   x, y = inst.args # unpack args\n          ...   print('x =', x)\n          ...   print('y =', y)\n          ...\n          <class 'Exception'>\n          ('spam', 'eggs')\n          ('spam', 'eggs')\n          x = spam\n          y = eggs",
+            "start_char": 594,
+            "end_char": 1540,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p069",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 63,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2895
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8674602666544659
+          },
+          {
+            "id": "8f1b7068d800e24e4c6501e26217079bcf41c14c415ba0a42b0b8d1705a6ff7e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 69,
+            "text": "The exception’s __str__() output is printed as the last part (‘detail’) of the message for unhandled exceptions.\n          BaseException is the common base class of all exceptions. One of its subclasses, Exception, is the base class of\n          all the non-fatal exceptions. Exceptions which are not subclasses of Exception are not typically handled, because\n          they are used to indicate that the program should terminate. They include SystemExit which is raised by sys.\n          exit() and KeyboardInterrupt which is raised when a user wishes to interrupt the program.\n          Exception can be used as a wildcard that catches (almost) everything. However, it is good practice to be as specific\n          as possible with the types of exceptions that we intend to handle, and to allow any unexpected exceptions to propagate\n          on.",
+            "start_char": 1551,
+            "end_char": 2399,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p069",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 63,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2895
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8651924809698788
+          }
+        ],
+        "excluded": [
+          {
+            "id": "fe3ff63bd042841f84f06ece94f9bad417e19894eec2ae9cc11f7c0319fd1bbb",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "e5f5a1443b261b45cdd446f6b5fefba992cb37d9630ce43a2d99c269970333de",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "11e83170131837b8681f907052b637cee769a07e538d4b32d9ee3991b641821b",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "7753667acc9e895b77a2d40fc559250f95b4135d08a23741b06bda9af8ac1aa4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "0f64985915230f3a438c801c34351e667932248aa288f15dad7f3e1d441132eb",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "8f98e9178f13b19f4024cfbefb4c64dc612cd1387314efb24e173f91d3e77d93",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.04651269999885699
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "6ec3409457eaab981224f91c290b53479f6ed176e0d097565efa65e0b810543f",
+      "request_sha256": "3cbb8e75219c500bd9c47cc102daba2e3b9c4e6b52d0b50757c351567e64effc",
+      "response_id": "NNf6au-fB_H_1e8PvtucwAE",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 609,
+        "candidatesTokenCount": 20,
+        "totalTokenCount": 629,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 609
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 0.8130000000019209,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "ffdeb2218412ef530dd172784afb0edfc0bda09b510ff8a449f735fd411a0332",
+      "request_sha256": "0f85271835c3acb4e092daf3afe76ed1097d9f92d00eb86a4d67053b3613830c",
+      "response_id": "Q9f6auicELCPvr0P7OGH6A4",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1684,
+        "candidatesTokenCount": 185,
+        "totalTokenCount": 1869,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1684
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.3290000000015425,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d | source=data/raw/tutorial.pdf | PDF page=72 | chapter=8]\n(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.\n\n[adbc59779431d1c60f677dd67fa5255a5a676e436696a42dcc1979c7265fa352 | source=data/raw/tutorial.pdf | PDF page=69 | chapter=8]\nThe except clause may specify a variable after the exception name. The variable is bound to the exception instance\n          which typically has an args attribute that stores the arguments. For convenience, builtin exception types define\n          __str__() to print all the arguments without explicitly accessing .args.\n          >>> try:\n          ...   raise Exception('spam', 'eggs')\n          ... except Exception as inst:\n          ...   print(type(inst)) # the exception type\n          ...   print(inst.args) # arguments stored in .args\n          ...   print(inst)    # __str__ allows args to be printed directly,\n          ...                  # but may be overridden in exception subclasses\n          ...   x, y = inst.args # unpack args\n          ...   print('x =', x)\n          ...   print('y =', y)\n          ...\n          <class 'Exception'>\n          ('spam', 'eggs')\n          ('spam', 'eggs')\n          x = spam\n          y = eggs\n\n[8f1b7068d800e24e4c6501e26217079bcf41c14c415ba0a42b0b8d1705a6ff7e | source=data/raw/tutorial.pdf | PDF page=69 | chapter=8]\nThe exception’s __str__() output is printed as the last part (‘detail’) of the message for unhandled exceptions.\n          BaseException is the common base class of all exceptions. One of its subclasses, Exception, is the base class of\n          all the non-fatal exceptions. Exceptions which are not subclasses of Exception are not typically handled, because\n          they are used to indicate that the program should terminate. They include SystemExit which is raised by sys.\n          exit() and KeyboardInterrupt which is raised when a user wishes to interrupt the program.\n          Exception can be used as a wildcard that catches (almost) everything. However, it is good practice to be as specific\n          as possible with the types of exceptions that we intend to handle, and to allow any unexpected exceptions to propagate\n          on.",
+        "chunk_ids": [
+          "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d",
+          "adbc59779431d1c60f677dd67fa5255a5a676e436696a42dcc1979c7265fa352",
+          "8f1b7068d800e24e4c6501e26217079bcf41c14c415ba0a42b0b8d1705a6ff7e"
+        ],
+        "characters": 3130,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 72,
+            "text": "(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.",
+            "start_char": 0,
+            "end_char": 960,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p072",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 66,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 3009
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8740376234054565
+          },
+          {
+            "id": "adbc59779431d1c60f677dd67fa5255a5a676e436696a42dcc1979c7265fa352",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 69,
+            "text": "The except clause may specify a variable after the exception name. The variable is bound to the exception instance\n          which typically has an args attribute that stores the arguments. For convenience, builtin exception types define\n          __str__() to print all the arguments without explicitly accessing .args.\n          >>> try:\n          ...   raise Exception('spam', 'eggs')\n          ... except Exception as inst:\n          ...   print(type(inst)) # the exception type\n          ...   print(inst.args) # arguments stored in .args\n          ...   print(inst)    # __str__ allows args to be printed directly,\n          ...                  # but may be overridden in exception subclasses\n          ...   x, y = inst.args # unpack args\n          ...   print('x =', x)\n          ...   print('y =', y)\n          ...\n          <class 'Exception'>\n          ('spam', 'eggs')\n          ('spam', 'eggs')\n          x = spam\n          y = eggs",
+            "start_char": 594,
+            "end_char": 1540,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p069",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 63,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2895
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8674602666544659
+          },
+          {
+            "id": "8f1b7068d800e24e4c6501e26217079bcf41c14c415ba0a42b0b8d1705a6ff7e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 69,
+            "text": "The exception’s __str__() output is printed as the last part (‘detail’) of the message for unhandled exceptions.\n          BaseException is the common base class of all exceptions. One of its subclasses, Exception, is the base class of\n          all the non-fatal exceptions. Exceptions which are not subclasses of Exception are not typically handled, because\n          they are used to indicate that the program should terminate. They include SystemExit which is raised by sys.\n          exit() and KeyboardInterrupt which is raised when a user wishes to interrupt the program.\n          Exception can be used as a wildcard that catches (almost) everything. However, it is good practice to be as specific\n          as possible with the types of exceptions that we intend to handle, and to allow any unexpected exceptions to propagate\n          on.",
+            "start_char": 1551,
+            "end_char": 2399,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p069",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 63,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2895
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8651924809698788
+          }
+        ],
+        "excluded": [
+          {
+            "id": "fe3ff63bd042841f84f06ece94f9bad417e19894eec2ae9cc11f7c0319fd1bbb",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "e5f5a1443b261b45cdd446f6b5fefba992cb37d9630ce43a2d99c269970333de",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "11e83170131837b8681f907052b637cee769a07e538d4b32d9ee3991b641821b",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "7753667acc9e895b77a2d40fc559250f95b4135d08a23741b06bda9af8ac1aa4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "0f64985915230f3a438c801c34351e667932248aa288f15dad7f3e1d441132eb",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "8f98e9178f13b19f4024cfbefb4c64dc612cd1387314efb24e173f91d3e77d93",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d | source=data/raw/tutorial.pdf | PDF page=72 | chapter=8]\n(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.\n\n[adbc59779431d1c60f677dd67fa5255a5a676e436696a42dcc1979c7265fa352 | source=data/raw/tutorial.pdf | PDF page=69 | chapter=8]\nThe except clause may specify a variable after the exception name. The variable is bound to the exception instance\n          which typically has an args attribute that stores the arguments. For convenience, builtin exception types define\n          __str__() to print all the arguments without explicitly accessing .args.\n          >>> try:\n          ...   raise Exception('spam', 'eggs')\n          ... except Exception as inst:\n          ...   print(type(inst)) # the exception type\n          ...   print(inst.args) # arguments stored in .args\n          ...   print(inst)    # __str__ allows args to be printed directly,\n          ...                  # but may be overridden in exception subclasses\n          ...   x, y = inst.args # unpack args\n          ...   print('x =', x)\n          ...   print('y =', y)\n          ...\n          <class 'Exception'>\n          ('spam', 'eggs')\n          ('spam', 'eggs')\n          x = spam\n          y = eggs\n\n[8f1b7068d800e24e4c6501e26217079bcf41c14c415ba0a42b0b8d1705a6ff7e | source=data/raw/tutorial.pdf | PDF page=69 | chapter=8]\nThe exception’s __str__() output is printed as the last part (‘detail’) of the message for unhandled exceptions.\n          BaseException is the common base class of all exceptions. One of its subclasses, Exception, is the base class of\n          all the non-fatal exceptions. Exceptions which are not subclasses of Exception are not typically handled, because\n          they are used to indicate that the program should terminate. They include SystemExit which is raised by sys.\n          exit() and KeyboardInterrupt which is raised when a user wishes to interrupt the program.\n          Exception can be used as a wildcard that catches (almost) everything. However, it is good practice to be as specific\n          as possible with the types of exceptions that we intend to handle, and to allow any unexpected exceptions to propagate\n          on.",
+    "chunk_ids": [
+      "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d",
+      "adbc59779431d1c60f677dd67fa5255a5a676e436696a42dcc1979c7265fa352",
+      "8f1b7068d800e24e4c6501e26217079bcf41c14c415ba0a42b0b8d1705a6ff7e"
+    ],
+    "characters": 3130,
+    "budget_chars": 3500,
+    "max_chunks": 3,
+    "selected_chunks": [
+      {
+        "id": "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 72,
+        "text": "(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.",
+        "start_char": 0,
+        "end_char": 960,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p072",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 66,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 3009
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.8740376234054565
+      },
+      {
+        "id": "adbc59779431d1c60f677dd67fa5255a5a676e436696a42dcc1979c7265fa352",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 69,
+        "text": "The except clause may specify a variable after the exception name. The variable is bound to the exception instance\n          which typically has an args attribute that stores the arguments. For convenience, builtin exception types define\n          __str__() to print all the arguments without explicitly accessing .args.\n          >>> try:\n          ...   raise Exception('spam', 'eggs')\n          ... except Exception as inst:\n          ...   print(type(inst)) # the exception type\n          ...   print(inst.args) # arguments stored in .args\n          ...   print(inst)    # __str__ allows args to be printed directly,\n          ...                  # but may be overridden in exception subclasses\n          ...   x, y = inst.args # unpack args\n          ...   print('x =', x)\n          ...   print('y =', y)\n          ...\n          <class 'Exception'>\n          ('spam', 'eggs')\n          ('spam', 'eggs')\n          x = spam\n          y = eggs",
+        "start_char": 594,
+        "end_char": 1540,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p069",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 63,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 2895
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.8674602666544659
+      },
+      {
+        "id": "8f1b7068d800e24e4c6501e26217079bcf41c14c415ba0a42b0b8d1705a6ff7e",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 69,
+        "text": "The exception’s __str__() output is printed as the last part (‘detail’) of the message for unhandled exceptions.\n          BaseException is the common base class of all exceptions. One of its subclasses, Exception, is the base class of\n          all the non-fatal exceptions. Exceptions which are not subclasses of Exception are not typically handled, because\n          they are used to indicate that the program should terminate. They include SystemExit which is raised by sys.\n          exit() and KeyboardInterrupt which is raised when a user wishes to interrupt the program.\n          Exception can be used as a wildcard that catches (almost) everything. However, it is good practice to be as specific\n          as possible with the types of exceptions that we intend to handle, and to allow any unexpected exceptions to propagate\n          on.",
+        "start_char": 1551,
+        "end_char": 2399,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p069",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 63,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 2895
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.8651924809698788
+      }
+    ],
+    "excluded": [
+      {
+        "id": "fe3ff63bd042841f84f06ece94f9bad417e19894eec2ae9cc11f7c0319fd1bbb",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "e5f5a1443b261b45cdd446f6b5fefba992cb37d9630ce43a2d99c269970333de",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "11e83170131837b8681f907052b637cee769a07e538d4b32d9ee3991b641821b",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "7753667acc9e895b77a2d40fc559250f95b4135d08a23741b06bda9af8ac1aa4",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "0f64985915230f3a438c801c34351e667932248aa288f15dad7f3e1d441132eb",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "8f98e9178f13b19f4024cfbefb4c64dc612cd1387314efb24e173f91d3e77d93",
+        "reason": "max_chunks"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [],
+  "search_calls": 1,
+  "generated_search_queries": [
+    "user-defined exception derive from class"
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 29.288543600003322,
+    "pacing_seconds_this_invocation": 27.107999999996537,
+    "wall_seconds_excluding_pacing": 2.1805436000067857,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": true,
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 72,
+        "evidence": "Exceptions should typically be derived from the Exception class, either directly or indirectly."
+      }
+    ],
+    "expected_answer": "It should typically derive from Exception, directly or indirectly.",
+    "absence_reason": null,
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "dense",
+    "query": "Which class should a user-defined exception typically derive from, directly or indirectly?",
+    "filter": null,
+    "ranking": [
+      {
+        "id": "8f1b7068d800e24e4c6501e26217079bcf41c14c415ba0a42b0b8d1705a6ff7e",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 69,
+        "text": "The exception’s __str__() output is printed as the last part (‘detail’) of the message for unhandled exceptions.\n          BaseException is the common base class of all exceptions. One of its subclasses, Exception, is the base class of\n          all the non-fatal exceptions. Exceptions which are not subclasses of Exception are not typically handled, because\n          they are used to indicate that the program should terminate. They include SystemExit which is raised by sys.\n          exit() and KeyboardInterrupt which is raised when a user wishes to interrupt the program.\n          Exception can be used as a wildcard that catches (almost) everything. However, it is good practice to be as specific\n          as possible with the types of exceptions that we intend to handle, and to allow any unexpected exceptions to propagate\n          on.",
+        "start_char": 1551,
+        "end_char": 2399,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p069",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 63,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 2895
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.8637926063661229
+      },
+      {
+        "id": "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 72,
+        "text": "(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.",
+        "start_char": 0,
+        "end_char": 960,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p072",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 66,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 3009
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.8540252447128296
+      },
+      {
+        "id": "adbc59779431d1c60f677dd67fa5255a5a676e436696a42dcc1979c7265fa352",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 69,
+        "text": "The except clause may specify a variable after the exception name. The variable is bound to the exception instance\n          which typically has an args attribute that stores the arguments. For convenience, builtin exception types define\n          __str__() to print all the arguments without explicitly accessing .args.\n          >>> try:\n          ...   raise Exception('spam', 'eggs')\n          ... except Exception as inst:\n          ...   print(type(inst)) # the exception type\n          ...   print(inst.args) # arguments stored in .args\n          ...   print(inst)    # __str__ allows args to be printed directly,\n          ...                  # but may be overridden in exception subclasses\n          ...   x, y = inst.args # unpack args\n          ...   print('x =', x)\n          ...   print('y =', y)\n          ...\n          <class 'Exception'>\n          ('spam', 'eggs')\n          ('spam', 'eggs')\n          x = spam\n          y = eggs",
+        "start_char": 594,
+        "end_char": 1540,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p069",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 63,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 2895
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.8463424627372726
+      },
+      {
+        "id": "5c083674f40427a54b0a0a0a98d7cfb0b61944d0afbee69b1e43ee6e243b5065",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 68,
+        "text": "exceptions, but need not be true for user-defined exceptions (although it is a useful convention). Standard exception\n          names are built-in identifiers (not reserved keywords).\n          The rest of the line provides detail based on the type of exception and what caused it.\n          The preceding part of the error message shows the context where the exception occurred, in the form of a stack\n          traceback. In general it contains a stack traceback listing source lines; however, it will not display lines read from\n          standard input.\n\n          bltin-exceptions lists the built-in exceptions and their meanings.\n\n          8.3 Handling Exceptions",
+        "start_char": 0,
+        "end_char": 670,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p068",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 62,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 3200
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 4,
+        "score": 0.8446940872255527
+      },
+      {
+        "id": "0f64985915230f3a438c801c34351e667932248aa288f15dad7f3e1d441132eb",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 68,
+        "text": "handlers of the same try statement. An except clause may name multiple exceptions as a parenthesized tuple, for\n          example:\n\n          ... except (RuntimeError, TypeError, NameError):\n          ...   pass\n\n          A class in an except clause matches exceptions which are instances of the class itself or one of its derived classes\n          (but not the other way around — an except clause listing a derived class does not match instances of its base classes).\n          For example, the following code will print B, C, D in that order:\n          class B(Exception):\n             pass\n\n          class C(B):\n             pass\n\n          class D(C):\n             pass\n          for cls in [B, C, D]:\n                                                              (continues on next page)",
+        "start_char": 2406,
+        "end_char": 3200,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p068",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 62,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 3200
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 5,
+        "score": 0.837472940608053
+      },
+      {
+        "id": "fe3ff63bd042841f84f06ece94f9bad417e19894eec2ae9cc11f7c0319fd1bbb",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 69,
+        "text": "(continued from previous page)\n             try:\n                raise cls()\n             except D:\n                print(\"D\")\n             except C:\n                print(\"C\")\n             except B:\n                print(\"B\")\n          Note that if the except clauses were reversed (with except B first), it would have printed B, B, B — the first matching\n          except clause is triggered.\n          When an exception occurs, it may have associated values, also known as the exception’s arguments. The presence\n          and types of the arguments depend on the exception type.",
+        "start_char": 0,
+        "end_char": 582,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p069",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 63,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 2895
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 6,
+        "score": 0.8317141780768094
+      },
+      {
+        "id": "2b1aaf2ced65e7baeee81b8682a79b6e6b062e2c579aa79ef7a765059c506f2a",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 71,
+        "text": "To indicate that an exception is a direct consequence of another, the raise statement allows an optional from clause:\n          # exc must be exception instance or None.\n          raise RuntimeError from exc\n\n          This can be useful when you are transforming exceptions. For example:\n\n          >>> def func():\n          ...   raise ConnectionError\n          ...\n          >>> try:\n          ...   func()\n          ... except ConnectionError as exc:\n          ...   raise RuntimeError('Failed to open database') from exc\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 2, in <module>\n           File \"<stdin>\", line 2, in func\n          ConnectionError\n          The above exception was the direct cause of the following exception:\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError: Failed to open database",
+        "start_char": 973,
+        "end_char": 1892,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p071",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 65,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 2131
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 7,
+        "score": 0.8299009901344201
+      },
+      {
+        "id": "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 70,
+        "text": "Exception handlers do not handle only exceptions that occur immediately in the try clause, but also those that occur\n          inside functions that are called (even indirectly) in the try clause. For example:\n          >>> def this_fails():\n          ...   x = 1/0\n          ...\n          >>> try:\n          ...   this_fails()\n          ... except ZeroDivisionError as err:\n          ...   print('Handling run-time error:', err)\n          ...\n          Handling run-time error: division by zero\n\n          8.4 Raising Exceptions\n\n          The raise statement allows the programmer to force a specified exception to occur. For example:\n\n          >>> raise NameError('HiThere')\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: HiThere",
+        "start_char": 950,
+        "end_char": 1749,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p070",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 64,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 2610
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 8,
+        "score": 0.8276857137680054
+      },
+      {
+        "id": "e5f5a1443b261b45cdd446f6b5fefba992cb37d9630ce43a2d99c269970333de",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 74,
+        "text": ">>> def f():\n          ...   excs = [OSError('error 1'), SystemError('error 2')]\n          ...   raise ExceptionGroup('there were problems', excs)\n          ...\n          >>> f()\n           + Exception Group Traceback (most recent call last):\n           |  File \"<stdin>\", line 1, in <module>\n           |  File \"<stdin>\", line 3, in f\n           | ExceptionGroup: there were problems\n           +-+---------------- 1 ----------------\n             | OSError: error 1\n             +---------------- 2 ----------------\n             | SystemError: error 2\n             +------------------------------------\n          >>> try:\n          ...   f()\n          ... except Exception as e:\n          ...   print(f'caught {type(e)}: e')\n          ...\n          caught <class 'ExceptionGroup'>: e\n          >>>\n          By using except* instead of except, we can selectively handle only the exceptions in the group that match a certain",
+        "start_char": 750,
+        "end_char": 1674,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p074",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 68,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 2650
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 9,
+        "score": 0.8268632888793945
+      },
+      {
+        "id": "aa7fd097ab2f485e7f284efb44feabdd16a6e79f4243104810f15ef178b9e6ec",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 68,
+        "text": "It is possible to write programs that handle selected exceptions. Look at the following example, which asks the\n          user for input until a valid integer has been entered, but allows the user to interrupt the program (using Control-\n          C or whatever the operating system supports); note that a user-generated interruption is signalled by raising the\n          KeyboardInterrupt exception.\n          >>> while True:\n          ...   try:\n          ...      x = int(input(\"Please enter a number: \"))\n          ...      break\n          ...   except ValueError:\n          ...      print(\"Oops! That was no valid number. Try again...\")\n          ...\n\n          The try statement works as follows.\n            • First, the try clause (the statement(s) between the try and except keywords) is executed.",
+        "start_char": 682,
+        "end_char": 1488,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p068",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 62,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 3200
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 10,
+        "score": 0.8260485633582748
+      }
+    ],
+    "components": {
+      "dense": [
+        {
+          "id": "8f1b7068d800e24e4c6501e26217079bcf41c14c415ba0a42b0b8d1705a6ff7e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 69,
+          "text": "The exception’s __str__() output is printed as the last part (‘detail’) of the message for unhandled exceptions.\n          BaseException is the common base class of all exceptions. One of its subclasses, Exception, is the base class of\n          all the non-fatal exceptions. Exceptions which are not subclasses of Exception are not typically handled, because\n          they are used to indicate that the program should terminate. They include SystemExit which is raised by sys.\n          exit() and KeyboardInterrupt which is raised when a user wishes to interrupt the program.\n          Exception can be used as a wildcard that catches (almost) everything. However, it is good practice to be as specific\n          as possible with the types of exceptions that we intend to handle, and to allow any unexpected exceptions to propagate\n          on.",
+          "start_char": 1551,
+          "end_char": 2399,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p069",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 63,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2895
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8637926063661229
+        },
+        {
+          "id": "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 72,
+          "text": "(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.",
+          "start_char": 0,
+          "end_char": 960,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p072",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 66,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3009
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8540252447128296
+        },
+        {
+          "id": "adbc59779431d1c60f677dd67fa5255a5a676e436696a42dcc1979c7265fa352",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 69,
+          "text": "The except clause may specify a variable after the exception name. The variable is bound to the exception instance\n          which typically has an args attribute that stores the arguments. For convenience, builtin exception types define\n          __str__() to print all the arguments without explicitly accessing .args.\n          >>> try:\n          ...   raise Exception('spam', 'eggs')\n          ... except Exception as inst:\n          ...   print(type(inst)) # the exception type\n          ...   print(inst.args) # arguments stored in .args\n          ...   print(inst)    # __str__ allows args to be printed directly,\n          ...                  # but may be overridden in exception subclasses\n          ...   x, y = inst.args # unpack args\n          ...   print('x =', x)\n          ...   print('y =', y)\n          ...\n          <class 'Exception'>\n          ('spam', 'eggs')\n          ('spam', 'eggs')\n          x = spam\n          y = eggs",
+          "start_char": 594,
+          "end_char": 1540,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p069",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 63,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2895
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8463424627372726
+        },
+        {
+          "id": "5c083674f40427a54b0a0a0a98d7cfb0b61944d0afbee69b1e43ee6e243b5065",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 68,
+          "text": "exceptions, but need not be true for user-defined exceptions (although it is a useful convention). Standard exception\n          names are built-in identifiers (not reserved keywords).\n          The rest of the line provides detail based on the type of exception and what caused it.\n          The preceding part of the error message shows the context where the exception occurred, in the form of a stack\n          traceback. In general it contains a stack traceback listing source lines; however, it will not display lines read from\n          standard input.\n\n          bltin-exceptions lists the built-in exceptions and their meanings.\n\n          8.3 Handling Exceptions",
+          "start_char": 0,
+          "end_char": 670,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p068",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 62,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3200
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8446940872255527
+        },
+        {
+          "id": "0f64985915230f3a438c801c34351e667932248aa288f15dad7f3e1d441132eb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 68,
+          "text": "handlers of the same try statement. An except clause may name multiple exceptions as a parenthesized tuple, for\n          example:\n\n          ... except (RuntimeError, TypeError, NameError):\n          ...   pass\n\n          A class in an except clause matches exceptions which are instances of the class itself or one of its derived classes\n          (but not the other way around — an except clause listing a derived class does not match instances of its base classes).\n          For example, the following code will print B, C, D in that order:\n          class B(Exception):\n             pass\n\n          class C(B):\n             pass\n\n          class D(C):\n             pass\n          for cls in [B, C, D]:\n                                                              (continues on next page)",
+          "start_char": 2406,
+          "end_char": 3200,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p068",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 62,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3200
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.837472940608053
+        },
+        {
+          "id": "fe3ff63bd042841f84f06ece94f9bad417e19894eec2ae9cc11f7c0319fd1bbb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 69,
+          "text": "(continued from previous page)\n             try:\n                raise cls()\n             except D:\n                print(\"D\")\n             except C:\n                print(\"C\")\n             except B:\n                print(\"B\")\n          Note that if the except clauses were reversed (with except B first), it would have printed B, B, B — the first matching\n          except clause is triggered.\n          When an exception occurs, it may have associated values, also known as the exception’s arguments. The presence\n          and types of the arguments depend on the exception type.",
+          "start_char": 0,
+          "end_char": 582,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p069",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 63,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2895
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.8317141780768094
+        },
+        {
+          "id": "2b1aaf2ced65e7baeee81b8682a79b6e6b062e2c579aa79ef7a765059c506f2a",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 71,
+          "text": "To indicate that an exception is a direct consequence of another, the raise statement allows an optional from clause:\n          # exc must be exception instance or None.\n          raise RuntimeError from exc\n\n          This can be useful when you are transforming exceptions. For example:\n\n          >>> def func():\n          ...   raise ConnectionError\n          ...\n          >>> try:\n          ...   func()\n          ... except ConnectionError as exc:\n          ...   raise RuntimeError('Failed to open database') from exc\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 2, in <module>\n           File \"<stdin>\", line 2, in func\n          ConnectionError\n          The above exception was the direct cause of the following exception:\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError: Failed to open database",
+          "start_char": 973,
+          "end_char": 1892,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p071",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 65,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2131
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.8299009901344201
+        },
+        {
+          "id": "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 70,
+          "text": "Exception handlers do not handle only exceptions that occur immediately in the try clause, but also those that occur\n          inside functions that are called (even indirectly) in the try clause. For example:\n          >>> def this_fails():\n          ...   x = 1/0\n          ...\n          >>> try:\n          ...   this_fails()\n          ... except ZeroDivisionError as err:\n          ...   print('Handling run-time error:', err)\n          ...\n          Handling run-time error: division by zero\n\n          8.4 Raising Exceptions\n\n          The raise statement allows the programmer to force a specified exception to occur. For example:\n\n          >>> raise NameError('HiThere')\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: HiThere",
+          "start_char": 950,
+          "end_char": 1749,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p070",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 64,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2610
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8276857137680054
+        },
+        {
+          "id": "e5f5a1443b261b45cdd446f6b5fefba992cb37d9630ce43a2d99c269970333de",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 74,
+          "text": ">>> def f():\n          ...   excs = [OSError('error 1'), SystemError('error 2')]\n          ...   raise ExceptionGroup('there were problems', excs)\n          ...\n          >>> f()\n           + Exception Group Traceback (most recent call last):\n           |  File \"<stdin>\", line 1, in <module>\n           |  File \"<stdin>\", line 3, in f\n           | ExceptionGroup: there were problems\n           +-+---------------- 1 ----------------\n             | OSError: error 1\n             +---------------- 2 ----------------\n             | SystemError: error 2\n             +------------------------------------\n          >>> try:\n          ...   f()\n          ... except Exception as e:\n          ...   print(f'caught {type(e)}: e')\n          ...\n          caught <class 'ExceptionGroup'>: e\n          >>>\n          By using except* instead of except, we can selectively handle only the exceptions in the group that match a certain",
+          "start_char": 750,
+          "end_char": 1674,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p074",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 68,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2650
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8268632888793945
+        },
+        {
+          "id": "aa7fd097ab2f485e7f284efb44feabdd16a6e79f4243104810f15ef178b9e6ec",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 68,
+          "text": "It is possible to write programs that handle selected exceptions. Look at the following example, which asks the\n          user for input until a valid integer has been entered, but allows the user to interrupt the program (using Control-\n          C or whatever the operating system supports); note that a user-generated interruption is signalled by raising the\n          KeyboardInterrupt exception.\n          >>> while True:\n          ...   try:\n          ...      x = int(input(\"Please enter a number: \"))\n          ...      break\n          ...   except ValueError:\n          ...      print(\"Oops! That was no valid number. Try again...\")\n          ...\n\n          The try statement works as follows.\n            • First, the try clause (the statement(s) between the try and except keywords) is executed.",
+          "start_char": 682,
+          "end_char": 1488,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p068",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 62,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3200
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8260485633582748
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": false,
+    "original_query_evidence_hit_at_3": true,
+    "actual_final_context_exact_evidence": true,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "split": "test",
+  "selection_lock_seal": "7c691f1f685824191dc9440795e8dad0c55a51ccee9798907e4538ff908c8598",
+  "trace_sha256": "b5cd95f27521b414e1b0fbfb0fd75478d459394892e277f584ce51e4bb8daa94"
+}

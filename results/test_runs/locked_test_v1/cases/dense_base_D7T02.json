@@ -1,0 +1,1300 @@
+{
+  "status": "answered",
+  "answer": "If a package's __init__.py file defines a list named __all__, that list is taken to be the list of module names that should be imported when `from package import *` is encountered [8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39].",
+  "citations": [
+    "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39"
+  ],
+  "reason": "The corpus explicitly states that if a package's __init__.py defines a list named __all__, it is taken to be the list of module names that should be imported when from package import * is encountered.",
+  "guard": "citation_ids_valid; semantic_support_requires_review",
+  "query_id": "D7T02",
+  "config_id": "dense_base",
+  "public_query": {
+    "id": "D7T02",
+    "question": "Within chapter 6, Modules, if a package defines __all__ in __init__.py, what does that list control when from package import * is used?",
+    "filter": {
+      "chapter": 6
+    }
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "__all__ __init__.py package import *",
+      "filter": {
+        "chapter": 6
+      },
+      "method": "dense",
+      "ranking": [
+        {
+          "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "The only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+          "start_char": 2881,
+          "end_char": 3544,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8978208303451538
+        },
+        {
+          "id": "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "If __all__ is not defined, the statement from sound.effects import * does not import all submodules from\n          the package sound.effects into the current namespace; it only ensures that the package sound.effects has\n          been imported (possibly running any initialization code in __init__.py) and then imports whatever names are\n          defined in the package. This includes any names defined (and submodules explicitly loaded) by __init__.py. It\n          also includes any submodules of the package that were explicitly loaded by previous import statements. Consider\n          this code:\n          import sound.effects.echo\n          import sound.effects.surround\n          from sound.effects import *",
+          "start_char": 956,
+          "end_char": 1670,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8881174325942993
+        },
+        {
+          "id": "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+          "start_char": 0,
+          "end_char": 952,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.881740927696228
+        },
+        {
+          "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "__all__ = [\"echo\", \"surround\", \"reverse\"]\n\n          This would mean that from sound.effects import * would import the three named submodules of the\n          sound.effects package.\n          Be aware that submodules might become shadowed by locally defined names. For example, if you added a reverse\n          function to the sound/effects/__init__.py file, the from sound.effects import * would only import\n          the two submodules echo and surround, but not the reverse submodule, because it is shadowed by the locally\n          defined reverse function:\n\n          __all__ = [\n             \"echo\",   # refers to the 'echo.py' file\n             \"surround\", # refers to the 'surround.py' file\n             \"reverse\", # !!! refers to the 'reverse' function now !!!\n          ]\n          def reverse(msg: str): # <-- this name shadows the 'reverse.py' submodule\n             return msg[::-1] # in the case of a 'from sound.effects import *'",
+          "start_char": 0,
+          "end_char": 944,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8778063058853149
+        },
+        {
+          "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "filters/            Subpackage for filters\n                    __init__.py\n                                                              (continues on next page)",
+          "start_char": 3585,
+          "end_char": 3746,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.8707316517829895
+        },
+        {
+          "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 57,
+          "text": "6.4.3 Packages in Multiple Directories\n          Packages support one more special attribute, __path__. This is initialized to be a sequence of strings containing the\n          name of the directory holding the package’s __init__.py before the code in that file is executed. This variable can\n          be modified; doing so affects future searches for modules and subpackages contained in the package.\n          While this feature is not often needed, it can be used to extend the set of modules found in a package.",
+          "start_char": 0,
+          "end_char": 516,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p057",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 51,
+            "chapter_title": "Modules",
+            "normalized_characters": 516
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.8703454214128616
+        },
+        {
+          "id": "ee9be82da595de430c1312e64c2408b3d253a5c37115dafb5a4d46fd67700077",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "Note that when using from package import item, the item can be either a submodule (or subpackage) of the\n          package, or some other name defined in the package, like a function, class or variable. The import statement first\n          tests whether the item is defined in the package; if not, it assumes it is a module and attempts to load it. If it fails to\n          find it, an ImportError exception is raised.\n          Contrarily, when using syntax like import item.subitem.subsubitem, each item except for the last must be a\n          package; the last item can be a module or a package but can’t be a class or function or variable defined in the previous\n          item.",
+          "start_char": 1738,
+          "end_char": 2420,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.864124059677124
+        },
+        {
+          "id": "490b78aed0a916d50871e94ed285d57fe62572b6d6d7a0c7d4e87186a098c422",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "When packages are structured into subpackages (as with the sound package in the example), you can use absolute\n          imports to refer to submodules of siblings packages. For example, if the module sound.filters.vocoder needs\n          to use the echo module in the sound.effects package, it can use from sound.effects import echo.\n          You can also write relative imports, with the from module import name form of import statement. These im-\n          ports use leading dots to indicate the current and parent packages involved in the relative import. From the surround\n          module for example, you might use:\n\n          from . import echo\n          from .. import formats\n          from ..filters import equalizer\n          Note that relative imports are based on the name of the current module. Since the name of the main module is\n          always \"__main__\", modules intended for use as the main module of a Python application must always use absolute\n          imports.",
+          "start_char": 2422,
+          "end_char": 3410,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8637114844494188
+        },
+        {
+          "id": "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "In this example, the echo and surround modules are imported in the current namespace because they are defined in\n          the sound.effects package when the from...import statement is executed. (This also works when __all__\n          is defined.)\n          Although certain modules are designed to export only names that follow certain patterns when you use import *,\n          it is still considered bad practice in production code.\n\n          Remember, there is nothing wrong with using from package import specific_submodule! In fact, this is\n          the recommended notation unless the importing module needs to use submodules with the same name from different\n          packages.\n          6.4.2 Intra-package References",
+          "start_char": 1682,
+          "end_char": 2410,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.862852931022644
+        },
+        {
+          "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 51,
+          "text": "When a module named spam is imported, the interpreter first searches for a built-in module with that name. These\n          module names are listed in sys.builtin_module_names. If not found, it then searches for a file named spam.py\n          in a list of directories given by the variable sys.path. sys.path is initialized from these locations:\n            • The directory containing the input script (or the current directory when no file is specified).\n            • PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).\n\n            • The installation-dependent default (by convention including a site-packages directory, handled by the site\n             module).\n          More details are at sys-path-init.\n\n            Note",
+          "start_char": 1472,
+          "end_char": 2236,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p051",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 45,
+            "chapter_title": "Modules",
+            "normalized_characters": 2478
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8591957772257476
+        }
+      ],
+      "component_rankings": {
+        "dense": [
+          {
+            "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 55,
+            "text": "The only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+            "start_char": 2881,
+            "end_char": 3544,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p055",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 49,
+              "chapter_title": "Modules",
+              "normalized_characters": 3544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8978208303451538
+          },
+          {
+            "id": "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 56,
+            "text": "If __all__ is not defined, the statement from sound.effects import * does not import all submodules from\n          the package sound.effects into the current namespace; it only ensures that the package sound.effects has\n          been imported (possibly running any initialization code in __init__.py) and then imports whatever names are\n          defined in the package. This includes any names defined (and submodules explicitly loaded) by __init__.py. It\n          also includes any submodules of the package that were explicitly loaded by previous import statements. Consider\n          this code:\n          import sound.effects.echo\n          import sound.effects.surround\n          from sound.effects import *",
+            "start_char": 956,
+            "end_char": 1670,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p056",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 50,
+              "chapter_title": "Modules",
+              "normalized_characters": 3410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8881174325942993
+          },
+          {
+            "id": "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 55,
+            "text": "(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+            "start_char": 0,
+            "end_char": 952,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p055",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 49,
+              "chapter_title": "Modules",
+              "normalized_characters": 3544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.881740927696228
+          },
+          {
+            "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 56,
+            "text": "__all__ = [\"echo\", \"surround\", \"reverse\"]\n\n          This would mean that from sound.effects import * would import the three named submodules of the\n          sound.effects package.\n          Be aware that submodules might become shadowed by locally defined names. For example, if you added a reverse\n          function to the sound/effects/__init__.py file, the from sound.effects import * would only import\n          the two submodules echo and surround, but not the reverse submodule, because it is shadowed by the locally\n          defined reverse function:\n\n          __all__ = [\n             \"echo\",   # refers to the 'echo.py' file\n             \"surround\", # refers to the 'surround.py' file\n             \"reverse\", # !!! refers to the 'reverse' function now !!!\n          ]\n          def reverse(msg: str): # <-- this name shadows the 'reverse.py' submodule\n             return msg[::-1] # in the case of a 'from sound.effects import *'",
+            "start_char": 0,
+            "end_char": 944,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p056",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 50,
+              "chapter_title": "Modules",
+              "normalized_characters": 3410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 4,
+            "score": 0.8778063058853149
+          },
+          {
+            "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "filters/            Subpackage for filters\n                    __init__.py\n                                                              (continues on next page)",
+            "start_char": 3585,
+            "end_char": 3746,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.8707316517829895
+          },
+          {
+            "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 57,
+            "text": "6.4.3 Packages in Multiple Directories\n          Packages support one more special attribute, __path__. This is initialized to be a sequence of strings containing the\n          name of the directory holding the package’s __init__.py before the code in that file is executed. This variable can\n          be modified; doing so affects future searches for modules and subpackages contained in the package.\n          While this feature is not often needed, it can be used to extend the set of modules found in a package.",
+            "start_char": 0,
+            "end_char": 516,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p057",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 51,
+              "chapter_title": "Modules",
+              "normalized_characters": 516
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 6,
+            "score": 0.8703454214128616
+          },
+          {
+            "id": "ee9be82da595de430c1312e64c2408b3d253a5c37115dafb5a4d46fd67700077",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 55,
+            "text": "Note that when using from package import item, the item can be either a submodule (or subpackage) of the\n          package, or some other name defined in the package, like a function, class or variable. The import statement first\n          tests whether the item is defined in the package; if not, it assumes it is a module and attempts to load it. If it fails to\n          find it, an ImportError exception is raised.\n          Contrarily, when using syntax like import item.subitem.subsubitem, each item except for the last must be a\n          package; the last item can be a module or a package but can’t be a class or function or variable defined in the previous\n          item.",
+            "start_char": 1738,
+            "end_char": 2420,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p055",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 49,
+              "chapter_title": "Modules",
+              "normalized_characters": 3544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 7,
+            "score": 0.864124059677124
+          },
+          {
+            "id": "490b78aed0a916d50871e94ed285d57fe62572b6d6d7a0c7d4e87186a098c422",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 56,
+            "text": "When packages are structured into subpackages (as with the sound package in the example), you can use absolute\n          imports to refer to submodules of siblings packages. For example, if the module sound.filters.vocoder needs\n          to use the echo module in the sound.effects package, it can use from sound.effects import echo.\n          You can also write relative imports, with the from module import name form of import statement. These im-\n          ports use leading dots to indicate the current and parent packages involved in the relative import. From the surround\n          module for example, you might use:\n\n          from . import echo\n          from .. import formats\n          from ..filters import equalizer\n          Note that relative imports are based on the name of the current module. Since the name of the main module is\n          always \"__main__\", modules intended for use as the main module of a Python application must always use absolute\n          imports.",
+            "start_char": 2422,
+            "end_char": 3410,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p056",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 50,
+              "chapter_title": "Modules",
+              "normalized_characters": 3410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 8,
+            "score": 0.8637114844494188
+          },
+          {
+            "id": "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 56,
+            "text": "In this example, the echo and surround modules are imported in the current namespace because they are defined in\n          the sound.effects package when the from...import statement is executed. (This also works when __all__\n          is defined.)\n          Although certain modules are designed to export only names that follow certain patterns when you use import *,\n          it is still considered bad practice in production code.\n\n          Remember, there is nothing wrong with using from package import specific_submodule! In fact, this is\n          the recommended notation unless the importing module needs to use submodules with the same name from different\n          packages.\n          6.4.2 Intra-package References",
+            "start_char": 1682,
+            "end_char": 2410,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p056",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 50,
+              "chapter_title": "Modules",
+              "normalized_characters": 3410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 9,
+            "score": 0.862852931022644
+          },
+          {
+            "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 51,
+            "text": "When a module named spam is imported, the interpreter first searches for a built-in module with that name. These\n          module names are listed in sys.builtin_module_names. If not found, it then searches for a file named spam.py\n          in a list of directories given by the variable sys.path. sys.path is initialized from these locations:\n            • The directory containing the input script (or the current directory when no file is specified).\n            • PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).\n\n            • The installation-dependent default (by convention including a site-packages directory, handled by the site\n             module).\n          More details are at sys-path-init.\n\n            Note",
+            "start_char": 1472,
+            "end_char": 2236,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p051",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 45,
+              "chapter_title": "Modules",
+              "normalized_characters": 2478
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 10,
+            "score": 0.8591957772257476
+          }
+        ]
+      },
+      "context": {
+        "text": "[8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39 | source=data/raw/tutorial.pdf | PDF page=55 | chapter=6]\nThe only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:\n\n[ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4 | source=data/raw/tutorial.pdf | PDF page=56 | chapter=6]\nIf __all__ is not defined, the statement from sound.effects import * does not import all submodules from\n          the package sound.effects into the current namespace; it only ensures that the package sound.effects has\n          been imported (possibly running any initialization code in __init__.py) and then imports whatever names are\n          defined in the package. This includes any names defined (and submodules explicitly loaded) by __init__.py. It\n          also includes any submodules of the package that were explicitly loaded by previous import statements. Consider\n          this code:\n          import sound.effects.echo\n          import sound.effects.surround\n          from sound.effects import *\n\n[cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c | source=data/raw/tutorial.pdf | PDF page=55 | chapter=6]\n(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+        "chunk_ids": [
+          "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+          "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+          "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c"
+        ],
+        "characters": 2705,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 55,
+            "text": "The only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+            "start_char": 2881,
+            "end_char": 3544,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p055",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 49,
+              "chapter_title": "Modules",
+              "normalized_characters": 3544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8978208303451538
+          },
+          {
+            "id": "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 56,
+            "text": "If __all__ is not defined, the statement from sound.effects import * does not import all submodules from\n          the package sound.effects into the current namespace; it only ensures that the package sound.effects has\n          been imported (possibly running any initialization code in __init__.py) and then imports whatever names are\n          defined in the package. This includes any names defined (and submodules explicitly loaded) by __init__.py. It\n          also includes any submodules of the package that were explicitly loaded by previous import statements. Consider\n          this code:\n          import sound.effects.echo\n          import sound.effects.surround\n          from sound.effects import *",
+            "start_char": 956,
+            "end_char": 1670,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p056",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 50,
+              "chapter_title": "Modules",
+              "normalized_characters": 3410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8881174325942993
+          },
+          {
+            "id": "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 55,
+            "text": "(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+            "start_char": 0,
+            "end_char": 952,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p055",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 49,
+              "chapter_title": "Modules",
+              "normalized_characters": 3544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.881740927696228
+          }
+        ],
+        "excluded": [
+          {
+            "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ee9be82da595de430c1312e64c2408b3d253a5c37115dafb5a4d46fd67700077",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "490b78aed0a916d50871e94ed285d57fe62572b6d6d7a0c7d4e87186a098c422",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.02377839999826392
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "c924c833a38d2bebc248a8b7be55a0dc395921fa63e0fc1f7bad9e3ec2aad401",
+      "request_sha256": "c7aeb08a0971cde048d5153efe32c2cee0e16a15b4c42b334df9b1b32b729c07",
+      "response_id": "vNb6aoXXH-_U9tMPk_-v0Q4",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 630,
+        "candidatesTokenCount": 23,
+        "totalTokenCount": 653,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 630
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.6870000000017171,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "b2ed33af9a879e7451cb84663a8cdf5365c261eb366fbb7505a5ac26f7dd6501",
+      "request_sha256": "67282a4ef49804f494af5432e9ba0fb1a24c5d52071b1df8d46ea9dda511d518",
+      "response_id": "y9b6aovMHbHkosUPksyAwQ8",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1598,
+        "candidatesTokenCount": 226,
+        "totalTokenCount": 1824,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1598
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.8590000000003783,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39 | source=data/raw/tutorial.pdf | PDF page=55 | chapter=6]\nThe only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:\n\n[ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4 | source=data/raw/tutorial.pdf | PDF page=56 | chapter=6]\nIf __all__ is not defined, the statement from sound.effects import * does not import all submodules from\n          the package sound.effects into the current namespace; it only ensures that the package sound.effects has\n          been imported (possibly running any initialization code in __init__.py) and then imports whatever names are\n          defined in the package. This includes any names defined (and submodules explicitly loaded) by __init__.py. It\n          also includes any submodules of the package that were explicitly loaded by previous import statements. Consider\n          this code:\n          import sound.effects.echo\n          import sound.effects.surround\n          from sound.effects import *\n\n[cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c | source=data/raw/tutorial.pdf | PDF page=55 | chapter=6]\n(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+        "chunk_ids": [
+          "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+          "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+          "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c"
+        ],
+        "characters": 2705,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 55,
+            "text": "The only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+            "start_char": 2881,
+            "end_char": 3544,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p055",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 49,
+              "chapter_title": "Modules",
+              "normalized_characters": 3544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8978208303451538
+          },
+          {
+            "id": "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 56,
+            "text": "If __all__ is not defined, the statement from sound.effects import * does not import all submodules from\n          the package sound.effects into the current namespace; it only ensures that the package sound.effects has\n          been imported (possibly running any initialization code in __init__.py) and then imports whatever names are\n          defined in the package. This includes any names defined (and submodules explicitly loaded) by __init__.py. It\n          also includes any submodules of the package that were explicitly loaded by previous import statements. Consider\n          this code:\n          import sound.effects.echo\n          import sound.effects.surround\n          from sound.effects import *",
+            "start_char": 956,
+            "end_char": 1670,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p056",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 50,
+              "chapter_title": "Modules",
+              "normalized_characters": 3410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8881174325942993
+          },
+          {
+            "id": "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 55,
+            "text": "(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+            "start_char": 0,
+            "end_char": 952,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p055",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 49,
+              "chapter_title": "Modules",
+              "normalized_characters": 3544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.881740927696228
+          }
+        ],
+        "excluded": [
+          {
+            "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ee9be82da595de430c1312e64c2408b3d253a5c37115dafb5a4d46fd67700077",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "490b78aed0a916d50871e94ed285d57fe62572b6d6d7a0c7d4e87186a098c422",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39 | source=data/raw/tutorial.pdf | PDF page=55 | chapter=6]\nThe only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:\n\n[ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4 | source=data/raw/tutorial.pdf | PDF page=56 | chapter=6]\nIf __all__ is not defined, the statement from sound.effects import * does not import all submodules from\n          the package sound.effects into the current namespace; it only ensures that the package sound.effects has\n          been imported (possibly running any initialization code in __init__.py) and then imports whatever names are\n          defined in the package. This includes any names defined (and submodules explicitly loaded) by __init__.py. It\n          also includes any submodules of the package that were explicitly loaded by previous import statements. Consider\n          this code:\n          import sound.effects.echo\n          import sound.effects.surround\n          from sound.effects import *\n\n[cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c | source=data/raw/tutorial.pdf | PDF page=55 | chapter=6]\n(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+    "chunk_ids": [
+      "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+      "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+      "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c"
+    ],
+    "characters": 2705,
+    "budget_chars": 3500,
+    "max_chunks": 3,
+    "selected_chunks": [
+      {
+        "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 55,
+        "text": "The only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+        "start_char": 2881,
+        "end_char": 3544,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p055",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 49,
+          "chapter_title": "Modules",
+          "normalized_characters": 3544
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.8978208303451538
+      },
+      {
+        "id": "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 56,
+        "text": "If __all__ is not defined, the statement from sound.effects import * does not import all submodules from\n          the package sound.effects into the current namespace; it only ensures that the package sound.effects has\n          been imported (possibly running any initialization code in __init__.py) and then imports whatever names are\n          defined in the package. This includes any names defined (and submodules explicitly loaded) by __init__.py. It\n          also includes any submodules of the package that were explicitly loaded by previous import statements. Consider\n          this code:\n          import sound.effects.echo\n          import sound.effects.surround\n          from sound.effects import *",
+        "start_char": 956,
+        "end_char": 1670,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p056",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 50,
+          "chapter_title": "Modules",
+          "normalized_characters": 3410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.8881174325942993
+      },
+      {
+        "id": "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 55,
+        "text": "(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+        "start_char": 0,
+        "end_char": 952,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p055",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 49,
+          "chapter_title": "Modules",
+          "normalized_characters": 3544
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.881740927696228
+      }
+    ],
+    "excluded": [
+      {
+        "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "ee9be82da595de430c1312e64c2408b3d253a5c37115dafb5a4d46fd67700077",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "490b78aed0a916d50871e94ed285d57fe62572b6d6d7a0c7d4e87186a098c422",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+        "reason": "max_chunks"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [],
+  "search_calls": 1,
+  "generated_search_queries": [
+    "__all__ __init__.py package import *"
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 20.653091099997255,
+    "pacing_seconds_this_invocation": 17.0779999999977,
+    "wall_seconds_excluding_pacing": 3.575091099999554,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": true,
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 55,
+        "evidence": "if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered."
+      }
+    ],
+    "expected_answer": "It specifies the module names that should be imported by from package import *.",
+    "absence_reason": null,
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "dense",
+    "query": "Within chapter 6, Modules, if a package defines __all__ in __init__.py, what does that list control when from package import * is used?",
+    "filter": {
+      "chapter": 6
+    },
+    "ranking": [
+      {
+        "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 55,
+        "text": "The only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+        "start_char": 2881,
+        "end_char": 3544,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p055",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 49,
+          "chapter_title": "Modules",
+          "normalized_characters": 3544
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.9277114272117615
+      },
+      {
+        "id": "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 56,
+        "text": "If __all__ is not defined, the statement from sound.effects import * does not import all submodules from\n          the package sound.effects into the current namespace; it only ensures that the package sound.effects has\n          been imported (possibly running any initialization code in __init__.py) and then imports whatever names are\n          defined in the package. This includes any names defined (and submodules explicitly loaded) by __init__.py. It\n          also includes any submodules of the package that were explicitly loaded by previous import statements. Consider\n          this code:\n          import sound.effects.echo\n          import sound.effects.surround\n          from sound.effects import *",
+        "start_char": 956,
+        "end_char": 1670,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p056",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 50,
+          "chapter_title": "Modules",
+          "normalized_characters": 3410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.9082765579223633
+      },
+      {
+        "id": "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 56,
+        "text": "In this example, the echo and surround modules are imported in the current namespace because they are defined in\n          the sound.effects package when the from...import statement is executed. (This also works when __all__\n          is defined.)\n          Although certain modules are designed to export only names that follow certain patterns when you use import *,\n          it is still considered bad practice in production code.\n\n          Remember, there is nothing wrong with using from package import specific_submodule! In fact, this is\n          the recommended notation unless the importing module needs to use submodules with the same name from different\n          packages.\n          6.4.2 Intra-package References",
+        "start_char": 1682,
+        "end_char": 2410,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p056",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 50,
+          "chapter_title": "Modules",
+          "normalized_characters": 3410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.8812382221221924
+      },
+      {
+        "id": "490b78aed0a916d50871e94ed285d57fe62572b6d6d7a0c7d4e87186a098c422",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 56,
+        "text": "When packages are structured into subpackages (as with the sound package in the example), you can use absolute\n          imports to refer to submodules of siblings packages. For example, if the module sound.filters.vocoder needs\n          to use the echo module in the sound.effects package, it can use from sound.effects import echo.\n          You can also write relative imports, with the from module import name form of import statement. These im-\n          ports use leading dots to indicate the current and parent packages involved in the relative import. From the surround\n          module for example, you might use:\n\n          from . import echo\n          from .. import formats\n          from ..filters import equalizer\n          Note that relative imports are based on the name of the current module. Since the name of the main module is\n          always \"__main__\", modules intended for use as the main module of a Python application must always use absolute\n          imports.",
+        "start_char": 2422,
+        "end_char": 3410,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p056",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 50,
+          "chapter_title": "Modules",
+          "normalized_characters": 3410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 4,
+        "score": 0.8748032525299057
+      },
+      {
+        "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 57,
+        "text": "6.4.3 Packages in Multiple Directories\n          Packages support one more special attribute, __path__. This is initialized to be a sequence of strings containing the\n          name of the directory holding the package’s __init__.py before the code in that file is executed. This variable can\n          be modified; doing so affects future searches for modules and subpackages contained in the package.\n          While this feature is not often needed, it can be used to extend the set of modules found in a package.",
+        "start_char": 0,
+        "end_char": 516,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p057",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 51,
+          "chapter_title": "Modules",
+          "normalized_characters": 516
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 5,
+        "score": 0.8742094710940453
+      },
+      {
+        "id": "ee9be82da595de430c1312e64c2408b3d253a5c37115dafb5a4d46fd67700077",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 55,
+        "text": "Note that when using from package import item, the item can be either a submodule (or subpackage) of the\n          package, or some other name defined in the package, like a function, class or variable. The import statement first\n          tests whether the item is defined in the package; if not, it assumes it is a module and attempts to load it. If it fails to\n          find it, an ImportError exception is raised.\n          Contrarily, when using syntax like import item.subitem.subsubitem, each item except for the last must be a\n          package; the last item can be a module or a package but can’t be a class or function or variable defined in the previous\n          item.",
+        "start_char": 1738,
+        "end_char": 2420,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p055",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 49,
+          "chapter_title": "Modules",
+          "normalized_characters": 3544
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 6,
+        "score": 0.8664832711219788
+      },
+      {
+        "id": "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 55,
+        "text": "(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+        "start_char": 0,
+        "end_char": 952,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p055",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 49,
+          "chapter_title": "Modules",
+          "normalized_characters": 3544
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 7,
+        "score": 0.866209864616394
+      },
+      {
+        "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 51,
+        "text": "When a module named spam is imported, the interpreter first searches for a built-in module with that name. These\n          module names are listed in sys.builtin_module_names. If not found, it then searches for a file named spam.py\n          in a list of directories given by the variable sys.path. sys.path is initialized from these locations:\n            • The directory containing the input script (or the current directory when no file is specified).\n            • PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).\n\n            • The installation-dependent default (by convention including a site-packages directory, handled by the site\n             module).\n          More details are at sys-path-init.\n\n            Note",
+        "start_char": 1472,
+        "end_char": 2236,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p051",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 45,
+          "chapter_title": "Modules",
+          "normalized_characters": 2478
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 8,
+        "score": 0.8652096471065509
+      },
+      {
+        "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 56,
+        "text": "__all__ = [\"echo\", \"surround\", \"reverse\"]\n\n          This would mean that from sound.effects import * would import the three named submodules of the\n          sound.effects package.\n          Be aware that submodules might become shadowed by locally defined names. For example, if you added a reverse\n          function to the sound/effects/__init__.py file, the from sound.effects import * would only import\n          the two submodules echo and surround, but not the reverse submodule, because it is shadowed by the locally\n          defined reverse function:\n\n          __all__ = [\n             \"echo\",   # refers to the 'echo.py' file\n             \"surround\", # refers to the 'surround.py' file\n             \"reverse\", # !!! refers to the 'reverse' function now !!!\n          ]\n          def reverse(msg: str): # <-- this name shadows the 'reverse.py' submodule\n             return msg[::-1] # in the case of a 'from sound.effects import *'",
+        "start_char": 0,
+        "end_char": 944,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p056",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 50,
+          "chapter_title": "Modules",
+          "normalized_characters": 3410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 9,
+        "score": 0.8631280660629272
+      },
+      {
+        "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 50,
+        "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+        "start_char": 1929,
+        "end_char": 2916,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p050",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 44,
+          "chapter_title": "Modules",
+          "normalized_characters": 3193
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 10,
+        "score": 0.8624247990593449
+      }
+    ],
+    "components": {
+      "dense": [
+        {
+          "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "The only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+          "start_char": 2881,
+          "end_char": 3544,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.9277114272117615
+        },
+        {
+          "id": "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "If __all__ is not defined, the statement from sound.effects import * does not import all submodules from\n          the package sound.effects into the current namespace; it only ensures that the package sound.effects has\n          been imported (possibly running any initialization code in __init__.py) and then imports whatever names are\n          defined in the package. This includes any names defined (and submodules explicitly loaded) by __init__.py. It\n          also includes any submodules of the package that were explicitly loaded by previous import statements. Consider\n          this code:\n          import sound.effects.echo\n          import sound.effects.surround\n          from sound.effects import *",
+          "start_char": 956,
+          "end_char": 1670,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.9082765579223633
+        },
+        {
+          "id": "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "In this example, the echo and surround modules are imported in the current namespace because they are defined in\n          the sound.effects package when the from...import statement is executed. (This also works when __all__\n          is defined.)\n          Although certain modules are designed to export only names that follow certain patterns when you use import *,\n          it is still considered bad practice in production code.\n\n          Remember, there is nothing wrong with using from package import specific_submodule! In fact, this is\n          the recommended notation unless the importing module needs to use submodules with the same name from different\n          packages.\n          6.4.2 Intra-package References",
+          "start_char": 1682,
+          "end_char": 2410,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8812382221221924
+        },
+        {
+          "id": "490b78aed0a916d50871e94ed285d57fe62572b6d6d7a0c7d4e87186a098c422",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "When packages are structured into subpackages (as with the sound package in the example), you can use absolute\n          imports to refer to submodules of siblings packages. For example, if the module sound.filters.vocoder needs\n          to use the echo module in the sound.effects package, it can use from sound.effects import echo.\n          You can also write relative imports, with the from module import name form of import statement. These im-\n          ports use leading dots to indicate the current and parent packages involved in the relative import. From the surround\n          module for example, you might use:\n\n          from . import echo\n          from .. import formats\n          from ..filters import equalizer\n          Note that relative imports are based on the name of the current module. Since the name of the main module is\n          always \"__main__\", modules intended for use as the main module of a Python application must always use absolute\n          imports.",
+          "start_char": 2422,
+          "end_char": 3410,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8748032525299057
+        },
+        {
+          "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 57,
+          "text": "6.4.3 Packages in Multiple Directories\n          Packages support one more special attribute, __path__. This is initialized to be a sequence of strings containing the\n          name of the directory holding the package’s __init__.py before the code in that file is executed. This variable can\n          be modified; doing so affects future searches for modules and subpackages contained in the package.\n          While this feature is not often needed, it can be used to extend the set of modules found in a package.",
+          "start_char": 0,
+          "end_char": 516,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p057",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 51,
+            "chapter_title": "Modules",
+            "normalized_characters": 516
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.8742094710940453
+        },
+        {
+          "id": "ee9be82da595de430c1312e64c2408b3d253a5c37115dafb5a4d46fd67700077",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "Note that when using from package import item, the item can be either a submodule (or subpackage) of the\n          package, or some other name defined in the package, like a function, class or variable. The import statement first\n          tests whether the item is defined in the package; if not, it assumes it is a module and attempts to load it. If it fails to\n          find it, an ImportError exception is raised.\n          Contrarily, when using syntax like import item.subitem.subsubitem, each item except for the last must be a\n          package; the last item can be a module or a package but can’t be a class or function or variable defined in the previous\n          item.",
+          "start_char": 1738,
+          "end_char": 2420,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.8664832711219788
+        },
+        {
+          "id": "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+          "start_char": 0,
+          "end_char": 952,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.866209864616394
+        },
+        {
+          "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 51,
+          "text": "When a module named spam is imported, the interpreter first searches for a built-in module with that name. These\n          module names are listed in sys.builtin_module_names. If not found, it then searches for a file named spam.py\n          in a list of directories given by the variable sys.path. sys.path is initialized from these locations:\n            • The directory containing the input script (or the current directory when no file is specified).\n            • PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).\n\n            • The installation-dependent default (by convention including a site-packages directory, handled by the site\n             module).\n          More details are at sys-path-init.\n\n            Note",
+          "start_char": 1472,
+          "end_char": 2236,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p051",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 45,
+            "chapter_title": "Modules",
+            "normalized_characters": 2478
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8652096471065509
+        },
+        {
+          "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "__all__ = [\"echo\", \"surround\", \"reverse\"]\n\n          This would mean that from sound.effects import * would import the three named submodules of the\n          sound.effects package.\n          Be aware that submodules might become shadowed by locally defined names. For example, if you added a reverse\n          function to the sound/effects/__init__.py file, the from sound.effects import * would only import\n          the two submodules echo and surround, but not the reverse submodule, because it is shadowed by the locally\n          defined reverse function:\n\n          __all__ = [\n             \"echo\",   # refers to the 'echo.py' file\n             \"surround\", # refers to the 'surround.py' file\n             \"reverse\", # !!! refers to the 'reverse' function now !!!\n          ]\n          def reverse(msg: str): # <-- this name shadows the 'reverse.py' submodule\n             return msg[::-1] # in the case of a 'from sound.effects import *'",
+          "start_char": 0,
+          "end_char": 944,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8631280660629272
+        },
+        {
+          "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 50,
+          "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+          "start_char": 1929,
+          "end_char": 2916,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p050",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 44,
+            "chapter_title": "Modules",
+            "normalized_characters": 3193
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8624247990593449
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": true,
+    "original_query_evidence_hit_at_3": true,
+    "actual_final_context_exact_evidence": true,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "split": "test",
+  "selection_lock_seal": "7c691f1f685824191dc9440795e8dad0c55a51ccee9798907e4538ff908c8598",
+  "trace_sha256": "0552571024da62e2c65159a6bea84377445a43bedaa577043deae7f310d4fd72"
+}

@@ -1,0 +1,1294 @@
+{
+  "status": "answered",
+  "answer": "When list(d) is performed on a dictionary, it returns a list of all the keys used in the dictionary in insertion order [be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b].",
+  "citations": [
+    "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b"
+  ],
+  "reason": "The corpus explicitly states that performing list(d) on a dictionary returns a list of all keys used in the dictionary, in insertion order.",
+  "guard": "citation_ids_valid; semantic_support_requires_review",
+  "query_id": "D7T01",
+  "config_id": "dense_base",
+  "public_query": {
+    "id": "D7T01",
+    "question": "When list(d) is applied to a dictionary, which keys are returned and in what order?",
+    "filter": null
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "list(d) dictionary keys order",
+      "filter": null,
+      "method": "dense",
+      "ranking": [
+        {
+          "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.",
+          "start_char": 2831,
+          "end_char": 3567,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8703406193750947
+        },
+        {
+          "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+          "start_char": 571,
+          "end_char": 1421,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8587282384199969
+        },
+        {
+          "id": "44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 46,
+          "text": "Here is a small example using a dictionary:\n          >>> tel = {'jack': 4098, 'sape': 4139}\n          >>> tel['guido'] = 4127\n          >>> tel\n          {'jack': 4098, 'sape': 4139, 'guido': 4127}\n          >>> tel['jack']\n          4098\n          >>> del tel['sape']\n          >>> tel['irv'] = 4127\n          >>> tel\n          {'jack': 4098, 'guido': 4127, 'irv': 4127}\n          >>> list(tel)\n          ['jack', 'guido', 'irv']\n          >>> sorted(tel)\n          ['guido', 'irv', 'jack']\n          >>> 'guido' in tel\n          True\n          >>> 'jack' not in tel\n          False\n          The dict() constructor builds dictionaries directly from sequences of key-value pairs:\n          >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n          {'sape': 4139, 'guido': 4127, 'jack': 4098}\n\n          In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:",
+          "start_char": 0,
+          "end_char": 926,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p046",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 40,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 1924
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8573878492481813
+        },
+        {
+          "id": "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 61,
+          "text": "This could also be done by passing the table dictionary as keyword arguments with the ** notation.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678\n\n          This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing\n          all local variables:\n          >>> table = {k: str(v) for k, v in vars().items()}\n          >>> message = \" \".join([f'{k}: ' + '{' + k +'};' for k in table.keys()])\n                                                              (continues on next page)",
+          "start_char": 2192,
+          "end_char": 2889,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p061",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 55,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2889
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8560373868919992
+        },
+        {
+          "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+          "start_char": 1586,
+          "end_char": 1828,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.8540870721236381
+        },
+        {
+          "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+          "start_char": 1840,
+          "end_char": 2820,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.8502721964988474
+        },
+        {
+          "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+          "start_char": 0,
+          "end_char": 677,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.8488406629061319
+        },
+        {
+          "id": "ba103d0bf4dc07e2649837f0ed56eaef4db9e438dcf6a5976120e426c877b193",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 61,
+          "text": ">>> print('The story of {0}, {1}, and {other}.'.format('Bill', 'Manfred',\n          ...                                      other='Georg'))\n          The story of Bill, Manfred, and Georg.\n          If you have a really long format string that you don’t want to split up, it would be nice if you could reference the\n          variables to be formatted by name instead of by position. This can be done by simply passing the dict and using\n          square brackets '[]' to access the keys.\n\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; '\n          ...    'Dcab: {0[Dcab]:d}'.format(table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678",
+          "start_char": 1453,
+          "end_char": 2180,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p061",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 55,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2889
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8461785408152035
+        },
+        {
+          "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+          "start_char": 990,
+          "end_char": 1611,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8441099803251079
+        },
+        {
+          "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+          "start_char": 1679,
+          "end_char": 2410,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8429078050961727
+        }
+      ],
+      "component_rankings": {
+        "dense": [
+          {
+            "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.",
+            "start_char": 2831,
+            "end_char": 3567,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8703406193750947
+          },
+          {
+            "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+            "start_char": 571,
+            "end_char": 1421,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8587282384199969
+          },
+          {
+            "id": "44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 46,
+            "text": "Here is a small example using a dictionary:\n          >>> tel = {'jack': 4098, 'sape': 4139}\n          >>> tel['guido'] = 4127\n          >>> tel\n          {'jack': 4098, 'sape': 4139, 'guido': 4127}\n          >>> tel['jack']\n          4098\n          >>> del tel['sape']\n          >>> tel['irv'] = 4127\n          >>> tel\n          {'jack': 4098, 'guido': 4127, 'irv': 4127}\n          >>> list(tel)\n          ['jack', 'guido', 'irv']\n          >>> sorted(tel)\n          ['guido', 'irv', 'jack']\n          >>> 'guido' in tel\n          True\n          >>> 'jack' not in tel\n          False\n          The dict() constructor builds dictionaries directly from sequences of key-value pairs:\n          >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n          {'sape': 4139, 'guido': 4127, 'jack': 4098}\n\n          In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:",
+            "start_char": 0,
+            "end_char": 926,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p046",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 40,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 1924
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8573878492481813
+          },
+          {
+            "id": "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 61,
+            "text": "This could also be done by passing the table dictionary as keyword arguments with the ** notation.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678\n\n          This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing\n          all local variables:\n          >>> table = {k: str(v) for k, v in vars().items()}\n          >>> message = \" \".join([f'{k}: ' + '{' + k +'};' for k in table.keys()])\n                                                              (continues on next page)",
+            "start_char": 2192,
+            "end_char": 2889,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p061",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 55,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2889
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 4,
+            "score": 0.8560373868919992
+          },
+          {
+            "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+            "start_char": 1586,
+            "end_char": 1828,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.8540870721236381
+          },
+          {
+            "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+            "start_char": 1840,
+            "end_char": 2820,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 6,
+            "score": 0.8502721964988474
+          },
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+            "start_char": 0,
+            "end_char": 677,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 7,
+            "score": 0.8488406629061319
+          },
+          {
+            "id": "ba103d0bf4dc07e2649837f0ed56eaef4db9e438dcf6a5976120e426c877b193",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 61,
+            "text": ">>> print('The story of {0}, {1}, and {other}.'.format('Bill', 'Manfred',\n          ...                                      other='Georg'))\n          The story of Bill, Manfred, and Georg.\n          If you have a really long format string that you don’t want to split up, it would be nice if you could reference the\n          variables to be formatted by name instead of by position. This can be done by simply passing the dict and using\n          square brackets '[]' to access the keys.\n\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; '\n          ...    'Dcab: {0[Dcab]:d}'.format(table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678",
+            "start_char": 1453,
+            "end_char": 2180,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p061",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 55,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2889
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 8,
+            "score": 0.8461785408152035
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+            "start_char": 990,
+            "end_char": 1611,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 9,
+            "score": 0.8441099803251079
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+            "start_char": 1679,
+            "end_char": 2410,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 10,
+            "score": 0.8429078050961727
+          }
+        ]
+      },
+      "context": {
+        "text": "[be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nwithin the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.\n\n[7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c | source=data/raw/tutorial.pdf | PDF page=41 | chapter=5]\n>>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.\n\n[44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca | source=data/raw/tutorial.pdf | PDF page=46 | chapter=5]\nHere is a small example using a dictionary:\n          >>> tel = {'jack': 4098, 'sape': 4139}\n          >>> tel['guido'] = 4127\n          >>> tel\n          {'jack': 4098, 'sape': 4139, 'guido': 4127}\n          >>> tel['jack']\n          4098\n          >>> del tel['sape']\n          >>> tel['irv'] = 4127\n          >>> tel\n          {'jack': 4098, 'guido': 4127, 'irv': 4127}\n          >>> list(tel)\n          ['jack', 'guido', 'irv']\n          >>> sorted(tel)\n          ['guido', 'irv', 'jack']\n          >>> 'guido' in tel\n          True\n          >>> 'jack' not in tel\n          False\n          The dict() constructor builds dictionaries directly from sequences of key-value pairs:\n          >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n          {'sape': 4139, 'guido': 4127, 'jack': 4098}\n\n          In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:",
+        "chunk_ids": [
+          "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+          "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+          "44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca"
+        ],
+        "characters": 2888,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.",
+            "start_char": 2831,
+            "end_char": 3567,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8703406193750947
+          },
+          {
+            "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+            "start_char": 571,
+            "end_char": 1421,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8587282384199969
+          },
+          {
+            "id": "44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 46,
+            "text": "Here is a small example using a dictionary:\n          >>> tel = {'jack': 4098, 'sape': 4139}\n          >>> tel['guido'] = 4127\n          >>> tel\n          {'jack': 4098, 'sape': 4139, 'guido': 4127}\n          >>> tel['jack']\n          4098\n          >>> del tel['sape']\n          >>> tel['irv'] = 4127\n          >>> tel\n          {'jack': 4098, 'guido': 4127, 'irv': 4127}\n          >>> list(tel)\n          ['jack', 'guido', 'irv']\n          >>> sorted(tel)\n          ['guido', 'irv', 'jack']\n          >>> 'guido' in tel\n          True\n          >>> 'jack' not in tel\n          False\n          The dict() constructor builds dictionaries directly from sequences of key-value pairs:\n          >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n          {'sape': 4139, 'guido': 4127, 'jack': 4098}\n\n          In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:",
+            "start_char": 0,
+            "end_char": 926,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p046",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 40,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 1924
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8573878492481813
+          }
+        ],
+        "excluded": [
+          {
+            "id": "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ba103d0bf4dc07e2649837f0ed56eaef4db9e438dcf6a5976120e426c877b193",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.04395189999922877
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "e0c8f3863bbc4f8a70c316271a39ff72ca2703b4dbaf6ce24dd37f40a0da764a",
+      "request_sha256": "607a5ea06034b0d00385faf8e4c8505163e362b359c4ae68933326c47e578427",
+      "response_id": "RNb6arKDAbHq2roPkdmeuQc",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 613,
+        "candidatesTokenCount": 20,
+        "totalTokenCount": 633,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 613
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.360000000000582,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "27d15eca60fd43cb0b0efb992a5b57f000c1a8239856267b14a414e543d60f43",
+      "request_sha256": "9c00952320020cf859a68e3f4f9d7c9690db755aade32379156bae1d7a76c811",
+      "response_id": "U9b6apH5DLuq0-kPw8vS2AI",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1769,
+        "candidatesTokenCount": 196,
+        "totalTokenCount": 1965,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1769
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.5630000000019209,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nwithin the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.\n\n[7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c | source=data/raw/tutorial.pdf | PDF page=41 | chapter=5]\n>>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.\n\n[44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca | source=data/raw/tutorial.pdf | PDF page=46 | chapter=5]\nHere is a small example using a dictionary:\n          >>> tel = {'jack': 4098, 'sape': 4139}\n          >>> tel['guido'] = 4127\n          >>> tel\n          {'jack': 4098, 'sape': 4139, 'guido': 4127}\n          >>> tel['jack']\n          4098\n          >>> del tel['sape']\n          >>> tel['irv'] = 4127\n          >>> tel\n          {'jack': 4098, 'guido': 4127, 'irv': 4127}\n          >>> list(tel)\n          ['jack', 'guido', 'irv']\n          >>> sorted(tel)\n          ['guido', 'irv', 'jack']\n          >>> 'guido' in tel\n          True\n          >>> 'jack' not in tel\n          False\n          The dict() constructor builds dictionaries directly from sequences of key-value pairs:\n          >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n          {'sape': 4139, 'guido': 4127, 'jack': 4098}\n\n          In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:",
+        "chunk_ids": [
+          "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+          "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+          "44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca"
+        ],
+        "characters": 2888,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.",
+            "start_char": 2831,
+            "end_char": 3567,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8703406193750947
+          },
+          {
+            "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+            "start_char": 571,
+            "end_char": 1421,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8587282384199969
+          },
+          {
+            "id": "44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 46,
+            "text": "Here is a small example using a dictionary:\n          >>> tel = {'jack': 4098, 'sape': 4139}\n          >>> tel['guido'] = 4127\n          >>> tel\n          {'jack': 4098, 'sape': 4139, 'guido': 4127}\n          >>> tel['jack']\n          4098\n          >>> del tel['sape']\n          >>> tel['irv'] = 4127\n          >>> tel\n          {'jack': 4098, 'guido': 4127, 'irv': 4127}\n          >>> list(tel)\n          ['jack', 'guido', 'irv']\n          >>> sorted(tel)\n          ['guido', 'irv', 'jack']\n          >>> 'guido' in tel\n          True\n          >>> 'jack' not in tel\n          False\n          The dict() constructor builds dictionaries directly from sequences of key-value pairs:\n          >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n          {'sape': 4139, 'guido': 4127, 'jack': 4098}\n\n          In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:",
+            "start_char": 0,
+            "end_char": 926,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p046",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 40,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 1924
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8573878492481813
+          }
+        ],
+        "excluded": [
+          {
+            "id": "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ba103d0bf4dc07e2649837f0ed56eaef4db9e438dcf6a5976120e426c877b193",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nwithin the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.\n\n[7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c | source=data/raw/tutorial.pdf | PDF page=41 | chapter=5]\n>>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.\n\n[44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca | source=data/raw/tutorial.pdf | PDF page=46 | chapter=5]\nHere is a small example using a dictionary:\n          >>> tel = {'jack': 4098, 'sape': 4139}\n          >>> tel['guido'] = 4127\n          >>> tel\n          {'jack': 4098, 'sape': 4139, 'guido': 4127}\n          >>> tel['jack']\n          4098\n          >>> del tel['sape']\n          >>> tel['irv'] = 4127\n          >>> tel\n          {'jack': 4098, 'guido': 4127, 'irv': 4127}\n          >>> list(tel)\n          ['jack', 'guido', 'irv']\n          >>> sorted(tel)\n          ['guido', 'irv', 'jack']\n          >>> 'guido' in tel\n          True\n          >>> 'jack' not in tel\n          False\n          The dict() constructor builds dictionaries directly from sequences of key-value pairs:\n          >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n          {'sape': 4139, 'guido': 4127, 'jack': 4098}\n\n          In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:",
+    "chunk_ids": [
+      "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+      "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+      "44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca"
+    ],
+    "characters": 2888,
+    "budget_chars": 3500,
+    "max_chunks": 3,
+    "selected_chunks": [
+      {
+        "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 45,
+        "text": "within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.",
+        "start_char": 2831,
+        "end_char": 3567,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p045",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 39,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3567
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.8703406193750947
+      },
+      {
+        "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 41,
+        "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+        "start_char": 571,
+        "end_char": 1421,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p041",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 35,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2843
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.8587282384199969
+      },
+      {
+        "id": "44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 46,
+        "text": "Here is a small example using a dictionary:\n          >>> tel = {'jack': 4098, 'sape': 4139}\n          >>> tel['guido'] = 4127\n          >>> tel\n          {'jack': 4098, 'sape': 4139, 'guido': 4127}\n          >>> tel['jack']\n          4098\n          >>> del tel['sape']\n          >>> tel['irv'] = 4127\n          >>> tel\n          {'jack': 4098, 'guido': 4127, 'irv': 4127}\n          >>> list(tel)\n          ['jack', 'guido', 'irv']\n          >>> sorted(tel)\n          ['guido', 'irv', 'jack']\n          >>> 'guido' in tel\n          True\n          >>> 'jack' not in tel\n          False\n          The dict() constructor builds dictionaries directly from sequences of key-value pairs:\n          >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n          {'sape': 4139, 'guido': 4127, 'jack': 4098}\n\n          In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:",
+        "start_char": 0,
+        "end_char": 926,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p046",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 40,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 1924
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.8573878492481813
+      }
+    ],
+    "excluded": [
+      {
+        "id": "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "ba103d0bf4dc07e2649837f0ed56eaef4db9e438dcf6a5976120e426c877b193",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+        "reason": "max_chunks"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [],
+  "search_calls": 1,
+  "generated_search_queries": [
+    "list(d) dictionary keys order"
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 16.571405399998184,
+    "pacing_seconds_this_invocation": 13.59400000000096,
+    "wall_seconds_excluding_pacing": 2.977405399997224,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": true,
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 45,
+        "evidence": "Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead)."
+      }
+    ],
+    "expected_answer": "It returns all dictionary keys in insertion order. Use sorted(d) instead if sorted order is wanted.",
+    "absence_reason": null,
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "dense",
+    "query": "When list(d) is applied to a dictionary, which keys are returned and in what order?",
+    "filter": null,
+    "ranking": [
+      {
+        "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 45,
+        "text": "within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.",
+        "start_char": 2831,
+        "end_char": 3567,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p045",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 39,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3567
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.880936953993534
+      },
+      {
+        "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 45,
+        "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+        "start_char": 1840,
+        "end_char": 2820,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p045",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 39,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3567
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.8623726532015021
+      },
+      {
+        "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 39,
+        "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+        "start_char": 1679,
+        "end_char": 2410,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p039",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 33,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.8560438923783431
+      },
+      {
+        "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 41,
+        "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+        "start_char": 571,
+        "end_char": 1421,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p041",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 35,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2843
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 4,
+        "score": 0.8559774842275704
+      },
+      {
+        "id": "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 61,
+        "text": "This could also be done by passing the table dictionary as keyword arguments with the ** notation.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678\n\n          This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing\n          all local variables:\n          >>> table = {k: str(v) for k, v in vars().items()}\n          >>> message = \" \".join([f'{k}: ' + '{' + k +'};' for k in table.keys()])\n                                                              (continues on next page)",
+        "start_char": 2192,
+        "end_char": 2889,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p061",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 55,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2889
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 5,
+        "score": 0.8520935862008595
+      },
+      {
+        "id": "44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 46,
+        "text": "Here is a small example using a dictionary:\n          >>> tel = {'jack': 4098, 'sape': 4139}\n          >>> tel['guido'] = 4127\n          >>> tel\n          {'jack': 4098, 'sape': 4139, 'guido': 4127}\n          >>> tel['jack']\n          4098\n          >>> del tel['sape']\n          >>> tel['irv'] = 4127\n          >>> tel\n          {'jack': 4098, 'guido': 4127, 'irv': 4127}\n          >>> list(tel)\n          ['jack', 'guido', 'irv']\n          >>> sorted(tel)\n          ['guido', 'irv', 'jack']\n          >>> 'guido' in tel\n          True\n          >>> 'jack' not in tel\n          False\n          The dict() constructor builds dictionaries directly from sequences of key-value pairs:\n          >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n          {'sape': 4139, 'guido': 4127, 'jack': 4098}\n\n          In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:",
+        "start_char": 0,
+        "end_char": 926,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p046",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 40,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 1924
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 6,
+        "score": 0.8385166026045932
+      },
+      {
+        "id": "6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 40,
+        "text": "list.copy()\n             Return a shallow copy of the list. Similar to a[:].\n          An example that uses most of the list methods:",
+        "start_char": 0,
+        "end_char": 133,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p040",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 34,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2354
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 7,
+        "score": 0.8368110157960063
+      },
+      {
+        "id": "ba103d0bf4dc07e2649837f0ed56eaef4db9e438dcf6a5976120e426c877b193",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 61,
+        "text": ">>> print('The story of {0}, {1}, and {other}.'.format('Bill', 'Manfred',\n          ...                                      other='Georg'))\n          The story of Bill, Manfred, and Georg.\n          If you have a really long format string that you don’t want to split up, it would be nice if you could reference the\n          variables to be formatted by name instead of by position. This can be done by simply passing the dict and using\n          square brackets '[]' to access the keys.\n\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; '\n          ...    'Dcab: {0[Dcab]:d}'.format(table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678",
+        "start_char": 1453,
+        "end_char": 2180,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p061",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 55,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2889
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 8,
+        "score": 0.8335290650410032
+      },
+      {
+        "id": "fa794d836cae166f64bf27c0c1191c917f68308084b34c3df99eabc9b2a3a95e",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 46,
+        "text": ">>> {x: x**2 for x in (2, 4, 6)}\n          {2: 4, 4: 16, 6: 36}\n\n          When the keys are simple strings, it is sometimes easier to specify pairs using keyword arguments:\n          >>> dict(sape=4139, guido=4127, jack=4098)\n          {'sape': 4139, 'guido': 4127, 'jack': 4098}\n\n          5.6 Looping Techniques\n\n          When looping through dictionaries, the key and corresponding value can be retrieved at the same time using the\n          items() method.\n\n          >>> knights = {'gallahad': 'the pure', 'robin': 'the brave'}\n          >>> for k, v in knights.items():\n          ...   print(k, v)\n          ...\n          gallahad the pure\n          robin the brave\n          When looping through a sequence, the position index and corresponding value can be retrieved at the same time using\n          the enumerate() function.\n\n          >>> for i, v in enumerate(['tic', 'tac', 'toe']):\n          ...   print(i, v)\n          ...\n          0 tic\n          1 tac\n          2 toe",
+        "start_char": 938,
+        "end_char": 1924,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p046",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 40,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 1924
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 9,
+        "score": 0.8327719072835515
+      },
+      {
+        "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 54,
+        "text": "'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+        "start_char": 990,
+        "end_char": 1611,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p054",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 48,
+          "chapter_title": "Modules",
+          "normalized_characters": 3746
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 10,
+        "score": 0.8324434460800699
+      }
+    ],
+    "components": {
+      "dense": [
+        {
+          "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.",
+          "start_char": 2831,
+          "end_char": 3567,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.880936953993534
+        },
+        {
+          "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+          "start_char": 1840,
+          "end_char": 2820,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8623726532015021
+        },
+        {
+          "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+          "start_char": 1679,
+          "end_char": 2410,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8560438923783431
+        },
+        {
+          "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+          "start_char": 571,
+          "end_char": 1421,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8559774842275704
+        },
+        {
+          "id": "40b1c8cb35c324e0c7f82febd58d2988f22a356f387a97e3b79d3607ea29ff1d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 61,
+          "text": "This could also be done by passing the table dictionary as keyword arguments with the ** notation.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {Jack:d}; Sjoerd: {Sjoerd:d}; Dcab: {Dcab:d}'.format(**table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678\n\n          This is particularly useful in combination with the built-in function vars(), which returns a dictionary containing\n          all local variables:\n          >>> table = {k: str(v) for k, v in vars().items()}\n          >>> message = \" \".join([f'{k}: ' + '{' + k +'};' for k in table.keys()])\n                                                              (continues on next page)",
+          "start_char": 2192,
+          "end_char": 2889,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p061",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 55,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2889
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.8520935862008595
+        },
+        {
+          "id": "44ef98b683865122f40c833e6ba12374d0def4c3c48c14891e27bb1403cd21ca",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 46,
+          "text": "Here is a small example using a dictionary:\n          >>> tel = {'jack': 4098, 'sape': 4139}\n          >>> tel['guido'] = 4127\n          >>> tel\n          {'jack': 4098, 'sape': 4139, 'guido': 4127}\n          >>> tel['jack']\n          4098\n          >>> del tel['sape']\n          >>> tel['irv'] = 4127\n          >>> tel\n          {'jack': 4098, 'guido': 4127, 'irv': 4127}\n          >>> list(tel)\n          ['jack', 'guido', 'irv']\n          >>> sorted(tel)\n          ['guido', 'irv', 'jack']\n          >>> 'guido' in tel\n          True\n          >>> 'jack' not in tel\n          False\n          The dict() constructor builds dictionaries directly from sequences of key-value pairs:\n          >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])\n          {'sape': 4139, 'guido': 4127, 'jack': 4098}\n\n          In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:",
+          "start_char": 0,
+          "end_char": 926,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p046",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 40,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 1924
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.8385166026045932
+        },
+        {
+          "id": "6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 40,
+          "text": "list.copy()\n             Return a shallow copy of the list. Similar to a[:].\n          An example that uses most of the list methods:",
+          "start_char": 0,
+          "end_char": 133,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p040",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 34,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2354
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.8368110157960063
+        },
+        {
+          "id": "ba103d0bf4dc07e2649837f0ed56eaef4db9e438dcf6a5976120e426c877b193",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 61,
+          "text": ">>> print('The story of {0}, {1}, and {other}.'.format('Bill', 'Manfred',\n          ...                                      other='Georg'))\n          The story of Bill, Manfred, and Georg.\n          If you have a really long format string that you don’t want to split up, it would be nice if you could reference the\n          variables to be formatted by name instead of by position. This can be done by simply passing the dict and using\n          square brackets '[]' to access the keys.\n\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 8637678}\n          >>> print('Jack: {0[Jack]:d}; Sjoerd: {0[Sjoerd]:d}; '\n          ...    'Dcab: {0[Dcab]:d}'.format(table))\n          Jack: 4098; Sjoerd: 4127; Dcab: 8637678",
+          "start_char": 1453,
+          "end_char": 2180,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p061",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 55,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2889
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8335290650410032
+        },
+        {
+          "id": "fa794d836cae166f64bf27c0c1191c917f68308084b34c3df99eabc9b2a3a95e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 46,
+          "text": ">>> {x: x**2 for x in (2, 4, 6)}\n          {2: 4, 4: 16, 6: 36}\n\n          When the keys are simple strings, it is sometimes easier to specify pairs using keyword arguments:\n          >>> dict(sape=4139, guido=4127, jack=4098)\n          {'sape': 4139, 'guido': 4127, 'jack': 4098}\n\n          5.6 Looping Techniques\n\n          When looping through dictionaries, the key and corresponding value can be retrieved at the same time using the\n          items() method.\n\n          >>> knights = {'gallahad': 'the pure', 'robin': 'the brave'}\n          >>> for k, v in knights.items():\n          ...   print(k, v)\n          ...\n          gallahad the pure\n          robin the brave\n          When looping through a sequence, the position index and corresponding value can be retrieved at the same time using\n          the enumerate() function.\n\n          >>> for i, v in enumerate(['tic', 'tac', 'toe']):\n          ...   print(i, v)\n          ...\n          0 tic\n          1 tac\n          2 toe",
+          "start_char": 938,
+          "end_char": 1924,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p046",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 40,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 1924
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8327719072835515
+        },
+        {
+          "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+          "start_char": 990,
+          "end_char": 1611,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8324434460800699
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": true,
+    "original_query_evidence_hit_at_3": true,
+    "actual_final_context_exact_evidence": true,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "split": "test",
+  "selection_lock_seal": "7c691f1f685824191dc9440795e8dad0c55a51ccee9798907e4538ff908c8598",
+  "trace_sha256": "2b71d61969c77e399b5a569edb1b1386b9e1364da2038771e3368a3f0e68b9bf"
+}
