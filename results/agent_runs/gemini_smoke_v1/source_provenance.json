@@ -1,0 +1,301 @@
+{
+  "benchmark_lock": {
+    "schema_version": 1,
+    "created_at": "2026-11-16T04:38:35.298917+00:00",
+    "status": "fixed_before_day7_retrieval_or_agent_tuning",
+    "source_content": {
+      "pdf_sha256": "7ed5678593803de4560b4094e4aa2e4b873bd79d65f7270acedb9e203c5a3669",
+      "pages_sha256": "40740cec8e31bb72f876f3bc24550ef5b96554783e3c7b070882754710cc5933",
+      "chunks_sha256": "5011bde177c206d43a7ee0903ade80fce1ce977cb60e782b975ad1279828882b"
+    },
+    "json_content_sha256": {
+      "dev.json": "1dc72722d246719b66683fddc27e8a91c3cc17dba119f3b6d5a98b9e499b10e0",
+      "test.json": "fd1b4347ef82cd0c7d698c6c6fd56f38caae60a731d12f8beab718364734ca04",
+      "dev_queries.json": "26bf4f6a6a9c1073d9f8628d715a265d4eacc8614365f2e06beb7b73f1210087",
+      "test_queries.json": "48a74e3352519a77e1ff14a82a29a2f484197f3202c2e5a0ff618f0dc9f7a5ca",
+      "absence_review.json": "e944ad3aed760af6e0f6774fd362aeb3c30a955e895934cf924173429293d8cc",
+      "evaluation_policy.json": "c216ac888556b1caf76f75b12e8d198488ed617e88c32594154732b9f400022e"
+    },
+    "counts": {
+      "dev_answerable": 15,
+      "dev_insufficient": 2,
+      "test_answerable": 5,
+      "test_insufficient": 2
+    },
+    "hash_method": "SHA-256 of JSON with sorted object keys, ensure_ascii=False. JSON formatting/outer line endings may vary; parsed field values and source text must not change.",
+    "seal_sha256": "4931ec72eb92568b8a5b8fbbc8734a7ff0c5f0c6b4714607fa3e4df5cd6cb14c"
+  },
+  "day6_manifest": {
+    "schema_version": 1,
+    "created_at": "2026-11-16T04:29:03.493005+00:00",
+    "stage": "day6_bridge_only; Day 7 benchmark and agent not yet complete",
+    "chunk_count": 142,
+    "source_pages": 37,
+    "dimensions": 384,
+    "day6_strategy": "C",
+    "import_identity": {
+      "db_strategy": "C",
+      "db_digest": "00646bc2983f2f455285bab520f75c33bd971309ba7d58254a879fa547c74db2",
+      "pdf_sha256": "7ed5678593803de4560b4094e4aa2e4b873bd79d65f7270acedb9e203c5a3669",
+      "pages_sha256": "8ff99b957041f4101fbf0ed6aeb170456f3fc30dc6c8c38bdd9bbd5006d1da66",
+      "dev_seed_sha256": "e902348473a63a48aee93d6f3d59c60c369fa7b6d450346eae0e396b014b22e2"
+    },
+    "model": {
+      "model_name": "intfloat/multilingual-e5-small",
+      "revision": "fd1525a9fd15316a2d503bf26ab031a61d056e98",
+      "dimensions": 384,
+      "settings": {
+        "name": "intfloat/multilingual-e5-small",
+        "revision": "fd1525a9fd15316a2d503bf26ab031a61d056e98",
+        "dimensions": 384,
+        "device": "cpu",
+        "batch_size": 16,
+        "query_prefix": "query: ",
+        "document_prefix": "passage: ",
+        "normalize_embeddings": true
+      },
+      "versions": {
+        "sentence-transformers": "5.7.0",
+        "transformers": "4.57.6",
+        "torch": "2.15.0+cpu",
+        "numpy": "2.4.6",
+        "huggingface-hub": "0.36.2"
+      },
+      "signature": "9d9c274c457bffadec184fe73b398c9725bb57c9fee932d131badc3997635301",
+      "max_tokens": 512,
+      "input_normalization": "Unicode NFKC and whitespace collapse; source text unchanged"
+    },
+    "source_pages_fingerprint": {
+      "status": "line_ending_equivalent",
+      "actual_sha256": "8ff99b957041f4101fbf0ed6aeb170456f3fc30dc6c8c38bdd9bbd5006d1da66",
+      "recorded_sha256": "60e0122a2b4975dc26dba76fa645ad3626d51d6fb7f3d4fe69b852d888bc55a9",
+      "recorded_serialization": "CRLF",
+      "note": "Only LF/CRLF record separators differ; a transformed byte hash exactly matches the recorded index hash."
+    },
+    "index_provenance": {
+      "config_sha256": "f849ffa89cd1e98cf93266a78151af5dcd256af16705a1583d8d1d33b271038d",
+      "pages_sha256": "60e0122a2b4975dc26dba76fa645ad3626d51d6fb7f3d4fe69b852d888bc55a9",
+      "pdf_sha256": "7ed5678593803de4560b4094e4aa2e4b873bd79d65f7270acedb9e203c5a3669",
+      "source_reader": "verified Step 2 pdfplumber extraction",
+      "chunker_sha256": "98010680ab8996ed9f398cbbfbb16c52560c80af885e9b8c9184b555a17f6a5d",
+      "strategy": "C",
+      "configuration": {
+        "chunking": "paragraph",
+        "max_size": 1000,
+        "metadata_filter": true
+      },
+      "model_signature": "9d9c274c457bffadec184fe73b398c9725bb57c9fee932d131badc3997635301",
+      "model_name": "intfloat/multilingual-e5-small",
+      "model_revision": "fd1525a9fd15316a2d503bf26ab031a61d056e98",
+      "dimensions": 384,
+      "metric": "cosine",
+      "search": "exact",
+      "chunk_count": 142
+    },
+    "database_versions": {
+      "postgres": "16.16 (Debian 16.16-1.pgdg12+1)",
+      "pgvector": "0.8.7"
+    },
+    "source_manifest": {
+      "source_id": "python_tutorial_3_12_11",
+      "title": "Python Tutorial",
+      "version": "3.12.11",
+      "publication_date": "2025-09-29",
+      "source_path_or_url": "https://docs.python.org/3.12/archives/python-3.12-docs-pdf-a4.zip",
+      "local_path": "data/raw/tutorial.pdf",
+      "sha256": "7ed5678593803de4560b4094e4aa2e4b873bd79d65f7270acedb9e203c5a3669",
+      "accessed_at": "2026-11-14",
+      "access_note": "User-supplied PDF inspected on this date.",
+      "physical_pages": 161,
+      "counted_content_pages": 37,
+      "counted_pdf_pages": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "counting_rule": "Count each physical PDF page in chapters 5-8 containing useful content; exclude page 58 (running header/footer only). Other chapters are outside the chosen scope. Cover, contents, index and license pages are not counted.",
+      "page_numbering": "page is 1-based physical PDF page; printed_page = page - 6 within this selection.",
+      "license_or_permission": "PSF License Version 2; documentation examples additionally Zero-Clause BSD. Retain the unchanged original PDF and its notices (PDF pages 139-158).",
+      "metadata_filter": {
+        "field": "chapter",
+        "type": "integer",
+        "values": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "provenance": "Chapter headings verified at PDF pages 39, 49, 59 and 67.",
+        "usage": "Apply only when the question explicitly supplies a chapter scope; never derive it from gold evidence."
+      },
+      "extraction": {
+        "library": "pdfplumber",
+        "version": "0.11.9",
+        "options": {
+          "x_tolerance": 1,
+          "layout": true
+        },
+        "normalization": "NFKC; remove known decorative Note/Warning/See-also icon glyphs; trim trailing whitespace; remove running header/footer; reduce repeated blank lines; preserve indentation.",
+        "limitations": "PDF code layout and wrapped lines may remain imperfect. Check each benchmark evidence quote against the PDF. No OCR used."
+      },
+      "total_normalized_characters": 101286
+    },
+    "source_resolution": {
+      "original_path_base": "Day 6 starter folder",
+      "source_mapping": {
+        "data/raw/tutorial.pdf": "data/day6/source/tutorial.pdf"
+      }
+    },
+    "dev_seed_questions": 15,
+    "dev_gold_coverage": [
+      {
+        "question_id": "D01",
+        "single_chunk_gold_available": true,
+        "covering_chunk_ids": [
+          "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c"
+        ]
+      },
+      {
+        "question_id": "D02",
+        "single_chunk_gold_available": true,
+        "covering_chunk_ids": [
+          "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3"
+        ]
+      },
+      {
+        "question_id": "D03",
+        "single_chunk_gold_available": true,
+        "covering_chunk_ids": [
+          "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3"
+        ]
+      },
+      {
+        "question_id": "D04",
+        "single_chunk_gold_available": true,
+        "covering_chunk_ids": [
+          "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6"
+        ]
+      },
+      {
+        "question_id": "D05",
+        "single_chunk_gold_available": true,
+        "covering_chunk_ids": [
+          "600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b"
+        ]
+      },
+      {
+        "question_id": "D06",
+        "single_chunk_gold_available": true,
+        "covering_chunk_ids": [
+          "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf"
+        ]
+      },
+      {
+        "question_id": "D07",
+        "single_chunk_gold_available": true,
+        "covering_chunk_ids": [
+          "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd"
+        ]
+      },
+      {
+        "question_id": "D08",
+        "single_chunk_gold_available": true,
+        "covering_chunk_ids": [
+          "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041"
+        ]
+      },
+      {
+        "question_id": "D09",
+        "single_chunk_gold_available": true,
+        "covering_chunk_ids": [
+          "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041"
+        ]
+      },
+      {
+        "question_id": "D10",
+        "single_chunk_gold_available": true,
+        "covering_chunk_ids": [
+          "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c"
+        ]
+      },
+      {
+        "question_id": "D11",
+        "single_chunk_gold_available": true,
+        "covering_chunk_ids": [
+          "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588"
+        ]
+      },
+      {
+        "question_id": "D12",
+        "single_chunk_gold_available": true,
+        "covering_chunk_ids": [
+          "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30"
+        ]
+      },
+      {
+        "question_id": "D13",
+        "single_chunk_gold_available": true,
+        "covering_chunk_ids": [
+          "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f"
+        ]
+      },
+      {
+        "question_id": "D14",
+        "single_chunk_gold_available": true,
+        "covering_chunk_ids": [
+          "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f"
+        ]
+      },
+      {
+        "question_id": "D15",
+        "single_chunk_gold_available": true,
+        "covering_chunk_ids": [
+          "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba"
+        ]
+      }
+    ],
+    "benchmark_note": "Only Day 6 dev is imported. Add two insufficient-evidence dev cases and build a fresh 7-case Day 7 test set before retrieval tuning. No Day 6 test questions imported.",
+    "database_access": "One REPEATABLE READ, READ ONLY transaction; no INSERT/UPDATE/DELETE/DDL.",
+    "vector_note": "Stored vectors remain in pgvector. They were read as text solely to verify the historical snapshot digest, not exported or regenerated.",
+    "files_sha256": {
+      "chunks.json": "8a0f117ac06629f9c1d6afa53835621733d51bef7acf7e9100cc178a64f40374",
+      "dev_seed_questions.json": "ac2e11a894140baa7d73d51a2f1a6206724d0b9484e3b92b8535800dc402a4e7",
+      "pages.jsonl": "8ff99b957041f4101fbf0ed6aeb170456f3fc30dc6c8c38bdd9bbd5006d1da66",
+      "source/tutorial.pdf": "7ed5678593803de4560b4094e4aa2e4b873bd79d65f7270acedb9e203c5a3669"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "created_at": "2026-11-16T05:31:45.137695+00:00",
+  "status": "partial_resume_required",
+  "split": "dev",
+  "configurations": {
+    "hybrid_base": {
+      "method": "hybrid_rrf",
+      "completed_cases": 0,
+      "expected_cases": 1,
+      "completed_answerable_cases": 0,
+      "completed_insufficient_cases": 0,
+      "provisional_exact_evidence_metrics_on_completed_answerable_cases": {
+        "original_query_hit_at_1": {
+          "numerator": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "original_query_evidence_hit_at_3": {
+          "numerator": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "actual_final_context_exact_evidence": {
+          "numerator": 0,
+          "denominator": 0,
+          "rate": null
+        }
+      },
+      "statuses": {
+        "answered": 0,
+        "abstain": 0
+      },
+      "successful_search_calls": 0,
+      "model_decisions": 0,
+      "median_uncached_end_to_end_excluding_pacing_ms": null,
+      "uncached_latency_cases": 0,
+      "grounded_answer_grade": null,
+      "citation_support": null,
+      "correct_abstentions": null,
+      "review_status": "pending; output status is not a correctness judgment"
+    }
+  },
+  "successful_api_responses": 0,
+  "api_attempts_started": 1,
+  "api_failures": 1,
+  "api_error_events": [
+    {
+      "event": "attempt_failed",
+      "at": "2026-11-16T05:31:45.110162+00:00",
+      "request_id": "a3c759acc7e90e1a65dc26cf32f256033433498b8d3ef6a7092c761292dcfd85",
+      "http_status": 404,
+      "error": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "network_seconds": 8.296999999998661,
+      "usage_metadata": null
+    }
+  ],
+  "observed_successful_response_usage": {},
+  "missing_usage_responses": 0,
+  "unpaired_attempt_starts": 0,
+  "cost": {
+    "estimated_paid_api_cost_usd": 0,
+    "actual_billed_cost_usd": null,
+    "basis": "Free-tier declaration; verify project tier/usage in AI Studio. API responses do not prove billing tier. Failed/interrupted requests may have unknown token usage."
+  },
+  "configuration_selected": false,
+  "test_run": false,
+  "limitations": [
+    "Automatic exact evidence is provisional and may miss equivalent support.",
+    "No human answer/citation/abstention judgments are inferred.",
+    "Summary metrics use completed answerable cases only; partial runs are not full-dev comparisons.",
+    "API response caching supports recovery, not independent repeated model trials.",
+    "Pacing is reported separately. Resumed cases are excluded from uncached latency summaries.",
+    "Provider model aliases and free quotas can change; resolved modelVersion is checked."
+  ]
+}

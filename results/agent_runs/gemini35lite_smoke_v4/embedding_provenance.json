@@ -1,0 +1,34 @@
+{
+  "model_name": "intfloat/multilingual-e5-small",
+  "revision": "fd1525a9fd15316a2d503bf26ab031a61d056e98",
+  "dimensions": 384,
+  "settings": {
+    "name": "intfloat/multilingual-e5-small",
+    "revision": "fd1525a9fd15316a2d503bf26ab031a61d056e98",
+    "dimensions": 384,
+    "device": "cpu",
+    "batch_size": 16,
+    "query_prefix": "query: ",
+    "document_prefix": "passage: ",
+    "normalize_embeddings": true
+  },
+  "versions": {
+    "sentence-transformers": "5.7.0",
+    "transformers": "4.57.6",
+    "torch": "2.15.0+cpu",
+    "numpy": "2.4.6",
+    "huggingface-hub": "0.36.2"
+  },
+  "signature": "9d9c274c457bffadec184fe73b398c9725bb57c9fee932d131badc3997635301",
+  "max_tokens": 512,
+  "input_normalization": "Unicode NFKC and whitespace collapse; source text unchanged",
+  "verified_runtime_signature": "9d9c274c457bffadec184fe73b398c9725bb57c9fee932d131badc3997635301",
+  "query_cache_hits": 1,
+  "new_query_vectors": 1,
+  "query_token_counts": {
+    "42a63a679a946d405d5d435a75badaa5fa534bcb10fe2bb6efba4778d7ab0c09": 19,
+    "a334e19c732ef0db5384f058f10a5a5157bc66844991d188b546aa0f01161a3c": 17
+  },
+  "max_query_tokens": 512,
+  "paid_api_cost_usd": 0
+}

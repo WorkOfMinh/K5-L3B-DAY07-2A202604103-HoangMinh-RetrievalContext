@@ -1,0 +1,69 @@
+{
+  "created_at": "2026-11-16T06:06:34.670560+00:00",
+  "status": "complete_pending_semantic_audit",
+  "split": "dev",
+  "configurations": {
+    "hybrid_base": {
+      "method": "hybrid_rrf",
+      "completed_cases": 1,
+      "expected_cases": 1,
+      "completed_answerable_cases": 1,
+      "completed_insufficient_cases": 0,
+      "provisional_exact_evidence_metrics_on_completed_answerable_cases": {
+        "original_query_hit_at_1": {
+          "numerator": 1,
+          "denominator": 1,
+          "rate": 1.0
+        },
+        "original_query_evidence_hit_at_3": {
+          "numerator": 1,
+          "denominator": 1,
+          "rate": 1.0
+        },
+        "actual_final_context_exact_evidence": {
+          "numerator": 1,
+          "denominator": 1,
+          "rate": 1.0
+        }
+      },
+      "statuses": {
+        "answered": 0,
+        "abstain": 1
+      },
+      "successful_search_calls": 1,
+      "model_decisions": 2,
+      "median_uncached_end_to_end_excluding_pacing_ms": 2423.4123999995063,
+      "uncached_latency_cases": 1,
+      "grounded_answer_grade": null,
+      "citation_support": null,
+      "correct_abstentions": null,
+      "review_status": "pending; output status is not a correctness judgment"
+    }
+  },
+  "successful_api_responses": 2,
+  "api_attempts_started": 2,
+  "api_failures": 0,
+  "api_error_events": [],
+  "observed_successful_response_usage": {
+    "promptTokenCount": 2156,
+    "candidatesTokenCount": 142,
+    "totalTokenCount": 2298
+  },
+  "missing_usage_responses": 0,
+  "unpaired_attempt_starts": 0,
+  "cost": {
+    "estimated_paid_api_cost_usd": 0,
+    "actual_billed_cost_usd": null,
+    "basis": "Free-tier declaration; verify project tier/usage in AI Studio. API responses do not prove billing tier. Failed/interrupted requests may have unknown token usage."
+  },
+  "configuration_selected": false,
+  "test_run": false,
+  "limitations": [
+    "Automatic exact evidence is provisional and may miss equivalent support.",
+    "No human answer/citation/abstention judgments are inferred.",
+    "Summary metrics use completed answerable cases only; partial runs are not full-dev comparisons.",
+    "API response caching supports recovery, not independent repeated model trials.",
+    "Pacing is reported separately. Resumed cases are excluded from uncached latency summaries.",
+    "Provider model aliases and free quotas can change; resolved modelVersion is checked."
+  ]
+}

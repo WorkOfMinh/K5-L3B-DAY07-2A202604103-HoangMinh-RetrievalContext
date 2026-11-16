@@ -1,0 +1,106 @@
+{
+  "created_at": "2026-11-16T05:59:16.666403+00:00",
+  "status": "partial_resume_required",
+  "split": "dev",
+  "configurations": {
+    "hybrid_base": {
+      "method": "hybrid_rrf",
+      "completed_cases": 0,
+      "expected_cases": 1,
+      "completed_answerable_cases": 0,
+      "completed_insufficient_cases": 0,
+      "provisional_exact_evidence_metrics_on_completed_answerable_cases": {
+        "original_query_hit_at_1": {
+          "numerator": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "original_query_evidence_hit_at_3": {
+          "numerator": 0,
+          "denominator": 0,
+          "rate": null
+        },
+        "actual_final_context_exact_evidence": {
+          "numerator": 0,
+          "denominator": 0,
+          "rate": null
+        }
+      },
+      "statuses": {
+        "answered": 0,
+        "abstain": 0
+      },
+      "successful_search_calls": 0,
+      "model_decisions": 0,
+      "median_uncached_end_to_end_excluding_pacing_ms": null,
+      "uncached_latency_cases": 0,
+      "grounded_answer_grade": null,
+      "citation_support": null,
+      "correct_abstentions": null,
+      "review_status": "pending; output status is not a correctness judgment"
+    }
+  },
+  "successful_api_responses": 1,
+  "api_attempts_started": 5,
+  "api_failures": 4,
+  "api_error_events": [
+    {
+      "event": "attempt_failed",
+      "at": "2026-11-16T05:46:50.102912+00:00",
+      "request_id": "e426ac5895adca5d5034fdf1e524a88c06397fec1d7d296b4d658fc73343fb8e",
+      "http_status": 503,
+      "error": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "network_seconds": 3.125,
+      "usage_metadata": null
+    },
+    {
+      "event": "attempt_failed",
+      "at": "2026-11-16T05:50:02.120627+00:00",
+      "request_id": "e426ac5895adca5d5034fdf1e524a88c06397fec1d7d296b4d658fc73343fb8e",
+      "error": "Gemini network failure: The read operation timed out The configured socket timeout was 180s. Provider processing/usage is unknown; no automatic duplicate request was sent. Retry manually with --api-timeout 180 (or 300) and a new --experiment name when changing timeout/input settings.",
+      "network_seconds": 180.13999999999942,
+      "socket_timeout_seconds": 180.0,
+      "usage": "unknown; request may have reached provider"
+    },
+    {
+      "event": "attempt_failed",
+      "at": "2026-11-16T05:56:06.492490+00:00",
+      "request_id": "e426ac5895adca5d5034fdf1e524a88c06397fec1d7d296b4d658fc73343fb8e",
+      "http_status": 503,
+      "error": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "network_seconds": 16.67199999999866,
+      "usage_metadata": null
+    },
+    {
+      "event": "attempt_failed",
+      "at": "2026-11-16T05:59:16.632645+00:00",
+      "request_id": "e426ac5895adca5d5034fdf1e524a88c06397fec1d7d296b4d658fc73343fb8e",
+      "error": "Gemini network failure: The read operation timed out The configured socket timeout was 180s. Provider processing/usage is unknown; no automatic duplicate request was sent. Retry manually with --api-timeout 180 (or 300) and a new --experiment name when changing timeout/input settings.",
+      "network_seconds": 180.14100000000144,
+      "socket_timeout_seconds": 180.0,
+      "usage": "unknown; request may have reached provider"
+    }
+  ],
+  "observed_successful_response_usage": {
+    "promptTokenCount": 527,
+    "candidatesTokenCount": 20,
+    "totalTokenCount": 547
+  },
+  "missing_usage_responses": 0,
+  "unpaired_attempt_starts": 0,
+  "cost": {
+    "estimated_paid_api_cost_usd": 0,
+    "actual_billed_cost_usd": null,
+    "basis": "Free-tier declaration; verify project tier/usage in AI Studio. API responses do not prove billing tier. Failed/interrupted requests may have unknown token usage."
+  },
+  "configuration_selected": false,
+  "test_run": false,
+  "limitations": [
+    "Automatic exact evidence is provisional and may miss equivalent support.",
+    "No human answer/citation/abstention judgments are inferred.",
+    "Summary metrics use completed answerable cases only; partial runs are not full-dev comparisons.",
+    "API response caching supports recovery, not independent repeated model trials.",
+    "Pacing is reported separately. Resumed cases are excluded from uncached latency summaries.",
+    "Provider model aliases and free quotas can change; resolved modelVersion is checked."
+  ]
+}

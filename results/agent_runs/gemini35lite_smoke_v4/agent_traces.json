@@ -1,0 +1,1947 @@
+[
+  {
+    "status": "abstain",
+    "answer": "Insufficient verifiable cited evidence in the current context.",
+    "citations": [],
+    "reason": "Citation/context guard rejected the proposed answer.",
+    "guard": "invalid_citations",
+    "rejected_model_output": {
+      "reason": "The corpus explicitly states that list.append(x) adds an item to the end of the list.",
+      "answer": "The `append()` method adds an item to the end of a list.",
+      "citations": [
+        "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c"
+      ],
+      "abstain": false
+    },
+    "query_id": "D01",
+    "config_id": "hybrid_base",
+    "public_query": {
+      "id": "D01",
+      "question": "Which list method adds one item to the end of a list?",
+      "filter": null
+    },
+    "events": [
+      {
+        "event": "search",
+        "query": "list method adds one item to the end of a list",
+        "filter": null,
+        "method": "hybrid_rrf",
+        "ranking": [
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+            "start_char": 0,
+            "end_char": 677,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "component_ranks": {
+              "dense": 1,
+              "bm25": 1
+            },
+            "component_scores": {
+              "dense": 0.8972603205132166,
+              "bm25": 12.882264257821653
+            }
+          },
+          {
+            "id": "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 40,
+            "text": "The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.",
+            "start_char": 1571,
+            "end_char": 2354,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p040",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 34,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2354
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.031754032258064516,
+            "component_ranks": {
+              "dense": 2,
+              "bm25": 4
+            },
+            "component_scores": {
+              "dense": 0.8880258932082844,
+              "bm25": 9.677229887375283
+            }
+          },
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+            "start_char": 692,
+            "end_char": 1665,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.0315136476426799,
+            "component_ranks": {
+              "dense": 5,
+              "bm25": 2
+            },
+            "component_scores": {
+              "dense": 0.8622925702668014,
+              "bm25": 11.172970711961142
+            }
+          },
+          {
+            "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+            "start_char": 0,
+            "end_char": 559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 4,
+            "score": 0.030798389007344232,
+            "component_ranks": {
+              "dense": 3,
+              "bm25": 7
+            },
+            "component_scores": {
+              "dense": 0.8685177203683176,
+              "bm25": 8.582780339655276
+            }
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+            "start_char": 1679,
+            "end_char": 2410,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.030536130536130537,
+            "component_ranks": {
+              "dense": 6,
+              "bm25": 5
+            },
+            "component_scores": {
+              "dense": 0.8460670388817136,
+              "bm25": 9.29138094159677
+            }
+          },
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 43,
+            "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+            "start_char": 840,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p043",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 37,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2043
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 6,
+            "score": 0.03007688828584351,
+            "component_ranks": {
+              "dense": 7,
+              "bm25": 6
+            },
+            "component_scores": {
+              "dense": 0.8435648363414714,
+              "bm25": 9.005426919380367
+            }
+          },
+          {
+            "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": "is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed",
+            "start_char": 1349,
+            "end_char": 2253,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 7,
+            "score": 0.02919863597612958,
+            "component_ranks": {
+              "dense": 9,
+              "bm25": 8
+            },
+            "component_scores": {
+              "dense": 0.8385895683062651,
+              "bm25": 7.399825828811468
+            }
+          },
+          {
+            "id": "c74caaede5c383d39a86a9397cca3512c337207def63ea07107d030b9a2611ed",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 75,
+            "text": "When an exception is created in order to be raised, it is usually initialized with information that describes the error\n          that has occurred. There are cases where it is useful to add information after the exception was caught. For this\n          purpose, exceptions have a method add_note(note) that accepts a string and adds it to the exception’s notes list.\n          The standard traceback rendering includes all notes, in the order they were added, after the exception.\n          >>> try:\n          ...   raise TypeError('bad type')\n          ... except Exception as e:\n          ...   e.add_note('Add some information')\n          ...   e.add_note('Add some more information')\n          ...   raise\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 2, in <module>\n          TypeError: bad type\n          Add some information\n          Add some more information\n          >>>",
+            "start_char": 1208,
+            "end_char": 2135,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p075",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 69,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 8,
+            "score": 0.02919863597612958,
+            "component_ranks": {
+              "dense": 8,
+              "bm25": 9
+            },
+            "component_scores": {
+              "dense": 0.8421958182933573,
+              "bm25": 7.326265786953556
+            }
+          },
+          {
+            "id": "03b95daa06aa5b8c68592e5b07e1896fee279761ab2f2a2f8acd4289391bb853",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 62,
+            "text": "Here’s the same table of squares and cubes, formatted manually:\n          >>> for x in range(1, 11):\n          ...   print(repr(x).rjust(2), repr(x*x).rjust(3), end=' ')\n          ...   # Note use of 'end' on previous line\n          ...   print(repr(x*x*x).rjust(4))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          (Note that the one space between each column was added by the way print() works: it always adds spaces between\n          its arguments.)\n          The str.rjust() method of string objects right-justifies a string in a field of a given width by padding it with spaces\n          on the left. There are similar methods str.ljust() and str.center(). These methods do not write anything,",
+            "start_char": 752,
+            "end_char": 1625,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p062",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 56,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2320
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 0.015873015873015872,
+            "rank": 9,
+            "component_ranks": {
+              "bm25": 3
+            },
+            "component_scores": {
+              "bm25": 10.390464610473503
+            }
+          },
+          {
+            "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+            "start_char": 571,
+            "end_char": 1421,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 10,
+            "score": 0.015625,
+            "component_ranks": {
+              "dense": 4
+            },
+            "component_scores": {
+              "dense": 0.862355189042671
+            }
+          }
+        ],
+        "component_rankings": {
+          "dense": [
+            {
+              "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 39,
+              "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+              "start_char": 0,
+              "end_char": 677,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p039",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 33,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2410
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "rank": 1,
+              "score": 0.8972603205132166
+            },
+            {
+              "id": "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 40,
+              "text": "The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.",
+              "start_char": 1571,
+              "end_char": 2354,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p040",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 34,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2354
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "rank": 2,
+              "score": 0.8880258932082844
+            },
+            {
+              "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 41,
+              "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+              "start_char": 0,
+              "end_char": 559,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p041",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 35,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2843
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "rank": 3,
+              "score": 0.8685177203683176
+            },
+            {
+              "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 41,
+              "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+              "start_char": 571,
+              "end_char": 1421,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p041",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 35,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2843
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "rank": 4,
+              "score": 0.862355189042671
+            },
+            {
+              "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 39,
+              "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+              "start_char": 692,
+              "end_char": 1665,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p039",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 33,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2410
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "rank": 5,
+              "score": 0.8622925702668014
+            },
+            {
+              "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 39,
+              "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+              "start_char": 1679,
+              "end_char": 2410,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p039",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 33,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2410
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "rank": 6,
+              "score": 0.8460670388817136
+            },
+            {
+              "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 43,
+              "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+              "start_char": 840,
+              "end_char": 1559,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p043",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 37,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2043
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "rank": 7,
+              "score": 0.8435648363414714
+            },
+            {
+              "id": "c74caaede5c383d39a86a9397cca3512c337207def63ea07107d030b9a2611ed",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 75,
+              "text": "When an exception is created in order to be raised, it is usually initialized with information that describes the error\n          that has occurred. There are cases where it is useful to add information after the exception was caught. For this\n          purpose, exceptions have a method add_note(note) that accepts a string and adds it to the exception’s notes list.\n          The standard traceback rendering includes all notes, in the order they were added, after the exception.\n          >>> try:\n          ...   raise TypeError('bad type')\n          ... except Exception as e:\n          ...   e.add_note('Add some information')\n          ...   e.add_note('Add some more information')\n          ...   raise\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 2, in <module>\n          TypeError: bad type\n          Add some information\n          Add some more information\n          >>>",
+              "start_char": 1208,
+              "end_char": 2135,
+              "metadata": {
+                "chapter": 8,
+                "page_id": "python_tutorial_3_12_11:p075",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 69,
+                "chapter_title": "Errors and Exceptions",
+                "normalized_characters": 2544
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "rank": 8,
+              "score": 0.8421958182933573
+            },
+            {
+              "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 44,
+              "text": "is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed",
+              "start_char": 1349,
+              "end_char": 2253,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p044",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 38,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 3218
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "rank": 9,
+              "score": 0.8385895683062651
+            },
+            {
+              "id": "6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 40,
+              "text": "list.copy()\n             Return a shallow copy of the list. Similar to a[:].\n          An example that uses most of the list methods:",
+              "start_char": 0,
+              "end_char": 133,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p040",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 34,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2354
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "rank": 10,
+              "score": 0.8385482026877221
+            }
+          ],
+          "bm25": [
+            {
+              "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 39,
+              "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+              "start_char": 0,
+              "end_char": 677,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p039",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 33,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2410
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "score": 12.882264257821653,
+              "rank": 1
+            },
+            {
+              "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 39,
+              "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+              "start_char": 692,
+              "end_char": 1665,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p039",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 33,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2410
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "score": 11.172970711961142,
+              "rank": 2
+            },
+            {
+              "id": "03b95daa06aa5b8c68592e5b07e1896fee279761ab2f2a2f8acd4289391bb853",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 62,
+              "text": "Here’s the same table of squares and cubes, formatted manually:\n          >>> for x in range(1, 11):\n          ...   print(repr(x).rjust(2), repr(x*x).rjust(3), end=' ')\n          ...   # Note use of 'end' on previous line\n          ...   print(repr(x*x*x).rjust(4))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          (Note that the one space between each column was added by the way print() works: it always adds spaces between\n          its arguments.)\n          The str.rjust() method of string objects right-justifies a string in a field of a given width by padding it with spaces\n          on the left. There are similar methods str.ljust() and str.center(). These methods do not write anything,",
+              "start_char": 752,
+              "end_char": 1625,
+              "metadata": {
+                "chapter": 7,
+                "page_id": "python_tutorial_3_12_11:p062",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 56,
+                "chapter_title": "Input and Output",
+                "normalized_characters": 2320
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "score": 10.390464610473503,
+              "rank": 3
+            },
+            {
+              "id": "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 40,
+              "text": "The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.",
+              "start_char": 1571,
+              "end_char": 2354,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p040",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 34,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2354
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "score": 9.677229887375283,
+              "rank": 4
+            },
+            {
+              "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 39,
+              "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+              "start_char": 1679,
+              "end_char": 2410,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p039",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 33,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2410
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "score": 9.29138094159677,
+              "rank": 5
+            },
+            {
+              "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 43,
+              "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+              "start_char": 840,
+              "end_char": 1559,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p043",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 37,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2043
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "score": 9.005426919380367,
+              "rank": 6
+            },
+            {
+              "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 41,
+              "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+              "start_char": 0,
+              "end_char": 559,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p041",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 35,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2843
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "score": 8.582780339655276,
+              "rank": 7
+            },
+            {
+              "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 44,
+              "text": "is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed",
+              "start_char": 1349,
+              "end_char": 2253,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p044",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 38,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 3218
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "score": 7.399825828811468,
+              "rank": 8
+            },
+            {
+              "id": "c74caaede5c383d39a86a9397cca3512c337207def63ea07107d030b9a2611ed",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 75,
+              "text": "When an exception is created in order to be raised, it is usually initialized with information that describes the error\n          that has occurred. There are cases where it is useful to add information after the exception was caught. For this\n          purpose, exceptions have a method add_note(note) that accepts a string and adds it to the exception’s notes list.\n          The standard traceback rendering includes all notes, in the order they were added, after the exception.\n          >>> try:\n          ...   raise TypeError('bad type')\n          ... except Exception as e:\n          ...   e.add_note('Add some information')\n          ...   e.add_note('Add some more information')\n          ...   raise\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 2, in <module>\n          TypeError: bad type\n          Add some information\n          Add some more information\n          >>>",
+              "start_char": 1208,
+              "end_char": 2135,
+              "metadata": {
+                "chapter": 8,
+                "page_id": "python_tutorial_3_12_11:p075",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 69,
+                "chapter_title": "Errors and Exceptions",
+                "normalized_characters": 2544
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "score": 7.326265786953556,
+              "rank": 9
+            },
+            {
+              "id": "ee9be82da595de430c1312e64c2408b3d253a5c37115dafb5a4d46fd67700077",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 55,
+              "text": "Note that when using from package import item, the item can be either a submodule (or subpackage) of the\n          package, or some other name defined in the package, like a function, class or variable. The import statement first\n          tests whether the item is defined in the package; if not, it assumes it is a module and attempts to load it. If it fails to\n          find it, an ImportError exception is raised.\n          Contrarily, when using syntax like import item.subitem.subsubitem, each item except for the last must be a\n          package; the last item can be a module or a package but can’t be a class or function or variable defined in the previous\n          item.",
+              "start_char": 1738,
+              "end_char": 2420,
+              "metadata": {
+                "chapter": 6,
+                "page_id": "python_tutorial_3_12_11:p055",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 49,
+                "chapter_title": "Modules",
+                "normalized_characters": 3544
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "score": 6.730743021494991,
+              "rank": 10
+            }
+          ]
+        },
+        "context": {
+          "text": "[2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nCHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)\n\n[34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac | source=data/raw/tutorial.pdf | PDF page=40 | chapter=5]\nThe list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.\n\n[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+          "chunk_ids": [
+            "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+            "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3"
+          ],
+          "characters": 2809,
+          "budget_chars": 3500,
+          "max_chunks": 3,
+          "selected_chunks": [
+            {
+              "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 39,
+              "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+              "start_char": 0,
+              "end_char": 677,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p039",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 33,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2410
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "rank": 1,
+              "score": 0.03278688524590164,
+              "component_ranks": {
+                "dense": 1,
+                "bm25": 1
+              },
+              "component_scores": {
+                "dense": 0.8972603205132166,
+                "bm25": 12.882264257821653
+              }
+            },
+            {
+              "id": "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 40,
+              "text": "The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.",
+              "start_char": 1571,
+              "end_char": 2354,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p040",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 34,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2354
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "rank": 2,
+              "score": 0.031754032258064516,
+              "component_ranks": {
+                "dense": 2,
+                "bm25": 4
+              },
+              "component_scores": {
+                "dense": 0.8880258932082844,
+                "bm25": 9.677229887375283
+              }
+            },
+            {
+              "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 39,
+              "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+              "start_char": 692,
+              "end_char": 1665,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p039",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 33,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2410
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "rank": 3,
+              "score": 0.0315136476426799,
+              "component_ranks": {
+                "dense": 5,
+                "bm25": 2
+              },
+              "component_scores": {
+                "dense": 0.8622925702668014,
+                "bm25": 11.172970711961142
+              }
+            }
+          ],
+          "excluded": [
+            {
+              "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+              "reason": "max_chunks"
+            },
+            {
+              "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+              "reason": "max_chunks"
+            },
+            {
+              "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+              "reason": "max_chunks"
+            },
+            {
+              "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+              "reason": "max_chunks"
+            },
+            {
+              "id": "c74caaede5c383d39a86a9397cca3512c337207def63ea07107d030b9a2611ed",
+              "reason": "max_chunks"
+            },
+            {
+              "id": "03b95daa06aa5b8c68592e5b07e1896fee279761ab2f2a2f8acd4289391bb853",
+              "reason": "max_chunks"
+            },
+            {
+              "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+              "reason": "max_chunks"
+            }
+          ],
+          "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+        },
+        "search_and_pack_seconds": 0.2229776000003767
+      }
+    ],
+    "model_calls": [
+      {
+        "request_id": "a32185a1a45df3a51eb487376cf0c1fa98c0e6295e42554f46a4f3c49919bc2c",
+        "request_sha256": "df09178d70180fb049367e73f432cac86dfc9c829d056bb132ec8072c15bbdd6",
+        "response_id": "WZ36ar3KGZ3WrfcP5cOO6QM",
+        "model_version": "gemini-3.5-flash-lite",
+        "usage_metadata": {
+          "promptTokenCount": 527,
+          "candidatesTokenCount": 24,
+          "totalTokenCount": 551,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 527
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "network_seconds": 0.9530000000013388,
+        "reused_checkpoint": false,
+        "context_sent": {
+          "text": "",
+          "chunk_ids": [],
+          "characters": 0,
+          "budget_chars": 3500,
+          "max_chunks": 3,
+          "selected_chunks": [],
+          "excluded": [],
+          "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+        },
+        "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+      },
+      {
+        "request_id": "c7914f6cd13ed8212efb8ec6ca90099f56e402fc7312165b3b0eb42727843c0d",
+        "request_sha256": "d4f6f5a40ac0443ffa7368ea1552ebdb9ecaa312df929e0acae626df9423f4d2",
+        "response_id": "aJ36at3jJfH_1e8P0qK6mAU",
+        "model_version": "gemini-3.5-flash-lite",
+        "usage_metadata": {
+          "promptTokenCount": 1629,
+          "candidatesTokenCount": 118,
+          "totalTokenCount": 1747,
+          "promptTokensDetails": [
+            {
+              "modality": "TEXT",
+              "tokenCount": 1629
+            }
+          ],
+          "serviceTier": "standard"
+        },
+        "network_seconds": 1.2340000000003783,
+        "reused_checkpoint": false,
+        "context_sent": {
+          "text": "[2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nCHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)\n\n[34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac | source=data/raw/tutorial.pdf | PDF page=40 | chapter=5]\nThe list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.\n\n[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+          "chunk_ids": [
+            "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+            "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3"
+          ],
+          "characters": 2809,
+          "budget_chars": 3500,
+          "max_chunks": 3,
+          "selected_chunks": [
+            {
+              "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 39,
+              "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+              "start_char": 0,
+              "end_char": 677,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p039",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 33,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2410
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "rank": 1,
+              "score": 0.03278688524590164,
+              "component_ranks": {
+                "dense": 1,
+                "bm25": 1
+              },
+              "component_scores": {
+                "dense": 0.8972603205132166,
+                "bm25": 12.882264257821653
+              }
+            },
+            {
+              "id": "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 40,
+              "text": "The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.",
+              "start_char": 1571,
+              "end_char": 2354,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p040",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 34,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2354
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "rank": 2,
+              "score": 0.031754032258064516,
+              "component_ranks": {
+                "dense": 2,
+                "bm25": 4
+              },
+              "component_scores": {
+                "dense": 0.8880258932082844,
+                "bm25": 9.677229887375283
+              }
+            },
+            {
+              "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+              "source_id": "python_tutorial_3_12_11",
+              "source": "data/raw/tutorial.pdf",
+              "page": 39,
+              "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+              "start_char": 692,
+              "end_char": 1665,
+              "metadata": {
+                "chapter": 5,
+                "page_id": "python_tutorial_3_12_11:p039",
+                "version": "3.12.11",
+                "language": "en",
+                "printed_page": 33,
+                "chapter_title": "Data Structures",
+                "normalized_characters": 2410
+              },
+              "local_source_path": "data/day6/source/tutorial.pdf",
+              "rank": 3,
+              "score": 0.0315136476426799,
+              "component_ranks": {
+                "dense": 5,
+                "bm25": 2
+              },
+              "component_scores": {
+                "dense": 0.8622925702668014,
+                "bm25": 11.172970711961142
+              }
+            }
+          ],
+          "excluded": [
+            {
+              "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+              "reason": "max_chunks"
+            },
+            {
+              "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+              "reason": "max_chunks"
+            },
+            {
+              "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+              "reason": "max_chunks"
+            },
+            {
+              "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+              "reason": "max_chunks"
+            },
+            {
+              "id": "c74caaede5c383d39a86a9397cca3512c337207def63ea07107d030b9a2611ed",
+              "reason": "max_chunks"
+            },
+            {
+              "id": "03b95daa06aa5b8c68592e5b07e1896fee279761ab2f2a2f8acd4289391bb853",
+              "reason": "max_chunks"
+            },
+            {
+              "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+              "reason": "max_chunks"
+            }
+          ],
+          "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+        },
+        "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+      }
+    ],
+    "final_context": {
+      "text": "[2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nCHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)\n\n[34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac | source=data/raw/tutorial.pdf | PDF page=40 | chapter=5]\nThe list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.\n\n[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+      "chunk_ids": [
+        "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+        "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+        "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3"
+      ],
+      "characters": 2809,
+      "budget_chars": 3500,
+      "max_chunks": 3,
+      "selected_chunks": [
+        {
+          "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+          "start_char": 0,
+          "end_char": 677,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.03278688524590164,
+          "component_ranks": {
+            "dense": 1,
+            "bm25": 1
+          },
+          "component_scores": {
+            "dense": 0.8972603205132166,
+            "bm25": 12.882264257821653
+          }
+        },
+        {
+          "id": "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 40,
+          "text": "The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.",
+          "start_char": 1571,
+          "end_char": 2354,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p040",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 34,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2354
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.031754032258064516,
+          "component_ranks": {
+            "dense": 2,
+            "bm25": 4
+          },
+          "component_scores": {
+            "dense": 0.8880258932082844,
+            "bm25": 9.677229887375283
+          }
+        },
+        {
+          "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+          "start_char": 692,
+          "end_char": 1665,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.0315136476426799,
+          "component_ranks": {
+            "dense": 5,
+            "bm25": 2
+          },
+          "component_scores": {
+            "dense": 0.8622925702668014,
+            "bm25": 11.172970711961142
+          }
+        }
+      ],
+      "excluded": [
+        {
+          "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "c74caaede5c383d39a86a9397cca3512c337207def63ea07107d030b9a2611ed",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "03b95daa06aa5b8c68592e5b07e1896fee279761ab2f2a2f8acd4289391bb853",
+          "reason": "max_chunks"
+        },
+        {
+          "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+          "reason": "max_chunks"
+        }
+      ],
+      "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+    },
+    "search_calls": 1,
+    "generated_search_queries": [
+      "list method adds one item to the end of a list"
+    ],
+    "timing": {
+      "wall_seconds_this_invocation": 16.236412399999608,
+      "pacing_seconds_this_invocation": 13.813000000000102,
+      "wall_seconds_excluding_pacing": 2.4234123999995063,
+      "reused_api_checkpoints": false,
+      "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+    },
+    "evaluation_only": {
+      "answerable": true,
+      "gold": [
+        {
+          "source_id": "python_tutorial_3_12_11",
+          "page": 39,
+          "evidence": "list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x]."
+        }
+      ],
+      "expected_answer": "Use list.append(x).",
+      "absence_reason": null,
+      "note": "Attached after the model run. Never passed to controller or search."
+    },
+    "original_query_retrieval": {
+      "method": "hybrid_rrf",
+      "query": "Which list method adds one item to the end of a list?",
+      "filter": null,
+      "ranking": [
+        {
+          "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+          "start_char": 0,
+          "end_char": 677,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.03278688524590164,
+          "component_ranks": {
+            "dense": 1,
+            "bm25": 1
+          },
+          "component_scores": {
+            "dense": 0.8783731388076046,
+            "bm25": 12.882264257821653
+          }
+        },
+        {
+          "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+          "start_char": 692,
+          "end_char": 1665,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.03200204813108039,
+          "component_ranks": {
+            "dense": 3,
+            "bm25": 2
+          },
+          "component_scores": {
+            "dense": 0.8431473532152793,
+            "bm25": 12.205506831529451
+          }
+        },
+        {
+          "id": "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 40,
+          "text": "The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.",
+          "start_char": 1571,
+          "end_char": 2354,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p040",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 34,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2354
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.03200204813108039,
+          "component_ranks": {
+            "dense": 2,
+            "bm25": 3
+          },
+          "component_scores": {
+            "dense": 0.8734681530873882,
+            "bm25": 10.905200989558695
+          }
+        },
+        {
+          "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+          "start_char": 0,
+          "end_char": 559,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.030776515151515152,
+          "component_ranks": {
+            "dense": 4,
+            "bm25": 6
+          },
+          "component_scores": {
+            "dense": 0.8416979312896788,
+            "bm25": 9.889699059945022
+          }
+        },
+        {
+          "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 43,
+          "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+          "start_char": 840,
+          "end_char": 1559,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p043",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 37,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2043
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.030330882352941176,
+          "component_ranks": {
+            "dense": 8,
+            "bm25": 4
+          },
+          "component_scores": {
+            "dense": 0.8282276391983091,
+            "bm25": 10.676508987174673
+          }
+        },
+        {
+          "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+          "start_char": 1679,
+          "end_char": 2410,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.03007688828584351,
+          "component_ranks": {
+            "dense": 6,
+            "bm25": 7
+          },
+          "component_scores": {
+            "dense": 0.8314365744590818,
+            "bm25": 9.29138094159677
+          }
+        },
+        {
+          "id": "c74caaede5c383d39a86a9397cca3512c337207def63ea07107d030b9a2611ed",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 75,
+          "text": "When an exception is created in order to be raised, it is usually initialized with information that describes the error\n          that has occurred. There are cases where it is useful to add information after the exception was caught. For this\n          purpose, exceptions have a method add_note(note) that accepts a string and adds it to the exception’s notes list.\n          The standard traceback rendering includes all notes, in the order they were added, after the exception.\n          >>> try:\n          ...   raise TypeError('bad type')\n          ... except Exception as e:\n          ...   e.add_note('Add some information')\n          ...   e.add_note('Add some more information')\n          ...   raise\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 2, in <module>\n          TypeError: bad type\n          Add some information\n          Add some more information\n          >>>",
+          "start_char": 1208,
+          "end_char": 2135,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p075",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 69,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.029418126757516764,
+          "component_ranks": {
+            "dense": 7,
+            "bm25": 9
+          },
+          "component_scores": {
+            "dense": 0.8302993572115132,
+            "bm25": 7.326265786953556
+          }
+        },
+        {
+          "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 44,
+          "text": "is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed",
+          "start_char": 1349,
+          "end_char": 2253,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p044",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 38,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3218
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.02919863597612958,
+          "component_ranks": {
+            "dense": 9,
+            "bm25": 8
+          },
+          "component_scores": {
+            "dense": 0.8211807502019867,
+            "bm25": 8.499382241135137
+          }
+        },
+        {
+          "id": "03b95daa06aa5b8c68592e5b07e1896fee279761ab2f2a2f8acd4289391bb853",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 62,
+          "text": "Here’s the same table of squares and cubes, formatted manually:\n          >>> for x in range(1, 11):\n          ...   print(repr(x).rjust(2), repr(x*x).rjust(3), end=' ')\n          ...   # Note use of 'end' on previous line\n          ...   print(repr(x*x*x).rjust(4))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          (Note that the one space between each column was added by the way print() works: it always adds spaces between\n          its arguments.)\n          The str.rjust() method of string objects right-justifies a string in a field of a given width by padding it with spaces\n          on the left. There are similar methods str.ljust() and str.center(). These methods do not write anything,",
+          "start_char": 752,
+          "end_char": 1625,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p062",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 56,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2320
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 0.015384615384615385,
+          "rank": 9,
+          "component_ranks": {
+            "bm25": 5
+          },
+          "component_scores": {
+            "bm25": 10.390464610473503
+          }
+        },
+        {
+          "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+          "start_char": 571,
+          "end_char": 1421,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.015384615384615385,
+          "component_ranks": {
+            "dense": 5
+          },
+          "component_scores": {
+            "dense": 0.8416191841136937
+          }
+        }
+      ],
+      "components": {
+        "dense": [
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+            "start_char": 0,
+            "end_char": 677,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8783731388076046
+          },
+          {
+            "id": "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 40,
+            "text": "The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.",
+            "start_char": 1571,
+            "end_char": 2354,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p040",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 34,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2354
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8734681530873882
+          },
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+            "start_char": 692,
+            "end_char": 1665,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8431473532152793
+          },
+          {
+            "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+            "start_char": 0,
+            "end_char": 559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 4,
+            "score": 0.8416979312896788
+          },
+          {
+            "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+            "start_char": 571,
+            "end_char": 1421,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.8416191841136937
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+            "start_char": 1679,
+            "end_char": 2410,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 6,
+            "score": 0.8314365744590818
+          },
+          {
+            "id": "c74caaede5c383d39a86a9397cca3512c337207def63ea07107d030b9a2611ed",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 75,
+            "text": "When an exception is created in order to be raised, it is usually initialized with information that describes the error\n          that has occurred. There are cases where it is useful to add information after the exception was caught. For this\n          purpose, exceptions have a method add_note(note) that accepts a string and adds it to the exception’s notes list.\n          The standard traceback rendering includes all notes, in the order they were added, after the exception.\n          >>> try:\n          ...   raise TypeError('bad type')\n          ... except Exception as e:\n          ...   e.add_note('Add some information')\n          ...   e.add_note('Add some more information')\n          ...   raise\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 2, in <module>\n          TypeError: bad type\n          Add some information\n          Add some more information\n          >>>",
+            "start_char": 1208,
+            "end_char": 2135,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p075",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 69,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 7,
+            "score": 0.8302993572115132
+          },
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 43,
+            "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+            "start_char": 840,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p043",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 37,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2043
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 8,
+            "score": 0.8282276391983091
+          },
+          {
+            "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": "is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed",
+            "start_char": 1349,
+            "end_char": 2253,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 9,
+            "score": 0.8211807502019867
+          },
+          {
+            "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 55,
+            "text": "The only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+            "start_char": 2881,
+            "end_char": 3544,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p055",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 49,
+              "chapter_title": "Modules",
+              "normalized_characters": 3544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 10,
+            "score": 0.8182838450839441
+          }
+        ],
+        "bm25": [
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+            "start_char": 0,
+            "end_char": 677,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 12.882264257821653,
+            "rank": 1
+          },
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+            "start_char": 692,
+            "end_char": 1665,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 12.205506831529451,
+            "rank": 2
+          },
+          {
+            "id": "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 40,
+            "text": "The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.",
+            "start_char": 1571,
+            "end_char": 2354,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p040",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 34,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2354
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 10.905200989558695,
+            "rank": 3
+          },
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 43,
+            "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+            "start_char": 840,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p043",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 37,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2043
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 10.676508987174673,
+            "rank": 4
+          },
+          {
+            "id": "03b95daa06aa5b8c68592e5b07e1896fee279761ab2f2a2f8acd4289391bb853",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 62,
+            "text": "Here’s the same table of squares and cubes, formatted manually:\n          >>> for x in range(1, 11):\n          ...   print(repr(x).rjust(2), repr(x*x).rjust(3), end=' ')\n          ...   # Note use of 'end' on previous line\n          ...   print(repr(x*x*x).rjust(4))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          (Note that the one space between each column was added by the way print() works: it always adds spaces between\n          its arguments.)\n          The str.rjust() method of string objects right-justifies a string in a field of a given width by padding it with spaces\n          on the left. There are similar methods str.ljust() and str.center(). These methods do not write anything,",
+            "start_char": 752,
+            "end_char": 1625,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p062",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 56,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2320
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 10.390464610473503,
+            "rank": 5
+          },
+          {
+            "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+            "start_char": 0,
+            "end_char": 559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 9.889699059945022,
+            "rank": 6
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+            "start_char": 1679,
+            "end_char": 2410,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 9.29138094159677,
+            "rank": 7
+          },
+          {
+            "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": "is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed",
+            "start_char": 1349,
+            "end_char": 2253,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 8.499382241135137,
+            "rank": 8
+          },
+          {
+            "id": "c74caaede5c383d39a86a9397cca3512c337207def63ea07107d030b9a2611ed",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 75,
+            "text": "When an exception is created in order to be raised, it is usually initialized with information that describes the error\n          that has occurred. There are cases where it is useful to add information after the exception was caught. For this\n          purpose, exceptions have a method add_note(note) that accepts a string and adds it to the exception’s notes list.\n          The standard traceback rendering includes all notes, in the order they were added, after the exception.\n          >>> try:\n          ...   raise TypeError('bad type')\n          ... except Exception as e:\n          ...   e.add_note('Add some information')\n          ...   e.add_note('Add some more information')\n          ...   raise\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 2, in <module>\n          TypeError: bad type\n          Add some information\n          Add some more information\n          >>>",
+            "start_char": 1208,
+            "end_char": 2135,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p075",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 69,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 7.326265786953556,
+            "rank": 9
+          },
+          {
+            "id": "ee9be82da595de430c1312e64c2408b3d253a5c37115dafb5a4d46fd67700077",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 55,
+            "text": "Note that when using from package import item, the item can be either a submodule (or subpackage) of the\n          package, or some other name defined in the package, like a function, class or variable. The import statement first\n          tests whether the item is defined in the package; if not, it assumes it is a module and attempts to load it. If it fails to\n          find it, an ImportError exception is raised.\n          Contrarily, when using syntax like import item.subitem.subsubitem, each item except for the last must be a\n          package; the last item can be a module or a package but can’t be a class or function or variable defined in the previous\n          item.",
+            "start_char": 1738,
+            "end_char": 2420,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p055",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 49,
+              "chapter_title": "Modules",
+              "normalized_characters": 3544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.730743021494991,
+            "rank": 10
+          }
+        ]
+      }
+    },
+    "automatic_provisional": {
+      "original_query_hit_at_1": true,
+      "original_query_evidence_hit_at_3": true,
+      "actual_final_context_exact_evidence": true,
+      "answer_grade": null,
+      "citation_semantic_support": null,
+      "correct_abstention": null,
+      "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+    },
+    "trace_sha256": "42bcd99d1dfa8c933405804c52ed0d27b40dd19bdfb2f191eb511b5113a0178e"
+  }
+]

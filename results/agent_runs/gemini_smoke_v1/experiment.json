@@ -1,0 +1,104 @@
+{
+  "created_at": "2026-11-16T05:31:06.587528+00:00",
+  "identity": {
+    "mode": "smoke",
+    "provider_model": "gemini-2.5-flash",
+    "agent_config": {
+      "schema_version": 1,
+      "provider": "gemini",
+      "model": "gemini-2.5-flash",
+      "endpoint": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+      "generation": {
+        "temperature": 0,
+        "candidateCount": 1,
+        "maxOutputTokens": 1536,
+        "thinkingConfig": {
+          "thinkingBudget": 0
+        }
+      },
+      "candidate_pool": 10,
+      "pricing": {
+        "basis": "User must verify project is Free tier in AI Studio. Code cannot inspect billing tier.",
+        "declared_tier": "free",
+        "estimated_paid_api_cost_usd": 0,
+        "source": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      "configurations": [
+        {
+          "id": "dense_base",
+          "method": "dense",
+          "max_searches": 2,
+          "context_chunks": 3,
+          "budget_chars": 3500,
+          "hypothesis": "Baseline semantic retrieval with bounded model-directed query rewriting."
+        },
+        {
+          "id": "bm25_base",
+          "method": "bm25",
+          "max_searches": 2,
+          "context_chunks": 3,
+          "budget_chars": 3500,
+          "hypothesis": "Improvement 1: lexical identifier matching may help exact APIs; paraphrases may suffer."
+        },
+        {
+          "id": "hybrid_base",
+          "method": "hybrid_rrf",
+          "max_searches": 2,
+          "context_chunks": 3,
+          "budget_chars": 3500,
+          "hypothesis": "Improvement 2: reciprocal rank fusion may balance lexical and semantic evidence."
+        },
+        {
+          "id": "hybrid_context5",
+          "method": "hybrid_rrf",
+          "max_searches": 2,
+          "context_chunks": 5,
+          "budget_chars": 5500,
+          "hypothesis": "Additional dev experiment: evidence at hybrid ranks 4/5 was excluded for D14/D09. More whole chunks may recover it but add distractors and tokens."
+        }
+      ]
+    },
+    "retrieval_config": {
+      "schema_version": 1,
+      "candidate_pool": 10,
+      "comparison_top_k": 3,
+      "bm25": {
+        "k1": 1.2,
+        "b": 0.75
+      },
+      "rrf": {
+        "rank_constant": 60
+      },
+      "context": {
+        "top_k": 3,
+        "budget_chars": 3500,
+        "deduplication": "chunk_id",
+        "truncation": "none"
+      },
+      "timing_repeats": 3,
+      "methods": [
+        "dense",
+        "bm25",
+        "hybrid_rrf"
+      ],
+      "hypotheses": {
+        "dense": "Baseline: semantic similarity may recover paraphrases but confuse related Python APIs.",
+        "bm25": "Improvement experiment 1: lexical matching may help exact API names and identifiers; paraphrases may suffer.",
+        "hybrid_rrf": "Improvement experiment 2: fusing dense and lexical ranks may balance both signals; added latency and worse rankings are possible."
+      }
+    },
+    "code_sha256": "2172d626e6e70423c189a1816106ab16e7169e9fea4390fae2d83e194c0b030f",
+    "benchmark_seal": "4931ec72eb92568b8a5b8fbbc8734a7ff0c5f0c6b4714607fa3e4df5cd6cb14c",
+    "source_content": {
+      "pdf_sha256": "7ed5678593803de4560b4094e4aa2e4b873bd79d65f7270acedb9e203c5a3669",
+      "pages_sha256": "40740cec8e31bb72f876f3bc24550ef5b96554783e3c7b070882754710cc5933",
+      "chunks_sha256": "5011bde177c206d43a7ee0903ade80fce1ce977cb60e782b975ad1279828882b"
+    },
+    "database_digest": "00646bc2983f2f455285bab520f75c33bd971309ba7d58254a879fa547c74db2",
+    "embedding_signature": "9d9c274c457bffadec184fe73b398c9725bb57c9fee932d131badc3997635301",
+    "query_ids": [
+      "D01"
+    ]
+  },
+  "identity_sha256": "bc5b551577d6f548377cfeaf3519c653a1e52dedd7edfc73182a41b9e6ebf161"
+}

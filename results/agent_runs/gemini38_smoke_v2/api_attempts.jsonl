@@ -1,0 +1,2 @@
+{"event": "attempt_started", "at": "2026-11-16T05:38:28.258954+00:00", "request_id": "ce93c3126d76d08c5880f1188d37bb8036426d7b4352a7c56943ed29f519f066", "namespace": "hybrid_base:D01:0", "request_sha256": "630239b392c3c25474d7cbce69823a7c22172c965e93f54aa72630d4eeb57b00", "attempt": 1}
+{"event": "attempt_failed", "at": "2026-11-16T05:39:28.437204+00:00", "request_id": "ce93c3126d76d08c5880f1188d37bb8036426d7b4352a7c56943ed29f519f066", "error": "Gemini network failure: The read operation timed out", "usage": "unknown; request may have reached provider"}
