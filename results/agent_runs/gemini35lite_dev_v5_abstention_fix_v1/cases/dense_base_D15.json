@@ -1,0 +1,1433 @@
+{
+  "status": "answered",
+  "answer": "JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening a JSON file as a text file for both of reading and writing [bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba].",
+  "citations": [
+    "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba"
+  ],
+  "reason": "The tutorial explicitly states to use encoding=\"utf-8\" when opening a JSON file as a text file for reading and writing.",
+  "guard": "citation_ids_valid; semantic_support_requires_review",
+  "query_id": "D15",
+  "config_id": "dense_base",
+  "public_query": {
+    "id": "D15",
+    "question": "Which encoding should be used when opening a JSON file as text for reading or writing?",
+    "filter": null
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "encoding JSON file text reading writing",
+      "filter": null,
+      "method": "dense",
+      "ranking": [
+        {
+          "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+          "start_char": 2561,
+          "end_char": 3494,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8830702970582085
+        },
+        {
+          "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 66,
+          "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+          "start_char": 0,
+          "end_char": 920,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p066",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 60,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 920
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.879877634055757
+        },
+        {
+          "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+          "start_char": 1886,
+          "end_char": 2830,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8765076398849487
+        },
+        {
+          "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "7.2.2 Saving structured data with json\n          Strings can easily be written to and read from a file. Numbers take a bit more effort, since the read() method only\n          returns strings, which will have to be passed to a function like int(), which takes a string like '123' and returns its\n          numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and\n          serializing by hand becomes complicated.\n          Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows\n          you to use the popular data interchange format called JSON (JavaScript Object Notation). The standard module called\n          json can take Python data hierarchies, and convert them to string representations; this process is called serializing.\n          Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing,",
+          "start_char": 1570,
+          "end_char": 2550,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8719010949134827
+        },
+        {
+          "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "The first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+          "start_char": 948,
+          "end_char": 1875,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.8459753485932754
+        },
+        {
+          "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "writing equivalent try-finally blocks:\n\n          >>> with open('workfile', encoding=\"utf-8\") as f:\n          ...   read_data = f.read()\n          >>> # We can check that the file has been automatically closed.\n          >>> f.closed\n          True\n\n          If you’re not using the with keyword, then you should call f.close() to close the file and immediately free up any\n          system resources used by it.\n\n            Warning\n\n           Calling f.write() without using the with keyword or calling f.close() might result in the arguments of\n           f.write() not being completely written to the disk, even if the program exits successfully.",
+          "start_char": 2841,
+          "end_char": 3493,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.8449904918670654
+        },
+        {
+          "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+          "start_char": 393,
+          "end_char": 1098,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.8447920772557228
+        },
+        {
+          "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "(continued from previous page)\n          >>> '3.14159265359'.zfill(5)\n          '3.14159265359'\n\n          7.1.4 Old string formatting\n\n          The % operator (modulo) can also be used for string formatting. Given format % values (where format is a\n          string), % conversion specifications in format are replaced with zero or more elements of values. This operation is\n          commonly known as string interpolation. For example:\n          >>> import math\n          >>> print('The value of pi is approximately %5.3f.' % math.pi)\n          The value of pi is approximately 3.142.\n\n          More information can be found in the old-string-formatting section.\n\n          7.2 Reading and Writing Files\n\n          open() returns a file object, and is most commonly used with two positional arguments and one keyword argument:\n          open(filename, mode, encoding=None)\n\n          >>> f = open('workfile', 'w', encoding=\"utf-8\")",
+          "start_char": 0,
+          "end_char": 936,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.833588719367981
+        },
+        {
+          "id": "29d4bf2d01c08d6e6899d5dd4ec80c8d68724809147dc00f7136dad690070dd0",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 59,
+          "text": "Notice how the yes_votes are padded with spaces and a negative sign only for negative numbers. The\n             example also prints percentage multiplied by 100, with 2 decimal places and followed by a percent sign (see\n             formatspec for details).\n            • Finally, you can do all the string handling yourself by using string slicing and concatenation operations to create\n             any layout you can imagine. The string type has some methods that perform useful operations for padding\n             strings to a given column width.\n          When you don’t need fancy output but just want a quick display of some variables for debugging purposes, you can\n          convert any value to a string with the repr() or str() functions.\n          The str() function is meant to return representations of values which are fairly human-readable, while repr()",
+          "start_char": 1972,
+          "end_char": 2841,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p059",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 53,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3326
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8333417773246765
+        },
+        {
+          "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": ">>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+          "start_char": 1110,
+          "end_char": 1964,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.828301836747042
+        }
+      ],
+      "component_rankings": {
+        "dense": [
+          {
+            "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+            "start_char": 2561,
+            "end_char": 3494,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8830702970582085
+          },
+          {
+            "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 66,
+            "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+            "start_char": 0,
+            "end_char": 920,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p066",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 60,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 920
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.879877634055757
+          },
+          {
+            "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+            "start_char": 1886,
+            "end_char": 2830,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8765076398849487
+          },
+          {
+            "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "7.2.2 Saving structured data with json\n          Strings can easily be written to and read from a file. Numbers take a bit more effort, since the read() method only\n          returns strings, which will have to be passed to a function like int(), which takes a string like '123' and returns its\n          numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and\n          serializing by hand becomes complicated.\n          Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows\n          you to use the popular data interchange format called JSON (JavaScript Object Notation). The standard module called\n          json can take Python data hierarchies, and convert them to string representations; this process is called serializing.\n          Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing,",
+            "start_char": 1570,
+            "end_char": 2550,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 4,
+            "score": 0.8719010949134827
+          },
+          {
+            "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "The first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+            "start_char": 948,
+            "end_char": 1875,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.8459753485932754
+          },
+          {
+            "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "writing equivalent try-finally blocks:\n\n          >>> with open('workfile', encoding=\"utf-8\") as f:\n          ...   read_data = f.read()\n          >>> # We can check that the file has been automatically closed.\n          >>> f.closed\n          True\n\n          If you’re not using the with keyword, then you should call f.close() to close the file and immediately free up any\n          system resources used by it.\n\n            Warning\n\n           Calling f.write() without using the with keyword or calling f.close() might result in the arguments of\n           f.write() not being completely written to the disk, even if the program exits successfully.",
+            "start_char": 2841,
+            "end_char": 3493,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 6,
+            "score": 0.8449904918670654
+          },
+          {
+            "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+            "start_char": 393,
+            "end_char": 1098,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 7,
+            "score": 0.8447920772557228
+          },
+          {
+            "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "(continued from previous page)\n          >>> '3.14159265359'.zfill(5)\n          '3.14159265359'\n\n          7.1.4 Old string formatting\n\n          The % operator (modulo) can also be used for string formatting. Given format % values (where format is a\n          string), % conversion specifications in format are replaced with zero or more elements of values. This operation is\n          commonly known as string interpolation. For example:\n          >>> import math\n          >>> print('The value of pi is approximately %5.3f.' % math.pi)\n          The value of pi is approximately 3.142.\n\n          More information can be found in the old-string-formatting section.\n\n          7.2 Reading and Writing Files\n\n          open() returns a file object, and is most commonly used with two positional arguments and one keyword argument:\n          open(filename, mode, encoding=None)\n\n          >>> f = open('workfile', 'w', encoding=\"utf-8\")",
+            "start_char": 0,
+            "end_char": 936,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 8,
+            "score": 0.833588719367981
+          },
+          {
+            "id": "29d4bf2d01c08d6e6899d5dd4ec80c8d68724809147dc00f7136dad690070dd0",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 59,
+            "text": "Notice how the yes_votes are padded with spaces and a negative sign only for negative numbers. The\n             example also prints percentage multiplied by 100, with 2 decimal places and followed by a percent sign (see\n             formatspec for details).\n            • Finally, you can do all the string handling yourself by using string slicing and concatenation operations to create\n             any layout you can imagine. The string type has some methods that perform useful operations for padding\n             strings to a given column width.\n          When you don’t need fancy output but just want a quick display of some variables for debugging purposes, you can\n          convert any value to a string with the repr() or str() functions.\n          The str() function is meant to return representations of values which are fairly human-readable, while repr()",
+            "start_char": 1972,
+            "end_char": 2841,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p059",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 53,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3326
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 9,
+            "score": 0.8333417773246765
+          },
+          {
+            "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": ">>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+            "start_char": 1110,
+            "end_char": 1964,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 10,
+            "score": 0.828301836747042
+          }
+        ]
+      },
+      "context": {
+        "text": "[78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nthe string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:\n\n[bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba | source=data/raw/tutorial.pdf | PDF page=66 | chapter=7]\nx = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.\n\n[a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\ndifferent encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+        "chunk_ids": [
+          "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+          "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+          "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f"
+        ],
+        "characters": 3173,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+            "start_char": 2561,
+            "end_char": 3494,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8830702970582085
+          },
+          {
+            "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 66,
+            "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+            "start_char": 0,
+            "end_char": 920,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p066",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 60,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 920
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.879877634055757
+          },
+          {
+            "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+            "start_char": 1886,
+            "end_char": 2830,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8765076398849487
+          }
+        ],
+        "excluded": [
+          {
+            "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "29d4bf2d01c08d6e6899d5dd4ec80c8d68724809147dc00f7136dad690070dd0",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.02436130000205594
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "12fb6a360ce612ef1e8a63fefcc569a8e1ab5f3dc77431426ffb9aed5b396eec",
+      "request_sha256": "3834040905d75e978cf35d6e0b43026dfc4df728af5e4197753723db334230fa",
+      "response_id": "-cP6avOlG9yq0-kPlKSc8Qc",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 610,
+        "candidatesTokenCount": 19,
+        "totalTokenCount": 629,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 610
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.6410000000032596,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "a250fe5140c107580bb28b95b569cd3de2bbcb78700a0ced8f37f9ad510cdab4",
+      "request_sha256": "d54873f6db45f41885ac1f2f281cb552c029b634f4bd04760fa4a161ae359b7b",
+      "response_id": "CMT6aqraHIPYrfcP8qiEuQY",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1692,
+        "candidatesTokenCount": 157,
+        "totalTokenCount": 1849,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1692
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.3440000000009604,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nthe string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:\n\n[bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba | source=data/raw/tutorial.pdf | PDF page=66 | chapter=7]\nx = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.\n\n[a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\ndifferent encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+        "chunk_ids": [
+          "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+          "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+          "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f"
+        ],
+        "characters": 3173,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+            "start_char": 2561,
+            "end_char": 3494,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8830702970582085
+          },
+          {
+            "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 66,
+            "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+            "start_char": 0,
+            "end_char": 920,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p066",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 60,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 920
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.879877634055757
+          },
+          {
+            "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+            "start_char": 1886,
+            "end_char": 2830,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8765076398849487
+          }
+        ],
+        "excluded": [
+          {
+            "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "29d4bf2d01c08d6e6899d5dd4ec80c8d68724809147dc00f7136dad690070dd0",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "c8220f685fb488167c9b5172e571c50a7621679a0c43b1e22b6325f2ecd0ba42",
+      "request_sha256": "e7ccda06bd1f562e525867f5b271f49d3a3dd6944a8c4bf72dce6a46bbdf8b22",
+      "response_id": "F8T6aqqnKams9tMPmtrz0Q4",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 2099,
+        "candidatesTokenCount": 200,
+        "totalTokenCount": 2299,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2099
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 2.610000000000582,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nthe string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:\n\n[bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba | source=data/raw/tutorial.pdf | PDF page=66 | chapter=7]\nx = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.\n\n[a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\ndifferent encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+        "chunk_ids": [
+          "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+          "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+          "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f"
+        ],
+        "characters": 3173,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+            "start_char": 2561,
+            "end_char": 3494,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8830702970582085
+          },
+          {
+            "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 66,
+            "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+            "start_char": 0,
+            "end_char": 920,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p066",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 60,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 920
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.879877634055757
+          },
+          {
+            "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+            "start_char": 1886,
+            "end_char": 2830,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8765076398849487
+          }
+        ],
+        "excluded": [
+          {
+            "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "29d4bf2d01c08d6e6899d5dd4ec80c8d68724809147dc00f7136dad690070dd0",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nthe string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:\n\n[bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba | source=data/raw/tutorial.pdf | PDF page=66 | chapter=7]\nx = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.\n\n[a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f | source=data/raw/tutorial.pdf | PDF page=63 | chapter=7]\ndifferent encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+    "chunk_ids": [
+      "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+      "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+      "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f"
+    ],
+    "characters": 3173,
+    "budget_chars": 3500,
+    "max_chunks": 3,
+    "selected_chunks": [
+      {
+        "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+        "start_char": 2561,
+        "end_char": 3494,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.8830702970582085
+      },
+      {
+        "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 66,
+        "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+        "start_char": 0,
+        "end_char": 920,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p066",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 60,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 920
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.879877634055757
+      },
+      {
+        "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 63,
+        "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+        "start_char": 1886,
+        "end_char": 2830,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p063",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 57,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3493
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.8765076398849487
+      }
+    ],
+    "excluded": [
+      {
+        "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "29d4bf2d01c08d6e6899d5dd4ec80c8d68724809147dc00f7136dad690070dd0",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+        "reason": "max_chunks"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [
+    {
+      "event": "citation_format_repair",
+      "rejected_proposal": {
+        "reason": "The tutorial explicitly states that JSON files must be encoded in UTF-8 and specifies using encoding=\"utf-8\" when opening a JSON file as a text file for both reading and writing.",
+        "answer": "JSON files must be encoded in UTF-8, so you should use encoding=\"utf-8\" when opening a JSON file as a text file for both reading and writing.",
+        "citations": [
+          "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba"
+        ],
+        "abstain": false
+      },
+      "reason": "Citation IDs must be drawn from current context and appear inline in answer; separate array alone is insufficient."
+    }
+  ],
+  "search_calls": 1,
+  "generated_search_queries": [
+    "encoding JSON file text reading writing"
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 44.55088110000361,
+    "pacing_seconds_this_invocation": 38.9049999999952,
+    "wall_seconds_excluding_pacing": 5.64588110000841,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": true,
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 66,
+        "evidence": "JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing."
+      }
+    ],
+    "expected_answer": "Use UTF-8, specifying encoding=\"utf-8\".",
+    "absence_reason": null,
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "dense",
+    "query": "Which encoding should be used when opening a JSON file as text for reading or writing?",
+    "filter": null,
+    "ranking": [
+      {
+        "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 63,
+        "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+        "start_char": 1886,
+        "end_char": 2830,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p063",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 57,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3493
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.8794601559638977
+      },
+      {
+        "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+        "start_char": 2561,
+        "end_char": 3494,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.8788759780600099
+      },
+      {
+        "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 66,
+        "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+        "start_char": 0,
+        "end_char": 920,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p066",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 60,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 920
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.8710505443185259
+      },
+      {
+        "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 63,
+        "text": "The first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+        "start_char": 948,
+        "end_char": 1875,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p063",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 57,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3493
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 4,
+        "score": 0.857192346024971
+      },
+      {
+        "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "7.2.2 Saving structured data with json\n          Strings can easily be written to and read from a file. Numbers take a bit more effort, since the read() method only\n          returns strings, which will have to be passed to a function like int(), which takes a string like '123' and returns its\n          numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and\n          serializing by hand becomes complicated.\n          Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows\n          you to use the popular data interchange format called JSON (JavaScript Object Notation). The standard module called\n          json can take Python data hierarchies, and convert them to string representations; this process is called serializing.\n          Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing,",
+        "start_char": 1570,
+        "end_char": 2550,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 5,
+        "score": 0.8562377095222473
+      },
+      {
+        "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 63,
+        "text": "(continued from previous page)\n          >>> '3.14159265359'.zfill(5)\n          '3.14159265359'\n\n          7.1.4 Old string formatting\n\n          The % operator (modulo) can also be used for string formatting. Given format % values (where format is a\n          string), % conversion specifications in format are replaced with zero or more elements of values. This operation is\n          commonly known as string interpolation. For example:\n          >>> import math\n          >>> print('The value of pi is approximately %5.3f.' % math.pi)\n          The value of pi is approximately 3.142.\n\n          More information can be found in the old-string-formatting section.\n\n          7.2 Reading and Writing Files\n\n          open() returns a file object, and is most commonly used with two positional arguments and one keyword argument:\n          open(filename, mode, encoding=None)\n\n          >>> f = open('workfile', 'w', encoding=\"utf-8\")",
+        "start_char": 0,
+        "end_char": 936,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p063",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 57,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3493
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 6,
+        "score": 0.8370636701583862
+      },
+      {
+        "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 63,
+        "text": "writing equivalent try-finally blocks:\n\n          >>> with open('workfile', encoding=\"utf-8\") as f:\n          ...   read_data = f.read()\n          >>> # We can check that the file has been automatically closed.\n          >>> f.closed\n          True\n\n          If you’re not using the with keyword, then you should call f.close() to close the file and immediately free up any\n          system resources used by it.\n\n            Warning\n\n           Calling f.write() without using the with keyword or calling f.close() might result in the arguments of\n           f.write() not being completely written to the disk, even if the program exits successfully.",
+        "start_char": 2841,
+        "end_char": 3493,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p063",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 57,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3493
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 7,
+        "score": 0.8312073349952698
+      },
+      {
+        "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 64,
+        "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+        "start_char": 393,
+        "end_char": 1098,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p064",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 58,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2698
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 8,
+        "score": 0.8279950125220426
+      },
+      {
+        "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "b'd'\n          In text files (those opened without a b in the mode string), only seeks relative to the beginning of the file are allowed\n          (the exception being seeking to the very file end with seek(0, 2)) and the only valid offset values are those returned\n          from the f.tell(), or zero. Any other offset value produces undefined behaviour.\n\n          File objects have some additional methods, such as isatty() and truncate() which are less frequently used;\n          consult the Library Reference for a complete guide to file objects.",
+        "start_char": 1006,
+        "end_char": 1558,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 9,
+        "score": 0.8222638964653015
+      },
+      {
+        "id": "7a731aa67a4a809da04759f59a8e7037dbb4867211e531b7cd64825b4590da92",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 73,
+        "text": "The problem with this code is that it leaves the file open for an indeterminate amount of time after this part of the\n          code has finished executing. This is not an issue in simple scripts, but can be a problem for larger applications. The\n          with statement allows objects like files to be used in a way that ensures they are always cleaned up promptly and\n          correctly.\n          with open(\"myfile.txt\") as f:\n             for line in f:\n                print(line, end=\"\")\n\n          After the statement is executed, the file f is always closed, even if a problem was encountered while processing the",
+        "start_char": 1881,
+        "end_char": 2504,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p073",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 67,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 2504
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 10,
+        "score": 0.8188123918995448
+      }
+    ],
+    "components": {
+      "dense": [
+        {
+          "id": "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "different encoding. Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode.\n          In text mode, the default when reading is to convert platform-specific line endings (\\n on Unix, \\r\\n on Windows)\n          to just \\n. When writing in text mode, the default is to convert occurrences of \\n back to platform-specific line\n          endings. This behind-the-scenes modification to file data is fine for text files, but will corrupt binary data like that in\n          JPEG or EXE files. Be very careful to use binary mode when reading and writing such files.\n          It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point. Using with is also much shorter than",
+          "start_char": 1886,
+          "end_char": 2830,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8794601559638977
+        },
+        {
+          "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+          "start_char": 2561,
+          "end_char": 3494,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8788759780600099
+        },
+        {
+          "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 66,
+          "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+          "start_char": 0,
+          "end_char": 920,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p066",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 60,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 920
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8710505443185259
+        },
+        {
+          "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "The first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+          "start_char": 948,
+          "end_char": 1875,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.857192346024971
+        },
+        {
+          "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "7.2.2 Saving structured data with json\n          Strings can easily be written to and read from a file. Numbers take a bit more effort, since the read() method only\n          returns strings, which will have to be passed to a function like int(), which takes a string like '123' and returns its\n          numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and\n          serializing by hand becomes complicated.\n          Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows\n          you to use the popular data interchange format called JSON (JavaScript Object Notation). The standard module called\n          json can take Python data hierarchies, and convert them to string representations; this process is called serializing.\n          Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing,",
+          "start_char": 1570,
+          "end_char": 2550,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.8562377095222473
+        },
+        {
+          "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "(continued from previous page)\n          >>> '3.14159265359'.zfill(5)\n          '3.14159265359'\n\n          7.1.4 Old string formatting\n\n          The % operator (modulo) can also be used for string formatting. Given format % values (where format is a\n          string), % conversion specifications in format are replaced with zero or more elements of values. This operation is\n          commonly known as string interpolation. For example:\n          >>> import math\n          >>> print('The value of pi is approximately %5.3f.' % math.pi)\n          The value of pi is approximately 3.142.\n\n          More information can be found in the old-string-formatting section.\n\n          7.2 Reading and Writing Files\n\n          open() returns a file object, and is most commonly used with two positional arguments and one keyword argument:\n          open(filename, mode, encoding=None)\n\n          >>> f = open('workfile', 'w', encoding=\"utf-8\")",
+          "start_char": 0,
+          "end_char": 936,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.8370636701583862
+        },
+        {
+          "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "writing equivalent try-finally blocks:\n\n          >>> with open('workfile', encoding=\"utf-8\") as f:\n          ...   read_data = f.read()\n          >>> # We can check that the file has been automatically closed.\n          >>> f.closed\n          True\n\n          If you’re not using the with keyword, then you should call f.close() to close the file and immediately free up any\n          system resources used by it.\n\n            Warning\n\n           Calling f.write() without using the with keyword or calling f.close() might result in the arguments of\n           f.write() not being completely written to the disk, even if the program exits successfully.",
+          "start_char": 2841,
+          "end_char": 3493,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.8312073349952698
+        },
+        {
+          "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+          "start_char": 393,
+          "end_char": 1098,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8279950125220426
+        },
+        {
+          "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "b'd'\n          In text files (those opened without a b in the mode string), only seeks relative to the beginning of the file are allowed\n          (the exception being seeking to the very file end with seek(0, 2)) and the only valid offset values are those returned\n          from the f.tell(), or zero. Any other offset value produces undefined behaviour.\n\n          File objects have some additional methods, such as isatty() and truncate() which are less frequently used;\n          consult the Library Reference for a complete guide to file objects.",
+          "start_char": 1006,
+          "end_char": 1558,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8222638964653015
+        },
+        {
+          "id": "7a731aa67a4a809da04759f59a8e7037dbb4867211e531b7cd64825b4590da92",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 73,
+          "text": "The problem with this code is that it leaves the file open for an indeterminate amount of time after this part of the\n          code has finished executing. This is not an issue in simple scripts, but can be a problem for larger applications. The\n          with statement allows objects like files to be used in a way that ensures they are always cleaned up promptly and\n          correctly.\n          with open(\"myfile.txt\") as f:\n             for line in f:\n                print(line, end=\"\")\n\n          After the statement is executed, the file f is always closed, even if a problem was encountered while processing the",
+          "start_char": 1881,
+          "end_char": 2504,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p073",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 67,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2504
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8188123918995448
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": false,
+    "original_query_evidence_hit_at_3": true,
+    "actual_final_context_exact_evidence": true,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "trace_sha256": "92921529cac630213ae0b44ec7b1b0ecb4ad0a69b4314537cece143ed1c7080e"
+}

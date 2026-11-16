@@ -1,0 +1,1533 @@
+{
+  "status": "abstain",
+  "answer": "The supplied tutorial corpus does not contain information about csv.reader or its maximum number of rows.",
+  "citations": [],
+  "reason": "The supplied tutorial corpus does not contain information about csv.reader or its maximum number of rows.",
+  "guard": "model_abstention",
+  "raw_model_answer": "",
+  "display_normalization": "empty abstention answer displayed using original model reason",
+  "query_id": "D7DN02",
+  "config_id": "bm25_base",
+  "public_query": {
+    "id": "D7DN02",
+    "question": "According to the supplied pages, what is the maximum number of rows that csv.reader supports?",
+    "filter": null
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "csv.reader maximum number of rows",
+      "filter": null,
+      "method": "bm25",
+      "ranking": [
+        {
+          "id": "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 42,
+          "text": ">>> matrix = [\n          ...   [1, 2, 3, 4],\n          ...   [5, 6, 7, 8],\n          ...   [9, 10, 11, 12],\n          ... ]\n          The following list comprehension will transpose rows and columns:\n\n          >>> [[row[i] for row in matrix] for i in range(4)]\n          [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]",
+          "start_char": 2141,
+          "end_char": 2460,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p042",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 36,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2460
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 5.808836404458343,
+          "rank": 1
+        },
+        {
+          "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+          "start_char": 0,
+          "end_char": 995,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.51069523675376,
+          "rank": 2
+        },
+        {
+          "id": "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 44,
+          "text": "5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+          "start_char": 0,
+          "end_char": 440,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p044",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 38,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3218
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.466779937086711,
+          "rank": 3
+        },
+        {
+          "id": "aa7fd097ab2f485e7f284efb44feabdd16a6e79f4243104810f15ef178b9e6ec",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 68,
+          "text": "It is possible to write programs that handle selected exceptions. Look at the following example, which asks the\n          user for input until a valid integer has been entered, but allows the user to interrupt the program (using Control-\n          C or whatever the operating system supports); note that a user-generated interruption is signalled by raising the\n          KeyboardInterrupt exception.\n          >>> while True:\n          ...   try:\n          ...      x = int(input(\"Please enter a number: \"))\n          ...      break\n          ...   except ValueError:\n          ...      print(\"Oops! That was no valid number. Try again...\")\n          ...\n\n          The try statement works as follows.\n            • First, the try clause (the statement(s) between the try and except keywords) is executed.",
+          "start_char": 682,
+          "end_char": 1488,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p068",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 62,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3200
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.2931934855749554,
+          "rank": 4
+        },
+        {
+          "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 60,
+          "text": "Passing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for\n          making columns line up.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}\n          >>> for name, phone in table.items():\n          ...   print(f'{name:10} ==> {phone:10d}')\n          ...\n          Sjoerd  ==>     4127\n          Jack    ==>     4098\n          Dcab    ==>     7678\n\n          Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(),\n          and '!r' applies repr():\n          >>> animals = 'eels'\n          >>> print(f'My hovercraft is full of {animals}.')\n          My hovercraft is full of eels.\n          >>> print(f'My hovercraft is full of {animals!r}.')\n          My hovercraft is full of 'eels'.",
+          "start_char": 1653,
+          "end_char": 2475,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p060",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 54,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2647
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.071917999173176,
+          "rank": 5
+        },
+        {
+          "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+          "start_char": 1679,
+          "end_char": 2410,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.0611421717003875,
+          "rank": 6
+        },
+        {
+          "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": ">>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18",
+          "start_char": 1976,
+          "end_char": 2698,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.0450041329011848,
+          "rank": 7
+        },
+        {
+          "id": "1b9d2ea9c3a34c8b880d37bd0941d53182b2df0d4b49dc4488a6ed22e0b872c3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 61,
+          "text": "The brackets and characters within them (called format fields) are replaced with the objects passed into the str.\n          format() method. A number in the brackets can be used to refer to the position of the object passed into the\n          str.format() method.\n          >>> print('{0} and {1}'.format('spam', 'eggs'))\n          spam and eggs\n          >>> print('{1} and {0}'.format('spam', 'eggs'))\n          eggs and spam\n\n          If keyword arguments are used in the str.format() method, their values are referred to by using the name of the\n          argument.\n          >>> print('This {food} is {adjective}.'.format(\n          ...    food='spam', adjective='absolutely horrible'))\n          This spam is absolutely horrible.\n\n          Positional and keyword arguments can be arbitrarily combined:",
+          "start_char": 632,
+          "end_char": 1441,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p061",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 55,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2889
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 2.8571847353757116,
+          "rank": 8
+        },
+        {
+          "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "6.1.3 “Compiled” Python files\n          To speed up loading modules, Python caches the compiled version of each module in the __pycache__ directory\n          under the name module.version.pyc, where the version encodes the format of the compiled file; it generally\n          contains the Python version number. For example, in CPython release 3.3 the compiled version of spam.py would\n          be cached as __pycache__/spam.cpython-33.pyc. This naming convention allows compiled modules from\n          different releases and different versions of Python to coexist.\n          Python checks the modification date of the source against the compiled version to see if it’s out of date and needs\n          to be recompiled. This is a completely automatic process. Also, the compiled modules are platform-independent, so\n          the same library can be shared among systems with different architectures.",
+          "start_char": 452,
+          "end_char": 1353,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 2.8098221625378876,
+          "rank": 9
+        },
+        {
+          "id": "9a032fe0ab8887b44f1ef3b17c3fe45f7de36b622d9d2f41f914b6648d73c556",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 48,
+          "text": "Sequence objects typically may be compared to other objects with the same sequence type. The comparison uses\n          lexicographical ordering: first the first two items are compared, and if they differ this determines the outcome of\n          the comparison; if they are equal, the next two items are compared, and so on, until either sequence is exhausted.\n          If two items to be compared are themselves sequences of the same type, the lexicographical comparison is carried\n          out recursively. If all items of two sequences compare equal, the sequences are considered equal. If one sequence\n          is an initial sub-sequence of the other, the shorter sequence is the smaller (lesser) one. Lexicographical ordering for\n          strings uses the Unicode code point number to order individual characters. Some examples of comparisons between\n          sequences of the same type:\n          (1, 2, 3)        < (1, 2, 4)\n          [1, 2, 3]        < [1, 2, 4]",
+          "start_char": 2219,
+          "end_char": 3193,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p048",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 42,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3790
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 2.734760696209513,
+          "rank": 10
+        }
+      ],
+      "component_rankings": {
+        "bm25": [
+          {
+            "id": "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 42,
+            "text": ">>> matrix = [\n          ...   [1, 2, 3, 4],\n          ...   [5, 6, 7, 8],\n          ...   [9, 10, 11, 12],\n          ... ]\n          The following list comprehension will transpose rows and columns:\n\n          >>> [[row[i] for row in matrix] for i in range(4)]\n          [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]",
+            "start_char": 2141,
+            "end_char": 2460,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p042",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 36,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2460
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 5.808836404458343,
+            "rank": 1
+          },
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+            "start_char": 0,
+            "end_char": 995,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.51069523675376,
+            "rank": 2
+          },
+          {
+            "id": "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": "5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+            "start_char": 0,
+            "end_char": 440,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.466779937086711,
+            "rank": 3
+          },
+          {
+            "id": "aa7fd097ab2f485e7f284efb44feabdd16a6e79f4243104810f15ef178b9e6ec",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 68,
+            "text": "It is possible to write programs that handle selected exceptions. Look at the following example, which asks the\n          user for input until a valid integer has been entered, but allows the user to interrupt the program (using Control-\n          C or whatever the operating system supports); note that a user-generated interruption is signalled by raising the\n          KeyboardInterrupt exception.\n          >>> while True:\n          ...   try:\n          ...      x = int(input(\"Please enter a number: \"))\n          ...      break\n          ...   except ValueError:\n          ...      print(\"Oops! That was no valid number. Try again...\")\n          ...\n\n          The try statement works as follows.\n            • First, the try clause (the statement(s) between the try and except keywords) is executed.",
+            "start_char": 682,
+            "end_char": 1488,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p068",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 62,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 3200
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.2931934855749554,
+            "rank": 4
+          },
+          {
+            "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 60,
+            "text": "Passing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for\n          making columns line up.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}\n          >>> for name, phone in table.items():\n          ...   print(f'{name:10} ==> {phone:10d}')\n          ...\n          Sjoerd  ==>     4127\n          Jack    ==>     4098\n          Dcab    ==>     7678\n\n          Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(),\n          and '!r' applies repr():\n          >>> animals = 'eels'\n          >>> print(f'My hovercraft is full of {animals}.')\n          My hovercraft is full of eels.\n          >>> print(f'My hovercraft is full of {animals!r}.')\n          My hovercraft is full of 'eels'.",
+            "start_char": 1653,
+            "end_char": 2475,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p060",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 54,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2647
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.071917999173176,
+            "rank": 5
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+            "start_char": 1679,
+            "end_char": 2410,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.0611421717003875,
+            "rank": 6
+          },
+          {
+            "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": ">>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18",
+            "start_char": 1976,
+            "end_char": 2698,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.0450041329011848,
+            "rank": 7
+          },
+          {
+            "id": "1b9d2ea9c3a34c8b880d37bd0941d53182b2df0d4b49dc4488a6ed22e0b872c3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 61,
+            "text": "The brackets and characters within them (called format fields) are replaced with the objects passed into the str.\n          format() method. A number in the brackets can be used to refer to the position of the object passed into the\n          str.format() method.\n          >>> print('{0} and {1}'.format('spam', 'eggs'))\n          spam and eggs\n          >>> print('{1} and {0}'.format('spam', 'eggs'))\n          eggs and spam\n\n          If keyword arguments are used in the str.format() method, their values are referred to by using the name of the\n          argument.\n          >>> print('This {food} is {adjective}.'.format(\n          ...    food='spam', adjective='absolutely horrible'))\n          This spam is absolutely horrible.\n\n          Positional and keyword arguments can be arbitrarily combined:",
+            "start_char": 632,
+            "end_char": 1441,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p061",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 55,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2889
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 2.8571847353757116,
+            "rank": 8
+          },
+          {
+            "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 52,
+            "text": "6.1.3 “Compiled” Python files\n          To speed up loading modules, Python caches the compiled version of each module in the __pycache__ directory\n          under the name module.version.pyc, where the version encodes the format of the compiled file; it generally\n          contains the Python version number. For example, in CPython release 3.3 the compiled version of spam.py would\n          be cached as __pycache__/spam.cpython-33.pyc. This naming convention allows compiled modules from\n          different releases and different versions of Python to coexist.\n          Python checks the modification date of the source against the compiled version to see if it’s out of date and needs\n          to be recompiled. This is a completely automatic process. Also, the compiled modules are platform-independent, so\n          the same library can be shared among systems with different architectures.",
+            "start_char": 452,
+            "end_char": 1353,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p052",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 46,
+              "chapter_title": "Modules",
+              "normalized_characters": 4192
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 2.8098221625378876,
+            "rank": 9
+          },
+          {
+            "id": "9a032fe0ab8887b44f1ef3b17c3fe45f7de36b622d9d2f41f914b6648d73c556",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 48,
+            "text": "Sequence objects typically may be compared to other objects with the same sequence type. The comparison uses\n          lexicographical ordering: first the first two items are compared, and if they differ this determines the outcome of\n          the comparison; if they are equal, the next two items are compared, and so on, until either sequence is exhausted.\n          If two items to be compared are themselves sequences of the same type, the lexicographical comparison is carried\n          out recursively. If all items of two sequences compare equal, the sequences are considered equal. If one sequence\n          is an initial sub-sequence of the other, the shorter sequence is the smaller (lesser) one. Lexicographical ordering for\n          strings uses the Unicode code point number to order individual characters. Some examples of comparisons between\n          sequences of the same type:\n          (1, 2, 3)        < (1, 2, 4)\n          [1, 2, 3]        < [1, 2, 4]",
+            "start_char": 2219,
+            "end_char": 3193,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p048",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 42,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3790
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 2.734760696209513,
+            "rank": 10
+          }
+        ]
+      },
+      "context": {
+        "text": "[7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b | source=data/raw/tutorial.pdf | PDF page=42 | chapter=5]\n>>> matrix = [\n          ...   [1, 2, 3, 4],\n          ...   [5, 6, 7, 8],\n          ...   [9, 10, 11, 12],\n          ... ]\n          The following list comprehension will transpose rows and columns:\n\n          >>> [[row[i] for row in matrix] for i in range(4)]\n          [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]\n\n[e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40 | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nf.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)\n\n[71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\n5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+        "chunk_ids": [
+          "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+          "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a"
+        ],
+        "characters": 2130,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 42,
+            "text": ">>> matrix = [\n          ...   [1, 2, 3, 4],\n          ...   [5, 6, 7, 8],\n          ...   [9, 10, 11, 12],\n          ... ]\n          The following list comprehension will transpose rows and columns:\n\n          >>> [[row[i] for row in matrix] for i in range(4)]\n          [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]",
+            "start_char": 2141,
+            "end_char": 2460,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p042",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 36,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2460
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 5.808836404458343,
+            "rank": 1
+          },
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+            "start_char": 0,
+            "end_char": 995,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.51069523675376,
+            "rank": 2
+          },
+          {
+            "id": "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": "5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+            "start_char": 0,
+            "end_char": 440,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.466779937086711,
+            "rank": 3
+          }
+        ],
+        "excluded": [
+          {
+            "id": "aa7fd097ab2f485e7f284efb44feabdd16a6e79f4243104810f15ef178b9e6ec",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "1b9d2ea9c3a34c8b880d37bd0941d53182b2df0d4b49dc4488a6ed22e0b872c3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "9a032fe0ab8887b44f1ef3b17c3fe45f7de36b622d9d2f41f914b6648d73c556",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.0008264999996754341
+    },
+    {
+      "event": "search",
+      "query": "csv reader",
+      "filter": null,
+      "method": "bm25",
+      "ranking": [],
+      "component_rankings": {
+        "bm25": []
+      },
+      "context": {
+        "text": "[7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b | source=data/raw/tutorial.pdf | PDF page=42 | chapter=5]\n>>> matrix = [\n          ...   [1, 2, 3, 4],\n          ...   [5, 6, 7, 8],\n          ...   [9, 10, 11, 12],\n          ... ]\n          The following list comprehension will transpose rows and columns:\n\n          >>> [[row[i] for row in matrix] for i in range(4)]\n          [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]\n\n[e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40 | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nf.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)\n\n[71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\n5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+        "chunk_ids": [
+          "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+          "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a"
+        ],
+        "characters": 2130,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 42,
+            "text": ">>> matrix = [\n          ...   [1, 2, 3, 4],\n          ...   [5, 6, 7, 8],\n          ...   [9, 10, 11, 12],\n          ... ]\n          The following list comprehension will transpose rows and columns:\n\n          >>> [[row[i] for row in matrix] for i in range(4)]\n          [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]",
+            "start_char": 2141,
+            "end_char": 2460,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p042",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 36,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2460
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 5.808836404458343,
+            "rank": 1
+          },
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+            "start_char": 0,
+            "end_char": 995,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.51069523675376,
+            "rank": 2
+          },
+          {
+            "id": "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": "5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+            "start_char": 0,
+            "end_char": 440,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.466779937086711,
+            "rank": 3
+          }
+        ],
+        "excluded": [
+          {
+            "id": "aa7fd097ab2f485e7f284efb44feabdd16a6e79f4243104810f15ef178b9e6ec",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "1b9d2ea9c3a34c8b880d37bd0941d53182b2df0d4b49dc4488a6ed22e0b872c3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "9a032fe0ab8887b44f1ef3b17c3fe45f7de36b622d9d2f41f914b6648d73c556",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.0004656999990402255
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "5213054007c4d5b810fd22a8a6640787fb302adbb9005da87bb2268ef21b39f8",
+      "request_sha256": "0b7a321fa3d39e376af0fede931788488584f98414a5853e9ae77f812ba0a1e5",
+      "response_id": "Q8X6auTLF8Sy1e8P0IaYwQ8",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 612,
+        "candidatesTokenCount": 20,
+        "totalTokenCount": 632,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 612
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.0470000000022992,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "d604fde4e336c3dd4f61b6ec7f25a049b9c50eeab58ee72341173fd3dd3894e6",
+      "request_sha256": "84737980dcd269517b3641cbbea966afebcc0a8f3c032d3e82ced7f63496306f",
+      "response_id": "UsX6ap7XJqjarfcPgrqYuQk",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1593,
+        "candidatesTokenCount": 15,
+        "totalTokenCount": 1608,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1593
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.25,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b | source=data/raw/tutorial.pdf | PDF page=42 | chapter=5]\n>>> matrix = [\n          ...   [1, 2, 3, 4],\n          ...   [5, 6, 7, 8],\n          ...   [9, 10, 11, 12],\n          ... ]\n          The following list comprehension will transpose rows and columns:\n\n          >>> [[row[i] for row in matrix] for i in range(4)]\n          [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]\n\n[e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40 | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nf.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)\n\n[71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\n5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+        "chunk_ids": [
+          "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+          "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a"
+        ],
+        "characters": 2130,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 42,
+            "text": ">>> matrix = [\n          ...   [1, 2, 3, 4],\n          ...   [5, 6, 7, 8],\n          ...   [9, 10, 11, 12],\n          ... ]\n          The following list comprehension will transpose rows and columns:\n\n          >>> [[row[i] for row in matrix] for i in range(4)]\n          [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]",
+            "start_char": 2141,
+            "end_char": 2460,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p042",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 36,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2460
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 5.808836404458343,
+            "rank": 1
+          },
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+            "start_char": 0,
+            "end_char": 995,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.51069523675376,
+            "rank": 2
+          },
+          {
+            "id": "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": "5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+            "start_char": 0,
+            "end_char": 440,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.466779937086711,
+            "rank": 3
+          }
+        ],
+        "excluded": [
+          {
+            "id": "aa7fd097ab2f485e7f284efb44feabdd16a6e79f4243104810f15ef178b9e6ec",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "1b9d2ea9c3a34c8b880d37bd0941d53182b2df0d4b49dc4488a6ed22e0b872c3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "9a032fe0ab8887b44f1ef3b17c3fe45f7de36b622d9d2f41f914b6648d73c556",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "7476ba8934251e5a9301445a9cfa97354baf8e54b1afb573ed8e68db060fa3d1",
+      "request_sha256": "e86b6af9c5e50e63c64da5c23637aa6697faf9cbc14b21c1b77e963d812bcc37",
+      "response_id": "YcX6atj4H9n11e8PnsGP6QQ",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1668,
+        "candidatesTokenCount": 45,
+        "totalTokenCount": 1713,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1668
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 0.9380000000019209,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b | source=data/raw/tutorial.pdf | PDF page=42 | chapter=5]\n>>> matrix = [\n          ...   [1, 2, 3, 4],\n          ...   [5, 6, 7, 8],\n          ...   [9, 10, 11, 12],\n          ... ]\n          The following list comprehension will transpose rows and columns:\n\n          >>> [[row[i] for row in matrix] for i in range(4)]\n          [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]\n\n[e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40 | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nf.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)\n\n[71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\n5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+        "chunk_ids": [
+          "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+          "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a"
+        ],
+        "characters": 2130,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 42,
+            "text": ">>> matrix = [\n          ...   [1, 2, 3, 4],\n          ...   [5, 6, 7, 8],\n          ...   [9, 10, 11, 12],\n          ... ]\n          The following list comprehension will transpose rows and columns:\n\n          >>> [[row[i] for row in matrix] for i in range(4)]\n          [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]",
+            "start_char": 2141,
+            "end_char": 2460,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p042",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 36,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2460
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 5.808836404458343,
+            "rank": 1
+          },
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+            "start_char": 0,
+            "end_char": 995,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.51069523675376,
+            "rank": 2
+          },
+          {
+            "id": "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": "5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+            "start_char": 0,
+            "end_char": 440,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.466779937086711,
+            "rank": 3
+          }
+        ],
+        "excluded": [
+          {
+            "id": "aa7fd097ab2f485e7f284efb44feabdd16a6e79f4243104810f15ef178b9e6ec",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "1b9d2ea9c3a34c8b880d37bd0941d53182b2df0d4b49dc4488a6ed22e0b872c3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "9a032fe0ab8887b44f1ef3b17c3fe45f7de36b622d9d2f41f914b6648d73c556",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b | source=data/raw/tutorial.pdf | PDF page=42 | chapter=5]\n>>> matrix = [\n          ...   [1, 2, 3, 4],\n          ...   [5, 6, 7, 8],\n          ...   [9, 10, 11, 12],\n          ... ]\n          The following list comprehension will transpose rows and columns:\n\n          >>> [[row[i] for row in matrix] for i in range(4)]\n          [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]\n\n[e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40 | source=data/raw/tutorial.pdf | PDF page=65 | chapter=7]\nf.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)\n\n[71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\n5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+    "chunk_ids": [
+      "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+      "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+      "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a"
+    ],
+    "characters": 2130,
+    "budget_chars": 3500,
+    "max_chunks": 3,
+    "selected_chunks": [
+      {
+        "id": "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 42,
+        "text": ">>> matrix = [\n          ...   [1, 2, 3, 4],\n          ...   [5, 6, 7, 8],\n          ...   [9, 10, 11, 12],\n          ... ]\n          The following list comprehension will transpose rows and columns:\n\n          >>> [[row[i] for row in matrix] for i in range(4)]\n          [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]",
+        "start_char": 2141,
+        "end_char": 2460,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p042",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 36,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2460
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 5.808836404458343,
+        "rank": 1
+      },
+      {
+        "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+        "start_char": 0,
+        "end_char": 995,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 3.51069523675376,
+        "rank": 2
+      },
+      {
+        "id": "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 44,
+        "text": "5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+        "start_char": 0,
+        "end_char": 440,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p044",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 38,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3218
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 3.466779937086711,
+        "rank": 3
+      }
+    ],
+    "excluded": [
+      {
+        "id": "aa7fd097ab2f485e7f284efb44feabdd16a6e79f4243104810f15ef178b9e6ec",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "1b9d2ea9c3a34c8b880d37bd0941d53182b2df0d4b49dc4488a6ed22e0b872c3",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "9a032fe0ab8887b44f1ef3b17c3fe45f7de36b622d9d2f41f914b6648d73c556",
+        "reason": "max_chunks"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [],
+  "search_calls": 2,
+  "generated_search_queries": [
+    "csv.reader maximum number of rows",
+    "csv reader"
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 43.72907040000064,
+    "pacing_seconds_this_invocation": 40.48399999999674,
+    "wall_seconds_excluding_pacing": 3.245070400003897,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": false,
+    "gold": [],
+    "expected_answer": null,
+    "absence_reason": "The selected I/O pages discuss formatting, file objects and JSON/pickle, not a csv.reader row-limit specification. References to other documentation do not supply an answer inside this corpus.",
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "bm25",
+    "query": "According to the supplied pages, what is the maximum number of rows that csv.reader supports?",
+    "filter": null,
+    "ranking": [
+      {
+        "id": "aa7fd097ab2f485e7f284efb44feabdd16a6e79f4243104810f15ef178b9e6ec",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 68,
+        "text": "It is possible to write programs that handle selected exceptions. Look at the following example, which asks the\n          user for input until a valid integer has been entered, but allows the user to interrupt the program (using Control-\n          C or whatever the operating system supports); note that a user-generated interruption is signalled by raising the\n          KeyboardInterrupt exception.\n          >>> while True:\n          ...   try:\n          ...      x = int(input(\"Please enter a number: \"))\n          ...      break\n          ...   except ValueError:\n          ...      print(\"Oops! That was no valid number. Try again...\")\n          ...\n\n          The try statement works as follows.\n            • First, the try clause (the statement(s) between the try and except keywords) is executed.",
+        "start_char": 682,
+        "end_char": 1488,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p068",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 62,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 3200
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 10.210920199836801,
+        "rank": 1
+      },
+      {
+        "id": "254dc27fad3bca04c3fed8de7d803f8ab891e3c3fe64972cc2cd81a3fd4f3599",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 48,
+        "text": "'ABC' < 'C' < 'Pascal' < 'Python'\n          (1, 2, 3, 4)     < (1, 2, 4)\n          (1, 2)           < (1, 2, -1)\n          (1, 2, 3)       == (1.0, 2.0, 3.0)\n          (1, 2, ('aa', 'ab')) < (1, 2, ('abc', 'a'), 4)\n\n          Note that comparing objects of different types with < or > is legal provided that the objects have appropriate com-\n          parison methods. For example, mixed numeric types are compared according to their numeric value, so 0 equals 0.0,\n          etc. Otherwise, rather than providing an arbitrary ordering, the interpreter will raise a TypeError exception.",
+        "start_char": 3204,
+        "end_char": 3790,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p048",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 42,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3790
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 7.155901931106905,
+        "rank": 2
+      },
+      {
+        "id": "88174a070bc2d66f585662088135af3cc0d94967b02783806125895a2a7f33c7",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 47,
+        "text": "To loop over two or more sequences at the same time, the entries can be paired with the zip() function.\n          >>> questions = ['name', 'quest', 'favorite color']\n          >>> answers = ['lancelot', 'the holy grail', 'blue']\n          >>> for q, a in zip(questions, answers):\n          ...   print('What is your {0}? It is {1}.'.format(q, a))\n          ...\n          What is your name? It is lancelot.\n          What is your quest? It is the holy grail.\n          What is your favorite color? It is blue.\n\n          To loop over a sequence in reverse, first specify the sequence in a forward direction and then call the reversed()\n          function.\n          >>> for i in reversed(range(1, 10, 2)):\n          ...   print(i)\n          ...\n          9\n          7\n          5\n          3\n          1",
+        "start_char": 0,
+        "end_char": 803,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p047",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 41,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2184
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 6.5968197014579975,
+        "rank": 3
+      },
+      {
+        "id": "497497a4ff294ee811940d3835bd23a7aa06247093bfb9f7266c032ade69578e",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 67,
+        "text": "The last line of the error message indicates what happened. Exceptions come in different types, and the type is\n          printed as part of the message: the types in the example are ZeroDivisionError, NameError and TypeError.\n          The string printed as the exception type is the name of the built-in exception that occurred. This is true for all built-in",
+        "start_char": 2187,
+        "end_char": 2547,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p067",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 61,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 2547
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 6.195814340495412,
+        "rank": 4
+      },
+      {
+        "id": "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 42,
+        "text": ">>> matrix = [\n          ...   [1, 2, 3, 4],\n          ...   [5, 6, 7, 8],\n          ...   [9, 10, 11, 12],\n          ... ]\n          The following list comprehension will transpose rows and columns:\n\n          >>> [[row[i] for row in matrix] for i in range(4)]\n          [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]",
+        "start_char": 2141,
+        "end_char": 2460,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p042",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 36,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2460
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 5.97522126364614,
+        "rank": 5
+      },
+      {
+        "id": "836d0d49a75724acb4dda75e2605ba192f9bdc2ec713de7af1272a276ca2e9eb",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 55,
+        "text": "6.4.1 Importing * From a Package\n          Now what happens when the user writes from sound.effects import *? Ideally, one would hope that this\n          somehow goes out to the filesystem, finds which submodules are present in the package, and imports them all. This\n          could take a long time and importing sub-modules might have unwanted side-effects that should only happen when\n          the sub-module is explicitly imported.",
+        "start_char": 2432,
+        "end_char": 2869,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p055",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 49,
+          "chapter_title": "Modules",
+          "normalized_characters": 3544
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 5.656790398775286,
+        "rank": 6
+      },
+      {
+        "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 60,
+        "text": "Passing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for\n          making columns line up.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}\n          >>> for name, phone in table.items():\n          ...   print(f'{name:10} ==> {phone:10d}')\n          ...\n          Sjoerd  ==>     4127\n          Jack    ==>     4098\n          Dcab    ==>     7678\n\n          Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(),\n          and '!r' applies repr():\n          >>> animals = 'eels'\n          >>> print(f'My hovercraft is full of {animals}.')\n          My hovercraft is full of eels.\n          >>> print(f'My hovercraft is full of {animals!r}.')\n          My hovercraft is full of 'eels'.",
+        "start_char": 1653,
+        "end_char": 2475,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p060",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 54,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2647
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 5.156921660314024,
+        "rank": 7
+      },
+      {
+        "id": "bbd7b2235b869eb338a333a37e36b7c1c3440dc556816a214e03425548bf130a",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 67,
+        "text": "The parser repeats the offending line and displays little arrows pointing at the place where the error was detected.\n          Note that this is not always the place that needs to be fixed. In the example, the error is detected at the function\n          print(), since a colon (':') is missing just before it.\n          The file name (<stdin> in our example) and line number are printed so you know where to look in case the input\n          came from a file.\n\n          8.2 Exceptions",
+        "start_char": 776,
+        "end_char": 1260,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p067",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 61,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 2547
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 5.068030330727508,
+        "rank": 8
+      },
+      {
+        "id": "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 44,
+        "text": "5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+        "start_char": 0,
+        "end_char": 440,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p044",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 38,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3218
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 5.056734039575037,
+        "rank": 9
+      },
+      {
+        "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+        "start_char": 0,
+        "end_char": 995,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 4.818404898427721,
+        "rank": 10
+      }
+    ],
+    "components": {
+      "bm25": [
+        {
+          "id": "aa7fd097ab2f485e7f284efb44feabdd16a6e79f4243104810f15ef178b9e6ec",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 68,
+          "text": "It is possible to write programs that handle selected exceptions. Look at the following example, which asks the\n          user for input until a valid integer has been entered, but allows the user to interrupt the program (using Control-\n          C or whatever the operating system supports); note that a user-generated interruption is signalled by raising the\n          KeyboardInterrupt exception.\n          >>> while True:\n          ...   try:\n          ...      x = int(input(\"Please enter a number: \"))\n          ...      break\n          ...   except ValueError:\n          ...      print(\"Oops! That was no valid number. Try again...\")\n          ...\n\n          The try statement works as follows.\n            • First, the try clause (the statement(s) between the try and except keywords) is executed.",
+          "start_char": 682,
+          "end_char": 1488,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p068",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 62,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3200
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 10.210920199836801,
+          "rank": 1
+        },
+        {
+          "id": "254dc27fad3bca04c3fed8de7d803f8ab891e3c3fe64972cc2cd81a3fd4f3599",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 48,
+          "text": "'ABC' < 'C' < 'Pascal' < 'Python'\n          (1, 2, 3, 4)     < (1, 2, 4)\n          (1, 2)           < (1, 2, -1)\n          (1, 2, 3)       == (1.0, 2.0, 3.0)\n          (1, 2, ('aa', 'ab')) < (1, 2, ('abc', 'a'), 4)\n\n          Note that comparing objects of different types with < or > is legal provided that the objects have appropriate com-\n          parison methods. For example, mixed numeric types are compared according to their numeric value, so 0 equals 0.0,\n          etc. Otherwise, rather than providing an arbitrary ordering, the interpreter will raise a TypeError exception.",
+          "start_char": 3204,
+          "end_char": 3790,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p048",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 42,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3790
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.155901931106905,
+          "rank": 2
+        },
+        {
+          "id": "88174a070bc2d66f585662088135af3cc0d94967b02783806125895a2a7f33c7",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 47,
+          "text": "To loop over two or more sequences at the same time, the entries can be paired with the zip() function.\n          >>> questions = ['name', 'quest', 'favorite color']\n          >>> answers = ['lancelot', 'the holy grail', 'blue']\n          >>> for q, a in zip(questions, answers):\n          ...   print('What is your {0}? It is {1}.'.format(q, a))\n          ...\n          What is your name? It is lancelot.\n          What is your quest? It is the holy grail.\n          What is your favorite color? It is blue.\n\n          To loop over a sequence in reverse, first specify the sequence in a forward direction and then call the reversed()\n          function.\n          >>> for i in reversed(range(1, 10, 2)):\n          ...   print(i)\n          ...\n          9\n          7\n          5\n          3\n          1",
+          "start_char": 0,
+          "end_char": 803,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p047",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 41,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2184
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.5968197014579975,
+          "rank": 3
+        },
+        {
+          "id": "497497a4ff294ee811940d3835bd23a7aa06247093bfb9f7266c032ade69578e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 67,
+          "text": "The last line of the error message indicates what happened. Exceptions come in different types, and the type is\n          printed as part of the message: the types in the example are ZeroDivisionError, NameError and TypeError.\n          The string printed as the exception type is the name of the built-in exception that occurred. This is true for all built-in",
+          "start_char": 2187,
+          "end_char": 2547,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p067",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 61,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2547
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.195814340495412,
+          "rank": 4
+        },
+        {
+          "id": "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 42,
+          "text": ">>> matrix = [\n          ...   [1, 2, 3, 4],\n          ...   [5, 6, 7, 8],\n          ...   [9, 10, 11, 12],\n          ... ]\n          The following list comprehension will transpose rows and columns:\n\n          >>> [[row[i] for row in matrix] for i in range(4)]\n          [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]",
+          "start_char": 2141,
+          "end_char": 2460,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p042",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 36,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2460
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 5.97522126364614,
+          "rank": 5
+        },
+        {
+          "id": "836d0d49a75724acb4dda75e2605ba192f9bdc2ec713de7af1272a276ca2e9eb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "6.4.1 Importing * From a Package\n          Now what happens when the user writes from sound.effects import *? Ideally, one would hope that this\n          somehow goes out to the filesystem, finds which submodules are present in the package, and imports them all. This\n          could take a long time and importing sub-modules might have unwanted side-effects that should only happen when\n          the sub-module is explicitly imported.",
+          "start_char": 2432,
+          "end_char": 2869,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 5.656790398775286,
+          "rank": 6
+        },
+        {
+          "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 60,
+          "text": "Passing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for\n          making columns line up.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}\n          >>> for name, phone in table.items():\n          ...   print(f'{name:10} ==> {phone:10d}')\n          ...\n          Sjoerd  ==>     4127\n          Jack    ==>     4098\n          Dcab    ==>     7678\n\n          Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(),\n          and '!r' applies repr():\n          >>> animals = 'eels'\n          >>> print(f'My hovercraft is full of {animals}.')\n          My hovercraft is full of eels.\n          >>> print(f'My hovercraft is full of {animals!r}.')\n          My hovercraft is full of 'eels'.",
+          "start_char": 1653,
+          "end_char": 2475,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p060",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 54,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2647
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 5.156921660314024,
+          "rank": 7
+        },
+        {
+          "id": "bbd7b2235b869eb338a333a37e36b7c1c3440dc556816a214e03425548bf130a",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 67,
+          "text": "The parser repeats the offending line and displays little arrows pointing at the place where the error was detected.\n          Note that this is not always the place that needs to be fixed. In the example, the error is detected at the function\n          print(), since a colon (':') is missing just before it.\n          The file name (<stdin> in our example) and line number are printed so you know where to look in case the input\n          came from a file.\n\n          8.2 Exceptions",
+          "start_char": 776,
+          "end_char": 1260,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p067",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 61,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2547
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 5.068030330727508,
+          "rank": 8
+        },
+        {
+          "id": "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 44,
+          "text": "5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+          "start_char": 0,
+          "end_char": 440,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p044",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 38,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3218
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 5.056734039575037,
+          "rank": 9
+        },
+        {
+          "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+          "start_char": 0,
+          "end_char": 995,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 4.818404898427721,
+          "rank": 10
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": null,
+    "original_query_evidence_hit_at_3": null,
+    "actual_final_context_exact_evidence": null,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "trace_sha256": "45718d44a0d1a169416bc5e2420edfcdb1c0116b8f7d8f823cef5ac22efbd0df"
+}

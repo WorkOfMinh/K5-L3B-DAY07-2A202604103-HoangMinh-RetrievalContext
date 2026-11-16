@@ -1,0 +1,1292 @@
+{
+  "status": "answered",
+  "answer": "To construct an empty set, you have to use the `set()` function [600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b]. You should avoid `{}` for this because `{}` creates an empty dictionary instead [600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b].",
+  "citations": [
+    "600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b"
+  ],
+  "reason": "The retrieved text explicitly states that to create an empty set you have to use set(), and that {} creates an empty dictionary.",
+  "guard": "citation_ids_valid; semantic_support_requires_review",
+  "query_id": "D05",
+  "config_id": "bm25_base",
+  "public_query": {
+    "id": "D05",
+    "question": "How do I construct an empty set, and why should I avoid {} for this?",
+    "filter": null
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "empty set construct avoid {}",
+      "filter": null,
+      "method": "bm25",
+      "ranking": [
+        {
+          "id": "600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "5.4 Sets\n\n          Python also includes a data type for sets. A set is an unordered collection with no duplicate elements. Basic uses\n          include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like\n          union, intersection, difference, and symmetric difference.\n          Curly braces or the set() function can be used to create sets. Note: to create an empty set you have to use set(),\n          not {}; the latter creates an empty dictionary, a data structure that we discuss in the next section.\n          Here is a brief demonstration:",
+          "start_char": 0,
+          "end_char": 607,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.912825225163105,
+          "rank": 1
+        },
+        {
+          "id": "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+          "start_char": 0,
+          "end_char": 952,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 4.463626993530447,
+          "rank": 2
+        },
+        {
+          "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+          "start_char": 1840,
+          "end_char": 2820,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 4.0023715418661,
+          "rank": 3
+        },
+        {
+          "id": "9dbf99ecdbe763b9b8ffb9432a94708e9a8c2866ee68b5873d58db853e04abf4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": ">>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}\n          >>> print(basket)            # show that duplicates have been removed\n          {'orange', 'banana', 'pear', 'apple'}\n          >>> 'orange' in basket       # fast membership testing\n          True\n          >>> 'crabgrass' in basket\n          False\n          >>> # Demonstrate set operations on unique letters from two words\n          >>>\n          >>> a = set('abracadabra')\n          >>> b = set('alacazam')\n          >>> a                        # unique letters in a\n          {'a', 'r', 'b', 'c', 'd'}\n          >>> a - b                    # letters in a but not in b\n          {'r', 'd', 'b'}\n          >>> a | b                    # letters in a or b or both\n          {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}\n          >>> a & b                    # letters in both a and b\n          {'a', 'c'}\n          >>> a ^ b                    # letters in a or b but not both",
+          "start_char": 619,
+          "end_char": 1575,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.5255032858865993,
+          "rank": 4
+        },
+        {
+          "id": "316877eb003d66b00bf99f10c0750bb80fafd513be14f4ca08e29fb8963c463c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 44,
+          "text": "by following a value with a comma (it is not sufficient to enclose a single value in parentheses). Ugly, but effective.\n          For example:\n          >>> empty = ()\n          >>> singleton = 'hello', # <-- note trailing comma\n          >>> len(empty)\n          0\n          >>> len(singleton)\n          1\n          >>> singleton\n          ('hello',)\n          The statement t = 12345, 54321, 'hello!' is an example of tuple packing: the values 12345, 54321 and\n          'hello!' are packed together in a tuple. The reverse operation is also possible:\n\n          >>> x, y, z = t\n          This is called, appropriately enough, sequence unpacking and works for any sequence on the right-hand side. Sequence\n          unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the\n          sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.",
+          "start_char": 2264,
+          "end_char": 3218,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p044",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 38,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3218
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.406516464588478,
+          "rank": 5
+        },
+        {
+          "id": "02bdf890917f574f6d3fa554a20f52ee47162658fb17b1a2571060df95ed616d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 47,
+          "text": "To loop over a sequence in sorted order, use the sorted() function which returns a new sorted list while leaving\n          the source unaltered.\n          >>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']\n          >>> for i in sorted(basket):\n          ...   print(i)\n          ...\n          apple\n          apple\n          banana\n          orange\n          orange\n          pear\n          Using set() on a sequence eliminates duplicate elements. The use of sorted() in combination with set() over\n          a sequence is an idiomatic way to loop over unique elements of the sequence in sorted order.",
+          "start_char": 815,
+          "end_char": 1436,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p047",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 41,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2184
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.3246300530759907,
+          "rank": 6
+        },
+        {
+          "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 44,
+          "text": "is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed",
+          "start_char": 1349,
+          "end_char": 2253,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p044",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 38,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3218
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.290872387197989,
+          "rank": 7
+        },
+        {
+          "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+          "start_char": 1586,
+          "end_char": 1828,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.14115413408602,
+          "rank": 8
+        },
+        {
+          "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+          "start_char": 990,
+          "end_char": 1611,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 2.6954056438627383,
+          "rank": 9
+        },
+        {
+          "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "C>\n          These two variables are only defined if the interpreter is in interactive mode.\n\n          The variable sys.path is a list of strings that determines the interpreter’s search path for modules. It is initialized\n          to a default path taken from the environment variable PYTHONPATH, or from a built-in default if PYTHONPATH is not\n          set. You can modify it using standard list operations:",
+          "start_char": 3780,
+          "end_char": 4192,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 2.6418493347530703,
+          "rank": 10
+        }
+      ],
+      "component_rankings": {
+        "bm25": [
+          {
+            "id": "600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "5.4 Sets\n\n          Python also includes a data type for sets. A set is an unordered collection with no duplicate elements. Basic uses\n          include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like\n          union, intersection, difference, and symmetric difference.\n          Curly braces or the set() function can be used to create sets. Note: to create an empty set you have to use set(),\n          not {}; the latter creates an empty dictionary, a data structure that we discuss in the next section.\n          Here is a brief demonstration:",
+            "start_char": 0,
+            "end_char": 607,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 7.912825225163105,
+            "rank": 1
+          },
+          {
+            "id": "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 55,
+            "text": "(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+            "start_char": 0,
+            "end_char": 952,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p055",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 49,
+              "chapter_title": "Modules",
+              "normalized_characters": 3544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.463626993530447,
+            "rank": 2
+          },
+          {
+            "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+            "start_char": 1840,
+            "end_char": 2820,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.0023715418661,
+            "rank": 3
+          },
+          {
+            "id": "9dbf99ecdbe763b9b8ffb9432a94708e9a8c2866ee68b5873d58db853e04abf4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": ">>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}\n          >>> print(basket)            # show that duplicates have been removed\n          {'orange', 'banana', 'pear', 'apple'}\n          >>> 'orange' in basket       # fast membership testing\n          True\n          >>> 'crabgrass' in basket\n          False\n          >>> # Demonstrate set operations on unique letters from two words\n          >>>\n          >>> a = set('abracadabra')\n          >>> b = set('alacazam')\n          >>> a                        # unique letters in a\n          {'a', 'r', 'b', 'c', 'd'}\n          >>> a - b                    # letters in a but not in b\n          {'r', 'd', 'b'}\n          >>> a | b                    # letters in a or b or both\n          {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}\n          >>> a & b                    # letters in both a and b\n          {'a', 'c'}\n          >>> a ^ b                    # letters in a or b but not both",
+            "start_char": 619,
+            "end_char": 1575,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.5255032858865993,
+            "rank": 4
+          },
+          {
+            "id": "316877eb003d66b00bf99f10c0750bb80fafd513be14f4ca08e29fb8963c463c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": "by following a value with a comma (it is not sufficient to enclose a single value in parentheses). Ugly, but effective.\n          For example:\n          >>> empty = ()\n          >>> singleton = 'hello', # <-- note trailing comma\n          >>> len(empty)\n          0\n          >>> len(singleton)\n          1\n          >>> singleton\n          ('hello',)\n          The statement t = 12345, 54321, 'hello!' is an example of tuple packing: the values 12345, 54321 and\n          'hello!' are packed together in a tuple. The reverse operation is also possible:\n\n          >>> x, y, z = t\n          This is called, appropriately enough, sequence unpacking and works for any sequence on the right-hand side. Sequence\n          unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the\n          sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.",
+            "start_char": 2264,
+            "end_char": 3218,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.406516464588478,
+            "rank": 5
+          },
+          {
+            "id": "02bdf890917f574f6d3fa554a20f52ee47162658fb17b1a2571060df95ed616d",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 47,
+            "text": "To loop over a sequence in sorted order, use the sorted() function which returns a new sorted list while leaving\n          the source unaltered.\n          >>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']\n          >>> for i in sorted(basket):\n          ...   print(i)\n          ...\n          apple\n          apple\n          banana\n          orange\n          orange\n          pear\n          Using set() on a sequence eliminates duplicate elements. The use of sorted() in combination with set() over\n          a sequence is an idiomatic way to loop over unique elements of the sequence in sorted order.",
+            "start_char": 815,
+            "end_char": 1436,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p047",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 41,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2184
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.3246300530759907,
+            "rank": 6
+          },
+          {
+            "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": "is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed",
+            "start_char": 1349,
+            "end_char": 2253,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.290872387197989,
+            "rank": 7
+          },
+          {
+            "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+            "start_char": 1586,
+            "end_char": 1828,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.14115413408602,
+            "rank": 8
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+            "start_char": 990,
+            "end_char": 1611,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 2.6954056438627383,
+            "rank": 9
+          },
+          {
+            "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 52,
+            "text": "C>\n          These two variables are only defined if the interpreter is in interactive mode.\n\n          The variable sys.path is a list of strings that determines the interpreter’s search path for modules. It is initialized\n          to a default path taken from the environment variable PYTHONPATH, or from a built-in default if PYTHONPATH is not\n          set. You can modify it using standard list operations:",
+            "start_char": 3780,
+            "end_char": 4192,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p052",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 46,
+              "chapter_title": "Modules",
+              "normalized_characters": 4192
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 2.6418493347530703,
+            "rank": 10
+          }
+        ]
+      },
+      "context": {
+        "text": "[600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\n5.4 Sets\n\n          Python also includes a data type for sets. A set is an unordered collection with no duplicate elements. Basic uses\n          include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like\n          union, intersection, difference, and symmetric difference.\n          Curly braces or the set() function can be used to create sets. Note: to create an empty set you have to use set(),\n          not {}; the latter creates an empty dictionary, a data structure that we discuss in the next section.\n          Here is a brief demonstration:\n\n[cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c | source=data/raw/tutorial.pdf | PDF page=55 | chapter=6]\n(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo\n\n[c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047 | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nAnother useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+        "chunk_ids": [
+          "600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b",
+          "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+          "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047"
+        ],
+        "characters": 2915,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "5.4 Sets\n\n          Python also includes a data type for sets. A set is an unordered collection with no duplicate elements. Basic uses\n          include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like\n          union, intersection, difference, and symmetric difference.\n          Curly braces or the set() function can be used to create sets. Note: to create an empty set you have to use set(),\n          not {}; the latter creates an empty dictionary, a data structure that we discuss in the next section.\n          Here is a brief demonstration:",
+            "start_char": 0,
+            "end_char": 607,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 7.912825225163105,
+            "rank": 1
+          },
+          {
+            "id": "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 55,
+            "text": "(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+            "start_char": 0,
+            "end_char": 952,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p055",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 49,
+              "chapter_title": "Modules",
+              "normalized_characters": 3544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.463626993530447,
+            "rank": 2
+          },
+          {
+            "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+            "start_char": 1840,
+            "end_char": 2820,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.0023715418661,
+            "rank": 3
+          }
+        ],
+        "excluded": [
+          {
+            "id": "9dbf99ecdbe763b9b8ffb9432a94708e9a8c2866ee68b5873d58db853e04abf4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "316877eb003d66b00bf99f10c0750bb80fafd513be14f4ca08e29fb8963c463c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "02bdf890917f574f6d3fa554a20f52ee47162658fb17b1a2571060df95ed616d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.00037310000334400684
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "7ea5df095f51c00190afe2f7235b82773da2335c88f6f7e6aa970ec329882b6f",
+      "request_sha256": "89f5bf0c729419fdc25381446312913520704a663fa4e400c482c31c1969bbfc",
+      "response_id": "XLf6aoemMd-WosUPiZuC4Q8",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 610,
+        "candidatesTokenCount": 18,
+        "totalTokenCount": 628,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 610
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.1410000000032596,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "080563d0b86c03ad604e483d0e90b1eed283c655e1e8a0a2ba5c8bcb842e72bb",
+      "request_sha256": "4a76abf74746a2856fc4d9258e0a1d60f33a5aa87d01e62337225551c8f2e063",
+      "response_id": "a7f6atzPOsa01e8P-_K8iQI",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1616,
+        "candidatesTokenCount": 264,
+        "totalTokenCount": 1880,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1616
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.8910000000032596,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\n5.4 Sets\n\n          Python also includes a data type for sets. A set is an unordered collection with no duplicate elements. Basic uses\n          include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like\n          union, intersection, difference, and symmetric difference.\n          Curly braces or the set() function can be used to create sets. Note: to create an empty set you have to use set(),\n          not {}; the latter creates an empty dictionary, a data structure that we discuss in the next section.\n          Here is a brief demonstration:\n\n[cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c | source=data/raw/tutorial.pdf | PDF page=55 | chapter=6]\n(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo\n\n[c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047 | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nAnother useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+        "chunk_ids": [
+          "600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b",
+          "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+          "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047"
+        ],
+        "characters": 2915,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "5.4 Sets\n\n          Python also includes a data type for sets. A set is an unordered collection with no duplicate elements. Basic uses\n          include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like\n          union, intersection, difference, and symmetric difference.\n          Curly braces or the set() function can be used to create sets. Note: to create an empty set you have to use set(),\n          not {}; the latter creates an empty dictionary, a data structure that we discuss in the next section.\n          Here is a brief demonstration:",
+            "start_char": 0,
+            "end_char": 607,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 7.912825225163105,
+            "rank": 1
+          },
+          {
+            "id": "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 55,
+            "text": "(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+            "start_char": 0,
+            "end_char": 952,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p055",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 49,
+              "chapter_title": "Modules",
+              "normalized_characters": 3544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.463626993530447,
+            "rank": 2
+          },
+          {
+            "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+            "start_char": 1840,
+            "end_char": 2820,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.0023715418661,
+            "rank": 3
+          }
+        ],
+        "excluded": [
+          {
+            "id": "9dbf99ecdbe763b9b8ffb9432a94708e9a8c2866ee68b5873d58db853e04abf4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "316877eb003d66b00bf99f10c0750bb80fafd513be14f4ca08e29fb8963c463c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "02bdf890917f574f6d3fa554a20f52ee47162658fb17b1a2571060df95ed616d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\n5.4 Sets\n\n          Python also includes a data type for sets. A set is an unordered collection with no duplicate elements. Basic uses\n          include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like\n          union, intersection, difference, and symmetric difference.\n          Curly braces or the set() function can be used to create sets. Note: to create an empty set you have to use set(),\n          not {}; the latter creates an empty dictionary, a data structure that we discuss in the next section.\n          Here is a brief demonstration:\n\n[cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c | source=data/raw/tutorial.pdf | PDF page=55 | chapter=6]\n(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo\n\n[c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047 | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\nAnother useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+    "chunk_ids": [
+      "600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b",
+      "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+      "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047"
+    ],
+    "characters": 2915,
+    "budget_chars": 3500,
+    "max_chunks": 3,
+    "selected_chunks": [
+      {
+        "id": "600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 45,
+        "text": "5.4 Sets\n\n          Python also includes a data type for sets. A set is an unordered collection with no duplicate elements. Basic uses\n          include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like\n          union, intersection, difference, and symmetric difference.\n          Curly braces or the set() function can be used to create sets. Note: to create an empty set you have to use set(),\n          not {}; the latter creates an empty dictionary, a data structure that we discuss in the next section.\n          Here is a brief demonstration:",
+        "start_char": 0,
+        "end_char": 607,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p045",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 39,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3567
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 7.912825225163105,
+        "rank": 1
+      },
+      {
+        "id": "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 55,
+        "text": "(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+        "start_char": 0,
+        "end_char": 952,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p055",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 49,
+          "chapter_title": "Modules",
+          "normalized_characters": 3544
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 4.463626993530447,
+        "rank": 2
+      },
+      {
+        "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 45,
+        "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+        "start_char": 1840,
+        "end_char": 2820,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p045",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 39,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3567
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 4.0023715418661,
+        "rank": 3
+      }
+    ],
+    "excluded": [
+      {
+        "id": "9dbf99ecdbe763b9b8ffb9432a94708e9a8c2866ee68b5873d58db853e04abf4",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "316877eb003d66b00bf99f10c0750bb80fafd513be14f4ca08e29fb8963c463c",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "02bdf890917f574f6d3fa554a20f52ee47162658fb17b1a2571060df95ed616d",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+        "reason": "max_chunks"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [],
+  "search_calls": 1,
+  "generated_search_queries": [
+    "empty set construct avoid {}"
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 29.564785599999595,
+    "pacing_seconds_this_invocation": 26.54599999999482,
+    "wall_seconds_excluding_pacing": 3.018785600004776,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": true,
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 45,
+        "evidence": "Note: to create an empty set you have to use set(),\n          not {}; the latter creates an empty dictionary, a data structure that we discuss in the next section."
+      }
+    ],
+    "expected_answer": "Use set(); {} creates an empty dictionary.",
+    "absence_reason": null,
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "bm25",
+    "query": "How do I construct an empty set, and why should I avoid {} for this?",
+    "filter": null,
+    "ranking": [
+      {
+        "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 43,
+        "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+        "start_char": 840,
+        "end_char": 1559,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p043",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 37,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2043
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 11.031686859218308,
+        "rank": 1
+      },
+      {
+        "id": "600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 45,
+        "text": "5.4 Sets\n\n          Python also includes a data type for sets. A set is an unordered collection with no duplicate elements. Basic uses\n          include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like\n          union, intersection, difference, and symmetric difference.\n          Curly braces or the set() function can be used to create sets. Note: to create an empty set you have to use set(),\n          not {}; the latter creates an empty dictionary, a data structure that we discuss in the next section.\n          Here is a brief demonstration:",
+        "start_char": 0,
+        "end_char": 607,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p045",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 39,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3567
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 10.691526348977515,
+        "rank": 2
+      },
+      {
+        "id": "02bdf890917f574f6d3fa554a20f52ee47162658fb17b1a2571060df95ed616d",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 47,
+        "text": "To loop over a sequence in sorted order, use the sorted() function which returns a new sorted list while leaving\n          the source unaltered.\n          >>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']\n          >>> for i in sorted(basket):\n          ...   print(i)\n          ...\n          apple\n          apple\n          banana\n          orange\n          orange\n          pear\n          Using set() on a sequence eliminates duplicate elements. The use of sorted() in combination with set() over\n          a sequence is an idiomatic way to loop over unique elements of the sequence in sorted order.",
+        "start_char": 815,
+        "end_char": 1436,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p047",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 41,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2184
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 8.532501569599006,
+        "rank": 3
+      },
+      {
+        "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 50,
+        "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+        "start_char": 1929,
+        "end_char": 2916,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p050",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 44,
+          "chapter_title": "Modules",
+          "normalized_characters": 3193
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 7.519375295239199,
+        "rank": 4
+      },
+      {
+        "id": "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 72,
+        "text": "(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.",
+        "start_char": 0,
+        "end_char": 960,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p072",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 66,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 3009
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 7.041499912153409,
+        "rank": 5
+      },
+      {
+        "id": "29d4bf2d01c08d6e6899d5dd4ec80c8d68724809147dc00f7136dad690070dd0",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 59,
+        "text": "Notice how the yes_votes are padded with spaces and a negative sign only for negative numbers. The\n             example also prints percentage multiplied by 100, with 2 decimal places and followed by a percent sign (see\n             formatspec for details).\n            • Finally, you can do all the string handling yourself by using string slicing and concatenation operations to create\n             any layout you can imagine. The string type has some methods that perform useful operations for padding\n             strings to a given column width.\n          When you don’t need fancy output but just want a quick display of some variables for debugging purposes, you can\n          convert any value to a string with the repr() or str() functions.\n          The str() function is meant to return representations of values which are fairly human-readable, while repr()",
+        "start_char": 1972,
+        "end_char": 2841,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p059",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 53,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3326
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 6.9829193513062355,
+        "rank": 6
+      },
+      {
+        "id": "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 55,
+        "text": "(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+        "start_char": 0,
+        "end_char": 952,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p055",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 49,
+          "chapter_title": "Modules",
+          "normalized_characters": 3544
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 6.862770203863568,
+        "rank": 7
+      },
+      {
+        "id": "316877eb003d66b00bf99f10c0750bb80fafd513be14f4ca08e29fb8963c463c",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 44,
+        "text": "by following a value with a comma (it is not sufficient to enclose a single value in parentheses). Ugly, but effective.\n          For example:\n          >>> empty = ()\n          >>> singleton = 'hello', # <-- note trailing comma\n          >>> len(empty)\n          0\n          >>> len(singleton)\n          1\n          >>> singleton\n          ('hello',)\n          The statement t = 12345, 54321, 'hello!' is an example of tuple packing: the values 12345, 54321 and\n          'hello!' are packed together in a tuple. The reverse operation is also possible:\n\n          >>> x, y, z = t\n          This is called, appropriately enough, sequence unpacking and works for any sequence on the right-hand side. Sequence\n          unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the\n          sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.",
+        "start_char": 2264,
+        "end_char": 3218,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p044",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 38,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3218
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 6.479857558212728,
+        "rank": 8
+      },
+      {
+        "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 44,
+        "text": "is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed",
+        "start_char": 1349,
+        "end_char": 2253,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p044",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 38,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3218
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 6.139599766766187,
+        "rank": 9
+      },
+      {
+        "id": "9debbfeedc3e3febb6695775082de2846622b9bb2e21f07d760901a60ca42acc",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 60,
+        "text": "placeholders like $x and replacing them with values from a dictionary, but offers much less control of the formatting.\n\n          7.1.1 Formatted String Literals\n          Formatted string literals (also called f-strings for short) let you include the value of Python expressions inside a string\n          by prefixing the string with f or F and writing expressions as {expression}.\n          An optional format specifier can follow the expression. This allows greater control over how the value is formatted.\n          The following example rounds pi to three places after the decimal:\n\n          >>> import math\n          >>> print(f'The value of pi is approximately {math.pi:.3f}.')\n          The value of pi is approximately 3.142.",
+        "start_char": 906,
+        "end_char": 1641,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p060",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 54,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2647
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 6.0623522594322115,
+        "rank": 10
+      }
+    ],
+    "components": {
+      "bm25": [
+        {
+          "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 43,
+          "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+          "start_char": 840,
+          "end_char": 1559,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p043",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 37,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2043
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 11.031686859218308,
+          "rank": 1
+        },
+        {
+          "id": "600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "5.4 Sets\n\n          Python also includes a data type for sets. A set is an unordered collection with no duplicate elements. Basic uses\n          include membership testing and eliminating duplicate entries. Set objects also support mathematical operations like\n          union, intersection, difference, and symmetric difference.\n          Curly braces or the set() function can be used to create sets. Note: to create an empty set you have to use set(),\n          not {}; the latter creates an empty dictionary, a data structure that we discuss in the next section.\n          Here is a brief demonstration:",
+          "start_char": 0,
+          "end_char": 607,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 10.691526348977515,
+          "rank": 2
+        },
+        {
+          "id": "02bdf890917f574f6d3fa554a20f52ee47162658fb17b1a2571060df95ed616d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 47,
+          "text": "To loop over a sequence in sorted order, use the sorted() function which returns a new sorted list while leaving\n          the source unaltered.\n          >>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']\n          >>> for i in sorted(basket):\n          ...   print(i)\n          ...\n          apple\n          apple\n          banana\n          orange\n          orange\n          pear\n          Using set() on a sequence eliminates duplicate elements. The use of sorted() in combination with set() over\n          a sequence is an idiomatic way to loop over unique elements of the sequence in sorted order.",
+          "start_char": 815,
+          "end_char": 1436,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p047",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 41,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2184
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.532501569599006,
+          "rank": 3
+        },
+        {
+          "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 50,
+          "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+          "start_char": 1929,
+          "end_char": 2916,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p050",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 44,
+            "chapter_title": "Modules",
+            "normalized_characters": 3193
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.519375295239199,
+          "rank": 4
+        },
+        {
+          "id": "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 72,
+          "text": "(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.",
+          "start_char": 0,
+          "end_char": 960,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p072",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 66,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3009
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.041499912153409,
+          "rank": 5
+        },
+        {
+          "id": "29d4bf2d01c08d6e6899d5dd4ec80c8d68724809147dc00f7136dad690070dd0",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 59,
+          "text": "Notice how the yes_votes are padded with spaces and a negative sign only for negative numbers. The\n             example also prints percentage multiplied by 100, with 2 decimal places and followed by a percent sign (see\n             formatspec for details).\n            • Finally, you can do all the string handling yourself by using string slicing and concatenation operations to create\n             any layout you can imagine. The string type has some methods that perform useful operations for padding\n             strings to a given column width.\n          When you don’t need fancy output but just want a quick display of some variables for debugging purposes, you can\n          convert any value to a string with the repr() or str() functions.\n          The str() function is meant to return representations of values which are fairly human-readable, while repr()",
+          "start_char": 1972,
+          "end_char": 2841,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p059",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 53,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3326
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.9829193513062355,
+          "rank": 6
+        },
+        {
+          "id": "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "(continued from previous page)\n                    equalizer.py\n                    vocoder.py\n                    karaoke.py\n                    ...\n          When importing the package, Python searches through the directories on sys.path looking for the package subdi-\n          rectory.\n\n          The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature). This prevents directories with a common name, such as\n          string, from unintentionally hiding valid modules that occur later on the module search path. In the simplest case,\n          __init__.py can just be an empty file, but it can also execute initialization code for the package or set the __all__\n          variable, described later.\n          Users of the package can import individual modules from the package, for example:\n          import sound.effects.echo",
+          "start_char": 0,
+          "end_char": 952,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.862770203863568,
+          "rank": 7
+        },
+        {
+          "id": "316877eb003d66b00bf99f10c0750bb80fafd513be14f4ca08e29fb8963c463c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 44,
+          "text": "by following a value with a comma (it is not sufficient to enclose a single value in parentheses). Ugly, but effective.\n          For example:\n          >>> empty = ()\n          >>> singleton = 'hello', # <-- note trailing comma\n          >>> len(empty)\n          0\n          >>> len(singleton)\n          1\n          >>> singleton\n          ('hello',)\n          The statement t = 12345, 54321, 'hello!' is an example of tuple packing: the values 12345, 54321 and\n          'hello!' are packed together in a tuple. The reverse operation is also possible:\n\n          >>> x, y, z = t\n          This is called, appropriately enough, sequence unpacking and works for any sequence on the right-hand side. Sequence\n          unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the\n          sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.",
+          "start_char": 2264,
+          "end_char": 3218,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p044",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 38,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3218
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.479857558212728,
+          "rank": 8
+        },
+        {
+          "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 44,
+          "text": "is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed",
+          "start_char": 1349,
+          "end_char": 2253,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p044",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 38,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3218
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.139599766766187,
+          "rank": 9
+        },
+        {
+          "id": "9debbfeedc3e3febb6695775082de2846622b9bb2e21f07d760901a60ca42acc",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 60,
+          "text": "placeholders like $x and replacing them with values from a dictionary, but offers much less control of the formatting.\n\n          7.1.1 Formatted String Literals\n          Formatted string literals (also called f-strings for short) let you include the value of Python expressions inside a string\n          by prefixing the string with f or F and writing expressions as {expression}.\n          An optional format specifier can follow the expression. This allows greater control over how the value is formatted.\n          The following example rounds pi to three places after the decimal:\n\n          >>> import math\n          >>> print(f'The value of pi is approximately {math.pi:.3f}.')\n          The value of pi is approximately 3.142.",
+          "start_char": 906,
+          "end_char": 1641,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p060",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 54,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2647
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.0623522594322115,
+          "rank": 10
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": false,
+    "original_query_evidence_hit_at_3": true,
+    "actual_final_context_exact_evidence": true,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "trace_sha256": "da0943f96d9682f0e3c5ae9d0657e05800a4a5944d09bb891fdd3fdfde085672"
+}

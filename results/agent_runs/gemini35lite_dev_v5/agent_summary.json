@@ -1,0 +1,205 @@
+{
+  "created_at": "2026-11-16T08:20:20.368385+00:00",
+  "status": "partial_resume_required",
+  "split": "dev",
+  "configurations": {
+    "dense_base": {
+      "method": "dense",
+      "completed_cases": 9,
+      "expected_cases": 17,
+      "completed_answerable_cases": 9,
+      "completed_insufficient_cases": 0,
+      "provisional_exact_evidence_metrics_on_completed_answerable_cases": {
+        "original_query_hit_at_1": {
+          "numerator": 7,
+          "denominator": 9,
+          "rate": 0.7777777777777778
+        },
+        "original_query_evidence_hit_at_3": {
+          "numerator": 8,
+          "denominator": 9,
+          "rate": 0.8888888888888888
+        },
+        "actual_final_context_exact_evidence": {
+          "numerator": 8,
+          "denominator": 9,
+          "rate": 0.8888888888888888
+        }
+      },
+      "statuses": {
+        "answered": 9,
+        "abstain": 0
+      },
+      "successful_search_calls": 10,
+      "model_decisions": 23,
+      "median_uncached_end_to_end_excluding_pacing_ms": 3235.3284999990137,
+      "uncached_latency_cases": 9,
+      "grounded_answer_grade": null,
+      "citation_support": null,
+      "correct_abstentions": null,
+      "review_status": "pending; output status is not a correctness judgment"
+    },
+    "bm25_base": {
+      "method": "bm25",
+      "completed_cases": 9,
+      "expected_cases": 17,
+      "completed_answerable_cases": 9,
+      "completed_insufficient_cases": 0,
+      "provisional_exact_evidence_metrics_on_completed_answerable_cases": {
+        "original_query_hit_at_1": {
+          "numerator": 5,
+          "denominator": 9,
+          "rate": 0.5555555555555556
+        },
+        "original_query_evidence_hit_at_3": {
+          "numerator": 8,
+          "denominator": 9,
+          "rate": 0.8888888888888888
+        },
+        "actual_final_context_exact_evidence": {
+          "numerator": 9,
+          "denominator": 9,
+          "rate": 1.0
+        }
+      },
+      "statuses": {
+        "answered": 9,
+        "abstain": 0
+      },
+      "successful_search_calls": 10,
+      "model_decisions": 21,
+      "median_uncached_end_to_end_excluding_pacing_ms": 3048.397400001704,
+      "uncached_latency_cases": 9,
+      "grounded_answer_grade": null,
+      "citation_support": null,
+      "correct_abstentions": null,
+      "review_status": "pending; output status is not a correctness judgment"
+    },
+    "hybrid_base": {
+      "method": "hybrid_rrf",
+      "completed_cases": 9,
+      "expected_cases": 17,
+      "completed_answerable_cases": 9,
+      "completed_insufficient_cases": 0,
+      "provisional_exact_evidence_metrics_on_completed_answerable_cases": {
+        "original_query_hit_at_1": {
+          "numerator": 8,
+          "denominator": 9,
+          "rate": 0.8888888888888888
+        },
+        "original_query_evidence_hit_at_3": {
+          "numerator": 8,
+          "denominator": 9,
+          "rate": 0.8888888888888888
+        },
+        "actual_final_context_exact_evidence": {
+          "numerator": 8,
+          "denominator": 9,
+          "rate": 0.8888888888888888
+        }
+      },
+      "statuses": {
+        "answered": 9,
+        "abstain": 0
+      },
+      "successful_search_calls": 10,
+      "model_decisions": 24,
+      "median_uncached_end_to_end_excluding_pacing_ms": 4494.203000002017,
+      "uncached_latency_cases": 9,
+      "grounded_answer_grade": null,
+      "citation_support": null,
+      "correct_abstentions": null,
+      "review_status": "pending; output status is not a correctness judgment"
+    },
+    "hybrid_context5": {
+      "method": "hybrid_rrf",
+      "completed_cases": 8,
+      "expected_cases": 17,
+      "completed_answerable_cases": 8,
+      "completed_insufficient_cases": 0,
+      "provisional_exact_evidence_metrics_on_completed_answerable_cases": {
+        "original_query_hit_at_1": {
+          "numerator": 8,
+          "denominator": 8,
+          "rate": 1.0
+        },
+        "original_query_evidence_hit_at_3": {
+          "numerator": 8,
+          "denominator": 8,
+          "rate": 1.0
+        },
+        "actual_final_context_exact_evidence": {
+          "numerator": 8,
+          "denominator": 8,
+          "rate": 1.0
+        }
+      },
+      "statuses": {
+        "answered": 7,
+        "abstain": 1
+      },
+      "successful_search_calls": 8,
+      "model_decisions": 21,
+      "median_uncached_end_to_end_excluding_pacing_ms": 4605.753050003841,
+      "uncached_latency_cases": 8,
+      "grounded_answer_grade": null,
+      "citation_support": null,
+      "correct_abstentions": null,
+      "review_status": "pending; output status is not a correctness judgment"
+    }
+  },
+  "successful_api_responses": 92,
+  "api_attempts_started": 95,
+  "api_failures": 3,
+  "api_error_events": [
+    {
+      "event": "attempt_failed",
+      "at": "2026-11-16T07:44:16.677851+00:00",
+      "request_id": "2f5c873265b2ed1a4735bb72205bfa4df098f551496822159c19363d6b871c32",
+      "http_status": 503,
+      "error": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "network_seconds": 1.3280000000013388,
+      "usage_metadata": null
+    },
+    {
+      "event": "attempt_failed",
+      "at": "2026-11-16T08:16:31.493517+00:00",
+      "request_id": "848f34b0a678d79fcbe1a5af73fb883272be6c7cac74e175f2d36d66c1d5511f",
+      "http_status": 503,
+      "error": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "network_seconds": 2.0309999999990396,
+      "usage_metadata": null
+    },
+    {
+      "event": "attempt_failed",
+      "at": "2026-11-16T08:16:45.803765+00:00",
+      "request_id": "848f34b0a678d79fcbe1a5af73fb883272be6c7cac74e175f2d36d66c1d5511f",
+      "http_status": 503,
+      "error": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+      "network_seconds": 1.3440000000009604,
+      "usage_metadata": null
+    }
+  ],
+  "observed_successful_response_usage": {
+    "promptTokenCount": 134134,
+    "candidatesTokenCount": 11227,
+    "totalTokenCount": 145361
+  },
+  "missing_usage_responses": 0,
+  "unpaired_attempt_starts": 0,
+  "cost": {
+    "estimated_paid_api_cost_usd": 0,
+    "actual_billed_cost_usd": null,
+    "basis": "Free-tier declaration; verify project tier/usage in AI Studio. API responses do not prove billing tier. Failed/interrupted requests may have unknown token usage."
+  },
+  "configuration_selected": false,
+  "test_run": false,
+  "limitations": [
+    "Automatic exact evidence is provisional and may miss equivalent support.",
+    "No human answer/citation/abstention judgments are inferred.",
+    "Summary metrics use completed answerable cases only; partial runs are not full-dev comparisons.",
+    "API response caching supports recovery, not independent repeated model trials.",
+    "Pacing is reported separately. Resumed cases are excluded from uncached latency summaries.",
+    "Provider model aliases and free quotas can change; resolved modelVersion is checked."
+  ]
+}

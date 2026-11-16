@@ -1,0 +1,1292 @@
+{
+  "status": "answered",
+  "answer": "It raises a ValueError if there is no such item [1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3].",
+  "citations": [
+    "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3"
+  ],
+  "reason": "The documentation states that list.remove(x) raises a ValueError if there is no such item.",
+  "guard": "citation_ids_valid; semantic_support_requires_review",
+  "query_id": "D02",
+  "config_id": "bm25_base",
+  "public_query": {
+    "id": "D02",
+    "question": "What does list.remove(x) do if x does not occur in the list?",
+    "filter": null
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "list remove x does not occur",
+      "filter": null,
+      "method": "bm25",
+      "ranking": [
+        {
+          "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+          "start_char": 692,
+          "end_char": 1665,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 11.404227538885202,
+          "rank": 1
+        },
+        {
+          "id": "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 70,
+          "text": "Exception handlers do not handle only exceptions that occur immediately in the try clause, but also those that occur\n          inside functions that are called (even indirectly) in the try clause. For example:\n          >>> def this_fails():\n          ...   x = 1/0\n          ...\n          >>> try:\n          ...   this_fails()\n          ... except ZeroDivisionError as err:\n          ...   print('Handling run-time error:', err)\n          ...\n          Handling run-time error: division by zero\n\n          8.4 Raising Exceptions\n\n          The raise statement allows the programmer to force a specified exception to occur. For example:\n\n          >>> raise NameError('HiThere')\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: HiThere",
+          "start_char": 950,
+          "end_char": 1749,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p070",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 64,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2610
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.217438046268814,
+          "rank": 2
+        },
+        {
+          "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+          "start_char": 1586,
+          "end_char": 1828,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.016998373868645,
+          "rank": 3
+        },
+        {
+          "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 43,
+          "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+          "start_char": 840,
+          "end_char": 1559,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p043",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 37,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2043
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.9295763795236835,
+          "rank": 4
+        },
+        {
+          "id": "c483b73cb4bd1454c5d63a61a2d9cbd9030c1505158588e40d1f1542b0c09df9",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 68,
+          "text": "• If no exception occurs, the except clause is skipped and execution of the try statement is finished.\n            • If an exception occurs during execution of the try clause, the rest of the clause is skipped. Then, if its type\n             matches the exception named after the except keyword, the except clause is executed, and then execution\n             continues after the try/except block.\n            • If an exception occurs which does not match the exception named in the except clause, it is passed on to outer\n             try statements; if no handler is found, it is an unhandled exception and execution stops with an error message.\n          A try statement may have more than one except clause, to specify handlers for different exceptions. At most one\n          handler will be executed. Handlers only handle exceptions that occur in the corresponding try clause, not in other",
+          "start_char": 1502,
+          "end_char": 2395,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p068",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 62,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3200
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.320378508095921,
+          "rank": 5
+        },
+        {
+          "id": "3b879acb1e5d788592464a851060dc671345d828231c8b1b46220a68b71f6b72",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "Python does not check the cache in two circumstances. First, it always recompiles and does not store the result for\n          the module that’s loaded directly from the command line. Second, it does not check the cache if there is no source\n          module. To support a non-source (compiled only) distribution, the compiled module must be in the source directory,\n          and there must not be a source module.\n          Some tips for experts:",
+          "start_char": 1364,
+          "end_char": 1811,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.275649289076035,
+          "rank": 6
+        },
+        {
+          "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": "which is more concise and readable.\n          A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for\n          or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if\n          clauses which follow it. For example, this listcomp combines the elements of two lists if they are not equal:\n          >>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]\n          [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]\n\n          and it’s equivalent to:\n\n          >>> combs = []\n          >>> for x in [1,2,3]:\n          ...   for y in [3,1,4]:\n          ...      if x != y:\n          ...         combs.append((x, y))\n                                                              (continues on next page)",
+          "start_char": 2013,
+          "end_char": 2843,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.164070111297889,
+          "rank": 7
+        },
+        {
+          "id": "374dc4ec3e919e60ff5af68580c5214d5afed218b5d2fb2f2336417f272ceb3c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 53,
+          "text": ">>> fib = fibo.fib\n          >>> dir()\n          ['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']\n          Note that it lists all types of names: variables, modules, functions, etc.\n          dir() does not list the names of built-in functions and variables. If you want a list of those, they are defined in the\n          standard module builtins:\n          >>> import builtins\n          >>> dir(builtins)\n          ['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException',\n           'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning',\n           'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError',\n           'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning',\n           'EOFError', 'Ellipsis', 'EnvironmentError', 'Exception', 'False',\n           'FileExistsError', 'FileNotFoundError', 'FloatingPointError',\n           'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError',",
+          "start_char": 2191,
+          "end_char": 3148,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p053",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 47,
+            "chapter_title": "Modules",
+            "normalized_characters": 3397
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.128207574319916,
+          "rank": 8
+        },
+        {
+          "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": "For example, assume we want to create a list of squares, like:\n          >>> squares = []\n          >>> for x in range(10):\n          ...   squares.append(x**2)\n          ...\n          >>> squares\n          [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n\n          Note that this creates (or overwrites) a variable named x that still exists after the loop completes. We can calculate\n          the list of squares without any side effects using:\n          squares = list(map(lambda x: x**2, range(10)))\n\n          or, equivalently:\n\n          squares = [x**2 for x in range(10)]",
+          "start_char": 1433,
+          "end_char": 2001,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.0217032218817526,
+          "rank": 9
+        },
+        {
+          "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 42,
+          "text": ">>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]",
+          "start_char": 346,
+          "end_char": 1319,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p042",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 36,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2460
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 5.89185810648797,
+          "rank": 10
+        }
+      ],
+      "component_rankings": {
+        "bm25": [
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+            "start_char": 692,
+            "end_char": 1665,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 11.404227538885202,
+            "rank": 1
+          },
+          {
+            "id": "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 70,
+            "text": "Exception handlers do not handle only exceptions that occur immediately in the try clause, but also those that occur\n          inside functions that are called (even indirectly) in the try clause. For example:\n          >>> def this_fails():\n          ...   x = 1/0\n          ...\n          >>> try:\n          ...   this_fails()\n          ... except ZeroDivisionError as err:\n          ...   print('Handling run-time error:', err)\n          ...\n          Handling run-time error: division by zero\n\n          8.4 Raising Exceptions\n\n          The raise statement allows the programmer to force a specified exception to occur. For example:\n\n          >>> raise NameError('HiThere')\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: HiThere",
+            "start_char": 950,
+            "end_char": 1749,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p070",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 64,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2610
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 8.217438046268814,
+            "rank": 2
+          },
+          {
+            "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+            "start_char": 1586,
+            "end_char": 1828,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 7.016998373868645,
+            "rank": 3
+          },
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 43,
+            "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+            "start_char": 840,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p043",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 37,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2043
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.9295763795236835,
+            "rank": 4
+          },
+          {
+            "id": "c483b73cb4bd1454c5d63a61a2d9cbd9030c1505158588e40d1f1542b0c09df9",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 68,
+            "text": "• If no exception occurs, the except clause is skipped and execution of the try statement is finished.\n            • If an exception occurs during execution of the try clause, the rest of the clause is skipped. Then, if its type\n             matches the exception named after the except keyword, the except clause is executed, and then execution\n             continues after the try/except block.\n            • If an exception occurs which does not match the exception named in the except clause, it is passed on to outer\n             try statements; if no handler is found, it is an unhandled exception and execution stops with an error message.\n          A try statement may have more than one except clause, to specify handlers for different exceptions. At most one\n          handler will be executed. Handlers only handle exceptions that occur in the corresponding try clause, not in other",
+            "start_char": 1502,
+            "end_char": 2395,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p068",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 62,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 3200
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.320378508095921,
+            "rank": 5
+          },
+          {
+            "id": "3b879acb1e5d788592464a851060dc671345d828231c8b1b46220a68b71f6b72",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 52,
+            "text": "Python does not check the cache in two circumstances. First, it always recompiles and does not store the result for\n          the module that’s loaded directly from the command line. Second, it does not check the cache if there is no source\n          module. To support a non-source (compiled only) distribution, the compiled module must be in the source directory,\n          and there must not be a source module.\n          Some tips for experts:",
+            "start_char": 1364,
+            "end_char": 1811,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p052",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 46,
+              "chapter_title": "Modules",
+              "normalized_characters": 4192
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.275649289076035,
+            "rank": 6
+          },
+          {
+            "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": "which is more concise and readable.\n          A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for\n          or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if\n          clauses which follow it. For example, this listcomp combines the elements of two lists if they are not equal:\n          >>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]\n          [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]\n\n          and it’s equivalent to:\n\n          >>> combs = []\n          >>> for x in [1,2,3]:\n          ...   for y in [3,1,4]:\n          ...      if x != y:\n          ...         combs.append((x, y))\n                                                              (continues on next page)",
+            "start_char": 2013,
+            "end_char": 2843,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.164070111297889,
+            "rank": 7
+          },
+          {
+            "id": "374dc4ec3e919e60ff5af68580c5214d5afed218b5d2fb2f2336417f272ceb3c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 53,
+            "text": ">>> fib = fibo.fib\n          >>> dir()\n          ['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']\n          Note that it lists all types of names: variables, modules, functions, etc.\n          dir() does not list the names of built-in functions and variables. If you want a list of those, they are defined in the\n          standard module builtins:\n          >>> import builtins\n          >>> dir(builtins)\n          ['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException',\n           'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning',\n           'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError',\n           'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning',\n           'EOFError', 'Ellipsis', 'EnvironmentError', 'Exception', 'False',\n           'FileExistsError', 'FileNotFoundError', 'FloatingPointError',\n           'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError',",
+            "start_char": 2191,
+            "end_char": 3148,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p053",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 47,
+              "chapter_title": "Modules",
+              "normalized_characters": 3397
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.128207574319916,
+            "rank": 8
+          },
+          {
+            "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": "For example, assume we want to create a list of squares, like:\n          >>> squares = []\n          >>> for x in range(10):\n          ...   squares.append(x**2)\n          ...\n          >>> squares\n          [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n\n          Note that this creates (or overwrites) a variable named x that still exists after the loop completes. We can calculate\n          the list of squares without any side effects using:\n          squares = list(map(lambda x: x**2, range(10)))\n\n          or, equivalently:\n\n          squares = [x**2 for x in range(10)]",
+            "start_char": 1433,
+            "end_char": 2001,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.0217032218817526,
+            "rank": 9
+          },
+          {
+            "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 42,
+            "text": ">>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]",
+            "start_char": 346,
+            "end_char": 1319,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p042",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 36,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2460
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 5.89185810648797,
+            "rank": 10
+          }
+        ]
+      },
+      "context": {
+        "text": "[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there\n\n[375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547 | source=data/raw/tutorial.pdf | PDF page=70 | chapter=8]\nException handlers do not handle only exceptions that occur immediately in the try clause, but also those that occur\n          inside functions that are called (even indirectly) in the try clause. For example:\n          >>> def this_fails():\n          ...   x = 1/0\n          ...\n          >>> try:\n          ...   this_fails()\n          ... except ZeroDivisionError as err:\n          ...   print('Handling run-time error:', err)\n          ...\n          Handling run-time error: division by zero\n\n          8.4 Raising Exceptions\n\n          The raise statement allows the programmer to force a specified exception to occur. For example:\n\n          >>> raise NameError('HiThere')\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: HiThere\n\n[69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069 | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\n{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+        "chunk_ids": [
+          "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+          "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+          "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069"
+        ],
+        "characters": 2390,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+            "start_char": 692,
+            "end_char": 1665,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 11.404227538885202,
+            "rank": 1
+          },
+          {
+            "id": "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 70,
+            "text": "Exception handlers do not handle only exceptions that occur immediately in the try clause, but also those that occur\n          inside functions that are called (even indirectly) in the try clause. For example:\n          >>> def this_fails():\n          ...   x = 1/0\n          ...\n          >>> try:\n          ...   this_fails()\n          ... except ZeroDivisionError as err:\n          ...   print('Handling run-time error:', err)\n          ...\n          Handling run-time error: division by zero\n\n          8.4 Raising Exceptions\n\n          The raise statement allows the programmer to force a specified exception to occur. For example:\n\n          >>> raise NameError('HiThere')\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: HiThere",
+            "start_char": 950,
+            "end_char": 1749,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p070",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 64,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2610
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 8.217438046268814,
+            "rank": 2
+          },
+          {
+            "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+            "start_char": 1586,
+            "end_char": 1828,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 7.016998373868645,
+            "rank": 3
+          }
+        ],
+        "excluded": [
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c483b73cb4bd1454c5d63a61a2d9cbd9030c1505158588e40d1f1542b0c09df9",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3b879acb1e5d788592464a851060dc671345d828231c8b1b46220a68b71f6b72",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "374dc4ec3e919e60ff5af68580c5214d5afed218b5d2fb2f2336417f272ceb3c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.0005386000011640135
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "06f3f8df8ed2bd22d0c2ceb18ef2ac1fd328beb198683b8d46f464afd036bea3",
+      "request_sha256": "54f56d12a1db41ac3aeadbf7a8c22f11e348080a314df03f9013cb6ee6f3699e",
+      "response_id": "f7T6aurBIJL81e8P09iI-AM",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 611,
+        "candidatesTokenCount": 19,
+        "totalTokenCount": 630,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 611
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.5940000000009604,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "07b4cc244626191149f56b4bb03882687aafeec6c1fee29be354716c050a7378",
+      "request_sha256": "4a9eba1c5dcd7806d8cb64e5a231c267a1413f295434f0733fec177981aea811",
+      "response_id": "jrT6atjqENjbrfcPhcWaoA8",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1606,
+        "candidatesTokenCount": 178,
+        "totalTokenCount": 1784,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1606
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.9220000000022992,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there\n\n[375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547 | source=data/raw/tutorial.pdf | PDF page=70 | chapter=8]\nException handlers do not handle only exceptions that occur immediately in the try clause, but also those that occur\n          inside functions that are called (even indirectly) in the try clause. For example:\n          >>> def this_fails():\n          ...   x = 1/0\n          ...\n          >>> try:\n          ...   this_fails()\n          ... except ZeroDivisionError as err:\n          ...   print('Handling run-time error:', err)\n          ...\n          Handling run-time error: division by zero\n\n          8.4 Raising Exceptions\n\n          The raise statement allows the programmer to force a specified exception to occur. For example:\n\n          >>> raise NameError('HiThere')\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: HiThere\n\n[69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069 | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\n{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+        "chunk_ids": [
+          "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+          "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+          "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069"
+        ],
+        "characters": 2390,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+            "start_char": 692,
+            "end_char": 1665,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 11.404227538885202,
+            "rank": 1
+          },
+          {
+            "id": "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 70,
+            "text": "Exception handlers do not handle only exceptions that occur immediately in the try clause, but also those that occur\n          inside functions that are called (even indirectly) in the try clause. For example:\n          >>> def this_fails():\n          ...   x = 1/0\n          ...\n          >>> try:\n          ...   this_fails()\n          ... except ZeroDivisionError as err:\n          ...   print('Handling run-time error:', err)\n          ...\n          Handling run-time error: division by zero\n\n          8.4 Raising Exceptions\n\n          The raise statement allows the programmer to force a specified exception to occur. For example:\n\n          >>> raise NameError('HiThere')\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: HiThere",
+            "start_char": 950,
+            "end_char": 1749,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p070",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 64,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2610
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 8.217438046268814,
+            "rank": 2
+          },
+          {
+            "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+            "start_char": 1586,
+            "end_char": 1828,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 7.016998373868645,
+            "rank": 3
+          }
+        ],
+        "excluded": [
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c483b73cb4bd1454c5d63a61a2d9cbd9030c1505158588e40d1f1542b0c09df9",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3b879acb1e5d788592464a851060dc671345d828231c8b1b46220a68b71f6b72",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "374dc4ec3e919e60ff5af68580c5214d5afed218b5d2fb2f2336417f272ceb3c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there\n\n[375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547 | source=data/raw/tutorial.pdf | PDF page=70 | chapter=8]\nException handlers do not handle only exceptions that occur immediately in the try clause, but also those that occur\n          inside functions that are called (even indirectly) in the try clause. For example:\n          >>> def this_fails():\n          ...   x = 1/0\n          ...\n          >>> try:\n          ...   this_fails()\n          ... except ZeroDivisionError as err:\n          ...   print('Handling run-time error:', err)\n          ...\n          Handling run-time error: division by zero\n\n          8.4 Raising Exceptions\n\n          The raise statement allows the programmer to force a specified exception to occur. For example:\n\n          >>> raise NameError('HiThere')\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: HiThere\n\n[69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069 | source=data/raw/tutorial.pdf | PDF page=45 | chapter=5]\n{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+    "chunk_ids": [
+      "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+      "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+      "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069"
+    ],
+    "characters": 2390,
+    "budget_chars": 3500,
+    "max_chunks": 3,
+    "selected_chunks": [
+      {
+        "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 39,
+        "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+        "start_char": 692,
+        "end_char": 1665,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p039",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 33,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 11.404227538885202,
+        "rank": 1
+      },
+      {
+        "id": "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 70,
+        "text": "Exception handlers do not handle only exceptions that occur immediately in the try clause, but also those that occur\n          inside functions that are called (even indirectly) in the try clause. For example:\n          >>> def this_fails():\n          ...   x = 1/0\n          ...\n          >>> try:\n          ...   this_fails()\n          ... except ZeroDivisionError as err:\n          ...   print('Handling run-time error:', err)\n          ...\n          Handling run-time error: division by zero\n\n          8.4 Raising Exceptions\n\n          The raise statement allows the programmer to force a specified exception to occur. For example:\n\n          >>> raise NameError('HiThere')\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: HiThere",
+        "start_char": 950,
+        "end_char": 1749,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p070",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 64,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 2610
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 8.217438046268814,
+        "rank": 2
+      },
+      {
+        "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 45,
+        "text": "{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+        "start_char": 1586,
+        "end_char": 1828,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p045",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 39,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3567
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 7.016998373868645,
+        "rank": 3
+      }
+    ],
+    "excluded": [
+      {
+        "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "c483b73cb4bd1454c5d63a61a2d9cbd9030c1505158588e40d1f1542b0c09df9",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "3b879acb1e5d788592464a851060dc671345d828231c8b1b46220a68b71f6b72",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "374dc4ec3e919e60ff5af68580c5214d5afed218b5d2fb2f2336417f272ceb3c",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+        "reason": "max_chunks"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [],
+  "search_calls": 1,
+  "generated_search_queries": [
+    "list remove x does not occur"
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 29.8294879999994,
+    "pacing_seconds_this_invocation": 26.295999999998457,
+    "wall_seconds_excluding_pacing": 3.5334880000009434,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": true,
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 39,
+        "evidence": "list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item."
+      }
+    ],
+    "expected_answer": "It raises ValueError.",
+    "absence_reason": null,
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "bm25",
+    "query": "What does list.remove(x) do if x does not occur in the list?",
+    "filter": null,
+    "ranking": [
+      {
+        "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 39,
+        "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+        "start_char": 692,
+        "end_char": 1665,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p039",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 33,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 13.589778121130411,
+        "rank": 1
+      },
+      {
+        "id": "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 70,
+        "text": "Exception handlers do not handle only exceptions that occur immediately in the try clause, but also those that occur\n          inside functions that are called (even indirectly) in the try clause. For example:\n          >>> def this_fails():\n          ...   x = 1/0\n          ...\n          >>> try:\n          ...   this_fails()\n          ... except ZeroDivisionError as err:\n          ...   print('Handling run-time error:', err)\n          ...\n          Handling run-time error: division by zero\n\n          8.4 Raising Exceptions\n\n          The raise statement allows the programmer to force a specified exception to occur. For example:\n\n          >>> raise NameError('HiThere')\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: HiThere",
+        "start_char": 950,
+        "end_char": 1749,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p070",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 64,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 2610
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 11.937850395082211,
+        "rank": 2
+      },
+      {
+        "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 43,
+        "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+        "start_char": 840,
+        "end_char": 1559,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p043",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 37,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2043
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 10.283189958980351,
+        "rank": 3
+      },
+      {
+        "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+        "start_char": 2561,
+        "end_char": 3494,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 9.101506922102738,
+        "rank": 4
+      },
+      {
+        "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 45,
+        "text": "{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+        "start_char": 1586,
+        "end_char": 1828,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p045",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 39,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3567
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 8.896557066985837,
+        "rank": 5
+      },
+      {
+        "id": "c483b73cb4bd1454c5d63a61a2d9cbd9030c1505158588e40d1f1542b0c09df9",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 68,
+        "text": "• If no exception occurs, the except clause is skipped and execution of the try statement is finished.\n            • If an exception occurs during execution of the try clause, the rest of the clause is skipped. Then, if its type\n             matches the exception named after the except keyword, the except clause is executed, and then execution\n             continues after the try/except block.\n            • If an exception occurs which does not match the exception named in the except clause, it is passed on to outer\n             try statements; if no handler is found, it is an unhandled exception and execution stops with an error message.\n          A try statement may have more than one except clause, to specify handlers for different exceptions. At most one\n          handler will be executed. Handlers only handle exceptions that occur in the corresponding try clause, not in other",
+        "start_char": 1502,
+        "end_char": 2395,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p068",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 62,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 3200
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 8.663496885990142,
+        "rank": 6
+      },
+      {
+        "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 41,
+        "text": "which is more concise and readable.\n          A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for\n          or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if\n          clauses which follow it. For example, this listcomp combines the elements of two lists if they are not equal:\n          >>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]\n          [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]\n\n          and it’s equivalent to:\n\n          >>> combs = []\n          >>> for x in [1,2,3]:\n          ...   for y in [3,1,4]:\n          ...      if x != y:\n          ...         combs.append((x, y))\n                                                              (continues on next page)",
+        "start_char": 2013,
+        "end_char": 2843,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p041",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 35,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2843
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 8.5787262955699,
+        "rank": 7
+      },
+      {
+        "id": "3b879acb1e5d788592464a851060dc671345d828231c8b1b46220a68b71f6b72",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 52,
+        "text": "Python does not check the cache in two circumstances. First, it always recompiles and does not store the result for\n          the module that’s loaded directly from the command line. Second, it does not check the cache if there is no source\n          module. To support a non-source (compiled only) distribution, the compiled module must be in the source directory,\n          and there must not be a source module.\n          Some tips for experts:",
+        "start_char": 1364,
+        "end_char": 1811,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p052",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 46,
+          "chapter_title": "Modules",
+          "normalized_characters": 4192
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 8.081869958596908,
+        "rank": 8
+      },
+      {
+        "id": "374dc4ec3e919e60ff5af68580c5214d5afed218b5d2fb2f2336417f272ceb3c",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 53,
+        "text": ">>> fib = fibo.fib\n          >>> dir()\n          ['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']\n          Note that it lists all types of names: variables, modules, functions, etc.\n          dir() does not list the names of built-in functions and variables. If you want a list of those, they are defined in the\n          standard module builtins:\n          >>> import builtins\n          >>> dir(builtins)\n          ['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException',\n           'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning',\n           'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError',\n           'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning',\n           'EOFError', 'Ellipsis', 'EnvironmentError', 'Exception', 'False',\n           'FileExistsError', 'FileNotFoundError', 'FloatingPointError',\n           'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError',",
+        "start_char": 2191,
+        "end_char": 3148,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p053",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 47,
+          "chapter_title": "Modules",
+          "normalized_characters": 3397
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 7.825624706398465,
+        "rank": 9
+      },
+      {
+        "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 42,
+        "text": ">>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]",
+        "start_char": 346,
+        "end_char": 1319,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p042",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 36,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2460
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 7.476004625759716,
+        "rank": 10
+      }
+    ],
+    "components": {
+      "bm25": [
+        {
+          "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+          "start_char": 692,
+          "end_char": 1665,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 13.589778121130411,
+          "rank": 1
+        },
+        {
+          "id": "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 70,
+          "text": "Exception handlers do not handle only exceptions that occur immediately in the try clause, but also those that occur\n          inside functions that are called (even indirectly) in the try clause. For example:\n          >>> def this_fails():\n          ...   x = 1/0\n          ...\n          >>> try:\n          ...   this_fails()\n          ... except ZeroDivisionError as err:\n          ...   print('Handling run-time error:', err)\n          ...\n          Handling run-time error: division by zero\n\n          8.4 Raising Exceptions\n\n          The raise statement allows the programmer to force a specified exception to occur. For example:\n\n          >>> raise NameError('HiThere')\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: HiThere",
+          "start_char": 950,
+          "end_char": 1749,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p070",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 64,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2610
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 11.937850395082211,
+          "rank": 2
+        },
+        {
+          "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 43,
+          "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+          "start_char": 840,
+          "end_char": 1559,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p043",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 37,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2043
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 10.283189958980351,
+          "rank": 3
+        },
+        {
+          "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+          "start_char": 2561,
+          "end_char": 3494,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 9.101506922102738,
+          "rank": 4
+        },
+        {
+          "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+          "start_char": 1586,
+          "end_char": 1828,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.896557066985837,
+          "rank": 5
+        },
+        {
+          "id": "c483b73cb4bd1454c5d63a61a2d9cbd9030c1505158588e40d1f1542b0c09df9",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 68,
+          "text": "• If no exception occurs, the except clause is skipped and execution of the try statement is finished.\n            • If an exception occurs during execution of the try clause, the rest of the clause is skipped. Then, if its type\n             matches the exception named after the except keyword, the except clause is executed, and then execution\n             continues after the try/except block.\n            • If an exception occurs which does not match the exception named in the except clause, it is passed on to outer\n             try statements; if no handler is found, it is an unhandled exception and execution stops with an error message.\n          A try statement may have more than one except clause, to specify handlers for different exceptions. At most one\n          handler will be executed. Handlers only handle exceptions that occur in the corresponding try clause, not in other",
+          "start_char": 1502,
+          "end_char": 2395,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p068",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 62,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3200
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.663496885990142,
+          "rank": 6
+        },
+        {
+          "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": "which is more concise and readable.\n          A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for\n          or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if\n          clauses which follow it. For example, this listcomp combines the elements of two lists if they are not equal:\n          >>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]\n          [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]\n\n          and it’s equivalent to:\n\n          >>> combs = []\n          >>> for x in [1,2,3]:\n          ...   for y in [3,1,4]:\n          ...      if x != y:\n          ...         combs.append((x, y))\n                                                              (continues on next page)",
+          "start_char": 2013,
+          "end_char": 2843,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.5787262955699,
+          "rank": 7
+        },
+        {
+          "id": "3b879acb1e5d788592464a851060dc671345d828231c8b1b46220a68b71f6b72",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "Python does not check the cache in two circumstances. First, it always recompiles and does not store the result for\n          the module that’s loaded directly from the command line. Second, it does not check the cache if there is no source\n          module. To support a non-source (compiled only) distribution, the compiled module must be in the source directory,\n          and there must not be a source module.\n          Some tips for experts:",
+          "start_char": 1364,
+          "end_char": 1811,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.081869958596908,
+          "rank": 8
+        },
+        {
+          "id": "374dc4ec3e919e60ff5af68580c5214d5afed218b5d2fb2f2336417f272ceb3c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 53,
+          "text": ">>> fib = fibo.fib\n          >>> dir()\n          ['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']\n          Note that it lists all types of names: variables, modules, functions, etc.\n          dir() does not list the names of built-in functions and variables. If you want a list of those, they are defined in the\n          standard module builtins:\n          >>> import builtins\n          >>> dir(builtins)\n          ['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException',\n           'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning',\n           'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError',\n           'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning',\n           'EOFError', 'Ellipsis', 'EnvironmentError', 'Exception', 'False',\n           'FileExistsError', 'FileNotFoundError', 'FloatingPointError',\n           'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError',",
+          "start_char": 2191,
+          "end_char": 3148,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p053",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 47,
+            "chapter_title": "Modules",
+            "normalized_characters": 3397
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.825624706398465,
+          "rank": 9
+        },
+        {
+          "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 42,
+          "text": ">>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]",
+          "start_char": 346,
+          "end_char": 1319,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p042",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 36,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2460
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.476004625759716,
+          "rank": 10
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": true,
+    "original_query_evidence_hit_at_3": true,
+    "actual_final_context_exact_evidence": true,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "trace_sha256": "c07c9601e8349de47e5d5ec321065ef406aaf73041f2095dcc2375e2d19b1563"
+}

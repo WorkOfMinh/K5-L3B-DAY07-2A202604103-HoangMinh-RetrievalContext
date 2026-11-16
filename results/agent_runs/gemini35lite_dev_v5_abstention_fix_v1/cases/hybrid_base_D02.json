@@ -1,0 +1,2087 @@
+{
+  "status": "answered",
+  "answer": "It raises a ValueError if there is no such item [1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3].",
+  "citations": [
+    "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3"
+  ],
+  "reason": "The tutorial states that list.remove(x) raises a ValueError if there is no such item.",
+  "guard": "citation_ids_valid; semantic_support_requires_review",
+  "query_id": "D02",
+  "config_id": "hybrid_base",
+  "public_query": {
+    "id": "D02",
+    "question": "What does list.remove(x) do if x does not occur in the list?",
+    "filter": null
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "list.remove x does not occur",
+      "filter": null,
+      "method": "hybrid_rrf",
+      "ranking": [
+        {
+          "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+          "start_char": 692,
+          "end_char": 1665,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.03278688524590164,
+          "component_ranks": {
+            "dense": 1,
+            "bm25": 1
+          },
+          "component_scores": {
+            "dense": 0.8783179783319829,
+            "bm25": 11.404227538885202
+          }
+        },
+        {
+          "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 42,
+          "text": ">>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]",
+          "start_char": 346,
+          "end_char": 1319,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p042",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 36,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2460
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.0304147465437788,
+          "component_ranks": {
+            "dense": 2,
+            "bm25": 10
+          },
+          "component_scores": {
+            "dense": 0.8498820066452026,
+            "bm25": 5.89185810648797
+          }
+        },
+        {
+          "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 43,
+          "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+          "start_char": 840,
+          "end_char": 1559,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p043",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 37,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2043
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.030330882352941176,
+          "component_ranks": {
+            "dense": 8,
+            "bm25": 4
+          },
+          "component_scores": {
+            "dense": 0.8457919451122332,
+            "bm25": 6.9295763795236835
+          }
+        },
+        {
+          "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": "For example, assume we want to create a list of squares, like:\n          >>> squares = []\n          >>> for x in range(10):\n          ...   squares.append(x**2)\n          ...\n          >>> squares\n          [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n\n          Note that this creates (or overwrites) a variable named x that still exists after the loop completes. We can calculate\n          the list of squares without any side effects using:\n          squares = list(map(lambda x: x**2, range(10)))\n\n          or, equivalently:\n\n          squares = [x**2 for x in range(10)]",
+          "start_char": 1433,
+          "end_char": 2001,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.028985507246376812,
+          "component_ranks": {
+            "dense": 9,
+            "bm25": 9
+          },
+          "component_scores": {
+            "dense": 0.8429672215600492,
+            "bm25": 6.0217032218817526
+          }
+        },
+        {
+          "id": "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 70,
+          "text": "Exception handlers do not handle only exceptions that occur immediately in the try clause, but also those that occur\n          inside functions that are called (even indirectly) in the try clause. For example:\n          >>> def this_fails():\n          ...   x = 1/0\n          ...\n          >>> try:\n          ...   this_fails()\n          ... except ZeroDivisionError as err:\n          ...   print('Handling run-time error:', err)\n          ...\n          Handling run-time error: division by zero\n\n          8.4 Raising Exceptions\n\n          The raise statement allows the programmer to force a specified exception to occur. For example:\n\n          >>> raise NameError('HiThere')\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: HiThere",
+          "start_char": 950,
+          "end_char": 1749,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p070",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 64,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2610
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 0.016129032258064516,
+          "rank": 5,
+          "component_ranks": {
+            "bm25": 2
+          },
+          "component_scores": {
+            "bm25": 8.217438046268814
+          }
+        },
+        {
+          "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+          "start_char": 0,
+          "end_char": 677,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.015873015873015872,
+          "component_ranks": {
+            "dense": 3
+          },
+          "component_scores": {
+            "dense": 0.8498551845550537
+          }
+        },
+        {
+          "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+          "start_char": 1586,
+          "end_char": 1828,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 0.015873015873015872,
+          "rank": 7,
+          "component_ranks": {
+            "bm25": 3
+          },
+          "component_scores": {
+            "bm25": 7.016998373868645
+          }
+        },
+        {
+          "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+          "start_char": 1679,
+          "end_char": 2410,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.015625,
+          "component_ranks": {
+            "dense": 4
+          },
+          "component_scores": {
+            "dense": 0.8480720014529243
+          }
+        },
+        {
+          "id": "c170d0fac01e74a052b988be4f58a39e3d2d9358e67f70daee10ffa7daaaf10e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 62,
+          "text": "they just return a new string. If the input string is too long, they don’t truncate it, but return it unchanged; this will\n          mess up your column lay-out but that’s usually better than the alternative, which would be lying about a value. (If\n          you really want truncation you can always add a slice operation, as in x.ljust(n)[:n].)\n          There is another method, str.zfill(), which pads a numeric string on the left with zeros. It understands about\n          plus and minus signs:\n\n          >>> '12'.zfill(5)\n          '00012'\n          >>> '-3.14'.zfill(7)\n          '-003.14'\n                                                              (continues on next page)",
+          "start_char": 1636,
+          "end_char": 2320,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p062",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 56,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2320
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.015384615384615385,
+          "component_ranks": {
+            "dense": 5
+          },
+          "component_scores": {
+            "dense": 0.8468021659137125
+          }
+        },
+        {
+          "id": "c483b73cb4bd1454c5d63a61a2d9cbd9030c1505158588e40d1f1542b0c09df9",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 68,
+          "text": "• If no exception occurs, the except clause is skipped and execution of the try statement is finished.\n            • If an exception occurs during execution of the try clause, the rest of the clause is skipped. Then, if its type\n             matches the exception named after the except keyword, the except clause is executed, and then execution\n             continues after the try/except block.\n            • If an exception occurs which does not match the exception named in the except clause, it is passed on to outer\n             try statements; if no handler is found, it is an unhandled exception and execution stops with an error message.\n          A try statement may have more than one except clause, to specify handlers for different exceptions. At most one\n          handler will be executed. Handlers only handle exceptions that occur in the corresponding try clause, not in other",
+          "start_char": 1502,
+          "end_char": 2395,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p068",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 62,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3200
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 0.015384615384615385,
+          "rank": 10,
+          "component_ranks": {
+            "bm25": 5
+          },
+          "component_scores": {
+            "bm25": 6.320378508095921
+          }
+        }
+      ],
+      "component_rankings": {
+        "dense": [
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+            "start_char": 692,
+            "end_char": 1665,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8783179783319829
+          },
+          {
+            "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 42,
+            "text": ">>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]",
+            "start_char": 346,
+            "end_char": 1319,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p042",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 36,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2460
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8498820066452026
+          },
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+            "start_char": 0,
+            "end_char": 677,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8498551845550537
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+            "start_char": 1679,
+            "end_char": 2410,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 4,
+            "score": 0.8480720014529243
+          },
+          {
+            "id": "c170d0fac01e74a052b988be4f58a39e3d2d9358e67f70daee10ffa7daaaf10e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 62,
+            "text": "they just return a new string. If the input string is too long, they don’t truncate it, but return it unchanged; this will\n          mess up your column lay-out but that’s usually better than the alternative, which would be lying about a value. (If\n          you really want truncation you can always add a slice operation, as in x.ljust(n)[:n].)\n          There is another method, str.zfill(), which pads a numeric string on the left with zeros. It understands about\n          plus and minus signs:\n\n          >>> '12'.zfill(5)\n          '00012'\n          >>> '-3.14'.zfill(7)\n          '-003.14'\n                                                              (continues on next page)",
+            "start_char": 1636,
+            "end_char": 2320,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p062",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 56,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2320
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.8468021659137125
+          },
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+            "start_char": 0,
+            "end_char": 978,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 6,
+            "score": 0.8464410901069641
+          },
+          {
+            "id": "8f98e9178f13b19f4024cfbefb4c64dc612cd1387314efb24e173f91d3e77d93",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 75,
+            "text": "...   except Exception as e:\n          ...      excs.append(e)\n          ...\n          >>> if excs:\n          ...  raise ExceptionGroup(\"Test Failures\", excs)\n          ...\n\n          8.10 Enriching Exceptions with Notes",
+            "start_char": 976,
+            "end_char": 1196,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p075",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 69,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 7,
+            "score": 0.8458635807037354
+          },
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 43,
+            "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+            "start_char": 840,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p043",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 37,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2043
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 8,
+            "score": 0.8457919451122332
+          },
+          {
+            "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": "For example, assume we want to create a list of squares, like:\n          >>> squares = []\n          >>> for x in range(10):\n          ...   squares.append(x**2)\n          ...\n          >>> squares\n          [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n\n          Note that this creates (or overwrites) a variable named x that still exists after the loop completes. We can calculate\n          the list of squares without any side effects using:\n          squares = list(map(lambda x: x**2, range(10)))\n\n          or, equivalently:\n\n          squares = [x**2 for x in range(10)]",
+            "start_char": 1433,
+            "end_char": 2001,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 9,
+            "score": 0.8429672215600492
+          },
+          {
+            "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+            "start_char": 571,
+            "end_char": 1421,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 10,
+            "score": 0.8416736721992493
+          }
+        ],
+        "bm25": [
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+            "start_char": 692,
+            "end_char": 1665,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 11.404227538885202,
+            "rank": 1
+          },
+          {
+            "id": "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 70,
+            "text": "Exception handlers do not handle only exceptions that occur immediately in the try clause, but also those that occur\n          inside functions that are called (even indirectly) in the try clause. For example:\n          >>> def this_fails():\n          ...   x = 1/0\n          ...\n          >>> try:\n          ...   this_fails()\n          ... except ZeroDivisionError as err:\n          ...   print('Handling run-time error:', err)\n          ...\n          Handling run-time error: division by zero\n\n          8.4 Raising Exceptions\n\n          The raise statement allows the programmer to force a specified exception to occur. For example:\n\n          >>> raise NameError('HiThere')\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: HiThere",
+            "start_char": 950,
+            "end_char": 1749,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p070",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 64,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2610
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 8.217438046268814,
+            "rank": 2
+          },
+          {
+            "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+            "start_char": 1586,
+            "end_char": 1828,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 7.016998373868645,
+            "rank": 3
+          },
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 43,
+            "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+            "start_char": 840,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p043",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 37,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2043
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.9295763795236835,
+            "rank": 4
+          },
+          {
+            "id": "c483b73cb4bd1454c5d63a61a2d9cbd9030c1505158588e40d1f1542b0c09df9",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 68,
+            "text": "• If no exception occurs, the except clause is skipped and execution of the try statement is finished.\n            • If an exception occurs during execution of the try clause, the rest of the clause is skipped. Then, if its type\n             matches the exception named after the except keyword, the except clause is executed, and then execution\n             continues after the try/except block.\n            • If an exception occurs which does not match the exception named in the except clause, it is passed on to outer\n             try statements; if no handler is found, it is an unhandled exception and execution stops with an error message.\n          A try statement may have more than one except clause, to specify handlers for different exceptions. At most one\n          handler will be executed. Handlers only handle exceptions that occur in the corresponding try clause, not in other",
+            "start_char": 1502,
+            "end_char": 2395,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p068",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 62,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 3200
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.320378508095921,
+            "rank": 5
+          },
+          {
+            "id": "3b879acb1e5d788592464a851060dc671345d828231c8b1b46220a68b71f6b72",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 52,
+            "text": "Python does not check the cache in two circumstances. First, it always recompiles and does not store the result for\n          the module that’s loaded directly from the command line. Second, it does not check the cache if there is no source\n          module. To support a non-source (compiled only) distribution, the compiled module must be in the source directory,\n          and there must not be a source module.\n          Some tips for experts:",
+            "start_char": 1364,
+            "end_char": 1811,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p052",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 46,
+              "chapter_title": "Modules",
+              "normalized_characters": 4192
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.275649289076035,
+            "rank": 6
+          },
+          {
+            "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": "which is more concise and readable.\n          A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for\n          or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if\n          clauses which follow it. For example, this listcomp combines the elements of two lists if they are not equal:\n          >>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]\n          [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]\n\n          and it’s equivalent to:\n\n          >>> combs = []\n          >>> for x in [1,2,3]:\n          ...   for y in [3,1,4]:\n          ...      if x != y:\n          ...         combs.append((x, y))\n                                                              (continues on next page)",
+            "start_char": 2013,
+            "end_char": 2843,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.164070111297889,
+            "rank": 7
+          },
+          {
+            "id": "374dc4ec3e919e60ff5af68580c5214d5afed218b5d2fb2f2336417f272ceb3c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 53,
+            "text": ">>> fib = fibo.fib\n          >>> dir()\n          ['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']\n          Note that it lists all types of names: variables, modules, functions, etc.\n          dir() does not list the names of built-in functions and variables. If you want a list of those, they are defined in the\n          standard module builtins:\n          >>> import builtins\n          >>> dir(builtins)\n          ['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException',\n           'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning',\n           'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError',\n           'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning',\n           'EOFError', 'Ellipsis', 'EnvironmentError', 'Exception', 'False',\n           'FileExistsError', 'FileNotFoundError', 'FloatingPointError',\n           'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError',",
+            "start_char": 2191,
+            "end_char": 3148,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p053",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 47,
+              "chapter_title": "Modules",
+              "normalized_characters": 3397
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.128207574319916,
+            "rank": 8
+          },
+          {
+            "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": "For example, assume we want to create a list of squares, like:\n          >>> squares = []\n          >>> for x in range(10):\n          ...   squares.append(x**2)\n          ...\n          >>> squares\n          [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n\n          Note that this creates (or overwrites) a variable named x that still exists after the loop completes. We can calculate\n          the list of squares without any side effects using:\n          squares = list(map(lambda x: x**2, range(10)))\n\n          or, equivalently:\n\n          squares = [x**2 for x in range(10)]",
+            "start_char": 1433,
+            "end_char": 2001,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.0217032218817526,
+            "rank": 9
+          },
+          {
+            "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 42,
+            "text": ">>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]",
+            "start_char": 346,
+            "end_char": 1319,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p042",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 36,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2460
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 5.89185810648797,
+            "rank": 10
+          }
+        ]
+      },
+      "context": {
+        "text": "[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there\n\n[fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b | source=data/raw/tutorial.pdf | PDF page=42 | chapter=5]\n>>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]\n\n[13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e | source=data/raw/tutorial.pdf | PDF page=43 | chapter=5]\nIn the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+        "chunk_ids": [
+          "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+          "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+          "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e"
+        ],
+        "characters": 3041,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+            "start_char": 692,
+            "end_char": 1665,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "component_ranks": {
+              "dense": 1,
+              "bm25": 1
+            },
+            "component_scores": {
+              "dense": 0.8783179783319829,
+              "bm25": 11.404227538885202
+            }
+          },
+          {
+            "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 42,
+            "text": ">>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]",
+            "start_char": 346,
+            "end_char": 1319,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p042",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 36,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2460
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.0304147465437788,
+            "component_ranks": {
+              "dense": 2,
+              "bm25": 10
+            },
+            "component_scores": {
+              "dense": 0.8498820066452026,
+              "bm25": 5.89185810648797
+            }
+          },
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 43,
+            "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+            "start_char": 840,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p043",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 37,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2043
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.030330882352941176,
+            "component_ranks": {
+              "dense": 8,
+              "bm25": 4
+            },
+            "component_scores": {
+              "dense": 0.8457919451122332,
+              "bm25": 6.9295763795236835
+            }
+          }
+        ],
+        "excluded": [
+          {
+            "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c170d0fac01e74a052b988be4f58a39e3d2d9358e67f70daee10ffa7daaaf10e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c483b73cb4bd1454c5d63a61a2d9cbd9030c1505158588e40d1f1542b0c09df9",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.17687190000287956
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "22a5341b096f8ecb06b96bd1e92792a000f22c0c4f60de447b1ed359963d397f",
+      "request_sha256": "54f56d12a1db41ac3aeadbf7a8c22f11e348080a314df03f9013cb6ee6f3699e",
+      "response_id": "nbT6asSkG7uq0-kPw8vS2AI",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 611,
+        "candidatesTokenCount": 20,
+        "totalTokenCount": 631,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 611
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 2.360000000000582,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "42064f3511305e27e400792a6a154d6310fdc3c5942a0e0371936a567d2ef9c4",
+      "request_sha256": "66c70c7c51862c42052322b2279a1bcb2d28077133b1312388981996b9d7fea2",
+      "response_id": "rLT6avSKF8Sy1e8P0IaYwQ8",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1836,
+        "candidatesTokenCount": 119,
+        "totalTokenCount": 1955,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1836
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.3130000000019209,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there\n\n[fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b | source=data/raw/tutorial.pdf | PDF page=42 | chapter=5]\n>>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]\n\n[13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e | source=data/raw/tutorial.pdf | PDF page=43 | chapter=5]\nIn the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+        "chunk_ids": [
+          "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+          "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+          "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e"
+        ],
+        "characters": 3041,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+            "start_char": 692,
+            "end_char": 1665,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "component_ranks": {
+              "dense": 1,
+              "bm25": 1
+            },
+            "component_scores": {
+              "dense": 0.8783179783319829,
+              "bm25": 11.404227538885202
+            }
+          },
+          {
+            "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 42,
+            "text": ">>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]",
+            "start_char": 346,
+            "end_char": 1319,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p042",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 36,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2460
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.0304147465437788,
+            "component_ranks": {
+              "dense": 2,
+              "bm25": 10
+            },
+            "component_scores": {
+              "dense": 0.8498820066452026,
+              "bm25": 5.89185810648797
+            }
+          },
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 43,
+            "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+            "start_char": 840,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p043",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 37,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2043
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.030330882352941176,
+            "component_ranks": {
+              "dense": 8,
+              "bm25": 4
+            },
+            "component_scores": {
+              "dense": 0.8457919451122332,
+              "bm25": 6.9295763795236835
+            }
+          }
+        ],
+        "excluded": [
+          {
+            "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c170d0fac01e74a052b988be4f58a39e3d2d9358e67f70daee10ffa7daaaf10e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c483b73cb4bd1454c5d63a61a2d9cbd9030c1505158588e40d1f1542b0c09df9",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "507f310505af8650bacc0f24943bbe8c72c00dc7a6685a69cf460c764326a642",
+      "request_sha256": "ea97aeb44a364f02fe0ce9e3ffe392b7de69c1c6d2a54d2faf7fd854a2539bcb",
+      "response_id": "u7T6aoqTG6iC2roPjd6fyA0",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 2199,
+        "candidatesTokenCount": 178,
+        "totalTokenCount": 2377,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2199
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.6880000000019209,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there\n\n[fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b | source=data/raw/tutorial.pdf | PDF page=42 | chapter=5]\n>>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]\n\n[13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e | source=data/raw/tutorial.pdf | PDF page=43 | chapter=5]\nIn the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+        "chunk_ids": [
+          "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+          "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+          "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e"
+        ],
+        "characters": 3041,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+            "start_char": 692,
+            "end_char": 1665,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "component_ranks": {
+              "dense": 1,
+              "bm25": 1
+            },
+            "component_scores": {
+              "dense": 0.8783179783319829,
+              "bm25": 11.404227538885202
+            }
+          },
+          {
+            "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 42,
+            "text": ">>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]",
+            "start_char": 346,
+            "end_char": 1319,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p042",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 36,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2460
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.0304147465437788,
+            "component_ranks": {
+              "dense": 2,
+              "bm25": 10
+            },
+            "component_scores": {
+              "dense": 0.8498820066452026,
+              "bm25": 5.89185810648797
+            }
+          },
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 43,
+            "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+            "start_char": 840,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p043",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 37,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2043
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.030330882352941176,
+            "component_ranks": {
+              "dense": 8,
+              "bm25": 4
+            },
+            "component_scores": {
+              "dense": 0.8457919451122332,
+              "bm25": 6.9295763795236835
+            }
+          }
+        ],
+        "excluded": [
+          {
+            "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c170d0fac01e74a052b988be4f58a39e3d2d9358e67f70daee10ffa7daaaf10e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c483b73cb4bd1454c5d63a61a2d9cbd9030c1505158588e40d1f1542b0c09df9",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there\n\n[fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b | source=data/raw/tutorial.pdf | PDF page=42 | chapter=5]\n>>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]\n\n[13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e | source=data/raw/tutorial.pdf | PDF page=43 | chapter=5]\nIn the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+    "chunk_ids": [
+      "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+      "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+      "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e"
+    ],
+    "characters": 3041,
+    "budget_chars": 3500,
+    "max_chunks": 3,
+    "selected_chunks": [
+      {
+        "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 39,
+        "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+        "start_char": 692,
+        "end_char": 1665,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p039",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 33,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.03278688524590164,
+        "component_ranks": {
+          "dense": 1,
+          "bm25": 1
+        },
+        "component_scores": {
+          "dense": 0.8783179783319829,
+          "bm25": 11.404227538885202
+        }
+      },
+      {
+        "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 42,
+        "text": ">>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]",
+        "start_char": 346,
+        "end_char": 1319,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p042",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 36,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2460
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.0304147465437788,
+        "component_ranks": {
+          "dense": 2,
+          "bm25": 10
+        },
+        "component_scores": {
+          "dense": 0.8498820066452026,
+          "bm25": 5.89185810648797
+        }
+      },
+      {
+        "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 43,
+        "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+        "start_char": 840,
+        "end_char": 1559,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p043",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 37,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2043
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.030330882352941176,
+        "component_ranks": {
+          "dense": 8,
+          "bm25": 4
+        },
+        "component_scores": {
+          "dense": 0.8457919451122332,
+          "bm25": 6.9295763795236835
+        }
+      }
+    ],
+    "excluded": [
+      {
+        "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "c170d0fac01e74a052b988be4f58a39e3d2d9358e67f70daee10ffa7daaaf10e",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "c483b73cb4bd1454c5d63a61a2d9cbd9030c1505158588e40d1f1542b0c09df9",
+        "reason": "max_chunks"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [
+    {
+      "event": "citation_format_repair",
+      "rejected_proposal": {
+        "answer": "It raises a ValueError if there is no such item.",
+        "abstain": false,
+        "citations": [
+          "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3"
+        ],
+        "reason": "The tutorial explicitly states that list.remove(x) raises a ValueError if there is no such item."
+      },
+      "reason": "Citation IDs must be drawn from current context and appear inline in answer; separate array alone is insufficient."
+    }
+  ],
+  "search_calls": 1,
+  "generated_search_queries": [
+    "list.remove x does not occur"
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 44.4683494000019,
+    "pacing_seconds_this_invocation": 38.888999999995576,
+    "wall_seconds_excluding_pacing": 5.579349400006322,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": true,
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 39,
+        "evidence": "list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item."
+      }
+    ],
+    "expected_answer": "It raises ValueError.",
+    "absence_reason": null,
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "hybrid_rrf",
+    "query": "What does list.remove(x) do if x does not occur in the list?",
+    "filter": null,
+    "ranking": [
+      {
+        "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 39,
+        "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+        "start_char": 692,
+        "end_char": 1665,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p039",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 33,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.03278688524590164,
+        "component_ranks": {
+          "dense": 1,
+          "bm25": 1
+        },
+        "component_scores": {
+          "dense": 0.8761768749794275,
+          "bm25": 13.589778121130411
+        }
+      },
+      {
+        "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 43,
+        "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+        "start_char": 840,
+        "end_char": 1559,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p043",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 37,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2043
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.031746031746031744,
+        "component_ranks": {
+          "dense": 3,
+          "bm25": 3
+        },
+        "component_scores": {
+          "dense": 0.8491878183148247,
+          "bm25": 10.283189958980351
+        }
+      },
+      {
+        "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 41,
+        "text": "which is more concise and readable.\n          A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for\n          or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if\n          clauses which follow it. For example, this listcomp combines the elements of two lists if they are not equal:\n          >>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]\n          [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]\n\n          and it’s equivalent to:\n\n          >>> combs = []\n          >>> for x in [1,2,3]:\n          ...   for y in [3,1,4]:\n          ...      if x != y:\n          ...         combs.append((x, y))\n                                                              (continues on next page)",
+        "start_char": 2013,
+        "end_char": 2843,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p041",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 35,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2843
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.029211087420042643,
+        "component_ranks": {
+          "dense": 10,
+          "bm25": 7
+        },
+        "component_scores": {
+          "dense": 0.8362790790546857,
+          "bm25": 8.5787262955699
+        }
+      },
+      {
+        "id": "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 70,
+        "text": "Exception handlers do not handle only exceptions that occur immediately in the try clause, but also those that occur\n          inside functions that are called (even indirectly) in the try clause. For example:\n          >>> def this_fails():\n          ...   x = 1/0\n          ...\n          >>> try:\n          ...   this_fails()\n          ... except ZeroDivisionError as err:\n          ...   print('Handling run-time error:', err)\n          ...\n          Handling run-time error: division by zero\n\n          8.4 Raising Exceptions\n\n          The raise statement allows the programmer to force a specified exception to occur. For example:\n\n          >>> raise NameError('HiThere')\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: HiThere",
+        "start_char": 950,
+        "end_char": 1749,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p070",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 64,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 2610
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 0.016129032258064516,
+        "rank": 4,
+        "component_ranks": {
+          "bm25": 2
+        },
+        "component_scores": {
+          "bm25": 11.937850395082211
+        }
+      },
+      {
+        "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 39,
+        "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+        "start_char": 1679,
+        "end_char": 2410,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p039",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 33,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 5,
+        "score": 0.016129032258064516,
+        "component_ranks": {
+          "dense": 2
+        },
+        "component_scores": {
+          "dense": 0.8503132730162266
+        }
+      },
+      {
+        "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+        "start_char": 2561,
+        "end_char": 3494,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 0.015625,
+        "rank": 6,
+        "component_ranks": {
+          "bm25": 4
+        },
+        "component_scores": {
+          "bm25": 9.101506922102738
+        }
+      },
+      {
+        "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 41,
+        "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+        "start_char": 571,
+        "end_char": 1421,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p041",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 35,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2843
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 7,
+        "score": 0.015625,
+        "component_ranks": {
+          "dense": 4
+        },
+        "component_scores": {
+          "dense": 0.8451855963247363
+        }
+      },
+      {
+        "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 45,
+        "text": "{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+        "start_char": 1586,
+        "end_char": 1828,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p045",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 39,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3567
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 0.015384615384615385,
+        "rank": 8,
+        "component_ranks": {
+          "bm25": 5
+        },
+        "component_scores": {
+          "bm25": 8.896557066985837
+        }
+      },
+      {
+        "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 45,
+        "text": "within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.",
+        "start_char": 2831,
+        "end_char": 3567,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p045",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 39,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3567
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 9,
+        "score": 0.015384615384615385,
+        "component_ranks": {
+          "dense": 5
+        },
+        "component_scores": {
+          "dense": 0.8448788364340009
+        }
+      },
+      {
+        "id": "c483b73cb4bd1454c5d63a61a2d9cbd9030c1505158588e40d1f1542b0c09df9",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 68,
+        "text": "• If no exception occurs, the except clause is skipped and execution of the try statement is finished.\n            • If an exception occurs during execution of the try clause, the rest of the clause is skipped. Then, if its type\n             matches the exception named after the except keyword, the except clause is executed, and then execution\n             continues after the try/except block.\n            • If an exception occurs which does not match the exception named in the except clause, it is passed on to outer\n             try statements; if no handler is found, it is an unhandled exception and execution stops with an error message.\n          A try statement may have more than one except clause, to specify handlers for different exceptions. At most one\n          handler will be executed. Handlers only handle exceptions that occur in the corresponding try clause, not in other",
+        "start_char": 1502,
+        "end_char": 2395,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p068",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 62,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 3200
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 0.015151515151515152,
+        "rank": 10,
+        "component_ranks": {
+          "bm25": 6
+        },
+        "component_scores": {
+          "bm25": 8.663496885990142
+        }
+      }
+    ],
+    "components": {
+      "dense": [
+        {
+          "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+          "start_char": 692,
+          "end_char": 1665,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8761768749794275
+        },
+        {
+          "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+          "start_char": 1679,
+          "end_char": 2410,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8503132730162266
+        },
+        {
+          "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 43,
+          "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+          "start_char": 840,
+          "end_char": 1559,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p043",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 37,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2043
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8491878183148247
+        },
+        {
+          "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+          "start_char": 571,
+          "end_char": 1421,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8451855963247363
+        },
+        {
+          "id": "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.\n\n          The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also\n          possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated\n          with that key is forgotten. It is an error to extract a value using a non-existent key.\n          Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.",
+          "start_char": 2831,
+          "end_char": 3567,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.8448788364340009
+        },
+        {
+          "id": "ec749e9821b143fca535aed5cb27b47757bae7dedb6514fd554ae13a2b988072",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 42,
+          "text": "^^^^^^^\n          SyntaxError: did you forget parentheses around the comprehension target?\n          >>> # flatten a list using a listcomp with two 'for'\n          >>> vec = [[1,2,3], [4,5,6], [7,8,9]]\n          >>> [num for elem in vec for num in elem]\n          [1, 2, 3, 4, 5, 6, 7, 8, 9]\n          List comprehensions can contain complex expressions and nested functions:\n          >>> from math import pi\n          >>> [str(round(pi, i)) for i in range(1, 6)]\n          ['3.1', '3.14', '3.142', '3.1416', '3.14159']\n          5.1.4 Nested List Comprehensions\n\n          The initial expression in a list comprehension can be any arbitrary expression, including another list comprehension.\n          Consider the following example of a 3x4 matrix implemented as a list of 3 lists of length 4:",
+          "start_char": 1334,
+          "end_char": 2129,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p042",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 36,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2460
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.838503797232658
+        },
+        {
+          "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": "For example, assume we want to create a list of squares, like:\n          >>> squares = []\n          >>> for x in range(10):\n          ...   squares.append(x**2)\n          ...\n          >>> squares\n          [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n\n          Note that this creates (or overwrites) a variable named x that still exists after the loop completes. We can calculate\n          the list of squares without any side effects using:\n          squares = list(map(lambda x: x**2, range(10)))\n\n          or, equivalently:\n\n          squares = [x**2 for x in range(10)]",
+          "start_char": 1433,
+          "end_char": 2001,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.8384630372888394
+        },
+        {
+          "id": "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 40,
+          "text": "The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.",
+          "start_char": 1571,
+          "end_char": 2354,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p040",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 34,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2354
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8378143503887295
+        },
+        {
+          "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+          "start_char": 0,
+          "end_char": 677,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8366750673443059
+        },
+        {
+          "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": "which is more concise and readable.\n          A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for\n          or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if\n          clauses which follow it. For example, this listcomp combines the elements of two lists if they are not equal:\n          >>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]\n          [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]\n\n          and it’s equivalent to:\n\n          >>> combs = []\n          >>> for x in [1,2,3]:\n          ...   for y in [3,1,4]:\n          ...      if x != y:\n          ...         combs.append((x, y))\n                                                              (continues on next page)",
+          "start_char": 2013,
+          "end_char": 2843,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8362790790546857
+        }
+      ],
+      "bm25": [
+        {
+          "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+          "start_char": 692,
+          "end_char": 1665,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 13.589778121130411,
+          "rank": 1
+        },
+        {
+          "id": "375b093521c8a41371690053f1e627639efe1b0c74e4a145b7fcb2ce13b94547",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 70,
+          "text": "Exception handlers do not handle only exceptions that occur immediately in the try clause, but also those that occur\n          inside functions that are called (even indirectly) in the try clause. For example:\n          >>> def this_fails():\n          ...   x = 1/0\n          ...\n          >>> try:\n          ...   this_fails()\n          ... except ZeroDivisionError as err:\n          ...   print('Handling run-time error:', err)\n          ...\n          Handling run-time error: division by zero\n\n          8.4 Raising Exceptions\n\n          The raise statement allows the programmer to force a specified exception to occur. For example:\n\n          >>> raise NameError('HiThere')\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: HiThere",
+          "start_char": 950,
+          "end_char": 1749,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p070",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 64,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2610
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 11.937850395082211,
+          "rank": 2
+        },
+        {
+          "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 43,
+          "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+          "start_char": 840,
+          "end_char": 1559,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p043",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 37,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2043
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 10.283189958980351,
+          "rank": 3
+        },
+        {
+          "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+          "start_char": 2561,
+          "end_char": 3494,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 9.101506922102738,
+          "rank": 4
+        },
+        {
+          "id": "69a0c756ef04242d9554bb8e538601726b3ffcab4905b987392e98cfd8b78069",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "{'r', 'd', 'b', 'm', 'z', 'l'}\n          Similarly to list comprehensions, set comprehensions are also supported:\n\n          >>> a = {x for x in 'abracadabra' if x not in 'abc'}\n          >>> a\n          {'r', 'd'}\n\n          5.5 Dictionaries",
+          "start_char": 1586,
+          "end_char": 1828,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.896557066985837,
+          "rank": 5
+        },
+        {
+          "id": "c483b73cb4bd1454c5d63a61a2d9cbd9030c1505158588e40d1f1542b0c09df9",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 68,
+          "text": "• If no exception occurs, the except clause is skipped and execution of the try statement is finished.\n            • If an exception occurs during execution of the try clause, the rest of the clause is skipped. Then, if its type\n             matches the exception named after the except keyword, the except clause is executed, and then execution\n             continues after the try/except block.\n            • If an exception occurs which does not match the exception named in the except clause, it is passed on to outer\n             try statements; if no handler is found, it is an unhandled exception and execution stops with an error message.\n          A try statement may have more than one except clause, to specify handlers for different exceptions. At most one\n          handler will be executed. Handlers only handle exceptions that occur in the corresponding try clause, not in other",
+          "start_char": 1502,
+          "end_char": 2395,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p068",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 62,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 3200
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.663496885990142,
+          "rank": 6
+        },
+        {
+          "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": "which is more concise and readable.\n          A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for\n          or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if\n          clauses which follow it. For example, this listcomp combines the elements of two lists if they are not equal:\n          >>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]\n          [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]\n\n          and it’s equivalent to:\n\n          >>> combs = []\n          >>> for x in [1,2,3]:\n          ...   for y in [3,1,4]:\n          ...      if x != y:\n          ...         combs.append((x, y))\n                                                              (continues on next page)",
+          "start_char": 2013,
+          "end_char": 2843,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.5787262955699,
+          "rank": 7
+        },
+        {
+          "id": "3b879acb1e5d788592464a851060dc671345d828231c8b1b46220a68b71f6b72",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "Python does not check the cache in two circumstances. First, it always recompiles and does not store the result for\n          the module that’s loaded directly from the command line. Second, it does not check the cache if there is no source\n          module. To support a non-source (compiled only) distribution, the compiled module must be in the source directory,\n          and there must not be a source module.\n          Some tips for experts:",
+          "start_char": 1364,
+          "end_char": 1811,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.081869958596908,
+          "rank": 8
+        },
+        {
+          "id": "374dc4ec3e919e60ff5af68580c5214d5afed218b5d2fb2f2336417f272ceb3c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 53,
+          "text": ">>> fib = fibo.fib\n          >>> dir()\n          ['__builtins__', '__name__', 'a', 'fib', 'fibo', 'sys']\n          Note that it lists all types of names: variables, modules, functions, etc.\n          dir() does not list the names of built-in functions and variables. If you want a list of those, they are defined in the\n          standard module builtins:\n          >>> import builtins\n          >>> dir(builtins)\n          ['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException',\n           'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning',\n           'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError',\n           'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning',\n           'EOFError', 'Ellipsis', 'EnvironmentError', 'Exception', 'False',\n           'FileExistsError', 'FileNotFoundError', 'FloatingPointError',\n           'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError',",
+          "start_char": 2191,
+          "end_char": 3148,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p053",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 47,
+            "chapter_title": "Modules",
+            "normalized_characters": 3397
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.825624706398465,
+          "rank": 9
+        },
+        {
+          "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 42,
+          "text": ">>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]",
+          "start_char": 346,
+          "end_char": 1319,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p042",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 36,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2460
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.476004625759716,
+          "rank": 10
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": true,
+    "original_query_evidence_hit_at_3": true,
+    "actual_final_context_exact_evidence": true,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "trace_sha256": "31a820c1e2be52effcef0c5326315296c67e4b949e92950e258db3ea1121b83d"
+}

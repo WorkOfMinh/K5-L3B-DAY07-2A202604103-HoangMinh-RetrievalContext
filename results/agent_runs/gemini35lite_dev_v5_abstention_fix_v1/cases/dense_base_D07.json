@@ -1,0 +1,1292 @@
+{
+  "status": "answered",
+  "answer": "A Python module is a file containing Python definitions and statements [9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd]. The filename is related to the module name in that the filename is the module name with the suffix `.py` appended [9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd].",
+  "citations": [
+    "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd"
+  ],
+  "reason": "The text directly defines a module and explains the relationship between its filename and its name.",
+  "guard": "citation_ids_valid; semantic_support_requires_review",
+  "query_id": "D07",
+  "config_id": "dense_base",
+  "public_query": {
+    "id": "D07",
+    "question": "What is a Python module, and how is its filename related to its name?",
+    "filter": null
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "module filename related to its name python",
+      "filter": null,
+      "method": "dense",
+      "ranking": [
+        {
+          "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+          "start_char": 1046,
+          "end_char": 1635,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8917588857340485
+        },
+        {
+          "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 51,
+          "text": "When a module named spam is imported, the interpreter first searches for a built-in module with that name. These\n          module names are listed in sys.builtin_module_names. If not found, it then searches for a file named spam.py\n          in a list of directories given by the variable sys.path. sys.path is initialized from these locations:\n            • The directory containing the input script (or the current directory when no file is specified).\n            • PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).\n\n            • The installation-dependent default (by convention including a site-packages directory, handled by the site\n             module).\n          More details are at sys-path-init.\n\n            Note",
+          "start_char": 1472,
+          "end_char": 2236,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p051",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 45,
+            "chapter_title": "Modules",
+            "normalized_characters": 2478
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.882908768480495
+        },
+        {
+          "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "6.1.3 “Compiled” Python files\n          To speed up loading modules, Python caches the compiled version of each module in the __pycache__ directory\n          under the name module.version.pyc, where the version encodes the format of the compiled file; it generally\n          contains the Python version number. For example, in CPython release 3.3 the compiled version of spam.py would\n          be cached as __pycache__/spam.cpython-33.pyc. This naming convention allows compiled modules from\n          different releases and different versions of Python to coexist.\n          Python checks the modification date of the source against the compiled version to see if it’s out of date and needs\n          to be recompiled. This is a completely automatic process. Also, the compiled modules are platform-independent, so\n          the same library can be shared among systems with different architectures.",
+          "start_char": 452,
+          "end_char": 1353,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8756118490927325
+        },
+        {
+          "id": "4dccd81917a368d08d9c1ababf5b9426ce2016e8857c64848bcc5ea2d6f28ade",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "Python comes with a library of standard modules, described in a separate document, the Python Library Reference\n          (“Library Reference” hereafter). Some modules are built into the interpreter; these provide access to operations\n          that are not part of the core of the language but are nevertheless built in, either for efficiency or to provide access\n          to operating system primitives such as system calls. The set of such modules is a configuration option which also\n          depends on the underlying platform. For example, the winreg module is only provided on Windows systems. One\n          particular module deserves some attention: sys, which is built into every Python interpreter. The variables sys.ps1\n          and sys.ps2 define the strings used as primary and secondary prompts:\n          >>> import sys\n          >>> sys.ps1\n          '>>> '\n          >>> sys.ps2\n          '... '\n          >>> sys.ps1 = 'C> '\n          C> print('Yuck!')\n          Yuck!",
+          "start_char": 2780,
+          "end_char": 3769,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8737701773643494
+        },
+        {
+          "id": "34dda23bcab8706fb6bb7fbd57e02ce72c509544fbfc7db2f6ebd87e344646dc",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "Packages are a way of structuring Python’s module namespace by using “dotted module names”. For example, the\n          module name A.B designates a submodule named B in a package named A. Just like the use of modules saves the\n          authors of different modules from having to worry about each other’s global variable names, the use of dotted module\n          names saves the authors of multi-module packages like NumPy or Pillow from having to worry about each other’s\n          module names.\n          Suppose you want to design a collection of modules (a “package”) for the uniform handling of sound files and sound\n          data. There are many different sound file formats (usually recognized by their extension, for example: .wav, .\n          aiff, .au), so you may need to create and maintain a growing collection of modules for the conversion between\n          the various file formats. There are also many different operations you might want to perform on sound data (such as",
+          "start_char": 1623,
+          "end_char": 2612,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.8686462640762329
+        },
+        {
+          "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 51,
+          "text": "if __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path",
+          "start_char": 797,
+          "end_char": 1460,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p051",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 45,
+            "chapter_title": "Modules",
+            "normalized_characters": 2478
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.8672157784466681
+        },
+        {
+          "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 50,
+          "text": "A module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning",
+          "start_char": 305,
+          "end_char": 1200,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p050",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 44,
+            "chapter_title": "Modules",
+            "normalized_characters": 3193
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.8664529323577881
+        },
+        {
+          "id": "c9659145ae4c727e0b6e25419eb3497ef9a6e48db637497badcb353d9895551f",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 53,
+          "text": ">>> import sys\n          >>> sys.path.append('/ufs/guido/lib/python')\n\n          6.3 The dir() Function\n\n          The built-in function dir() is used to find out which names a module defines. It returns a sorted list of strings:",
+          "start_char": 0,
+          "end_char": 229,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p053",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 47,
+            "chapter_title": "Modules",
+            "normalized_characters": 3397
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8638419590090552
+        },
+        {
+          "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 50,
+          "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+          "start_char": 1929,
+          "end_char": 2916,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p050",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 44,
+            "chapter_title": "Modules",
+            "normalized_characters": 3193
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8624540649381852
+        },
+        {
+          "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "C>\n          These two variables are only defined if the interpreter is in interactive mode.\n\n          The variable sys.path is a list of strings that determines the interpreter’s search path for modules. It is initialized\n          to a default path taken from the environment variable PYTHONPATH, or from a built-in default if PYTHONPATH is not\n          set. You can modify it using standard list operations:",
+          "start_char": 3780,
+          "end_char": 4192,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.860260333426605
+        }
+      ],
+      "component_rankings": {
+        "dense": [
+          {
+            "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+            "start_char": 1046,
+            "end_char": 1635,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8917588857340485
+          },
+          {
+            "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 51,
+            "text": "When a module named spam is imported, the interpreter first searches for a built-in module with that name. These\n          module names are listed in sys.builtin_module_names. If not found, it then searches for a file named spam.py\n          in a list of directories given by the variable sys.path. sys.path is initialized from these locations:\n            • The directory containing the input script (or the current directory when no file is specified).\n            • PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).\n\n            • The installation-dependent default (by convention including a site-packages directory, handled by the site\n             module).\n          More details are at sys-path-init.\n\n            Note",
+            "start_char": 1472,
+            "end_char": 2236,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p051",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 45,
+              "chapter_title": "Modules",
+              "normalized_characters": 2478
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.882908768480495
+          },
+          {
+            "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 52,
+            "text": "6.1.3 “Compiled” Python files\n          To speed up loading modules, Python caches the compiled version of each module in the __pycache__ directory\n          under the name module.version.pyc, where the version encodes the format of the compiled file; it generally\n          contains the Python version number. For example, in CPython release 3.3 the compiled version of spam.py would\n          be cached as __pycache__/spam.cpython-33.pyc. This naming convention allows compiled modules from\n          different releases and different versions of Python to coexist.\n          Python checks the modification date of the source against the compiled version to see if it’s out of date and needs\n          to be recompiled. This is a completely automatic process. Also, the compiled modules are platform-independent, so\n          the same library can be shared among systems with different architectures.",
+            "start_char": 452,
+            "end_char": 1353,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p052",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 46,
+              "chapter_title": "Modules",
+              "normalized_characters": 4192
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8756118490927325
+          },
+          {
+            "id": "4dccd81917a368d08d9c1ababf5b9426ce2016e8857c64848bcc5ea2d6f28ade",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 52,
+            "text": "Python comes with a library of standard modules, described in a separate document, the Python Library Reference\n          (“Library Reference” hereafter). Some modules are built into the interpreter; these provide access to operations\n          that are not part of the core of the language but are nevertheless built in, either for efficiency or to provide access\n          to operating system primitives such as system calls. The set of such modules is a configuration option which also\n          depends on the underlying platform. For example, the winreg module is only provided on Windows systems. One\n          particular module deserves some attention: sys, which is built into every Python interpreter. The variables sys.ps1\n          and sys.ps2 define the strings used as primary and secondary prompts:\n          >>> import sys\n          >>> sys.ps1\n          '>>> '\n          >>> sys.ps2\n          '... '\n          >>> sys.ps1 = 'C> '\n          C> print('Yuck!')\n          Yuck!",
+            "start_char": 2780,
+            "end_char": 3769,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p052",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 46,
+              "chapter_title": "Modules",
+              "normalized_characters": 4192
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 4,
+            "score": 0.8737701773643494
+          },
+          {
+            "id": "34dda23bcab8706fb6bb7fbd57e02ce72c509544fbfc7db2f6ebd87e344646dc",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "Packages are a way of structuring Python’s module namespace by using “dotted module names”. For example, the\n          module name A.B designates a submodule named B in a package named A. Just like the use of modules saves the\n          authors of different modules from having to worry about each other’s global variable names, the use of dotted module\n          names saves the authors of multi-module packages like NumPy or Pillow from having to worry about each other’s\n          module names.\n          Suppose you want to design a collection of modules (a “package”) for the uniform handling of sound files and sound\n          data. There are many different sound file formats (usually recognized by their extension, for example: .wav, .\n          aiff, .au), so you may need to create and maintain a growing collection of modules for the conversion between\n          the various file formats. There are also many different operations you might want to perform on sound data (such as",
+            "start_char": 1623,
+            "end_char": 2612,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.8686462640762329
+          },
+          {
+            "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 51,
+            "text": "if __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path",
+            "start_char": 797,
+            "end_char": 1460,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p051",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 45,
+              "chapter_title": "Modules",
+              "normalized_characters": 2478
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 6,
+            "score": 0.8672157784466681
+          },
+          {
+            "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 50,
+            "text": "A module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning",
+            "start_char": 305,
+            "end_char": 1200,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p050",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 44,
+              "chapter_title": "Modules",
+              "normalized_characters": 3193
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 7,
+            "score": 0.8664529323577881
+          },
+          {
+            "id": "c9659145ae4c727e0b6e25419eb3497ef9a6e48db637497badcb353d9895551f",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 53,
+            "text": ">>> import sys\n          >>> sys.path.append('/ufs/guido/lib/python')\n\n          6.3 The dir() Function\n\n          The built-in function dir() is used to find out which names a module defines. It returns a sorted list of strings:",
+            "start_char": 0,
+            "end_char": 229,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p053",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 47,
+              "chapter_title": "Modules",
+              "normalized_characters": 3397
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 8,
+            "score": 0.8638419590090552
+          },
+          {
+            "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 50,
+            "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+            "start_char": 1929,
+            "end_char": 2916,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p050",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 44,
+              "chapter_title": "Modules",
+              "normalized_characters": 3193
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 9,
+            "score": 0.8624540649381852
+          },
+          {
+            "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 52,
+            "text": "C>\n          These two variables are only defined if the interpreter is in interactive mode.\n\n          The variable sys.path is a list of strings that determines the interpreter’s search path for modules. It is initialized\n          to a default path taken from the environment variable PYTHONPATH, or from a built-in default if PYTHONPATH is not\n          set. You can modify it using standard list operations:",
+            "start_char": 3780,
+            "end_char": 4192,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p052",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 46,
+              "chapter_title": "Modules",
+              "normalized_characters": 4192
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 10,
+            "score": 0.860260333426605
+          }
+        ]
+      },
+      "context": {
+        "text": "[9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\ninto the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module\n\n[1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed | source=data/raw/tutorial.pdf | PDF page=51 | chapter=6]\nWhen a module named spam is imported, the interpreter first searches for a built-in module with that name. These\n          module names are listed in sys.builtin_module_names. If not found, it then searches for a file named spam.py\n          in a list of directories given by the variable sys.path. sys.path is initialized from these locations:\n            • The directory containing the input script (or the current directory when no file is specified).\n            • PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).\n\n            • The installation-dependent default (by convention including a site-packages directory, handled by the site\n             module).\n          More details are at sys-path-init.\n\n            Note\n\n[db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641 | source=data/raw/tutorial.pdf | PDF page=52 | chapter=6]\n6.1.3 “Compiled” Python files\n          To speed up loading modules, Python caches the compiled version of each module in the __pycache__ directory\n          under the name module.version.pyc, where the version encodes the format of the compiled file; it generally\n          contains the Python version number. For example, in CPython release 3.3 the compiled version of spam.py would\n          be cached as __pycache__/spam.cpython-33.pyc. This naming convention allows compiled modules from\n          different releases and different versions of Python to coexist.\n          Python checks the modification date of the source against the compiled version to see if it’s out of date and needs\n          to be recompiled. This is a completely automatic process. Also, the compiled modules are platform-independent, so\n          the same library can be shared among systems with different architectures.",
+        "chunk_ids": [
+          "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+          "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+          "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641"
+        ],
+        "characters": 2630,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+            "start_char": 1046,
+            "end_char": 1635,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8917588857340485
+          },
+          {
+            "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 51,
+            "text": "When a module named spam is imported, the interpreter first searches for a built-in module with that name. These\n          module names are listed in sys.builtin_module_names. If not found, it then searches for a file named spam.py\n          in a list of directories given by the variable sys.path. sys.path is initialized from these locations:\n            • The directory containing the input script (or the current directory when no file is specified).\n            • PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).\n\n            • The installation-dependent default (by convention including a site-packages directory, handled by the site\n             module).\n          More details are at sys-path-init.\n\n            Note",
+            "start_char": 1472,
+            "end_char": 2236,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p051",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 45,
+              "chapter_title": "Modules",
+              "normalized_characters": 2478
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.882908768480495
+          },
+          {
+            "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 52,
+            "text": "6.1.3 “Compiled” Python files\n          To speed up loading modules, Python caches the compiled version of each module in the __pycache__ directory\n          under the name module.version.pyc, where the version encodes the format of the compiled file; it generally\n          contains the Python version number. For example, in CPython release 3.3 the compiled version of spam.py would\n          be cached as __pycache__/spam.cpython-33.pyc. This naming convention allows compiled modules from\n          different releases and different versions of Python to coexist.\n          Python checks the modification date of the source against the compiled version to see if it’s out of date and needs\n          to be recompiled. This is a completely automatic process. Also, the compiled modules are platform-independent, so\n          the same library can be shared among systems with different architectures.",
+            "start_char": 452,
+            "end_char": 1353,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p052",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 46,
+              "chapter_title": "Modules",
+              "normalized_characters": 4192
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8756118490927325
+          }
+        ],
+        "excluded": [
+          {
+            "id": "4dccd81917a368d08d9c1ababf5b9426ce2016e8857c64848bcc5ea2d6f28ade",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "34dda23bcab8706fb6bb7fbd57e02ce72c509544fbfc7db2f6ebd87e344646dc",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c9659145ae4c727e0b6e25419eb3497ef9a6e48db637497badcb353d9895551f",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.021711200002755504
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "7a7a2ba8b0fb600c0d420d7f135abfe6b670c880b38fe24342282352e7e91bfa",
+      "request_sha256": "824be89a842d70274de8ab6a2e85cb1e4bbf26fa3adc392ed3e2ef29972675ca",
+      "response_id": "drn6atL2LIzirfcPsZCZsAw",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 609,
+        "candidatesTokenCount": 20,
+        "totalTokenCount": 629,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 609
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.485000000000582,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "55c30d00f10fa29764eab879d43857c6f25b326f66b6537f0efc7c10c21aec88",
+      "request_sha256": "9904e07392ee3654dbe3ccc824b6101d3ed93cbd76f05f78850e11ddf0029cf9",
+      "response_id": "hbn6ao3cJsa01e8P-_K8iQI",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1581,
+        "candidatesTokenCount": 248,
+        "totalTokenCount": 1829,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1581
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.6880000000019209,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\ninto the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module\n\n[1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed | source=data/raw/tutorial.pdf | PDF page=51 | chapter=6]\nWhen a module named spam is imported, the interpreter first searches for a built-in module with that name. These\n          module names are listed in sys.builtin_module_names. If not found, it then searches for a file named spam.py\n          in a list of directories given by the variable sys.path. sys.path is initialized from these locations:\n            • The directory containing the input script (or the current directory when no file is specified).\n            • PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).\n\n            • The installation-dependent default (by convention including a site-packages directory, handled by the site\n             module).\n          More details are at sys-path-init.\n\n            Note\n\n[db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641 | source=data/raw/tutorial.pdf | PDF page=52 | chapter=6]\n6.1.3 “Compiled” Python files\n          To speed up loading modules, Python caches the compiled version of each module in the __pycache__ directory\n          under the name module.version.pyc, where the version encodes the format of the compiled file; it generally\n          contains the Python version number. For example, in CPython release 3.3 the compiled version of spam.py would\n          be cached as __pycache__/spam.cpython-33.pyc. This naming convention allows compiled modules from\n          different releases and different versions of Python to coexist.\n          Python checks the modification date of the source against the compiled version to see if it’s out of date and needs\n          to be recompiled. This is a completely automatic process. Also, the compiled modules are platform-independent, so\n          the same library can be shared among systems with different architectures.",
+        "chunk_ids": [
+          "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+          "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+          "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641"
+        ],
+        "characters": 2630,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+            "start_char": 1046,
+            "end_char": 1635,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8917588857340485
+          },
+          {
+            "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 51,
+            "text": "When a module named spam is imported, the interpreter first searches for a built-in module with that name. These\n          module names are listed in sys.builtin_module_names. If not found, it then searches for a file named spam.py\n          in a list of directories given by the variable sys.path. sys.path is initialized from these locations:\n            • The directory containing the input script (or the current directory when no file is specified).\n            • PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).\n\n            • The installation-dependent default (by convention including a site-packages directory, handled by the site\n             module).\n          More details are at sys-path-init.\n\n            Note",
+            "start_char": 1472,
+            "end_char": 2236,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p051",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 45,
+              "chapter_title": "Modules",
+              "normalized_characters": 2478
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.882908768480495
+          },
+          {
+            "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 52,
+            "text": "6.1.3 “Compiled” Python files\n          To speed up loading modules, Python caches the compiled version of each module in the __pycache__ directory\n          under the name module.version.pyc, where the version encodes the format of the compiled file; it generally\n          contains the Python version number. For example, in CPython release 3.3 the compiled version of spam.py would\n          be cached as __pycache__/spam.cpython-33.pyc. This naming convention allows compiled modules from\n          different releases and different versions of Python to coexist.\n          Python checks the modification date of the source against the compiled version to see if it’s out of date and needs\n          to be recompiled. This is a completely automatic process. Also, the compiled modules are platform-independent, so\n          the same library can be shared among systems with different architectures.",
+            "start_char": 452,
+            "end_char": 1353,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p052",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 46,
+              "chapter_title": "Modules",
+              "normalized_characters": 4192
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8756118490927325
+          }
+        ],
+        "excluded": [
+          {
+            "id": "4dccd81917a368d08d9c1ababf5b9426ce2016e8857c64848bcc5ea2d6f28ade",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "34dda23bcab8706fb6bb7fbd57e02ce72c509544fbfc7db2f6ebd87e344646dc",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c9659145ae4c727e0b6e25419eb3497ef9a6e48db637497badcb353d9895551f",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\ninto the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module\n\n[1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed | source=data/raw/tutorial.pdf | PDF page=51 | chapter=6]\nWhen a module named spam is imported, the interpreter first searches for a built-in module with that name. These\n          module names are listed in sys.builtin_module_names. If not found, it then searches for a file named spam.py\n          in a list of directories given by the variable sys.path. sys.path is initialized from these locations:\n            • The directory containing the input script (or the current directory when no file is specified).\n            • PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).\n\n            • The installation-dependent default (by convention including a site-packages directory, handled by the site\n             module).\n          More details are at sys-path-init.\n\n            Note\n\n[db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641 | source=data/raw/tutorial.pdf | PDF page=52 | chapter=6]\n6.1.3 “Compiled” Python files\n          To speed up loading modules, Python caches the compiled version of each module in the __pycache__ directory\n          under the name module.version.pyc, where the version encodes the format of the compiled file; it generally\n          contains the Python version number. For example, in CPython release 3.3 the compiled version of spam.py would\n          be cached as __pycache__/spam.cpython-33.pyc. This naming convention allows compiled modules from\n          different releases and different versions of Python to coexist.\n          Python checks the modification date of the source against the compiled version to see if it’s out of date and needs\n          to be recompiled. This is a completely automatic process. Also, the compiled modules are platform-independent, so\n          the same library can be shared among systems with different architectures.",
+    "chunk_ids": [
+      "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+      "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+      "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641"
+    ],
+    "characters": 2630,
+    "budget_chars": 3500,
+    "max_chunks": 3,
+    "selected_chunks": [
+      {
+        "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 49,
+        "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+        "start_char": 1046,
+        "end_char": 1635,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p049",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 43,
+          "chapter_title": "Modules",
+          "normalized_characters": 2700
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.8917588857340485
+      },
+      {
+        "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 51,
+        "text": "When a module named spam is imported, the interpreter first searches for a built-in module with that name. These\n          module names are listed in sys.builtin_module_names. If not found, it then searches for a file named spam.py\n          in a list of directories given by the variable sys.path. sys.path is initialized from these locations:\n            • The directory containing the input script (or the current directory when no file is specified).\n            • PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).\n\n            • The installation-dependent default (by convention including a site-packages directory, handled by the site\n             module).\n          More details are at sys-path-init.\n\n            Note",
+        "start_char": 1472,
+        "end_char": 2236,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p051",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 45,
+          "chapter_title": "Modules",
+          "normalized_characters": 2478
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.882908768480495
+      },
+      {
+        "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 52,
+        "text": "6.1.3 “Compiled” Python files\n          To speed up loading modules, Python caches the compiled version of each module in the __pycache__ directory\n          under the name module.version.pyc, where the version encodes the format of the compiled file; it generally\n          contains the Python version number. For example, in CPython release 3.3 the compiled version of spam.py would\n          be cached as __pycache__/spam.cpython-33.pyc. This naming convention allows compiled modules from\n          different releases and different versions of Python to coexist.\n          Python checks the modification date of the source against the compiled version to see if it’s out of date and needs\n          to be recompiled. This is a completely automatic process. Also, the compiled modules are platform-independent, so\n          the same library can be shared among systems with different architectures.",
+        "start_char": 452,
+        "end_char": 1353,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p052",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 46,
+          "chapter_title": "Modules",
+          "normalized_characters": 4192
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.8756118490927325
+      }
+    ],
+    "excluded": [
+      {
+        "id": "4dccd81917a368d08d9c1ababf5b9426ce2016e8857c64848bcc5ea2d6f28ade",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "34dda23bcab8706fb6bb7fbd57e02ce72c509544fbfc7db2f6ebd87e344646dc",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "c9659145ae4c727e0b6e25419eb3497ef9a6e48db637497badcb353d9895551f",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+        "reason": "max_chunks"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [],
+  "search_calls": 1,
+  "generated_search_queries": [
+    "module filename related to its name python"
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 29.817653199999768,
+    "pacing_seconds_this_invocation": 26.60900000000038,
+    "wall_seconds_excluding_pacing": 3.2086531999993895,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": true,
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 49,
+        "evidence": "A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended."
+      }
+    ],
+    "expected_answer": "A module is a file of Python definitions and statements; its filename is the module name plus .py.",
+    "absence_reason": null,
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "dense",
+    "query": "What is a Python module, and how is its filename related to its name?",
+    "filter": null,
+    "ranking": [
+      {
+        "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 49,
+        "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+        "start_char": 1046,
+        "end_char": 1635,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p049",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 43,
+          "chapter_title": "Modules",
+          "normalized_characters": 2700
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.9068987639814251
+      },
+      {
+        "id": "34dda23bcab8706fb6bb7fbd57e02ce72c509544fbfc7db2f6ebd87e344646dc",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 54,
+        "text": "Packages are a way of structuring Python’s module namespace by using “dotted module names”. For example, the\n          module name A.B designates a submodule named B in a package named A. Just like the use of modules saves the\n          authors of different modules from having to worry about each other’s global variable names, the use of dotted module\n          names saves the authors of multi-module packages like NumPy or Pillow from having to worry about each other’s\n          module names.\n          Suppose you want to design a collection of modules (a “package”) for the uniform handling of sound files and sound\n          data. There are many different sound file formats (usually recognized by their extension, for example: .wav, .\n          aiff, .au), so you may need to create and maintain a growing collection of modules for the conversion between\n          the various file formats. There are also many different operations you might want to perform on sound data (such as",
+        "start_char": 1623,
+        "end_char": 2612,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p054",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 48,
+          "chapter_title": "Modules",
+          "normalized_characters": 3746
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.8835078477859497
+      },
+      {
+        "id": "4dccd81917a368d08d9c1ababf5b9426ce2016e8857c64848bcc5ea2d6f28ade",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 52,
+        "text": "Python comes with a library of standard modules, described in a separate document, the Python Library Reference\n          (“Library Reference” hereafter). Some modules are built into the interpreter; these provide access to operations\n          that are not part of the core of the language but are nevertheless built in, either for efficiency or to provide access\n          to operating system primitives such as system calls. The set of such modules is a configuration option which also\n          depends on the underlying platform. For example, the winreg module is only provided on Windows systems. One\n          particular module deserves some attention: sys, which is built into every Python interpreter. The variables sys.ps1\n          and sys.ps2 define the strings used as primary and secondary prompts:\n          >>> import sys\n          >>> sys.ps1\n          '>>> '\n          >>> sys.ps2\n          '... '\n          >>> sys.ps1 = 'C> '\n          C> print('Yuck!')\n          Yuck!",
+        "start_char": 2780,
+        "end_char": 3769,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p052",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 46,
+          "chapter_title": "Modules",
+          "normalized_characters": 4192
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.8782902956008911
+      },
+      {
+        "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 51,
+        "text": "When a module named spam is imported, the interpreter first searches for a built-in module with that name. These\n          module names are listed in sys.builtin_module_names. If not found, it then searches for a file named spam.py\n          in a list of directories given by the variable sys.path. sys.path is initialized from these locations:\n            • The directory containing the input script (or the current directory when no file is specified).\n            • PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).\n\n            • The installation-dependent default (by convention including a site-packages directory, handled by the site\n             module).\n          More details are at sys-path-init.\n\n            Note",
+        "start_char": 1472,
+        "end_char": 2236,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p051",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 45,
+          "chapter_title": "Modules",
+          "normalized_characters": 2478
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 4,
+        "score": 0.8774830771992772
+      },
+      {
+        "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 50,
+        "text": "A module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning",
+        "start_char": 305,
+        "end_char": 1200,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p050",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 44,
+          "chapter_title": "Modules",
+          "normalized_characters": 3193
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 5,
+        "score": 0.8672723770141602
+      },
+      {
+        "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 52,
+        "text": "6.1.3 “Compiled” Python files\n          To speed up loading modules, Python caches the compiled version of each module in the __pycache__ directory\n          under the name module.version.pyc, where the version encodes the format of the compiled file; it generally\n          contains the Python version number. For example, in CPython release 3.3 the compiled version of spam.py would\n          be cached as __pycache__/spam.cpython-33.pyc. This naming convention allows compiled modules from\n          different releases and different versions of Python to coexist.\n          Python checks the modification date of the source against the compiled version to see if it’s out of date and needs\n          to be recompiled. This is a completely automatic process. Also, the compiled modules are platform-independent, so\n          the same library can be shared among systems with different architectures.",
+        "start_char": 452,
+        "end_char": 1353,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p052",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 46,
+          "chapter_title": "Modules",
+          "normalized_characters": 4192
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 6,
+        "score": 0.8654001435398986
+      },
+      {
+        "id": "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 49,
+        "text": "If you quit from the Python interpreter and enter it again, the definitions you have made (functions and variables)\n          are lost. Therefore, if you want to write a somewhat longer program, you are better off using a text editor to prepare\n          the input for the interpreter and running it with that file as input instead. This is known as creating a script. As your\n          program gets longer, you may want to split it into several files for easier maintenance. You may also want to use a\n          handy function that you’ve written in several programs without copying its definition into each program.\n          To support this, Python has a way to put definitions in a file and use them in a script or in an interactive instance\n          of the interpreter. Such a file is called a module; definitions from a module can be imported into other modules or",
+        "start_char": 164,
+        "end_char": 1035,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p049",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 43,
+          "chapter_title": "Modules",
+          "normalized_characters": 2700
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 7,
+        "score": 0.8633186302591201
+      },
+      {
+        "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 51,
+        "text": "if __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path",
+        "start_char": 797,
+        "end_char": 1460,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p051",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 45,
+          "chapter_title": "Modules",
+          "normalized_characters": 2478
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 8,
+        "score": 0.8610633868295967
+      },
+      {
+        "id": "bef290e8b36e999d90d966e7b6b6a7349d924430ad1e11fb6c09f4da4a345ea5",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 52,
+        "text": "After initialization, Python programs can modify sys.path. The directory containing the script being run is placed\n          at the beginning of the search path, ahead of the standard library path. This means that scripts in that directory will\n          be loaded instead of modules of the same name in the library directory. This is an error unless the replacement is\n          intended. See section Standard Modules for more information.",
+        "start_char": 0,
+        "end_char": 440,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p052",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 46,
+          "chapter_title": "Modules",
+          "normalized_characters": 4192
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 9,
+        "score": 0.855802604210223
+      },
+      {
+        "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 52,
+        "text": "C>\n          These two variables are only defined if the interpreter is in interactive mode.\n\n          The variable sys.path is a list of strings that determines the interpreter’s search path for modules. It is initialized\n          to a default path taken from the environment variable PYTHONPATH, or from a built-in default if PYTHONPATH is not\n          set. You can modify it using standard list operations:",
+        "start_char": 3780,
+        "end_char": 4192,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p052",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 46,
+          "chapter_title": "Modules",
+          "normalized_characters": 4192
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 10,
+        "score": 0.8555927531597842
+      }
+    ],
+    "components": {
+      "dense": [
+        {
+          "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+          "start_char": 1046,
+          "end_char": 1635,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.9068987639814251
+        },
+        {
+          "id": "34dda23bcab8706fb6bb7fbd57e02ce72c509544fbfc7db2f6ebd87e344646dc",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "Packages are a way of structuring Python’s module namespace by using “dotted module names”. For example, the\n          module name A.B designates a submodule named B in a package named A. Just like the use of modules saves the\n          authors of different modules from having to worry about each other’s global variable names, the use of dotted module\n          names saves the authors of multi-module packages like NumPy or Pillow from having to worry about each other’s\n          module names.\n          Suppose you want to design a collection of modules (a “package”) for the uniform handling of sound files and sound\n          data. There are many different sound file formats (usually recognized by their extension, for example: .wav, .\n          aiff, .au), so you may need to create and maintain a growing collection of modules for the conversion between\n          the various file formats. There are also many different operations you might want to perform on sound data (such as",
+          "start_char": 1623,
+          "end_char": 2612,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8835078477859497
+        },
+        {
+          "id": "4dccd81917a368d08d9c1ababf5b9426ce2016e8857c64848bcc5ea2d6f28ade",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "Python comes with a library of standard modules, described in a separate document, the Python Library Reference\n          (“Library Reference” hereafter). Some modules are built into the interpreter; these provide access to operations\n          that are not part of the core of the language but are nevertheless built in, either for efficiency or to provide access\n          to operating system primitives such as system calls. The set of such modules is a configuration option which also\n          depends on the underlying platform. For example, the winreg module is only provided on Windows systems. One\n          particular module deserves some attention: sys, which is built into every Python interpreter. The variables sys.ps1\n          and sys.ps2 define the strings used as primary and secondary prompts:\n          >>> import sys\n          >>> sys.ps1\n          '>>> '\n          >>> sys.ps2\n          '... '\n          >>> sys.ps1 = 'C> '\n          C> print('Yuck!')\n          Yuck!",
+          "start_char": 2780,
+          "end_char": 3769,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8782902956008911
+        },
+        {
+          "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 51,
+          "text": "When a module named spam is imported, the interpreter first searches for a built-in module with that name. These\n          module names are listed in sys.builtin_module_names. If not found, it then searches for a file named spam.py\n          in a list of directories given by the variable sys.path. sys.path is initialized from these locations:\n            • The directory containing the input script (or the current directory when no file is specified).\n            • PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).\n\n            • The installation-dependent default (by convention including a site-packages directory, handled by the site\n             module).\n          More details are at sys-path-init.\n\n            Note",
+          "start_char": 1472,
+          "end_char": 2236,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p051",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 45,
+            "chapter_title": "Modules",
+            "normalized_characters": 2478
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8774830771992772
+        },
+        {
+          "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 50,
+          "text": "A module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning",
+          "start_char": 305,
+          "end_char": 1200,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p050",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 44,
+            "chapter_title": "Modules",
+            "normalized_characters": 3193
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.8672723770141602
+        },
+        {
+          "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "6.1.3 “Compiled” Python files\n          To speed up loading modules, Python caches the compiled version of each module in the __pycache__ directory\n          under the name module.version.pyc, where the version encodes the format of the compiled file; it generally\n          contains the Python version number. For example, in CPython release 3.3 the compiled version of spam.py would\n          be cached as __pycache__/spam.cpython-33.pyc. This naming convention allows compiled modules from\n          different releases and different versions of Python to coexist.\n          Python checks the modification date of the source against the compiled version to see if it’s out of date and needs\n          to be recompiled. This is a completely automatic process. Also, the compiled modules are platform-independent, so\n          the same library can be shared among systems with different architectures.",
+          "start_char": 452,
+          "end_char": 1353,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.8654001435398986
+        },
+        {
+          "id": "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "If you quit from the Python interpreter and enter it again, the definitions you have made (functions and variables)\n          are lost. Therefore, if you want to write a somewhat longer program, you are better off using a text editor to prepare\n          the input for the interpreter and running it with that file as input instead. This is known as creating a script. As your\n          program gets longer, you may want to split it into several files for easier maintenance. You may also want to use a\n          handy function that you’ve written in several programs without copying its definition into each program.\n          To support this, Python has a way to put definitions in a file and use them in a script or in an interactive instance\n          of the interpreter. Such a file is called a module; definitions from a module can be imported into other modules or",
+          "start_char": 164,
+          "end_char": 1035,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.8633186302591201
+        },
+        {
+          "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 51,
+          "text": "if __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path",
+          "start_char": 797,
+          "end_char": 1460,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p051",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 45,
+            "chapter_title": "Modules",
+            "normalized_characters": 2478
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8610633868295967
+        },
+        {
+          "id": "bef290e8b36e999d90d966e7b6b6a7349d924430ad1e11fb6c09f4da4a345ea5",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "After initialization, Python programs can modify sys.path. The directory containing the script being run is placed\n          at the beginning of the search path, ahead of the standard library path. This means that scripts in that directory will\n          be loaded instead of modules of the same name in the library directory. This is an error unless the replacement is\n          intended. See section Standard Modules for more information.",
+          "start_char": 0,
+          "end_char": 440,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.855802604210223
+        },
+        {
+          "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "C>\n          These two variables are only defined if the interpreter is in interactive mode.\n\n          The variable sys.path is a list of strings that determines the interpreter’s search path for modules. It is initialized\n          to a default path taken from the environment variable PYTHONPATH, or from a built-in default if PYTHONPATH is not\n          set. You can modify it using standard list operations:",
+          "start_char": 3780,
+          "end_char": 4192,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8555927531597842
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": true,
+    "original_query_evidence_hit_at_3": true,
+    "actual_final_context_exact_evidence": true,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "trace_sha256": "596ae4144e23eeb0798b0f8e4d0d62a32d9e957049d77457a707956a8a2f340b"
+}

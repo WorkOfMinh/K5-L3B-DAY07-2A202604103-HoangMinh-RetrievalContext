@@ -1,0 +1,2062 @@
+{
+  "status": "answered",
+  "answer": "The tutorial recommends `collections.deque`, which was designed to have fast appends and pops from both ends [4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6].",
+  "citations": [
+    "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6"
+  ],
+  "reason": "The documentation explicitly recommends collections.deque for fast appends and pops from both ends.",
+  "guard": "citation_ids_valid; semantic_support_requires_review",
+  "query_id": "D04",
+  "config_id": "hybrid_context5",
+  "public_query": {
+    "id": "D04",
+    "question": "I need a queue with fast additions and removals at either end. Which collection does the tutorial recommend?",
+    "filter": null
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "queue fast additions and removals at either end",
+      "filter": null,
+      "method": "hybrid_rrf",
+      "ranking": [
+        {
+          "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+          "start_char": 0,
+          "end_char": 559,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.03278688524590164,
+          "component_ranks": {
+            "dense": 1,
+            "bm25": 1
+          },
+          "component_scores": {
+            "dense": 0.8715648727676364,
+            "bm25": 13.540940302423401
+          }
+        },
+        {
+          "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+          "start_char": 571,
+          "end_char": 1421,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.031746031746031744,
+          "component_ranks": {
+            "dense": 3,
+            "bm25": 3
+          },
+          "component_scores": {
+            "dense": 0.8421889543533325,
+            "bm25": 7.556556196933444
+          }
+        },
+        {
+          "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+          "start_char": 692,
+          "end_char": 1665,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.03055037313432836,
+          "component_ranks": {
+            "dense": 7,
+            "bm25": 4
+          },
+          "component_scores": {
+            "dense": 0.8226987368672714,
+            "bm25": 5.198194312862086
+          }
+        },
+        {
+          "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": ">>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+          "start_char": 1110,
+          "end_char": 1964,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 0.016129032258064516,
+          "rank": 4,
+          "component_ranks": {
+            "bm25": 2
+          },
+          "component_scores": {
+            "bm25": 8.761558135252992
+          }
+        },
+        {
+          "id": "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "• You can use the -O or -OO switches on the Python command to reduce the size of a compiled module. The -O\n             switch removes assert statements, the -OO switch removes both assert statements and __doc__ strings. Since\n             some programs may rely on having these available, you should only use this option if you know what you’re\n             doing. “Optimized” modules have an opt- tag and are usually smaller. Future releases may change the effects\n             of optimization.\n            • A program doesn’t run any faster when it is read from a .pyc file than when it is read from a .py file; the only\n             thing that’s faster about .pyc files is the speed with which they are loaded.\n            • The module compileall can create .pyc files for all modules in a directory.\n\n            • There is more detail on this process, including a flow chart of the decisions, in PEP 3147.\n\n          6.2 Standard Modules",
+          "start_char": 1825,
+          "end_char": 2768,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.016129032258064516,
+          "component_ranks": {
+            "dense": 2
+          },
+          "component_scores": {
+            "dense": 0.8434109594470849
+          }
+        },
+        {
+          "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+          "start_char": 0,
+          "end_char": 995,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.015625,
+          "component_ranks": {
+            "dense": 4
+          },
+          "component_scores": {
+            "dense": 0.8331188062954675
+          }
+        },
+        {
+          "id": "a26892366c43622e714a9bb781c916d6d308a34cd0cd853fea46d877382bd3e0",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 73,
+          "text": "handled by the except clause and therefore re-raised after the finally clause has been executed.\n          In real world applications, the finally clause is useful for releasing external resources (such as files or network\n          connections), regardless of whether the use of the resource was successful.\n\n          8.8 Predefined Clean-up Actions\n\n          Some objects define standard clean-up actions to be undertaken when the object is no longer needed, regardless of\n          whether or not the operation using the object succeeded or failed. Look at the following example, which tries to open\n          a file and print its contents to the screen.\n          for line in open(\"myfile.txt\"):\n             print(line, end=\"\")",
+          "start_char": 1135,
+          "end_char": 1869,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p073",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 67,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2504
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 0.015384615384615385,
+          "rank": 7,
+          "component_ranks": {
+            "bm25": 5
+          },
+          "component_scores": {
+            "bm25": 4.661397118257883
+          }
+        },
+        {
+          "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+          "start_char": 990,
+          "end_char": 1611,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.015384615384615385,
+          "component_ranks": {
+            "dense": 5
+          },
+          "component_scores": {
+            "dense": 0.8244756669431188
+          }
+        },
+        {
+          "id": "03b95daa06aa5b8c68592e5b07e1896fee279761ab2f2a2f8acd4289391bb853",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 62,
+          "text": "Here’s the same table of squares and cubes, formatted manually:\n          >>> for x in range(1, 11):\n          ...   print(repr(x).rjust(2), repr(x*x).rjust(3), end=' ')\n          ...   # Note use of 'end' on previous line\n          ...   print(repr(x*x*x).rjust(4))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          (Note that the one space between each column was added by the way print() works: it always adds spaces between\n          its arguments.)\n          The str.rjust() method of string objects right-justifies a string in a field of a given width by padding it with spaces\n          on the left. There are similar methods str.ljust() and str.center(). These methods do not write anything,",
+          "start_char": 752,
+          "end_char": 1625,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p062",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 56,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2320
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.015151515151515152,
+          "component_ranks": {
+            "dense": 6
+          },
+          "component_scores": {
+            "dense": 0.8232094049453735
+          }
+        },
+        {
+          "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+          "start_char": 393,
+          "end_char": 1098,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 0.015151515151515152,
+          "rank": 10,
+          "component_ranks": {
+            "bm25": 6
+          },
+          "component_scores": {
+            "bm25": 4.503582807118347
+          }
+        }
+      ],
+      "component_rankings": {
+        "dense": [
+          {
+            "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+            "start_char": 0,
+            "end_char": 559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8715648727676364
+          },
+          {
+            "id": "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 52,
+            "text": "• You can use the -O or -OO switches on the Python command to reduce the size of a compiled module. The -O\n             switch removes assert statements, the -OO switch removes both assert statements and __doc__ strings. Since\n             some programs may rely on having these available, you should only use this option if you know what you’re\n             doing. “Optimized” modules have an opt- tag and are usually smaller. Future releases may change the effects\n             of optimization.\n            • A program doesn’t run any faster when it is read from a .pyc file than when it is read from a .py file; the only\n             thing that’s faster about .pyc files is the speed with which they are loaded.\n            • The module compileall can create .pyc files for all modules in a directory.\n\n            • There is more detail on this process, including a flow chart of the decisions, in PEP 3147.\n\n          6.2 Standard Modules",
+            "start_char": 1825,
+            "end_char": 2768,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p052",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 46,
+              "chapter_title": "Modules",
+              "normalized_characters": 4192
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8434109594470849
+          },
+          {
+            "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+            "start_char": 571,
+            "end_char": 1421,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8421889543533325
+          },
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+            "start_char": 0,
+            "end_char": 995,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 4,
+            "score": 0.8331188062954675
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+            "start_char": 990,
+            "end_char": 1611,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.8244756669431188
+          },
+          {
+            "id": "03b95daa06aa5b8c68592e5b07e1896fee279761ab2f2a2f8acd4289391bb853",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 62,
+            "text": "Here’s the same table of squares and cubes, formatted manually:\n          >>> for x in range(1, 11):\n          ...   print(repr(x).rjust(2), repr(x*x).rjust(3), end=' ')\n          ...   # Note use of 'end' on previous line\n          ...   print(repr(x*x*x).rjust(4))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          (Note that the one space between each column was added by the way print() works: it always adds spaces between\n          its arguments.)\n          The str.rjust() method of string objects right-justifies a string in a field of a given width by padding it with spaces\n          on the left. There are similar methods str.ljust() and str.center(). These methods do not write anything,",
+            "start_char": 752,
+            "end_char": 1625,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p062",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 56,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2320
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 6,
+            "score": 0.8232094049453735
+          },
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+            "start_char": 692,
+            "end_char": 1665,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 7,
+            "score": 0.8226987368672714
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 76,
+            "text": "(continued from previous page)\n          ...\n          >>> excs = []\n          >>> for i in range(3):\n          ...   try:\n          ...      f()\n          ...   except Exception as e:\n          ...      e.add_note(f'Happened in Iteration {i+1}')\n          ...      excs.append(e)\n          ...\n          >>> raise ExceptionGroup('We have some problems', excs)\n           + Exception Group Traceback (most recent call last):\n           |  File \"<stdin>\", line 1, in <module>\n           | ExceptionGroup: We have some problems (3 sub-exceptions)\n           +-+---------------- 1 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 1\n             +---------------- 2 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>",
+            "start_char": 0,
+            "end_char": 973,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p076",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 70,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 1440
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 8,
+            "score": 0.822245548829703
+          },
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+            "start_char": 0,
+            "end_char": 677,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 9,
+            "score": 0.8217955231666565
+          },
+          {
+            "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 53,
+            "text": "'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError',\n           'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError',\n                                                              (continues on next page)",
+            "start_char": 3160,
+            "end_char": 3397,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p053",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 47,
+              "chapter_title": "Modules",
+              "normalized_characters": 3397
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 10,
+            "score": 0.821651956838142
+          }
+        ],
+        "bm25": [
+          {
+            "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+            "start_char": 0,
+            "end_char": 559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 13.540940302423401,
+            "rank": 1
+          },
+          {
+            "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": ">>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+            "start_char": 1110,
+            "end_char": 1964,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 8.761558135252992,
+            "rank": 2
+          },
+          {
+            "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+            "start_char": 571,
+            "end_char": 1421,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 7.556556196933444,
+            "rank": 3
+          },
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+            "start_char": 692,
+            "end_char": 1665,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 5.198194312862086,
+            "rank": 4
+          },
+          {
+            "id": "a26892366c43622e714a9bb781c916d6d308a34cd0cd853fea46d877382bd3e0",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 73,
+            "text": "handled by the except clause and therefore re-raised after the finally clause has been executed.\n          In real world applications, the finally clause is useful for releasing external resources (such as files or network\n          connections), regardless of whether the use of the resource was successful.\n\n          8.8 Predefined Clean-up Actions\n\n          Some objects define standard clean-up actions to be undertaken when the object is no longer needed, regardless of\n          whether or not the operation using the object succeeded or failed. Look at the following example, which tries to open\n          a file and print its contents to the screen.\n          for line in open(\"myfile.txt\"):\n             print(line, end=\"\")",
+            "start_char": 1135,
+            "end_char": 1869,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p073",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 67,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2504
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.661397118257883,
+            "rank": 5
+          },
+          {
+            "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+            "start_char": 393,
+            "end_char": 1098,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.503582807118347,
+            "rank": 6
+          },
+          {
+            "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": ">>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18",
+            "start_char": 1976,
+            "end_char": 2698,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.501009453595575,
+            "rank": 7
+          },
+          {
+            "id": "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 72,
+            "text": "(continued from previous page)\n          ... except OSError:\n          ...   raise RuntimeError from None\n          ...\n          Traceback (most recent call last):\n           File \"<stdin>\", line 4, in <module>\n          RuntimeError\n          For more information about chaining mechanics, see bltin-exceptions.\n\n          8.6 User-defined Exceptions\n\n          Programs may name their own exceptions by creating a new exception class (see Classes for more about Python\n          classes). Exceptions should typically be derived from the Exception class, either directly or indirectly.\n          Exception classes can be defined which do anything any other class can do, but are usually kept simple, often only\n          offering a number of attributes that allow information about the error to be extracted by handlers for the exception.\n          Most exceptions are defined with names that end in “Error”, similar to the naming of the standard exceptions.",
+            "start_char": 0,
+            "end_char": 960,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p072",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 66,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 3009
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.226467439118885,
+            "rank": 8
+          },
+          {
+            "id": "9dbf99ecdbe763b9b8ffb9432a94708e9a8c2866ee68b5873d58db853e04abf4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": ">>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}\n          >>> print(basket)            # show that duplicates have been removed\n          {'orange', 'banana', 'pear', 'apple'}\n          >>> 'orange' in basket       # fast membership testing\n          True\n          >>> 'crabgrass' in basket\n          False\n          >>> # Demonstrate set operations on unique letters from two words\n          >>>\n          >>> a = set('abracadabra')\n          >>> b = set('alacazam')\n          >>> a                        # unique letters in a\n          {'a', 'r', 'b', 'c', 'd'}\n          >>> a - b                    # letters in a but not in b\n          {'r', 'd', 'b'}\n          >>> a | b                    # letters in a or b or both\n          {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}\n          >>> a & b                    # letters in both a and b\n          {'a', 'c'}\n          >>> a ^ b                    # letters in a or b but not both",
+            "start_char": 619,
+            "end_char": 1575,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.102361851994076,
+            "rank": 9
+          },
+          {
+            "id": "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 51,
+            "text": ">>> from fibo import fib as fibonacci\n          >>> fibonacci(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n            Note\n\n           For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change\n           your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename).\n\n          6.1.1 Executing modules as scripts\n\n          When you run a Python module with\n          python fibo.py <arguments>\n\n          the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\". That\n          means that by adding this code at the end of your module:",
+            "start_char": 0,
+            "end_char": 785,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p051",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 45,
+              "chapter_title": "Modules",
+              "normalized_characters": 2478
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.735031393726116,
+            "rank": 10
+          }
+        ]
+      },
+      "context": {
+        "text": "[4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6 | source=data/raw/tutorial.pdf | PDF page=41 | chapter=5]\n5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:\n\n[7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c | source=data/raw/tutorial.pdf | PDF page=41 | chapter=5]\n>>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.\n\n[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there\n\n[5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:\n\n[e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44 | source=data/raw/tutorial.pdf | PDF page=52 | chapter=6]\n• You can use the -O or -OO switches on the Python command to reduce the size of a compiled module. The -O\n             switch removes assert statements, the -OO switch removes both assert statements and __doc__ strings. Since\n             some programs may rely on having these available, you should only use this option if you know what you’re\n             doing. “Optimized” modules have an opt- tag and are usually smaller. Future releases may change the effects\n             of optimization.\n            • A program doesn’t run any faster when it is read from a .pyc file than when it is read from a .py file; the only\n             thing that’s faster about .pyc files is the speed with which they are loaded.\n            • The module compileall can create .pyc files for all modules in a directory.\n\n            • There is more detail on this process, including a flow chart of the decisions, in PEP 3147.\n\n          6.2 Standard Modules",
+        "chunk_ids": [
+          "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+          "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+          "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+          "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+          "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44"
+        ],
+        "characters": 4807,
+        "budget_chars": 5500,
+        "max_chunks": 5,
+        "selected_chunks": [
+          {
+            "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+            "start_char": 0,
+            "end_char": 559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "component_ranks": {
+              "dense": 1,
+              "bm25": 1
+            },
+            "component_scores": {
+              "dense": 0.8715648727676364,
+              "bm25": 13.540940302423401
+            }
+          },
+          {
+            "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+            "start_char": 571,
+            "end_char": 1421,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.031746031746031744,
+            "component_ranks": {
+              "dense": 3,
+              "bm25": 3
+            },
+            "component_scores": {
+              "dense": 0.8421889543533325,
+              "bm25": 7.556556196933444
+            }
+          },
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+            "start_char": 692,
+            "end_char": 1665,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.03055037313432836,
+            "component_ranks": {
+              "dense": 7,
+              "bm25": 4
+            },
+            "component_scores": {
+              "dense": 0.8226987368672714,
+              "bm25": 5.198194312862086
+            }
+          },
+          {
+            "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": ">>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+            "start_char": 1110,
+            "end_char": 1964,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 0.016129032258064516,
+            "rank": 4,
+            "component_ranks": {
+              "bm25": 2
+            },
+            "component_scores": {
+              "bm25": 8.761558135252992
+            }
+          },
+          {
+            "id": "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 52,
+            "text": "• You can use the -O or -OO switches on the Python command to reduce the size of a compiled module. The -O\n             switch removes assert statements, the -OO switch removes both assert statements and __doc__ strings. Since\n             some programs may rely on having these available, you should only use this option if you know what you’re\n             doing. “Optimized” modules have an opt- tag and are usually smaller. Future releases may change the effects\n             of optimization.\n            • A program doesn’t run any faster when it is read from a .pyc file than when it is read from a .py file; the only\n             thing that’s faster about .pyc files is the speed with which they are loaded.\n            • The module compileall can create .pyc files for all modules in a directory.\n\n            • There is more detail on this process, including a flow chart of the decisions, in PEP 3147.\n\n          6.2 Standard Modules",
+            "start_char": 1825,
+            "end_char": 2768,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p052",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 46,
+              "chapter_title": "Modules",
+              "normalized_characters": 4192
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.016129032258064516,
+            "component_ranks": {
+              "dense": 2
+            },
+            "component_scores": {
+              "dense": 0.8434109594470849
+            }
+          }
+        ],
+        "excluded": [
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "a26892366c43622e714a9bb781c916d6d308a34cd0cd853fea46d877382bd3e0",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "03b95daa06aa5b8c68592e5b07e1896fee279761ab2f2a2f8acd4289391bb853",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.03093790000275476
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "5ea6b464c40036ba51355107e488bd65a043407b0333ea1c987074973e4db3a2",
+      "request_sha256": "e9a17fc6cb05acfd48f361c073574510c6aab97598e8084dc6f259ba75be7ad7",
+      "response_id": "tLb6asvyK5Ta9tMP-N_0uQU",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 613,
+        "candidatesTokenCount": 21,
+        "totalTokenCount": 634,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 613
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.0,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 5500,
+        "max_chunks": 5,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "7bffc73227580297d46cea9968d6771317f062ea8212f74a65508b2c34b82860",
+      "request_sha256": "3d9720ac471a1172bc7b55ea63c5272f66ea4f0e55a71a327e4b37f88ec39509",
+      "response_id": "w7b6as7ZNqjarfcPgrqYuQk",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 2371,
+        "candidatesTokenCount": 188,
+        "totalTokenCount": 2559,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2371
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.7190000000009604,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6 | source=data/raw/tutorial.pdf | PDF page=41 | chapter=5]\n5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:\n\n[7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c | source=data/raw/tutorial.pdf | PDF page=41 | chapter=5]\n>>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.\n\n[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there\n\n[5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:\n\n[e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44 | source=data/raw/tutorial.pdf | PDF page=52 | chapter=6]\n• You can use the -O or -OO switches on the Python command to reduce the size of a compiled module. The -O\n             switch removes assert statements, the -OO switch removes both assert statements and __doc__ strings. Since\n             some programs may rely on having these available, you should only use this option if you know what you’re\n             doing. “Optimized” modules have an opt- tag and are usually smaller. Future releases may change the effects\n             of optimization.\n            • A program doesn’t run any faster when it is read from a .pyc file than when it is read from a .py file; the only\n             thing that’s faster about .pyc files is the speed with which they are loaded.\n            • The module compileall can create .pyc files for all modules in a directory.\n\n            • There is more detail on this process, including a flow chart of the decisions, in PEP 3147.\n\n          6.2 Standard Modules",
+        "chunk_ids": [
+          "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+          "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+          "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+          "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+          "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44"
+        ],
+        "characters": 4807,
+        "budget_chars": 5500,
+        "max_chunks": 5,
+        "selected_chunks": [
+          {
+            "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+            "start_char": 0,
+            "end_char": 559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "component_ranks": {
+              "dense": 1,
+              "bm25": 1
+            },
+            "component_scores": {
+              "dense": 0.8715648727676364,
+              "bm25": 13.540940302423401
+            }
+          },
+          {
+            "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+            "start_char": 571,
+            "end_char": 1421,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.031746031746031744,
+            "component_ranks": {
+              "dense": 3,
+              "bm25": 3
+            },
+            "component_scores": {
+              "dense": 0.8421889543533325,
+              "bm25": 7.556556196933444
+            }
+          },
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+            "start_char": 692,
+            "end_char": 1665,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.03055037313432836,
+            "component_ranks": {
+              "dense": 7,
+              "bm25": 4
+            },
+            "component_scores": {
+              "dense": 0.8226987368672714,
+              "bm25": 5.198194312862086
+            }
+          },
+          {
+            "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": ">>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+            "start_char": 1110,
+            "end_char": 1964,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 0.016129032258064516,
+            "rank": 4,
+            "component_ranks": {
+              "bm25": 2
+            },
+            "component_scores": {
+              "bm25": 8.761558135252992
+            }
+          },
+          {
+            "id": "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 52,
+            "text": "• You can use the -O or -OO switches on the Python command to reduce the size of a compiled module. The -O\n             switch removes assert statements, the -OO switch removes both assert statements and __doc__ strings. Since\n             some programs may rely on having these available, you should only use this option if you know what you’re\n             doing. “Optimized” modules have an opt- tag and are usually smaller. Future releases may change the effects\n             of optimization.\n            • A program doesn’t run any faster when it is read from a .pyc file than when it is read from a .py file; the only\n             thing that’s faster about .pyc files is the speed with which they are loaded.\n            • The module compileall can create .pyc files for all modules in a directory.\n\n            • There is more detail on this process, including a flow chart of the decisions, in PEP 3147.\n\n          6.2 Standard Modules",
+            "start_char": 1825,
+            "end_char": 2768,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p052",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 46,
+              "chapter_title": "Modules",
+              "normalized_characters": 4192
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.016129032258064516,
+            "component_ranks": {
+              "dense": 2
+            },
+            "component_scores": {
+              "dense": 0.8434109594470849
+            }
+          }
+        ],
+        "excluded": [
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "a26892366c43622e714a9bb781c916d6d308a34cd0cd853fea46d877382bd3e0",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "03b95daa06aa5b8c68592e5b07e1896fee279761ab2f2a2f8acd4289391bb853",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6 | source=data/raw/tutorial.pdf | PDF page=41 | chapter=5]\n5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:\n\n[7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c | source=data/raw/tutorial.pdf | PDF page=41 | chapter=5]\n>>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.\n\n[1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3 | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nInsert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there\n\n[5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:\n\n[e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44 | source=data/raw/tutorial.pdf | PDF page=52 | chapter=6]\n• You can use the -O or -OO switches on the Python command to reduce the size of a compiled module. The -O\n             switch removes assert statements, the -OO switch removes both assert statements and __doc__ strings. Since\n             some programs may rely on having these available, you should only use this option if you know what you’re\n             doing. “Optimized” modules have an opt- tag and are usually smaller. Future releases may change the effects\n             of optimization.\n            • A program doesn’t run any faster when it is read from a .pyc file than when it is read from a .py file; the only\n             thing that’s faster about .pyc files is the speed with which they are loaded.\n            • The module compileall can create .pyc files for all modules in a directory.\n\n            • There is more detail on this process, including a flow chart of the decisions, in PEP 3147.\n\n          6.2 Standard Modules",
+    "chunk_ids": [
+      "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+      "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+      "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+      "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+      "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44"
+    ],
+    "characters": 4807,
+    "budget_chars": 5500,
+    "max_chunks": 5,
+    "selected_chunks": [
+      {
+        "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 41,
+        "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+        "start_char": 0,
+        "end_char": 559,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p041",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 35,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2843
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.03278688524590164,
+        "component_ranks": {
+          "dense": 1,
+          "bm25": 1
+        },
+        "component_scores": {
+          "dense": 0.8715648727676364,
+          "bm25": 13.540940302423401
+        }
+      },
+      {
+        "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 41,
+        "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+        "start_char": 571,
+        "end_char": 1421,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p041",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 35,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2843
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.031746031746031744,
+        "component_ranks": {
+          "dense": 3,
+          "bm25": 3
+        },
+        "component_scores": {
+          "dense": 0.8421889543533325,
+          "bm25": 7.556556196933444
+        }
+      },
+      {
+        "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 39,
+        "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+        "start_char": 692,
+        "end_char": 1665,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p039",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 33,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.03055037313432836,
+        "component_ranks": {
+          "dense": 7,
+          "bm25": 4
+        },
+        "component_scores": {
+          "dense": 0.8226987368672714,
+          "bm25": 5.198194312862086
+        }
+      },
+      {
+        "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 64,
+        "text": ">>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+        "start_char": 1110,
+        "end_char": 1964,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p064",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 58,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2698
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 0.016129032258064516,
+        "rank": 4,
+        "component_ranks": {
+          "bm25": 2
+        },
+        "component_scores": {
+          "bm25": 8.761558135252992
+        }
+      },
+      {
+        "id": "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 52,
+        "text": "• You can use the -O or -OO switches on the Python command to reduce the size of a compiled module. The -O\n             switch removes assert statements, the -OO switch removes both assert statements and __doc__ strings. Since\n             some programs may rely on having these available, you should only use this option if you know what you’re\n             doing. “Optimized” modules have an opt- tag and are usually smaller. Future releases may change the effects\n             of optimization.\n            • A program doesn’t run any faster when it is read from a .pyc file than when it is read from a .py file; the only\n             thing that’s faster about .pyc files is the speed with which they are loaded.\n            • The module compileall can create .pyc files for all modules in a directory.\n\n            • There is more detail on this process, including a flow chart of the decisions, in PEP 3147.\n\n          6.2 Standard Modules",
+        "start_char": 1825,
+        "end_char": 2768,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p052",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 46,
+          "chapter_title": "Modules",
+          "normalized_characters": 4192
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 5,
+        "score": 0.016129032258064516,
+        "component_ranks": {
+          "dense": 2
+        },
+        "component_scores": {
+          "dense": 0.8434109594470849
+        }
+      }
+    ],
+    "excluded": [
+      {
+        "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "a26892366c43622e714a9bb781c916d6d308a34cd0cd853fea46d877382bd3e0",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "03b95daa06aa5b8c68592e5b07e1896fee279761ab2f2a2f8acd4289391bb853",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+        "reason": "max_chunks"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [],
+  "search_calls": 1,
+  "generated_search_queries": [
+    "queue fast additions and removals at either end"
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 29.782432300002256,
+    "pacing_seconds_this_invocation": 27.03099999999904,
+    "wall_seconds_excluding_pacing": 2.7514323000032164,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": true,
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 41,
+        "evidence": "To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends."
+      }
+    ],
+    "expected_answer": "Use collections.deque.",
+    "absence_reason": null,
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "hybrid_rrf",
+    "query": "I need a queue with fast additions and removals at either end. Which collection does the tutorial recommend?",
+    "filter": null,
+    "ranking": [
+      {
+        "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 41,
+        "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+        "start_char": 0,
+        "end_char": 559,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p041",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 35,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2843
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.03278688524590164,
+        "component_ranks": {
+          "dense": 1,
+          "bm25": 1
+        },
+        "component_scores": {
+          "dense": 0.8514591632534071,
+          "bm25": 15.514712884955625
+        }
+      },
+      {
+        "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 41,
+        "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+        "start_char": 571,
+        "end_char": 1421,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p041",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 35,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2843
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.0315136476426799,
+        "component_ranks": {
+          "dense": 2,
+          "bm25": 5
+        },
+        "component_scores": {
+          "dense": 0.84621883355267,
+          "bm25": 8.160132259702616
+        }
+      },
+      {
+        "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 64,
+        "text": ">>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+        "start_char": 1110,
+        "end_char": 1964,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p064",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 58,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2698
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 0.016129032258064516,
+        "rank": 3,
+        "component_ranks": {
+          "bm25": 2
+        },
+        "component_scores": {
+          "bm25": 9.485205555440483
+        }
+      },
+      {
+        "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 39,
+        "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+        "start_char": 692,
+        "end_char": 1665,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p039",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 33,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 0.015873015873015872,
+        "rank": 4,
+        "component_ranks": {
+          "bm25": 3
+        },
+        "component_scores": {
+          "bm25": 8.948066352761131
+        }
+      },
+      {
+        "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 54,
+        "text": "'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+        "start_char": 990,
+        "end_char": 1611,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p054",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 48,
+          "chapter_title": "Modules",
+          "normalized_characters": 3746
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 5,
+        "score": 0.015873015873015872,
+        "component_ranks": {
+          "dense": 3
+        },
+        "component_scores": {
+          "dense": 0.8303954308518011
+        }
+      },
+      {
+        "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 49,
+        "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+        "start_char": 1046,
+        "end_char": 1635,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p049",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 43,
+          "chapter_title": "Modules",
+          "normalized_characters": 2700
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 0.015625,
+        "rank": 6,
+        "component_ranks": {
+          "bm25": 4
+        },
+        "component_scores": {
+          "bm25": 8.614591939953648
+        }
+      },
+      {
+        "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 54,
+        "text": "filters/            Subpackage for filters\n                    __init__.py\n                                                              (continues on next page)",
+        "start_char": 3585,
+        "end_char": 3746,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p054",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 48,
+          "chapter_title": "Modules",
+          "normalized_characters": 3746
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 7,
+        "score": 0.015625,
+        "component_ranks": {
+          "dense": 4
+        },
+        "component_scores": {
+          "dense": 0.8261386855758035
+        }
+      },
+      {
+        "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 53,
+        "text": "'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError',\n           'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError',\n                                                              (continues on next page)",
+        "start_char": 3160,
+        "end_char": 3397,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p053",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 47,
+          "chapter_title": "Modules",
+          "normalized_characters": 3397
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 8,
+        "score": 0.015384615384615385,
+        "component_ranks": {
+          "dense": 5
+        },
+        "component_scores": {
+          "dense": 0.8247039035492131
+        }
+      },
+      {
+        "id": "fa1eccc71d1d88817fe5874e9459ede3b886d3e9d83bedde6b5e039a0fd20af9",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 40,
+        "text": ">>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']\n          >>> fruits.count('apple')\n          2\n          >>> fruits.count('tangerine')\n          0\n          >>> fruits.index('banana')\n          3\n          >>> fruits.index('banana', 4) # Find next banana starting at position 4\n          6\n          >>> fruits.reverse()\n          >>> fruits\n          ['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange']\n          >>> fruits.append('grape')\n          >>> fruits\n          ['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange', 'grape']\n          >>> fruits.sort()\n          >>> fruits\n          ['apple', 'apple', 'banana', 'banana', 'grape', 'kiwi', 'orange', 'pear']\n          >>> fruits.pop()\n          'pear'\n          You might have noticed that methods like insert, remove or sort that only modify the list have no return value",
+        "start_char": 145,
+        "end_char": 1032,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p040",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 34,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2354
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 9,
+        "score": 0.015151515151515152,
+        "component_ranks": {
+          "dense": 6
+        },
+        "component_scores": {
+          "dense": 0.8244122967474299
+        }
+      },
+      {
+        "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 64,
+        "text": ">>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18",
+        "start_char": 1976,
+        "end_char": 2698,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p064",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 58,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2698
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 0.015151515151515152,
+        "rank": 10,
+        "component_ranks": {
+          "bm25": 6
+        },
+        "component_scores": {
+          "bm25": 7.980224045729263
+        }
+      }
+    ],
+    "components": {
+      "dense": [
+        {
+          "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+          "start_char": 0,
+          "end_char": 559,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8514591632534071
+        },
+        {
+          "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+          "start_char": 571,
+          "end_char": 1421,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.84621883355267
+        },
+        {
+          "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+          "start_char": 990,
+          "end_char": 1611,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8303954308518011
+        },
+        {
+          "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "filters/            Subpackage for filters\n                    __init__.py\n                                                              (continues on next page)",
+          "start_char": 3585,
+          "end_char": 3746,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8261386855758035
+        },
+        {
+          "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 53,
+          "text": "'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError',\n           'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError',\n                                                              (continues on next page)",
+          "start_char": 3160,
+          "end_char": 3397,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p053",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 47,
+            "chapter_title": "Modules",
+            "normalized_characters": 3397
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.8247039035492131
+        },
+        {
+          "id": "fa1eccc71d1d88817fe5874e9459ede3b886d3e9d83bedde6b5e039a0fd20af9",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 40,
+          "text": ">>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']\n          >>> fruits.count('apple')\n          2\n          >>> fruits.count('tangerine')\n          0\n          >>> fruits.index('banana')\n          3\n          >>> fruits.index('banana', 4) # Find next banana starting at position 4\n          6\n          >>> fruits.reverse()\n          >>> fruits\n          ['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange']\n          >>> fruits.append('grape')\n          >>> fruits\n          ['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange', 'grape']\n          >>> fruits.sort()\n          >>> fruits\n          ['apple', 'apple', 'banana', 'banana', 'grape', 'kiwi', 'orange', 'pear']\n          >>> fruits.pop()\n          'pear'\n          You might have noticed that methods like insert, remove or sort that only modify the list have no return value",
+          "start_char": 145,
+          "end_char": 1032,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p040",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 34,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2354
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.8244122967474299
+        },
+        {
+          "id": "8fb50e51fd7a2eb9f5f9c75a574d0a1bfb597bc416f37e1e447ce956ba5c0d94",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "CHAPTER\n\n                                                                     SIX\n\n                                                              MODULES",
+          "start_char": 0,
+          "end_char": 152,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.822618673883757
+        },
+        {
+          "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+          "start_char": 0,
+          "end_char": 677,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8224266277297375
+        },
+        {
+          "id": "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "• You can use the -O or -OO switches on the Python command to reduce the size of a compiled module. The -O\n             switch removes assert statements, the -OO switch removes both assert statements and __doc__ strings. Since\n             some programs may rely on having these available, you should only use this option if you know what you’re\n             doing. “Optimized” modules have an opt- tag and are usually smaller. Future releases may change the effects\n             of optimization.\n            • A program doesn’t run any faster when it is read from a .pyc file than when it is read from a .py file; the only\n             thing that’s faster about .pyc files is the speed with which they are loaded.\n            • The module compileall can create .pyc files for all modules in a directory.\n\n            • There is more detail on this process, including a flow chart of the decisions, in PEP 3147.\n\n          6.2 Standard Modules",
+          "start_char": 1825,
+          "end_char": 2768,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8218420147895872
+        },
+        {
+          "id": "bd9f472d972d1db395e7f15eb9f2816828cac6af6c5e4b3efb6f5e46f12d752c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 48,
+          "text": "(continued from previous page)\n          ...\n          >>> filtered_data\n          [56.2, 51.7, 55.3, 52.5, 47.8]\n\n          5.7 More on Conditions",
+          "start_char": 0,
+          "end_char": 147,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p048",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 42,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3790
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8217265222398612
+        }
+      ],
+      "bm25": [
+        {
+          "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+          "start_char": 0,
+          "end_char": 559,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 15.514712884955625,
+          "rank": 1
+        },
+        {
+          "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": ">>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+          "start_char": 1110,
+          "end_char": 1964,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 9.485205555440483,
+          "rank": 2
+        },
+        {
+          "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+          "start_char": 692,
+          "end_char": 1665,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.948066352761131,
+          "rank": 3
+        },
+        {
+          "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+          "start_char": 1046,
+          "end_char": 1635,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.614591939953648,
+          "rank": 4
+        },
+        {
+          "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+          "start_char": 571,
+          "end_char": 1421,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.160132259702616,
+          "rank": 5
+        },
+        {
+          "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": ">>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18",
+          "start_char": 1976,
+          "end_char": 2698,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.980224045729263,
+          "rank": 6
+        },
+        {
+          "id": "34dda23bcab8706fb6bb7fbd57e02ce72c509544fbfc7db2f6ebd87e344646dc",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "Packages are a way of structuring Python’s module namespace by using “dotted module names”. For example, the\n          module name A.B designates a submodule named B in a package named A. Just like the use of modules saves the\n          authors of different modules from having to worry about each other’s global variable names, the use of dotted module\n          names saves the authors of multi-module packages like NumPy or Pillow from having to worry about each other’s\n          module names.\n          Suppose you want to design a collection of modules (a “package”) for the uniform handling of sound files and sound\n          data. There are many different sound file formats (usually recognized by their extension, for example: .wav, .\n          aiff, .au), so you may need to create and maintain a growing collection of modules for the conversion between\n          the various file formats. There are also many different operations you might want to perform on sound data (such as",
+          "start_char": 1623,
+          "end_char": 2612,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.976540313156713,
+          "rank": 7
+        },
+        {
+          "id": "8adc9afcc5c33abb780532495f54f593166e454d278b3ff28693e4e060119492",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": "After a file object is closed, either by a with statement or by calling f.close(), attempts to use the file object will\n          automatically fail.\n          >>> f.close()\n          >>> f.read()\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          ValueError: I/O operation on closed file.\n\n          7.2.1 Methods of File Objects",
+          "start_char": 0,
+          "end_char": 381,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.9672788455250805,
+          "rank": 8
+        },
+        {
+          "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "The first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+          "start_char": 948,
+          "end_char": 1875,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.852400677489106,
+          "rank": 9
+        },
+        {
+          "id": "88174a070bc2d66f585662088135af3cc0d94967b02783806125895a2a7f33c7",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 47,
+          "text": "To loop over two or more sequences at the same time, the entries can be paired with the zip() function.\n          >>> questions = ['name', 'quest', 'favorite color']\n          >>> answers = ['lancelot', 'the holy grail', 'blue']\n          >>> for q, a in zip(questions, answers):\n          ...   print('What is your {0}? It is {1}.'.format(q, a))\n          ...\n          What is your name? It is lancelot.\n          What is your quest? It is the holy grail.\n          What is your favorite color? It is blue.\n\n          To loop over a sequence in reverse, first specify the sequence in a forward direction and then call the reversed()\n          function.\n          >>> for i in reversed(range(1, 10, 2)):\n          ...   print(i)\n          ...\n          9\n          7\n          5\n          3\n          1",
+          "start_char": 0,
+          "end_char": 803,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p047",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 41,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2184
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.303934951540877,
+          "rank": 10
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": true,
+    "original_query_evidence_hit_at_3": true,
+    "actual_final_context_exact_evidence": true,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "trace_sha256": "2a806d7db8374e412f4f7e7194d79f05807674d7ef70dabf64fe88ef4ae3f0e2"
+}

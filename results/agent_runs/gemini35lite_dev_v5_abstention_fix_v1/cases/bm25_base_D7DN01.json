@@ -1,0 +1,1643 @@
+{
+  "status": "abstain",
+  "answer": "The supplied corpus does not contain information about how many milliseconds sorting a list of ten million integers will take on a computer.",
+  "citations": [],
+  "reason": "The supplied corpus does not contain information about how many milliseconds sorting a list of ten million integers will take on a computer.",
+  "guard": "model_abstention",
+  "raw_model_answer": "",
+  "display_normalization": "empty abstention answer displayed using original model reason",
+  "query_id": "D7DN01",
+  "config_id": "bm25_base",
+  "public_query": {
+    "id": "D7DN01",
+    "question": "According to the supplied pages, exactly how many milliseconds will sorting a list of ten million integers take on my computer?",
+    "filter": null
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "sorting a list of ten million integers milliseconds",
+      "filter": null,
+      "method": "bm25",
+      "ranking": [
+        {
+          "id": "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 62,
+          "text": "(continued from previous page)\n          >>> print(message.format(**table))\n          __name__: __main__; __doc__: None; __package__: None; __loader__: ...\n\n          As an example, the following lines produce a tidily aligned set of columns giving integers and their squares and cubes:\n          >>> for x in range(1, 11):\n          ...   print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          For a complete overview of string formatting with str.format(), see formatstrings.\n\n          7.1.3 Manual String Formatting",
+          "start_char": 0,
+          "end_char": 740,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p062",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 56,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2320
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 4.81581281455797,
+          "rank": 1
+        },
+        {
+          "id": "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 40,
+          "text": "printed – they return the default None.1 This is a design principle for all mutable data structures in Python.\n          Another thing you might notice is that not all data can be sorted or compared. For instance, [None, 'hello',\n          10] doesn’t sort because integers can’t be compared to strings and None can’t be compared to other types. Also, there\n          are some types that don’t have a defined ordering relation. For example, 3+4j < 5+7j isn’t a valid comparison.\n          5.1.1 Using Lists as Stacks",
+          "start_char": 1043,
+          "end_char": 1559,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p040",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 34,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2354
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 4.546528011401336,
+          "rank": 2
+        },
+        {
+          "id": "6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 40,
+          "text": "list.copy()\n             Return a shallow copy of the list. Similar to a[:].\n          An example that uses most of the list methods:",
+          "start_char": 0,
+          "end_char": 133,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p040",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 34,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2354
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.9782404549474113,
+          "rank": 3
+        },
+        {
+          "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+          "start_char": 0,
+          "end_char": 677,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.908902488486345,
+          "rank": 4
+        },
+        {
+          "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+          "start_char": 692,
+          "end_char": 1665,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.8781765654864824,
+          "rank": 5
+        },
+        {
+          "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+          "start_char": 1679,
+          "end_char": 2410,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.72218728203314,
+          "rank": 6
+        },
+        {
+          "id": "ec749e9821b143fca535aed5cb27b47757bae7dedb6514fd554ae13a2b988072",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 42,
+          "text": "^^^^^^^\n          SyntaxError: did you forget parentheses around the comprehension target?\n          >>> # flatten a list using a listcomp with two 'for'\n          >>> vec = [[1,2,3], [4,5,6], [7,8,9]]\n          >>> [num for elem in vec for num in elem]\n          [1, 2, 3, 4, 5, 6, 7, 8, 9]\n          List comprehensions can contain complex expressions and nested functions:\n          >>> from math import pi\n          >>> [str(round(pi, i)) for i in range(1, 6)]\n          ['3.1', '3.14', '3.142', '3.1416', '3.14159']\n          5.1.4 Nested List Comprehensions\n\n          The initial expression in a list comprehension can be any arbitrary expression, including another list comprehension.\n          Consider the following example of a 3x4 matrix implemented as a list of 3 lists of length 4:",
+          "start_char": 1334,
+          "end_char": 2129,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p042",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 36,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2460
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.6923296234341354,
+          "rank": 7
+        },
+        {
+          "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 43,
+          "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+          "start_char": 840,
+          "end_char": 1559,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p043",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 37,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2043
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.4917142626995514,
+          "rank": 8
+        },
+        {
+          "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+          "start_char": 0,
+          "end_char": 559,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.408498599956798,
+          "rank": 9
+        },
+        {
+          "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": "For example, assume we want to create a list of squares, like:\n          >>> squares = []\n          >>> for x in range(10):\n          ...   squares.append(x**2)\n          ...\n          >>> squares\n          [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n\n          Note that this creates (or overwrites) a variable named x that still exists after the loop completes. We can calculate\n          the list of squares without any side effects using:\n          squares = list(map(lambda x: x**2, range(10)))\n\n          or, equivalently:\n\n          squares = [x**2 for x in range(10)]",
+          "start_char": 1433,
+          "end_char": 2001,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.368679051096099,
+          "rank": 10
+        }
+      ],
+      "component_rankings": {
+        "bm25": [
+          {
+            "id": "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 62,
+            "text": "(continued from previous page)\n          >>> print(message.format(**table))\n          __name__: __main__; __doc__: None; __package__: None; __loader__: ...\n\n          As an example, the following lines produce a tidily aligned set of columns giving integers and their squares and cubes:\n          >>> for x in range(1, 11):\n          ...   print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          For a complete overview of string formatting with str.format(), see formatstrings.\n\n          7.1.3 Manual String Formatting",
+            "start_char": 0,
+            "end_char": 740,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p062",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 56,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2320
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.81581281455797,
+            "rank": 1
+          },
+          {
+            "id": "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 40,
+            "text": "printed – they return the default None.1 This is a design principle for all mutable data structures in Python.\n          Another thing you might notice is that not all data can be sorted or compared. For instance, [None, 'hello',\n          10] doesn’t sort because integers can’t be compared to strings and None can’t be compared to other types. Also, there\n          are some types that don’t have a defined ordering relation. For example, 3+4j < 5+7j isn’t a valid comparison.\n          5.1.1 Using Lists as Stacks",
+            "start_char": 1043,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p040",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 34,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2354
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.546528011401336,
+            "rank": 2
+          },
+          {
+            "id": "6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 40,
+            "text": "list.copy()\n             Return a shallow copy of the list. Similar to a[:].\n          An example that uses most of the list methods:",
+            "start_char": 0,
+            "end_char": 133,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p040",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 34,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2354
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.9782404549474113,
+            "rank": 3
+          },
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+            "start_char": 0,
+            "end_char": 677,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.908902488486345,
+            "rank": 4
+          },
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+            "start_char": 692,
+            "end_char": 1665,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.8781765654864824,
+            "rank": 5
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+            "start_char": 1679,
+            "end_char": 2410,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.72218728203314,
+            "rank": 6
+          },
+          {
+            "id": "ec749e9821b143fca535aed5cb27b47757bae7dedb6514fd554ae13a2b988072",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 42,
+            "text": "^^^^^^^\n          SyntaxError: did you forget parentheses around the comprehension target?\n          >>> # flatten a list using a listcomp with two 'for'\n          >>> vec = [[1,2,3], [4,5,6], [7,8,9]]\n          >>> [num for elem in vec for num in elem]\n          [1, 2, 3, 4, 5, 6, 7, 8, 9]\n          List comprehensions can contain complex expressions and nested functions:\n          >>> from math import pi\n          >>> [str(round(pi, i)) for i in range(1, 6)]\n          ['3.1', '3.14', '3.142', '3.1416', '3.14159']\n          5.1.4 Nested List Comprehensions\n\n          The initial expression in a list comprehension can be any arbitrary expression, including another list comprehension.\n          Consider the following example of a 3x4 matrix implemented as a list of 3 lists of length 4:",
+            "start_char": 1334,
+            "end_char": 2129,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p042",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 36,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2460
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.6923296234341354,
+            "rank": 7
+          },
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 43,
+            "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+            "start_char": 840,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p043",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 37,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2043
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.4917142626995514,
+            "rank": 8
+          },
+          {
+            "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+            "start_char": 0,
+            "end_char": 559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.408498599956798,
+            "rank": 9
+          },
+          {
+            "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": "For example, assume we want to create a list of squares, like:\n          >>> squares = []\n          >>> for x in range(10):\n          ...   squares.append(x**2)\n          ...\n          >>> squares\n          [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n\n          Note that this creates (or overwrites) a variable named x that still exists after the loop completes. We can calculate\n          the list of squares without any side effects using:\n          squares = list(map(lambda x: x**2, range(10)))\n\n          or, equivalently:\n\n          squares = [x**2 for x in range(10)]",
+            "start_char": 1433,
+            "end_char": 2001,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.368679051096099,
+            "rank": 10
+          }
+        ]
+      },
+      "context": {
+        "text": "[649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862 | source=data/raw/tutorial.pdf | PDF page=62 | chapter=7]\n(continued from previous page)\n          >>> print(message.format(**table))\n          __name__: __main__; __doc__: None; __package__: None; __loader__: ...\n\n          As an example, the following lines produce a tidily aligned set of columns giving integers and their squares and cubes:\n          >>> for x in range(1, 11):\n          ...   print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          For a complete overview of string formatting with str.format(), see formatstrings.\n\n          7.1.3 Manual String Formatting\n\n[39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48 | source=data/raw/tutorial.pdf | PDF page=40 | chapter=5]\nprinted – they return the default None.1 This is a design principle for all mutable data structures in Python.\n          Another thing you might notice is that not all data can be sorted or compared. For instance, [None, 'hello',\n          10] doesn’t sort because integers can’t be compared to strings and None can’t be compared to other types. Also, there\n          are some types that don’t have a defined ordering relation. For example, 3+4j < 5+7j isn’t a valid comparison.\n          5.1.1 Using Lists as Stacks\n\n[6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90 | source=data/raw/tutorial.pdf | PDF page=40 | chapter=5]\nlist.copy()\n             Return a shallow copy of the list. Similar to a[:].\n          An example that uses most of the list methods:",
+        "chunk_ids": [
+          "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+          "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+          "6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90"
+        ],
+        "characters": 1765,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 62,
+            "text": "(continued from previous page)\n          >>> print(message.format(**table))\n          __name__: __main__; __doc__: None; __package__: None; __loader__: ...\n\n          As an example, the following lines produce a tidily aligned set of columns giving integers and their squares and cubes:\n          >>> for x in range(1, 11):\n          ...   print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          For a complete overview of string formatting with str.format(), see formatstrings.\n\n          7.1.3 Manual String Formatting",
+            "start_char": 0,
+            "end_char": 740,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p062",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 56,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2320
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.81581281455797,
+            "rank": 1
+          },
+          {
+            "id": "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 40,
+            "text": "printed – they return the default None.1 This is a design principle for all mutable data structures in Python.\n          Another thing you might notice is that not all data can be sorted or compared. For instance, [None, 'hello',\n          10] doesn’t sort because integers can’t be compared to strings and None can’t be compared to other types. Also, there\n          are some types that don’t have a defined ordering relation. For example, 3+4j < 5+7j isn’t a valid comparison.\n          5.1.1 Using Lists as Stacks",
+            "start_char": 1043,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p040",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 34,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2354
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.546528011401336,
+            "rank": 2
+          },
+          {
+            "id": "6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 40,
+            "text": "list.copy()\n             Return a shallow copy of the list. Similar to a[:].\n          An example that uses most of the list methods:",
+            "start_char": 0,
+            "end_char": 133,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p040",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 34,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2354
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.9782404549474113,
+            "rank": 3
+          }
+        ],
+        "excluded": [
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ec749e9821b143fca535aed5cb27b47757bae7dedb6514fd554ae13a2b988072",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.000674400002026232
+    },
+    {
+      "event": "search",
+      "query": "ten million integers",
+      "filter": null,
+      "method": "bm25",
+      "ranking": [
+        {
+          "id": "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 40,
+          "text": "printed – they return the default None.1 This is a design principle for all mutable data structures in Python.\n          Another thing you might notice is that not all data can be sorted or compared. For instance, [None, 'hello',\n          10] doesn’t sort because integers can’t be compared to strings and None can’t be compared to other types. Also, there\n          are some types that don’t have a defined ordering relation. For example, 3+4j < 5+7j isn’t a valid comparison.\n          5.1.1 Using Lists as Stacks",
+          "start_char": 1043,
+          "end_char": 1559,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p040",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 34,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2354
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 4.1366902815932285,
+          "rank": 1
+        },
+        {
+          "id": "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 62,
+          "text": "(continued from previous page)\n          >>> print(message.format(**table))\n          __name__: __main__; __doc__: None; __package__: None; __loader__: ...\n\n          As an example, the following lines produce a tidily aligned set of columns giving integers and their squares and cubes:\n          >>> for x in range(1, 11):\n          ...   print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          For a complete overview of string formatting with str.format(), see formatstrings.\n\n          7.1.3 Manual String Formatting",
+          "start_char": 0,
+          "end_char": 740,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p062",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 56,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2320
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 3.912912121394512,
+          "rank": 2
+        }
+      ],
+      "component_rankings": {
+        "bm25": [
+          {
+            "id": "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 40,
+            "text": "printed – they return the default None.1 This is a design principle for all mutable data structures in Python.\n          Another thing you might notice is that not all data can be sorted or compared. For instance, [None, 'hello',\n          10] doesn’t sort because integers can’t be compared to strings and None can’t be compared to other types. Also, there\n          are some types that don’t have a defined ordering relation. For example, 3+4j < 5+7j isn’t a valid comparison.\n          5.1.1 Using Lists as Stacks",
+            "start_char": 1043,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p040",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 34,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2354
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.1366902815932285,
+            "rank": 1
+          },
+          {
+            "id": "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 62,
+            "text": "(continued from previous page)\n          >>> print(message.format(**table))\n          __name__: __main__; __doc__: None; __package__: None; __loader__: ...\n\n          As an example, the following lines produce a tidily aligned set of columns giving integers and their squares and cubes:\n          >>> for x in range(1, 11):\n          ...   print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          For a complete overview of string formatting with str.format(), see formatstrings.\n\n          7.1.3 Manual String Formatting",
+            "start_char": 0,
+            "end_char": 740,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p062",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 56,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2320
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.912912121394512,
+            "rank": 2
+          }
+        ]
+      },
+      "context": {
+        "text": "[39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48 | source=data/raw/tutorial.pdf | PDF page=40 | chapter=5]\nprinted – they return the default None.1 This is a design principle for all mutable data structures in Python.\n          Another thing you might notice is that not all data can be sorted or compared. For instance, [None, 'hello',\n          10] doesn’t sort because integers can’t be compared to strings and None can’t be compared to other types. Also, there\n          are some types that don’t have a defined ordering relation. For example, 3+4j < 5+7j isn’t a valid comparison.\n          5.1.1 Using Lists as Stacks\n\n[649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862 | source=data/raw/tutorial.pdf | PDF page=62 | chapter=7]\n(continued from previous page)\n          >>> print(message.format(**table))\n          __name__: __main__; __doc__: None; __package__: None; __loader__: ...\n\n          As an example, the following lines produce a tidily aligned set of columns giving integers and their squares and cubes:\n          >>> for x in range(1, 11):\n          ...   print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          For a complete overview of string formatting with str.format(), see formatstrings.\n\n          7.1.3 Manual String Formatting\n\n[6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90 | source=data/raw/tutorial.pdf | PDF page=40 | chapter=5]\nlist.copy()\n             Return a shallow copy of the list. Similar to a[:].\n          An example that uses most of the list methods:",
+        "chunk_ids": [
+          "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+          "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+          "6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90"
+        ],
+        "characters": 1765,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 40,
+            "text": "printed – they return the default None.1 This is a design principle for all mutable data structures in Python.\n          Another thing you might notice is that not all data can be sorted or compared. For instance, [None, 'hello',\n          10] doesn’t sort because integers can’t be compared to strings and None can’t be compared to other types. Also, there\n          are some types that don’t have a defined ordering relation. For example, 3+4j < 5+7j isn’t a valid comparison.\n          5.1.1 Using Lists as Stacks",
+            "start_char": 1043,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p040",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 34,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2354
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.1366902815932285,
+            "rank": 1
+          },
+          {
+            "id": "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 62,
+            "text": "(continued from previous page)\n          >>> print(message.format(**table))\n          __name__: __main__; __doc__: None; __package__: None; __loader__: ...\n\n          As an example, the following lines produce a tidily aligned set of columns giving integers and their squares and cubes:\n          >>> for x in range(1, 11):\n          ...   print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          For a complete overview of string formatting with str.format(), see formatstrings.\n\n          7.1.3 Manual String Formatting",
+            "start_char": 0,
+            "end_char": 740,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p062",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 56,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2320
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.912912121394512,
+            "rank": 2
+          },
+          {
+            "id": "6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 40,
+            "text": "list.copy()\n             Return a shallow copy of the list. Similar to a[:].\n          An example that uses most of the list methods:",
+            "start_char": 0,
+            "end_char": 133,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p040",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 34,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2354
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.9782404549474113,
+            "rank": 3
+          }
+        ],
+        "excluded": [
+          {
+            "id": "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ec749e9821b143fca535aed5cb27b47757bae7dedb6514fd554ae13a2b988072",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.00026000000070780516
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "9408ad99dc73efdfa4ff444d22fdddbfcf31a1fd69d2a62002dd8eccc6d77887",
+      "request_sha256": "8466c64b2b67d437ae2eeab2adc89b624790230c178af7029da5763659e5d004",
+      "response_id": "vMT6aujxHbuq0-kPw8vS2AI",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 616,
+        "candidatesTokenCount": 21,
+        "totalTokenCount": 637,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 616
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.2190000000009604,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "0f0e7aed99532a2bad13d7afcdeabe92f24e895cd5d639ff1ff352aafbc8af9c",
+      "request_sha256": "821df7685b7f571510c6befb962aee30e9944cada7cacf5d8322b5af445e82e4",
+      "response_id": "y8T6arOWKMa01e8P-_K8iQI",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1515,
+        "candidatesTokenCount": 16,
+        "totalTokenCount": 1531,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1515
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.4540000000015425,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862 | source=data/raw/tutorial.pdf | PDF page=62 | chapter=7]\n(continued from previous page)\n          >>> print(message.format(**table))\n          __name__: __main__; __doc__: None; __package__: None; __loader__: ...\n\n          As an example, the following lines produce a tidily aligned set of columns giving integers and their squares and cubes:\n          >>> for x in range(1, 11):\n          ...   print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          For a complete overview of string formatting with str.format(), see formatstrings.\n\n          7.1.3 Manual String Formatting\n\n[39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48 | source=data/raw/tutorial.pdf | PDF page=40 | chapter=5]\nprinted – they return the default None.1 This is a design principle for all mutable data structures in Python.\n          Another thing you might notice is that not all data can be sorted or compared. For instance, [None, 'hello',\n          10] doesn’t sort because integers can’t be compared to strings and None can’t be compared to other types. Also, there\n          are some types that don’t have a defined ordering relation. For example, 3+4j < 5+7j isn’t a valid comparison.\n          5.1.1 Using Lists as Stacks\n\n[6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90 | source=data/raw/tutorial.pdf | PDF page=40 | chapter=5]\nlist.copy()\n             Return a shallow copy of the list. Similar to a[:].\n          An example that uses most of the list methods:",
+        "chunk_ids": [
+          "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+          "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+          "6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90"
+        ],
+        "characters": 1765,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 62,
+            "text": "(continued from previous page)\n          >>> print(message.format(**table))\n          __name__: __main__; __doc__: None; __package__: None; __loader__: ...\n\n          As an example, the following lines produce a tidily aligned set of columns giving integers and their squares and cubes:\n          >>> for x in range(1, 11):\n          ...   print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          For a complete overview of string formatting with str.format(), see formatstrings.\n\n          7.1.3 Manual String Formatting",
+            "start_char": 0,
+            "end_char": 740,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p062",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 56,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2320
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.81581281455797,
+            "rank": 1
+          },
+          {
+            "id": "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 40,
+            "text": "printed – they return the default None.1 This is a design principle for all mutable data structures in Python.\n          Another thing you might notice is that not all data can be sorted or compared. For instance, [None, 'hello',\n          10] doesn’t sort because integers can’t be compared to strings and None can’t be compared to other types. Also, there\n          are some types that don’t have a defined ordering relation. For example, 3+4j < 5+7j isn’t a valid comparison.\n          5.1.1 Using Lists as Stacks",
+            "start_char": 1043,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p040",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 34,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2354
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.546528011401336,
+            "rank": 2
+          },
+          {
+            "id": "6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 40,
+            "text": "list.copy()\n             Return a shallow copy of the list. Similar to a[:].\n          An example that uses most of the list methods:",
+            "start_char": 0,
+            "end_char": 133,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p040",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 34,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2354
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.9782404549474113,
+            "rank": 3
+          }
+        ],
+        "excluded": [
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ec749e9821b143fca535aed5cb27b47757bae7dedb6514fd554ae13a2b988072",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "4cd16e7cdd8e042dead1fa036976d4ce751e67df37e440b52caa822f2808fcd4",
+      "request_sha256": "a5290bb1a3ff66c1f409d3f3fa46352fd5b28c09a99ca4632aba43063c37e009",
+      "response_id": "2sT6aqeMJfi-1e8PnfjCgAw",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1593,
+        "candidatesTokenCount": 50,
+        "totalTokenCount": 1643,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1593
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.375,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48 | source=data/raw/tutorial.pdf | PDF page=40 | chapter=5]\nprinted – they return the default None.1 This is a design principle for all mutable data structures in Python.\n          Another thing you might notice is that not all data can be sorted or compared. For instance, [None, 'hello',\n          10] doesn’t sort because integers can’t be compared to strings and None can’t be compared to other types. Also, there\n          are some types that don’t have a defined ordering relation. For example, 3+4j < 5+7j isn’t a valid comparison.\n          5.1.1 Using Lists as Stacks\n\n[649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862 | source=data/raw/tutorial.pdf | PDF page=62 | chapter=7]\n(continued from previous page)\n          >>> print(message.format(**table))\n          __name__: __main__; __doc__: None; __package__: None; __loader__: ...\n\n          As an example, the following lines produce a tidily aligned set of columns giving integers and their squares and cubes:\n          >>> for x in range(1, 11):\n          ...   print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          For a complete overview of string formatting with str.format(), see formatstrings.\n\n          7.1.3 Manual String Formatting\n\n[6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90 | source=data/raw/tutorial.pdf | PDF page=40 | chapter=5]\nlist.copy()\n             Return a shallow copy of the list. Similar to a[:].\n          An example that uses most of the list methods:",
+        "chunk_ids": [
+          "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+          "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+          "6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90"
+        ],
+        "characters": 1765,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 40,
+            "text": "printed – they return the default None.1 This is a design principle for all mutable data structures in Python.\n          Another thing you might notice is that not all data can be sorted or compared. For instance, [None, 'hello',\n          10] doesn’t sort because integers can’t be compared to strings and None can’t be compared to other types. Also, there\n          are some types that don’t have a defined ordering relation. For example, 3+4j < 5+7j isn’t a valid comparison.\n          5.1.1 Using Lists as Stacks",
+            "start_char": 1043,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p040",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 34,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2354
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.1366902815932285,
+            "rank": 1
+          },
+          {
+            "id": "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 62,
+            "text": "(continued from previous page)\n          >>> print(message.format(**table))\n          __name__: __main__; __doc__: None; __package__: None; __loader__: ...\n\n          As an example, the following lines produce a tidily aligned set of columns giving integers and their squares and cubes:\n          >>> for x in range(1, 11):\n          ...   print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          For a complete overview of string formatting with str.format(), see formatstrings.\n\n          7.1.3 Manual String Formatting",
+            "start_char": 0,
+            "end_char": 740,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p062",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 56,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2320
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.912912121394512,
+            "rank": 2
+          },
+          {
+            "id": "6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 40,
+            "text": "list.copy()\n             Return a shallow copy of the list. Similar to a[:].\n          An example that uses most of the list methods:",
+            "start_char": 0,
+            "end_char": 133,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p040",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 34,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2354
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.9782404549474113,
+            "rank": 3
+          }
+        ],
+        "excluded": [
+          {
+            "id": "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ec749e9821b143fca535aed5cb27b47757bae7dedb6514fd554ae13a2b988072",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48 | source=data/raw/tutorial.pdf | PDF page=40 | chapter=5]\nprinted – they return the default None.1 This is a design principle for all mutable data structures in Python.\n          Another thing you might notice is that not all data can be sorted or compared. For instance, [None, 'hello',\n          10] doesn’t sort because integers can’t be compared to strings and None can’t be compared to other types. Also, there\n          are some types that don’t have a defined ordering relation. For example, 3+4j < 5+7j isn’t a valid comparison.\n          5.1.1 Using Lists as Stacks\n\n[649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862 | source=data/raw/tutorial.pdf | PDF page=62 | chapter=7]\n(continued from previous page)\n          >>> print(message.format(**table))\n          __name__: __main__; __doc__: None; __package__: None; __loader__: ...\n\n          As an example, the following lines produce a tidily aligned set of columns giving integers and their squares and cubes:\n          >>> for x in range(1, 11):\n          ...   print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          For a complete overview of string formatting with str.format(), see formatstrings.\n\n          7.1.3 Manual String Formatting\n\n[6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90 | source=data/raw/tutorial.pdf | PDF page=40 | chapter=5]\nlist.copy()\n             Return a shallow copy of the list. Similar to a[:].\n          An example that uses most of the list methods:",
+    "chunk_ids": [
+      "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+      "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+      "6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90"
+    ],
+    "characters": 1765,
+    "budget_chars": 3500,
+    "max_chunks": 3,
+    "selected_chunks": [
+      {
+        "id": "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 40,
+        "text": "printed – they return the default None.1 This is a design principle for all mutable data structures in Python.\n          Another thing you might notice is that not all data can be sorted or compared. For instance, [None, 'hello',\n          10] doesn’t sort because integers can’t be compared to strings and None can’t be compared to other types. Also, there\n          are some types that don’t have a defined ordering relation. For example, 3+4j < 5+7j isn’t a valid comparison.\n          5.1.1 Using Lists as Stacks",
+        "start_char": 1043,
+        "end_char": 1559,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p040",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 34,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2354
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 4.1366902815932285,
+        "rank": 1
+      },
+      {
+        "id": "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 62,
+        "text": "(continued from previous page)\n          >>> print(message.format(**table))\n          __name__: __main__; __doc__: None; __package__: None; __loader__: ...\n\n          As an example, the following lines produce a tidily aligned set of columns giving integers and their squares and cubes:\n          >>> for x in range(1, 11):\n          ...   print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          For a complete overview of string formatting with str.format(), see formatstrings.\n\n          7.1.3 Manual String Formatting",
+        "start_char": 0,
+        "end_char": 740,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p062",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 56,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2320
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 3.912912121394512,
+        "rank": 2
+      },
+      {
+        "id": "6a37c8c756319ebf71debfde8277100bd542b755c34905c8413ff4ba93448f90",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 40,
+        "text": "list.copy()\n             Return a shallow copy of the list. Similar to a[:].\n          An example that uses most of the list methods:",
+        "start_char": 0,
+        "end_char": 133,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p040",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 34,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2354
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 3.9782404549474113,
+        "rank": 3
+      }
+    ],
+    "excluded": [
+      {
+        "id": "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+        "reason": "duplicate_id"
+      },
+      {
+        "id": "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+        "reason": "duplicate_id"
+      },
+      {
+        "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "ec749e9821b143fca535aed5cb27b47757bae7dedb6514fd554ae13a2b988072",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+        "reason": "max_chunks"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [],
+  "search_calls": 2,
+  "generated_search_queries": [
+    "sorting a list of ten million integers milliseconds",
+    "ten million integers"
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 43.84172000000035,
+    "pacing_seconds_this_invocation": 39.76499999999578,
+    "wall_seconds_excluding_pacing": 4.0767200000045705,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": false,
+    "gold": [],
+    "expected_answer": null,
+    "absence_reason": "The selected pages describe sorting/list operations but contain no measured runtime for that input and computer; the hardware and benchmark conditions are also unspecified. No exact millisecond value is supported.",
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "bm25",
+    "query": "According to the supplied pages, exactly how many milliseconds will sorting a list of ten million integers take on my computer?",
+    "filter": null,
+    "ranking": [
+      {
+        "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 60,
+        "text": "Passing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for\n          making columns line up.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}\n          >>> for name, phone in table.items():\n          ...   print(f'{name:10} ==> {phone:10d}')\n          ...\n          Sjoerd  ==>     4127\n          Jack    ==>     4098\n          Dcab    ==>     7678\n\n          Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(),\n          and '!r' applies repr():\n          >>> animals = 'eels'\n          >>> print(f'My hovercraft is full of {animals}.')\n          My hovercraft is full of eels.\n          >>> print(f'My hovercraft is full of {animals!r}.')\n          My hovercraft is full of 'eels'.",
+        "start_char": 1653,
+        "end_char": 2475,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p060",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 54,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2647
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 10.916781751363489,
+        "rank": 1
+      },
+      {
+        "id": "254dc27fad3bca04c3fed8de7d803f8ab891e3c3fe64972cc2cd81a3fd4f3599",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 48,
+        "text": "'ABC' < 'C' < 'Pascal' < 'Python'\n          (1, 2, 3, 4)     < (1, 2, 4)\n          (1, 2)           < (1, 2, -1)\n          (1, 2, 3)       == (1.0, 2.0, 3.0)\n          (1, 2, ('aa', 'ab')) < (1, 2, ('abc', 'a'), 4)\n\n          Note that comparing objects of different types with < or > is legal provided that the objects have appropriate com-\n          parison methods. For example, mixed numeric types are compared according to their numeric value, so 0 equals 0.0,\n          etc. Otherwise, rather than providing an arbitrary ordering, the interpreter will raise a TypeError exception.",
+        "start_char": 3204,
+        "end_char": 3790,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p048",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 42,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3790
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 7.832935104412629,
+        "rank": 2
+      },
+      {
+        "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "7.2.2 Saving structured data with json\n          Strings can easily be written to and read from a file. Numbers take a bit more effort, since the read() method only\n          returns strings, which will have to be passed to a function like int(), which takes a string like '123' and returns its\n          numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and\n          serializing by hand becomes complicated.\n          Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows\n          you to use the popular data interchange format called JSON (JavaScript Object Notation). The standard module called\n          json can take Python data hierarchies, and convert them to string representations; this process is called serializing.\n          Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing,",
+        "start_char": 1570,
+        "end_char": 2550,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 7.531646024464837,
+        "rank": 3
+      },
+      {
+        "id": "a592d19550af3e6322bd132018118b1d28a47bbe9c1b44f8ddb356917ab39027",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 59,
+        "text": "• The str.format() method of strings requires more manual effort. You’ll still use { and } to mark where a\n             variable will be substituted and can provide detailed formatting directives, but you’ll also need to provide the\n             information to be formatted. In the following code block there are two examples of how to format variables:\n             >>> yes_votes = 42_572_654\n             >>> total_votes = 85_705_149\n             >>> percentage = yes_votes / total_votes\n             >>> '{:-9} YES votes {:2.2%}'.format(yes_votes, percentage)\n             ' 42572654 YES votes 49.67%'",
+        "start_char": 1353,
+        "end_char": 1957,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p059",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 53,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3326
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 7.115644235758691,
+        "rank": 4
+      },
+      {
+        "id": "4ef6b764b7643adc54fd34fde01f5020e67f7b82f023cecb250e13ea11cf0e8b",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 59,
+        "text": "is meant to generate representations which can be read by the interpreter (or will force a SyntaxError if there is\n          no equivalent syntax). For objects which don’t have a particular representation for human consumption, str() will\n          return the same value as repr(). Many values, such as numbers or structures like lists and dictionaries, have the\n          same representation using either function. Strings, in particular, have two distinct representations.",
+        "start_char": 2852,
+        "end_char": 3326,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p059",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 53,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3326
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 7.009863906670118,
+        "rank": 5
+      },
+      {
+        "id": "34dda23bcab8706fb6bb7fbd57e02ce72c509544fbfc7db2f6ebd87e344646dc",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 54,
+        "text": "Packages are a way of structuring Python’s module namespace by using “dotted module names”. For example, the\n          module name A.B designates a submodule named B in a package named A. Just like the use of modules saves the\n          authors of different modules from having to worry about each other’s global variable names, the use of dotted module\n          names saves the authors of multi-module packages like NumPy or Pillow from having to worry about each other’s\n          module names.\n          Suppose you want to design a collection of modules (a “package”) for the uniform handling of sound files and sound\n          data. There are many different sound file formats (usually recognized by their extension, for example: .wav, .\n          aiff, .au), so you may need to create and maintain a growing collection of modules for the conversion between\n          the various file formats. There are also many different operations you might want to perform on sound data (such as",
+        "start_char": 1623,
+        "end_char": 2612,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p054",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 48,
+          "chapter_title": "Modules",
+          "normalized_characters": 3746
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 6.54903256287996,
+        "rank": 6
+      },
+      {
+        "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+        "start_char": 2561,
+        "end_char": 3494,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 6.096602024403604,
+        "rank": 7
+      },
+      {
+        "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 39,
+        "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+        "start_char": 0,
+        "end_char": 677,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p039",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 33,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 5.954832961753755,
+        "rank": 8
+      },
+      {
+        "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 41,
+        "text": "which is more concise and readable.\n          A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for\n          or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if\n          clauses which follow it. For example, this listcomp combines the elements of two lists if they are not equal:\n          >>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]\n          [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]\n\n          and it’s equivalent to:\n\n          >>> combs = []\n          >>> for x in [1,2,3]:\n          ...   for y in [3,1,4]:\n          ...      if x != y:\n          ...         combs.append((x, y))\n                                                              (continues on next page)",
+        "start_char": 2013,
+        "end_char": 2843,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p041",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 35,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2843
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 5.917481799963948,
+        "rank": 9
+      },
+      {
+        "id": "316877eb003d66b00bf99f10c0750bb80fafd513be14f4ca08e29fb8963c463c",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 44,
+        "text": "by following a value with a comma (it is not sufficient to enclose a single value in parentheses). Ugly, but effective.\n          For example:\n          >>> empty = ()\n          >>> singleton = 'hello', # <-- note trailing comma\n          >>> len(empty)\n          0\n          >>> len(singleton)\n          1\n          >>> singleton\n          ('hello',)\n          The statement t = 12345, 54321, 'hello!' is an example of tuple packing: the values 12345, 54321 and\n          'hello!' are packed together in a tuple. The reverse operation is also possible:\n\n          >>> x, y, z = t\n          This is called, appropriately enough, sequence unpacking and works for any sequence on the right-hand side. Sequence\n          unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the\n          sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.",
+        "start_char": 2264,
+        "end_char": 3218,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p044",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 38,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3218
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 5.823090075722366,
+        "rank": 10
+      }
+    ],
+    "components": {
+      "bm25": [
+        {
+          "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 60,
+          "text": "Passing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for\n          making columns line up.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}\n          >>> for name, phone in table.items():\n          ...   print(f'{name:10} ==> {phone:10d}')\n          ...\n          Sjoerd  ==>     4127\n          Jack    ==>     4098\n          Dcab    ==>     7678\n\n          Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(),\n          and '!r' applies repr():\n          >>> animals = 'eels'\n          >>> print(f'My hovercraft is full of {animals}.')\n          My hovercraft is full of eels.\n          >>> print(f'My hovercraft is full of {animals!r}.')\n          My hovercraft is full of 'eels'.",
+          "start_char": 1653,
+          "end_char": 2475,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p060",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 54,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2647
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 10.916781751363489,
+          "rank": 1
+        },
+        {
+          "id": "254dc27fad3bca04c3fed8de7d803f8ab891e3c3fe64972cc2cd81a3fd4f3599",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 48,
+          "text": "'ABC' < 'C' < 'Pascal' < 'Python'\n          (1, 2, 3, 4)     < (1, 2, 4)\n          (1, 2)           < (1, 2, -1)\n          (1, 2, 3)       == (1.0, 2.0, 3.0)\n          (1, 2, ('aa', 'ab')) < (1, 2, ('abc', 'a'), 4)\n\n          Note that comparing objects of different types with < or > is legal provided that the objects have appropriate com-\n          parison methods. For example, mixed numeric types are compared according to their numeric value, so 0 equals 0.0,\n          etc. Otherwise, rather than providing an arbitrary ordering, the interpreter will raise a TypeError exception.",
+          "start_char": 3204,
+          "end_char": 3790,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p048",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 42,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3790
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.832935104412629,
+          "rank": 2
+        },
+        {
+          "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "7.2.2 Saving structured data with json\n          Strings can easily be written to and read from a file. Numbers take a bit more effort, since the read() method only\n          returns strings, which will have to be passed to a function like int(), which takes a string like '123' and returns its\n          numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and\n          serializing by hand becomes complicated.\n          Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows\n          you to use the popular data interchange format called JSON (JavaScript Object Notation). The standard module called\n          json can take Python data hierarchies, and convert them to string representations; this process is called serializing.\n          Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing,",
+          "start_char": 1570,
+          "end_char": 2550,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.531646024464837,
+          "rank": 3
+        },
+        {
+          "id": "a592d19550af3e6322bd132018118b1d28a47bbe9c1b44f8ddb356917ab39027",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 59,
+          "text": "• The str.format() method of strings requires more manual effort. You’ll still use { and } to mark where a\n             variable will be substituted and can provide detailed formatting directives, but you’ll also need to provide the\n             information to be formatted. In the following code block there are two examples of how to format variables:\n             >>> yes_votes = 42_572_654\n             >>> total_votes = 85_705_149\n             >>> percentage = yes_votes / total_votes\n             >>> '{:-9} YES votes {:2.2%}'.format(yes_votes, percentage)\n             ' 42572654 YES votes 49.67%'",
+          "start_char": 1353,
+          "end_char": 1957,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p059",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 53,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3326
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.115644235758691,
+          "rank": 4
+        },
+        {
+          "id": "4ef6b764b7643adc54fd34fde01f5020e67f7b82f023cecb250e13ea11cf0e8b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 59,
+          "text": "is meant to generate representations which can be read by the interpreter (or will force a SyntaxError if there is\n          no equivalent syntax). For objects which don’t have a particular representation for human consumption, str() will\n          return the same value as repr(). Many values, such as numbers or structures like lists and dictionaries, have the\n          same representation using either function. Strings, in particular, have two distinct representations.",
+          "start_char": 2852,
+          "end_char": 3326,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p059",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 53,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3326
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.009863906670118,
+          "rank": 5
+        },
+        {
+          "id": "34dda23bcab8706fb6bb7fbd57e02ce72c509544fbfc7db2f6ebd87e344646dc",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "Packages are a way of structuring Python’s module namespace by using “dotted module names”. For example, the\n          module name A.B designates a submodule named B in a package named A. Just like the use of modules saves the\n          authors of different modules from having to worry about each other’s global variable names, the use of dotted module\n          names saves the authors of multi-module packages like NumPy or Pillow from having to worry about each other’s\n          module names.\n          Suppose you want to design a collection of modules (a “package”) for the uniform handling of sound files and sound\n          data. There are many different sound file formats (usually recognized by their extension, for example: .wav, .\n          aiff, .au), so you may need to create and maintain a growing collection of modules for the conversion between\n          the various file formats. There are also many different operations you might want to perform on sound data (such as",
+          "start_char": 1623,
+          "end_char": 2612,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.54903256287996,
+          "rank": 6
+        },
+        {
+          "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+          "start_char": 2561,
+          "end_char": 3494,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.096602024403604,
+          "rank": 7
+        },
+        {
+          "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+          "start_char": 0,
+          "end_char": 677,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 5.954832961753755,
+          "rank": 8
+        },
+        {
+          "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": "which is more concise and readable.\n          A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for\n          or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if\n          clauses which follow it. For example, this listcomp combines the elements of two lists if they are not equal:\n          >>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]\n          [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]\n\n          and it’s equivalent to:\n\n          >>> combs = []\n          >>> for x in [1,2,3]:\n          ...   for y in [3,1,4]:\n          ...      if x != y:\n          ...         combs.append((x, y))\n                                                              (continues on next page)",
+          "start_char": 2013,
+          "end_char": 2843,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 5.917481799963948,
+          "rank": 9
+        },
+        {
+          "id": "316877eb003d66b00bf99f10c0750bb80fafd513be14f4ca08e29fb8963c463c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 44,
+          "text": "by following a value with a comma (it is not sufficient to enclose a single value in parentheses). Ugly, but effective.\n          For example:\n          >>> empty = ()\n          >>> singleton = 'hello', # <-- note trailing comma\n          >>> len(empty)\n          0\n          >>> len(singleton)\n          1\n          >>> singleton\n          ('hello',)\n          The statement t = 12345, 54321, 'hello!' is an example of tuple packing: the values 12345, 54321 and\n          'hello!' are packed together in a tuple. The reverse operation is also possible:\n\n          >>> x, y, z = t\n          This is called, appropriately enough, sequence unpacking and works for any sequence on the right-hand side. Sequence\n          unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the\n          sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.",
+          "start_char": 2264,
+          "end_char": 3218,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p044",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 38,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3218
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 5.823090075722366,
+          "rank": 10
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": null,
+    "original_query_evidence_hit_at_3": null,
+    "actual_final_context_exact_evidence": null,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "trace_sha256": "1a5193ec7dd279e5c21da3cba7b9eac63305031cdc21571d76140a265ee5311a"
+}

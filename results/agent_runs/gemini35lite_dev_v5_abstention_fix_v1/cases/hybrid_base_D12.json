@@ -1,0 +1,2101 @@
+{
+  "status": "answered",
+  "answer": "`f.write(string)` returns the number of characters written [ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30].",
+  "citations": [
+    "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30"
+  ],
+  "reason": "The text states that f.write(string) returns the number of characters written.",
+  "guard": "citation_ids_valid; semantic_support_requires_review",
+  "query_id": "D12",
+  "config_id": "hybrid_base",
+  "public_query": {
+    "id": "D12",
+    "question": "What does f.write(string) return in the text-file example?",
+    "filter": null
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "f write string return text file example",
+      "filter": null,
+      "method": "hybrid_rrf",
+      "ranking": [
+        {
+          "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": ">>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18",
+          "start_char": 1976,
+          "end_char": 2698,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.03278688524590164,
+          "component_ranks": {
+            "dense": 1,
+            "bm25": 1
+          },
+          "component_scores": {
+            "dense": 0.8984259366989136,
+            "bm25": 14.406903942012596
+          }
+        },
+        {
+          "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+          "start_char": 393,
+          "end_char": 1098,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.03225806451612903,
+          "component_ranks": {
+            "dense": 2,
+            "bm25": 2
+          },
+          "component_scores": {
+            "dense": 0.8919838135252126,
+            "bm25": 11.928739919551168
+          }
+        },
+        {
+          "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": ">>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+          "start_char": 1110,
+          "end_char": 1964,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.03125763125763126,
+          "component_ranks": {
+            "dense": 3,
+            "bm25": 5
+          },
+          "component_scores": {
+            "dense": 0.8842261364594795,
+            "bm25": 9.804072533512192
+          }
+        },
+        {
+          "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "writing equivalent try-finally blocks:\n\n          >>> with open('workfile', encoding=\"utf-8\") as f:\n          ...   read_data = f.read()\n          >>> # We can check that the file has been automatically closed.\n          >>> f.closed\n          True\n\n          If you’re not using the with keyword, then you should call f.close() to close the file and immediately free up any\n          system resources used by it.\n\n            Warning\n\n           Calling f.write() without using the with keyword or calling f.close() might result in the arguments of\n           f.write() not being completely written to the disk, even if the program exits successfully.",
+          "start_char": 2841,
+          "end_char": 3493,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.03055037313432836,
+          "component_ranks": {
+            "dense": 4,
+            "bm25": 7
+          },
+          "component_scores": {
+            "dense": 0.8743773698806763,
+            "bm25": 8.421641281267732
+          }
+        },
+        {
+          "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+          "start_char": 2561,
+          "end_char": 3494,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.03036576949620428,
+          "component_ranks": {
+            "dense": 9,
+            "bm25": 3
+          },
+          "component_scores": {
+            "dense": 0.8650697550136013,
+            "bm25": 10.165131643071897
+          }
+        },
+        {
+          "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+          "start_char": 0,
+          "end_char": 995,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.029857397504456328,
+          "component_ranks": {
+            "dense": 8,
+            "bm25": 6
+          },
+          "component_scores": {
+            "dense": 0.8670601327979501,
+            "bm25": 9.120670539728831
+          }
+        },
+        {
+          "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "b'd'\n          In text files (those opened without a b in the mode string), only seeks relative to the beginning of the file are allowed\n          (the exception being seeking to the very file end with seek(0, 2)) and the only valid offset values are those returned\n          from the f.tell(), or zero. Any other offset value produces undefined behaviour.\n\n          File objects have some additional methods, such as isatty() and truncate() which are less frequently used;\n          consult the Library Reference for a complete guide to file objects.",
+          "start_char": 1006,
+          "end_char": 1558,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.028991596638655463,
+          "component_ranks": {
+            "dense": 10,
+            "bm25": 8
+          },
+          "component_scores": {
+            "dense": 0.8649264574050903,
+            "bm25": 8.2530562494859
+          }
+        },
+        {
+          "id": "b590ce86acc49a36bfe5e54823521c852e4653b8742ef810ed2a960f160dc493",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 59,
+          "text": "So far we’ve encountered two ways of writing values: expression statements and the print() function. (A third way\n          is using the write() method of file objects; the standard output file can be referenced as sys.stdout. See the\n          Library Reference for more information on this.)\n          Often you’ll want more control over the formatting of your output than simply printing space-separated values. There\n          are several ways to format output.\n            • To use formatted string literals, begin a string with f or F before the opening quotation mark or triple quotation\n             mark. Inside this string, you can write a Python expression between { and } characters that can refer to\n             variables or literal values.\n\n             >>> year = 2016\n             >>> event = 'Referendum'\n             >>> f'Results of the {year} {event}'\n             'Results of the 2016 Referendum'",
+          "start_char": 421,
+          "end_char": 1339,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p059",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 53,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3326
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 0.015625,
+          "rank": 8,
+          "component_ranks": {
+            "bm25": 4
+          },
+          "component_scores": {
+            "bm25": 9.970393591826031
+          }
+        },
+        {
+          "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 76,
+          "text": "(continued from previous page)\n          ...\n          >>> excs = []\n          >>> for i in range(3):\n          ...   try:\n          ...      f()\n          ...   except Exception as e:\n          ...      e.add_note(f'Happened in Iteration {i+1}')\n          ...      excs.append(e)\n          ...\n          >>> raise ExceptionGroup('We have some problems', excs)\n           + Exception Group Traceback (most recent call last):\n           |  File \"<stdin>\", line 1, in <module>\n           | ExceptionGroup: We have some problems (3 sub-exceptions)\n           +-+---------------- 1 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 1\n             +---------------- 2 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>",
+          "start_char": 0,
+          "end_char": 973,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p076",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 70,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 1440
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.015384615384615385,
+          "component_ranks": {
+            "dense": 5
+          },
+          "component_scores": {
+            "dense": 0.8719866948135693
+          }
+        },
+        {
+          "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 76,
+          "text": "|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+          "start_char": 987,
+          "end_char": 1440,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p076",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 70,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 1440
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.015151515151515152,
+          "component_ranks": {
+            "dense": 6
+          },
+          "component_scores": {
+            "dense": 0.8712625657007081
+          }
+        }
+      ],
+      "component_rankings": {
+        "dense": [
+          {
+            "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": ">>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18",
+            "start_char": 1976,
+            "end_char": 2698,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8984259366989136
+          },
+          {
+            "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+            "start_char": 393,
+            "end_char": 1098,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8919838135252126
+          },
+          {
+            "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": ">>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+            "start_char": 1110,
+            "end_char": 1964,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8842261364594795
+          },
+          {
+            "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "writing equivalent try-finally blocks:\n\n          >>> with open('workfile', encoding=\"utf-8\") as f:\n          ...   read_data = f.read()\n          >>> # We can check that the file has been automatically closed.\n          >>> f.closed\n          True\n\n          If you’re not using the with keyword, then you should call f.close() to close the file and immediately free up any\n          system resources used by it.\n\n            Warning\n\n           Calling f.write() without using the with keyword or calling f.close() might result in the arguments of\n           f.write() not being completely written to the disk, even if the program exits successfully.",
+            "start_char": 2841,
+            "end_char": 3493,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 4,
+            "score": 0.8743773698806763
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 76,
+            "text": "(continued from previous page)\n          ...\n          >>> excs = []\n          >>> for i in range(3):\n          ...   try:\n          ...      f()\n          ...   except Exception as e:\n          ...      e.add_note(f'Happened in Iteration {i+1}')\n          ...      excs.append(e)\n          ...\n          >>> raise ExceptionGroup('We have some problems', excs)\n           + Exception Group Traceback (most recent call last):\n           |  File \"<stdin>\", line 1, in <module>\n           | ExceptionGroup: We have some problems (3 sub-exceptions)\n           +-+---------------- 1 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 1\n             +---------------- 2 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>",
+            "start_char": 0,
+            "end_char": 973,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p076",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 70,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 1440
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.8719866948135693
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 76,
+            "text": "|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+            "start_char": 987,
+            "end_char": 1440,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p076",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 70,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 1440
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 6,
+            "score": 0.8712625657007081
+          },
+          {
+            "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "(continued from previous page)\n          >>> '3.14159265359'.zfill(5)\n          '3.14159265359'\n\n          7.1.4 Old string formatting\n\n          The % operator (modulo) can also be used for string formatting. Given format % values (where format is a\n          string), % conversion specifications in format are replaced with zero or more elements of values. This operation is\n          commonly known as string interpolation. For example:\n          >>> import math\n          >>> print('The value of pi is approximately %5.3f.' % math.pi)\n          The value of pi is approximately 3.142.\n\n          More information can be found in the old-string-formatting section.\n\n          7.2 Reading and Writing Files\n\n          open() returns a file object, and is most commonly used with two positional arguments and one keyword argument:\n          open(filename, mode, encoding=None)\n\n          >>> f = open('workfile', 'w', encoding=\"utf-8\")",
+            "start_char": 0,
+            "end_char": 936,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 7,
+            "score": 0.8710162043571472
+          },
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+            "start_char": 0,
+            "end_char": 995,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 8,
+            "score": 0.8670601327979501
+          },
+          {
+            "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+            "start_char": 2561,
+            "end_char": 3494,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 9,
+            "score": 0.8650697550136013
+          },
+          {
+            "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "b'd'\n          In text files (those opened without a b in the mode string), only seeks relative to the beginning of the file are allowed\n          (the exception being seeking to the very file end with seek(0, 2)) and the only valid offset values are those returned\n          from the f.tell(), or zero. Any other offset value produces undefined behaviour.\n\n          File objects have some additional methods, such as isatty() and truncate() which are less frequently used;\n          consult the Library Reference for a complete guide to file objects.",
+            "start_char": 1006,
+            "end_char": 1558,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 10,
+            "score": 0.8649264574050903
+          }
+        ],
+        "bm25": [
+          {
+            "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": ">>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18",
+            "start_char": 1976,
+            "end_char": 2698,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 14.406903942012596,
+            "rank": 1
+          },
+          {
+            "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+            "start_char": 393,
+            "end_char": 1098,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 11.928739919551168,
+            "rank": 2
+          },
+          {
+            "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+            "start_char": 2561,
+            "end_char": 3494,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 10.165131643071897,
+            "rank": 3
+          },
+          {
+            "id": "b590ce86acc49a36bfe5e54823521c852e4653b8742ef810ed2a960f160dc493",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 59,
+            "text": "So far we’ve encountered two ways of writing values: expression statements and the print() function. (A third way\n          is using the write() method of file objects; the standard output file can be referenced as sys.stdout. See the\n          Library Reference for more information on this.)\n          Often you’ll want more control over the formatting of your output than simply printing space-separated values. There\n          are several ways to format output.\n            • To use formatted string literals, begin a string with f or F before the opening quotation mark or triple quotation\n             mark. Inside this string, you can write a Python expression between { and } characters that can refer to\n             variables or literal values.\n\n             >>> year = 2016\n             >>> event = 'Referendum'\n             >>> f'Results of the {year} {event}'\n             'Results of the 2016 Referendum'",
+            "start_char": 421,
+            "end_char": 1339,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p059",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 53,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3326
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 9.970393591826031,
+            "rank": 4
+          },
+          {
+            "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": ">>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+            "start_char": 1110,
+            "end_char": 1964,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 9.804072533512192,
+            "rank": 5
+          },
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+            "start_char": 0,
+            "end_char": 995,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 9.120670539728831,
+            "rank": 6
+          },
+          {
+            "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "writing equivalent try-finally blocks:\n\n          >>> with open('workfile', encoding=\"utf-8\") as f:\n          ...   read_data = f.read()\n          >>> # We can check that the file has been automatically closed.\n          >>> f.closed\n          True\n\n          If you’re not using the with keyword, then you should call f.close() to close the file and immediately free up any\n          system resources used by it.\n\n            Warning\n\n           Calling f.write() without using the with keyword or calling f.close() might result in the arguments of\n           f.write() not being completely written to the disk, even if the program exits successfully.",
+            "start_char": 2841,
+            "end_char": 3493,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 8.421641281267732,
+            "rank": 7
+          },
+          {
+            "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "b'd'\n          In text files (those opened without a b in the mode string), only seeks relative to the beginning of the file are allowed\n          (the exception being seeking to the very file end with seek(0, 2)) and the only valid offset values are those returned\n          from the f.tell(), or zero. Any other offset value produces undefined behaviour.\n\n          File objects have some additional methods, such as isatty() and truncate() which are less frequently used;\n          consult the Library Reference for a complete guide to file objects.",
+            "start_char": 1006,
+            "end_char": 1558,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 8.2530562494859,
+            "rank": 8
+          },
+          {
+            "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 63,
+            "text": "The first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+            "start_char": 948,
+            "end_char": 1875,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p063",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 57,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3493
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 8.206946503097665,
+            "rank": 9
+          },
+          {
+            "id": "9debbfeedc3e3febb6695775082de2846622b9bb2e21f07d760901a60ca42acc",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 60,
+            "text": "placeholders like $x and replacing them with values from a dictionary, but offers much less control of the formatting.\n\n          7.1.1 Formatted String Literals\n          Formatted string literals (also called f-strings for short) let you include the value of Python expressions inside a string\n          by prefixing the string with f or F and writing expressions as {expression}.\n          An optional format specifier can follow the expression. This allows greater control over how the value is formatted.\n          The following example rounds pi to three places after the decimal:\n\n          >>> import math\n          >>> print(f'The value of pi is approximately {math.pi:.3f}.')\n          The value of pi is approximately 3.142.",
+            "start_char": 906,
+            "end_char": 1641,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p060",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 54,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2647
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 7.155371660211554,
+            "rank": 10
+          }
+        ]
+      },
+      "context": {
+        "text": "[ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30 | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18\n\n[ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804 | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\nThe rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').\n\n[5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+        "chunk_ids": [
+          "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+          "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+          "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f"
+        ],
+        "characters": 2657,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": ">>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18",
+            "start_char": 1976,
+            "end_char": 2698,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "component_ranks": {
+              "dense": 1,
+              "bm25": 1
+            },
+            "component_scores": {
+              "dense": 0.8984259366989136,
+              "bm25": 14.406903942012596
+            }
+          },
+          {
+            "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+            "start_char": 393,
+            "end_char": 1098,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.03225806451612903,
+            "component_ranks": {
+              "dense": 2,
+              "bm25": 2
+            },
+            "component_scores": {
+              "dense": 0.8919838135252126,
+              "bm25": 11.928739919551168
+            }
+          },
+          {
+            "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": ">>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+            "start_char": 1110,
+            "end_char": 1964,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.03125763125763126,
+            "component_ranks": {
+              "dense": 3,
+              "bm25": 5
+            },
+            "component_scores": {
+              "dense": 0.8842261364594795,
+              "bm25": 9.804072533512192
+            }
+          }
+        ],
+        "excluded": [
+          {
+            "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "b590ce86acc49a36bfe5e54823521c852e4653b8742ef810ed2a960f160dc493",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.03069630000027246
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "dbe295d3789c2dba63202598d874429d97b575feb742f0edc46c1199cc7c37a1",
+      "request_sha256": "e8e24edee57a43007dd29f7762add8e6f9267d45ee02576fcd37a7b317e9a47f",
+      "response_id": "VcL6asiYFtn11e8PnsGP6QQ",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 609,
+        "candidatesTokenCount": 20,
+        "totalTokenCount": 629,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 609
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.3120000000017171,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "7e03237db84af417734a0d84a4f226d0fbf3d5ab4bfd11928670516eb5ecfdb5",
+      "request_sha256": "8da62f30e62de6c342872447784dc86b187684a52f5cc577584b96b1e742e003",
+      "response_id": "ZML6avfSGt2t1e8P4rjV6AU",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1666,
+        "candidatesTokenCount": 126,
+        "totalTokenCount": 1792,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1666
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.2809999999990396,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30 | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18\n\n[ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804 | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\nThe rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').\n\n[5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+        "chunk_ids": [
+          "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+          "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+          "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f"
+        ],
+        "characters": 2657,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": ">>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18",
+            "start_char": 1976,
+            "end_char": 2698,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "component_ranks": {
+              "dense": 1,
+              "bm25": 1
+            },
+            "component_scores": {
+              "dense": 0.8984259366989136,
+              "bm25": 14.406903942012596
+            }
+          },
+          {
+            "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+            "start_char": 393,
+            "end_char": 1098,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.03225806451612903,
+            "component_ranks": {
+              "dense": 2,
+              "bm25": 2
+            },
+            "component_scores": {
+              "dense": 0.8919838135252126,
+              "bm25": 11.928739919551168
+            }
+          },
+          {
+            "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": ">>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+            "start_char": 1110,
+            "end_char": 1964,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.03125763125763126,
+            "component_ranks": {
+              "dense": 3,
+              "bm25": 5
+            },
+            "component_scores": {
+              "dense": 0.8842261364594795,
+              "bm25": 9.804072533512192
+            }
+          }
+        ],
+        "excluded": [
+          {
+            "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "b590ce86acc49a36bfe5e54823521c852e4653b8742ef810ed2a960f160dc493",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "75c84558e050b0d52db4c27969f9cdcb5ac4b335d7925ec9dec4cb053f277854",
+      "request_sha256": "29b6b95d2fc0c551d242d4be499997c2a174b74eee68de4b2ee0d13107a99a33",
+      "response_id": "c8L6aqPFLuK12roP0v_E6QM",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 2045,
+        "candidatesTokenCount": 174,
+        "totalTokenCount": 2219,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2045
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.514999999999418,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30 | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18\n\n[ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804 | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\nThe rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').\n\n[5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+        "chunk_ids": [
+          "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+          "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+          "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f"
+        ],
+        "characters": 2657,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": ">>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18",
+            "start_char": 1976,
+            "end_char": 2698,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "component_ranks": {
+              "dense": 1,
+              "bm25": 1
+            },
+            "component_scores": {
+              "dense": 0.8984259366989136,
+              "bm25": 14.406903942012596
+            }
+          },
+          {
+            "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+            "start_char": 393,
+            "end_char": 1098,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.03225806451612903,
+            "component_ranks": {
+              "dense": 2,
+              "bm25": 2
+            },
+            "component_scores": {
+              "dense": 0.8919838135252126,
+              "bm25": 11.928739919551168
+            }
+          },
+          {
+            "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": ">>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+            "start_char": 1110,
+            "end_char": 1964,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.03125763125763126,
+            "component_ranks": {
+              "dense": 3,
+              "bm25": 5
+            },
+            "component_scores": {
+              "dense": 0.8842261364594795,
+              "bm25": 9.804072533512192
+            }
+          }
+        ],
+        "excluded": [
+          {
+            "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "b590ce86acc49a36bfe5e54823521c852e4653b8742ef810ed2a960f160dc493",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30 | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18\n\n[ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804 | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\nThe rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').\n\n[5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f | source=data/raw/tutorial.pdf | PDF page=64 | chapter=7]\n>>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+    "chunk_ids": [
+      "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+      "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+      "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f"
+    ],
+    "characters": 2657,
+    "budget_chars": 3500,
+    "max_chunks": 3,
+    "selected_chunks": [
+      {
+        "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 64,
+        "text": ">>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18",
+        "start_char": 1976,
+        "end_char": 2698,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p064",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 58,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2698
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.03278688524590164,
+        "component_ranks": {
+          "dense": 1,
+          "bm25": 1
+        },
+        "component_scores": {
+          "dense": 0.8984259366989136,
+          "bm25": 14.406903942012596
+        }
+      },
+      {
+        "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 64,
+        "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+        "start_char": 393,
+        "end_char": 1098,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p064",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 58,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2698
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.03225806451612903,
+        "component_ranks": {
+          "dense": 2,
+          "bm25": 2
+        },
+        "component_scores": {
+          "dense": 0.8919838135252126,
+          "bm25": 11.928739919551168
+        }
+      },
+      {
+        "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 64,
+        "text": ">>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+        "start_char": 1110,
+        "end_char": 1964,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p064",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 58,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2698
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.03125763125763126,
+        "component_ranks": {
+          "dense": 3,
+          "bm25": 5
+        },
+        "component_scores": {
+          "dense": 0.8842261364594795,
+          "bm25": 9.804072533512192
+        }
+      }
+    ],
+    "excluded": [
+      {
+        "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "b590ce86acc49a36bfe5e54823521c852e4653b8742ef810ed2a960f160dc493",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+        "reason": "max_chunks"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [
+    {
+      "event": "citation_format_repair",
+      "rejected_proposal": {
+        "citations": [
+          "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30"
+        ],
+        "reason": "The text explicitly states that f.write(string) writes the contents of string to the file, returning the number of characters written.",
+        "answer": "`f.write(string)` returns the number of characters written.",
+        "abstain": false
+      },
+      "reason": "Citation IDs must be drawn from current context and appear inline in answer; separate array alone is insufficient."
+    }
+  ],
+  "search_calls": 1,
+  "generated_search_queries": [
+    "f write string return text file example"
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 44.49359430000186,
+    "pacing_seconds_this_invocation": 40.330000000001746,
+    "wall_seconds_excluding_pacing": 4.163594300000113,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": true,
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 64,
+        "evidence": "f.write(string) writes the contents of string to the file, returning the number of characters written."
+      }
+    ],
+    "expected_answer": "It returns the number of characters written.",
+    "absence_reason": null,
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "hybrid_rrf",
+    "query": "What does f.write(string) return in the text-file example?",
+    "filter": null,
+    "ranking": [
+      {
+        "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 64,
+        "text": ">>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18",
+        "start_char": 1976,
+        "end_char": 2698,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p064",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 58,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2698
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.03278688524590164,
+        "component_ranks": {
+          "dense": 1,
+          "bm25": 1
+        },
+        "component_scores": {
+          "dense": 0.9036414084648262,
+          "bm25": 15.174736832139878
+        }
+      },
+      {
+        "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 64,
+        "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+        "start_char": 393,
+        "end_char": 1098,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p064",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 58,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2698
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.03225806451612903,
+        "component_ranks": {
+          "dense": 2,
+          "bm25": 2
+        },
+        "component_scores": {
+          "dense": 0.882336988170506,
+          "bm25": 12.698913251654663
+        }
+      },
+      {
+        "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 64,
+        "text": ">>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+        "start_char": 1110,
+        "end_char": 1964,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p064",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 58,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2698
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.03149801587301587,
+        "component_ranks": {
+          "dense": 3,
+          "bm25": 4
+        },
+        "component_scores": {
+          "dense": 0.8816607594490113,
+          "bm25": 10.334442292301734
+        }
+      },
+      {
+        "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+        "start_char": 2561,
+        "end_char": 3494,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 4,
+        "score": 0.031024531024531024,
+        "component_ranks": {
+          "dense": 6,
+          "bm25": 3
+        },
+        "component_scores": {
+          "dense": 0.8625790640617532,
+          "bm25": 10.6527080258323
+        }
+      },
+      {
+        "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 63,
+        "text": "writing equivalent try-finally blocks:\n\n          >>> with open('workfile', encoding=\"utf-8\") as f:\n          ...   read_data = f.read()\n          >>> # We can check that the file has been automatically closed.\n          >>> f.closed\n          True\n\n          If you’re not using the with keyword, then you should call f.close() to close the file and immediately free up any\n          system resources used by it.\n\n            Warning\n\n           Calling f.write() without using the with keyword or calling f.close() might result in the arguments of\n           f.write() not being completely written to the disk, even if the program exits successfully.",
+        "start_char": 2841,
+        "end_char": 3493,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p063",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 57,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3493
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 5,
+        "score": 0.03055037313432836,
+        "component_ranks": {
+          "dense": 4,
+          "bm25": 7
+        },
+        "component_scores": {
+          "dense": 0.86630792222572,
+          "bm25": 8.987195040751859
+        }
+      },
+      {
+        "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+        "start_char": 0,
+        "end_char": 995,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 6,
+        "score": 0.03007688828584351,
+        "component_ranks": {
+          "dense": 7,
+          "bm25": 6
+        },
+        "component_scores": {
+          "dense": 0.861791150356394,
+          "bm25": 9.85969686330124
+        }
+      },
+      {
+        "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "b'd'\n          In text files (those opened without a b in the mode string), only seeks relative to the beginning of the file are allowed\n          (the exception being seeking to the very file end with seek(0, 2)) and the only valid offset values are those returned\n          from the f.tell(), or zero. Any other offset value produces undefined behaviour.\n\n          File objects have some additional methods, such as isatty() and truncate() which are less frequently used;\n          consult the Library Reference for a complete guide to file objects.",
+        "start_char": 1006,
+        "end_char": 1558,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 7,
+        "score": 0.029411764705882353,
+        "component_ranks": {
+          "dense": 8,
+          "bm25": 8
+        },
+        "component_scores": {
+          "dense": 0.8611676179666762,
+          "bm25": 8.946691436447626
+        }
+      },
+      {
+        "id": "b590ce86acc49a36bfe5e54823521c852e4653b8742ef810ed2a960f160dc493",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 59,
+        "text": "So far we’ve encountered two ways of writing values: expression statements and the print() function. (A third way\n          is using the write() method of file objects; the standard output file can be referenced as sys.stdout. See the\n          Library Reference for more information on this.)\n          Often you’ll want more control over the formatting of your output than simply printing space-separated values. There\n          are several ways to format output.\n            • To use formatted string literals, begin a string with f or F before the opening quotation mark or triple quotation\n             mark. Inside this string, you can write a Python expression between { and } characters that can refer to\n             variables or literal values.\n\n             >>> year = 2016\n             >>> event = 'Referendum'\n             >>> f'Results of the {year} {event}'\n             'Results of the 2016 Referendum'",
+        "start_char": 421,
+        "end_char": 1339,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p059",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 53,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3326
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 0.015384615384615385,
+        "rank": 8,
+        "component_ranks": {
+          "bm25": 5
+        },
+        "component_scores": {
+          "bm25": 10.212174073106429
+        }
+      },
+      {
+        "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 63,
+        "text": "(continued from previous page)\n          >>> '3.14159265359'.zfill(5)\n          '3.14159265359'\n\n          7.1.4 Old string formatting\n\n          The % operator (modulo) can also be used for string formatting. Given format % values (where format is a\n          string), % conversion specifications in format are replaced with zero or more elements of values. This operation is\n          commonly known as string interpolation. For example:\n          >>> import math\n          >>> print('The value of pi is approximately %5.3f.' % math.pi)\n          The value of pi is approximately 3.142.\n\n          More information can be found in the old-string-formatting section.\n\n          7.2 Reading and Writing Files\n\n          open() returns a file object, and is most commonly used with two positional arguments and one keyword argument:\n          open(filename, mode, encoding=None)\n\n          >>> f = open('workfile', 'w', encoding=\"utf-8\")",
+        "start_char": 0,
+        "end_char": 936,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p063",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 57,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3493
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 9,
+        "score": 0.015384615384615385,
+        "component_ranks": {
+          "dense": 5
+        },
+        "component_scores": {
+          "dense": 0.8645567378665976
+        }
+      },
+      {
+        "id": "8adc9afcc5c33abb780532495f54f593166e454d278b3ff28693e4e060119492",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 64,
+        "text": "After a file object is closed, either by a with statement or by calling f.close(), attempts to use the file object will\n          automatically fail.\n          >>> f.close()\n          >>> f.read()\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          ValueError: I/O operation on closed file.\n\n          7.2.1 Methods of File Objects",
+        "start_char": 0,
+        "end_char": 381,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p064",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 58,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2698
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 10,
+        "score": 0.014492753623188406,
+        "component_ranks": {
+          "dense": 9
+        },
+        "component_scores": {
+          "dense": 0.8594176853050196
+        }
+      }
+    ],
+    "components": {
+      "dense": [
+        {
+          "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": ">>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18",
+          "start_char": 1976,
+          "end_char": 2698,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.9036414084648262
+        },
+        {
+          "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+          "start_char": 393,
+          "end_char": 1098,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.882336988170506
+        },
+        {
+          "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": ">>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+          "start_char": 1110,
+          "end_char": 1964,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8816607594490113
+        },
+        {
+          "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "writing equivalent try-finally blocks:\n\n          >>> with open('workfile', encoding=\"utf-8\") as f:\n          ...   read_data = f.read()\n          >>> # We can check that the file has been automatically closed.\n          >>> f.closed\n          True\n\n          If you’re not using the with keyword, then you should call f.close() to close the file and immediately free up any\n          system resources used by it.\n\n            Warning\n\n           Calling f.write() without using the with keyword or calling f.close() might result in the arguments of\n           f.write() not being completely written to the disk, even if the program exits successfully.",
+          "start_char": 2841,
+          "end_char": 3493,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.86630792222572
+        },
+        {
+          "id": "e915cc67b72453289e84ed8ef2b46f7f657681bf5a3e87d5510f71e14945c281",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "(continued from previous page)\n          >>> '3.14159265359'.zfill(5)\n          '3.14159265359'\n\n          7.1.4 Old string formatting\n\n          The % operator (modulo) can also be used for string formatting. Given format % values (where format is a\n          string), % conversion specifications in format are replaced with zero or more elements of values. This operation is\n          commonly known as string interpolation. For example:\n          >>> import math\n          >>> print('The value of pi is approximately %5.3f.' % math.pi)\n          The value of pi is approximately 3.142.\n\n          More information can be found in the old-string-formatting section.\n\n          7.2 Reading and Writing Files\n\n          open() returns a file object, and is most commonly used with two positional arguments and one keyword argument:\n          open(filename, mode, encoding=None)\n\n          >>> f = open('workfile', 'w', encoding=\"utf-8\")",
+          "start_char": 0,
+          "end_char": 936,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.8645567378665976
+        },
+        {
+          "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+          "start_char": 2561,
+          "end_char": 3494,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.8625790640617532
+        },
+        {
+          "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+          "start_char": 0,
+          "end_char": 995,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.861791150356394
+        },
+        {
+          "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "b'd'\n          In text files (those opened without a b in the mode string), only seeks relative to the beginning of the file are allowed\n          (the exception being seeking to the very file end with seek(0, 2)) and the only valid offset values are those returned\n          from the f.tell(), or zero. Any other offset value produces undefined behaviour.\n\n          File objects have some additional methods, such as isatty() and truncate() which are less frequently used;\n          consult the Library Reference for a complete guide to file objects.",
+          "start_char": 1006,
+          "end_char": 1558,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8611676179666762
+        },
+        {
+          "id": "8adc9afcc5c33abb780532495f54f593166e454d278b3ff28693e4e060119492",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": "After a file object is closed, either by a with statement or by calling f.close(), attempts to use the file object will\n          automatically fail.\n          >>> f.close()\n          >>> f.read()\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          ValueError: I/O operation on closed file.\n\n          7.2.1 Methods of File Objects",
+          "start_char": 0,
+          "end_char": 381,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8594176853050196
+        },
+        {
+          "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 76,
+          "text": "|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+          "start_char": 987,
+          "end_char": 1440,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p076",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 70,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 1440
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.853826608569634
+        }
+      ],
+      "bm25": [
+        {
+          "id": "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": ">>> for line in f:\n          ...   print(line, end='')\n          ...\n          This is the first line of the file.\n          Second line of the file\n          If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().\n\n          f.write(string) writes the contents of string to the file, returning the number of characters written.\n          >>> f.write('This is a test\\n')\n          15\n\n          Other types of objects need to be converted – either to a string (in text mode) or a bytes object (in binary mode) –\n          before writing them:\n\n          >>> value = ('the answer', 42)\n          >>> s = str(value) # convert the tuple to string\n          >>> f.write(s)\n          18",
+          "start_char": 1976,
+          "end_char": 2698,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 15.174736832139878,
+          "rank": 1
+        },
+        {
+          "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+          "start_char": 393,
+          "end_char": 1098,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 12.698913251654663,
+          "rank": 2
+        },
+        {
+          "id": "78c2758552b777b9ec63593dc156500d7535b1037c2de405258fb33d05971ffc",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "the string representing the object may have been stored in a file or data, or sent over a network connection to some\n          distant machine.\n\n            Note\n\n           The JSON format is commonly used by modern applications to allow for data exchange. Many programmers are\n           already familiar with it, which makes it a good choice for interoperability.\n\n          If you have an object x, you can view its JSON string representation with a simple line of code:\n\n          >>> import json\n          >>> x = [1, 'simple', 'list']\n          >>> json.dumps(x)\n          '[1, \"simple\", \"list\"]'\n\n          Another variant of the dumps() function, called dump(), simply serializes the object to a text file. So if f is a text\n          file object opened for writing, we can do this:\n          json.dump(x, f)\n\n          To decode the object again, if f is a binary file or text file object which has been opened for reading:",
+          "start_char": 2561,
+          "end_char": 3494,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 10.6527080258323,
+          "rank": 3
+        },
+        {
+          "id": "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": ">>> f.read()\n          'This is the entire file.\\n'\n          >>> f.read()\n          ''\n          f.readline() reads a single line from the file; a newline character (\\n) is left at the end of the string, and is only\n          omitted on the last line of the file if the file doesn’t end in a newline. This makes the return value unambiguous; if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline.\n\n          >>> f.readline()\n          'This is the first line of the file.\\n'\n          >>> f.readline()\n          'Second line of the file\\n'\n          >>> f.readline()\n          ''\n          For reading lines from a file, you can loop over the file object. This is memory efficient, fast, and leads to simple\n          code:",
+          "start_char": 1110,
+          "end_char": 1964,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 10.334442292301734,
+          "rank": 4
+        },
+        {
+          "id": "b590ce86acc49a36bfe5e54823521c852e4653b8742ef810ed2a960f160dc493",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 59,
+          "text": "So far we’ve encountered two ways of writing values: expression statements and the print() function. (A third way\n          is using the write() method of file objects; the standard output file can be referenced as sys.stdout. See the\n          Library Reference for more information on this.)\n          Often you’ll want more control over the formatting of your output than simply printing space-separated values. There\n          are several ways to format output.\n            • To use formatted string literals, begin a string with f or F before the opening quotation mark or triple quotation\n             mark. Inside this string, you can write a Python expression between { and } characters that can refer to\n             variables or literal values.\n\n             >>> year = 2016\n             >>> event = 'Referendum'\n             >>> f'Results of the {year} {event}'\n             'Results of the 2016 Referendum'",
+          "start_char": 421,
+          "end_char": 1339,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p059",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 53,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3326
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 10.212174073106429,
+          "rank": 5
+        },
+        {
+          "id": "e12f39fe8fec1585839c2d8e404fa7bc0f0912094bad119fba86e83539a00b40",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "f.tell() returns an integer giving the file object’s current position in the file represented as number of bytes from\n          the beginning of the file when in binary mode and an opaque number when in text mode.\n          To change the file object’s position, use f.seek(offset, whence). The position is computed from adding offset\n          to a reference point; the reference point is selected by the whence argument. A whence value of 0 measures from the\n          beginning of the file, 1 uses the current file position, and 2 uses the end of the file as the reference point. whence can\n          be omitted and defaults to 0, using the beginning of the file as the reference point.\n          >>> f = open('workfile', 'rb+')\n          >>> f.write(b'0123456789abcdef')\n          16\n          >>> f.seek(5) # Go to the 6th byte in the file\n          5\n          >>> f.read(1)\n          b'5'\n          >>> f.seek(-3, 2) # Go to the 3rd byte before the end\n          13\n          >>> f.read(1)",
+          "start_char": 0,
+          "end_char": 995,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 9.85969686330124,
+          "rank": 6
+        },
+        {
+          "id": "bcda39558009bc38c54b8334518b639e6ba0045f13f8abe9233aebd7355822e4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "writing equivalent try-finally blocks:\n\n          >>> with open('workfile', encoding=\"utf-8\") as f:\n          ...   read_data = f.read()\n          >>> # We can check that the file has been automatically closed.\n          >>> f.closed\n          True\n\n          If you’re not using the with keyword, then you should call f.close() to close the file and immediately free up any\n          system resources used by it.\n\n            Warning\n\n           Calling f.write() without using the with keyword or calling f.close() might result in the arguments of\n           f.write() not being completely written to the disk, even if the program exits successfully.",
+          "start_char": 2841,
+          "end_char": 3493,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.987195040751859,
+          "rank": 7
+        },
+        {
+          "id": "73bade20ce7553b01276746b1ffc2b68a29b3364e91f22db5f3a4024f87af6ac",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "b'd'\n          In text files (those opened without a b in the mode string), only seeks relative to the beginning of the file are allowed\n          (the exception being seeking to the very file end with seek(0, 2)) and the only valid offset values are those returned\n          from the f.tell(), or zero. Any other offset value produces undefined behaviour.\n\n          File objects have some additional methods, such as isatty() and truncate() which are less frequently used;\n          consult the Library Reference for a complete guide to file objects.",
+          "start_char": 1006,
+          "end_char": 1558,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.946691436447626,
+          "rank": 8
+        },
+        {
+          "id": "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 63,
+          "text": "The first argument is a string containing the filename. The second argument is another string containing a few\n          characters describing the way in which the file will be used. mode can be 'r' when the file will only be read, 'w'\n          for only writing (an existing file with the same name will be erased), and 'a' opens the file for appending; any data\n          written to the file is automatically added to the end. 'r+' opens the file for both reading and writing. The mode\n          argument is optional; 'r' will be assumed if it’s omitted.\n          Normally, files are opened in text mode, that means, you read and write strings from and to the file, which are encoded\n          in a specific encoding. If encoding is not specified, the default is platform dependent (see open()). Because UTF-\n          8 is the modern de-facto standard, encoding=\"utf-8\" is recommended unless you know that you need to use a",
+          "start_char": 948,
+          "end_char": 1875,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p063",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 57,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3493
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.897078915256163,
+          "rank": 9
+        },
+        {
+          "id": "3318bd52b64a9b8f37066dd2231e4afc3da11b6da605e67b73f7a1868db122a8",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "def fib(n): # write Fibonacci series up to n\n             a, b = 0, 1\n             while a < n:\n                print(a, end=' ')\n                a, b = b, a+b\n             print()\n          def fib2(n): # return Fibonacci series up to n\n             result = []\n             a, b = 0, 1\n             while a < n:\n                result.append(a)\n                a, b = b, a+b\n             return result\n\n          Now enter the Python interpreter and import this module with the following command:\n          >>> import fibo\n\n          This does not add the names of the functions defined in fibo directly to the current namespace (see Python Scopes\n          and Namespaces for more details); it only adds the module name fibo there. Using the module name you can access\n          the functions:",
+          "start_char": 1647,
+          "end_char": 2443,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.321235745480276,
+          "rank": 10
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": true,
+    "original_query_evidence_hit_at_3": true,
+    "actual_final_context_exact_evidence": true,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "trace_sha256": "e7a5a9dafe9ccf026cb3f89c95fd538ff2f429a8438fd4d48c904d529f1a91ff"
+}

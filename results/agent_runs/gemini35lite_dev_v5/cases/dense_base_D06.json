@@ -1,0 +1,1433 @@
+{
+  "status": "answered",
+  "answer": "No, it is not possible to assign to individual items of a tuple [0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf]. However, it is possible to create tuples which contain mutable objects, such as lists [0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf].",
+  "citations": [
+    "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf"
+  ],
+  "reason": "The tutorial explicitly states that tuple elements are not assignable and that tuples can contain lists.",
+  "guard": "citation_ids_valid; semantic_support_requires_review",
+  "query_id": "D06",
+  "config_id": "dense_base",
+  "public_query": {
+    "id": "D06",
+    "question": "Are tuple elements assignable, and can a tuple contain a list?",
+    "filter": null
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "tuple elements assignable tuple contain a list",
+      "filter": null,
+      "method": "dense",
+      "ranking": [
+        {
+          "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 44,
+          "text": "is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed",
+          "start_char": 1349,
+          "end_char": 2253,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p044",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 38,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3218
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8983573378111535
+        },
+        {
+          "id": "24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 44,
+          "text": ">>> t = 12345, 54321, 'hello!'\n          >>> t[0]\n          12345\n          >>> t\n          (12345, 54321, 'hello!')\n          >>> # Tuples may be nested:\n          >>> u = t, (1, 2, 3, 4, 5)\n          >>> u\n          ((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))\n          >>> # Tuples are immutable:\n          >>> t[0] = 88888\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: 'tuple' object does not support item assignment\n          >>> # but they can contain mutable objects:\n          >>> v = ([1, 2, 3], [3, 2, 1])\n          >>> v\n          ([1, 2, 3], [3, 2, 1])\n          As you see, on output tuples are always enclosed in parentheses, so that nested tuples are interpreted correctly; they\n          may be input with or without surrounding parentheses, although often parentheses are necessary anyway (if the tuple",
+          "start_char": 452,
+          "end_char": 1338,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p044",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 38,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3218
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8916006748914332
+        },
+        {
+          "id": "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 44,
+          "text": "5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+          "start_char": 0,
+          "end_char": 440,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p044",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 38,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3218
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8656055411335519
+        },
+        {
+          "id": "316877eb003d66b00bf99f10c0750bb80fafd513be14f4ca08e29fb8963c463c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 44,
+          "text": "by following a value with a comma (it is not sufficient to enclose a single value in parentheses). Ugly, but effective.\n          For example:\n          >>> empty = ()\n          >>> singleton = 'hello', # <-- note trailing comma\n          >>> len(empty)\n          0\n          >>> len(singleton)\n          1\n          >>> singleton\n          ('hello',)\n          The statement t = 12345, 54321, 'hello!' is an example of tuple packing: the values 12345, 54321 and\n          'hello!' are packed together in a tuple. The reverse operation is also possible:\n\n          >>> x, y, z = t\n          This is called, appropriately enough, sequence unpacking and works for any sequence on the right-hand side. Sequence\n          unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the\n          sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.",
+          "start_char": 2264,
+          "end_char": 3218,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p044",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 38,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3218
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.864106365197519
+        },
+        {
+          "id": "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 40,
+          "text": "The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.",
+          "start_char": 1571,
+          "end_char": 2354,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p040",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 34,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2354
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.86088652247867
+        },
+        {
+          "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+          "start_char": 1840,
+          "end_char": 2820,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.8600332903822314
+        },
+        {
+          "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 42,
+          "text": ">>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]",
+          "start_char": 346,
+          "end_char": 1319,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p042",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 36,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2460
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.8589803660523688
+        },
+        {
+          "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+          "start_char": 0,
+          "end_char": 677,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8527846424111952
+        },
+        {
+          "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+          "start_char": 571,
+          "end_char": 1421,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8462385626889147
+        },
+        {
+          "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": "which is more concise and readable.\n          A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for\n          or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if\n          clauses which follow it. For example, this listcomp combines the elements of two lists if they are not equal:\n          >>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]\n          [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]\n\n          and it’s equivalent to:\n\n          >>> combs = []\n          >>> for x in [1,2,3]:\n          ...   for y in [3,1,4]:\n          ...      if x != y:\n          ...         combs.append((x, y))\n                                                              (continues on next page)",
+          "start_char": 2013,
+          "end_char": 2843,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8450605617445573
+        }
+      ],
+      "component_rankings": {
+        "dense": [
+          {
+            "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": "is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed",
+            "start_char": 1349,
+            "end_char": 2253,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8983573378111535
+          },
+          {
+            "id": "24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": ">>> t = 12345, 54321, 'hello!'\n          >>> t[0]\n          12345\n          >>> t\n          (12345, 54321, 'hello!')\n          >>> # Tuples may be nested:\n          >>> u = t, (1, 2, 3, 4, 5)\n          >>> u\n          ((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))\n          >>> # Tuples are immutable:\n          >>> t[0] = 88888\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: 'tuple' object does not support item assignment\n          >>> # but they can contain mutable objects:\n          >>> v = ([1, 2, 3], [3, 2, 1])\n          >>> v\n          ([1, 2, 3], [3, 2, 1])\n          As you see, on output tuples are always enclosed in parentheses, so that nested tuples are interpreted correctly; they\n          may be input with or without surrounding parentheses, although often parentheses are necessary anyway (if the tuple",
+            "start_char": 452,
+            "end_char": 1338,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8916006748914332
+          },
+          {
+            "id": "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": "5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+            "start_char": 0,
+            "end_char": 440,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8656055411335519
+          },
+          {
+            "id": "316877eb003d66b00bf99f10c0750bb80fafd513be14f4ca08e29fb8963c463c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": "by following a value with a comma (it is not sufficient to enclose a single value in parentheses). Ugly, but effective.\n          For example:\n          >>> empty = ()\n          >>> singleton = 'hello', # <-- note trailing comma\n          >>> len(empty)\n          0\n          >>> len(singleton)\n          1\n          >>> singleton\n          ('hello',)\n          The statement t = 12345, 54321, 'hello!' is an example of tuple packing: the values 12345, 54321 and\n          'hello!' are packed together in a tuple. The reverse operation is also possible:\n\n          >>> x, y, z = t\n          This is called, appropriately enough, sequence unpacking and works for any sequence on the right-hand side. Sequence\n          unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the\n          sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.",
+            "start_char": 2264,
+            "end_char": 3218,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 4,
+            "score": 0.864106365197519
+          },
+          {
+            "id": "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 40,
+            "text": "The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.",
+            "start_char": 1571,
+            "end_char": 2354,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p040",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 34,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2354
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.86088652247867
+          },
+          {
+            "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+            "start_char": 1840,
+            "end_char": 2820,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 6,
+            "score": 0.8600332903822314
+          },
+          {
+            "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 42,
+            "text": ">>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]",
+            "start_char": 346,
+            "end_char": 1319,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p042",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 36,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2460
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 7,
+            "score": 0.8589803660523688
+          },
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+            "start_char": 0,
+            "end_char": 677,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 8,
+            "score": 0.8527846424111952
+          },
+          {
+            "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": ">>> from collections import deque\n          >>> queue = deque([\"Eric\", \"John\", \"Michael\"])\n          >>> queue.append(\"Terry\")  # Terry arrives\n          >>> queue.append(\"Graham\") # Graham arrives\n          >>> queue.popleft()        # The first to arrive now leaves\n          'Eric'\n          >>> queue.popleft()        # The second to arrive now leaves\n          'John'\n          >>> queue                  # Remaining queue in order of arrival\n          deque(['Michael', 'Terry', 'Graham'])\n\n          5.1.3 List Comprehensions\n          List comprehensions provide a concise way to create lists. Common applications are to make new lists where each\n          element is the result of some operations applied to each member of another sequence or iterable, or to create a\n          subsequence of those elements that satisfy a certain condition.",
+            "start_char": 571,
+            "end_char": 1421,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 9,
+            "score": 0.8462385626889147
+          },
+          {
+            "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": "which is more concise and readable.\n          A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for\n          or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if\n          clauses which follow it. For example, this listcomp combines the elements of two lists if they are not equal:\n          >>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]\n          [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]\n\n          and it’s equivalent to:\n\n          >>> combs = []\n          >>> for x in [1,2,3]:\n          ...   for y in [3,1,4]:\n          ...      if x != y:\n          ...         combs.append((x, y))\n                                                              (continues on next page)",
+            "start_char": 2013,
+            "end_char": 2843,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 10,
+            "score": 0.8450605617445573
+          }
+        ]
+      },
+      "context": {
+        "text": "[0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\nis part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed\n\n[24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3 | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\n>>> t = 12345, 54321, 'hello!'\n          >>> t[0]\n          12345\n          >>> t\n          (12345, 54321, 'hello!')\n          >>> # Tuples may be nested:\n          >>> u = t, (1, 2, 3, 4, 5)\n          >>> u\n          ((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))\n          >>> # Tuples are immutable:\n          >>> t[0] = 88888\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: 'tuple' object does not support item assignment\n          >>> # but they can contain mutable objects:\n          >>> v = ([1, 2, 3], [3, 2, 1])\n          >>> v\n          ([1, 2, 3], [3, 2, 1])\n          As you see, on output tuples are always enclosed in parentheses, so that nested tuples are interpreted correctly; they\n          may be input with or without surrounding parentheses, although often parentheses are necessary anyway (if the tuple\n\n[71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\n5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+        "chunk_ids": [
+          "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+          "24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3",
+          "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a"
+        ],
+        "characters": 2606,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": "is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed",
+            "start_char": 1349,
+            "end_char": 2253,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8983573378111535
+          },
+          {
+            "id": "24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": ">>> t = 12345, 54321, 'hello!'\n          >>> t[0]\n          12345\n          >>> t\n          (12345, 54321, 'hello!')\n          >>> # Tuples may be nested:\n          >>> u = t, (1, 2, 3, 4, 5)\n          >>> u\n          ((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))\n          >>> # Tuples are immutable:\n          >>> t[0] = 88888\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: 'tuple' object does not support item assignment\n          >>> # but they can contain mutable objects:\n          >>> v = ([1, 2, 3], [3, 2, 1])\n          >>> v\n          ([1, 2, 3], [3, 2, 1])\n          As you see, on output tuples are always enclosed in parentheses, so that nested tuples are interpreted correctly; they\n          may be input with or without surrounding parentheses, although often parentheses are necessary anyway (if the tuple",
+            "start_char": 452,
+            "end_char": 1338,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8916006748914332
+          },
+          {
+            "id": "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": "5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+            "start_char": 0,
+            "end_char": 440,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8656055411335519
+          }
+        ],
+        "excluded": [
+          {
+            "id": "316877eb003d66b00bf99f10c0750bb80fafd513be14f4ca08e29fb8963c463c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.011745399999199435
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "a80e9e9fc0522fd43ce052a0ab30ce290ad93ab5565b4e2579eb5e5d6712b417",
+      "request_sha256": "f88f7123a23ea3856a6a84a64bcce63921872af05843bc487b65d34605556cc2",
+      "response_id": "_rj6avjPH-X-2roP_abUyA0",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 607,
+        "candidatesTokenCount": 21,
+        "totalTokenCount": 628,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 607
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.0940000000009604,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "3f89ec722aef103c491bd0934bb27d166ea2cc4ded42ce3c3c977205dd48b61f",
+      "request_sha256": "2dd3af6b4666781f806a2f64eb3d8c432d8ef64b93c166b418aebf05681b7a67",
+      "response_id": "Dbn6apSCK_X-1e8P3JG-2Q4",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1656,
+        "candidatesTokenCount": 147,
+        "totalTokenCount": 1803,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1656
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.4219999999986612,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\nis part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed\n\n[24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3 | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\n>>> t = 12345, 54321, 'hello!'\n          >>> t[0]\n          12345\n          >>> t\n          (12345, 54321, 'hello!')\n          >>> # Tuples may be nested:\n          >>> u = t, (1, 2, 3, 4, 5)\n          >>> u\n          ((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))\n          >>> # Tuples are immutable:\n          >>> t[0] = 88888\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: 'tuple' object does not support item assignment\n          >>> # but they can contain mutable objects:\n          >>> v = ([1, 2, 3], [3, 2, 1])\n          >>> v\n          ([1, 2, 3], [3, 2, 1])\n          As you see, on output tuples are always enclosed in parentheses, so that nested tuples are interpreted correctly; they\n          may be input with or without surrounding parentheses, although often parentheses are necessary anyway (if the tuple\n\n[71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\n5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+        "chunk_ids": [
+          "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+          "24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3",
+          "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a"
+        ],
+        "characters": 2606,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": "is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed",
+            "start_char": 1349,
+            "end_char": 2253,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8983573378111535
+          },
+          {
+            "id": "24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": ">>> t = 12345, 54321, 'hello!'\n          >>> t[0]\n          12345\n          >>> t\n          (12345, 54321, 'hello!')\n          >>> # Tuples may be nested:\n          >>> u = t, (1, 2, 3, 4, 5)\n          >>> u\n          ((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))\n          >>> # Tuples are immutable:\n          >>> t[0] = 88888\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: 'tuple' object does not support item assignment\n          >>> # but they can contain mutable objects:\n          >>> v = ([1, 2, 3], [3, 2, 1])\n          >>> v\n          ([1, 2, 3], [3, 2, 1])\n          As you see, on output tuples are always enclosed in parentheses, so that nested tuples are interpreted correctly; they\n          may be input with or without surrounding parentheses, although often parentheses are necessary anyway (if the tuple",
+            "start_char": 452,
+            "end_char": 1338,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8916006748914332
+          },
+          {
+            "id": "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": "5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+            "start_char": 0,
+            "end_char": 440,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8656055411335519
+          }
+        ],
+        "excluded": [
+          {
+            "id": "316877eb003d66b00bf99f10c0750bb80fafd513be14f4ca08e29fb8963c463c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "7c355b3f6b0552c3192b6c52d362680da585a1f1d1ca15b03d956c131b5395ed",
+      "request_sha256": "8f56ce5fb6e8a936195f39c02c4b0bae8dbc3d198364935fd21514990c2182db",
+      "response_id": "HLn6atGmK4f92roPsaauuQo",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 2051,
+        "candidatesTokenCount": 251,
+        "totalTokenCount": 2302,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2051
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.7340000000003783,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\nis part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed\n\n[24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3 | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\n>>> t = 12345, 54321, 'hello!'\n          >>> t[0]\n          12345\n          >>> t\n          (12345, 54321, 'hello!')\n          >>> # Tuples may be nested:\n          >>> u = t, (1, 2, 3, 4, 5)\n          >>> u\n          ((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))\n          >>> # Tuples are immutable:\n          >>> t[0] = 88888\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: 'tuple' object does not support item assignment\n          >>> # but they can contain mutable objects:\n          >>> v = ([1, 2, 3], [3, 2, 1])\n          >>> v\n          ([1, 2, 3], [3, 2, 1])\n          As you see, on output tuples are always enclosed in parentheses, so that nested tuples are interpreted correctly; they\n          may be input with or without surrounding parentheses, although often parentheses are necessary anyway (if the tuple\n\n[71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\n5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+        "chunk_ids": [
+          "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+          "24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3",
+          "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a"
+        ],
+        "characters": 2606,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": "is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed",
+            "start_char": 1349,
+            "end_char": 2253,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8983573378111535
+          },
+          {
+            "id": "24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": ">>> t = 12345, 54321, 'hello!'\n          >>> t[0]\n          12345\n          >>> t\n          (12345, 54321, 'hello!')\n          >>> # Tuples may be nested:\n          >>> u = t, (1, 2, 3, 4, 5)\n          >>> u\n          ((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))\n          >>> # Tuples are immutable:\n          >>> t[0] = 88888\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: 'tuple' object does not support item assignment\n          >>> # but they can contain mutable objects:\n          >>> v = ([1, 2, 3], [3, 2, 1])\n          >>> v\n          ([1, 2, 3], [3, 2, 1])\n          As you see, on output tuples are always enclosed in parentheses, so that nested tuples are interpreted correctly; they\n          may be input with or without surrounding parentheses, although often parentheses are necessary anyway (if the tuple",
+            "start_char": 452,
+            "end_char": 1338,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8916006748914332
+          },
+          {
+            "id": "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 44,
+            "text": "5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+            "start_char": 0,
+            "end_char": 440,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p044",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 38,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3218
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8656055411335519
+          }
+        ],
+        "excluded": [
+          {
+            "id": "316877eb003d66b00bf99f10c0750bb80fafd513be14f4ca08e29fb8963c463c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\nis part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed\n\n[24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3 | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\n>>> t = 12345, 54321, 'hello!'\n          >>> t[0]\n          12345\n          >>> t\n          (12345, 54321, 'hello!')\n          >>> # Tuples may be nested:\n          >>> u = t, (1, 2, 3, 4, 5)\n          >>> u\n          ((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))\n          >>> # Tuples are immutable:\n          >>> t[0] = 88888\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: 'tuple' object does not support item assignment\n          >>> # but they can contain mutable objects:\n          >>> v = ([1, 2, 3], [3, 2, 1])\n          >>> v\n          ([1, 2, 3], [3, 2, 1])\n          As you see, on output tuples are always enclosed in parentheses, so that nested tuples are interpreted correctly; they\n          may be input with or without surrounding parentheses, although often parentheses are necessary anyway (if the tuple\n\n[71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a | source=data/raw/tutorial.pdf | PDF page=44 | chapter=5]\n5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+    "chunk_ids": [
+      "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+      "24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3",
+      "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a"
+    ],
+    "characters": 2606,
+    "budget_chars": 3500,
+    "max_chunks": 3,
+    "selected_chunks": [
+      {
+        "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 44,
+        "text": "is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed",
+        "start_char": 1349,
+        "end_char": 2253,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p044",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 38,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3218
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.8983573378111535
+      },
+      {
+        "id": "24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 44,
+        "text": ">>> t = 12345, 54321, 'hello!'\n          >>> t[0]\n          12345\n          >>> t\n          (12345, 54321, 'hello!')\n          >>> # Tuples may be nested:\n          >>> u = t, (1, 2, 3, 4, 5)\n          >>> u\n          ((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))\n          >>> # Tuples are immutable:\n          >>> t[0] = 88888\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: 'tuple' object does not support item assignment\n          >>> # but they can contain mutable objects:\n          >>> v = ([1, 2, 3], [3, 2, 1])\n          >>> v\n          ([1, 2, 3], [3, 2, 1])\n          As you see, on output tuples are always enclosed in parentheses, so that nested tuples are interpreted correctly; they\n          may be input with or without surrounding parentheses, although often parentheses are necessary anyway (if the tuple",
+        "start_char": 452,
+        "end_char": 1338,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p044",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 38,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3218
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.8916006748914332
+      },
+      {
+        "id": "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 44,
+        "text": "5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+        "start_char": 0,
+        "end_char": 440,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p044",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 38,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3218
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.8656055411335519
+      }
+    ],
+    "excluded": [
+      {
+        "id": "316877eb003d66b00bf99f10c0750bb80fafd513be14f4ca08e29fb8963c463c",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "7a9a2596cd26d3e5152c6357b5919f22741ed27cdc33767790657ed05eff446c",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+        "reason": "max_chunks"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [
+    {
+      "event": "citation_format_repair",
+      "rejected_proposal": {
+        "abstain": false,
+        "answer": "No, it is not possible to assign to the individual items of a tuple because tuples are immutable. However, tuples can contain mutable objects such as lists.",
+        "reason": "The tutorial explicitly states that it is not possible to assign to individual items of a tuple, but it is possible to create tuples containing mutable objects like lists.",
+        "citations": [
+          "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf"
+        ]
+      },
+      "reason": "Citation IDs must be drawn from current context and appear inline in answer; separate array alone is insufficient."
+    }
+  ],
+  "search_calls": 1,
+  "generated_search_queries": [
+    "tuple elements assignable tuple contain a list"
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 44.455483800000366,
+    "pacing_seconds_this_invocation": 40.1730000000025,
+    "wall_seconds_excluding_pacing": 4.282483799997863,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": true,
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 44,
+        "evidence": "It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists."
+      }
+    ],
+    "expected_answer": "Individual tuple items cannot be assigned to, but tuples may contain mutable objects such as lists.",
+    "absence_reason": null,
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "dense",
+    "query": "Are tuple elements assignable, and can a tuple contain a list?",
+    "filter": null,
+    "ranking": [
+      {
+        "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 44,
+        "text": "is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed",
+        "start_char": 1349,
+        "end_char": 2253,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p044",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 38,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3218
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.9035584926605225
+      },
+      {
+        "id": "24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 44,
+        "text": ">>> t = 12345, 54321, 'hello!'\n          >>> t[0]\n          12345\n          >>> t\n          (12345, 54321, 'hello!')\n          >>> # Tuples may be nested:\n          >>> u = t, (1, 2, 3, 4, 5)\n          >>> u\n          ((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))\n          >>> # Tuples are immutable:\n          >>> t[0] = 88888\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: 'tuple' object does not support item assignment\n          >>> # but they can contain mutable objects:\n          >>> v = ([1, 2, 3], [3, 2, 1])\n          >>> v\n          ([1, 2, 3], [3, 2, 1])\n          As you see, on output tuples are always enclosed in parentheses, so that nested tuples are interpreted correctly; they\n          may be input with or without surrounding parentheses, although often parentheses are necessary anyway (if the tuple",
+        "start_char": 452,
+        "end_char": 1338,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p044",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 38,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3218
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.8743075132369995
+      },
+      {
+        "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 45,
+        "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+        "start_char": 1840,
+        "end_char": 2820,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p045",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 39,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3567
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.8688568551029665
+      },
+      {
+        "id": "316877eb003d66b00bf99f10c0750bb80fafd513be14f4ca08e29fb8963c463c",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 44,
+        "text": "by following a value with a comma (it is not sufficient to enclose a single value in parentheses). Ugly, but effective.\n          For example:\n          >>> empty = ()\n          >>> singleton = 'hello', # <-- note trailing comma\n          >>> len(empty)\n          0\n          >>> len(singleton)\n          1\n          >>> singleton\n          ('hello',)\n          The statement t = 12345, 54321, 'hello!' is an example of tuple packing: the values 12345, 54321 and\n          'hello!' are packed together in a tuple. The reverse operation is also possible:\n\n          >>> x, y, z = t\n          This is called, appropriately enough, sequence unpacking and works for any sequence on the right-hand side. Sequence\n          unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the\n          sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.",
+        "start_char": 2264,
+        "end_char": 3218,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p044",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 38,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3218
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 4,
+        "score": 0.8562051057815552
+      },
+      {
+        "id": "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 44,
+        "text": "5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+        "start_char": 0,
+        "end_char": 440,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p044",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 38,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3218
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 5,
+        "score": 0.8540490865707397
+      },
+      {
+        "id": "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 40,
+        "text": "The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.",
+        "start_char": 1571,
+        "end_char": 2354,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p040",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 34,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2354
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 6,
+        "score": 0.8464319705963135
+      },
+      {
+        "id": "f99e80c9031dd10c60748ffd7e003ba75531b07c702c526269b582400ca886dc",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 48,
+        "text": "Note that in Python, unlike C, assignment inside expressions must be done explicitly with the walrus operator :=.\n          This avoids a common class of problems encountered in C programs: typing = in an expression when == was intended.\n\n          5.8 Comparing  Sequences  and Other Types",
+        "start_char": 1917,
+        "end_char": 2207,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p048",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 42,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 3790
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 7,
+        "score": 0.8322768907381972
+      },
+      {
+        "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 42,
+        "text": ">>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]",
+        "start_char": 346,
+        "end_char": 1319,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p042",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 36,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2460
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 8,
+        "score": 0.8309321403503418
+      },
+      {
+        "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 39,
+        "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+        "start_char": 0,
+        "end_char": 677,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p039",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 33,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 9,
+        "score": 0.8295107483863831
+      },
+      {
+        "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 41,
+        "text": "which is more concise and readable.\n          A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for\n          or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if\n          clauses which follow it. For example, this listcomp combines the elements of two lists if they are not equal:\n          >>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]\n          [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]\n\n          and it’s equivalent to:\n\n          >>> combs = []\n          >>> for x in [1,2,3]:\n          ...   for y in [3,1,4]:\n          ...      if x != y:\n          ...         combs.append((x, y))\n                                                              (continues on next page)",
+        "start_char": 2013,
+        "end_char": 2843,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p041",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 35,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2843
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 10,
+        "score": 0.8292837390090153
+      }
+    ],
+    "components": {
+      "dense": [
+        {
+          "id": "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 44,
+          "text": "is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists.\n          Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples\n          are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later\n          in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements\n          are usually homogeneous and are accessed by iterating over the list.\n          A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accom-\n          modate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed",
+          "start_char": 1349,
+          "end_char": 2253,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p044",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 38,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3218
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.9035584926605225
+        },
+        {
+          "id": "24069354e1630eb0b8ee66248e5e64e89515466ef212fad986151a1ee9aec9a3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 44,
+          "text": ">>> t = 12345, 54321, 'hello!'\n          >>> t[0]\n          12345\n          >>> t\n          (12345, 54321, 'hello!')\n          >>> # Tuples may be nested:\n          >>> u = t, (1, 2, 3, 4, 5)\n          >>> u\n          ((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))\n          >>> # Tuples are immutable:\n          >>> t[0] = 88888\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: 'tuple' object does not support item assignment\n          >>> # but they can contain mutable objects:\n          >>> v = ([1, 2, 3], [3, 2, 1])\n          >>> v\n          ([1, 2, 3], [3, 2, 1])\n          As you see, on output tuples are always enclosed in parentheses, so that nested tuples are interpreted correctly; they\n          may be input with or without surrounding parentheses, although often parentheses are necessary anyway (if the tuple",
+          "start_char": 452,
+          "end_char": 1338,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p044",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 38,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3218
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8743075132369995
+        },
+        {
+          "id": "c3d9f69f05fb3894ac2992f1d274d8203cabd257f2d337328479113342ef7047",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": "Another useful data type built into Python is the dictionary (see typesmapping). Dictionaries are sometimes found\n          in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range\n          of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be\n          keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable\n          object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified\n          in place using index assignments, slice assignments, or methods like append() and extend().\n          It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within\n          one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs",
+          "start_char": 1840,
+          "end_char": 2820,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8688568551029665
+        },
+        {
+          "id": "316877eb003d66b00bf99f10c0750bb80fafd513be14f4ca08e29fb8963c463c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 44,
+          "text": "by following a value with a comma (it is not sufficient to enclose a single value in parentheses). Ugly, but effective.\n          For example:\n          >>> empty = ()\n          >>> singleton = 'hello', # <-- note trailing comma\n          >>> len(empty)\n          0\n          >>> len(singleton)\n          1\n          >>> singleton\n          ('hello',)\n          The statement t = 12345, 54321, 'hello!' is an example of tuple packing: the values 12345, 54321 and\n          'hello!' are packed together in a tuple. The reverse operation is also possible:\n\n          >>> x, y, z = t\n          This is called, appropriately enough, sequence unpacking and works for any sequence on the right-hand side. Sequence\n          unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the\n          sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.",
+          "start_char": 2264,
+          "end_char": 3218,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p044",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 38,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3218
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8562051057815552
+        },
+        {
+          "id": "71fcedcdd758ee179e46fa7001f3b1e97ec5ea2fe150d10c893c57e60d48ce5a",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 44,
+          "text": "5.3 Tuples and Sequences\n\n          We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two\n          examples of sequence data types (see typesseq). Since Python is an evolving language, other sequence data types may\n          be added. There is also another standard sequence data type: the tuple.\n          A tuple consists of a number of values separated by commas, for instance:",
+          "start_char": 0,
+          "end_char": 440,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p044",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 38,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3218
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.8540490865707397
+        },
+        {
+          "id": "34a95417489f2a4580ca42d2fb2438a9f4a74ae341477bb028f6c34057640aac",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 40,
+          "text": "The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved\n          (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the\n          stack, use pop() without an explicit index. For example:\n          >>> stack = [3, 4, 5]\n          >>> stack.append(6)\n          >>> stack.append(7)\n          >>> stack\n          [3, 4, 5, 6, 7]\n          >>> stack.pop()\n          7\n          >>> stack\n          [3, 4, 5, 6]\n          >>> stack.pop()\n          6\n          >>> stack.pop()\n          5\n          >>> stack\n          [3, 4]\n           1 Other languages may return the mutated object, which allows method chaining, such as d->insert(\"a\")->remove(\"b\")->sort();.",
+          "start_char": 1571,
+          "end_char": 2354,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p040",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 34,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2354
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.8464319705963135
+        },
+        {
+          "id": "f99e80c9031dd10c60748ffd7e003ba75531b07c702c526269b582400ca886dc",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 48,
+          "text": "Note that in Python, unlike C, assignment inside expressions must be done explicitly with the walrus operator :=.\n          This avoids a common class of problems encountered in C programs: typing = in an expression when == was intended.\n\n          5.8 Comparing  Sequences  and Other Types",
+          "start_char": 1917,
+          "end_char": 2207,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p048",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 42,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3790
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.8322768907381972
+        },
+        {
+          "id": "fb05b63d72c0eb5d31bcbeaaf4571dd3fb2853ad5cbbacccede2d70cd963378b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 42,
+          "text": ">>> vec = [-4, -2, 0, 2, 4]\n          >>> # create a new list with the values doubled\n          >>> [x*2 for x in vec]\n          [-8, -4, 0, 4, 8]\n          >>> # filter the list to exclude negative numbers\n          >>> [x for x in vec if x >= 0]\n          [0, 2, 4]\n          >>> # apply a function to all the elements\n          >>> [abs(x) for x in vec]\n          [4, 2, 0, 2, 4]\n          >>> # call a method on each element\n          >>> freshfruit = [' banana', ' loganberry ', 'passion fruit ']\n          >>> [weapon.strip() for weapon in freshfruit]\n          ['banana', 'loganberry', 'passion fruit']\n          >>> # create a list of 2-tuples like (number, square)\n          >>> [(x, x**2) for x in range(6)]\n          [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]\n          >>> # the tuple must be parenthesized, otherwise an error is raised\n          >>> [x, x**2 for x in range(6)]\n           File \"<stdin>\", line 1\n             [x, x**2 for x in range(6)]",
+          "start_char": 346,
+          "end_char": 1319,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p042",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 36,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2460
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8309321403503418
+        },
+        {
+          "id": "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "CHAPTER\n\n                                                                    FIVE\n\n                                                     DATA  STRUCTURES\n\n          This chapter describes some things you’ve learned about already in more detail, and adds some new things as well.\n\n          5.1 More on Lists\n\n          The list data type has some more methods. Here are all of the methods of list objects:\n          list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x].\n\n          list.extend(iterable)\n             Extend the list by appending all the items from the iterable. Similar to a[len(a):] = iterable.\n          list.insert(i, x)",
+          "start_char": 0,
+          "end_char": 677,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8295107483863831
+        },
+        {
+          "id": "c3b81df47f0e68b7932d3b9c8ad09e3838c65b8839f823e78559eb5b0c0d0800",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": "which is more concise and readable.\n          A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for\n          or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if\n          clauses which follow it. For example, this listcomp combines the elements of two lists if they are not equal:\n          >>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]\n          [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]\n\n          and it’s equivalent to:\n\n          >>> combs = []\n          >>> for x in [1,2,3]:\n          ...   for y in [3,1,4]:\n          ...      if x != y:\n          ...         combs.append((x, y))\n                                                              (continues on next page)",
+          "start_char": 2013,
+          "end_char": 2843,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8292837390090153
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": true,
+    "original_query_evidence_hit_at_3": true,
+    "actual_final_context_exact_evidence": true,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "trace_sha256": "df3e54495f95c9a345b7a244df43f2255a4260b122d68b936ed722d951f964ad"
+}

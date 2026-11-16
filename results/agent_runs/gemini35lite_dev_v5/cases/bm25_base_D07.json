@@ -1,0 +1,1292 @@
+{
+  "status": "answered",
+  "answer": "A Python module is a file containing Python definitions and statements [9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd]. The filename is related to the module name in that the filename is the module name with the suffix .py appended [9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd].",
+  "citations": [
+    "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd"
+  ],
+  "reason": "The supplied corpus directly defines a module as a file containing Python definitions and statements, and explains that the file name is the module name with the suffix .py appended.",
+  "guard": "citation_ids_valid; semantic_support_requires_review",
+  "query_id": "D07",
+  "config_id": "bm25_base",
+  "public_query": {
+    "id": "D07",
+    "question": "What is a Python module, and how is its filename related to its name?",
+    "filter": null
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "Python module filename related to its name",
+      "filter": null,
+      "method": "bm25",
+      "ranking": [
+        {
+          "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 50,
+          "text": "A module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning",
+          "start_char": 305,
+          "end_char": 1200,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p050",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 44,
+            "chapter_title": "Modules",
+            "normalized_characters": 3193
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.912016772299428,
+          "rank": 1
+        },
+        {
+          "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+          "start_char": 1046,
+          "end_char": 1635,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.797391098685616,
+          "rank": 2
+        },
+        {
+          "id": "3318bd52b64a9b8f37066dd2231e4afc3da11b6da605e67b73f7a1868db122a8",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "def fib(n): # write Fibonacci series up to n\n             a, b = 0, 1\n             while a < n:\n                print(a, end=' ')\n                a, b = b, a+b\n             print()\n          def fib2(n): # return Fibonacci series up to n\n             result = []\n             a, b = 0, 1\n             while a < n:\n                result.append(a)\n                a, b = b, a+b\n             return result\n\n          Now enter the Python interpreter and import this module with the following command:\n          >>> import fibo\n\n          This does not add the names of the functions defined in fibo directly to the current namespace (see Python Scopes\n          and Namespaces for more details); it only adds the module name fibo there. Using the module name you can access\n          the functions:",
+          "start_char": 1647,
+          "end_char": 2443,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.531973689805564,
+          "rank": 3
+        },
+        {
+          "id": "490b78aed0a916d50871e94ed285d57fe62572b6d6d7a0c7d4e87186a098c422",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "When packages are structured into subpackages (as with the sound package in the example), you can use absolute\n          imports to refer to submodules of siblings packages. For example, if the module sound.filters.vocoder needs\n          to use the echo module in the sound.effects package, it can use from sound.effects import echo.\n          You can also write relative imports, with the from module import name form of import statement. These im-\n          ports use leading dots to indicate the current and parent packages involved in the relative import. From the surround\n          module for example, you might use:\n\n          from . import echo\n          from .. import formats\n          from ..filters import equalizer\n          Note that relative imports are based on the name of the current module. Since the name of the main module is\n          always \"__main__\", modules intended for use as the main module of a Python application must always use absolute\n          imports.",
+          "start_char": 2422,
+          "end_char": 3410,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.19788626935649,
+          "rank": 4
+        },
+        {
+          "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "6.1.3 “Compiled” Python files\n          To speed up loading modules, Python caches the compiled version of each module in the __pycache__ directory\n          under the name module.version.pyc, where the version encodes the format of the compiled file; it generally\n          contains the Python version number. For example, in CPython release 3.3 the compiled version of spam.py would\n          be cached as __pycache__/spam.cpython-33.pyc. This naming convention allows compiled modules from\n          different releases and different versions of Python to coexist.\n          Python checks the modification date of the source against the compiled version to see if it’s out of date and needs\n          to be recompiled. This is a completely automatic process. Also, the compiled modules are platform-independent, so\n          the same library can be shared among systems with different architectures.",
+          "start_char": 452,
+          "end_char": 1353,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 6.033762949410892,
+          "rank": 5
+        },
+        {
+          "id": "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "If you quit from the Python interpreter and enter it again, the definitions you have made (functions and variables)\n          are lost. Therefore, if you want to write a somewhat longer program, you are better off using a text editor to prepare\n          the input for the interpreter and running it with that file as input instead. This is known as creating a script. As your\n          program gets longer, you may want to split it into several files for easier maintenance. You may also want to use a\n          handy function that you’ve written in several programs without copying its definition into each program.\n          To support this, Python has a way to put definitions in a file and use them in a script or in an interactive instance\n          of the interpreter. Such a file is called a module; definitions from a module can be imported into other modules or",
+          "start_char": 164,
+          "end_char": 1035,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 5.873096479863266,
+          "rank": 6
+        },
+        {
+          "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "7.2.2 Saving structured data with json\n          Strings can easily be written to and read from a file. Numbers take a bit more effort, since the read() method only\n          returns strings, which will have to be passed to a function like int(), which takes a string like '123' and returns its\n          numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and\n          serializing by hand becomes complicated.\n          Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows\n          you to use the popular data interchange format called JSON (JavaScript Object Notation). The standard module called\n          json can take Python data hierarchies, and convert them to string representations; this process is called serializing.\n          Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing,",
+          "start_char": 1570,
+          "end_char": 2550,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 5.524090894441484,
+          "rank": 7
+        },
+        {
+          "id": "b46ecf1a04f5ca549e82f88177a347cf13b8f77ff52a1f29552a32b2432ad054",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "This loads the submodule sound.effects.echo. It must be referenced with its full name.\n\n          sound.effects.echo.echofilter(input, output, delay=0.7, atten=4)\n\n          An alternative way of importing the submodule is:\n          from sound.effects import echo\n\n          This also loads the submodule echo, and makes it available without its package prefix, so it can be used as follows:\n\n          echo.echofilter(input, output, delay=0.7, atten=4)\n\n          Yet another variation is to import the desired function or variable directly:\n          from sound.effects.echo import echofilter\n\n          Again, this loads the submodule echo, but this makes its function echofilter() directly available:\n\n          echofilter(input, output, delay=0.7, atten=4)",
+          "start_char": 964,
+          "end_char": 1726,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 5.376935910633959,
+          "rank": 8
+        },
+        {
+          "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 50,
+          "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+          "start_char": 1929,
+          "end_char": 2916,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p050",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 44,
+            "chapter_title": "Modules",
+            "normalized_characters": 3193
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 5.320674384651737,
+          "rank": 9
+        },
+        {
+          "id": "f5372b8b9e7a0c463b7bd68120e15d846abd1e1add8d1969b3478c9e987c3af5",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 67,
+          "text": "Even if a statement or expression is syntactically correct, it may cause an error when an attempt is made to execute\n          it. Errors detected during execution are called exceptions and are not unconditionally fatal: you will soon learn how\n          to handle them in Python programs. Most exceptions are not handled by programs, however, and result in error\n          messages as shown here:\n          >>> 10 * (1/0)\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          ZeroDivisionError: division by zero\n          >>> 4 + spam*3\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: name 'spam' is not defined\n          >>> '2' + 2\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: can only concatenate str (not \"int\") to str",
+          "start_char": 1272,
+          "end_char": 2176,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p067",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 61,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2547
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 5.155564691619604,
+          "rank": 10
+        }
+      ],
+      "component_rankings": {
+        "bm25": [
+          {
+            "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 50,
+            "text": "A module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning",
+            "start_char": 305,
+            "end_char": 1200,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p050",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 44,
+              "chapter_title": "Modules",
+              "normalized_characters": 3193
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.912016772299428,
+            "rank": 1
+          },
+          {
+            "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+            "start_char": 1046,
+            "end_char": 1635,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.797391098685616,
+            "rank": 2
+          },
+          {
+            "id": "3318bd52b64a9b8f37066dd2231e4afc3da11b6da605e67b73f7a1868db122a8",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": "def fib(n): # write Fibonacci series up to n\n             a, b = 0, 1\n             while a < n:\n                print(a, end=' ')\n                a, b = b, a+b\n             print()\n          def fib2(n): # return Fibonacci series up to n\n             result = []\n             a, b = 0, 1\n             while a < n:\n                result.append(a)\n                a, b = b, a+b\n             return result\n\n          Now enter the Python interpreter and import this module with the following command:\n          >>> import fibo\n\n          This does not add the names of the functions defined in fibo directly to the current namespace (see Python Scopes\n          and Namespaces for more details); it only adds the module name fibo there. Using the module name you can access\n          the functions:",
+            "start_char": 1647,
+            "end_char": 2443,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.531973689805564,
+            "rank": 3
+          },
+          {
+            "id": "490b78aed0a916d50871e94ed285d57fe62572b6d6d7a0c7d4e87186a098c422",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 56,
+            "text": "When packages are structured into subpackages (as with the sound package in the example), you can use absolute\n          imports to refer to submodules of siblings packages. For example, if the module sound.filters.vocoder needs\n          to use the echo module in the sound.effects package, it can use from sound.effects import echo.\n          You can also write relative imports, with the from module import name form of import statement. These im-\n          ports use leading dots to indicate the current and parent packages involved in the relative import. From the surround\n          module for example, you might use:\n\n          from . import echo\n          from .. import formats\n          from ..filters import equalizer\n          Note that relative imports are based on the name of the current module. Since the name of the main module is\n          always \"__main__\", modules intended for use as the main module of a Python application must always use absolute\n          imports.",
+            "start_char": 2422,
+            "end_char": 3410,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p056",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 50,
+              "chapter_title": "Modules",
+              "normalized_characters": 3410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.19788626935649,
+            "rank": 4
+          },
+          {
+            "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 52,
+            "text": "6.1.3 “Compiled” Python files\n          To speed up loading modules, Python caches the compiled version of each module in the __pycache__ directory\n          under the name module.version.pyc, where the version encodes the format of the compiled file; it generally\n          contains the Python version number. For example, in CPython release 3.3 the compiled version of spam.py would\n          be cached as __pycache__/spam.cpython-33.pyc. This naming convention allows compiled modules from\n          different releases and different versions of Python to coexist.\n          Python checks the modification date of the source against the compiled version to see if it’s out of date and needs\n          to be recompiled. This is a completely automatic process. Also, the compiled modules are platform-independent, so\n          the same library can be shared among systems with different architectures.",
+            "start_char": 452,
+            "end_char": 1353,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p052",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 46,
+              "chapter_title": "Modules",
+              "normalized_characters": 4192
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.033762949410892,
+            "rank": 5
+          },
+          {
+            "id": "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": "If you quit from the Python interpreter and enter it again, the definitions you have made (functions and variables)\n          are lost. Therefore, if you want to write a somewhat longer program, you are better off using a text editor to prepare\n          the input for the interpreter and running it with that file as input instead. This is known as creating a script. As your\n          program gets longer, you may want to split it into several files for easier maintenance. You may also want to use a\n          handy function that you’ve written in several programs without copying its definition into each program.\n          To support this, Python has a way to put definitions in a file and use them in a script or in an interactive instance\n          of the interpreter. Such a file is called a module; definitions from a module can be imported into other modules or",
+            "start_char": 164,
+            "end_char": 1035,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 5.873096479863266,
+            "rank": 6
+          },
+          {
+            "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 65,
+            "text": "7.2.2 Saving structured data with json\n          Strings can easily be written to and read from a file. Numbers take a bit more effort, since the read() method only\n          returns strings, which will have to be passed to a function like int(), which takes a string like '123' and returns its\n          numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and\n          serializing by hand becomes complicated.\n          Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows\n          you to use the popular data interchange format called JSON (JavaScript Object Notation). The standard module called\n          json can take Python data hierarchies, and convert them to string representations; this process is called serializing.\n          Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing,",
+            "start_char": 1570,
+            "end_char": 2550,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p065",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 59,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3494
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 5.524090894441484,
+            "rank": 7
+          },
+          {
+            "id": "b46ecf1a04f5ca549e82f88177a347cf13b8f77ff52a1f29552a32b2432ad054",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 55,
+            "text": "This loads the submodule sound.effects.echo. It must be referenced with its full name.\n\n          sound.effects.echo.echofilter(input, output, delay=0.7, atten=4)\n\n          An alternative way of importing the submodule is:\n          from sound.effects import echo\n\n          This also loads the submodule echo, and makes it available without its package prefix, so it can be used as follows:\n\n          echo.echofilter(input, output, delay=0.7, atten=4)\n\n          Yet another variation is to import the desired function or variable directly:\n          from sound.effects.echo import echofilter\n\n          Again, this loads the submodule echo, but this makes its function echofilter() directly available:\n\n          echofilter(input, output, delay=0.7, atten=4)",
+            "start_char": 964,
+            "end_char": 1726,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p055",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 49,
+              "chapter_title": "Modules",
+              "normalized_characters": 3544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 5.376935910633959,
+            "rank": 8
+          },
+          {
+            "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 50,
+            "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+            "start_char": 1929,
+            "end_char": 2916,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p050",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 44,
+              "chapter_title": "Modules",
+              "normalized_characters": 3193
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 5.320674384651737,
+            "rank": 9
+          },
+          {
+            "id": "f5372b8b9e7a0c463b7bd68120e15d846abd1e1add8d1969b3478c9e987c3af5",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 67,
+            "text": "Even if a statement or expression is syntactically correct, it may cause an error when an attempt is made to execute\n          it. Errors detected during execution are called exceptions and are not unconditionally fatal: you will soon learn how\n          to handle them in Python programs. Most exceptions are not handled by programs, however, and result in error\n          messages as shown here:\n          >>> 10 * (1/0)\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          ZeroDivisionError: division by zero\n          >>> 4 + spam*3\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: name 'spam' is not defined\n          >>> '2' + 2\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: can only concatenate str (not \"int\") to str",
+            "start_char": 1272,
+            "end_char": 2176,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p067",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 61,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2547
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 5.155564691619604,
+            "rank": 10
+          }
+        ]
+      },
+      "context": {
+        "text": "[bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6 | source=data/raw/tutorial.pdf | PDF page=50 | chapter=6]\nA module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning\n\n[9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\ninto the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module\n\n[3318bd52b64a9b8f37066dd2231e4afc3da11b6da605e67b73f7a1868db122a8 | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\ndef fib(n): # write Fibonacci series up to n\n             a, b = 0, 1\n             while a < n:\n                print(a, end=' ')\n                a, b = b, a+b\n             print()\n          def fib2(n): # return Fibonacci series up to n\n             result = []\n             a, b = 0, 1\n             while a < n:\n                result.append(a)\n                a, b = b, a+b\n             return result\n\n          Now enter the Python interpreter and import this module with the following command:\n          >>> import fibo\n\n          This does not add the names of the functions defined in fibo directly to the current namespace (see Python Scopes\n          and Namespaces for more details); it only adds the module name fibo there. Using the module name you can access\n          the functions:",
+        "chunk_ids": [
+          "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+          "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+          "3318bd52b64a9b8f37066dd2231e4afc3da11b6da605e67b73f7a1868db122a8"
+        ],
+        "characters": 2656,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 50,
+            "text": "A module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning",
+            "start_char": 305,
+            "end_char": 1200,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p050",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 44,
+              "chapter_title": "Modules",
+              "normalized_characters": 3193
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.912016772299428,
+            "rank": 1
+          },
+          {
+            "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+            "start_char": 1046,
+            "end_char": 1635,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.797391098685616,
+            "rank": 2
+          },
+          {
+            "id": "3318bd52b64a9b8f37066dd2231e4afc3da11b6da605e67b73f7a1868db122a8",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": "def fib(n): # write Fibonacci series up to n\n             a, b = 0, 1\n             while a < n:\n                print(a, end=' ')\n                a, b = b, a+b\n             print()\n          def fib2(n): # return Fibonacci series up to n\n             result = []\n             a, b = 0, 1\n             while a < n:\n                result.append(a)\n                a, b = b, a+b\n             return result\n\n          Now enter the Python interpreter and import this module with the following command:\n          >>> import fibo\n\n          This does not add the names of the functions defined in fibo directly to the current namespace (see Python Scopes\n          and Namespaces for more details); it only adds the module name fibo there. Using the module name you can access\n          the functions:",
+            "start_char": 1647,
+            "end_char": 2443,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.531973689805564,
+            "rank": 3
+          }
+        ],
+        "excluded": [
+          {
+            "id": "490b78aed0a916d50871e94ed285d57fe62572b6d6d7a0c7d4e87186a098c422",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "b46ecf1a04f5ca549e82f88177a347cf13b8f77ff52a1f29552a32b2432ad054",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "f5372b8b9e7a0c463b7bd68120e15d846abd1e1add8d1969b3478c9e987c3af5",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.0006294000013440382
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "51e235a60ce911aa9a73524a32eb2a4762db872dd3eef5c46646a1bc26ef4cc8",
+      "request_sha256": "824be89a842d70274de8ab6a2e85cb1e4bbf26fa3adc392ed3e2ef29972675ca",
+      "response_id": "lLn6atucHd-WosUP5deJkQg",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 609,
+        "candidatesTokenCount": 20,
+        "totalTokenCount": 629,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 609
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.3120000000017171,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "1d085d1d91580cd726241fcc9e89aa8799dd476c68e443ec3c1c36f369cab728",
+      "request_sha256": "13b37f831f5eaec38816976ead6abff039b2fa8d8ed109fa1a8d98658bd2aa9d",
+      "response_id": "o7n6aomLLdjTrfcPnLDQ2AE",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1600,
+        "candidatesTokenCount": 263,
+        "totalTokenCount": 1863,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1600
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.7340000000003783,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6 | source=data/raw/tutorial.pdf | PDF page=50 | chapter=6]\nA module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning\n\n[9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\ninto the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module\n\n[3318bd52b64a9b8f37066dd2231e4afc3da11b6da605e67b73f7a1868db122a8 | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\ndef fib(n): # write Fibonacci series up to n\n             a, b = 0, 1\n             while a < n:\n                print(a, end=' ')\n                a, b = b, a+b\n             print()\n          def fib2(n): # return Fibonacci series up to n\n             result = []\n             a, b = 0, 1\n             while a < n:\n                result.append(a)\n                a, b = b, a+b\n             return result\n\n          Now enter the Python interpreter and import this module with the following command:\n          >>> import fibo\n\n          This does not add the names of the functions defined in fibo directly to the current namespace (see Python Scopes\n          and Namespaces for more details); it only adds the module name fibo there. Using the module name you can access\n          the functions:",
+        "chunk_ids": [
+          "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+          "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+          "3318bd52b64a9b8f37066dd2231e4afc3da11b6da605e67b73f7a1868db122a8"
+        ],
+        "characters": 2656,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 50,
+            "text": "A module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning",
+            "start_char": 305,
+            "end_char": 1200,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p050",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 44,
+              "chapter_title": "Modules",
+              "normalized_characters": 3193
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.912016772299428,
+            "rank": 1
+          },
+          {
+            "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+            "start_char": 1046,
+            "end_char": 1635,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.797391098685616,
+            "rank": 2
+          },
+          {
+            "id": "3318bd52b64a9b8f37066dd2231e4afc3da11b6da605e67b73f7a1868db122a8",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": "def fib(n): # write Fibonacci series up to n\n             a, b = 0, 1\n             while a < n:\n                print(a, end=' ')\n                a, b = b, a+b\n             print()\n          def fib2(n): # return Fibonacci series up to n\n             result = []\n             a, b = 0, 1\n             while a < n:\n                result.append(a)\n                a, b = b, a+b\n             return result\n\n          Now enter the Python interpreter and import this module with the following command:\n          >>> import fibo\n\n          This does not add the names of the functions defined in fibo directly to the current namespace (see Python Scopes\n          and Namespaces for more details); it only adds the module name fibo there. Using the module name you can access\n          the functions:",
+            "start_char": 1647,
+            "end_char": 2443,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.531973689805564,
+            "rank": 3
+          }
+        ],
+        "excluded": [
+          {
+            "id": "490b78aed0a916d50871e94ed285d57fe62572b6d6d7a0c7d4e87186a098c422",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "b46ecf1a04f5ca549e82f88177a347cf13b8f77ff52a1f29552a32b2432ad054",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "f5372b8b9e7a0c463b7bd68120e15d846abd1e1add8d1969b3478c9e987c3af5",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6 | source=data/raw/tutorial.pdf | PDF page=50 | chapter=6]\nA module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning\n\n[9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\ninto the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module\n\n[3318bd52b64a9b8f37066dd2231e4afc3da11b6da605e67b73f7a1868db122a8 | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\ndef fib(n): # write Fibonacci series up to n\n             a, b = 0, 1\n             while a < n:\n                print(a, end=' ')\n                a, b = b, a+b\n             print()\n          def fib2(n): # return Fibonacci series up to n\n             result = []\n             a, b = 0, 1\n             while a < n:\n                result.append(a)\n                a, b = b, a+b\n             return result\n\n          Now enter the Python interpreter and import this module with the following command:\n          >>> import fibo\n\n          This does not add the names of the functions defined in fibo directly to the current namespace (see Python Scopes\n          and Namespaces for more details); it only adds the module name fibo there. Using the module name you can access\n          the functions:",
+    "chunk_ids": [
+      "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+      "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+      "3318bd52b64a9b8f37066dd2231e4afc3da11b6da605e67b73f7a1868db122a8"
+    ],
+    "characters": 2656,
+    "budget_chars": 3500,
+    "max_chunks": 3,
+    "selected_chunks": [
+      {
+        "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 50,
+        "text": "A module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning",
+        "start_char": 305,
+        "end_char": 1200,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p050",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 44,
+          "chapter_title": "Modules",
+          "normalized_characters": 3193
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 6.912016772299428,
+        "rank": 1
+      },
+      {
+        "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 49,
+        "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+        "start_char": 1046,
+        "end_char": 1635,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p049",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 43,
+          "chapter_title": "Modules",
+          "normalized_characters": 2700
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 6.797391098685616,
+        "rank": 2
+      },
+      {
+        "id": "3318bd52b64a9b8f37066dd2231e4afc3da11b6da605e67b73f7a1868db122a8",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 49,
+        "text": "def fib(n): # write Fibonacci series up to n\n             a, b = 0, 1\n             while a < n:\n                print(a, end=' ')\n                a, b = b, a+b\n             print()\n          def fib2(n): # return Fibonacci series up to n\n             result = []\n             a, b = 0, 1\n             while a < n:\n                result.append(a)\n                a, b = b, a+b\n             return result\n\n          Now enter the Python interpreter and import this module with the following command:\n          >>> import fibo\n\n          This does not add the names of the functions defined in fibo directly to the current namespace (see Python Scopes\n          and Namespaces for more details); it only adds the module name fibo there. Using the module name you can access\n          the functions:",
+        "start_char": 1647,
+        "end_char": 2443,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p049",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 43,
+          "chapter_title": "Modules",
+          "normalized_characters": 2700
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 6.531973689805564,
+        "rank": 3
+      }
+    ],
+    "excluded": [
+      {
+        "id": "490b78aed0a916d50871e94ed285d57fe62572b6d6d7a0c7d4e87186a098c422",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "b46ecf1a04f5ca549e82f88177a347cf13b8f77ff52a1f29552a32b2432ad054",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "f5372b8b9e7a0c463b7bd68120e15d846abd1e1add8d1969b3478c9e987c3af5",
+        "reason": "max_chunks"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [],
+  "search_calls": 1,
+  "generated_search_queries": [
+    "Python module filename related to its name"
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 29.53339739999865,
+    "pacing_seconds_this_invocation": 26.484999999996944,
+    "wall_seconds_excluding_pacing": 3.0483974000017042,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": true,
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 49,
+        "evidence": "A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended."
+      }
+    ],
+    "expected_answer": "A module is a file of Python definitions and statements; its filename is the module name plus .py.",
+    "absence_reason": null,
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "bm25",
+    "query": "What is a Python module, and how is its filename related to its name?",
+    "filter": null,
+    "ranking": [
+      {
+        "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 50,
+        "text": "A module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning",
+        "start_char": 305,
+        "end_char": 1200,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p050",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 44,
+          "chapter_title": "Modules",
+          "normalized_characters": 3193
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 10.562013055300897,
+        "rank": 1
+      },
+      {
+        "id": "f5372b8b9e7a0c463b7bd68120e15d846abd1e1add8d1969b3478c9e987c3af5",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 67,
+        "text": "Even if a statement or expression is syntactically correct, it may cause an error when an attempt is made to execute\n          it. Errors detected during execution are called exceptions and are not unconditionally fatal: you will soon learn how\n          to handle them in Python programs. Most exceptions are not handled by programs, however, and result in error\n          messages as shown here:\n          >>> 10 * (1/0)\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          ZeroDivisionError: division by zero\n          >>> 4 + spam*3\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: name 'spam' is not defined\n          >>> '2' + 2\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: can only concatenate str (not \"int\") to str",
+        "start_char": 1272,
+        "end_char": 2176,
+        "metadata": {
+          "chapter": 8,
+          "page_id": "python_tutorial_3_12_11:p067",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 61,
+          "chapter_title": "Errors and Exceptions",
+          "normalized_characters": 2547
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 9.651673801750302,
+        "rank": 2
+      },
+      {
+        "id": "88174a070bc2d66f585662088135af3cc0d94967b02783806125895a2a7f33c7",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 47,
+        "text": "To loop over two or more sequences at the same time, the entries can be paired with the zip() function.\n          >>> questions = ['name', 'quest', 'favorite color']\n          >>> answers = ['lancelot', 'the holy grail', 'blue']\n          >>> for q, a in zip(questions, answers):\n          ...   print('What is your {0}? It is {1}.'.format(q, a))\n          ...\n          What is your name? It is lancelot.\n          What is your quest? It is the holy grail.\n          What is your favorite color? It is blue.\n\n          To loop over a sequence in reverse, first specify the sequence in a forward direction and then call the reversed()\n          function.\n          >>> for i in reversed(range(1, 10, 2)):\n          ...   print(i)\n          ...\n          9\n          7\n          5\n          3\n          1",
+        "start_char": 0,
+        "end_char": 803,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p047",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 41,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2184
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 9.340403543477477,
+        "rank": 3
+      },
+      {
+        "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 49,
+        "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+        "start_char": 1046,
+        "end_char": 1635,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p049",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 43,
+          "chapter_title": "Modules",
+          "normalized_characters": 2700
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 8.707536641421909,
+        "rank": 4
+      },
+      {
+        "id": "3318bd52b64a9b8f37066dd2231e4afc3da11b6da605e67b73f7a1868db122a8",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 49,
+        "text": "def fib(n): # write Fibonacci series up to n\n             a, b = 0, 1\n             while a < n:\n                print(a, end=' ')\n                a, b = b, a+b\n             print()\n          def fib2(n): # return Fibonacci series up to n\n             result = []\n             a, b = 0, 1\n             while a < n:\n                result.append(a)\n                a, b = b, a+b\n             return result\n\n          Now enter the Python interpreter and import this module with the following command:\n          >>> import fibo\n\n          This does not add the names of the functions defined in fibo directly to the current namespace (see Python Scopes\n          and Namespaces for more details); it only adds the module name fibo there. Using the module name you can access\n          the functions:",
+        "start_char": 1647,
+        "end_char": 2443,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p049",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 43,
+          "chapter_title": "Modules",
+          "normalized_characters": 2700
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 7.7588909995034525,
+        "rank": 5
+      },
+      {
+        "id": "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 49,
+        "text": "If you quit from the Python interpreter and enter it again, the definitions you have made (functions and variables)\n          are lost. Therefore, if you want to write a somewhat longer program, you are better off using a text editor to prepare\n          the input for the interpreter and running it with that file as input instead. This is known as creating a script. As your\n          program gets longer, you may want to split it into several files for easier maintenance. You may also want to use a\n          handy function that you’ve written in several programs without copying its definition into each program.\n          To support this, Python has a way to put definitions in a file and use them in a script or in an interactive instance\n          of the interpreter. Such a file is called a module; definitions from a module can be imported into other modules or",
+        "start_char": 164,
+        "end_char": 1035,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p049",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 43,
+          "chapter_title": "Modules",
+          "normalized_characters": 2700
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 7.715081684502859,
+        "rank": 6
+      },
+      {
+        "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "7.2.2 Saving structured data with json\n          Strings can easily be written to and read from a file. Numbers take a bit more effort, since the read() method only\n          returns strings, which will have to be passed to a function like int(), which takes a string like '123' and returns its\n          numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and\n          serializing by hand becomes complicated.\n          Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows\n          you to use the popular data interchange format called JSON (JavaScript Object Notation). The standard module called\n          json can take Python data hierarchies, and convert them to string representations; this process is called serializing.\n          Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing,",
+        "start_char": 1570,
+        "end_char": 2550,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 7.4189574605111055,
+        "rank": 7
+      },
+      {
+        "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 52,
+        "text": "6.1.3 “Compiled” Python files\n          To speed up loading modules, Python caches the compiled version of each module in the __pycache__ directory\n          under the name module.version.pyc, where the version encodes the format of the compiled file; it generally\n          contains the Python version number. For example, in CPython release 3.3 the compiled version of spam.py would\n          be cached as __pycache__/spam.cpython-33.pyc. This naming convention allows compiled modules from\n          different releases and different versions of Python to coexist.\n          Python checks the modification date of the source against the compiled version to see if it’s out of date and needs\n          to be recompiled. This is a completely automatic process. Also, the compiled modules are platform-independent, so\n          the same library can be shared among systems with different architectures.",
+        "start_char": 452,
+        "end_char": 1353,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p052",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 46,
+          "chapter_title": "Modules",
+          "normalized_characters": 4192
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 7.296687280539409,
+        "rank": 8
+      },
+      {
+        "id": "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 52,
+        "text": "• You can use the -O or -OO switches on the Python command to reduce the size of a compiled module. The -O\n             switch removes assert statements, the -OO switch removes both assert statements and __doc__ strings. Since\n             some programs may rely on having these available, you should only use this option if you know what you’re\n             doing. “Optimized” modules have an opt- tag and are usually smaller. Future releases may change the effects\n             of optimization.\n            • A program doesn’t run any faster when it is read from a .pyc file than when it is read from a .py file; the only\n             thing that’s faster about .pyc files is the speed with which they are loaded.\n            • The module compileall can create .pyc files for all modules in a directory.\n\n            • There is more detail on this process, including a flow chart of the decisions, in PEP 3147.\n\n          6.2 Standard Modules",
+        "start_char": 1825,
+        "end_char": 2768,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p052",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 46,
+          "chapter_title": "Modules",
+          "normalized_characters": 4192
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 7.241174669200044,
+        "rank": 9
+      },
+      {
+        "id": "490b78aed0a916d50871e94ed285d57fe62572b6d6d7a0c7d4e87186a098c422",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 56,
+        "text": "When packages are structured into subpackages (as with the sound package in the example), you can use absolute\n          imports to refer to submodules of siblings packages. For example, if the module sound.filters.vocoder needs\n          to use the echo module in the sound.effects package, it can use from sound.effects import echo.\n          You can also write relative imports, with the from module import name form of import statement. These im-\n          ports use leading dots to indicate the current and parent packages involved in the relative import. From the surround\n          module for example, you might use:\n\n          from . import echo\n          from .. import formats\n          from ..filters import equalizer\n          Note that relative imports are based on the name of the current module. Since the name of the main module is\n          always \"__main__\", modules intended for use as the main module of a Python application must always use absolute\n          imports.",
+        "start_char": 2422,
+        "end_char": 3410,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p056",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 50,
+          "chapter_title": "Modules",
+          "normalized_characters": 3410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 7.209008814258368,
+        "rank": 10
+      }
+    ],
+    "components": {
+      "bm25": [
+        {
+          "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 50,
+          "text": "A module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning",
+          "start_char": 305,
+          "end_char": 1200,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p050",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 44,
+            "chapter_title": "Modules",
+            "normalized_characters": 3193
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 10.562013055300897,
+          "rank": 1
+        },
+        {
+          "id": "f5372b8b9e7a0c463b7bd68120e15d846abd1e1add8d1969b3478c9e987c3af5",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 67,
+          "text": "Even if a statement or expression is syntactically correct, it may cause an error when an attempt is made to execute\n          it. Errors detected during execution are called exceptions and are not unconditionally fatal: you will soon learn how\n          to handle them in Python programs. Most exceptions are not handled by programs, however, and result in error\n          messages as shown here:\n          >>> 10 * (1/0)\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          ZeroDivisionError: division by zero\n          >>> 4 + spam*3\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          NameError: name 'spam' is not defined\n          >>> '2' + 2\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          TypeError: can only concatenate str (not \"int\") to str",
+          "start_char": 1272,
+          "end_char": 2176,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p067",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 61,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2547
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 9.651673801750302,
+          "rank": 2
+        },
+        {
+          "id": "88174a070bc2d66f585662088135af3cc0d94967b02783806125895a2a7f33c7",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 47,
+          "text": "To loop over two or more sequences at the same time, the entries can be paired with the zip() function.\n          >>> questions = ['name', 'quest', 'favorite color']\n          >>> answers = ['lancelot', 'the holy grail', 'blue']\n          >>> for q, a in zip(questions, answers):\n          ...   print('What is your {0}? It is {1}.'.format(q, a))\n          ...\n          What is your name? It is lancelot.\n          What is your quest? It is the holy grail.\n          What is your favorite color? It is blue.\n\n          To loop over a sequence in reverse, first specify the sequence in a forward direction and then call the reversed()\n          function.\n          >>> for i in reversed(range(1, 10, 2)):\n          ...   print(i)\n          ...\n          9\n          7\n          5\n          3\n          1",
+          "start_char": 0,
+          "end_char": 803,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p047",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 41,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2184
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 9.340403543477477,
+          "rank": 3
+        },
+        {
+          "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+          "start_char": 1046,
+          "end_char": 1635,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.707536641421909,
+          "rank": 4
+        },
+        {
+          "id": "3318bd52b64a9b8f37066dd2231e4afc3da11b6da605e67b73f7a1868db122a8",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "def fib(n): # write Fibonacci series up to n\n             a, b = 0, 1\n             while a < n:\n                print(a, end=' ')\n                a, b = b, a+b\n             print()\n          def fib2(n): # return Fibonacci series up to n\n             result = []\n             a, b = 0, 1\n             while a < n:\n                result.append(a)\n                a, b = b, a+b\n             return result\n\n          Now enter the Python interpreter and import this module with the following command:\n          >>> import fibo\n\n          This does not add the names of the functions defined in fibo directly to the current namespace (see Python Scopes\n          and Namespaces for more details); it only adds the module name fibo there. Using the module name you can access\n          the functions:",
+          "start_char": 1647,
+          "end_char": 2443,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.7588909995034525,
+          "rank": 5
+        },
+        {
+          "id": "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "If you quit from the Python interpreter and enter it again, the definitions you have made (functions and variables)\n          are lost. Therefore, if you want to write a somewhat longer program, you are better off using a text editor to prepare\n          the input for the interpreter and running it with that file as input instead. This is known as creating a script. As your\n          program gets longer, you may want to split it into several files for easier maintenance. You may also want to use a\n          handy function that you’ve written in several programs without copying its definition into each program.\n          To support this, Python has a way to put definitions in a file and use them in a script or in an interactive instance\n          of the interpreter. Such a file is called a module; definitions from a module can be imported into other modules or",
+          "start_char": 164,
+          "end_char": 1035,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.715081684502859,
+          "rank": 6
+        },
+        {
+          "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "7.2.2 Saving structured data with json\n          Strings can easily be written to and read from a file. Numbers take a bit more effort, since the read() method only\n          returns strings, which will have to be passed to a function like int(), which takes a string like '123' and returns its\n          numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and\n          serializing by hand becomes complicated.\n          Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows\n          you to use the popular data interchange format called JSON (JavaScript Object Notation). The standard module called\n          json can take Python data hierarchies, and convert them to string representations; this process is called serializing.\n          Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing,",
+          "start_char": 1570,
+          "end_char": 2550,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.4189574605111055,
+          "rank": 7
+        },
+        {
+          "id": "db1e21368d91e9b9cb1f59ce395294a78850eb33769f60057f035ed90f52b641",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "6.1.3 “Compiled” Python files\n          To speed up loading modules, Python caches the compiled version of each module in the __pycache__ directory\n          under the name module.version.pyc, where the version encodes the format of the compiled file; it generally\n          contains the Python version number. For example, in CPython release 3.3 the compiled version of spam.py would\n          be cached as __pycache__/spam.cpython-33.pyc. This naming convention allows compiled modules from\n          different releases and different versions of Python to coexist.\n          Python checks the modification date of the source against the compiled version to see if it’s out of date and needs\n          to be recompiled. This is a completely automatic process. Also, the compiled modules are platform-independent, so\n          the same library can be shared among systems with different architectures.",
+          "start_char": 452,
+          "end_char": 1353,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.296687280539409,
+          "rank": 8
+        },
+        {
+          "id": "e3193f225c3e628f25cf4abbc9ea5a8e13240d8e74b080450b543523e0c8cf44",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "• You can use the -O or -OO switches on the Python command to reduce the size of a compiled module. The -O\n             switch removes assert statements, the -OO switch removes both assert statements and __doc__ strings. Since\n             some programs may rely on having these available, you should only use this option if you know what you’re\n             doing. “Optimized” modules have an opt- tag and are usually smaller. Future releases may change the effects\n             of optimization.\n            • A program doesn’t run any faster when it is read from a .pyc file than when it is read from a .py file; the only\n             thing that’s faster about .pyc files is the speed with which they are loaded.\n            • The module compileall can create .pyc files for all modules in a directory.\n\n            • There is more detail on this process, including a flow chart of the decisions, in PEP 3147.\n\n          6.2 Standard Modules",
+          "start_char": 1825,
+          "end_char": 2768,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.241174669200044,
+          "rank": 9
+        },
+        {
+          "id": "490b78aed0a916d50871e94ed285d57fe62572b6d6d7a0c7d4e87186a098c422",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "When packages are structured into subpackages (as with the sound package in the example), you can use absolute\n          imports to refer to submodules of siblings packages. For example, if the module sound.filters.vocoder needs\n          to use the echo module in the sound.effects package, it can use from sound.effects import echo.\n          You can also write relative imports, with the from module import name form of import statement. These im-\n          ports use leading dots to indicate the current and parent packages involved in the relative import. From the surround\n          module for example, you might use:\n\n          from . import echo\n          from .. import formats\n          from ..filters import equalizer\n          Note that relative imports are based on the name of the current module. Since the name of the main module is\n          always \"__main__\", modules intended for use as the main module of a Python application must always use absolute\n          imports.",
+          "start_char": 2422,
+          "end_char": 3410,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 7.209008814258368,
+          "rank": 10
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": false,
+    "original_query_evidence_hit_at_3": false,
+    "actual_final_context_exact_evidence": true,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "trace_sha256": "23e8f475fdbc63bbd7912e29540dbede730d7cc38a997154fe277a2026b51c4f"
+}

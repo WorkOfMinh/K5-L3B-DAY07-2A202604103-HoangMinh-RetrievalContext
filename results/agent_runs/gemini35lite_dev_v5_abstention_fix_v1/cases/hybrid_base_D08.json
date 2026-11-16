@@ -1,0 +1,1928 @@
+{
+  "status": "answered",
+  "answer": "To load changes to a module without restarting the interpreter, you can use `importlib.reload()`, for example: `import importlib; importlib.reload(modulename)` [e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041].",
+  "citations": [
+    "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041"
+  ],
+  "reason": "The tutorial explicitly mentions using importlib.reload(modulename) to reload a module interactively after making changes.",
+  "guard": "citation_ids_valid; semantic_support_requires_review",
+  "query_id": "D08",
+  "config_id": "hybrid_base",
+  "public_query": {
+    "id": "D08",
+    "question": "After editing a module already imported in an interactive session, how can I load its changes without restarting the interpreter?",
+    "filter": null
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "reload module interactive session imported",
+      "filter": null,
+      "method": "hybrid_rrf",
+      "ranking": [
+        {
+          "id": "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 51,
+          "text": ">>> from fibo import fib as fibonacci\n          >>> fibonacci(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n            Note\n\n           For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change\n           your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename).\n\n          6.1.1 Executing modules as scripts\n\n          When you run a Python module with\n          python fibo.py <arguments>\n\n          the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\". That\n          means that by adding this code at the end of your module:",
+          "start_char": 0,
+          "end_char": 785,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p051",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 45,
+            "chapter_title": "Modules",
+            "normalized_characters": 2478
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.03278688524590164,
+          "component_ranks": {
+            "dense": 1,
+            "bm25": 1
+          },
+          "component_scores": {
+            "dense": 0.8711161094238709,
+            "bm25": 15.365795144212585
+          }
+        },
+        {
+          "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 50,
+          "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+          "start_char": 1929,
+          "end_char": 2916,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p050",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 44,
+            "chapter_title": "Modules",
+            "normalized_characters": 3193
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.031754032258064516,
+          "component_ranks": {
+            "dense": 4,
+            "bm25": 2
+          },
+          "component_scores": {
+            "dense": 0.8377286888522706,
+            "bm25": 6.75468296151274
+          }
+        },
+        {
+          "id": "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "In this example, the echo and surround modules are imported in the current namespace because they are defined in\n          the sound.effects package when the from...import statement is executed. (This also works when __all__\n          is defined.)\n          Although certain modules are designed to export only names that follow certain patterns when you use import *,\n          it is still considered bad practice in production code.\n\n          Remember, there is nothing wrong with using from package import specific_submodule! In fact, this is\n          the recommended notation unless the importing module needs to use submodules with the same name from different\n          packages.\n          6.4.2 Intra-package References",
+          "start_char": 1682,
+          "end_char": 2410,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.030621785881252923,
+          "component_ranks": {
+            "dense": 2,
+            "bm25": 9
+          },
+          "component_scores": {
+            "dense": 0.839037299156189,
+            "bm25": 3.7370665388937194
+          }
+        },
+        {
+          "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "The only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+          "start_char": 2881,
+          "end_char": 3544,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.02967032967032967,
+          "component_ranks": {
+            "dense": 5,
+            "bm25": 10
+          },
+          "component_scores": {
+            "dense": 0.8361701369285583,
+            "bm25": 3.5871724309132476
+          }
+        },
+        {
+          "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "C>\n          These two variables are only defined if the interpreter is in interactive mode.\n\n          The variable sys.path is a list of strings that determines the interpreter’s search path for modules. It is initialized\n          to a default path taken from the environment variable PYTHONPATH, or from a built-in default if PYTHONPATH is not\n          set. You can modify it using standard list operations:",
+          "start_char": 3780,
+          "end_char": 4192,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.029631255487269532,
+          "component_ranks": {
+            "dense": 7,
+            "bm25": 8
+          },
+          "component_scores": {
+            "dense": 0.8291648873437911,
+            "bm25": 4.282559523892387
+          }
+        },
+        {
+          "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 50,
+          "text": "A module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning",
+          "start_char": 305,
+          "end_char": 1200,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p050",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 44,
+            "chapter_title": "Modules",
+            "normalized_characters": 3193
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.015873015873015872,
+          "component_ranks": {
+            "dense": 3
+          },
+          "component_scores": {
+            "dense": 0.8390295505523682
+          }
+        },
+        {
+          "id": "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "If you quit from the Python interpreter and enter it again, the definitions you have made (functions and variables)\n          are lost. Therefore, if you want to write a somewhat longer program, you are better off using a text editor to prepare\n          the input for the interpreter and running it with that file as input instead. This is known as creating a script. As your\n          program gets longer, you may want to split it into several files for easier maintenance. You may also want to use a\n          handy function that you’ve written in several programs without copying its definition into each program.\n          To support this, Python has a way to put definitions in a file and use them in a script or in an interactive instance\n          of the interpreter. Such a file is called a module; definitions from a module can be imported into other modules or",
+          "start_char": 164,
+          "end_char": 1035,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 0.015873015873015872,
+          "rank": 7,
+          "component_ranks": {
+            "bm25": 3
+          },
+          "component_scores": {
+            "bm25": 6.641283856795705
+          }
+        },
+        {
+          "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 51,
+          "text": "if __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path",
+          "start_char": 797,
+          "end_char": 1460,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p051",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 45,
+            "chapter_title": "Modules",
+            "normalized_characters": 2478
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 0.015625,
+          "rank": 8,
+          "component_ranks": {
+            "bm25": 4
+          },
+          "component_scores": {
+            "bm25": 4.743238319331038
+          }
+        },
+        {
+          "id": "f74035edc4dbfbaf3dbb3cdfe7dfba3c72f5f254f1ef51cc3f33b09325bd6532",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 50,
+          "text": "of a module (or script, for that matter). The imported module names, if placed at the top level of a module (outside\n          any functions or classes), are added to the module’s global namespace.\n\n          There is a variant of the import statement that imports names from a module directly into the importing module’s\n          namespace. For example:\n          >>> from fibo import fib, fib2\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n          This does not introduce the module name from which the imports are taken in the local namespace (so in the example,\n          fibo is not defined).\n          There is even a variant to import all names that a module defines:",
+          "start_char": 1211,
+          "end_char": 1917,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p050",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 44,
+            "chapter_title": "Modules",
+            "normalized_characters": 3193
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 0.015384615384615385,
+          "rank": 9,
+          "component_ranks": {
+            "bm25": 5
+          },
+          "component_scores": {
+            "bm25": 4.700685746045334
+          }
+        },
+        {
+          "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 51,
+          "text": "When a module named spam is imported, the interpreter first searches for a built-in module with that name. These\n          module names are listed in sys.builtin_module_names. If not found, it then searches for a file named spam.py\n          in a list of directories given by the variable sys.path. sys.path is initialized from these locations:\n            • The directory containing the input script (or the current directory when no file is specified).\n            • PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).\n\n            • The installation-dependent default (by convention including a site-packages directory, handled by the site\n             module).\n          More details are at sys-path-init.\n\n            Note",
+          "start_char": 1472,
+          "end_char": 2236,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p051",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 45,
+            "chapter_title": "Modules",
+            "normalized_characters": 2478
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 0.015151515151515152,
+          "rank": 10,
+          "component_ranks": {
+            "bm25": 6
+          },
+          "component_scores": {
+            "bm25": 4.4784733845410045
+          }
+        }
+      ],
+      "component_rankings": {
+        "dense": [
+          {
+            "id": "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 51,
+            "text": ">>> from fibo import fib as fibonacci\n          >>> fibonacci(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n            Note\n\n           For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change\n           your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename).\n\n          6.1.1 Executing modules as scripts\n\n          When you run a Python module with\n          python fibo.py <arguments>\n\n          the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\". That\n          means that by adding this code at the end of your module:",
+            "start_char": 0,
+            "end_char": 785,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p051",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 45,
+              "chapter_title": "Modules",
+              "normalized_characters": 2478
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8711161094238709
+          },
+          {
+            "id": "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 56,
+            "text": "In this example, the echo and surround modules are imported in the current namespace because they are defined in\n          the sound.effects package when the from...import statement is executed. (This also works when __all__\n          is defined.)\n          Although certain modules are designed to export only names that follow certain patterns when you use import *,\n          it is still considered bad practice in production code.\n\n          Remember, there is nothing wrong with using from package import specific_submodule! In fact, this is\n          the recommended notation unless the importing module needs to use submodules with the same name from different\n          packages.\n          6.4.2 Intra-package References",
+            "start_char": 1682,
+            "end_char": 2410,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p056",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 50,
+              "chapter_title": "Modules",
+              "normalized_characters": 3410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.839037299156189
+          },
+          {
+            "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 50,
+            "text": "A module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning",
+            "start_char": 305,
+            "end_char": 1200,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p050",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 44,
+              "chapter_title": "Modules",
+              "normalized_characters": 3193
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8390295505523682
+          },
+          {
+            "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 50,
+            "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+            "start_char": 1929,
+            "end_char": 2916,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p050",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 44,
+              "chapter_title": "Modules",
+              "normalized_characters": 3193
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 4,
+            "score": 0.8377286888522706
+          },
+          {
+            "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 55,
+            "text": "The only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+            "start_char": 2881,
+            "end_char": 3544,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p055",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 49,
+              "chapter_title": "Modules",
+              "normalized_characters": 3544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.8361701369285583
+          },
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+            "start_char": 0,
+            "end_char": 978,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 6,
+            "score": 0.8334790468215942
+          },
+          {
+            "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 52,
+            "text": "C>\n          These two variables are only defined if the interpreter is in interactive mode.\n\n          The variable sys.path is a list of strings that determines the interpreter’s search path for modules. It is initialized\n          to a default path taken from the environment variable PYTHONPATH, or from a built-in default if PYTHONPATH is not\n          set. You can modify it using standard list operations:",
+            "start_char": 3780,
+            "end_char": 4192,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p052",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 46,
+              "chapter_title": "Modules",
+              "normalized_characters": 4192
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 7,
+            "score": 0.8291648873437911
+          },
+          {
+            "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 53,
+            "text": "'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError',\n           'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError',\n                                                              (continues on next page)",
+            "start_char": 3160,
+            "end_char": 3397,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p053",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 47,
+              "chapter_title": "Modules",
+              "normalized_characters": 3397
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 8,
+            "score": 0.8291510547219508
+          },
+          {
+            "id": "490b78aed0a916d50871e94ed285d57fe62572b6d6d7a0c7d4e87186a098c422",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 56,
+            "text": "When packages are structured into subpackages (as with the sound package in the example), you can use absolute\n          imports to refer to submodules of siblings packages. For example, if the module sound.filters.vocoder needs\n          to use the echo module in the sound.effects package, it can use from sound.effects import echo.\n          You can also write relative imports, with the from module import name form of import statement. These im-\n          ports use leading dots to indicate the current and parent packages involved in the relative import. From the surround\n          module for example, you might use:\n\n          from . import echo\n          from .. import formats\n          from ..filters import equalizer\n          Note that relative imports are based on the name of the current module. Since the name of the main module is\n          always \"__main__\", modules intended for use as the main module of a Python application must always use absolute\n          imports.",
+            "start_char": 2422,
+            "end_char": 3410,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p056",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 50,
+              "chapter_title": "Modules",
+              "normalized_characters": 3410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 9,
+            "score": 0.8285727007047727
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+            "start_char": 990,
+            "end_char": 1611,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 10,
+            "score": 0.8273592201043164
+          }
+        ],
+        "bm25": [
+          {
+            "id": "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 51,
+            "text": ">>> from fibo import fib as fibonacci\n          >>> fibonacci(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n            Note\n\n           For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change\n           your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename).\n\n          6.1.1 Executing modules as scripts\n\n          When you run a Python module with\n          python fibo.py <arguments>\n\n          the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\". That\n          means that by adding this code at the end of your module:",
+            "start_char": 0,
+            "end_char": 785,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p051",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 45,
+              "chapter_title": "Modules",
+              "normalized_characters": 2478
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 15.365795144212585,
+            "rank": 1
+          },
+          {
+            "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 50,
+            "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+            "start_char": 1929,
+            "end_char": 2916,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p050",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 44,
+              "chapter_title": "Modules",
+              "normalized_characters": 3193
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.75468296151274,
+            "rank": 2
+          },
+          {
+            "id": "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": "If you quit from the Python interpreter and enter it again, the definitions you have made (functions and variables)\n          are lost. Therefore, if you want to write a somewhat longer program, you are better off using a text editor to prepare\n          the input for the interpreter and running it with that file as input instead. This is known as creating a script. As your\n          program gets longer, you may want to split it into several files for easier maintenance. You may also want to use a\n          handy function that you’ve written in several programs without copying its definition into each program.\n          To support this, Python has a way to put definitions in a file and use them in a script or in an interactive instance\n          of the interpreter. Such a file is called a module; definitions from a module can be imported into other modules or",
+            "start_char": 164,
+            "end_char": 1035,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 6.641283856795705,
+            "rank": 3
+          },
+          {
+            "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 51,
+            "text": "if __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path",
+            "start_char": 797,
+            "end_char": 1460,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p051",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 45,
+              "chapter_title": "Modules",
+              "normalized_characters": 2478
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.743238319331038,
+            "rank": 4
+          },
+          {
+            "id": "f74035edc4dbfbaf3dbb3cdfe7dfba3c72f5f254f1ef51cc3f33b09325bd6532",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 50,
+            "text": "of a module (or script, for that matter). The imported module names, if placed at the top level of a module (outside\n          any functions or classes), are added to the module’s global namespace.\n\n          There is a variant of the import statement that imports names from a module directly into the importing module’s\n          namespace. For example:\n          >>> from fibo import fib, fib2\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n          This does not introduce the module name from which the imports are taken in the local namespace (so in the example,\n          fibo is not defined).\n          There is even a variant to import all names that a module defines:",
+            "start_char": 1211,
+            "end_char": 1917,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p050",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 44,
+              "chapter_title": "Modules",
+              "normalized_characters": 3193
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.700685746045334,
+            "rank": 5
+          },
+          {
+            "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 51,
+            "text": "When a module named spam is imported, the interpreter first searches for a built-in module with that name. These\n          module names are listed in sys.builtin_module_names. If not found, it then searches for a file named spam.py\n          in a list of directories given by the variable sys.path. sys.path is initialized from these locations:\n            • The directory containing the input script (or the current directory when no file is specified).\n            • PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).\n\n            • The installation-dependent default (by convention including a site-packages directory, handled by the site\n             module).\n          More details are at sys-path-init.\n\n            Note",
+            "start_char": 1472,
+            "end_char": 2236,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p051",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 45,
+              "chapter_title": "Modules",
+              "normalized_characters": 2478
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.4784733845410045,
+            "rank": 6
+          },
+          {
+            "id": "836d0d49a75724acb4dda75e2605ba192f9bdc2ec713de7af1272a276ca2e9eb",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 55,
+            "text": "6.4.1 Importing * From a Package\n          Now what happens when the user writes from sound.effects import *? Ideally, one would hope that this\n          somehow goes out to the filesystem, finds which submodules are present in the package, and imports them all. This\n          could take a long time and importing sub-modules might have unwanted side-effects that should only happen when\n          the sub-module is explicitly imported.",
+            "start_char": 2432,
+            "end_char": 2869,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p055",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 49,
+              "chapter_title": "Modules",
+              "normalized_characters": 3544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.355925475549359,
+            "rank": 7
+          },
+          {
+            "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 52,
+            "text": "C>\n          These two variables are only defined if the interpreter is in interactive mode.\n\n          The variable sys.path is a list of strings that determines the interpreter’s search path for modules. It is initialized\n          to a default path taken from the environment variable PYTHONPATH, or from a built-in default if PYTHONPATH is not\n          set. You can modify it using standard list operations:",
+            "start_char": 3780,
+            "end_char": 4192,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p052",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 46,
+              "chapter_title": "Modules",
+              "normalized_characters": 4192
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 4.282559523892387,
+            "rank": 8
+          },
+          {
+            "id": "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 56,
+            "text": "In this example, the echo and surround modules are imported in the current namespace because they are defined in\n          the sound.effects package when the from...import statement is executed. (This also works when __all__\n          is defined.)\n          Although certain modules are designed to export only names that follow certain patterns when you use import *,\n          it is still considered bad practice in production code.\n\n          Remember, there is nothing wrong with using from package import specific_submodule! In fact, this is\n          the recommended notation unless the importing module needs to use submodules with the same name from different\n          packages.\n          6.4.2 Intra-package References",
+            "start_char": 1682,
+            "end_char": 2410,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p056",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 50,
+              "chapter_title": "Modules",
+              "normalized_characters": 3410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.7370665388937194,
+            "rank": 9
+          },
+          {
+            "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 55,
+            "text": "The only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+            "start_char": 2881,
+            "end_char": 3544,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p055",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 49,
+              "chapter_title": "Modules",
+              "normalized_characters": 3544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "score": 3.5871724309132476,
+            "rank": 10
+          }
+        ]
+      },
+      "context": {
+        "text": "[e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041 | source=data/raw/tutorial.pdf | PDF page=51 | chapter=6]\n>>> from fibo import fib as fibonacci\n          >>> fibonacci(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n            Note\n\n           For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change\n           your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename).\n\n          6.1.1 Executing modules as scripts\n\n          When you run a Python module with\n          python fibo.py <arguments>\n\n          the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\". That\n          means that by adding this code at the end of your module:\n\n[866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0 | source=data/raw/tutorial.pdf | PDF page=50 | chapter=6]\n>>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.\n\n[5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29 | source=data/raw/tutorial.pdf | PDF page=56 | chapter=6]\nIn this example, the echo and surround modules are imported in the current namespace because they are defined in\n          the sound.effects package when the from...import statement is executed. (This also works when __all__\n          is defined.)\n          Although certain modules are designed to export only names that follow certain patterns when you use import *,\n          it is still considered bad practice in production code.\n\n          Remember, there is nothing wrong with using from package import specific_submodule! In fact, this is\n          the recommended notation unless the importing module needs to use submodules with the same name from different\n          packages.\n          6.4.2 Intra-package References",
+        "chunk_ids": [
+          "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041",
+          "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+          "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29"
+        ],
+        "characters": 2876,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 51,
+            "text": ">>> from fibo import fib as fibonacci\n          >>> fibonacci(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n            Note\n\n           For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change\n           your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename).\n\n          6.1.1 Executing modules as scripts\n\n          When you run a Python module with\n          python fibo.py <arguments>\n\n          the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\". That\n          means that by adding this code at the end of your module:",
+            "start_char": 0,
+            "end_char": 785,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p051",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 45,
+              "chapter_title": "Modules",
+              "normalized_characters": 2478
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "component_ranks": {
+              "dense": 1,
+              "bm25": 1
+            },
+            "component_scores": {
+              "dense": 0.8711161094238709,
+              "bm25": 15.365795144212585
+            }
+          },
+          {
+            "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 50,
+            "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+            "start_char": 1929,
+            "end_char": 2916,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p050",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 44,
+              "chapter_title": "Modules",
+              "normalized_characters": 3193
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.031754032258064516,
+            "component_ranks": {
+              "dense": 4,
+              "bm25": 2
+            },
+            "component_scores": {
+              "dense": 0.8377286888522706,
+              "bm25": 6.75468296151274
+            }
+          },
+          {
+            "id": "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 56,
+            "text": "In this example, the echo and surround modules are imported in the current namespace because they are defined in\n          the sound.effects package when the from...import statement is executed. (This also works when __all__\n          is defined.)\n          Although certain modules are designed to export only names that follow certain patterns when you use import *,\n          it is still considered bad practice in production code.\n\n          Remember, there is nothing wrong with using from package import specific_submodule! In fact, this is\n          the recommended notation unless the importing module needs to use submodules with the same name from different\n          packages.\n          6.4.2 Intra-package References",
+            "start_char": 1682,
+            "end_char": 2410,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p056",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 50,
+              "chapter_title": "Modules",
+              "normalized_characters": 3410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.030621785881252923,
+            "component_ranks": {
+              "dense": 2,
+              "bm25": 9
+            },
+            "component_scores": {
+              "dense": 0.839037299156189,
+              "bm25": 3.7370665388937194
+            }
+          }
+        ],
+        "excluded": [
+          {
+            "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "f74035edc4dbfbaf3dbb3cdfe7dfba3c72f5f254f1ef51cc3f33b09325bd6532",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.049436399996920954
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "4b184136344a02a83432858f7220ecaefdd5c225b849ae82bed982e15f4e9e97",
+      "request_sha256": "88b6974886cd055a18d77c8cc90f043e952dabf14e1dd6cb975e71763b0856a5",
+      "response_id": "Vbr6arLzCbnZ9tMP1dOB6AQ",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 615,
+        "candidatesTokenCount": 18,
+        "totalTokenCount": 633,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 615
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 0.8130000000019209,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "556333810fa0ffc4e003ca731ce69d244f68475f1aaadc913a537014b81ba5e9",
+      "request_sha256": "86b0fe3ddd43947906977e9b825e26b4e4e6d89f4ac5a4b83549cf85929709c9",
+      "response_id": "ZLr6arG3F4ii9tMPgbz7gAQ",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1723,
+        "candidatesTokenCount": 210,
+        "totalTokenCount": 1933,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1723
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.7660000000032596,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041 | source=data/raw/tutorial.pdf | PDF page=51 | chapter=6]\n>>> from fibo import fib as fibonacci\n          >>> fibonacci(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n            Note\n\n           For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change\n           your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename).\n\n          6.1.1 Executing modules as scripts\n\n          When you run a Python module with\n          python fibo.py <arguments>\n\n          the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\". That\n          means that by adding this code at the end of your module:\n\n[866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0 | source=data/raw/tutorial.pdf | PDF page=50 | chapter=6]\n>>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.\n\n[5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29 | source=data/raw/tutorial.pdf | PDF page=56 | chapter=6]\nIn this example, the echo and surround modules are imported in the current namespace because they are defined in\n          the sound.effects package when the from...import statement is executed. (This also works when __all__\n          is defined.)\n          Although certain modules are designed to export only names that follow certain patterns when you use import *,\n          it is still considered bad practice in production code.\n\n          Remember, there is nothing wrong with using from package import specific_submodule! In fact, this is\n          the recommended notation unless the importing module needs to use submodules with the same name from different\n          packages.\n          6.4.2 Intra-package References",
+        "chunk_ids": [
+          "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041",
+          "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+          "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29"
+        ],
+        "characters": 2876,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 51,
+            "text": ">>> from fibo import fib as fibonacci\n          >>> fibonacci(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n            Note\n\n           For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change\n           your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename).\n\n          6.1.1 Executing modules as scripts\n\n          When you run a Python module with\n          python fibo.py <arguments>\n\n          the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\". That\n          means that by adding this code at the end of your module:",
+            "start_char": 0,
+            "end_char": 785,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p051",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 45,
+              "chapter_title": "Modules",
+              "normalized_characters": 2478
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.03278688524590164,
+            "component_ranks": {
+              "dense": 1,
+              "bm25": 1
+            },
+            "component_scores": {
+              "dense": 0.8711161094238709,
+              "bm25": 15.365795144212585
+            }
+          },
+          {
+            "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 50,
+            "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+            "start_char": 1929,
+            "end_char": 2916,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p050",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 44,
+              "chapter_title": "Modules",
+              "normalized_characters": 3193
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.031754032258064516,
+            "component_ranks": {
+              "dense": 4,
+              "bm25": 2
+            },
+            "component_scores": {
+              "dense": 0.8377286888522706,
+              "bm25": 6.75468296151274
+            }
+          },
+          {
+            "id": "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 56,
+            "text": "In this example, the echo and surround modules are imported in the current namespace because they are defined in\n          the sound.effects package when the from...import statement is executed. (This also works when __all__\n          is defined.)\n          Although certain modules are designed to export only names that follow certain patterns when you use import *,\n          it is still considered bad practice in production code.\n\n          Remember, there is nothing wrong with using from package import specific_submodule! In fact, this is\n          the recommended notation unless the importing module needs to use submodules with the same name from different\n          packages.\n          6.4.2 Intra-package References",
+            "start_char": 1682,
+            "end_char": 2410,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p056",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 50,
+              "chapter_title": "Modules",
+              "normalized_characters": 3410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.030621785881252923,
+            "component_ranks": {
+              "dense": 2,
+              "bm25": 9
+            },
+            "component_scores": {
+              "dense": 0.839037299156189,
+              "bm25": 3.7370665388937194
+            }
+          }
+        ],
+        "excluded": [
+          {
+            "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "f74035edc4dbfbaf3dbb3cdfe7dfba3c72f5f254f1ef51cc3f33b09325bd6532",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041 | source=data/raw/tutorial.pdf | PDF page=51 | chapter=6]\n>>> from fibo import fib as fibonacci\n          >>> fibonacci(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n            Note\n\n           For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change\n           your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename).\n\n          6.1.1 Executing modules as scripts\n\n          When you run a Python module with\n          python fibo.py <arguments>\n\n          the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\". That\n          means that by adding this code at the end of your module:\n\n[866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0 | source=data/raw/tutorial.pdf | PDF page=50 | chapter=6]\n>>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.\n\n[5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29 | source=data/raw/tutorial.pdf | PDF page=56 | chapter=6]\nIn this example, the echo and surround modules are imported in the current namespace because they are defined in\n          the sound.effects package when the from...import statement is executed. (This also works when __all__\n          is defined.)\n          Although certain modules are designed to export only names that follow certain patterns when you use import *,\n          it is still considered bad practice in production code.\n\n          Remember, there is nothing wrong with using from package import specific_submodule! In fact, this is\n          the recommended notation unless the importing module needs to use submodules with the same name from different\n          packages.\n          6.4.2 Intra-package References",
+    "chunk_ids": [
+      "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041",
+      "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+      "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29"
+    ],
+    "characters": 2876,
+    "budget_chars": 3500,
+    "max_chunks": 3,
+    "selected_chunks": [
+      {
+        "id": "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 51,
+        "text": ">>> from fibo import fib as fibonacci\n          >>> fibonacci(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n            Note\n\n           For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change\n           your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename).\n\n          6.1.1 Executing modules as scripts\n\n          When you run a Python module with\n          python fibo.py <arguments>\n\n          the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\". That\n          means that by adding this code at the end of your module:",
+        "start_char": 0,
+        "end_char": 785,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p051",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 45,
+          "chapter_title": "Modules",
+          "normalized_characters": 2478
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.03278688524590164,
+        "component_ranks": {
+          "dense": 1,
+          "bm25": 1
+        },
+        "component_scores": {
+          "dense": 0.8711161094238709,
+          "bm25": 15.365795144212585
+        }
+      },
+      {
+        "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 50,
+        "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+        "start_char": 1929,
+        "end_char": 2916,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p050",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 44,
+          "chapter_title": "Modules",
+          "normalized_characters": 3193
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.031754032258064516,
+        "component_ranks": {
+          "dense": 4,
+          "bm25": 2
+        },
+        "component_scores": {
+          "dense": 0.8377286888522706,
+          "bm25": 6.75468296151274
+        }
+      },
+      {
+        "id": "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 56,
+        "text": "In this example, the echo and surround modules are imported in the current namespace because they are defined in\n          the sound.effects package when the from...import statement is executed. (This also works when __all__\n          is defined.)\n          Although certain modules are designed to export only names that follow certain patterns when you use import *,\n          it is still considered bad practice in production code.\n\n          Remember, there is nothing wrong with using from package import specific_submodule! In fact, this is\n          the recommended notation unless the importing module needs to use submodules with the same name from different\n          packages.\n          6.4.2 Intra-package References",
+        "start_char": 1682,
+        "end_char": 2410,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p056",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 50,
+          "chapter_title": "Modules",
+          "normalized_characters": 3410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.030621785881252923,
+        "component_ranks": {
+          "dense": 2,
+          "bm25": 9
+        },
+        "component_scores": {
+          "dense": 0.839037299156189,
+          "bm25": 3.7370665388937194
+        }
+      }
+    ],
+    "excluded": [
+      {
+        "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "f74035edc4dbfbaf3dbb3cdfe7dfba3c72f5f254f1ef51cc3f33b09325bd6532",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+        "reason": "max_chunks"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [],
+  "search_calls": 1,
+  "generated_search_queries": [
+    "reload module interactive session imported"
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 29.51805830000012,
+    "pacing_seconds_this_invocation": 26.875,
+    "wall_seconds_excluding_pacing": 2.6430583000001207,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": true,
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 51,
+        "evidence": "if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename)."
+      }
+    ],
+    "expected_answer": "Use importlib.reload(modulename), after importing importlib.",
+    "absence_reason": null,
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "hybrid_rrf",
+    "query": "After editing a module already imported in an interactive session, how can I load its changes without restarting the interpreter?",
+    "filter": null,
+    "ranking": [
+      {
+        "id": "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 51,
+        "text": ">>> from fibo import fib as fibonacci\n          >>> fibonacci(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n            Note\n\n           For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change\n           your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename).\n\n          6.1.1 Executing modules as scripts\n\n          When you run a Python module with\n          python fibo.py <arguments>\n\n          the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\". That\n          means that by adding this code at the end of your module:",
+        "start_char": 0,
+        "end_char": 785,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p051",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 45,
+          "chapter_title": "Modules",
+          "normalized_characters": 2478
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.03252247488101534,
+        "component_ranks": {
+          "dense": 1,
+          "bm25": 2
+        },
+        "component_scores": {
+          "dense": 0.8854000636696793,
+          "bm25": 13.745541255641195
+        }
+      },
+      {
+        "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 50,
+        "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+        "start_char": 1929,
+        "end_char": 2916,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p050",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 44,
+          "chapter_title": "Modules",
+          "normalized_characters": 3193
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.03149801587301587,
+        "component_ranks": {
+          "dense": 4,
+          "bm25": 3
+        },
+        "component_scores": {
+          "dense": 0.8571627821229245,
+          "bm25": 13.233501172039071
+        }
+      },
+      {
+        "id": "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 49,
+        "text": "If you quit from the Python interpreter and enter it again, the definitions you have made (functions and variables)\n          are lost. Therefore, if you want to write a somewhat longer program, you are better off using a text editor to prepare\n          the input for the interpreter and running it with that file as input instead. This is known as creating a script. As your\n          program gets longer, you may want to split it into several files for easier maintenance. You may also want to use a\n          handy function that you’ve written in several programs without copying its definition into each program.\n          To support this, Python has a way to put definitions in a file and use them in a script or in an interactive instance\n          of the interpreter. Such a file is called a module; definitions from a module can be imported into other modules or",
+        "start_char": 164,
+        "end_char": 1035,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p049",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 43,
+          "chapter_title": "Modules",
+          "normalized_characters": 2700
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.030886196246139225,
+        "component_ranks": {
+          "dense": 9,
+          "bm25": 1
+        },
+        "component_scores": {
+          "dense": 0.8524878709025475,
+          "bm25": 17.20796213954708
+        }
+      },
+      {
+        "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 52,
+        "text": "C>\n          These two variables are only defined if the interpreter is in interactive mode.\n\n          The variable sys.path is a list of strings that determines the interpreter’s search path for modules. It is initialized\n          to a default path taken from the environment variable PYTHONPATH, or from a built-in default if PYTHONPATH is not\n          set. You can modify it using standard list operations:",
+        "start_char": 3780,
+        "end_char": 4192,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p052",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 46,
+          "chapter_title": "Modules",
+          "normalized_characters": 4192
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 4,
+        "score": 0.030776515151515152,
+        "component_ranks": {
+          "dense": 6,
+          "bm25": 4
+        },
+        "component_scores": {
+          "dense": 0.855246927000491,
+          "bm25": 10.56475384376576
+        }
+      },
+      {
+        "id": "b46ecf1a04f5ca549e82f88177a347cf13b8f77ff52a1f29552a32b2432ad054",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 55,
+        "text": "This loads the submodule sound.effects.echo. It must be referenced with its full name.\n\n          sound.effects.echo.echofilter(input, output, delay=0.7, atten=4)\n\n          An alternative way of importing the submodule is:\n          from sound.effects import echo\n\n          This also loads the submodule echo, and makes it available without its package prefix, so it can be used as follows:\n\n          echo.echofilter(input, output, delay=0.7, atten=4)\n\n          Yet another variation is to import the desired function or variable directly:\n          from sound.effects.echo import echofilter\n\n          Again, this loads the submodule echo, but this makes its function echofilter() directly available:\n\n          echofilter(input, output, delay=0.7, atten=4)",
+        "start_char": 964,
+        "end_char": 1726,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p055",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 49,
+          "chapter_title": "Modules",
+          "normalized_characters": 3544
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 5,
+        "score": 0.02967032967032967,
+        "component_ranks": {
+          "dense": 5,
+          "bm25": 10
+        },
+        "component_scores": {
+          "dense": 0.8556910157203674,
+          "bm25": 8.022491882692108
+        }
+      },
+      {
+        "id": "bef290e8b36e999d90d966e7b6b6a7349d924430ad1e11fb6c09f4da4a345ea5",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 52,
+        "text": "After initialization, Python programs can modify sys.path. The directory containing the script being run is placed\n          at the beginning of the search path, ahead of the standard library path. This means that scripts in that directory will\n          be loaded instead of modules of the same name in the library directory. This is an error unless the replacement is\n          intended. See section Standard Modules for more information.",
+        "start_char": 0,
+        "end_char": 440,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p052",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 46,
+          "chapter_title": "Modules",
+          "normalized_characters": 4192
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 6,
+        "score": 0.016129032258064516,
+        "component_ranks": {
+          "dense": 2
+        },
+        "component_scores": {
+          "dense": 0.8622160040011418
+        }
+      },
+      {
+        "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 55,
+        "text": "The only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+        "start_char": 2881,
+        "end_char": 3544,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p055",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 49,
+          "chapter_title": "Modules",
+          "normalized_characters": 3544
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 7,
+        "score": 0.015873015873015872,
+        "component_ranks": {
+          "dense": 3
+        },
+        "component_scores": {
+          "dense": 0.8581117391586304
+        }
+      },
+      {
+        "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 50,
+        "text": "A module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning",
+        "start_char": 305,
+        "end_char": 1200,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p050",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 44,
+          "chapter_title": "Modules",
+          "normalized_characters": 3193
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 0.015384615384615385,
+        "rank": 8,
+        "component_ranks": {
+          "bm25": 5
+        },
+        "component_scores": {
+          "bm25": 10.558994198463468
+        }
+      },
+      {
+        "id": "ee9be82da595de430c1312e64c2408b3d253a5c37115dafb5a4d46fd67700077",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 55,
+        "text": "Note that when using from package import item, the item can be either a submodule (or subpackage) of the\n          package, or some other name defined in the package, like a function, class or variable. The import statement first\n          tests whether the item is defined in the package; if not, it assumes it is a module and attempts to load it. If it fails to\n          find it, an ImportError exception is raised.\n          Contrarily, when using syntax like import item.subitem.subsubitem, each item except for the last must be a\n          package; the last item can be a module or a package but can’t be a class or function or variable defined in the previous\n          item.",
+        "start_char": 1738,
+        "end_char": 2420,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p055",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 49,
+          "chapter_title": "Modules",
+          "normalized_characters": 3544
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "score": 0.015151515151515152,
+        "rank": 9,
+        "component_ranks": {
+          "bm25": 6
+        },
+        "component_scores": {
+          "bm25": 8.742799972497064
+        }
+      },
+      {
+        "id": "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 56,
+        "text": "If __all__ is not defined, the statement from sound.effects import * does not import all submodules from\n          the package sound.effects into the current namespace; it only ensures that the package sound.effects has\n          been imported (possibly running any initialization code in __init__.py) and then imports whatever names are\n          defined in the package. This includes any names defined (and submodules explicitly loaded) by __init__.py. It\n          also includes any submodules of the package that were explicitly loaded by previous import statements. Consider\n          this code:\n          import sound.effects.echo\n          import sound.effects.surround\n          from sound.effects import *",
+        "start_char": 956,
+        "end_char": 1670,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p056",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 50,
+          "chapter_title": "Modules",
+          "normalized_characters": 3410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 10,
+        "score": 0.014925373134328358,
+        "component_ranks": {
+          "dense": 7
+        },
+        "component_scores": {
+          "dense": 0.8529707193374634
+        }
+      }
+    ],
+    "components": {
+      "dense": [
+        {
+          "id": "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 51,
+          "text": ">>> from fibo import fib as fibonacci\n          >>> fibonacci(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n            Note\n\n           For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change\n           your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename).\n\n          6.1.1 Executing modules as scripts\n\n          When you run a Python module with\n          python fibo.py <arguments>\n\n          the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\". That\n          means that by adding this code at the end of your module:",
+          "start_char": 0,
+          "end_char": 785,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p051",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 45,
+            "chapter_title": "Modules",
+            "normalized_characters": 2478
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8854000636696793
+        },
+        {
+          "id": "bef290e8b36e999d90d966e7b6b6a7349d924430ad1e11fb6c09f4da4a345ea5",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "After initialization, Python programs can modify sys.path. The directory containing the script being run is placed\n          at the beginning of the search path, ahead of the standard library path. This means that scripts in that directory will\n          be loaded instead of modules of the same name in the library directory. This is an error unless the replacement is\n          intended. See section Standard Modules for more information.",
+          "start_char": 0,
+          "end_char": 440,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8622160040011418
+        },
+        {
+          "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "The only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+          "start_char": 2881,
+          "end_char": 3544,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8581117391586304
+        },
+        {
+          "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 50,
+          "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+          "start_char": 1929,
+          "end_char": 2916,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p050",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 44,
+            "chapter_title": "Modules",
+            "normalized_characters": 3193
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8571627821229245
+        },
+        {
+          "id": "b46ecf1a04f5ca549e82f88177a347cf13b8f77ff52a1f29552a32b2432ad054",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "This loads the submodule sound.effects.echo. It must be referenced with its full name.\n\n          sound.effects.echo.echofilter(input, output, delay=0.7, atten=4)\n\n          An alternative way of importing the submodule is:\n          from sound.effects import echo\n\n          This also loads the submodule echo, and makes it available without its package prefix, so it can be used as follows:\n\n          echo.echofilter(input, output, delay=0.7, atten=4)\n\n          Yet another variation is to import the desired function or variable directly:\n          from sound.effects.echo import echofilter\n\n          Again, this loads the submodule echo, but this makes its function echofilter() directly available:\n\n          echofilter(input, output, delay=0.7, atten=4)",
+          "start_char": 964,
+          "end_char": 1726,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.8556910157203674
+        },
+        {
+          "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "C>\n          These two variables are only defined if the interpreter is in interactive mode.\n\n          The variable sys.path is a list of strings that determines the interpreter’s search path for modules. It is initialized\n          to a default path taken from the environment variable PYTHONPATH, or from a built-in default if PYTHONPATH is not\n          set. You can modify it using standard list operations:",
+          "start_char": 3780,
+          "end_char": 4192,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.855246927000491
+        },
+        {
+          "id": "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "If __all__ is not defined, the statement from sound.effects import * does not import all submodules from\n          the package sound.effects into the current namespace; it only ensures that the package sound.effects has\n          been imported (possibly running any initialization code in __init__.py) and then imports whatever names are\n          defined in the package. This includes any names defined (and submodules explicitly loaded) by __init__.py. It\n          also includes any submodules of the package that were explicitly loaded by previous import statements. Consider\n          this code:\n          import sound.effects.echo\n          import sound.effects.surround\n          from sound.effects import *",
+          "start_char": 956,
+          "end_char": 1670,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.8529707193374634
+        },
+        {
+          "id": "5b433404890947aedd28fdda76cda69dd427757694ab44a5dbc81a044821fb29",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "In this example, the echo and surround modules are imported in the current namespace because they are defined in\n          the sound.effects package when the from...import statement is executed. (This also works when __all__\n          is defined.)\n          Although certain modules are designed to export only names that follow certain patterns when you use import *,\n          it is still considered bad practice in production code.\n\n          Remember, there is nothing wrong with using from package import specific_submodule! In fact, this is\n          the recommended notation unless the importing module needs to use submodules with the same name from different\n          packages.\n          6.4.2 Intra-package References",
+          "start_char": 1682,
+          "end_char": 2410,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8527003526687622
+        },
+        {
+          "id": "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "If you quit from the Python interpreter and enter it again, the definitions you have made (functions and variables)\n          are lost. Therefore, if you want to write a somewhat longer program, you are better off using a text editor to prepare\n          the input for the interpreter and running it with that file as input instead. This is known as creating a script. As your\n          program gets longer, you may want to split it into several files for easier maintenance. You may also want to use a\n          handy function that you’ve written in several programs without copying its definition into each program.\n          To support this, Python has a way to put definitions in a file and use them in a script or in an interactive instance\n          of the interpreter. Such a file is called a module; definitions from a module can be imported into other modules or",
+          "start_char": 164,
+          "end_char": 1035,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8524878709025475
+        },
+        {
+          "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "__all__ = [\"echo\", \"surround\", \"reverse\"]\n\n          This would mean that from sound.effects import * would import the three named submodules of the\n          sound.effects package.\n          Be aware that submodules might become shadowed by locally defined names. For example, if you added a reverse\n          function to the sound/effects/__init__.py file, the from sound.effects import * would only import\n          the two submodules echo and surround, but not the reverse submodule, because it is shadowed by the locally\n          defined reverse function:\n\n          __all__ = [\n             \"echo\",   # refers to the 'echo.py' file\n             \"surround\", # refers to the 'surround.py' file\n             \"reverse\", # !!! refers to the 'reverse' function now !!!\n          ]\n          def reverse(msg: str): # <-- this name shadows the 'reverse.py' submodule\n             return msg[::-1] # in the case of a 'from sound.effects import *'",
+          "start_char": 0,
+          "end_char": 944,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8518276214599609
+        }
+      ],
+      "bm25": [
+        {
+          "id": "ddcbb6f9d6018e9f595a9b9355fcf7d1d7ef0469be7d94c90bf221a26988d3d7",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "If you quit from the Python interpreter and enter it again, the definitions you have made (functions and variables)\n          are lost. Therefore, if you want to write a somewhat longer program, you are better off using a text editor to prepare\n          the input for the interpreter and running it with that file as input instead. This is known as creating a script. As your\n          program gets longer, you may want to split it into several files for easier maintenance. You may also want to use a\n          handy function that you’ve written in several programs without copying its definition into each program.\n          To support this, Python has a way to put definitions in a file and use them in a script or in an interactive instance\n          of the interpreter. Such a file is called a module; definitions from a module can be imported into other modules or",
+          "start_char": 164,
+          "end_char": 1035,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 17.20796213954708,
+          "rank": 1
+        },
+        {
+          "id": "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 51,
+          "text": ">>> from fibo import fib as fibonacci\n          >>> fibonacci(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n            Note\n\n           For efficiency reasons, each module is only imported once per interpreter session. Therefore, if you change\n           your modules, you must restart the interpreter – or, if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename).\n\n          6.1.1 Executing modules as scripts\n\n          When you run a Python module with\n          python fibo.py <arguments>\n\n          the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\". That\n          means that by adding this code at the end of your module:",
+          "start_char": 0,
+          "end_char": 785,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p051",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 45,
+            "chapter_title": "Modules",
+            "normalized_characters": 2478
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 13.745541255641195,
+          "rank": 2
+        },
+        {
+          "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 50,
+          "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+          "start_char": 1929,
+          "end_char": 2916,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p050",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 44,
+            "chapter_title": "Modules",
+            "normalized_characters": 3193
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 13.233501172039071,
+          "rank": 3
+        },
+        {
+          "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "C>\n          These two variables are only defined if the interpreter is in interactive mode.\n\n          The variable sys.path is a list of strings that determines the interpreter’s search path for modules. It is initialized\n          to a default path taken from the environment variable PYTHONPATH, or from a built-in default if PYTHONPATH is not\n          set. You can modify it using standard list operations:",
+          "start_char": 3780,
+          "end_char": 4192,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 10.56475384376576,
+          "rank": 4
+        },
+        {
+          "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 50,
+          "text": "A module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning",
+          "start_char": 305,
+          "end_char": 1200,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p050",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 44,
+            "chapter_title": "Modules",
+            "normalized_characters": 3193
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 10.558994198463468,
+          "rank": 5
+        },
+        {
+          "id": "ee9be82da595de430c1312e64c2408b3d253a5c37115dafb5a4d46fd67700077",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "Note that when using from package import item, the item can be either a submodule (or subpackage) of the\n          package, or some other name defined in the package, like a function, class or variable. The import statement first\n          tests whether the item is defined in the package; if not, it assumes it is a module and attempts to load it. If it fails to\n          find it, an ImportError exception is raised.\n          Contrarily, when using syntax like import item.subitem.subsubitem, each item except for the last must be a\n          package; the last item can be a module or a package but can’t be a class or function or variable defined in the previous\n          item.",
+          "start_char": 1738,
+          "end_char": 2420,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.742799972497064,
+          "rank": 6
+        },
+        {
+          "id": "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 66,
+          "text": "x = json.load(f)\n\n            Note\n\n           JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing.\n\n          This simple serialization technique can handle lists and dictionaries, but serializing arbitrary class instances in JSON\n          requires a bit of extra effort. The reference for the json module contains an explanation of this.\n\n            See also\n\n           pickle - the pickle module\n           Contrary to JSON, pickle is a protocol which allows the serialization of arbitrarily complex Python objects. As\n           such, it is specific to Python and cannot be used to communicate with applications written in other languages. It\n           is also insecure by default: deserializing pickle data coming from an untrusted source can execute arbitrary code,\n           if the data was crafted by a skilled attacker.",
+          "start_char": 0,
+          "end_char": 920,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p066",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 60,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 920
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.389251306264596,
+          "rank": 7
+        },
+        {
+          "id": "8adc9afcc5c33abb780532495f54f593166e454d278b3ff28693e4e060119492",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": "After a file object is closed, either by a with statement or by calling f.close(), attempts to use the file object will\n          automatically fail.\n          >>> f.close()\n          >>> f.read()\n          Traceback (most recent call last):\n           File \"<stdin>\", line 1, in <module>\n          ValueError: I/O operation on closed file.\n\n          7.2.1 Methods of File Objects",
+          "start_char": 0,
+          "end_char": 381,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.287204339586753,
+          "rank": 8
+        },
+        {
+          "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 51,
+          "text": "When a module named spam is imported, the interpreter first searches for a built-in module with that name. These\n          module names are listed in sys.builtin_module_names. If not found, it then searches for a file named spam.py\n          in a list of directories given by the variable sys.path. sys.path is initialized from these locations:\n            • The directory containing the input script (or the current directory when no file is specified).\n            • PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).\n\n            • The installation-dependent default (by convention including a site-packages directory, handled by the site\n             module).\n          More details are at sys-path-init.\n\n            Note",
+          "start_char": 1472,
+          "end_char": 2236,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p051",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 45,
+            "chapter_title": "Modules",
+            "normalized_characters": 2478
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.204488786981226,
+          "rank": 9
+        },
+        {
+          "id": "b46ecf1a04f5ca549e82f88177a347cf13b8f77ff52a1f29552a32b2432ad054",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "This loads the submodule sound.effects.echo. It must be referenced with its full name.\n\n          sound.effects.echo.echofilter(input, output, delay=0.7, atten=4)\n\n          An alternative way of importing the submodule is:\n          from sound.effects import echo\n\n          This also loads the submodule echo, and makes it available without its package prefix, so it can be used as follows:\n\n          echo.echofilter(input, output, delay=0.7, atten=4)\n\n          Yet another variation is to import the desired function or variable directly:\n          from sound.effects.echo import echofilter\n\n          Again, this loads the submodule echo, but this makes its function echofilter() directly available:\n\n          echofilter(input, output, delay=0.7, atten=4)",
+          "start_char": 964,
+          "end_char": 1726,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "score": 8.022491882692108,
+          "rank": 10
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": true,
+    "original_query_evidence_hit_at_3": true,
+    "actual_final_context_exact_evidence": true,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "trace_sha256": "9aba6035b972fc692399c66d15fe6efd8047e73adf466c5f20413dc0395436cd"
+}

@@ -1,0 +1,2262 @@
+{
+  "status": "answered",
+  "answer": "When a Python module is run as a script, the code runs as the \"main\" file where `__name__` is set to `\"__main__\"` [2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa].",
+  "citations": [
+    "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa"
+  ],
+  "reason": "Include exact citation inline matching the current context.",
+  "guard": "citation_ids_valid; semantic_support_requires_review",
+  "query_id": "D09",
+  "config_id": "dense_base",
+  "public_query": {
+    "id": "D09",
+    "question": "When a Python module is run as a script, what value is assigned to __name__?",
+    "filter": null
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "__name__ script __main__",
+      "filter": null,
+      "method": "dense",
+      "ranking": [
+        {
+          "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 51,
+          "text": "if __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path",
+          "start_char": 797,
+          "end_char": 1460,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p051",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 45,
+            "chapter_title": "Modules",
+            "normalized_characters": 2478
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8736780621505396
+        },
+        {
+          "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 76,
+          "text": "|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+          "start_char": 987,
+          "end_char": 1440,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p076",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 70,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 1440
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8554676433561501
+        },
+        {
+          "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+          "start_char": 0,
+          "end_char": 978,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8547185746003062
+        },
+        {
+          "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "__all__ = [\"echo\", \"surround\", \"reverse\"]\n\n          This would mean that from sound.effects import * would import the three named submodules of the\n          sound.effects package.\n          Be aware that submodules might become shadowed by locally defined names. For example, if you added a reverse\n          function to the sound/effects/__init__.py file, the from sound.effects import * would only import\n          the two submodules echo and surround, but not the reverse submodule, because it is shadowed by the locally\n          defined reverse function:\n\n          __all__ = [\n             \"echo\",   # refers to the 'echo.py' file\n             \"surround\", # refers to the 'surround.py' file\n             \"reverse\", # !!! refers to the 'reverse' function now !!!\n          ]\n          def reverse(msg: str): # <-- this name shadows the 'reverse.py' submodule\n             return msg[::-1] # in the case of a 'from sound.effects import *'",
+          "start_char": 0,
+          "end_char": 944,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8542465654464638
+        },
+        {
+          "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+          "start_char": 1046,
+          "end_char": 1635,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.849706862875618
+        },
+        {
+          "id": "b74e3b9fdd5b877b9814e88f665f66e565a6b453220e461b7bf9b63514bf3788",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 53,
+          "text": ">>> import fibo, sys\n          >>> dir(fibo)\n          ['__name__', 'fib', 'fib2']\n          >>> dir(sys)\n          ['__breakpointhook__', '__displayhook__', '__doc__', '__excepthook__',\n           '__interactivehook__', '__loader__', '__name__', '__package__', '__spec__',\n           '__stderr__', '__stdin__', '__stdout__', '__unraisablehook__',\n           '_clear_type_cache', '_current_frames', '_debugmallocstats', '_framework',\n           '_getframe', '_git', '_home', '_xoptions', 'abiflags', 'addaudithook',\n           'api_version', 'argv', 'audit', 'base_exec_prefix', 'base_prefix',\n           'breakpointhook', 'builtin_module_names', 'byteorder', 'call_tracing',\n           'callstats', 'copyright', 'displayhook', 'dont_write_bytecode', 'exc_info',\n           'excepthook', 'exec_prefix', 'executable', 'exit', 'flags', 'float_info',\n           'float_repr_style', 'get_asyncgen_hooks', 'get_coroutine_origin_tracking_depth',",
+          "start_char": 241,
+          "end_char": 1180,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p053",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 47,
+            "chapter_title": "Modules",
+            "normalized_characters": 3397
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.8465583415890744
+        },
+        {
+          "id": "bef290e8b36e999d90d966e7b6b6a7349d924430ad1e11fb6c09f4da4a345ea5",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "After initialization, Python programs can modify sys.path. The directory containing the script being run is placed\n          at the beginning of the search path, ahead of the standard library path. This means that scripts in that directory will\n          be loaded instead of modules of the same name in the library directory. This is an error unless the replacement is\n          intended. See section Standard Modules for more information.",
+          "start_char": 0,
+          "end_char": 440,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.8451591914702425
+        },
+        {
+          "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+          "start_char": 990,
+          "end_char": 1611,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8405767368239054
+        },
+        {
+          "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 76,
+          "text": "(continued from previous page)\n          ...\n          >>> excs = []\n          >>> for i in range(3):\n          ...   try:\n          ...      f()\n          ...   except Exception as e:\n          ...      e.add_note(f'Happened in Iteration {i+1}')\n          ...      excs.append(e)\n          ...\n          >>> raise ExceptionGroup('We have some problems', excs)\n           + Exception Group Traceback (most recent call last):\n           |  File \"<stdin>\", line 1, in <module>\n           | ExceptionGroup: We have some problems (3 sub-exceptions)\n           +-+---------------- 1 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 1\n             +---------------- 2 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>",
+          "start_char": 0,
+          "end_char": 973,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p076",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 70,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 1440
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8395929527767952
+        },
+        {
+          "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 57,
+          "text": "6.4.3 Packages in Multiple Directories\n          Packages support one more special attribute, __path__. This is initialized to be a sequence of strings containing the\n          name of the directory holding the package’s __init__.py before the code in that file is executed. This variable can\n          be modified; doing so affects future searches for modules and subpackages contained in the package.\n          While this feature is not often needed, it can be used to extend the set of modules found in a package.",
+          "start_char": 0,
+          "end_char": 516,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p057",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 51,
+            "chapter_title": "Modules",
+            "normalized_characters": 516
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8392902804267072
+        }
+      ],
+      "component_rankings": {
+        "dense": [
+          {
+            "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 51,
+            "text": "if __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path",
+            "start_char": 797,
+            "end_char": 1460,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p051",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 45,
+              "chapter_title": "Modules",
+              "normalized_characters": 2478
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8736780621505396
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 76,
+            "text": "|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+            "start_char": 987,
+            "end_char": 1440,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p076",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 70,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 1440
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8554676433561501
+          },
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+            "start_char": 0,
+            "end_char": 978,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8547185746003062
+          },
+          {
+            "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 56,
+            "text": "__all__ = [\"echo\", \"surround\", \"reverse\"]\n\n          This would mean that from sound.effects import * would import the three named submodules of the\n          sound.effects package.\n          Be aware that submodules might become shadowed by locally defined names. For example, if you added a reverse\n          function to the sound/effects/__init__.py file, the from sound.effects import * would only import\n          the two submodules echo and surround, but not the reverse submodule, because it is shadowed by the locally\n          defined reverse function:\n\n          __all__ = [\n             \"echo\",   # refers to the 'echo.py' file\n             \"surround\", # refers to the 'surround.py' file\n             \"reverse\", # !!! refers to the 'reverse' function now !!!\n          ]\n          def reverse(msg: str): # <-- this name shadows the 'reverse.py' submodule\n             return msg[::-1] # in the case of a 'from sound.effects import *'",
+            "start_char": 0,
+            "end_char": 944,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p056",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 50,
+              "chapter_title": "Modules",
+              "normalized_characters": 3410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 4,
+            "score": 0.8542465654464638
+          },
+          {
+            "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+            "start_char": 1046,
+            "end_char": 1635,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.849706862875618
+          },
+          {
+            "id": "b74e3b9fdd5b877b9814e88f665f66e565a6b453220e461b7bf9b63514bf3788",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 53,
+            "text": ">>> import fibo, sys\n          >>> dir(fibo)\n          ['__name__', 'fib', 'fib2']\n          >>> dir(sys)\n          ['__breakpointhook__', '__displayhook__', '__doc__', '__excepthook__',\n           '__interactivehook__', '__loader__', '__name__', '__package__', '__spec__',\n           '__stderr__', '__stdin__', '__stdout__', '__unraisablehook__',\n           '_clear_type_cache', '_current_frames', '_debugmallocstats', '_framework',\n           '_getframe', '_git', '_home', '_xoptions', 'abiflags', 'addaudithook',\n           'api_version', 'argv', 'audit', 'base_exec_prefix', 'base_prefix',\n           'breakpointhook', 'builtin_module_names', 'byteorder', 'call_tracing',\n           'callstats', 'copyright', 'displayhook', 'dont_write_bytecode', 'exc_info',\n           'excepthook', 'exec_prefix', 'executable', 'exit', 'flags', 'float_info',\n           'float_repr_style', 'get_asyncgen_hooks', 'get_coroutine_origin_tracking_depth',",
+            "start_char": 241,
+            "end_char": 1180,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p053",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 47,
+              "chapter_title": "Modules",
+              "normalized_characters": 3397
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 6,
+            "score": 0.8465583415890744
+          },
+          {
+            "id": "bef290e8b36e999d90d966e7b6b6a7349d924430ad1e11fb6c09f4da4a345ea5",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 52,
+            "text": "After initialization, Python programs can modify sys.path. The directory containing the script being run is placed\n          at the beginning of the search path, ahead of the standard library path. This means that scripts in that directory will\n          be loaded instead of modules of the same name in the library directory. This is an error unless the replacement is\n          intended. See section Standard Modules for more information.",
+            "start_char": 0,
+            "end_char": 440,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p052",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 46,
+              "chapter_title": "Modules",
+              "normalized_characters": 4192
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 7,
+            "score": 0.8451591914702425
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+            "start_char": 990,
+            "end_char": 1611,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 8,
+            "score": 0.8405767368239054
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 76,
+            "text": "(continued from previous page)\n          ...\n          >>> excs = []\n          >>> for i in range(3):\n          ...   try:\n          ...      f()\n          ...   except Exception as e:\n          ...      e.add_note(f'Happened in Iteration {i+1}')\n          ...      excs.append(e)\n          ...\n          >>> raise ExceptionGroup('We have some problems', excs)\n           + Exception Group Traceback (most recent call last):\n           |  File \"<stdin>\", line 1, in <module>\n           | ExceptionGroup: We have some problems (3 sub-exceptions)\n           +-+---------------- 1 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 1\n             +---------------- 2 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>",
+            "start_char": 0,
+            "end_char": 973,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p076",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 70,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 1440
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 9,
+            "score": 0.8395929527767952
+          },
+          {
+            "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 57,
+            "text": "6.4.3 Packages in Multiple Directories\n          Packages support one more special attribute, __path__. This is initialized to be a sequence of strings containing the\n          name of the directory holding the package’s __init__.py before the code in that file is executed. This variable can\n          be modified; doing so affects future searches for modules and subpackages contained in the package.\n          While this feature is not often needed, it can be used to extend the set of modules found in a package.",
+            "start_char": 0,
+            "end_char": 516,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p057",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 51,
+              "chapter_title": "Modules",
+              "normalized_characters": 516
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 10,
+            "score": 0.8392902804267072
+          }
+        ]
+      },
+      "context": {
+        "text": "[2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa | source=data/raw/tutorial.pdf | PDF page=51 | chapter=6]\nif __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path\n\n[10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4 | source=data/raw/tutorial.pdf | PDF page=76 | chapter=8]\n|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>\n\n[fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b | source=data/raw/tutorial.pdf | PDF page=54 | chapter=6]\n(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+        "chunk_ids": [
+          "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+          "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+          "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b"
+        ],
+        "characters": 2470,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 51,
+            "text": "if __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path",
+            "start_char": 797,
+            "end_char": 1460,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p051",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 45,
+              "chapter_title": "Modules",
+              "normalized_characters": 2478
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8736780621505396
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 76,
+            "text": "|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+            "start_char": 987,
+            "end_char": 1440,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p076",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 70,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 1440
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8554676433561501
+          },
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+            "start_char": 0,
+            "end_char": 978,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8547185746003062
+          }
+        ],
+        "excluded": [
+          {
+            "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "b74e3b9fdd5b877b9814e88f665f66e565a6b453220e461b7bf9b63514bf3788",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "bef290e8b36e999d90d966e7b6b6a7349d924430ad1e11fb6c09f4da4a345ea5",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.0605479000005289
+    },
+    {
+      "event": "search",
+      "query": "__name__ set to \"__main__\"",
+      "filter": null,
+      "method": "dense",
+      "ranking": [
+        {
+          "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "__all__ = [\"echo\", \"surround\", \"reverse\"]\n\n          This would mean that from sound.effects import * would import the three named submodules of the\n          sound.effects package.\n          Be aware that submodules might become shadowed by locally defined names. For example, if you added a reverse\n          function to the sound/effects/__init__.py file, the from sound.effects import * would only import\n          the two submodules echo and surround, but not the reverse submodule, because it is shadowed by the locally\n          defined reverse function:\n\n          __all__ = [\n             \"echo\",   # refers to the 'echo.py' file\n             \"surround\", # refers to the 'surround.py' file\n             \"reverse\", # !!! refers to the 'reverse' function now !!!\n          ]\n          def reverse(msg: str): # <-- this name shadows the 'reverse.py' submodule\n             return msg[::-1] # in the case of a 'from sound.effects import *'",
+          "start_char": 0,
+          "end_char": 944,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8482584357261658
+        },
+        {
+          "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 51,
+          "text": "if __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path",
+          "start_char": 797,
+          "end_char": 1460,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p051",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 45,
+            "chapter_title": "Modules",
+            "normalized_characters": 2478
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8473635568429103
+        },
+        {
+          "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "filters/            Subpackage for filters\n                    __init__.py\n                                                              (continues on next page)",
+          "start_char": 3585,
+          "end_char": 3746,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8461278676986694
+        },
+        {
+          "id": "b74e3b9fdd5b877b9814e88f665f66e565a6b453220e461b7bf9b63514bf3788",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 53,
+          "text": ">>> import fibo, sys\n          >>> dir(fibo)\n          ['__name__', 'fib', 'fib2']\n          >>> dir(sys)\n          ['__breakpointhook__', '__displayhook__', '__doc__', '__excepthook__',\n           '__interactivehook__', '__loader__', '__name__', '__package__', '__spec__',\n           '__stderr__', '__stdin__', '__stdout__', '__unraisablehook__',\n           '_clear_type_cache', '_current_frames', '_debugmallocstats', '_framework',\n           '_getframe', '_git', '_home', '_xoptions', 'abiflags', 'addaudithook',\n           'api_version', 'argv', 'audit', 'base_exec_prefix', 'base_prefix',\n           'breakpointhook', 'builtin_module_names', 'byteorder', 'call_tracing',\n           'callstats', 'copyright', 'displayhook', 'dont_write_bytecode', 'exc_info',\n           'excepthook', 'exec_prefix', 'executable', 'exit', 'flags', 'float_info',\n           'float_repr_style', 'get_asyncgen_hooks', 'get_coroutine_origin_tracking_depth',",
+          "start_char": 241,
+          "end_char": 1180,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p053",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 47,
+            "chapter_title": "Modules",
+            "normalized_characters": 3397
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8400875926017761
+        },
+        {
+          "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 76,
+          "text": "|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+          "start_char": 987,
+          "end_char": 1440,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p076",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 70,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 1440
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.8396514845309931
+        },
+        {
+          "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 57,
+          "text": "6.4.3 Packages in Multiple Directories\n          Packages support one more special attribute, __path__. This is initialized to be a sequence of strings containing the\n          name of the directory holding the package’s __init__.py before the code in that file is executed. This variable can\n          be modified; doing so affects future searches for modules and subpackages contained in the package.\n          While this feature is not often needed, it can be used to extend the set of modules found in a package.",
+          "start_char": 0,
+          "end_char": 516,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p057",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 51,
+            "chapter_title": "Modules",
+            "normalized_characters": 516
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.8361303307932433
+        },
+        {
+          "id": "496418423595452566698693fb7a53b98c2607ed634883922245d3ba3d09071f",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 50,
+          "text": "(continued from previous page)\n          >>> fibo.__name__\n          'fibo'\n\n          If you intend to use a function often you can assign it to a local name:\n          >>> fib = fibo.fib\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n          6.1 More on Modules",
+          "start_char": 0,
+          "end_char": 293,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p050",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 44,
+            "chapter_title": "Modules",
+            "normalized_characters": 3193
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.8343026140747911
+        },
+        {
+          "id": "4bd84618bd2ed46d84068138e8e283a68e08a15287d94386d8c96847725fa5cf",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 71,
+          "text": "It also allows disabling automatic exception chaining using the from None idiom:\n\n          >>> try:\n          ...   open('database.sqlite')\n                                                              (continues on next page)",
+          "start_char": 1904,
+          "end_char": 2131,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p071",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 65,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 2131
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8342298269271851
+        },
+        {
+          "id": "9dbf99ecdbe763b9b8ffb9432a94708e9a8c2866ee68b5873d58db853e04abf4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 45,
+          "text": ">>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}\n          >>> print(basket)            # show that duplicates have been removed\n          {'orange', 'banana', 'pear', 'apple'}\n          >>> 'orange' in basket       # fast membership testing\n          True\n          >>> 'crabgrass' in basket\n          False\n          >>> # Demonstrate set operations on unique letters from two words\n          >>>\n          >>> a = set('abracadabra')\n          >>> b = set('alacazam')\n          >>> a                        # unique letters in a\n          {'a', 'r', 'b', 'c', 'd'}\n          >>> a - b                    # letters in a but not in b\n          {'r', 'd', 'b'}\n          >>> a | b                    # letters in a or b or both\n          {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}\n          >>> a & b                    # letters in both a and b\n          {'a', 'c'}\n          >>> a ^ b                    # letters in a or b but not both",
+          "start_char": 619,
+          "end_char": 1575,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p045",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 39,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 3567
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8341478109359741
+        },
+        {
+          "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "The only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+          "start_char": 2881,
+          "end_char": 3544,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8326084613800049
+        }
+      ],
+      "component_rankings": {
+        "dense": [
+          {
+            "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 56,
+            "text": "__all__ = [\"echo\", \"surround\", \"reverse\"]\n\n          This would mean that from sound.effects import * would import the three named submodules of the\n          sound.effects package.\n          Be aware that submodules might become shadowed by locally defined names. For example, if you added a reverse\n          function to the sound/effects/__init__.py file, the from sound.effects import * would only import\n          the two submodules echo and surround, but not the reverse submodule, because it is shadowed by the locally\n          defined reverse function:\n\n          __all__ = [\n             \"echo\",   # refers to the 'echo.py' file\n             \"surround\", # refers to the 'surround.py' file\n             \"reverse\", # !!! refers to the 'reverse' function now !!!\n          ]\n          def reverse(msg: str): # <-- this name shadows the 'reverse.py' submodule\n             return msg[::-1] # in the case of a 'from sound.effects import *'",
+            "start_char": 0,
+            "end_char": 944,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p056",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 50,
+              "chapter_title": "Modules",
+              "normalized_characters": 3410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8482584357261658
+          },
+          {
+            "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 51,
+            "text": "if __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path",
+            "start_char": 797,
+            "end_char": 1460,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p051",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 45,
+              "chapter_title": "Modules",
+              "normalized_characters": 2478
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8473635568429103
+          },
+          {
+            "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "filters/            Subpackage for filters\n                    __init__.py\n                                                              (continues on next page)",
+            "start_char": 3585,
+            "end_char": 3746,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8461278676986694
+          },
+          {
+            "id": "b74e3b9fdd5b877b9814e88f665f66e565a6b453220e461b7bf9b63514bf3788",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 53,
+            "text": ">>> import fibo, sys\n          >>> dir(fibo)\n          ['__name__', 'fib', 'fib2']\n          >>> dir(sys)\n          ['__breakpointhook__', '__displayhook__', '__doc__', '__excepthook__',\n           '__interactivehook__', '__loader__', '__name__', '__package__', '__spec__',\n           '__stderr__', '__stdin__', '__stdout__', '__unraisablehook__',\n           '_clear_type_cache', '_current_frames', '_debugmallocstats', '_framework',\n           '_getframe', '_git', '_home', '_xoptions', 'abiflags', 'addaudithook',\n           'api_version', 'argv', 'audit', 'base_exec_prefix', 'base_prefix',\n           'breakpointhook', 'builtin_module_names', 'byteorder', 'call_tracing',\n           'callstats', 'copyright', 'displayhook', 'dont_write_bytecode', 'exc_info',\n           'excepthook', 'exec_prefix', 'executable', 'exit', 'flags', 'float_info',\n           'float_repr_style', 'get_asyncgen_hooks', 'get_coroutine_origin_tracking_depth',",
+            "start_char": 241,
+            "end_char": 1180,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p053",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 47,
+              "chapter_title": "Modules",
+              "normalized_characters": 3397
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 4,
+            "score": 0.8400875926017761
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 76,
+            "text": "|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+            "start_char": 987,
+            "end_char": 1440,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p076",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 70,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 1440
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.8396514845309931
+          },
+          {
+            "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 57,
+            "text": "6.4.3 Packages in Multiple Directories\n          Packages support one more special attribute, __path__. This is initialized to be a sequence of strings containing the\n          name of the directory holding the package’s __init__.py before the code in that file is executed. This variable can\n          be modified; doing so affects future searches for modules and subpackages contained in the package.\n          While this feature is not often needed, it can be used to extend the set of modules found in a package.",
+            "start_char": 0,
+            "end_char": 516,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p057",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 51,
+              "chapter_title": "Modules",
+              "normalized_characters": 516
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 6,
+            "score": 0.8361303307932433
+          },
+          {
+            "id": "496418423595452566698693fb7a53b98c2607ed634883922245d3ba3d09071f",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 50,
+            "text": "(continued from previous page)\n          >>> fibo.__name__\n          'fibo'\n\n          If you intend to use a function often you can assign it to a local name:\n          >>> fib = fibo.fib\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n          6.1 More on Modules",
+            "start_char": 0,
+            "end_char": 293,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p050",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 44,
+              "chapter_title": "Modules",
+              "normalized_characters": 3193
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 7,
+            "score": 0.8343026140747911
+          },
+          {
+            "id": "4bd84618bd2ed46d84068138e8e283a68e08a15287d94386d8c96847725fa5cf",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 71,
+            "text": "It also allows disabling automatic exception chaining using the from None idiom:\n\n          >>> try:\n          ...   open('database.sqlite')\n                                                              (continues on next page)",
+            "start_char": 1904,
+            "end_char": 2131,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p071",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 65,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 2131
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 8,
+            "score": 0.8342298269271851
+          },
+          {
+            "id": "9dbf99ecdbe763b9b8ffb9432a94708e9a8c2866ee68b5873d58db853e04abf4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 45,
+            "text": ">>> basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}\n          >>> print(basket)            # show that duplicates have been removed\n          {'orange', 'banana', 'pear', 'apple'}\n          >>> 'orange' in basket       # fast membership testing\n          True\n          >>> 'crabgrass' in basket\n          False\n          >>> # Demonstrate set operations on unique letters from two words\n          >>>\n          >>> a = set('abracadabra')\n          >>> b = set('alacazam')\n          >>> a                        # unique letters in a\n          {'a', 'r', 'b', 'c', 'd'}\n          >>> a - b                    # letters in a but not in b\n          {'r', 'd', 'b'}\n          >>> a | b                    # letters in a or b or both\n          {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}\n          >>> a & b                    # letters in both a and b\n          {'a', 'c'}\n          >>> a ^ b                    # letters in a or b but not both",
+            "start_char": 619,
+            "end_char": 1575,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p045",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 39,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 3567
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 9,
+            "score": 0.8341478109359741
+          },
+          {
+            "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 55,
+            "text": "The only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+            "start_char": 2881,
+            "end_char": 3544,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p055",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 49,
+              "chapter_title": "Modules",
+              "normalized_characters": 3544
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 10,
+            "score": 0.8326084613800049
+          }
+        ]
+      },
+      "context": {
+        "text": "[51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3 | source=data/raw/tutorial.pdf | PDF page=56 | chapter=6]\n__all__ = [\"echo\", \"surround\", \"reverse\"]\n\n          This would mean that from sound.effects import * would import the three named submodules of the\n          sound.effects package.\n          Be aware that submodules might become shadowed by locally defined names. For example, if you added a reverse\n          function to the sound/effects/__init__.py file, the from sound.effects import * would only import\n          the two submodules echo and surround, but not the reverse submodule, because it is shadowed by the locally\n          defined reverse function:\n\n          __all__ = [\n             \"echo\",   # refers to the 'echo.py' file\n             \"surround\", # refers to the 'surround.py' file\n             \"reverse\", # !!! refers to the 'reverse' function now !!!\n          ]\n          def reverse(msg: str): # <-- this name shadows the 'reverse.py' submodule\n             return msg[::-1] # in the case of a 'from sound.effects import *'\n\n[2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa | source=data/raw/tutorial.pdf | PDF page=51 | chapter=6]\nif __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path\n\n[b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb | source=data/raw/tutorial.pdf | PDF page=54 | chapter=6]\nfilters/            Subpackage for filters\n                    __init__.py\n                                                              (continues on next page)",
+        "chunk_ids": [
+          "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+          "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+          "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb"
+        ],
+        "characters": 2144,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 56,
+            "text": "__all__ = [\"echo\", \"surround\", \"reverse\"]\n\n          This would mean that from sound.effects import * would import the three named submodules of the\n          sound.effects package.\n          Be aware that submodules might become shadowed by locally defined names. For example, if you added a reverse\n          function to the sound/effects/__init__.py file, the from sound.effects import * would only import\n          the two submodules echo and surround, but not the reverse submodule, because it is shadowed by the locally\n          defined reverse function:\n\n          __all__ = [\n             \"echo\",   # refers to the 'echo.py' file\n             \"surround\", # refers to the 'surround.py' file\n             \"reverse\", # !!! refers to the 'reverse' function now !!!\n          ]\n          def reverse(msg: str): # <-- this name shadows the 'reverse.py' submodule\n             return msg[::-1] # in the case of a 'from sound.effects import *'",
+            "start_char": 0,
+            "end_char": 944,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p056",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 50,
+              "chapter_title": "Modules",
+              "normalized_characters": 3410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8482584357261658
+          },
+          {
+            "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 51,
+            "text": "if __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path",
+            "start_char": 797,
+            "end_char": 1460,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p051",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 45,
+              "chapter_title": "Modules",
+              "normalized_characters": 2478
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8473635568429103
+          },
+          {
+            "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "filters/            Subpackage for filters\n                    __init__.py\n                                                              (continues on next page)",
+            "start_char": 3585,
+            "end_char": 3746,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8461278676986694
+          }
+        ],
+        "excluded": [
+          {
+            "id": "b74e3b9fdd5b877b9814e88f665f66e565a6b453220e461b7bf9b63514bf3788",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "496418423595452566698693fb7a53b98c2607ed634883922245d3ba3d09071f",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "4bd84618bd2ed46d84068138e8e283a68e08a15287d94386d8c96847725fa5cf",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "9dbf99ecdbe763b9b8ffb9432a94708e9a8c2866ee68b5873d58db853e04abf4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "b74e3b9fdd5b877b9814e88f665f66e565a6b453220e461b7bf9b63514bf3788",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "bef290e8b36e999d90d966e7b6b6a7349d924430ad1e11fb6c09f4da4a345ea5",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+            "reason": "duplicate_id"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.020395300001837313
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "f280756cfc022e5c276577d768b28cac00ec6354dbaa6a62ec40434085c0d201",
+      "request_sha256": "ae24cd4fd47b5172dd548ceca2d3a5af8f051d6a4de2f66c75d46af9e230f139",
+      "response_id": "c7r6auuXDdOMvr0PldS38Ao",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 612,
+        "candidatesTokenCount": 20,
+        "totalTokenCount": 632,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 612
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 0.9070000000028813,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "aa690ba1ffe6ed07cca3397ab1bc865096cb1184b294d377f09461256798ae97",
+      "request_sha256": "ca8ddd120d5a834cfebe43f4e1f62f3b7095477bce19357530f9b7d6e3f4099f",
+      "response_id": "grr6apGqI9zy2roPnsWgsAM",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1626,
+        "candidatesTokenCount": 22,
+        "totalTokenCount": 1648,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1626
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.5630000000019209,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa | source=data/raw/tutorial.pdf | PDF page=51 | chapter=6]\nif __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path\n\n[10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4 | source=data/raw/tutorial.pdf | PDF page=76 | chapter=8]\n|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>\n\n[fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b | source=data/raw/tutorial.pdf | PDF page=54 | chapter=6]\n(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+        "chunk_ids": [
+          "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+          "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+          "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b"
+        ],
+        "characters": 2470,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 51,
+            "text": "if __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path",
+            "start_char": 797,
+            "end_char": 1460,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p051",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 45,
+              "chapter_title": "Modules",
+              "normalized_characters": 2478
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8736780621505396
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 76,
+            "text": "|  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 2\n             +---------------- 3 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 3\n             +------------------------------------\n          >>>",
+            "start_char": 987,
+            "end_char": 1440,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p076",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 70,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 1440
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8554676433561501
+          },
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+            "start_char": 0,
+            "end_char": 978,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8547185746003062
+          }
+        ],
+        "excluded": [
+          {
+            "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "b74e3b9fdd5b877b9814e88f665f66e565a6b453220e461b7bf9b63514bf3788",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "bef290e8b36e999d90d966e7b6b6a7349d924430ad1e11fb6c09f4da4a345ea5",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "e183ad9b0859d6dc2a1674926cb7b7cd755ea4fe31eca69bea009aad3506a1cc",
+      "request_sha256": "416fedbf9e48e2d5c5ff6f850aa542a8fdc2795116e44d62c54ff618a062ca9f",
+      "response_id": "kbr6auK-GcSx1e8Pv7rGeQ",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1609,
+        "candidatesTokenCount": 129,
+        "totalTokenCount": 1738,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1609
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.625,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3 | source=data/raw/tutorial.pdf | PDF page=56 | chapter=6]\n__all__ = [\"echo\", \"surround\", \"reverse\"]\n\n          This would mean that from sound.effects import * would import the three named submodules of the\n          sound.effects package.\n          Be aware that submodules might become shadowed by locally defined names. For example, if you added a reverse\n          function to the sound/effects/__init__.py file, the from sound.effects import * would only import\n          the two submodules echo and surround, but not the reverse submodule, because it is shadowed by the locally\n          defined reverse function:\n\n          __all__ = [\n             \"echo\",   # refers to the 'echo.py' file\n             \"surround\", # refers to the 'surround.py' file\n             \"reverse\", # !!! refers to the 'reverse' function now !!!\n          ]\n          def reverse(msg: str): # <-- this name shadows the 'reverse.py' submodule\n             return msg[::-1] # in the case of a 'from sound.effects import *'\n\n[2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa | source=data/raw/tutorial.pdf | PDF page=51 | chapter=6]\nif __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path\n\n[b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb | source=data/raw/tutorial.pdf | PDF page=54 | chapter=6]\nfilters/            Subpackage for filters\n                    __init__.py\n                                                              (continues on next page)",
+        "chunk_ids": [
+          "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+          "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+          "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb"
+        ],
+        "characters": 2144,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 56,
+            "text": "__all__ = [\"echo\", \"surround\", \"reverse\"]\n\n          This would mean that from sound.effects import * would import the three named submodules of the\n          sound.effects package.\n          Be aware that submodules might become shadowed by locally defined names. For example, if you added a reverse\n          function to the sound/effects/__init__.py file, the from sound.effects import * would only import\n          the two submodules echo and surround, but not the reverse submodule, because it is shadowed by the locally\n          defined reverse function:\n\n          __all__ = [\n             \"echo\",   # refers to the 'echo.py' file\n             \"surround\", # refers to the 'surround.py' file\n             \"reverse\", # !!! refers to the 'reverse' function now !!!\n          ]\n          def reverse(msg: str): # <-- this name shadows the 'reverse.py' submodule\n             return msg[::-1] # in the case of a 'from sound.effects import *'",
+            "start_char": 0,
+            "end_char": 944,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p056",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 50,
+              "chapter_title": "Modules",
+              "normalized_characters": 3410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8482584357261658
+          },
+          {
+            "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 51,
+            "text": "if __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path",
+            "start_char": 797,
+            "end_char": 1460,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p051",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 45,
+              "chapter_title": "Modules",
+              "normalized_characters": 2478
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8473635568429103
+          },
+          {
+            "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "filters/            Subpackage for filters\n                    __init__.py\n                                                              (continues on next page)",
+            "start_char": 3585,
+            "end_char": 3746,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8461278676986694
+          }
+        ],
+        "excluded": [
+          {
+            "id": "b74e3b9fdd5b877b9814e88f665f66e565a6b453220e461b7bf9b63514bf3788",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "496418423595452566698693fb7a53b98c2607ed634883922245d3ba3d09071f",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "4bd84618bd2ed46d84068138e8e283a68e08a15287d94386d8c96847725fa5cf",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "9dbf99ecdbe763b9b8ffb9432a94708e9a8c2866ee68b5873d58db853e04abf4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "b74e3b9fdd5b877b9814e88f665f66e565a6b453220e461b7bf9b63514bf3788",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "bef290e8b36e999d90d966e7b6b6a7349d924430ad1e11fb6c09f4da4a345ea5",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+            "reason": "duplicate_id"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "a8a7ba7844e1bb87b05909694963383e54f8e79e29ab631fa701154d84bea966",
+      "request_sha256": "d8f87c078db53f8cfdc8b4f6f221b8c37c86e8a484fc4b0a79da4268e0c6353b",
+      "response_id": "oLr6aqbVDNyq0-kP_JKWyQ8",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1988,
+        "candidatesTokenCount": 182,
+        "totalTokenCount": 2170,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1988
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.5790000000015425,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3 | source=data/raw/tutorial.pdf | PDF page=56 | chapter=6]\n__all__ = [\"echo\", \"surround\", \"reverse\"]\n\n          This would mean that from sound.effects import * would import the three named submodules of the\n          sound.effects package.\n          Be aware that submodules might become shadowed by locally defined names. For example, if you added a reverse\n          function to the sound/effects/__init__.py file, the from sound.effects import * would only import\n          the two submodules echo and surround, but not the reverse submodule, because it is shadowed by the locally\n          defined reverse function:\n\n          __all__ = [\n             \"echo\",   # refers to the 'echo.py' file\n             \"surround\", # refers to the 'surround.py' file\n             \"reverse\", # !!! refers to the 'reverse' function now !!!\n          ]\n          def reverse(msg: str): # <-- this name shadows the 'reverse.py' submodule\n             return msg[::-1] # in the case of a 'from sound.effects import *'\n\n[2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa | source=data/raw/tutorial.pdf | PDF page=51 | chapter=6]\nif __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path\n\n[b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb | source=data/raw/tutorial.pdf | PDF page=54 | chapter=6]\nfilters/            Subpackage for filters\n                    __init__.py\n                                                              (continues on next page)",
+        "chunk_ids": [
+          "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+          "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+          "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb"
+        ],
+        "characters": 2144,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 56,
+            "text": "__all__ = [\"echo\", \"surround\", \"reverse\"]\n\n          This would mean that from sound.effects import * would import the three named submodules of the\n          sound.effects package.\n          Be aware that submodules might become shadowed by locally defined names. For example, if you added a reverse\n          function to the sound/effects/__init__.py file, the from sound.effects import * would only import\n          the two submodules echo and surround, but not the reverse submodule, because it is shadowed by the locally\n          defined reverse function:\n\n          __all__ = [\n             \"echo\",   # refers to the 'echo.py' file\n             \"surround\", # refers to the 'surround.py' file\n             \"reverse\", # !!! refers to the 'reverse' function now !!!\n          ]\n          def reverse(msg: str): # <-- this name shadows the 'reverse.py' submodule\n             return msg[::-1] # in the case of a 'from sound.effects import *'",
+            "start_char": 0,
+            "end_char": 944,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p056",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 50,
+              "chapter_title": "Modules",
+              "normalized_characters": 3410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8482584357261658
+          },
+          {
+            "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 51,
+            "text": "if __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path",
+            "start_char": 797,
+            "end_char": 1460,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p051",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 45,
+              "chapter_title": "Modules",
+              "normalized_characters": 2478
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8473635568429103
+          },
+          {
+            "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "filters/            Subpackage for filters\n                    __init__.py\n                                                              (continues on next page)",
+            "start_char": 3585,
+            "end_char": 3746,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8461278676986694
+          }
+        ],
+        "excluded": [
+          {
+            "id": "b74e3b9fdd5b877b9814e88f665f66e565a6b453220e461b7bf9b63514bf3788",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "496418423595452566698693fb7a53b98c2607ed634883922245d3ba3d09071f",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "4bd84618bd2ed46d84068138e8e283a68e08a15287d94386d8c96847725fa5cf",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "9dbf99ecdbe763b9b8ffb9432a94708e9a8c2866ee68b5873d58db853e04abf4",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "b74e3b9fdd5b877b9814e88f665f66e565a6b453220e461b7bf9b63514bf3788",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "bef290e8b36e999d90d966e7b6b6a7349d924430ad1e11fb6c09f4da4a345ea5",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+            "reason": "duplicate_id"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3 | source=data/raw/tutorial.pdf | PDF page=56 | chapter=6]\n__all__ = [\"echo\", \"surround\", \"reverse\"]\n\n          This would mean that from sound.effects import * would import the three named submodules of the\n          sound.effects package.\n          Be aware that submodules might become shadowed by locally defined names. For example, if you added a reverse\n          function to the sound/effects/__init__.py file, the from sound.effects import * would only import\n          the two submodules echo and surround, but not the reverse submodule, because it is shadowed by the locally\n          defined reverse function:\n\n          __all__ = [\n             \"echo\",   # refers to the 'echo.py' file\n             \"surround\", # refers to the 'surround.py' file\n             \"reverse\", # !!! refers to the 'reverse' function now !!!\n          ]\n          def reverse(msg: str): # <-- this name shadows the 'reverse.py' submodule\n             return msg[::-1] # in the case of a 'from sound.effects import *'\n\n[2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa | source=data/raw/tutorial.pdf | PDF page=51 | chapter=6]\nif __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path\n\n[b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb | source=data/raw/tutorial.pdf | PDF page=54 | chapter=6]\nfilters/            Subpackage for filters\n                    __init__.py\n                                                              (continues on next page)",
+    "chunk_ids": [
+      "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+      "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+      "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb"
+    ],
+    "characters": 2144,
+    "budget_chars": 3500,
+    "max_chunks": 3,
+    "selected_chunks": [
+      {
+        "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 56,
+        "text": "__all__ = [\"echo\", \"surround\", \"reverse\"]\n\n          This would mean that from sound.effects import * would import the three named submodules of the\n          sound.effects package.\n          Be aware that submodules might become shadowed by locally defined names. For example, if you added a reverse\n          function to the sound/effects/__init__.py file, the from sound.effects import * would only import\n          the two submodules echo and surround, but not the reverse submodule, because it is shadowed by the locally\n          defined reverse function:\n\n          __all__ = [\n             \"echo\",   # refers to the 'echo.py' file\n             \"surround\", # refers to the 'surround.py' file\n             \"reverse\", # !!! refers to the 'reverse' function now !!!\n          ]\n          def reverse(msg: str): # <-- this name shadows the 'reverse.py' submodule\n             return msg[::-1] # in the case of a 'from sound.effects import *'",
+        "start_char": 0,
+        "end_char": 944,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p056",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 50,
+          "chapter_title": "Modules",
+          "normalized_characters": 3410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.8482584357261658
+      },
+      {
+        "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 51,
+        "text": "if __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path",
+        "start_char": 797,
+        "end_char": 1460,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p051",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 45,
+          "chapter_title": "Modules",
+          "normalized_characters": 2478
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.8473635568429103
+      },
+      {
+        "id": "b57fa116136eeeddfb7f35f2b7fbc46299b4ec56b14856d9cf494e1639a893fb",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 54,
+        "text": "filters/            Subpackage for filters\n                    __init__.py\n                                                              (continues on next page)",
+        "start_char": 3585,
+        "end_char": 3746,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p054",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 48,
+          "chapter_title": "Modules",
+          "normalized_characters": 3746
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.8461278676986694
+      }
+    ],
+    "excluded": [
+      {
+        "id": "b74e3b9fdd5b877b9814e88f665f66e565a6b453220e461b7bf9b63514bf3788",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "496418423595452566698693fb7a53b98c2607ed634883922245d3ba3d09071f",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "4bd84618bd2ed46d84068138e8e283a68e08a15287d94386d8c96847725fa5cf",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "9dbf99ecdbe763b9b8ffb9432a94708e9a8c2866ee68b5873d58db853e04abf4",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+        "reason": "duplicate_id"
+      },
+      {
+        "id": "10803c7500a1c539062a12a62ce1055bcd84cf36ff4d77464df04d53bec64bc4",
+        "reason": "duplicate_id"
+      },
+      {
+        "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "51687c5b11115297149c68f9582a847c4e2c2ed6a9b86fad61272a08380dabc3",
+        "reason": "duplicate_id"
+      },
+      {
+        "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "b74e3b9fdd5b877b9814e88f665f66e565a6b453220e461b7bf9b63514bf3788",
+        "reason": "duplicate_id"
+      },
+      {
+        "id": "bef290e8b36e999d90d966e7b6b6a7349d924430ad1e11fb6c09f4da4a345ea5",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+        "reason": "duplicate_id"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [
+    {
+      "event": "citation_format_repair",
+      "rejected_proposal": {
+        "abstain": false,
+        "citations": [
+          "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa"
+        ],
+        "reason": "The tutorial explicitly shows `if __name__ == \"__main__\":` when executing a file as a script.",
+        "answer": "When a Python module is run as a script, `__name__` is set to `\"__main__\"`."
+      },
+      "reason": "Citation IDs must be drawn from current context and appear inline in answer; separate array alone is insufficient."
+    }
+  ],
+  "search_calls": 2,
+  "generated_search_queries": [
+    "__name__ script __main__",
+    "__name__ set to \"__main__\""
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 58.999504600000364,
+    "pacing_seconds_this_invocation": 53.21799999999712,
+    "wall_seconds_excluding_pacing": 5.781504600003245,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": true,
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 51,
+        "evidence": "the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\"."
+      }
+    ],
+    "expected_answer": "The value is \"__main__\".",
+    "absence_reason": null,
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "dense",
+    "query": "When a Python module is run as a script, what value is assigned to __name__?",
+    "filter": null,
+    "ranking": [
+      {
+        "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 51,
+        "text": "if __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path",
+        "start_char": 797,
+        "end_char": 1460,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p051",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 45,
+          "chapter_title": "Modules",
+          "normalized_characters": 2478
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.8865780566162486
+      },
+      {
+        "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 49,
+        "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+        "start_char": 1046,
+        "end_char": 1635,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p049",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 43,
+          "chapter_title": "Modules",
+          "normalized_characters": 2700
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.877232406221858
+      },
+      {
+        "id": "f74035edc4dbfbaf3dbb3cdfe7dfba3c72f5f254f1ef51cc3f33b09325bd6532",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 50,
+        "text": "of a module (or script, for that matter). The imported module names, if placed at the top level of a module (outside\n          any functions or classes), are added to the module’s global namespace.\n\n          There is a variant of the import statement that imports names from a module directly into the importing module’s\n          namespace. For example:\n          >>> from fibo import fib, fib2\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n          This does not introduce the module name from which the imports are taken in the local namespace (so in the example,\n          fibo is not defined).\n          There is even a variant to import all names that a module defines:",
+        "start_char": 1211,
+        "end_char": 1917,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p050",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 44,
+          "chapter_title": "Modules",
+          "normalized_characters": 3193
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.8685016114412794
+      },
+      {
+        "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 50,
+        "text": "A module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning",
+        "start_char": 305,
+        "end_char": 1200,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p050",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 44,
+          "chapter_title": "Modules",
+          "normalized_characters": 3193
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 4,
+        "score": 0.8681116778784006
+      },
+      {
+        "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 51,
+        "text": "When a module named spam is imported, the interpreter first searches for a built-in module with that name. These\n          module names are listed in sys.builtin_module_names. If not found, it then searches for a file named spam.py\n          in a list of directories given by the variable sys.path. sys.path is initialized from these locations:\n            • The directory containing the input script (or the current directory when no file is specified).\n            • PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).\n\n            • The installation-dependent default (by convention including a site-packages directory, handled by the site\n             module).\n          More details are at sys-path-init.\n\n            Note",
+        "start_char": 1472,
+        "end_char": 2236,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p051",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 45,
+          "chapter_title": "Modules",
+          "normalized_characters": 2478
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 5,
+        "score": 0.8647427720138107
+      },
+      {
+        "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 55,
+        "text": "The only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+        "start_char": 2881,
+        "end_char": 3544,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p055",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 49,
+          "chapter_title": "Modules",
+          "normalized_characters": 3544
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 6,
+        "score": 0.8623157225659074
+      },
+      {
+        "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 50,
+        "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+        "start_char": 1929,
+        "end_char": 2916,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p050",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 44,
+          "chapter_title": "Modules",
+          "normalized_characters": 3193
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 7,
+        "score": 0.8589688707627212
+      },
+      {
+        "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 57,
+        "text": "6.4.3 Packages in Multiple Directories\n          Packages support one more special attribute, __path__. This is initialized to be a sequence of strings containing the\n          name of the directory holding the package’s __init__.py before the code in that file is executed. This variable can\n          be modified; doing so affects future searches for modules and subpackages contained in the package.\n          While this feature is not often needed, it can be used to extend the set of modules found in a package.",
+        "start_char": 0,
+        "end_char": 516,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p057",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 51,
+          "chapter_title": "Modules",
+          "normalized_characters": 516
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 8,
+        "score": 0.8579858710782682
+      },
+      {
+        "id": "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 56,
+        "text": "If __all__ is not defined, the statement from sound.effects import * does not import all submodules from\n          the package sound.effects into the current namespace; it only ensures that the package sound.effects has\n          been imported (possibly running any initialization code in __init__.py) and then imports whatever names are\n          defined in the package. This includes any names defined (and submodules explicitly loaded) by __init__.py. It\n          also includes any submodules of the package that were explicitly loaded by previous import statements. Consider\n          this code:\n          import sound.effects.echo\n          import sound.effects.surround\n          from sound.effects import *",
+        "start_char": 956,
+        "end_char": 1670,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p056",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 50,
+          "chapter_title": "Modules",
+          "normalized_characters": 3410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 9,
+        "score": 0.8572935547057671
+      },
+      {
+        "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 52,
+        "text": "C>\n          These two variables are only defined if the interpreter is in interactive mode.\n\n          The variable sys.path is a list of strings that determines the interpreter’s search path for modules. It is initialized\n          to a default path taken from the environment variable PYTHONPATH, or from a built-in default if PYTHONPATH is not\n          set. You can modify it using standard list operations:",
+        "start_char": 3780,
+        "end_char": 4192,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p052",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 46,
+          "chapter_title": "Modules",
+          "normalized_characters": 4192
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 10,
+        "score": 0.8565900070491466
+      }
+    ],
+    "components": {
+      "dense": [
+        {
+          "id": "2b402936caca0ae3dfc237d4a5f0a4bd00009aed2b8f812edc3ab5c3c02874fa",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 51,
+          "text": "if __name__ == \"__main__\":\n             import sys\n             fib(int(sys.argv[1]))\n          you can make the file usable as a script as well as an importable module, because the code that parses the command\n          line only runs if the module is executed as the “main” file:\n\n          $ python fibo.py 50\n          0 1 1 2 3 5 8 13 21 34\n\n          If the module is imported, the code is not run:\n          >>> import fibo\n          >>>\n\n          This is often used either to provide a convenient user interface to a module, or for testing purposes (running the\n          module as a script executes a test suite).\n\n          6.1.2 The Module Search Path",
+          "start_char": 797,
+          "end_char": 1460,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p051",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 45,
+            "chapter_title": "Modules",
+            "normalized_characters": 2478
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8865780566162486
+        },
+        {
+          "id": "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": "into the main module (the collection of variables that you have access to in a script executed at the top level and in\n          calculator mode).\n          A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended. Within a module, the module’s name (as a string) is available as the value of the global variable\n          __name__. For instance, use your favorite text editor to create a file called fibo.py in the current directory with\n          the following contents:\n          # Fibonacci numbers module",
+          "start_char": 1046,
+          "end_char": 1635,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.877232406221858
+        },
+        {
+          "id": "f74035edc4dbfbaf3dbb3cdfe7dfba3c72f5f254f1ef51cc3f33b09325bd6532",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 50,
+          "text": "of a module (or script, for that matter). The imported module names, if placed at the top level of a module (outside\n          any functions or classes), are added to the module’s global namespace.\n\n          There is a variant of the import statement that imports names from a module directly into the importing module’s\n          namespace. For example:\n          >>> from fibo import fib, fib2\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n\n          This does not introduce the module name from which the imports are taken in the local namespace (so in the example,\n          fibo is not defined).\n          There is even a variant to import all names that a module defines:",
+          "start_char": 1211,
+          "end_char": 1917,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p050",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 44,
+            "chapter_title": "Modules",
+            "normalized_characters": 3193
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8685016114412794
+        },
+        {
+          "id": "bb012432034e357d8d36e251339529c24d08779d11f9ab53efac62b24562c3f6",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 50,
+          "text": "A module can contain executable statements as well as function definitions. These statements are intended to initialize\n          the module. They are executed only the first time the module name is encountered in an import statement.1 (They\n          are also run if the file is executed as a script.)\n          Each module has its own private namespace, which is used as the global namespace by all functions defined in the\n          module. Thus, the author of a module can use global variables in the module without worrying about accidental\n          clashes with a user’s global variables. On the other hand, if you know what you are doing you can touch a module’s\n          global variables with the same notation used to refer to its functions, modname.itemname.\n          Modules can import other modules. It is customary but not required to place all import statements at the beginning",
+          "start_char": 305,
+          "end_char": 1200,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p050",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 44,
+            "chapter_title": "Modules",
+            "normalized_characters": 3193
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8681116778784006
+        },
+        {
+          "id": "1643e2a4e4554061b504e7740d16d8b366561d0ec0466773f5f3b7dd51e286ed",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 51,
+          "text": "When a module named spam is imported, the interpreter first searches for a built-in module with that name. These\n          module names are listed in sys.builtin_module_names. If not found, it then searches for a file named spam.py\n          in a list of directories given by the variable sys.path. sys.path is initialized from these locations:\n            • The directory containing the input script (or the current directory when no file is specified).\n            • PYTHONPATH (a list of directory names, with the same syntax as the shell variable PATH).\n\n            • The installation-dependent default (by convention including a site-packages directory, handled by the site\n             module).\n          More details are at sys-path-init.\n\n            Note",
+          "start_char": 1472,
+          "end_char": 2236,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p051",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 45,
+            "chapter_title": "Modules",
+            "normalized_characters": 2478
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.8647427720138107
+        },
+        {
+          "id": "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 55,
+          "text": "The only solution is for the package author to provide an explicit index of the package. The import statement uses\n          the following convention: if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered. It is up to the package\n          author to keep this list up-to-date when a new version of the package is released. Package authors may also decide\n          not to support it, if they don’t see a use for importing * from their package. For example, the file sound/effects/\n          __init__.py could contain the following code:",
+          "start_char": 2881,
+          "end_char": 3544,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p055",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 49,
+            "chapter_title": "Modules",
+            "normalized_characters": 3544
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.8623157225659074
+        },
+        {
+          "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 50,
+          "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+          "start_char": 1929,
+          "end_char": 2916,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p050",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 44,
+            "chapter_title": "Modules",
+            "normalized_characters": 3193
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.8589688707627212
+        },
+        {
+          "id": "715819b32188bf738b2d7699f6b09f04f325f6dccd083eb60be00cf8be528e56",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 57,
+          "text": "6.4.3 Packages in Multiple Directories\n          Packages support one more special attribute, __path__. This is initialized to be a sequence of strings containing the\n          name of the directory holding the package’s __init__.py before the code in that file is executed. This variable can\n          be modified; doing so affects future searches for modules and subpackages contained in the package.\n          While this feature is not often needed, it can be used to extend the set of modules found in a package.",
+          "start_char": 0,
+          "end_char": 516,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p057",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 51,
+            "chapter_title": "Modules",
+            "normalized_characters": 516
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8579858710782682
+        },
+        {
+          "id": "ac7474b8e2e719ddd2cacc432fc0c6ae0f890546d881323bf7ab62c002292dc4",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 56,
+          "text": "If __all__ is not defined, the statement from sound.effects import * does not import all submodules from\n          the package sound.effects into the current namespace; it only ensures that the package sound.effects has\n          been imported (possibly running any initialization code in __init__.py) and then imports whatever names are\n          defined in the package. This includes any names defined (and submodules explicitly loaded) by __init__.py. It\n          also includes any submodules of the package that were explicitly loaded by previous import statements. Consider\n          this code:\n          import sound.effects.echo\n          import sound.effects.surround\n          from sound.effects import *",
+          "start_char": 956,
+          "end_char": 1670,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p056",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 50,
+            "chapter_title": "Modules",
+            "normalized_characters": 3410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8572935547057671
+        },
+        {
+          "id": "a379befaf1abf0ed1ad31917e3a2cd27c06a6ad86da900041e889e7cb7b76ffb",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 52,
+          "text": "C>\n          These two variables are only defined if the interpreter is in interactive mode.\n\n          The variable sys.path is a list of strings that determines the interpreter’s search path for modules. It is initialized\n          to a default path taken from the environment variable PYTHONPATH, or from a built-in default if PYTHONPATH is not\n          set. You can modify it using standard list operations:",
+          "start_char": 3780,
+          "end_char": 4192,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p052",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 46,
+            "chapter_title": "Modules",
+            "normalized_characters": 4192
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8565900070491466
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": false,
+    "original_query_evidence_hit_at_3": false,
+    "actual_final_context_exact_evidence": false,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "trace_sha256": "9ef7c923379b7fe991741fb7718fd3d4980bab4eb5eda608ffbfab058ffa9b57"
+}

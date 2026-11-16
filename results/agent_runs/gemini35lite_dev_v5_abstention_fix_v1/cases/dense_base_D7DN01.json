@@ -1,0 +1,2075 @@
+{
+  "status": "abstain",
+  "answer": "The supplied corpus does not contain information about how many milliseconds sorting a list of ten million integers will take.",
+  "citations": [],
+  "reason": "The supplied corpus does not contain information about how many milliseconds sorting a list of ten million integers will take.",
+  "guard": "model_abstention",
+  "raw_model_answer": "",
+  "display_normalization": "empty abstention answer displayed using original model reason",
+  "query_id": "D7DN01",
+  "config_id": "dense_base",
+  "public_query": {
+    "id": "D7DN01",
+    "question": "According to the supplied pages, exactly how many milliseconds will sorting a list of ten million integers take on my computer?",
+    "filter": null
+  },
+  "events": [
+    {
+      "event": "search",
+      "query": "sorting a list of ten million integers milliseconds",
+      "filter": null,
+      "method": "dense",
+      "ranking": [
+        {
+          "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+          "start_char": 1679,
+          "end_char": 2410,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8472974482420148
+        },
+        {
+          "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 43,
+          "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+          "start_char": 840,
+          "end_char": 1559,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p043",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 37,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2043
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8307754003077268
+        },
+        {
+          "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+          "start_char": 0,
+          "end_char": 559,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8297965729479106
+        },
+        {
+          "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+          "start_char": 0,
+          "end_char": 978,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8278039200422826
+        },
+        {
+          "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 76,
+          "text": "(continued from previous page)\n          ...\n          >>> excs = []\n          >>> for i in range(3):\n          ...   try:\n          ...      f()\n          ...   except Exception as e:\n          ...      e.add_note(f'Happened in Iteration {i+1}')\n          ...      excs.append(e)\n          ...\n          >>> raise ExceptionGroup('We have some problems', excs)\n           + Exception Group Traceback (most recent call last):\n           |  File \"<stdin>\", line 1, in <module>\n           | ExceptionGroup: We have some problems (3 sub-exceptions)\n           +-+---------------- 1 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 1\n             +---------------- 2 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>",
+          "start_char": 0,
+          "end_char": 973,
+          "metadata": {
+            "chapter": 8,
+            "page_id": "python_tutorial_3_12_11:p076",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 70,
+            "chapter_title": "Errors and Exceptions",
+            "normalized_characters": 1440
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.8273715582643082
+        },
+        {
+          "id": "81f84218b7a4754e42f601920d466b1aa012b2fc3c81d1ecf1bd19edc0cf5aaa",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 53,
+          "text": "'getallocatedblocks', 'getdefaultencoding', 'getdlopenflags',\n           'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',\n           'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',\n           'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',\n           'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',\n           'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',\n           'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', 'pycache_prefix',\n           'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', 'setdlopenflags',\n           'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', 'stderr',\n           'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', 'version_info',\n           'warnoptions']\n          Without arguments, dir() lists the names you have defined currently:\n          >>> a = [1, 2, 3, 4, 5]\n          >>> import fibo",
+          "start_char": 1192,
+          "end_char": 2180,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p053",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 47,
+            "chapter_title": "Modules",
+            "normalized_characters": 3397
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.8262658222755315
+        },
+        {
+          "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 60,
+          "text": "Passing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for\n          making columns line up.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}\n          >>> for name, phone in table.items():\n          ...   print(f'{name:10} ==> {phone:10d}')\n          ...\n          Sjoerd  ==>     4127\n          Jack    ==>     4098\n          Dcab    ==>     7678\n\n          Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(),\n          and '!r' applies repr():\n          >>> animals = 'eels'\n          >>> print(f'My hovercraft is full of {animals}.')\n          My hovercraft is full of eels.\n          >>> print(f'My hovercraft is full of {animals!r}.')\n          My hovercraft is full of 'eels'.",
+          "start_char": 1653,
+          "end_char": 2475,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p060",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 54,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2647
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.825530549820596
+        },
+        {
+          "id": "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 40,
+          "text": "printed – they return the default None.1 This is a design principle for all mutable data structures in Python.\n          Another thing you might notice is that not all data can be sorted or compared. For instance, [None, 'hello',\n          10] doesn’t sort because integers can’t be compared to strings and None can’t be compared to other types. Also, there\n          are some types that don’t have a defined ordering relation. For example, 3+4j < 5+7j isn’t a valid comparison.\n          5.1.1 Using Lists as Stacks",
+          "start_char": 1043,
+          "end_char": 1559,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p040",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 34,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2354
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8254105552786273
+        },
+        {
+          "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+          "start_char": 692,
+          "end_char": 1665,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8247369282026047
+        },
+        {
+          "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 41,
+          "text": "For example, assume we want to create a list of squares, like:\n          >>> squares = []\n          >>> for x in range(10):\n          ...   squares.append(x**2)\n          ...\n          >>> squares\n          [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n\n          Note that this creates (or overwrites) a variable named x that still exists after the loop completes. We can calculate\n          the list of squares without any side effects using:\n          squares = list(map(lambda x: x**2, range(10)))\n\n          or, equivalently:\n\n          squares = [x**2 for x in range(10)]",
+          "start_char": 1433,
+          "end_char": 2001,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p041",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 35,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2843
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8233419867346302
+        }
+      ],
+      "component_rankings": {
+        "dense": [
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+            "start_char": 1679,
+            "end_char": 2410,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8472974482420148
+          },
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 43,
+            "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+            "start_char": 840,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p043",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 37,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2043
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8307754003077268
+          },
+          {
+            "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+            "start_char": 0,
+            "end_char": 559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8297965729479106
+          },
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+            "start_char": 0,
+            "end_char": 978,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 4,
+            "score": 0.8278039200422826
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 76,
+            "text": "(continued from previous page)\n          ...\n          >>> excs = []\n          >>> for i in range(3):\n          ...   try:\n          ...      f()\n          ...   except Exception as e:\n          ...      e.add_note(f'Happened in Iteration {i+1}')\n          ...      excs.append(e)\n          ...\n          >>> raise ExceptionGroup('We have some problems', excs)\n           + Exception Group Traceback (most recent call last):\n           |  File \"<stdin>\", line 1, in <module>\n           | ExceptionGroup: We have some problems (3 sub-exceptions)\n           +-+---------------- 1 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>\n             |  File \"<stdin>\", line 2, in f\n             | OSError: operation failed\n             | Happened in Iteration 1\n             +---------------- 2 ----------------\n             | Traceback (most recent call last):\n             |  File \"<stdin>\", line 3, in <module>",
+            "start_char": 0,
+            "end_char": 973,
+            "metadata": {
+              "chapter": 8,
+              "page_id": "python_tutorial_3_12_11:p076",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 70,
+              "chapter_title": "Errors and Exceptions",
+              "normalized_characters": 1440
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.8273715582643082
+          },
+          {
+            "id": "81f84218b7a4754e42f601920d466b1aa012b2fc3c81d1ecf1bd19edc0cf5aaa",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 53,
+            "text": "'getallocatedblocks', 'getdefaultencoding', 'getdlopenflags',\n           'getfilesystemencodeerrors', 'getfilesystemencoding', 'getprofile',\n           'getrecursionlimit', 'getrefcount', 'getsizeof', 'getswitchinterval',\n           'gettrace', 'hash_info', 'hexversion', 'implementation', 'int_info',\n           'intern', 'is_finalizing', 'last_traceback', 'last_type', 'last_value',\n           'maxsize', 'maxunicode', 'meta_path', 'modules', 'path', 'path_hooks',\n           'path_importer_cache', 'platform', 'prefix', 'ps1', 'ps2', 'pycache_prefix',\n           'set_asyncgen_hooks', 'set_coroutine_origin_tracking_depth', 'setdlopenflags',\n           'setprofile', 'setrecursionlimit', 'setswitchinterval', 'settrace', 'stderr',\n           'stdin', 'stdout', 'thread_info', 'unraisablehook', 'version', 'version_info',\n           'warnoptions']\n          Without arguments, dir() lists the names you have defined currently:\n          >>> a = [1, 2, 3, 4, 5]\n          >>> import fibo",
+            "start_char": 1192,
+            "end_char": 2180,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p053",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 47,
+              "chapter_title": "Modules",
+              "normalized_characters": 3397
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 6,
+            "score": 0.8262658222755315
+          },
+          {
+            "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 60,
+            "text": "Passing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for\n          making columns line up.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}\n          >>> for name, phone in table.items():\n          ...   print(f'{name:10} ==> {phone:10d}')\n          ...\n          Sjoerd  ==>     4127\n          Jack    ==>     4098\n          Dcab    ==>     7678\n\n          Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(),\n          and '!r' applies repr():\n          >>> animals = 'eels'\n          >>> print(f'My hovercraft is full of {animals}.')\n          My hovercraft is full of eels.\n          >>> print(f'My hovercraft is full of {animals!r}.')\n          My hovercraft is full of 'eels'.",
+            "start_char": 1653,
+            "end_char": 2475,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p060",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 54,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2647
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 7,
+            "score": 0.825530549820596
+          },
+          {
+            "id": "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 40,
+            "text": "printed – they return the default None.1 This is a design principle for all mutable data structures in Python.\n          Another thing you might notice is that not all data can be sorted or compared. For instance, [None, 'hello',\n          10] doesn’t sort because integers can’t be compared to strings and None can’t be compared to other types. Also, there\n          are some types that don’t have a defined ordering relation. For example, 3+4j < 5+7j isn’t a valid comparison.\n          5.1.1 Using Lists as Stacks",
+            "start_char": 1043,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p040",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 34,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2354
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 8,
+            "score": 0.8254105552786273
+          },
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "Insert an item at a given position. The first argument is the index of the element before which to insert, so a.\n             insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).\n          list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.\n                 [ ]\n          list.pop( i )\n             Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range.\n          list.clear()\n             Remove all items from the list. Similar to del a[:].\n                   [  [   ] ]\n          list.index(x , start , end )\n             Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there",
+            "start_char": 692,
+            "end_char": 1665,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 9,
+            "score": 0.8247369282026047
+          },
+          {
+            "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": "For example, assume we want to create a list of squares, like:\n          >>> squares = []\n          >>> for x in range(10):\n          ...   squares.append(x**2)\n          ...\n          >>> squares\n          [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n\n          Note that this creates (or overwrites) a variable named x that still exists after the loop completes. We can calculate\n          the list of squares without any side effects using:\n          squares = list(map(lambda x: x**2, range(10)))\n\n          or, equivalently:\n\n          squares = [x**2 for x in range(10)]",
+            "start_char": 1433,
+            "end_char": 2001,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 10,
+            "score": 0.8233419867346302
+          }
+        ]
+      },
+      "context": {
+        "text": "[5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nis no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.\n\n[13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e | source=data/raw/tutorial.pdf | PDF page=43 | chapter=5]\nIn the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:\n\n[4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6 | source=data/raw/tutorial.pdf | PDF page=41 | chapter=5]\n5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+        "chunk_ids": [
+          "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+          "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+          "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6"
+        ],
+        "characters": 2385,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+            "start_char": 1679,
+            "end_char": 2410,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8472974482420148
+          },
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 43,
+            "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+            "start_char": 840,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p043",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 37,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2043
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8307754003077268
+          },
+          {
+            "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+            "start_char": 0,
+            "end_char": 559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8297965729479106
+          }
+        ],
+        "excluded": [
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "81f84218b7a4754e42f601920d466b1aa012b2fc3c81d1ecf1bd19edc0cf5aaa",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.01722679999875254
+    },
+    {
+      "event": "search",
+      "query": "ten million integers",
+      "filter": null,
+      "method": "dense",
+      "ranking": [
+        {
+          "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+          "start_char": 0,
+          "end_char": 978,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8285728693008423
+        },
+        {
+          "id": "4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": ">>> fibo.fib(1000)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987\n          >>> fibo.fib2(100)\n          [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]\n                                                              (continues on next page)",
+          "start_char": 2455,
+          "end_char": 2700,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8209030628204346
+        },
+        {
+          "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 60,
+          "text": "Passing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for\n          making columns line up.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}\n          >>> for name, phone in table.items():\n          ...   print(f'{name:10} ==> {phone:10d}')\n          ...\n          Sjoerd  ==>     4127\n          Jack    ==>     4098\n          Dcab    ==>     7678\n\n          Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(),\n          and '!r' applies repr():\n          >>> animals = 'eels'\n          >>> print(f'My hovercraft is full of {animals}.')\n          My hovercraft is full of eels.\n          >>> print(f'My hovercraft is full of {animals!r}.')\n          My hovercraft is full of 'eels'.",
+          "start_char": 1653,
+          "end_char": 2475,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p060",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 54,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2647
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8179488290578839
+        },
+        {
+          "id": "03b95daa06aa5b8c68592e5b07e1896fee279761ab2f2a2f8acd4289391bb853",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 62,
+          "text": "Here’s the same table of squares and cubes, formatted manually:\n          >>> for x in range(1, 11):\n          ...   print(repr(x).rjust(2), repr(x*x).rjust(3), end=' ')\n          ...   # Note use of 'end' on previous line\n          ...   print(repr(x*x*x).rjust(4))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          (Note that the one space between each column was added by the way print() works: it always adds spaces between\n          its arguments.)\n          The str.rjust() method of string objects right-justifies a string in a field of a given width by padding it with spaces\n          on the left. There are similar methods str.ljust() and str.center(). These methods do not write anything,",
+          "start_char": 752,
+          "end_char": 1625,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p062",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 56,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2320
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8166021704673767
+        },
+        {
+          "id": "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 42,
+          "text": ">>> matrix = [\n          ...   [1, 2, 3, 4],\n          ...   [5, 6, 7, 8],\n          ...   [9, 10, 11, 12],\n          ... ]\n          The following list comprehension will transpose rows and columns:\n\n          >>> [[row[i] for row in matrix] for i in range(4)]\n          [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]",
+          "start_char": 2141,
+          "end_char": 2460,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p042",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 36,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2460
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.810258150100708
+        },
+        {
+          "id": "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 62,
+          "text": "(continued from previous page)\n          >>> print(message.format(**table))\n          __name__: __main__; __doc__: None; __package__: None; __loader__: ...\n\n          As an example, the following lines produce a tidily aligned set of columns giving integers and their squares and cubes:\n          >>> for x in range(1, 11):\n          ...   print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          For a complete overview of string formatting with str.format(), see formatstrings.\n\n          7.1.3 Manual String Formatting",
+          "start_char": 0,
+          "end_char": 740,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p062",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 56,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2320
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.810199761694663
+        },
+        {
+          "id": "29d4bf2d01c08d6e6899d5dd4ec80c8d68724809147dc00f7136dad690070dd0",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 59,
+          "text": "Notice how the yes_votes are padded with spaces and a negative sign only for negative numbers. The\n             example also prints percentage multiplied by 100, with 2 decimal places and followed by a percent sign (see\n             formatspec for details).\n            • Finally, you can do all the string handling yourself by using string slicing and concatenation operations to create\n             any layout you can imagine. The string type has some methods that perform useful operations for padding\n             strings to a given column width.\n          When you don’t need fancy output but just want a quick display of some variables for debugging purposes, you can\n          convert any value to a string with the repr() or str() functions.\n          The str() function is meant to return representations of values which are fairly human-readable, while repr()",
+          "start_char": 1972,
+          "end_char": 2841,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p059",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 53,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3326
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.809798002243042
+        },
+        {
+          "id": "962b79a46dbddfde89b41ddbab92690a6a32d9b53185efdb57a00ae8d73db394",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 61,
+          "text": ">>> bugs = 'roaches'\n          >>> count = 13\n          >>> area = 'living room'\n          >>> print(f'Debugging {bugs=} {count=} {area=}')\n          Debugging bugs='roaches' count=13 area='living room'\n\n          See self-documenting expressions for more information on the = specifier. For a reference on these format specifi-\n          cations, see the reference guide for the formatspec.\n\n          7.1.2 The String format() Method\n          Basic usage of the str.format() method looks like this:\n\n          >>> print('We are the {} who say \"{}!\"'.format('knights', 'Ni'))\n          We are the knights who say \"Ni!\"",
+          "start_char": 0,
+          "end_char": 620,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p061",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 55,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2889
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8068399429321289
+        },
+        {
+          "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 64,
+          "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+          "start_char": 393,
+          "end_char": 1098,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p064",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 58,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2698
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8057592030907167
+        },
+        {
+          "id": "c170d0fac01e74a052b988be4f58a39e3d2d9358e67f70daee10ffa7daaaf10e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 62,
+          "text": "they just return a new string. If the input string is too long, they don’t truncate it, but return it unchanged; this will\n          mess up your column lay-out but that’s usually better than the alternative, which would be lying about a value. (If\n          you really want truncation you can always add a slice operation, as in x.ljust(n)[:n].)\n          There is another method, str.zfill(), which pads a numeric string on the left with zeros. It understands about\n          plus and minus signs:\n\n          >>> '12'.zfill(5)\n          '00012'\n          >>> '-3.14'.zfill(7)\n          '-003.14'\n                                                              (continues on next page)",
+          "start_char": 1636,
+          "end_char": 2320,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p062",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 56,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2320
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8049077275340409
+        }
+      ],
+      "component_rankings": {
+        "dense": [
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+            "start_char": 0,
+            "end_char": 978,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8285728693008423
+          },
+          {
+            "id": "4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": ">>> fibo.fib(1000)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987\n          >>> fibo.fib2(100)\n          [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]\n                                                              (continues on next page)",
+            "start_char": 2455,
+            "end_char": 2700,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8209030628204346
+          },
+          {
+            "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 60,
+            "text": "Passing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for\n          making columns line up.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}\n          >>> for name, phone in table.items():\n          ...   print(f'{name:10} ==> {phone:10d}')\n          ...\n          Sjoerd  ==>     4127\n          Jack    ==>     4098\n          Dcab    ==>     7678\n\n          Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(),\n          and '!r' applies repr():\n          >>> animals = 'eels'\n          >>> print(f'My hovercraft is full of {animals}.')\n          My hovercraft is full of eels.\n          >>> print(f'My hovercraft is full of {animals!r}.')\n          My hovercraft is full of 'eels'.",
+            "start_char": 1653,
+            "end_char": 2475,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p060",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 54,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2647
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8179488290578839
+          },
+          {
+            "id": "03b95daa06aa5b8c68592e5b07e1896fee279761ab2f2a2f8acd4289391bb853",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 62,
+            "text": "Here’s the same table of squares and cubes, formatted manually:\n          >>> for x in range(1, 11):\n          ...   print(repr(x).rjust(2), repr(x*x).rjust(3), end=' ')\n          ...   # Note use of 'end' on previous line\n          ...   print(repr(x*x*x).rjust(4))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          (Note that the one space between each column was added by the way print() works: it always adds spaces between\n          its arguments.)\n          The str.rjust() method of string objects right-justifies a string in a field of a given width by padding it with spaces\n          on the left. There are similar methods str.ljust() and str.center(). These methods do not write anything,",
+            "start_char": 752,
+            "end_char": 1625,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p062",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 56,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2320
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 4,
+            "score": 0.8166021704673767
+          },
+          {
+            "id": "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 42,
+            "text": ">>> matrix = [\n          ...   [1, 2, 3, 4],\n          ...   [5, 6, 7, 8],\n          ...   [9, 10, 11, 12],\n          ... ]\n          The following list comprehension will transpose rows and columns:\n\n          >>> [[row[i] for row in matrix] for i in range(4)]\n          [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]",
+            "start_char": 2141,
+            "end_char": 2460,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p042",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 36,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2460
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 5,
+            "score": 0.810258150100708
+          },
+          {
+            "id": "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 62,
+            "text": "(continued from previous page)\n          >>> print(message.format(**table))\n          __name__: __main__; __doc__: None; __package__: None; __loader__: ...\n\n          As an example, the following lines produce a tidily aligned set of columns giving integers and their squares and cubes:\n          >>> for x in range(1, 11):\n          ...   print('{0:2d} {1:3d} {2:4d}'.format(x, x*x, x*x*x))\n          ...\n           1  1  1\n           2  4  8\n           3  9  27\n           4 16  64\n           5 25 125\n           6 36 216\n           7 49 343\n           8 64 512\n           9 81 729\n          10 100 1000\n          For a complete overview of string formatting with str.format(), see formatstrings.\n\n          7.1.3 Manual String Formatting",
+            "start_char": 0,
+            "end_char": 740,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p062",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 56,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2320
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 6,
+            "score": 0.810199761694663
+          },
+          {
+            "id": "29d4bf2d01c08d6e6899d5dd4ec80c8d68724809147dc00f7136dad690070dd0",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 59,
+            "text": "Notice how the yes_votes are padded with spaces and a negative sign only for negative numbers. The\n             example also prints percentage multiplied by 100, with 2 decimal places and followed by a percent sign (see\n             formatspec for details).\n            • Finally, you can do all the string handling yourself by using string slicing and concatenation operations to create\n             any layout you can imagine. The string type has some methods that perform useful operations for padding\n             strings to a given column width.\n          When you don’t need fancy output but just want a quick display of some variables for debugging purposes, you can\n          convert any value to a string with the repr() or str() functions.\n          The str() function is meant to return representations of values which are fairly human-readable, while repr()",
+            "start_char": 1972,
+            "end_char": 2841,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p059",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 53,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 3326
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 7,
+            "score": 0.809798002243042
+          },
+          {
+            "id": "962b79a46dbddfde89b41ddbab92690a6a32d9b53185efdb57a00ae8d73db394",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 61,
+            "text": ">>> bugs = 'roaches'\n          >>> count = 13\n          >>> area = 'living room'\n          >>> print(f'Debugging {bugs=} {count=} {area=}')\n          Debugging bugs='roaches' count=13 area='living room'\n\n          See self-documenting expressions for more information on the = specifier. For a reference on these format specifi-\n          cations, see the reference guide for the formatspec.\n\n          7.1.2 The String format() Method\n          Basic usage of the str.format() method looks like this:\n\n          >>> print('We are the {} who say \"{}!\"'.format('knights', 'Ni'))\n          We are the knights who say \"Ni!\"",
+            "start_char": 0,
+            "end_char": 620,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p061",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 55,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2889
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 8,
+            "score": 0.8068399429321289
+          },
+          {
+            "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 64,
+            "text": "The rest of the examples in this section will assume that a file object called f has already been created.\n          To read a file’s contents, call f.read(size), which reads some quantity of data and returns it as a string (in text\n          mode) or bytes object (in binary mode). size is an optional numeric argument. When size is omitted or negative, the\n          entire contents of the file will be read and returned; it’s your problem if the file is twice as large as your machine’s\n          memory. Otherwise, at most size characters (in text mode) or size bytes (in binary mode) are read and returned. If\n          the end of the file has been reached, f.read() will return an empty string ('').",
+            "start_char": 393,
+            "end_char": 1098,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p064",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 58,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2698
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 9,
+            "score": 0.8057592030907167
+          },
+          {
+            "id": "c170d0fac01e74a052b988be4f58a39e3d2d9358e67f70daee10ffa7daaaf10e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 62,
+            "text": "they just return a new string. If the input string is too long, they don’t truncate it, but return it unchanged; this will\n          mess up your column lay-out but that’s usually better than the alternative, which would be lying about a value. (If\n          you really want truncation you can always add a slice operation, as in x.ljust(n)[:n].)\n          There is another method, str.zfill(), which pads a numeric string on the left with zeros. It understands about\n          plus and minus signs:\n\n          >>> '12'.zfill(5)\n          '00012'\n          >>> '-3.14'.zfill(7)\n          '-003.14'\n                                                              (continues on next page)",
+            "start_char": 1636,
+            "end_char": 2320,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p062",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 56,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2320
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 10,
+            "score": 0.8049077275340409
+          }
+        ]
+      },
+      "context": {
+        "text": "[fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b | source=data/raw/tutorial.pdf | PDF page=54 | chapter=6]\n(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',\n\n[4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809 | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\n>>> fibo.fib(1000)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987\n          >>> fibo.fib2(100)\n          [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]\n                                                              (continues on next page)\n\n[3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3 | source=data/raw/tutorial.pdf | PDF page=60 | chapter=7]\nPassing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for\n          making columns line up.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}\n          >>> for name, phone in table.items():\n          ...   print(f'{name:10} ==> {phone:10d}')\n          ...\n          Sjoerd  ==>     4127\n          Jack    ==>     4098\n          Dcab    ==>     7678\n\n          Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(),\n          and '!r' applies repr():\n          >>> animals = 'eels'\n          >>> print(f'My hovercraft is full of {animals}.')\n          My hovercraft is full of eels.\n          >>> print(f'My hovercraft is full of {animals!r}.')\n          My hovercraft is full of 'eels'.",
+        "chunk_ids": [
+          "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+          "4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809",
+          "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3"
+        ],
+        "characters": 2421,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+            "start_char": 0,
+            "end_char": 978,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8285728693008423
+          },
+          {
+            "id": "4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": ">>> fibo.fib(1000)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987\n          >>> fibo.fib2(100)\n          [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]\n                                                              (continues on next page)",
+            "start_char": 2455,
+            "end_char": 2700,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8209030628204346
+          },
+          {
+            "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 60,
+            "text": "Passing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for\n          making columns line up.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}\n          >>> for name, phone in table.items():\n          ...   print(f'{name:10} ==> {phone:10d}')\n          ...\n          Sjoerd  ==>     4127\n          Jack    ==>     4098\n          Dcab    ==>     7678\n\n          Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(),\n          and '!r' applies repr():\n          >>> animals = 'eels'\n          >>> print(f'My hovercraft is full of {animals}.')\n          My hovercraft is full of eels.\n          >>> print(f'My hovercraft is full of {animals!r}.')\n          My hovercraft is full of 'eels'.",
+            "start_char": 1653,
+            "end_char": 2475,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p060",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 54,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2647
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8179488290578839
+          }
+        ],
+        "excluded": [
+          {
+            "id": "03b95daa06aa5b8c68592e5b07e1896fee279761ab2f2a2f8acd4289391bb853",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "29d4bf2d01c08d6e6899d5dd4ec80c8d68724809147dc00f7136dad690070dd0",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "962b79a46dbddfde89b41ddbab92690a6a32d9b53185efdb57a00ae8d73db394",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c170d0fac01e74a052b988be4f58a39e3d2d9358e67f70daee10ffa7daaaf10e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "81f84218b7a4754e42f601920d466b1aa012b2fc3c81d1ecf1bd19edc0cf5aaa",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "search_and_pack_seconds": 0.010303099999873666
+    }
+  ],
+  "model_calls": [
+    {
+      "request_id": "eefb101db21f18400ae2306abb49169d47d4f3b2a2d61d64e1a3c3c7b1dc83ee",
+      "request_sha256": "8466c64b2b67d437ae2eeab2adc89b624790230c178af7029da5763659e5d004",
+      "response_id": "j8T6aqvFHa7u2roP7PG3qA0",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 616,
+        "candidatesTokenCount": 21,
+        "totalTokenCount": 637,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 616
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.0320000000028813,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "",
+        "chunk_ids": [],
+        "characters": 0,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [],
+        "excluded": [],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "607c24635850f35d3eb0e6fe604da48c468e2ae95fa9e8f8fbb786e25cc2054c",
+      "request_sha256": "b6e8068b36e7461500c350719f267b415f293ad406cceae0891ca0ffa7e45529",
+      "response_id": "nsT6ao7fFOL_2roPs-uImAc",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1584,
+        "candidatesTokenCount": 16,
+        "totalTokenCount": 1600,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1584
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.875,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e | source=data/raw/tutorial.pdf | PDF page=39 | chapter=5]\nis no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.\n\n[13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e | source=data/raw/tutorial.pdf | PDF page=43 | chapter=5]\nIn the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:\n\n[4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6 | source=data/raw/tutorial.pdf | PDF page=41 | chapter=5]\n5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+        "chunk_ids": [
+          "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+          "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+          "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6"
+        ],
+        "characters": 2385,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 39,
+            "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+            "start_char": 1679,
+            "end_char": 2410,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p039",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 33,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2410
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8472974482420148
+          },
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 43,
+            "text": "In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a\n          great job for this use case:\n          >>> list(zip(*matrix))\n          [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]\n\n          See Unpacking Argument Lists for details on the asterisk in this line.\n\n          5.2 The del statement\n\n          There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from\n          the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear\n          the entire list (which we did earlier by assignment of an empty list to the slice). For example:",
+            "start_char": 840,
+            "end_char": 1559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p043",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 37,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2043
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8307754003077268
+          },
+          {
+            "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 41,
+            "text": "5.1.2 Using Lists as Queues\n          It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-\n          out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing\n          inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).\n          To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends. For example:",
+            "start_char": 0,
+            "end_char": 559,
+            "metadata": {
+              "chapter": 5,
+              "page_id": "python_tutorial_3_12_11:p041",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 35,
+              "chapter_title": "Data Structures",
+              "normalized_characters": 2843
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8297965729479106
+          }
+        ],
+        "excluded": [
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "81f84218b7a4754e42f601920d466b1aa012b2fc3c81d1ecf1bd19edc0cf5aaa",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    },
+    {
+      "request_id": "bd63563683b9d7a148ea4acc87b8c695c80314ca7d59e93e1fd341110f672cf8",
+      "request_sha256": "7d3dd4310ee7e70d5c3bf1c6f0267c65675b0a23310e23b5a726cc642603a368",
+      "response_id": "rcT6aoqyMb6N1e8Py7-m-Ag",
+      "model_version": "gemini-3.5-flash-lite",
+      "usage_metadata": {
+        "promptTokenCount": 1820,
+        "candidatesTokenCount": 47,
+        "totalTokenCount": 1867,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1820
+          }
+        ],
+        "serviceTier": "standard"
+      },
+      "network_seconds": 1.6410000000032596,
+      "reused_checkpoint": false,
+      "context_sent": {
+        "text": "[fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b | source=data/raw/tutorial.pdf | PDF page=54 | chapter=6]\n(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',\n\n[4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809 | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\n>>> fibo.fib(1000)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987\n          >>> fibo.fib2(100)\n          [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]\n                                                              (continues on next page)\n\n[3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3 | source=data/raw/tutorial.pdf | PDF page=60 | chapter=7]\nPassing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for\n          making columns line up.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}\n          >>> for name, phone in table.items():\n          ...   print(f'{name:10} ==> {phone:10d}')\n          ...\n          Sjoerd  ==>     4127\n          Jack    ==>     4098\n          Dcab    ==>     7678\n\n          Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(),\n          and '!r' applies repr():\n          >>> animals = 'eels'\n          >>> print(f'My hovercraft is full of {animals}.')\n          My hovercraft is full of eels.\n          >>> print(f'My hovercraft is full of {animals!r}.')\n          My hovercraft is full of 'eels'.",
+        "chunk_ids": [
+          "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+          "4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809",
+          "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3"
+        ],
+        "characters": 2421,
+        "budget_chars": 3500,
+        "max_chunks": 3,
+        "selected_chunks": [
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 54,
+            "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+            "start_char": 0,
+            "end_char": 978,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p054",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 48,
+              "chapter_title": "Modules",
+              "normalized_characters": 3746
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 1,
+            "score": 0.8285728693008423
+          },
+          {
+            "id": "4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 49,
+            "text": ">>> fibo.fib(1000)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987\n          >>> fibo.fib2(100)\n          [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]\n                                                              (continues on next page)",
+            "start_char": 2455,
+            "end_char": 2700,
+            "metadata": {
+              "chapter": 6,
+              "page_id": "python_tutorial_3_12_11:p049",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 43,
+              "chapter_title": "Modules",
+              "normalized_characters": 2700
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 2,
+            "score": 0.8209030628204346
+          },
+          {
+            "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+            "source_id": "python_tutorial_3_12_11",
+            "source": "data/raw/tutorial.pdf",
+            "page": 60,
+            "text": "Passing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for\n          making columns line up.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}\n          >>> for name, phone in table.items():\n          ...   print(f'{name:10} ==> {phone:10d}')\n          ...\n          Sjoerd  ==>     4127\n          Jack    ==>     4098\n          Dcab    ==>     7678\n\n          Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(),\n          and '!r' applies repr():\n          >>> animals = 'eels'\n          >>> print(f'My hovercraft is full of {animals}.')\n          My hovercraft is full of eels.\n          >>> print(f'My hovercraft is full of {animals!r}.')\n          My hovercraft is full of 'eels'.",
+            "start_char": 1653,
+            "end_char": 2475,
+            "metadata": {
+              "chapter": 7,
+              "page_id": "python_tutorial_3_12_11:p060",
+              "version": "3.12.11",
+              "language": "en",
+              "printed_page": 54,
+              "chapter_title": "Input and Output",
+              "normalized_characters": 2647
+            },
+            "local_source_path": "data/day6/source/tutorial.pdf",
+            "rank": 3,
+            "score": 0.8179488290578839
+          }
+        ],
+        "excluded": [
+          {
+            "id": "03b95daa06aa5b8c68592e5b07e1896fee279761ab2f2a2f8acd4289391bb853",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "29d4bf2d01c08d6e6899d5dd4ec80c8d68724809147dc00f7136dad690070dd0",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "962b79a46dbddfde89b41ddbab92690a6a32d9b53185efdb57a00ae8d73db394",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "c170d0fac01e74a052b988be4f58a39e3d2d9358e67f70daee10ffa7daaaf10e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "81f84218b7a4754e42f601920d466b1aa012b2fc3c81d1ecf1bd19edc0cf5aaa",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+            "reason": "duplicate_id"
+          },
+          {
+            "id": "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+            "reason": "max_chunks"
+          },
+          {
+            "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+            "reason": "max_chunks"
+          }
+        ],
+        "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+      },
+      "note": "Exact prompt/response, tool declaration and generation settings are in api_cache/<request_id>.json."
+    }
+  ],
+  "final_context": {
+    "text": "[fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b | source=data/raw/tutorial.pdf | PDF page=54 | chapter=6]\n(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',\n\n[4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809 | source=data/raw/tutorial.pdf | PDF page=49 | chapter=6]\n>>> fibo.fib(1000)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987\n          >>> fibo.fib2(100)\n          [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]\n                                                              (continues on next page)\n\n[3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3 | source=data/raw/tutorial.pdf | PDF page=60 | chapter=7]\nPassing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for\n          making columns line up.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}\n          >>> for name, phone in table.items():\n          ...   print(f'{name:10} ==> {phone:10d}')\n          ...\n          Sjoerd  ==>     4127\n          Jack    ==>     4098\n          Dcab    ==>     7678\n\n          Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(),\n          and '!r' applies repr():\n          >>> animals = 'eels'\n          >>> print(f'My hovercraft is full of {animals}.')\n          My hovercraft is full of eels.\n          >>> print(f'My hovercraft is full of {animals!r}.')\n          My hovercraft is full of 'eels'.",
+    "chunk_ids": [
+      "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+      "4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809",
+      "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3"
+    ],
+    "characters": 2421,
+    "budget_chars": 3500,
+    "max_chunks": 3,
+    "selected_chunks": [
+      {
+        "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 54,
+        "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+        "start_char": 0,
+        "end_char": 978,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p054",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 48,
+          "chapter_title": "Modules",
+          "normalized_characters": 3746
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.8285728693008423
+      },
+      {
+        "id": "4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 49,
+        "text": ">>> fibo.fib(1000)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987\n          >>> fibo.fib2(100)\n          [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]\n                                                              (continues on next page)",
+        "start_char": 2455,
+        "end_char": 2700,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p049",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 43,
+          "chapter_title": "Modules",
+          "normalized_characters": 2700
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.8209030628204346
+      },
+      {
+        "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 60,
+        "text": "Passing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for\n          making columns line up.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}\n          >>> for name, phone in table.items():\n          ...   print(f'{name:10} ==> {phone:10d}')\n          ...\n          Sjoerd  ==>     4127\n          Jack    ==>     4098\n          Dcab    ==>     7678\n\n          Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(),\n          and '!r' applies repr():\n          >>> animals = 'eels'\n          >>> print(f'My hovercraft is full of {animals}.')\n          My hovercraft is full of eels.\n          >>> print(f'My hovercraft is full of {animals!r}.')\n          My hovercraft is full of 'eels'.",
+        "start_char": 1653,
+        "end_char": 2475,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p060",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 54,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2647
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.8179488290578839
+      }
+    ],
+    "excluded": [
+      {
+        "id": "03b95daa06aa5b8c68592e5b07e1896fee279761ab2f2a2f8acd4289391bb853",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "649475fc52849c608028fbec2e0bc4b913e2e6ce8831c1e8afcd8b3a8c0fe862",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "29d4bf2d01c08d6e6899d5dd4ec80c8d68724809147dc00f7136dad690070dd0",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "962b79a46dbddfde89b41ddbab92690a6a32d9b53185efdb57a00ae8d73db394",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "ba9dfc1012afb767b5327629c309806f311a84a2555df0963220161f2ef0c804",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "c170d0fac01e74a052b988be4f58a39e3d2d9358e67f70daee10ffa7daaaf10e",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "13028f6c7898226fc0db116abd4f8cbf11e01e1b7a62c5c2a74577ae0dadd99e",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+        "reason": "duplicate_id"
+      },
+      {
+        "id": "3736d894901736a3dfd18d47f4629f9760d1b7f316d8d8968ff497db957c5c3d",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "81f84218b7a4754e42f601920d466b1aa012b2fc3c81d1ecf1bd19edc0cf5aaa",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+        "reason": "duplicate_id"
+      },
+      {
+        "id": "39a05b90e3a8c73629ef181e01bff3575f24b81fd32ae356786be108a582ca48",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3",
+        "reason": "max_chunks"
+      },
+      {
+        "id": "d254412b7c72402cc2d3cc011e11efe9b8df198545743b3915263d08d03c6ba8",
+        "reason": "max_chunks"
+      }
+    ],
+    "policy": "whole source chunks in rank order; ID deduplication; preserve code indentation; no truncation"
+  },
+  "format_repairs": [],
+  "search_calls": 2,
+  "generated_search_queries": [
+    "sorting a list of ten million integers milliseconds",
+    "ten million integers"
+  ],
+  "timing": {
+    "wall_seconds_this_invocation": 43.3410143000001,
+    "pacing_seconds_this_invocation": 38.74899999999252,
+    "wall_seconds_excluding_pacing": 4.592014300007577,
+    "reused_api_checkpoints": false,
+    "note": "Resumed cases replay saved API responses; their current wall time is not uncached agent latency."
+  },
+  "evaluation_only": {
+    "answerable": false,
+    "gold": [],
+    "expected_answer": null,
+    "absence_reason": "The selected pages describe sorting/list operations but contain no measured runtime for that input and computer; the hardware and benchmark conditions are also unspecified. No exact millisecond value is supported.",
+    "note": "Attached after the model run. Never passed to controller or search."
+  },
+  "original_query_retrieval": {
+    "method": "dense",
+    "query": "According to the supplied pages, exactly how many milliseconds will sorting a list of ten million integers take on my computer?",
+    "filter": null,
+    "ranking": [
+      {
+        "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 39,
+        "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+        "start_char": 1679,
+        "end_char": 2410,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p039",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 33,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2410
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 1,
+        "score": 0.8417544459250914
+      },
+      {
+        "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 53,
+        "text": "'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError',\n           'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError',\n                                                              (continues on next page)",
+        "start_char": 3160,
+        "end_char": 3397,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p053",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 47,
+          "chapter_title": "Modules",
+          "normalized_characters": 3397
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 2,
+        "score": 0.8385105921613524
+      },
+      {
+        "id": "4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 49,
+        "text": ">>> fibo.fib(1000)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987\n          >>> fibo.fib2(100)\n          [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]\n                                                              (continues on next page)",
+        "start_char": 2455,
+        "end_char": 2700,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p049",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 43,
+          "chapter_title": "Modules",
+          "normalized_characters": 2700
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 3,
+        "score": 0.8365530967712402
+      },
+      {
+        "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 50,
+        "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+        "start_char": 1929,
+        "end_char": 2916,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p050",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 44,
+          "chapter_title": "Modules",
+          "normalized_characters": 3193
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 4,
+        "score": 0.8340731362060838
+      },
+      {
+        "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 54,
+        "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+        "start_char": 0,
+        "end_char": 978,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p054",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 48,
+          "chapter_title": "Modules",
+          "normalized_characters": 3746
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 5,
+        "score": 0.8327029943466187
+      },
+      {
+        "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 54,
+        "text": "'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+        "start_char": 990,
+        "end_char": 1611,
+        "metadata": {
+          "chapter": 6,
+          "page_id": "python_tutorial_3_12_11:p054",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 48,
+          "chapter_title": "Modules",
+          "normalized_characters": 3746
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 6,
+        "score": 0.831238051505327
+      },
+      {
+        "id": "c170d0fac01e74a052b988be4f58a39e3d2d9358e67f70daee10ffa7daaaf10e",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 62,
+        "text": "they just return a new string. If the input string is too long, they don’t truncate it, but return it unchanged; this will\n          mess up your column lay-out but that’s usually better than the alternative, which would be lying about a value. (If\n          you really want truncation you can always add a slice operation, as in x.ljust(n)[:n].)\n          There is another method, str.zfill(), which pads a numeric string on the left with zeros. It understands about\n          plus and minus signs:\n\n          >>> '12'.zfill(5)\n          '00012'\n          >>> '-3.14'.zfill(7)\n          '-003.14'\n                                                              (continues on next page)",
+        "start_char": 1636,
+        "end_char": 2320,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p062",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 56,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2320
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 7,
+        "score": 0.8292191522848116
+      },
+      {
+        "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 60,
+        "text": "Passing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for\n          making columns line up.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}\n          >>> for name, phone in table.items():\n          ...   print(f'{name:10} ==> {phone:10d}')\n          ...\n          Sjoerd  ==>     4127\n          Jack    ==>     4098\n          Dcab    ==>     7678\n\n          Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(),\n          and '!r' applies repr():\n          >>> animals = 'eels'\n          >>> print(f'My hovercraft is full of {animals}.')\n          My hovercraft is full of eels.\n          >>> print(f'My hovercraft is full of {animals!r}.')\n          My hovercraft is full of 'eels'.",
+        "start_char": 1653,
+        "end_char": 2475,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p060",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 54,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 2647
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 8,
+        "score": 0.8268764718248578
+      },
+      {
+        "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 65,
+        "text": "7.2.2 Saving structured data with json\n          Strings can easily be written to and read from a file. Numbers take a bit more effort, since the read() method only\n          returns strings, which will have to be passed to a function like int(), which takes a string like '123' and returns its\n          numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and\n          serializing by hand becomes complicated.\n          Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows\n          you to use the popular data interchange format called JSON (JavaScript Object Notation). The standard module called\n          json can take Python data hierarchies, and convert them to string representations; this process is called serializing.\n          Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing,",
+        "start_char": 1570,
+        "end_char": 2550,
+        "metadata": {
+          "chapter": 7,
+          "page_id": "python_tutorial_3_12_11:p065",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 59,
+          "chapter_title": "Input and Output",
+          "normalized_characters": 3494
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 9,
+        "score": 0.8249986171722412
+      },
+      {
+        "id": "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+        "source_id": "python_tutorial_3_12_11",
+        "source": "data/raw/tutorial.pdf",
+        "page": 42,
+        "text": ">>> matrix = [\n          ...   [1, 2, 3, 4],\n          ...   [5, 6, 7, 8],\n          ...   [9, 10, 11, 12],\n          ... ]\n          The following list comprehension will transpose rows and columns:\n\n          >>> [[row[i] for row in matrix] for i in range(4)]\n          [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]",
+        "start_char": 2141,
+        "end_char": 2460,
+        "metadata": {
+          "chapter": 5,
+          "page_id": "python_tutorial_3_12_11:p042",
+          "version": "3.12.11",
+          "language": "en",
+          "printed_page": 36,
+          "chapter_title": "Data Structures",
+          "normalized_characters": 2460
+        },
+        "local_source_path": "data/day6/source/tutorial.pdf",
+        "rank": 10,
+        "score": 0.8249755501747131
+      }
+    ],
+    "components": {
+      "dense": [
+        {
+          "id": "5fd20a7b32007ff57f4345adbd543a59304500fb83f5f4bf3653f8dd4f09a37e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 39,
+          "text": "is no such item.\n             The optional arguments start and end are interpreted as in the slice notation and are used to limit the search\n             to a particular subsequence of the list. The returned index is computed relative to the beginning of the full\n             sequence rather than the start argument.\n          list.count(x)\n             Return the number of times x appears in the list.\n          list.sort(* (Keyword-only parameters separator (PEP 3102)), key=None, reverse=False)\n\n             Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their\n             explanation).\n          list.reverse()\n             Reverse the elements of the list in place.",
+          "start_char": 1679,
+          "end_char": 2410,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p039",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 33,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2410
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 1,
+          "score": 0.8417544459250914
+        },
+        {
+          "id": "85de4426376b2b5a98f6190634290a00fe67b307d9a3980f85f5eef010b4a4a9",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 53,
+          "text": "'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError',\n           'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError',\n                                                              (continues on next page)",
+          "start_char": 3160,
+          "end_char": 3397,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p053",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 47,
+            "chapter_title": "Modules",
+            "normalized_characters": 3397
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 2,
+          "score": 0.8385105921613524
+        },
+        {
+          "id": "4d25373c4d357b110f5dbffe2f4e1d4a61e824066ce7362f883c12921c333809",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 49,
+          "text": ">>> fibo.fib(1000)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987\n          >>> fibo.fib2(100)\n          [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]\n                                                              (continues on next page)",
+          "start_char": 2455,
+          "end_char": 2700,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p049",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 43,
+            "chapter_title": "Modules",
+            "normalized_characters": 2700
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 3,
+          "score": 0.8365530967712402
+        },
+        {
+          "id": "866b4db28ad49901b741b951869f52eac019ecabecda43e5f48e2bb488f1eba0",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 50,
+          "text": ">>> from fibo import *\n          >>> fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This imports all names except those beginning with an underscore (_). In most cases Python programmers do not\n          use this facility since it introduces an unknown set of names into the interpreter, possibly hiding some things you\n          have already defined.\n\n          Note that in general the practice of importing * from a module or package is frowned upon, since it often causes\n          poorly readable code. However, it is okay to use it to save typing in interactive sessions.\n          If the module name is followed by as, then the name following as is bound directly to the imported module.\n\n          >>> import fibo as fib\n          >>> fib.fib(500)\n          0 1 1 2 3 5 8 13 21 34 55 89 144 233 377\n          This is effectively importing the module in the same way that import fibo will do, with the only difference of it\n          being available as fib.",
+          "start_char": 1929,
+          "end_char": 2916,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p050",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 44,
+            "chapter_title": "Modules",
+            "normalized_characters": 3193
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 4,
+          "score": 0.8340731362060838
+        },
+        {
+          "id": "fe44fbb5d22e84072c4cc269ac2c4c6c4807a3c29262ab72c409346ec1401b3b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "(continued from previous page)\n           'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented',\n           'NotImplementedError', 'OSError', 'OverflowError',\n           'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError',\n           'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning',\n           'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError',\n           'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError',\n           'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError',\n           'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning',\n           'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__',\n           '__debug__', '__doc__', '__import__', '__name__', '__package__', 'abs',\n           'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable',\n           'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits',",
+          "start_char": 0,
+          "end_char": 978,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 5,
+          "score": 0.8327029943466187
+        },
+        {
+          "id": "fa62fc0a8799646458b06382631e05ce3276e98d092337fe8e480083b470612e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 54,
+          "text": "'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit',\n           'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr',\n           'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass',\n           'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview',\n           'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property',\n           'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice',\n           'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars',\n           'zip']\n          6.4 Packages",
+          "start_char": 990,
+          "end_char": 1611,
+          "metadata": {
+            "chapter": 6,
+            "page_id": "python_tutorial_3_12_11:p054",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 48,
+            "chapter_title": "Modules",
+            "normalized_characters": 3746
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 6,
+          "score": 0.831238051505327
+        },
+        {
+          "id": "c170d0fac01e74a052b988be4f58a39e3d2d9358e67f70daee10ffa7daaaf10e",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 62,
+          "text": "they just return a new string. If the input string is too long, they don’t truncate it, but return it unchanged; this will\n          mess up your column lay-out but that’s usually better than the alternative, which would be lying about a value. (If\n          you really want truncation you can always add a slice operation, as in x.ljust(n)[:n].)\n          There is another method, str.zfill(), which pads a numeric string on the left with zeros. It understands about\n          plus and minus signs:\n\n          >>> '12'.zfill(5)\n          '00012'\n          >>> '-3.14'.zfill(7)\n          '-003.14'\n                                                              (continues on next page)",
+          "start_char": 1636,
+          "end_char": 2320,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p062",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 56,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2320
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 7,
+          "score": 0.8292191522848116
+        },
+        {
+          "id": "3fb99760572a2243f7f72a79ac4eb863b6f845d2535f68ab8ec777628ba798b3",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 60,
+          "text": "Passing an integer after the ':' will cause that field to be a minimum number of characters wide. This is useful for\n          making columns line up.\n          >>> table = {'Sjoerd': 4127, 'Jack': 4098, 'Dcab': 7678}\n          >>> for name, phone in table.items():\n          ...   print(f'{name:10} ==> {phone:10d}')\n          ...\n          Sjoerd  ==>     4127\n          Jack    ==>     4098\n          Dcab    ==>     7678\n\n          Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(),\n          and '!r' applies repr():\n          >>> animals = 'eels'\n          >>> print(f'My hovercraft is full of {animals}.')\n          My hovercraft is full of eels.\n          >>> print(f'My hovercraft is full of {animals!r}.')\n          My hovercraft is full of 'eels'.",
+          "start_char": 1653,
+          "end_char": 2475,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p060",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 54,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 2647
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 8,
+          "score": 0.8268764718248578
+        },
+        {
+          "id": "5101633dfe9a66ffebe01470c12ccb3635eee405cec7f51d6d5cbaf7a3e31727",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 65,
+          "text": "7.2.2 Saving structured data with json\n          Strings can easily be written to and read from a file. Numbers take a bit more effort, since the read() method only\n          returns strings, which will have to be passed to a function like int(), which takes a string like '123' and returns its\n          numeric value 123. When you want to save more complex data types like nested lists and dictionaries, parsing and\n          serializing by hand becomes complicated.\n          Rather than having users constantly writing and debugging code to save complicated data types to files, Python allows\n          you to use the popular data interchange format called JSON (JavaScript Object Notation). The standard module called\n          json can take Python data hierarchies, and convert them to string representations; this process is called serializing.\n          Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing,",
+          "start_char": 1570,
+          "end_char": 2550,
+          "metadata": {
+            "chapter": 7,
+            "page_id": "python_tutorial_3_12_11:p065",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 59,
+            "chapter_title": "Input and Output",
+            "normalized_characters": 3494
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 9,
+          "score": 0.8249986171722412
+        },
+        {
+          "id": "7fc17009ea7c613315e51a9be63b9e94431c5320c4f96f3105d82673752ae84b",
+          "source_id": "python_tutorial_3_12_11",
+          "source": "data/raw/tutorial.pdf",
+          "page": 42,
+          "text": ">>> matrix = [\n          ...   [1, 2, 3, 4],\n          ...   [5, 6, 7, 8],\n          ...   [9, 10, 11, 12],\n          ... ]\n          The following list comprehension will transpose rows and columns:\n\n          >>> [[row[i] for row in matrix] for i in range(4)]\n          [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]",
+          "start_char": 2141,
+          "end_char": 2460,
+          "metadata": {
+            "chapter": 5,
+            "page_id": "python_tutorial_3_12_11:p042",
+            "version": "3.12.11",
+            "language": "en",
+            "printed_page": 36,
+            "chapter_title": "Data Structures",
+            "normalized_characters": 2460
+          },
+          "local_source_path": "data/day6/source/tutorial.pdf",
+          "rank": 10,
+          "score": 0.8249755501747131
+        }
+      ]
+    }
+  },
+  "automatic_provisional": {
+    "original_query_hit_at_1": null,
+    "original_query_evidence_hit_at_3": null,
+    "actual_final_context_exact_evidence": null,
+    "answer_grade": null,
+    "citation_semantic_support": null,
+    "correct_abstention": null,
+    "note": "Source-equivalent evidence and semantic judgments require review. Valid citation IDs do not establish support."
+  },
+  "trace_sha256": "f0f4f92812c58ee00437a4368cc3a4e74b871ed2aa691b92298bdf3aa2fa6aa6"
+}
