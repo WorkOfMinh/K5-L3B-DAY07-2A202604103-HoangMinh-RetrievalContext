@@ -1,0 +1,289 @@
+[
+  {
+    "id": "D01",
+    "split": "dev",
+    "question": "Which list method adds one item to the end of a list?",
+    "answerable": true,
+    "expected_answer": "Use list.append(x).",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 39,
+        "evidence": "list.append(x)\n             Add an item to the end of the list. Similar to a[len(a):] = [x]."
+      }
+    ],
+    "filter": null,
+    "question_type": "direct",
+    "origin": "day6_dev_seed"
+  },
+  {
+    "id": "D02",
+    "split": "dev",
+    "question": "What does list.remove(x) do if x does not occur in the list?",
+    "answerable": true,
+    "expected_answer": "It raises ValueError.",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 39,
+        "evidence": "list.remove(x)\n             Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item."
+      }
+    ],
+    "filter": null,
+    "question_type": "condition",
+    "origin": "day6_dev_seed"
+  },
+  {
+    "id": "D03",
+    "split": "dev",
+    "question": "Within chapter 5, Data Structures, what does list.pop() do when no index is provided, and what happens if the list is empty?",
+    "answerable": true,
+    "expected_answer": "It removes and returns the last item; on an empty list it raises IndexError.",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 39,
+        "evidence": "If no index is specified, a.pop() removes and\n             returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list\n             range."
+      }
+    ],
+    "filter": {
+      "chapter": 5
+    },
+    "question_type": "metadata_filter",
+    "origin": "day6_dev_seed"
+  },
+  {
+    "id": "D04",
+    "split": "dev",
+    "question": "I need a queue with fast additions and removals at either end. Which collection does the tutorial recommend?",
+    "answerable": true,
+    "expected_answer": "Use collections.deque.",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 41,
+        "evidence": "To implement a queue, use collections.deque which was designed to have fast appends and pops from both\n          ends."
+      }
+    ],
+    "filter": null,
+    "question_type": "paraphrase",
+    "origin": "day6_dev_seed"
+  },
+  {
+    "id": "D05",
+    "split": "dev",
+    "question": "How do I construct an empty set, and why should I avoid {} for this?",
+    "answerable": true,
+    "expected_answer": "Use set(); {} creates an empty dictionary.",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 45,
+        "evidence": "Note: to create an empty set you have to use set(),\n          not {}; the latter creates an empty dictionary, a data structure that we discuss in the next section."
+      }
+    ],
+    "filter": null,
+    "question_type": "condition",
+    "origin": "day6_dev_seed"
+  },
+  {
+    "id": "D06",
+    "split": "dev",
+    "question": "Are tuple elements assignable, and can a tuple contain a list?",
+    "answerable": true,
+    "expected_answer": "Individual tuple items cannot be assigned to, but tuples may contain mutable objects such as lists.",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 44,
+        "evidence": "It is not possible to assign to the individual items of a tuple, however it is possible to\n          create tuples which contain mutable objects, such as lists."
+      }
+    ],
+    "filter": null,
+    "question_type": "paraphrase",
+    "origin": "day6_dev_seed"
+  },
+  {
+    "id": "D07",
+    "split": "dev",
+    "question": "What is a Python module, and how is its filename related to its name?",
+    "answerable": true,
+    "expected_answer": "A module is a file of Python definitions and statements; its filename is the module name plus .py.",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 49,
+        "evidence": "A module is a file containing Python definitions and statements. The file name is the module name with the suffix\n          .py appended."
+      }
+    ],
+    "filter": null,
+    "question_type": "direct",
+    "origin": "day6_dev_seed"
+  },
+  {
+    "id": "D08",
+    "split": "dev",
+    "question": "After editing a module already imported in an interactive session, how can I load its changes without restarting the interpreter?",
+    "answerable": true,
+    "expected_answer": "Use importlib.reload(modulename), after importing importlib.",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 51,
+        "evidence": "if it’s just one module you want to test interactively, use\n           importlib.reload(), e.g. import importlib; importlib.reload(modulename)."
+      }
+    ],
+    "filter": null,
+    "question_type": "paraphrase",
+    "origin": "day6_dev_seed"
+  },
+  {
+    "id": "D09",
+    "split": "dev",
+    "question": "When a Python module is run as a script, what value is assigned to __name__?",
+    "answerable": true,
+    "expected_answer": "The value is \"__main__\".",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 51,
+        "evidence": "the code in the module will be executed, just as if you imported it, but with the __name__ set to \"__main__\"."
+      }
+    ],
+    "filter": null,
+    "question_type": "direct",
+    "origin": "day6_dev_seed"
+  },
+  {
+    "id": "D10",
+    "split": "dev",
+    "question": "Within chapter 6, Modules, is __init__.py required for every kind of package, or is there an exception?",
+    "answerable": true,
+    "expected_answer": "It is required for ordinary packages; namespace packages are the exception.",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 55,
+        "evidence": "The __init__.py files are required to make Python treat directories containing the file as packages (unless us-\n          ing a namespace package, a relatively advanced feature)."
+      }
+    ],
+    "filter": {
+      "chapter": 6
+    },
+    "question_type": "metadata_filter",
+    "origin": "day6_dev_seed"
+  },
+  {
+    "id": "D11",
+    "split": "dev",
+    "question": "What happens to an existing file when open() uses mode \"w\"?",
+    "answerable": true,
+    "expected_answer": "Its existing contents are erased.",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 63,
+        "evidence": "'w'\n          for only writing (an existing file with the same name will be erased)"
+      }
+    ],
+    "filter": null,
+    "question_type": "condition",
+    "origin": "day6_dev_seed"
+  },
+  {
+    "id": "D12",
+    "split": "dev",
+    "question": "What does f.write(string) return in the text-file example?",
+    "answerable": true,
+    "expected_answer": "It returns the number of characters written.",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 64,
+        "evidence": "f.write(string) writes the contents of string to the file, returning the number of characters written."
+      }
+    ],
+    "filter": null,
+    "question_type": "direct",
+    "origin": "day6_dev_seed"
+  },
+  {
+    "id": "D13",
+    "split": "dev",
+    "question": "Within chapter 7, Input and Output, how can I distinguish end-of-file from a blank line when using f.readline()?",
+    "answerable": true,
+    "expected_answer": "An empty string means end-of-file; a blank line is represented by a newline-only string.",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 64,
+        "evidence": "if\n          f.readline() returns an empty string, the end of the file has been reached, while a blank line is represented by\n          '\\n', a string containing only a single newline."
+      }
+    ],
+    "filter": {
+      "chapter": 7
+    },
+    "question_type": "metadata_filter",
+    "origin": "day6_dev_seed"
+  },
+  {
+    "id": "D14",
+    "split": "dev",
+    "question": "Why use a with statement for a file if an exception might occur during processing?",
+    "answerable": true,
+    "expected_answer": "The file is properly closed after the suite finishes, even if an exception occurs.",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 63,
+        "evidence": "It is good practice to use the with keyword when dealing with file objects. The advantage is that the file is properly\n          closed after its suite finishes, even if an exception is raised at some point."
+      }
+    ],
+    "filter": null,
+    "question_type": "condition",
+    "origin": "day6_dev_seed"
+  },
+  {
+    "id": "D15",
+    "split": "dev",
+    "question": "Which encoding should be used when opening a JSON file as text for reading or writing?",
+    "answerable": true,
+    "expected_answer": "Use UTF-8, specifying encoding=\"utf-8\".",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 66,
+        "evidence": "JSON files must be encoded in UTF-8. Use encoding=\"utf-8\" when opening JSON file as a text file for both\n           of reading and writing."
+      }
+    ],
+    "filter": null,
+    "question_type": "direct",
+    "origin": "day6_dev_seed"
+  },
+  {
+    "id": "D7DN01",
+    "split": "dev",
+    "question": "According to the supplied pages, exactly how many milliseconds will sorting a list of ten million integers take on my computer?",
+    "answerable": false,
+    "gold": [],
+    "filter": null,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "The selected pages describe sorting/list operations but contain no measured runtime for that input and computer; the hardware and benchmark conditions are also unspecified. No exact millisecond value is supported.",
+    "acceptable_response": "Explicitly state that the supplied pages do not establish the requested value/specification. Do not guess or use outside knowledge. Relevant supported facts may be cited without inventing the missing answer.",
+    "question_type": "insufficient_evidence",
+    "origin": "day7_new_case"
+  },
+  {
+    "id": "D7DN02",
+    "split": "dev",
+    "question": "According to the supplied pages, what is the maximum number of rows that csv.reader supports?",
+    "answerable": false,
+    "gold": [],
+    "filter": null,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "The selected I/O pages discuss formatting, file objects and JSON/pickle, not a csv.reader row-limit specification. References to other documentation do not supply an answer inside this corpus.",
+    "acceptable_response": "Explicitly state that the supplied pages do not establish the requested value/specification. Do not guess or use outside knowledge. Relevant supported facts may be cited without inventing the missing answer.",
+    "question_type": "insufficient_evidence",
+    "origin": "day7_new_case"
+  }
+]

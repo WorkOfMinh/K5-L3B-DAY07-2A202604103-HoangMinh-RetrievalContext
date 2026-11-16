@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-16T04:38:35.298917+00:00",
+  "status": "fixed_before_day7_retrieval_or_agent_tuning",
+  "source_content": {
+    "pdf_sha256": "7ed5678593803de4560b4094e4aa2e4b873bd79d65f7270acedb9e203c5a3669",
+    "pages_sha256": "40740cec8e31bb72f876f3bc24550ef5b96554783e3c7b070882754710cc5933",
+    "chunks_sha256": "5011bde177c206d43a7ee0903ade80fce1ce977cb60e782b975ad1279828882b"
+  },
+  "json_content_sha256": {
+    "dev.json": "1dc72722d246719b66683fddc27e8a91c3cc17dba119f3b6d5a98b9e499b10e0",
+    "test.json": "fd1b4347ef82cd0c7d698c6c6fd56f38caae60a731d12f8beab718364734ca04",
+    "dev_queries.json": "26bf4f6a6a9c1073d9f8628d715a265d4eacc8614365f2e06beb7b73f1210087",
+    "test_queries.json": "48a74e3352519a77e1ff14a82a29a2f484197f3202c2e5a0ff618f0dc9f7a5ca",
+    "absence_review.json": "e944ad3aed760af6e0f6774fd362aeb3c30a955e895934cf924173429293d8cc",
+    "evaluation_policy.json": "c216ac888556b1caf76f75b12e8d198488ed617e88c32594154732b9f400022e"
+  },
+  "counts": {
+    "dev_answerable": 15,
+    "dev_insufficient": 2,
+    "test_answerable": 5,
+    "test_insufficient": 2
+  },
+  "hash_method": "SHA-256 of JSON with sorted object keys, ensure_ascii=False. JSON formatting/outer line endings may vary; parsed field values and source text must not change.",
+  "seal_sha256": "4931ec72eb92568b8a5b8fbbc8734a7ff0c5f0c6b4714607fa3e4df5cd6cb14c"
+}

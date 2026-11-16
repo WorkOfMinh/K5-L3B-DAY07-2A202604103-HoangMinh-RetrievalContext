@@ -1,0 +1,93 @@
+[
+  {
+    "id": "D01",
+    "question": "Which list method adds one item to the end of a list?",
+    "filter": null
+  },
+  {
+    "id": "D02",
+    "question": "What does list.remove(x) do if x does not occur in the list?",
+    "filter": null
+  },
+  {
+    "id": "D03",
+    "question": "Within chapter 5, Data Structures, what does list.pop() do when no index is provided, and what happens if the list is empty?",
+    "filter": {
+      "chapter": 5
+    }
+  },
+  {
+    "id": "D04",
+    "question": "I need a queue with fast additions and removals at either end. Which collection does the tutorial recommend?",
+    "filter": null
+  },
+  {
+    "id": "D05",
+    "question": "How do I construct an empty set, and why should I avoid {} for this?",
+    "filter": null
+  },
+  {
+    "id": "D06",
+    "question": "Are tuple elements assignable, and can a tuple contain a list?",
+    "filter": null
+  },
+  {
+    "id": "D07",
+    "question": "What is a Python module, and how is its filename related to its name?",
+    "filter": null
+  },
+  {
+    "id": "D08",
+    "question": "After editing a module already imported in an interactive session, how can I load its changes without restarting the interpreter?",
+    "filter": null
+  },
+  {
+    "id": "D09",
+    "question": "When a Python module is run as a script, what value is assigned to __name__?",
+    "filter": null
+  },
+  {
+    "id": "D10",
+    "question": "Within chapter 6, Modules, is __init__.py required for every kind of package, or is there an exception?",
+    "filter": {
+      "chapter": 6
+    }
+  },
+  {
+    "id": "D11",
+    "question": "What happens to an existing file when open() uses mode \"w\"?",
+    "filter": null
+  },
+  {
+    "id": "D12",
+    "question": "What does f.write(string) return in the text-file example?",
+    "filter": null
+  },
+  {
+    "id": "D13",
+    "question": "Within chapter 7, Input and Output, how can I distinguish end-of-file from a blank line when using f.readline()?",
+    "filter": {
+      "chapter": 7
+    }
+  },
+  {
+    "id": "D14",
+    "question": "Why use a with statement for a file if an exception might occur during processing?",
+    "filter": null
+  },
+  {
+    "id": "D15",
+    "question": "Which encoding should be used when opening a JSON file as text for reading or writing?",
+    "filter": null
+  },
+  {
+    "id": "D7DN01",
+    "question": "According to the supplied pages, exactly how many milliseconds will sorting a list of ten million integers take on my computer?",
+    "filter": null
+  },
+  {
+    "id": "D7DN02",
+    "question": "According to the supplied pages, what is the maximum number of rows that csv.reader supports?",
+    "filter": null
+  }
+]

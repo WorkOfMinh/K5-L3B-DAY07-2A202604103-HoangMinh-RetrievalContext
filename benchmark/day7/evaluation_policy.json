@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-16T04:38:35.298917+00:00",
+  "retrieval_methods_planned": [
+    "dense_pgvector",
+    "lexical_bm25",
+    "hybrid_rrf"
+  ],
+  "common_input": "Same 142 chunks, corpus/model snapshot, original question text and explicit chapter scope. Gold/answerability labels never enter model/tool inputs.",
+  "dev_selection_order": [
+    "max_mean_grounded_answer_grade_on_15_answerable_dev",
+    "max_correct_abstentions_on_2_insufficient_dev",
+    "max_supported_citation_coverage_on_15_answerable_dev",
+    "max_context_evidence_rate_on_15_answerable_dev",
+    "max_original_query_evidence_hit_at_3_on_15_answerable_dev",
+    "min_total_paid_api_cost_usd_on_17_dev_cases",
+    "min_median_end_to_end_latency_ms_on_17_dev_cases",
+    "lexicographic_configuration_id"
+  ],
+  "evaluation_notes": [
+    "Compare at least 3 retrieval methods and at least 2 measured improvement configurations.",
+    "Report original-query Hit@1 and Evidence Hit@3 at the same cutoff, independent of candidate-pool size.",
+    "Answerable cases only enter retrieval/context/grounded-answer denominators; insufficient cases enter abstention metrics.",
+    "Citation validity requires context membership AND actual support, not just a valid ID.",
+    "Runtime errors are reported separately; do not replace failures with abstentions or fake scores.",
+    "Cost missing from a run is unknown, not zero; local inference can report zero paid API cost with appropriate resource disclosure.",
+    "Select on dev, seal configuration before test, then compare baseline and selected configuration on the same 7 test cases.",
+    "Do not tune or select using test results; authoring/source-verification is distinct from inspecting test retrieval/model results."
+  ],
+  "authorship": "AI-assisted benchmark construction and source/absence review. Student understanding/review remains necessary.",
+  "carryover_limitations": "Corpus/chunks were already studied in Day 6, including related concepts. New test question strings are distinct from the Day 6 benchmark, but this is not independent data or an untouched corpus."
+}

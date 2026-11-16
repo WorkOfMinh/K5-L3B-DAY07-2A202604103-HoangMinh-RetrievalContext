@@ -1,0 +1,115 @@
+[
+  {
+    "id": "D7T01",
+    "split": "test",
+    "question": "When list(d) is applied to a dictionary, which keys are returned and in what order?",
+    "answerable": true,
+    "expected_answer": "It returns all dictionary keys in insertion order. Use sorted(d) instead if sorted order is wanted.",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 45,
+        "evidence": "Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you\n          want it sorted, just use sorted(d) instead)."
+      }
+    ],
+    "filter": null,
+    "question_type": "direct",
+    "origin": "day7_new_test"
+  },
+  {
+    "id": "D7T02",
+    "split": "test",
+    "question": "Within chapter 6, Modules, if a package defines __all__ in __init__.py, what does that list control when from package import * is used?",
+    "answerable": true,
+    "expected_answer": "It specifies the module names that should be imported by from package import *.",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 55,
+        "evidence": "if a package’s __init__.py code defines a list named __all__, it is taken to be the list\n          of module names that should be imported when from package import * is encountered."
+      }
+    ],
+    "filter": {
+      "chapter": 6
+    },
+    "question_type": "metadata_filter",
+    "origin": "day7_new_test"
+  },
+  {
+    "id": "D7T03",
+    "split": "test",
+    "question": "What does adding b to an open() mode change about the data being read or written, and can encoding be specified in that mode?",
+    "answerable": true,
+    "expected_answer": "It opens the file in binary mode, using bytes objects; encoding cannot be specified for binary mode.",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 63,
+        "evidence": "Appending a 'b' to the mode opens the file in binary mode. Binary mode data is read and written\n          as bytes objects. You can not specify encoding when opening file in binary mode."
+      }
+    ],
+    "filter": null,
+    "question_type": "condition",
+    "origin": "day7_new_test"
+  },
+  {
+    "id": "D7T04",
+    "split": "test",
+    "question": "Which class should a user-defined exception typically derive from, directly or indirectly?",
+    "answerable": true,
+    "expected_answer": "It should typically derive from Exception, directly or indirectly.",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 72,
+        "evidence": "Exceptions should typically be derived from the Exception class, either directly or indirectly."
+      }
+    ],
+    "filter": null,
+    "question_type": "direct",
+    "origin": "day7_new_test"
+  },
+  {
+    "id": "D7T05",
+    "split": "test",
+    "question": "How can I disable automatic exception chaining when raising a replacement exception?",
+    "answerable": true,
+    "expected_answer": "Use raise ... from None, for example raise RuntimeError from None.",
+    "gold": [
+      {
+        "source_id": "python_tutorial_3_12_11",
+        "page": 71,
+        "evidence": "It also allows disabling automatic exception chaining using the from None idiom:"
+      }
+    ],
+    "filter": null,
+    "question_type": "paraphrase",
+    "origin": "day7_new_test"
+  },
+  {
+    "id": "D7TN01",
+    "split": "test",
+    "question": "According to the supplied pages, what is the largest JSON file, in gigabytes, that json.load can successfully read on my laptop?",
+    "answerable": false,
+    "gold": [],
+    "filter": null,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "The corpus describes JSON loading and includes a general warning about reading a file larger than memory, but provides no laptop-specific memory, JSON representation overhead or fixed gigabyte bound for json.load. An exact maximum cannot be derived.",
+    "acceptable_response": "Explicitly state that the supplied pages do not establish the requested value/specification. Do not guess or use outside knowledge. Relevant supported facts may be cited without inventing the missing answer.",
+    "question_type": "insufficient_evidence",
+    "origin": "day7_new_case"
+  },
+  {
+    "id": "D7TN02",
+    "split": "test",
+    "question": "Which AES cipher mode and key length do the supplied pages specify for encrypting a pickle file?",
+    "answerable": false,
+    "gold": [],
+    "filter": null,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "The pickle note describes serialization and warns about untrusted data. It does not specify AES encryption, cipher modes or encryption-key lengths. Do not infer an encryption scheme or claim one is provided. A grounded security warning may accompany an explicit insufficient-evidence response.",
+    "acceptable_response": "Explicitly state that the supplied pages do not establish the requested value/specification. Do not guess or use outside knowledge. Relevant supported facts may be cited without inventing the missing answer.",
+    "question_type": "insufficient_evidence",
+    "origin": "day7_new_case"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "candidate_pool": 10,
+  "comparison_top_k": 3,
+  "bm25": {"k1": 1.2, "b": 0.75},
+  "rrf": {"rank_constant": 60},
+  "context": {"top_k": 3, "budget_chars": 3500, "deduplication": "chunk_id", "truncation": "none"},
+  "timing_repeats": 3,
+  "methods": ["dense", "bm25", "hybrid_rrf"],
+  "hypotheses": {
+    "dense": "Baseline: semantic similarity may recover paraphrases but confuse related Python APIs.",
+    "bm25": "Improvement experiment 1: lexical matching may help exact API names and identifiers; paraphrases may suffer.",
+    "hybrid_rrf": "Improvement experiment 2: fusing dense and lexical ranks may balance both signals; added latency and worse rankings are possible."
+  }
+}

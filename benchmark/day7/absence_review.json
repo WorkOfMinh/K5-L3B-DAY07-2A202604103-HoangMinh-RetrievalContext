@@ -1,0 +1,352 @@
+[
+  {
+    "id": "D7DN01",
+    "reviewer": "ChatGPT (AI-assisted corpus-scope review)",
+    "source_pages_scanned": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76
+    ],
+    "reviewed_relevant_pages": [
+      39,
+      40,
+      47
+    ],
+    "full_corpus_keyword_concordance": [
+      {
+        "term": "sort",
+        "matching_pages": [
+          {
+            "page": 39,
+            "occurrences": 4
+          },
+          {
+            "page": 40,
+            "occurrences": 5
+          },
+          {
+            "page": 45,
+            "occurrences": 2
+          },
+          {
+            "page": 46,
+            "occurrences": 1
+          },
+          {
+            "page": 47,
+            "occurrences": 7
+          },
+          {
+            "page": 53,
+            "occurrences": 1
+          },
+          {
+            "page": 54,
+            "occurrences": 1
+          }
+        ],
+        "total_occurrences": 21
+      },
+      {
+        "term": "millisecond",
+        "matching_pages": [],
+        "total_occurrences": 0
+      },
+      {
+        "term": "ten million",
+        "matching_pages": [],
+        "total_occurrences": 0
+      },
+      {
+        "term": "10,000,000",
+        "matching_pages": [],
+        "total_occurrences": 0
+      }
+    ],
+    "absence_reason": "The selected pages describe sorting/list operations but contain no measured runtime for that input and computer; the hardware and benchmark conditions are also unspecified. No exact millisecond value is supported.",
+    "method": "Search all 37 selected pages, examine chapter scope and relevant paragraphs; no absence claim is based on a top-k retrieval failure.",
+    "scope": "Only the 37 supplied pages. No claim about all Python documentation or external referenced pages.",
+    "human_confirmation": "not claimed"
+  },
+  {
+    "id": "D7DN02",
+    "reviewer": "ChatGPT (AI-assisted corpus-scope review)",
+    "source_pages_scanned": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76
+    ],
+    "reviewed_relevant_pages": [
+      59,
+      63,
+      64,
+      65,
+      66
+    ],
+    "full_corpus_keyword_concordance": [
+      {
+        "term": "csv.reader",
+        "matching_pages": [],
+        "total_occurrences": 0
+      },
+      {
+        "term": "csv",
+        "matching_pages": [],
+        "total_occurrences": 0
+      },
+      {
+        "term": "row limit",
+        "matching_pages": [],
+        "total_occurrences": 0
+      },
+      {
+        "term": "maximum",
+        "matching_pages": [],
+        "total_occurrences": 0
+      }
+    ],
+    "absence_reason": "The selected I/O pages discuss formatting, file objects and JSON/pickle, not a csv.reader row-limit specification. References to other documentation do not supply an answer inside this corpus.",
+    "method": "Search all 37 selected pages, examine chapter scope and relevant paragraphs; no absence claim is based on a top-k retrieval failure.",
+    "scope": "Only the 37 supplied pages. No claim about all Python documentation or external referenced pages.",
+    "human_confirmation": "not claimed"
+  },
+  {
+    "id": "D7TN01",
+    "reviewer": "ChatGPT (AI-assisted corpus-scope review)",
+    "source_pages_scanned": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76
+    ],
+    "reviewed_relevant_pages": [
+      64,
+      65,
+      66
+    ],
+    "full_corpus_keyword_concordance": [
+      {
+        "term": "json.load",
+        "matching_pages": [
+          {
+            "page": 66,
+            "occurrences": 1
+          }
+        ],
+        "total_occurrences": 1
+      },
+      {
+        "term": "gigabyte",
+        "matching_pages": [],
+        "total_occurrences": 0
+      },
+      {
+        "term": "memory",
+        "matching_pages": [
+          {
+            "page": 54,
+            "occurrences": 2
+          },
+          {
+            "page": 64,
+            "occurrences": 2
+          }
+        ],
+        "total_occurrences": 4
+      },
+      {
+        "term": "maximum",
+        "matching_pages": [],
+        "total_occurrences": 0
+      }
+    ],
+    "absence_reason": "The corpus describes JSON loading and includes a general warning about reading a file larger than memory, but provides no laptop-specific memory, JSON representation overhead or fixed gigabyte bound for json.load. An exact maximum cannot be derived.",
+    "method": "Search all 37 selected pages, examine chapter scope and relevant paragraphs; no absence claim is based on a top-k retrieval failure.",
+    "scope": "Only the 37 supplied pages. No claim about all Python documentation or external referenced pages.",
+    "human_confirmation": "not claimed"
+  },
+  {
+    "id": "D7TN02",
+    "reviewer": "ChatGPT (AI-assisted corpus-scope review)",
+    "source_pages_scanned": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76
+    ],
+    "reviewed_relevant_pages": [
+      65,
+      66
+    ],
+    "full_corpus_keyword_concordance": [
+      {
+        "term": "pickle",
+        "matching_pages": [
+          {
+            "page": 66,
+            "occurrences": 4
+          }
+        ],
+        "total_occurrences": 4
+      },
+      {
+        "term": "AES",
+        "matching_pages": [],
+        "total_occurrences": 0
+      },
+      {
+        "term": "cipher",
+        "matching_pages": [],
+        "total_occurrences": 0
+      },
+      {
+        "term": "encryption",
+        "matching_pages": [],
+        "total_occurrences": 0
+      },
+      {
+        "term": "key length",
+        "matching_pages": [],
+        "total_occurrences": 0
+      }
+    ],
+    "absence_reason": "The pickle note describes serialization and warns about untrusted data. It does not specify AES encryption, cipher modes or encryption-key lengths. Do not infer an encryption scheme or claim one is provided. A grounded security warning may accompany an explicit insufficient-evidence response.",
+    "method": "Search all 37 selected pages, examine chapter scope and relevant paragraphs; no absence claim is based on a top-k retrieval failure.",
+    "scope": "Only the 37 supplied pages. No claim about all Python documentation or external referenced pages.",
+    "human_confirmation": "not claimed"
+  }
+]

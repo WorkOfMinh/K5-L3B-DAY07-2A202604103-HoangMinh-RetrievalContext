@@ -1,0 +1,39 @@
+[
+  {
+    "id": "D7T01",
+    "question": "When list(d) is applied to a dictionary, which keys are returned and in what order?",
+    "filter": null
+  },
+  {
+    "id": "D7T02",
+    "question": "Within chapter 6, Modules, if a package defines __all__ in __init__.py, what does that list control when from package import * is used?",
+    "filter": {
+      "chapter": 6
+    }
+  },
+  {
+    "id": "D7T03",
+    "question": "What does adding b to an open() mode change about the data being read or written, and can encoding be specified in that mode?",
+    "filter": null
+  },
+  {
+    "id": "D7T04",
+    "question": "Which class should a user-defined exception typically derive from, directly or indirectly?",
+    "filter": null
+  },
+  {
+    "id": "D7T05",
+    "question": "How can I disable automatic exception chaining when raising a replacement exception?",
+    "filter": null
+  },
+  {
+    "id": "D7TN01",
+    "question": "According to the supplied pages, what is the largest JSON file, in gigabytes, that json.load can successfully read on my laptop?",
+    "filter": null
+  },
+  {
+    "id": "D7TN02",
+    "question": "Which AES cipher mode and key length do the supplied pages specify for encrypting a pickle file?",
+    "filter": null
+  }
+]
