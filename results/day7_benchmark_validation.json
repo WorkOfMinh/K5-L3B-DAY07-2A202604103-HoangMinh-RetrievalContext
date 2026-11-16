@@ -1,0 +1,90 @@
+{
+  "status": "source_contract_checks_passed_no_retrieval",
+  "counts": {
+    "dev": {
+      "answerable": 15,
+      "insufficient": 2
+    },
+    "test": {
+      "answerable": 5,
+      "insufficient": 2
+    }
+  },
+  "answerable_evidence_cases_verified": 20,
+  "absence_cases_with_full_corpus_review": 4,
+  "imported_chunks": 142,
+  "selected_source_pages": 37,
+  "filter_cases": {
+    "dev": 3,
+    "test": 1
+  },
+  "evidence_covering_chunk_ids": {
+    "D01": [
+      "2f5c52d0941eca2cf7178a1c7c568da6c46dc972baec02662382fd97ec3cc83c"
+    ],
+    "D02": [
+      "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3"
+    ],
+    "D03": [
+      "1f8cab5321a1e30c6cdcaa85947296b0f967e599a1f958b975b767e2766c56a3"
+    ],
+    "D04": [
+      "4bd87ea73d3b11d2223d34377a3e929768958e72bcee51b1745c9217e79934c6"
+    ],
+    "D05": [
+      "600655e1fc01eb9cf7f2394f508e97c13857161e6f3ab0ab243f243f0719228b"
+    ],
+    "D06": [
+      "0a37c4971cf8107ac61f16c5e0da22dab48373f014046470d55600ddb3464ecf"
+    ],
+    "D07": [
+      "9ebc124aea60ed02ac3ae060c3c519d2091c468f01f76172a80aa37e985ec7fd"
+    ],
+    "D08": [
+      "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041"
+    ],
+    "D09": [
+      "e29ee78f0cf82607ab638137a1b6f1a7364360ff3b77083f699a73fd7b64f041"
+    ],
+    "D10": [
+      "cc01263572958009d8112f1fc472bf5421eb4491bb2a8de14901fbe698c9031c"
+    ],
+    "D11": [
+      "8f319645ff8b76b2d3abe4f364c31d423f6b270ae54544a0b1fea54388e79588"
+    ],
+    "D12": [
+      "ff0defab3badb988348a7f257401ef13b97a717835e93a0748f146f21a727a30"
+    ],
+    "D13": [
+      "5ba36376aadf23a7d5795a52a576974d8b2f79a66bf377ccc4337bd6e91a8c1f"
+    ],
+    "D14": [
+      "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f"
+    ],
+    "D15": [
+      "bc66539e550e98c53033e4c95dfcc5687a4cf15176ef66259d02a73bf9ae18ba"
+    ],
+    "D7DN01": [],
+    "D7DN02": [],
+    "D7T01": [
+      "be047531da8a75a394e5cd61c92039a91de37c2ba59fbab79f9ba5f667f4942b"
+    ],
+    "D7T02": [
+      "8b7150b7ab8c77662c6c65ffc8be8fe73cfdf2c03122645cc1888a3169ff0d39"
+    ],
+    "D7T03": [
+      "a18af70d07561a1aec1972f97f237476f55a18ae0d72eeb0ffa0ab1cb951e63f"
+    ],
+    "D7T04": [
+      "fbe7ba9667b6f38d2eebd26a84b54a4076a838b60a5e9856edfab432c814e06d"
+    ],
+    "D7T05": [
+      "4bd84618bd2ed46d84068138e8e283a68e08a15287d94386d8c96847725fa5cf"
+    ],
+    "D7TN01": [],
+    "D7TN02": []
+  },
+  "reviewer_note": "Source/absence judgments are AI-assisted; keyword consistency is not an automatic proof of nonexistence or an independent human review.",
+  "retrieval_runs": 0,
+  "model_runs": 0
+}
